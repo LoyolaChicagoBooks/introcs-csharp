@@ -1,0 +1,63 @@
+.. _lab-string-ops:
+
+.. index::
+   single: labs; string manipulations
+
+Lab: String Operations
+==================================
+
+
+Goals for this lab:
+--------------------
+
+#. Explore some of the properties of the pre-defined String class.
+#. Write conditional statements.
+#. Think about problem solving.
+
+This lab depends on the introductory material in earlier in this
+chapter, particularly keep handy :ref:`string-methods-length`. 
+Be mindful of the processes developed in class filling in
+:ref:`solve-string-replace`.
+
+Design, compile and run a C# program to accomplish each of
+the following tasks. Add one part at a time and test before trying the
+next one. The program can just include a Main method, or it is neater to
+split things into separate methods (all static void, with names like
+ShowLength, SentenceType, LastFirst1, LastFirst), 
+and have Main call all the ones
+you have written so far (or for testing purposes, just the one you
+are working on, with the other function calls commented out).
+All input from the user should be preceded by a meaningful prompt.
+
+#. Read a string from the keyboard 
+   and print the length of the string, with a label.
+
+#. Read a sentence (string) from a line of input, and print whether
+   it represents a *declarative* sentence (i.e. ending in a period),
+   *interrogatory* sentence (ending in a question mark), or an
+   *exclamation* (ending in exclamation point) or is not a sentence
+   (anything else). 
+  
+   This may be the first time you write a conditional
+   statement. It makes sense to only make small changes at once and build
+   up to final code. First you might just code it to check if a sentence is
+   declarative or not. Then remember you can test further cases with 
+   ``else if (...)``.
+
+#. Read a name from a line of input.  Assume first and last names
+   are separated by a space.  
+   Print last name first followed by a comma
+   and a space, followed by the first name. 
+   For example, if the input is
+   ``"Marcel Proust"``, the output is ``"Proust, Marcel"``.
+
+#. Improve the previous part, 
+   so it also allows a single name without spaces,
+   like "Socrates", and prints the original without change. If there are
+   two parts of the name, it should work as in the original version.
+
+Run the program (with parts 1, 2 and 4 active)
+from a terminal window and show your TA when you are
+done.  You should run it twice to show off both paths through
+part 4.  Alternately have the main program just call part 4 twice.
+

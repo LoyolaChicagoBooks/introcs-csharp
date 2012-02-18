@@ -1,0 +1,15 @@
+#! /bin/bash
+
+# assume start in devel dir
+cd ../rst
+./setofferings.py $USER
+make html
+./pause.py
+
+#rm _build/latex/Hands-onPythonTutorial.tex
+make latex
+./setofferings.py $USER no
+./pause.py
+cp _build/latex/ProgrammingInCSharp.tex oldtex
+./texFix.py _build/latex/ProgrammingInCSharp.tex && 
+cd _build/latex && make all-pdf
