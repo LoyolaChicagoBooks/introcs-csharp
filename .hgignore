@@ -10,3 +10,10 @@ build/
 *.dll
 *.pidb
 *.userprefs
+examples-cs/
+CSharpHtml/
+examples.zip
+CSharpHtml.zip
+index.html
+ProgrammingInCSharp.pdf
+projects.zip

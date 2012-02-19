@@ -50,7 +50,8 @@ class ModMultTable
       string nStr = InputLine(prompt).Trim(); //Removes blanks at either end
       return int.Parse(nStr);
    }
-
+                                      //StringRep chunk
+   /** Return s repeated n times. */
    static string StringRep(string s, int n)
    {
       string ret = "";

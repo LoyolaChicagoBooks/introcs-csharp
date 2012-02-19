@@ -28,12 +28,16 @@ but still very common.  C# and many other languages allow a shorter version::
 
    i += k;
    
-This means to increment the variable i by k.  Be careful, the ``+=`` must be in
-that order, with no space between.  Unfortunately ::
+This means to increment the variable i by k.  
 
-  i =+k;
+..  warning::
+    
+    Be careful: the ``+=`` must be in
+    that order, with no space between.  Unfortunately the reverse order::
+
+       i =+ k;
   
-is also legal, and just assigns the value of k to i.
+    is also legal, and just assigns the value of k to i.
 
 .. index::
    double operator; +=
@@ -73,21 +77,21 @@ The Math class has a function Sqrt, so we take the square root with Math.Sqrt
 function.  The formula is consistent, so we can loop easily::
 
    for ( int n = 1; n <= 10; n++) {
-	   Console.WriteLine("{0} {1} {2} {3}", n, n*n, n*n*n, Math.Sqrt(n));
+       Console.WriteLine("{0} {1} {2} {3}", n, n*n, n*n*n, Math.Sqrt(n));
    }
 
 The numbers will be there, but it is not pretty::
 
-	1 1 1 1
-	2 4 8 1.4142135623731
-	3 9 27 1.73205080756888
-	4 16 64 2
-	5 25 125 2.23606797749979
-	6 36 216 2.44948974278318
-	7 49 343 2.64575131106459
-	8 64 512 2.82842712474619
-	9 81 729 3
-	10 100 1000 3.16227766016838
+    1 1 1 1
+    2 4 8 1.4142135623731
+    3 9 27 1.73205080756888
+    4 16 64 2
+    5 25 125 2.23606797749979
+    6 36 216 2.44948974278318
+    7 49 343 2.64575131106459
+    8 64 512 2.82842712474619
+    9 81 729 3
+    10 100 1000 3.16227766016838
 
 
 First we might not need all those digits in the square root approximations.
@@ -99,22 +103,22 @@ in the last row, where they take up, 2, 3, 4, and 6 columns (for 3.1623).
 Change the format string::
 
    for ( int n = 1; n <= 10; n++) {
-	   Console.WriteLine("{0,2} {1,3} {2,4} {3,6:F4}", 
-						  n, n*n, n*n*n, Math.Sqrt(n));
+       Console.WriteLine("{0,2} {1,3} {2,4} {3,6:F4}", 
+                          n, n*n, n*n*n, Math.Sqrt(n));
    }
 
 and we generate the neater::
 
-	 1   1    1 1.0000
-	 2   4    8 1.4142
-	 3   9   27 1.7321
-	 4  16   64 2.0000
-	 5  25  125 2.2361
-	 6  36  216 2.4495
-	 7  49  343 2.6458
-	 8  64  512 2.8284
-	 9  81  729 3.0000
-	10 100 1000 3.1623
+     1   1    1 1.0000
+     2   4    8 1.4142
+     3   9   27 1.7321
+     4  16   64 2.0000
+     5  25  125 2.2361
+     6  36  216 2.4495
+     7  49  343 2.6458
+     8  64  512 2.8284
+     9  81  729 3.0000
+    10 100 1000 3.1623
 
 We are using two new formatting forms:
 
@@ -134,11 +138,11 @@ inserted, ignoring the fieldWidth.  Example::
     
 generates::
 
-	123456789
-		stuff
-	  stuff
-	stuff
-	stuff
+    123456789
+        stuff
+      stuff
+    stuff
+    stuff
 
 filling 9, 7, and then 5 columns, by padding with 4, 2, and 0 blanks.  The
 last line sticks out past the proposed 3-column fieldWidth.
@@ -151,23 +155,23 @@ To make the data line up with the heading titles,
 we can expand the columns, with code in example
 ``PowerTable.cs``:
 
-.. literalinclude:: examples/PowerTable.cs
+.. literalinclude:: ../examples/PowerTable.cs
    :start-after: chunk
    :end-before: chunk
 
 generating::
 
-	 n  square    cube    root
-	 1       1       1  1.0000
-	 2       4       8  1.4142
-	 3       9      27  1.7321
-	 4      16      64  2.0000
-	 5      25     125  2.2361
-	 6      36     216  2.4495
-	 7      49     343  2.6458
-	 8      64     512  2.8284
-	 9      81     729  3.0000
-	10     100    1000  3.1623
+     n  square    cube    root
+     1       1       1  1.0000
+     2       4       8  1.4142
+     3       9      27  1.7321
+     4      16      64  2.0000
+     5      25     125  2.2361
+     6      36     216  2.4495
+     7      49     343  2.6458
+     8      64     512  2.8284
+     9      81     729  3.0000
+    10     100    1000  3.1623
 
 Note how we make sure the columns are consistent in the heading and further rows:  
 We used a format string for the headings with the same field widths as
@@ -254,30 +258,29 @@ The next example is to make a table of multiplication, mod 7, and later generali
 
 Tables generally have row and column labels.  We can aim for something like::
 
-	* | 0 1 2 3 4 5 6 
-	-----------------
-	0 | 0 0 0 0 0 0 0 
-	1 | 0 1 2 3 4 5 6 
-	2 | 0 2 4 6 1 3 5 
-	3 | 0 3 6 2 5 1 4 
-	4 | 0 4 1 5 2 6 3 
-	5 | 0 5 3 1 6 4 2 
-	6 | 0 6 5 4 3 2 1 
+    * | 0 1 2 3 4 5 6 
+    -----------------
+    0 | 0 0 0 0 0 0 0 
+    1 | 0 1 2 3 4 5 6 
+    2 | 0 2 4 6 1 3 5 
+    3 | 0 3 6 2 5 1 4 
+    4 | 0 4 1 5 2 6 3 
+    5 | 0 5 3 1 6 4 2 
+    6 | 0 6 5 4 3 2 1 
 
 The border labels make the table much more readable, but let us start simpler,
 with just the modular multiplications::
 
-
     0 0 0 0 0 0 0 
-	0 1 2 3 4 5 6 
-	0 2 4 6 1 3 5 
-	0 3 6 2 5 1 4 
-	0 4 1 5 2 6 3 
-	0 5 3 1 6 4 2 
-	0 6 5 4 3 2 1 
+    0 1 2 3 4 5 6 
+    0 2 4 6 1 3 5 
+    0 3 6 2 5 1 4 
+    0 4 1 5 2 6 3 
+    0 5 3 1 6 4 2 
+    0 6 5 4 3 2 1 
 
-This is ore complicated in some respects than our previous table, so start slow,
-with some pseudocode.  We need a row for each number 0-6, and so a for loop
+This is more complicated in some respects than our previous table, so start slow,
+with some pseudocode.  We need a row for each number 0-6, and so a ``for`` loop
 suggests itself::
 
     for (int r = 0; r < 7; r++) {
@@ -286,7 +289,7 @@ suggests itself::
     
 Each individual row also involves a repeated pattern:  
 calculate for the next number.  We can name the second number c for column.  The
-next rvision replaces "print row" by a loop:  a *nested* loop, inside the loop for
+next revision replaces "print row" by a loop:  a *nested* loop, inside the loop for
 separate rows::
 
     for (int r = 0; r < 7; r++) {
@@ -311,7 +314,7 @@ You can test this in csharp, and see it is not quite right!  chopped-off output 
     
 Though we want each entry in a row on the same line, we need to go down to the
 next line at the end of each line!  Where do we put in the newline in the code?
-A line is all the modular products by r, *followed* by one newline.  
+A line is all the modular products by r, *followed* by *one* newline.  
 All the modular products for a row are printed in the inner ``for`` loop.  We want to
 advance *after* that, so the newline must be inserted *outside the inner loop*.  
 On the other hand we do want it done for *each* row, so it must be 
@@ -341,14 +344,11 @@ Most new students can get successfully to line 4:
    =====  ==  ==  ==========  =====================
     line   r   c     modProd  comment
    =====  ==  ==  ==========  =====================
-       1   0   -           -  initialize outer loop
-   -----  --  --  ----------  ---------------------
-       2   0   0           -  initialize inner loop
-   -----  --  --  ----------  ---------------------
+       1   0  \-          \-  initialize outer loop
+       2   0   0          \-  initialize inner loop
        3   0   0           0
-   -----  --  --  ----------  ---------------------
        4   0   0           0  Write 0
-   -----  --  --  ----------  ---------------------
+   =====  ==  ==  ==========  =====================
 
 After reaching the bottom of the loop, where do you go?  
 You finsh the innermost statement that you are in.  
@@ -361,32 +361,22 @@ finishing the inner row loop:
    =====  ==  ==  ==========  =====================
     line   r   c     modProd  comment
    =====  ==  ==  ==========  =====================
-       1   0   -           -  initialize outer loop
-   -----  --  --  ----------  ---------------------
-       2   0   0           -  0 < 7, enter loop body
-   -----  --  --  ----------  ---------------------
+       1   0  \-          \-  initialize outer loop
+       2   0   0          \-  0 < 7, enter loop body
        3   0   0           0  (0*0)%7
-   -----  --  --  ----------  ---------------------
        4   0   0           0  Write 0
-   -----  --  --  ----------  ---------------------
-       2   0   1           -  c=0+1=1,  1 < 7: true
-   -----  --  --  ----------  ---------------------
+       2   0   1          \-  c=0+1=1,  1 < 7: true
        3   0   1           0  (0*1)%7
-   -----  --  --  ----------  ---------------------
        4   0   1           0  Write 0
-   -----  --  --  ----------  ---------------------
-       2   0   2           -  c=1+1=2,  2 < 7: true
-   -----  --  --  ----------  ---------------------
+       2   0   2          \-  c=1+1=2,  2 < 7: true
      ...                      ... through c = 6
-   -----  --  --  ----------  ---------------------
        4   0   6           0  Write 0
-   -----  --  --  ----------  ---------------------
-       2   0   7           -  c=+1=7,  7 < 7: false
-   -----  --  --  ----------  ---------------------
+       2   0   7          \-  c=+1=7,  7 < 7: false
+   =====  ==  ==  ==========  =====================
    
 At this point the inner loop statement, lines 2-4, has completed,
 and you continue.  You go on to the next statement in the
-same sequential chuck as the statement in lines 2-4:  
+same sequential chuck as the inner loop statement in lines 2-4:  
 That chunk is the the outer loop body, lines 2-6.
 The next statement is line 6, advancing printing to the next line.
 That is the last statement of the outer loop, so you
@@ -396,10 +386,9 @@ variable r.  The two lines just described are:
    =====  ==  ==  ==========  =====================
     line   r   c     modProd  comment
    =====  ==  ==  ==========  =====================
-       6   0   -           -  print a newline
-   -----  --  --  ----------  ---------------------
-       1   1   -           -  0+1=1, 1 < 7 enter outer loop
-   -----  --  --  ----------  ---------------------
+       6   0  \-          \-  print a newline
+       1   1  \-          \-  r=s0+1=1, 1 < 7 enter outer loop
+   =====  ==  ==  ==========  =====================
 
 Then you go all the way through the inner loop again, 
 for all columns, with c going from 0 through 6, and exit at c=7, 
@@ -408,8 +397,8 @@ and return to the outer loop heading, setting r = 2..., until
 all rows are completed.
 
 The common error here is to forget what loop is the innermost one 
-that you are working on, and exit that loop before is is totally finished: 
-before the test of the condition that controls it becomes false.
+that you are working on, and exit that loop before is is totally finished. 
+It finishes when the test of the condition controling the loop becomes false.
 
 Look back one more time and make sure the code for this *simpler* table makes
 sense before we continue to the one with labels....
@@ -427,7 +416,7 @@ If we go back to our pseudocode we could add to it::
 
 First analyse the heading row:  Some parts are repetitive and
 some are not: Print ``"* |"`` once, and then there is a repetitive pattern printing
-0 - 6, which we can do with a simpler loop than in the body::
+0 - 6, which we can do with a simpler loop than in the table body::
 
       Console.Write("* | ");
       for ( int i = 0; i < 7; i++) {
@@ -435,52 +424,55 @@ some are not: Print ``"* |"`` once, and then there is a repetitive pattern print
       }
       Console.WriteLine();
 
-The dash line can be generated using ``StringRep`` from 
+The dashed line can be generated using ``StringRep`` from 
 :ref:`StringRepeatingExercise`.  How many dashes?  For each of
 seven columns, and in a row header, we need a digit and an space or 
 (7+1)*(1+1) characters, plus one for the '|':  1 + (7+1)*(1+1).  
 Thinking ahead, we will leave that expression unsimplified.
 
-We have done most of the work for the rows of the body of the table.  We just 
+We have done most of the work for the rows of the body of the table i the simpler
+version.  We just 
 have a bit of printing for the initial row label before the column loop.  The row
-label is r.  The whole code is in example ``Mod7Table.cs`` and below::
+label is r.  The whole code is in example ``Mod7Table.cs`` and below:
 
 
-..  literalinclude:: examples/Mod7Table.cs
+..  literalinclude:: ../examples/Mod7Table.cs
     :start-after: chunk
     :end-before: chunk
       
-Besides the 0 row and column in the mod 7 table,
-note that each line contains a permutation of all the numbers 1-6.  That means it is
-possible to define the *inverse* of the multiplication operation, and mod 7 aritmetic
-actually forms a mathematical *field*.  
-Modular arithmetic (with much larger moduli!) is extremely important in cryptography.  
-It protects all your online financial transactions.  
+Besides the 0 row and 0 column in the mod 7 table,
+note that each line the products are a permutation of all the numbers 1-6.  
+That means it is
+possible to define the *inverse* of the multiplication operation, and mod 7 arithmetic
+actually forms a mathematical *field*.  A lot more math is useful!
+Modular arithmetic (with much larger moduli!) is extremely important in 
+*public key cryptography*, which  
+protects all your online financial transactions....  
 
 The inverse operation to multiplication for prime moduli is
-easy to work out by brute force, going through the products.
-There needs to be a much more efficient
-method for use in cryptography:  That method involves
-an elaboration of the GCD algorithm already discussed.
+easy to work out by brute force, going through the row of products.
+A much more efficient
+method is needed for cryptography:  That method involves
+an elaboration of :ref:`gcd`.
 
 Finally, let us generalize this table to mod n.  With n up to about 25, 
 it is reasonable to print.
-Most places in the code, that just means replacing 7 by n.  
+Most of the changes are just replacing 7 by n.  
 There is a further complication
-with column width, since the numbers can be more than one digit.  We can do
+with column width, since the numbers can be more than one digit long.  We can do
 formatting with a field width.  
-Unfortunately in C# the field width must be a literal
-integer embedded in the format string, but our number of digits in n is variable.
+Unfortunately in C# the field width must be a *literal*
+integer embedded in the format string, but our number of digits in n is *variable*.
 
 Here is a good trick:  Construct the format string inside the program.  
 We can do that with *another* format string.  To get the  format for a 
 number and an extra space
-mod 7, we want format string "{0, 1} ", but mod 11, we want "{0, 2} ".  We can 
-create a format string to substitute into the place the 1 or 2 go.  
-The 1 or 2 to substitute is the number of characters in n as a string, 
-as in ``("" + n).Length``.
+mod 7, we want format string "{0, 1} ", but for mod 11, we want "{0, 2} ".  We can 
+create a format string to substitute into the place where the 1 or 2 goes.  
+This 1 or 2 to substitute is the number of characters in n as a string, 
+given by ``("" + n).Length``.
 
-The second level format string has an
+The special format string has an
 extra wrinkle, because we want explicit braces (for the main format string).  
 Recall the explicit braces are doubled.  Putting this all together, we can 
 create our main format string with::
@@ -490,7 +482,7 @@ create our main format string with::
 
 The whole function code is below and in example :file:`ModMultTable.cs`.
 
-..  literalinclude:: examples/ModMultTable.cs
+..  literalinclude:: ../examples/ModMultTable.cs
     :start-after: chunk
     :end-before: chunk
 
@@ -510,9 +502,6 @@ The whole function code is below and in example :file:`ModMultTable.cs`.
    ASCII art, triangles; see for loop lab.
 
 .. todo::
-   Repeat string N times.  part a, just printed, part b: return a string
-
-.. todo::
    Make restructured text table with fixed rows, columns, and width empty content.
 
 .. index::
@@ -523,7 +512,7 @@ The whole function code is below and in example :file:`ModMultTable.cs`.
 String Repeating Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-a. Write a program StringRep.cs with a function PrintDup, 
+a. Write a program StringRep.cs with a function ``PrintDup``, 
    with heading::
  
        /** Print n repetitions of s on one line (n >= 0). */
@@ -531,7 +520,7 @@ a. Write a program StringRep.cs with a function PrintDup,
 
 b. More versatile is to add and test a function ``StringRep``:
 
-   ..  literalinclude:: examples/ModMultTable.cs
+   ..  literalinclude:: ../examples/ModMultTable.cs
        :start-after: StringRep chunk
        :end-before: {
 
@@ -562,7 +551,7 @@ If you select ``low`` and ``higher`` so there are only two possible values
 for n,
 then you can choose to print ``Heads`` or ``Tails`` with an
 |if-else| statement based on the result.
-	
+    
 In your Main method have a ``for`` loop calling  ``Flip()``
 10 times to test it, so you generate a random sequence of 
 10 ``Heads`` and/or
