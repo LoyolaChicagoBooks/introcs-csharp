@@ -13,7 +13,7 @@
 
 
 \title{Introductory Programming in C\#}
-\date{February 17, 2012}
+\date{February 18, 2012}
 \release{1.0}
 \author{Andrew N. Harrington and George K. Thiruvathukal}
 \newcommand{\sphinxlogo}{}
@@ -449,21 +449,6 @@ development tools.  You will be able to use fancy tools later.
 \label{lab-edit-compile-run:to-be-completed-in-the-lab}
 The following is the code for a very well-known program, \emph{Hello,
 World!}:
-
-\begin{Verbatim}[commandchars=\\\{\},numbers=left,firstnumber=1,stepnumber=1]
-\PYG{k}{using} \PYG{n+nn}{System}\PYG{p}{;}
-
-\PYG{k}{namespace} \PYG{n+nn}{Comp170}
-\PYG{p}{\PYGZob{}}
-   \PYG{k}{public} \PYG{k}{class} \PYG{n+nc}{Hello}
-   \PYG{p}{\PYGZob{}}    
-      \PYG{k}{public} \PYG{k}{static} \PYG{k}{void} \PYG{n+nf}{Main} \PYG{p}{(}\PYG{p}{)}
-      \PYG{p}{\PYGZob{}}
-         \PYG{n}{Console}\PYG{p}{.}\PYG{n}{WriteLine} \PYG{p}{(}\PYG{l+s}{"Hello World!"}\PYG{p}{)}\PYG{p}{;}
-      \PYG{p}{\PYGZcb{}}
-   \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}
 
 This program is deliberately simple, so you can type it into a text
 editor (Emacs is recommended but your instructor may introduce you to
@@ -8870,77 +8855,77 @@ George:
 ? tie into later work; good CS example?
 \end{notice}
 
-(The {\hyperref[assignment-functions:index-1]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/assignment-functions.rst, line 12.)
-
-\begin{notice}{note}{Todo}
-
-Andy new
-\end{notice}
-
-(The {\hyperref[notusereturn:index-1]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/notusereturn.rst, line 13.)
-
-\begin{notice}{note}{Todo}
-
-one dimensional arrays
-\end{notice}
-
-(The {\hyperref[onedim:index-0]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/onedim.rst, line 8.)
-
-\begin{notice}{note}{Todo}
-
-two dimensional arrays
-\end{notice}
-
-(The {\hyperref[twodim:index-0]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/twodim.rst, line 8.)
-
-\begin{notice}{note}{Todo}
-
-``bisection method''
-\end{notice}
-
-(The {\hyperref[whileexamples:index-0]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/whileexamples.rst, line 9.)
+(The {\hyperref[assignment-functions:index-1]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/assignment-functions.rst, line 12.)
 
 \begin{notice}{note}{Todo}
 
 Do some of these examples backwards.
 \end{notice}
 
-(The {\hyperref[forexamples:index-3]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/forexamples.rst, line 240.)
+(The {\hyperref[forexamples:index-3]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/forexamples.rst, line 240.)
 
 \begin{notice}{note}{Todo}
 
 Reversing a string...
 \end{notice}
 
-(The {\hyperref[forexamples:index-4]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/forexamples.rst, line 244.)
+(The {\hyperref[forexamples:index-4]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/forexamples.rst, line 244.)
 
 \begin{notice}{note}{Todo}
 
 Palindrome
 \end{notice}
 
-(The {\hyperref[forexamples:index-5]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/forexamples.rst, line 248.)
+(The {\hyperref[forexamples:index-5]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/forexamples.rst, line 248.)
 
 \begin{notice}{note}{Todo}
 
 ASCII art, triangles; see for loop lab.
 \end{notice}
 
-(The {\hyperref[forexamples:index-6]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/forexamples.rst, line 252.)
+(The {\hyperref[forexamples:index-6]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/forexamples.rst, line 252.)
 
 \begin{notice}{note}{Todo}
 
 Repeat string N times.  part a, just printed, part b: return a string
 \end{notice}
 
-(The {\hyperref[forexamples:index-7]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/forexamples.rst, line 255.)
+(The {\hyperref[forexamples:index-7]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/forexamples.rst, line 255.)
 
 \begin{notice}{note}{Todo}
 
 Make restructured text table with fixed rows, columns, and width empty content.
 \end{notice}
 
-(The {\hyperref[forexamples:index-8]{\emph{original entry}}} is located in  /Users/anh/www/170/notes/devel/rst/forexamples.rst, line 258.)
+(The {\hyperref[forexamples:index-8]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/forexamples.rst, line 258.)
+
+\begin{notice}{note}{Todo}
+
+Andy new
+\end{notice}
+
+(The {\hyperref[notusereturn:index-1]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/notusereturn.rst, line 13.)
+
+\begin{notice}{note}{Todo}
+
+one dimensional arrays
+\end{notice}
+
+(The {\hyperref[onedim:index-0]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/onedim.rst, line 8.)
+
+\begin{notice}{note}{Todo}
+
+two dimensional arrays
+\end{notice}
+
+(The {\hyperref[twodim:index-0]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/twodim.rst, line 8.)
+
+\begin{notice}{note}{Todo}
+
+``bisection method''
+\end{notice}
+
+(The {\hyperref[whileexamples:index-0]{\emph{original entry}}} is located in  /Users/anh/www/170/noteshg/introcs-csharp/rst/whileexamples.rst, line 9.)
 
 \begin{thebibliography}{UPennCSharp}
 \bibitem[CamelCase]{CamelCase}{\phantomsection\label{homework-gradecalculation2:camelcase} 

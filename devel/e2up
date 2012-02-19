@@ -1,8 +1,8 @@
 #! /bin/bash
 
-cp rst/examples/* ../examples/
+cp ../examples/* ../examples-cs/
 
-cd ../examples
+cd ../examples-cs
 rm ../examples.zip
 rm *.py
 zip ../examples.zip * 

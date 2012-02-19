@@ -151,7 +151,7 @@ To make the data line up with the heading titles,
 we can expand the columns, with code in example
 ``PowerTable.cs``:
 
-.. literalinclude:: ../examples/PowerTable.cs
+.. literalinclude:: examples/PowerTable.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -181,6 +181,8 @@ larger field width.
    double: ASCII; example
    
 .. _ASCII:
+
+.. rubric::  ASCII Codes
 
 Here is a reverse lookup from the 
 :ref:`Numeric Code of String Characters <codeofstringchar>`:  
@@ -233,6 +235,265 @@ There is no eighth entry on the last line, and hence no advance to the
 next line.  A program printing this table should include an extra 
 ``Console.WriteLine()`` after the loop.
 
+.. index::
+   double: table; nested loops
+   double: format; table
+   double: example; ModMultTable.cs
+
+.. rubric::  Modular Multiplication Table
+
+We have introduced the remainder operator ``%`` and mentioned have the corresponding
+mathematical term is "mod".  We can extend that to the idea of mudular arithmetic 
+systems.  For example, if we only look at remainders mod 7, we can just consider
+numbers 0, 1, 2, 3, 4, 5, and 6.  We can do multiplication and addition and take 
+remainders mod 7 to get answers in the same range.  For example 3 * 5 mod 7 
+is ``(3 * 5) % 7`` in C#, which is 1.  As we look more at this system, we will 
+observe and explain more properties.
+
+The next example is to make a table of multiplication, mod 7, and later generalize.
+
+Tables generally have row and column labels.  We can aim for something like::
+
+	* | 0 1 2 3 4 5 6 
+	-----------------
+	0 | 0 0 0 0 0 0 0 
+	1 | 0 1 2 3 4 5 6 
+	2 | 0 2 4 6 1 3 5 
+	3 | 0 3 6 2 5 1 4 
+	4 | 0 4 1 5 2 6 3 
+	5 | 0 5 3 1 6 4 2 
+	6 | 0 6 5 4 3 2 1 
+
+The border labels make the table much more readable, but let us start simpler,
+with just the modular multiplications::
+
+
+    0 0 0 0 0 0 0 
+	0 1 2 3 4 5 6 
+	0 2 4 6 1 3 5 
+	0 3 6 2 5 1 4 
+	0 4 1 5 2 6 3 
+	0 5 3 1 6 4 2 
+	0 6 5 4 3 2 1 
+
+This is ore complicated in some respects than our previous table, so start slow,
+with some pseudocode.  We need a row for each number 0-6, and so a for loop
+suggests itself::
+
+    for (int r = 0; r < 7; r++) {
+       print row
+    }
+    
+Each individual row also involves a repeated pattern:  
+calculate for the next number.  We can name the second number c for column.  The
+next rvision replaces "print row" by a loop:  a *nested* loop, inside the loop for
+separate rows::
+
+    for (int r = 0; r < 7; r++) {
+       for (int c = 0; c < 7; c++) {
+           print modular multiple on same line
+       }
+    }
+
+and the modular multiplication is just regular multiplication followed by
+taking the remainder mod 7, so you might come up with the C# code::
+
+    for (int r = 0; r < 7; r++) {
+       for (int c = 0; c < 7; c++) {
+           int modProd = (r*c) % 7;
+           Console.Write(modProd + " ");
+       }
+    }
+
+You can test this in csharp, and see it is not quite right!  chopped-off output starts::
+
+    0 0 0 0 0 0 0 0 1 2 3 4 5 6 0 2 4 6 1 3 5 0 3 6 2 5 1 4 0...
+    
+Though we want each entry in a row on the same line, we need to go down to the
+next line at the end of each line!  Where do we put in the newline in the code?
+A line is all the modular products by r, *followed* by one newline.  
+All the modular products for a row are printed in the inner ``for`` loop.  We want to
+advance *after* that, so the newline must be inserted *outside the inner loop*.  
+On the other hand we do want it done for *each* row, so it must be 
+*inside the outer loop*:
+
+..  code-block:: csharp
+    :linenos:
+
+    for (int r = 0; r < 7; r++) {
+       for (int c = 0; c < 7; c++) {
+           int modProd = (r*c) % 7;
+           Console.Write(modProd + " ");
+       }
+       Console.WriteLine();
+    }
+    
+You can copy and test that code in csharp, and it works!
+
+It is important to be able to play computer on nested loops and follow execution,
+statement by statement.  Look more closely at the code above, 
+noting the added line numbers.  General sequencing orders apply:  
+The basic pattern is sequential:  *Complete* one statement before going on to the next.
+*Inside* the execution of a looping statement, there are extra rules, for testing and
+going through the whole loop body sequentially.  
+Most new students can get successfully to line 4:
+
+   =====  ==  ==  ==========  =====================
+    line   r   c     modProd  comment
+   =====  ==  ==  ==========  =====================
+       1   0   -           -  initialize outer loop
+   -----  --  --  ----------  ---------------------
+       2   0   0           -  initialize inner loop
+   -----  --  --  ----------  ---------------------
+       3   0   0           0
+   -----  --  --  ----------  ---------------------
+       4   0   0           0  Write 0
+   -----  --  --  ----------  ---------------------
+
+After reaching the bottom of the loop, where do you go?  
+You finsh the innermost statement that you are in.  
+You are in the inner loop, so the next line is the *inner* loop heading
+where you increment c and continue with the loop since 1 < 7.  This 
+inner loop continues until you reach the bottom of the inner loop,
+line 4, with c = 6, and return to the heading, line 2, and the test fails,
+finishing the inner row loop:
+
+   =====  ==  ==  ==========  =====================
+    line   r   c     modProd  comment
+   =====  ==  ==  ==========  =====================
+       1   0   -           -  initialize outer loop
+   -----  --  --  ----------  ---------------------
+       2   0   0           -  0 < 7, enter loop body
+   -----  --  --  ----------  ---------------------
+       3   0   0           0  (0*0)%7
+   -----  --  --  ----------  ---------------------
+       4   0   0           0  Write 0
+   -----  --  --  ----------  ---------------------
+       2   0   1           -  c=0+1=1,  1 < 7: true
+   -----  --  --  ----------  ---------------------
+       3   0   1           0  (0*1)%7
+   -----  --  --  ----------  ---------------------
+       4   0   1           0  Write 0
+   -----  --  --  ----------  ---------------------
+       2   0   2           -  c=1+1=2,  2 < 7: true
+   -----  --  --  ----------  ---------------------
+     ...                      ... through c = 6
+   -----  --  --  ----------  ---------------------
+       4   0   6           0  Write 0
+   -----  --  --  ----------  ---------------------
+       2   0   7           -  c=+1=7,  7 < 7: false
+   -----  --  --  ----------  ---------------------
+   
+At this point the inner loop statement, lines 2-4, has completed,
+and you continue.  You go on to the next statement in the
+same sequential chuck as the statement in lines 2-4:  
+That chunk is the the outer loop body, lines 2-6.
+The next statement is line 6, advancing printing to the next line.
+That is the last statement of the outer loop, so you
+return to the heading of the outer loop and modify its loop 
+variable r.  The two lines just described are:
+   
+   =====  ==  ==  ==========  =====================
+    line   r   c     modProd  comment
+   =====  ==  ==  ==========  =====================
+       6   0   -           -  print a newline
+   -----  --  --  ----------  ---------------------
+       1   1   -           -  0+1=1, 1 < 7 enter outer loop
+   -----  --  --  ----------  ---------------------
+
+Then you go all the way through the inner loop again, 
+for all columns, with c going from 0 through 6, and exit at c=7, 
+finish the body of the outer loop by advancing to a new print line,
+and return to the outer loop heading, setting r = 2..., until
+all rows are completed.
+
+The common error here is to forget what loop is the innermost one 
+that you are working on, and exit that loop before is is totally finished: 
+before the test of the condition that controls it becomes false.
+
+Look back one more time and make sure the code for this *simpler* table makes
+sense before we continue to the one with labels....
+
+The fancier table has a couple of extra rows at the top.  These two rows
+are unlike the remaining rows in the body of the table, so they need special code.
+
+If we go back to our pseudocode we could add to it::
+
+    print heading row
+    print dash-row
+    for (int r = 0; r < 7; r++) {
+       print body row
+    }
+
+First analyse the heading row:  Some parts are repetitive and
+some are not: Print ``"* |"`` once, and then there is a repetitive pattern printing
+0 - 6, which we can do with a simpler loop than in the body::
+
+      Console.Write("* | ");
+      for ( int i = 0; i < 7; i++) {
+         Console.Write(i + " ");
+      }
+      Console.WriteLine();
+
+The dash line can be generated using ``StringRep`` from 
+:ref:`StringRepeatingExercise`.  How many dashes?  For each of
+seven columns, and in a row header, we need a digit and an space or 
+(7+1)*(1+1) characters, plus one for the '|':  1 + (7+1)*(1+1).  
+Thinking ahead, we will leave that expression unsimplified.
+
+We have done most of the work for the rows of the body of the table.  We just 
+have a bit of printing for the initial row label before the column loop.  The row
+label is r.  The whole code is in example ``Mod7Table.cs`` and below::
+
+
+..  literalinclude:: examples/Mod7Table.cs
+    :start-after: chunk
+    :end-before: chunk
+      
+Besides the 0 row and column in the mod 7 table,
+note that each line contains a permutation of all the numbers 1-6.  That means it is
+possible to define the *inverse* of the multiplication operation, and mod 7 aritmetic
+actually forms a mathematical *field*.  
+Modular arithmetic (with much larger moduli!) is extremely important in cryptography.  
+It protects all your online financial transactions.  
+
+The inverse operation to multiplication for prime moduli is
+easy to work out by brute force, going through the products.
+There needs to be a much more efficient
+method for use in cryptography:  That method involves
+an elaboration of the GCD algorithm already discussed.
+
+Finally, let us generalize this table to mod n.  With n up to about 25, 
+it is reasonable to print.
+Most places in the code, that just means replacing 7 by n.  
+There is a further complication
+with column width, since the numbers can be more than one digit.  We can do
+formatting with a field width.  
+Unfortunately in C# the field width must be a literal
+integer embedded in the format string, but our number of digits in n is variable.
+
+Here is a good trick:  Construct the format string inside the program.  
+We can do that with *another* format string.  To get the  format for a 
+number and an extra space
+mod 7, we want format string "{0, 1} ", but mod 11, we want "{0, 2} ".  We can 
+create a format string to substitute into the place the 1 or 2 go.  
+The 1 or 2 to substitute is the number of characters in n as a string, 
+as in ``("" + n).Length``.
+
+The second level format string has an
+extra wrinkle, because we want explicit braces (for the main format string).  
+Recall the explicit braces are doubled.  Putting this all together, we can 
+create our main format string with::
+
+    int numberWidth = ("" + n).Length;
+    string colFormat = string.Format("{{0, {0}}} ", numberWidth);
+
+The whole function code is below and in example :file:`ModMultTable.cs`.
+
+..  literalinclude:: examples/ModMultTable.cs
+    :start-after: chunk
+    :end-before: chunk
+
 .. todo::
 
    Do some of these examples backwards.
@@ -254,7 +515,34 @@ next line.  A program printing this table should include an extra
 .. todo::
    Make restructured text table with fixed rows, columns, and width empty content.
 
+.. index::
+   double: exercise; StringRepeating
 
+.. _StringRepeatingExercise:
+
+String Repeating Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+a. Write a program StringRep.cs with a function PrintDup, 
+   with heading::
+ 
+       /** Print n repetitions of s on one line (n >= 0). */
+       static void PrintDup(stirng s, int n)
+
+b. More versatile is to add and test a function ``StringRep``:
+
+   ..  literalinclude:: examples/ModMultTable.cs
+       :start-after: StringRep chunk
+       :end-before: {
+
+   This takes more thought and work that just printing repeatedly.  
+   You need to accumulate the final string to return.
+
+
+.. index::
+   double: exercise; heads or tails
+   double: random; heads or tails
+   
 Head or Tails Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 

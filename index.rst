@@ -21,7 +21,7 @@ and the `monodevelop projects zip file <projects.zip>`_ then expand ieach to hav
 all the C# example programs and projects that go with the notes.
 
 For a quick look, you may also 
-browse the `example code online <examples>`_ and the `project code online <projects>`_.
+browse the `example code online <examples-cs>`_ and the `project code online <projects>`_.
 
 The notes continue to be updated and expanded. You can see an outline of
 the latest major changes in the `change log <CSharpHtml/changelog.html>`_.  

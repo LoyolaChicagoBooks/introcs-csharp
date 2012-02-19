@@ -1,8 +1,8 @@
 #! /bin/bash
 
 rm ../CSharpHtml/* ../CSharpHtml/*/*
-cp -R rst/_build/html/* ../CSharpHtml/
-cp rst/_build/latex/ProgrammingInCSharp.pdf ..
+cp -R ../build/html/* ../CSharpHtml/
+cp ../build/latex/ProgrammingInCSharp.pdf ..
 #zip rst.zip rst/*.rst rst/conf.py
 #mv rst.zip ..
 cd ..
