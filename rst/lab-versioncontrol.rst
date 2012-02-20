@@ -63,16 +63,114 @@ Steps
 
 Create Bitbucket.org account
 ----------------------------
-We're going to begin by creating a repository based on some previous work
-you have done. Because this is our first effort, you are encouraged to 
-work with a copy of your previous work.
 
+We're going to begin by creating a remote repository for our work. The 
+advantage of doing so is that we get a *hosted* repository that we can
+use to push/pull our work. (Unlike a dangerous stunt, you *want* to be able
+to try this at home, too!)
+
+Signing up for a repository at http://bitbucket.org is easy. From the 
+landing page, just click on the option for the *Free Plan*. This allows
+you to create any number of public/private repositories with support
+for up to 5 users. This is all you'll need for your work in this course.
+
+Once you've created your account (and confirmed it, if required) you 
+are good to go for the rest of this lab!
 
 Create repository at Bitbucket
 ------------------------------
 
+Now we'll create a first repository at Bitbucket.org.
+
+Go to ``Repositories -> Create Repository`` (the option is at the bottom
+of the list of menu options). You'll see this screen:
+
+   .. image:: images/lab-hg/hgcreaterepository.png
+      :height: 400 px
+     	:alt: MonoDevelop Image
+     	:align: center
+
+You'll need to fill in or select the following options:
+
+- Name: A short name for your project. You are encouraged to keep this simple. 
+  If you are using this for all of your work in COMP 170 (which is fine) you
+  might name the repository after your initials. So if your name is 
+  Linus Torvalds, you could give a short name like *LinusTorvaldsCOMP170* or *LTCOMP170*.
+
+- Repository Type: Select Mercurial. Yes, we realize that MonoDevelop supports Git natively,
+  but for the reasons mentioned earlier, we have chosen Mercurial. We will allow you to use
+  Git on your own if you can figure it out and use it properly. But this lab assumes
+  Mercurial.
+
+- Language: You can select anything you like here. We do C# for the most part in this
+  class, so we recommend that you select it.
+
+- Description: You can give any description you like. If you are working with a partner
+  please list both you and your partner's name in the description.
+
+- Web Site: Optional
+
+- Private checkbox should be checked.
+
+So just go ahead and create your first repository. You can always create more of them later.
+
+Here is an example of a filled out form:
+
+   .. image:: images/lab-hg/hgcreaterepository2.png
+      :height: 400 px
+     	:alt: MonoDevelop Image
+     	:align: center
+
 Clone repository from Bitbucket
 -------------------------------
+
+If all has gone well, you should now see your new repository on the list of repositories.
+
+For example, the co-author's new repository, ``gkt170``, shows up on the list of repositories 
+(the dropdown) as ``gkthiruvathukal/gkt170``.
+
+So you can now go ahead by selecting this newly created repository from the list of repositories.
+If all goes well, you should see the following screen:
+
+   .. image:: images/lab-hg/hgrepositoryinfo.png
+      :height: 400 px
+     	:alt: MonoDevelop Image
+     	:align: center
+
+Somewhere on this screen, you should see this text::
+
+    Clone this repository (size: 546 bytes): HTTPS / SSH
+    hg clone https://yourusername@bitbucket.org/yourusername/yourrepository
+
+Using information we learned earlier in the course, open a terminal (or DOS command shell).
+You can do this command (copied and pasted from Bitbucket) in your default home directory::
+
+    hg clone https://yourusername@bitbucket.org/yourusername/yourrepository
+
+This will create a copy of your (currently empty) repository. Once you have this copy, you 
+can copy and paste folders and files into your project. You will see some output::
+
+    hg clone https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
+    http authorization required
+    realm: Bitbucket.org HTTP
+    user: gkthiruvathukal
+    password: 
+    destination directory: gkt170
+    no changes found
+    updating to branch default
+    0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+
+Again, because the repository at Bitbucket is presently empty, the above output actually
+makes sense. There are no files to be updated. We'll learn more about what this output
+means later. It is possible to get *unresolved* files when you make changes that introduce
+conflicts. We're going to do whatever we can to avoid these for the small projects in 
+our course work. However, when working in teams, it will become especially important that
+you and your teammate(s) are careful to communicate changes you are making, especially
+when changing the same files in a project.
+
+.. warning::
+   A version control system doesn't replace the need for human communication and being
+   organized. 
 
 Add an .hgignore file to your project
 -------------------------------------
