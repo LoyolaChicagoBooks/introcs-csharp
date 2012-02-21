@@ -1,3 +1,8 @@
+_lab-versioncontrol:
+
+.. index::
+   single: labs, hg
+   signle: labs, version control
 
 Lab: Version Control
 ====================
@@ -13,8 +18,10 @@ community, a number of solutions have emerged, including some old (CVS,
 Subversion) and some new (Mercurial, Git, and Bazaar). We're particularly
 fond of the Mercurial system. A key reason for our choice is that there is
 an excellent cloud-based solution to host your projects known as Bitbucket
-(http://bitbucket.org). There are other similar solutions to Bitbucket but
-none at present provides a completely *free* solution for hosting *private*
+(http://bitbucket.org).
+
+There are other similar solutions to Bitbucket but none at present
+provides a completely *free* solution for hosting *private*
 repostories, which allow you to keep your work *secret* from others.
 
 Goals
@@ -27,21 +34,16 @@ In this lab, we're going to learn:
 #. How to add files and folders to a repository and track them.
 
 #. How to make sure certain files and folders are not kept in the repository.
-   Typically, we do not want any files in the repository that can be 
-   created from a source file. For example, if you have a file Hello.cs,
-   it can be used to create Hello.exe, so there is no need to put the 
-   file Hello.exe in the repository.
 
-#. How to push your changes to a remote repository (at Bitbucket.org)
+#. How to push your changes to a remote repository (at Bitbucket.org).
 
 #. How to do your work at home and in the lab.
 
 #. How to do your work if you are in another lab on campus (e.g. a 
    Windows or Linux Lab).
 
-#. (For the WTC section students) How to access your code remotely 
-   via SSH.
-
+#. How to get our notes, examples, and projects (now that that you know how
+   to use Mercurial).
 
 Before We Proceed
 -----------------
@@ -148,7 +150,7 @@ You can do this command (copied and pasted from Bitbucket) in your default home 
     hg clone https://yourusername@bitbucket.org/yourusername/yourrepository
 
 This will create a copy of your (currently empty) repository. Once you have this copy, you 
-can copy and paste folders and files into your project. You will see some output::
+can copy and paste folders and files into your project. You will see some output:: 
 
     hg clone https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
     http authorization required
@@ -175,7 +177,13 @@ when changing the same files in a project.
 Add an .hgignore file to your project
 -------------------------------------
 
+The following is an example of a "dot hgignore" file.
+
 .. literalinclude:: ../examples/hgignore.txt
+
+
+The notion of a "dot" file (filename beginning with a dot) comes from Linux, where
+
 
 Create an initial structure for your project
 --------------------------------------------
@@ -193,7 +201,48 @@ with version control. We suggest creating the following folders:
   some folder structure within this folder (e.g. hello, division, strings, 
   etc.)
 
+So let's do it:
 
+#. Change to the checkout directory::
+
+       cd gkt170
+
+   
+#. Create directories::
+
+       mkdir projects
+       mkdir labs
+       mkdir examples
+
+   We will be creating items in each one of these folders during the lab. Until
+   we create some actual *files* in these folders, we will not be putting anything
+   under version control just yet.
+
+
+#. Create or copy the *Hello, World* C# program into the labs folder. You already
+   know how to do this. If it is in another folder on your computer, you can either
+   drag and drop it using your operating systems's file manager or the OS copy 
+   command (Linux or OS X ``cp`` or Windows ``copy``).
+
+
+
+#. Now let's do a status check::
+
+       $ hg status
+       ? labs/hello.cs
+       ? labs/hello.exe
+
+#. As you can see, my labs folder contains the code for ``hello.cs`` and the 
+   compiled code, ``hello.exe``. In the next section, we'll learn how to "ignore"
+   compiled code, which really doesn't belong in the repository, because it is something
+   we can *regenerate* from ``hello.cs``, simply by using the C# compiler, ``gmcs``.
+
+#. So let's add ``hello.cs`` to our *copy of* the repository. It is important to note
+   at this point that we are working only with a copy of our repository on Bitbucket. 
+   This allows us to make any desired changes without being connected to the internet,
+   after which we can **push** the changes back to Bitbucket. (More on that later.)
+
+   
 Make sure your files are actually in the folders
 ------------------------------------------------
 
