@@ -150,6 +150,39 @@ Here is an example of a filled out form:
    :alt: MonoDevelop Image
    :align: center
 
+Set up your Mercurial commit username
+-------------------------------------
+
+If you in a place where you have a permanent home directory,
+like on your machine or in the Linux Lab,
+create a file named ``.hgrc`` in your home directory. Your home directory is 
+where you are dumped when you open a DOS or Linux/OS X terminal. 
+This file must contain the following line::
+
+    [ui]
+    username = John Doe <johndoe@johndoe.com>
+
+It is a convention to give a name and email address, though
+it does not need to match the email address you gave when
+signing up for bitbucket.
+
+Creating this file saves you the trouble of having to pass the ``-u username`` 
+option to ``hg`` each time you do a *commit* operation. 
+
+You can put this file in your home directory in Windows labs, but it disappears.
+
+As a gentle reminder, your home directory on Windows can be a bit difficult to find. 
+The easiest way is to use your editor to locate your home folder. 
+When in the DOS prompt, you will also see the path to your directory as part of the prompt. 
+For example, on Windows 7, you will see ``C:\Users\johndoe``.
+
+.. warning::
+   To ensure that you did this step correctly, please open a *new* terminal or DOS 
+   window at this time and use the ``ls`` or ``dir`` command to verify that the ``.hgrc``
+   file is indeed present in your home directory. If it is in any other folder, Mercurial 
+   (the **hg** command) will not be able to find it--and you will receive an error.
+
+
 Clone repository from Bitbucket
 -------------------------------
 
@@ -211,31 +244,6 @@ especially when changing the same files in a project.
    A version control system doesn't replace the need for human communication and being
    organized. 
 
-Set up your Mercurial commit username
--------------------------------------
-
-If you in a place where you have a permanent home directory,
-like on your machine or in the Linux Lab,
-create a file named ``.hgrc`` in your home directory. Your home directory is 
-where you are dumped when you open a DOS or Linux/OS X terminal. 
-This file must contain the following line::
-
-    [ui]
-    username = John Doe <johndoe@johndoe.com>
-
-It is a convention to give a name and email address, though
-it does not need to match the email address you gave when
-signing up for bitbucket.
-
-Creating this file saves you the trouble of having to pass the ``-u username`` 
-option to ``hg`` each time you do a *commit* operation. 
-
-You can put this file in your home directory in Windows labs, but it disappears.
-
-As a gentle reminder, your home directory on Windows can be a bit difficult to find. 
-The easiest way is to use your editor to locate your home folder. 
-When in the DOS prompt, you will also see the path to your directory as part of the prompt. 
-For example, on Windows 7, you will see ``C:\Users\johndoe``.
 
 Add an .hgignore and Hello World file to your project
 -----------------------------------------------------
@@ -243,9 +251,6 @@ Add an .hgignore and Hello World file to your project
 The following is an example of a "dot hgignore" file.
 
 .. literalinclude:: ../examples/hgignore.txt
-
-For the most part, you can just copy this file to the folder you
-cloned from Bitbucket. (In the above, ``gkt170``). 
 
 Here is a brief explanation of what we've included here and why:
 
@@ -272,35 +277,36 @@ Here is a brief explanation of what we've included here and why:
   reasoning for not keeping these is similar to that in the previous
   case.
 
-So do the following steps:
+Now do the following steps:
 
 #. Using your text editor, create a file ``.hgignore``. You can simply
    copy and paste the above contents into this file.
 
-..  comment
-    ? no such work yet?
-   
-	#. Let's test whether .hgignore is having any effect. Go to the
-	   ``labs`` folder and compile the ``Hello, World.`` example. 
+#. Create or copy your existing ``Hello World`` example, hello.cs to the
+   the ``labs`` folder.
+
+#. Let's test whether .hgignore is having any effect. Go to the
+   ``labs`` folder and compile the ``Hello, World.`` example. 
 	
-	#. Verify that the .cs and .exe files are in the labs directory
-	   (``ls`` on Linux or OS X; ``dir`` on MS-DOS)::
-	
-		   gkt@gkt-mini:~/gkt170/labs$ gmcs hello.cs 
-		   gkt@gkt-mini:~/gkt170/labs$ ls -l
-		   total 8
-		   -rw-r--r-- 1 gkt gkt  224 2012-02-20 20:02 hello.cs
-		   -rwxrwxr-x 1 gkt gkt 3072 2012-02-20 20:05 hello.exe
+#. Verify that the .cs and .exe files are in the labs directory
+   (``ls`` on Linux or OS X; ``dir`` on MS-DOS)::
+
+      gkt@gkt-mini:~/gkt170/labs$ gmcs hello.cs 
+      gkt@gkt-mini:~/gkt170/labs$ ls -l
+      total 8
+      -rw-r--r-- 1 gkt gkt  224 2012-02-20 20:02 hello.cs
+      -rwxrwxr-x 1 gkt gkt 3072 2012-02-20 20:05 hello.exe
 			
-	#. Check the status::
+
+#. Check the status::
 	
-		   gkt@gkt-mini:~/gkt170/labs$ hg status
-		   ? .hgignore
-		   ? labs/hello.cs
+      gkt@gkt-mini:~/gkt170/labs$ hg status
+      ? .hgignore
+      ? labs/hello.cs
 	
-	   What this tells us is that ``.hgignore`` and ``labs/hello.cs`` are not 
-	   presently being tracked by our version control system, Mercurial. The
-	   file ``labs/hello.exe`` is not shown, because it's on the ignore list.
+   What this tells us is that ``.hgignore`` and ``labs/hello.cs`` are not 
+   presently being tracked by our version control system, Mercurial. The
+   file ``labs/hello.exe`` is not shown, because it's on the ignore list.
 
    Note that we actually need to put the ``.hgignore`` file under version
    control if we want to use it wherever we happen to be working with our
@@ -310,8 +316,7 @@ So do the following steps:
 
        gkt@gkt-mini:~/gkt170$ hg add .hgignore 
        
-   .. comment
-      gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
+       gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 
 #. Commit the changes, and then see the log entry.  If you set the .hgrc file,
    the command somewhere inside your local repository could be::
@@ -374,10 +379,17 @@ So let's do it:
 
        mkdir projects
        mkdir labs
-       mkdir examples
 
    We will be creating items in each one of these folders during the lab. 
    
+   .. warning::
+      Please note that most version control systems do not allow you to add *empty*
+      folders to the repository. You must create at least one file and **hg add** it
+      to the repository (and **hg add** and **hg push**) for the folder to actually
+      be created. The above was just intended to make you aware of a desired "organization".
+      You are free to organize your project any way you like as long as we are able
+      to find your homework assignments.
+
 .. comment
    
    No meaning to student yet:
