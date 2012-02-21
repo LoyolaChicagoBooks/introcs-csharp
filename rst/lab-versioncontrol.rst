@@ -5,7 +5,7 @@ _lab-versioncontrol:
    signle: labs, version control
 
 Lab: Version Control
-====================
+######################
 
 Modern software development requires an early introduction source code
 management, also known as version control. While source code
@@ -25,12 +25,31 @@ particularly fond of the Mercurial system. A key reason for our choice
 is that there is an excellent cloud-based solution to host your
 projects known as Bitbucket (http://bitbucket.org).
 
+Mercurial is set up for our labs.  You can install it for your 
+personal machine from http://mercurial.selenic.com/downloads/ .
+
 There are other similar solutions to Bitbucket but none at present
 provides a completely *free* solution for hosting *private*
 repostories, which allow you to keep your work *secret* from others.
 
+The basic idea is to keep a main current copy of a project at a place
+like bitbucket.  Anywhere that you work, you can download a copy of the
+central version.  You can add and change files.  There are several
+layers insulating changes to local files form changes to the
+central repository:
+
+- You must explictily *add* any new file names you want the repository to track.
+- Even on a tracked file, you must *commit* changes to the local repository.
+- For the committed changes to get to the central repository, you must *push* them.
+- You have control over what files get ignored.
+
+Later, when you want the latest changes to the central repository to get to your 
+site, you need to *pull* data from the central repository, and then explicitly
+*update* your local repository, to incorporate the new data from the central 
+repository.
+
 Goals
------
+=======
 
 In this lab, we're going to learn:
 
@@ -74,7 +93,7 @@ use to push/pull our work. (Unlike a dangerous stunt, you *want* to be able
 to try this at home, too!)
 
 Signing up for a repository at http://bitbucket.org is easy. From the 
-landing page, just clickdfdfdfdfdf on the option for the *Free Plan*. This allows
+landing page, just click on the option for the *Free Plan*. This allows
 you to create any number of public/private repositories with support
 for up to 5 users. This is all you'll need for your work in this course.
 
@@ -89,10 +108,10 @@ Now we'll create a first repository at Bitbucket.org.
 Go to ``Repositories -> Create Repository`` (the option is at the bottom
 of the list of menu options). You'll see this screen:
 
-   .. image:: images/lab-hg/hgcreaterepository.png
-      :height: 400 px
-      :alt: MonoDevelop Image
-      :align: center
+.. image:: images/lab-hg/hgcreaterepository.png
+   :height: 400 px
+   :alt: MonoDevelop Image
+   :align: center
 
 You'll need to fill in or select the following options:
 
@@ -124,10 +143,10 @@ create more of them later.
 
 Here is an example of a filled out form:
 
-   .. image:: images/lab-hg/hgcreaterepository2.png
-      :height: 400 px
-      :alt: MonoDevelop Image
-      :align: center
+.. image:: images/lab-hg/hgcreaterepository2.png
+   :height: 400 px
+   :alt: MonoDevelop Image
+   :align: center
 
 Clone repository from Bitbucket
 -------------------------------
@@ -142,10 +161,10 @@ So you can now go ahead by selecting this newly created repository
 from the list of repositories.  If all goes well, you should see the
 following screen:
 
-   .. image:: images/lab-hg/hgrepositorysummary.png
-      :height: 400 px
-      :alt: MonoDevelop Image
-      :align: center
+.. image:: images/lab-hg/hgrepositorysummary.png
+   :height: 400 px
+   :alt: MonoDevelop Image
+   :align: center
 
 Somewhere on this screen, you should see this text::
 
@@ -154,13 +173,13 @@ Somewhere on this screen, you should see this text::
 
 Using information we learned earlier in the course, open a terminal
 (or DOS command shell).  You can do this command (copied and pasted
-from Bitbucket) in your default home directory::
+from Bitbucket) in the directory where you want to place the repository
+sub-directory.  This could be your home directory on your machine or
+a flash drive in a lab::
 
     hg clone https://yourusername@bitbucket.org/yourusername/yourrepository
 
-This will create a copy of your (currently empty) repository. Once you
-have this copy, you can copy and paste folders and files into your
-project. You will see some output::
+You will see some output::
 
     hg clone https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
     http authorization required
@@ -171,6 +190,10 @@ project. You will see some output::
     no changes found
     updating to branch default
     0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+
+You have created a copy of the (empty) bitbucket repository in a
+subdirectory named the same as yourrepository (gkt170 in the example).
+The is the "checkout directory", the top level of your copy.
 
 Again, because the repository at Bitbucket is presently empty, the
 above output actually makes sense. There are no files to be
@@ -189,14 +212,28 @@ especially when changing the same files in a project.
 Set up your Mercurial commit username
 -------------------------------------
 
-Create a file named ``.hgrc`` in your home directory. Your home directory is where you are dumped when you open a DOS or Linux/OS X terminal. This file must contain the following line::
+If you in a place where you have a permanent home directory,
+like on your machine or in the Linux Lab,
+create a file named ``.hgrc`` in your home directory. Your home directory is 
+where you are dumped when you open a DOS or Linux/OS X terminal. 
+This file must contain the following line::
 
     [ui]
     username = John Doe <johndoe@johndoe.com>
 
-This saves you the trouble of having to pass the ``-u username`` option to ``hg`` each time you do a *commit* operation. 
+It is a convention to give a name and email address, though
+it does not need to match the email address you gave when
+signing up for bitbucket.
 
-As a gentle reminder, your home directory on Windows can be a bit difficult to find. The easiest way is to use your editor to locate your home folder. When in the DOS prompt, you will also see the path to your directory as part of the prompt. For example, on Windows 7, you will see ``C:\Users\johndoe``.
+Creating this file saves you the trouble of having to pass the ``-u username`` 
+option to ``hg`` each time you do a *commit* operation. 
+
+You can put this file in your home directory in Windows labs, but it disappears.
+
+As a gentle reminder, your home directory on Windows can be a bit difficult to find. 
+The easiest way is to use your editor to locate your home folder. 
+When in the DOS prompt, you will also see the path to your directory as part of the prompt. 
+For example, on Windows 7, you will see ``C:\Users\johndoe``.
 
 Add an .hgignore and Hello World file to your project
 -----------------------------------------------------
@@ -238,40 +275,55 @@ So do the following steps:
 #. Using your text editor, create a file ``.hgignore``. You can simply
    copy and paste the above contents into this file.
 
-#. Let's test whether .hgignore is having any effect. Go to the
- ``labs`` folder and compile the ``Hello, World.`` example. 
-
-#. Verify that the .cs and .exe files are in the labs directory
-   (``ls`` on Linux or OS X; ``dir`` on MS-DOS)::
-
-       gkt@gkt-mini:~/gkt170/labs$ gmcs hello.cs 
-       gkt@gkt-mini:~/gkt170/labs$ ls -l
-       total 8
-       -rw-r--r-- 1 gkt gkt  224 2012-02-20 20:02 hello.cs
-       -rwxrwxr-x 1 gkt gkt 3072 2012-02-20 20:05 hello.exe
-        
-#. Check the status::
-
-       gkt@gkt-mini:~/gkt170/labs$ hg status
-       ? .hgignore
-       ? labs/hello.cs
-
-   What this tells us is that ``.hgignor`` and ``labs/hello.cs`` are not 
-   presently being tracked by our version control system, Mercurial. The
-   file ``labs/hello.exe`` is not shown, because it's on the ignore list.
+..  comment
+    ? no such work yet?
+   
+	#. Let's test whether .hgignore is having any effect. Go to the
+	   ``labs`` folder and compile the ``Hello, World.`` example. 
+	
+	#. Verify that the .cs and .exe files are in the labs directory
+	   (``ls`` on Linux or OS X; ``dir`` on MS-DOS)::
+	
+		   gkt@gkt-mini:~/gkt170/labs$ gmcs hello.cs 
+		   gkt@gkt-mini:~/gkt170/labs$ ls -l
+		   total 8
+		   -rw-r--r-- 1 gkt gkt  224 2012-02-20 20:02 hello.cs
+		   -rwxrwxr-x 1 gkt gkt 3072 2012-02-20 20:05 hello.exe
+			
+	#. Check the status::
+	
+		   gkt@gkt-mini:~/gkt170/labs$ hg status
+		   ? .hgignore
+		   ? labs/hello.cs
+	
+	   What this tells us is that ``.hgignore`` and ``labs/hello.cs`` are not 
+	   presently being tracked by our version control system, Mercurial. The
+	   file ``labs/hello.exe`` is not shown, because it's on the ignore list.
 
    Note that we actually need to put the ``.hgignore`` file under version
    control if we want to use it wherever we happen to be working with our
    stuff (i.e. when we're not in the computer lab but, say, at home). 
 
-#. Add the files to version control::
+#. Add the file to version control::
 
        gkt@gkt-mini:~/gkt170$ hg add .hgignore 
-       gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
+       
+   .. comment
+      gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 
-#. Commit the changes::
+#. Commit the changes, and then see the log entry.  If you set the .hgrc file,
+   the command somewhere inside your local repository could be::
+   
+       hg commit -m "adding an .hgignore file and Hello, World to the project"
+       
+   If you did not create .hgrc, you need also include identification 
+   with -u yourName after ``commit``, as in  
 
-       gkt@gkt-mini:~/gkt170$ hg commit -m "adding an .hgignore file and Hello, World to the project"
+       hg commit -u gkt -m "adding an .hgignore file and Hello, World to the project"
+   
+   It is Ok if your message wraps to a new line.  You can check the log entry created
+   by your commit::
+
        gkt@gkt-mini:~/gkt170$ hg log
        changeset:   0:9fe6ee1bf907
        tag:         tip
@@ -279,8 +331,12 @@ So do the following steps:
        date:        Mon Feb 20 20:14:42 2012 -0600
        summary:     adding an .hgignore file and Hello, World to the project
 
-#. Push the changes to Bitbucket (you'll be prompted for user/password not shown here):
+#. Push the changes to Bitbucket (you'll be prompted for user/password not shown here)::
 
+       hg push 
+       
+   You should get a response like::
+   
        pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
        searching for changes
        remote: adding changesets
@@ -318,35 +374,44 @@ So let's do it:
        mkdir labs
        mkdir examples
 
-   We will be creating items in each one of these folders during the lab. Until
+   We will be creating items in each one of these folders during the lab. 
+   
+.. comment
+   
+   No meaning to student yet:
+   Until
    we create some actual *files* in these folders, we will not be putting anything
    under version control just yet.
 
+.. comment
+   no idea what is in this hello project, what named, 
+   already ignoring .exe 
+   This all makes more sense for a definite project like the follwoing one
 
-#. Create or copy the *Hello, World* C# program into the labs folder. You already
-   know how to do this. If it is in another folder on your computer, you can either
-   drag and drop it using your operating systems's file manager or the OS copy 
-   command (Linux or OS X ``cp`` or Windows ``copy``).
-
-
-
-#. Now let's do a status check::
-
-       $ hg status
-       ? labs/hello.cs
-       ? labs/hello.exe
-
-#. As you can see, my labs folder contains the code for ``hello.cs`` and the 
-   compiled code, ``hello.exe``. In the next section, we'll learn how to "ignore"
-   compiled code, which really doesn't belong in the repository, because it is something
-   we can *regenerate* from ``hello.cs``, simply by using the C# compiler, ``gmcs``.
-
-#. So let's add ``hello.cs`` to our *copy of* the repository. It is important to note
-   at this point that we are working only with a copy of our repository on Bitbucket. 
-   This allows us to make any desired changes without being connected to the internet,
-   after which we can **push** the changes back to Bitbucket. (More on that later.)
-
-   
+    #. Create or copy the *Hello, World* C# program into the labs folder. You already
+       know how to do this. If it is in another folder on your computer, you can either
+       drag and drop it using your operating systems's file manager or the OS copy 
+       command (Linux or OS X ``cp`` or Windows ``copy``).
+    
+    
+    
+    #. Now let's do a status check::
+    
+           $ hg status
+           ? labs/hello.cs
+           ? labs/hello.exe
+    
+    #. As you can see, my labs folder contains the code for ``hello.cs`` and the 
+       compiled code, ``hello.exe``. In the next section, we'll learn how to "ignore"
+       compiled code, which really doesn't belong in the repository, because it is something
+       we can *regenerate* from ``hello.cs``, simply by using the C# compiler, ``gmcs``.
+    
+    #. So let's add ``hello.cs`` to our *copy of* the repository. It is important to note
+       at this point that we are working only with a copy of our repository on Bitbucket. 
+       This allows us to make any desired changes without being connected to the internet,
+       after which we can **push** the changes back to Bitbucket. (More on that later.)
+    
+       
 MonoDevelop
 -----------
 
@@ -369,13 +434,15 @@ immediately preceding section.
 
 #. Name ``Hello``.
 
-#. Location is the ``projects`` folder of your repository. In the instructors case, it is ``/home/gkt/gkt170/projects``.
+#. Location is the ``projects`` folder of your repository. 
+   In the instructors case, it is ``/home/gkt/gkt170/projects``.
 
 #. Solution ``Hello``.
 
 #. Don't select any project features and press Forward.
 
-#. If all has gone well, you should see the familiar default C# console project, probably with the Hello World Console output.
+#. If all has gone well, you should see the familiar default C# console project, 
+   probably with the Hello World Console output.
 
 #. Build All, Run, and Save. At this point, you can feel free to quit MonoDevelop.
 
@@ -383,32 +450,42 @@ immediately preceding section.
    the lack of integrated support for Mercurial (MonoDevelop only supports Git)::
 
         gkt@gkt-mini:~/gkt170$ hg status
+        
+   and produce a response like::
+   
         ? projects/Hello/Hello.sln
         ? projects/Hello/Hello/AssemblyInfo.cs
         ? projects/Hello/Hello/Hello.csproj
         ? projects/Hello/Hello/Main.cs
 
-   Mercurial shows you the files (as before) that are not being tracked. As you can see,
+   Mercurial shows you the tracked files that are modified (none here)
+   or files not not being tracked (ater a '?'),
+   except for those files explicitly ignored.  As you can see,
    MonoDevelop's solution (.sln), project (.csproj), and source (.cs) files are shown, but
-   no "binary" objects (e.g. anything in or beneath the ``bin`` directory) are present.
+   no "binary" objects (e.g. anything in or beneath the ``bin`` directory) are present,
+   since you gave instructions to ignore all such files.
 
 #. Add the new solution/projects to Mercurial. At this point, if the above list looks 
    "reasonable" to you, you can go ahead and just add *everything*. The **hg** command 
-   makes this easy for you. Instead of adding the specific files like we did previously,
-   you can just type the following::
+   makes this easy for you. Instead of adding the specific files,
+   you can just type the following (nothing after the add)::
 
         gkt@gkt-mini:~/gkt170$ hg add
+        
+   and produce a response like::
+   
         adding projects/Hello/Hello.sln
         adding projects/Hello/Hello/AssemblyInfo.cs
         adding projects/Hello/Hello/Hello.csproj
         adding projects/Hello/Hello/Main.cs
 
    If you inadvertently added something that you truly don't want in the repository, you
-   can use the **hg rm** command to remove it. We're going to leave this as an exercise to
-   the reader for now but want to make you aware that correcting mistakes is possible.
+   can use the **hg rm** command to remove it. We have nothing at the moment that
+   we want to remove, but want to make you aware that correcting mistakes is possible.
 
 #. As before, commit and push::
 
+        gkt@gkt-mini:~/gkt170$ hg commit -m "adding Hello project"
         gkt@gkt-mini:~/gkt170$ hg push
         pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170\
         searching for changes
@@ -440,10 +517,10 @@ Do the following:
    time, but we're going to take a look at the powerful capability of "looking at the
    source". So go to the *Source* tab.
 
-      .. image:: images/lab-hg/bitbucket-source.png
-         :height: 400 px
-         :alt: MonoDevelop Image
-         :align: center
+   .. image:: images/lab-hg/bitbucket-source.png
+      :height: 400 px
+      :alt: MonoDevelop Image
+      :align: center
 
 #. If all was done properly, you will see three objects: .hgnore, labs, and projects. These
    were all the result of our earlier sequence of commit+push operations. You can click on
@@ -452,10 +529,10 @@ Do the following:
    will eventually reach the folder containing your source code (for Hello.cs). Then you
    can look at it--through the web! When you do so, you'll see something like this.
 
-      .. image:: images/lab-hg/HelloWorld.png
-         :height: 400 px
-         :alt: MonoDevelop Image
-         :align: center
+   .. image:: images/lab-hg/HelloWorld.png
+      :height: 400 px
+      :alt: MonoDevelop Image
+      :align: center
 
 
 Working between lab and home (or home and lab)
@@ -475,7 +552,10 @@ desk (or laptop), you will go through the following lifecycle:
 
 - Create or modify your folders/files as desired.
 
-- **hg commit**: Save any changes you've made, to your local repository only.
+- If any files that you want included were just created, use **hg add**.  It does not
+  hurt to use this command, even if nothing was added.
+
+- **hg commit -m message.**: Save any changes you've made, to your local repository only.
 
 - **hg push**: Push the changes you've stashed in your local repository to the Bitbucket
   repository.
@@ -494,8 +574,8 @@ We're going to conclude by taking this opportunity to introduce you to how *we* 
 Harrington and Thiruvathukal) are actually using the stuff we are teaching to work as 
 a team on developing the course notes and examples. 
 
-#. Pick a different location (outside of your repository folder) to check out our stuff
-from Bitbucket::
+#. Pick a different location (outside of your repository folder and its subfolders) 
+   to check out our stuff from Bitbucket::
 
     hg clone https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/introcs-csharp
 
@@ -505,10 +585,10 @@ from Bitbucket::
    you visit our site at Bitbucket, you would see a screen like this when viewing our
    repository:
 
-      .. image:: images/lab-hg/introcs-repo.png
-         :height: 400 px
-         :alt: MonoDevelop Image
-         :align: center
+   .. image:: images/lab-hg/introcs-repo.png
+      :height: 400 px
+      :alt: MonoDevelop Image
+      :align: center
 
 #. There are several folders, but the ones of interest to you include ``examples`` and
    ``projects``, where we keep our basic examples and MonoDevelop projects, respectively.
@@ -531,6 +611,9 @@ from Bitbucket::
 #. You can explore introcs-csharp/projects to see our MonoDevelop projects. Just launch
    MonoDevelop, browse to the introcs-csharp/projects folder and you can load the GCD
    example solution.
+   
+   You can use the MonoDevelop import instruction to copy a project or file into your
+   MonoDevelop Solution from ours.
 
 #. There are other folders, too. The ``rst`` folder contains the "source code" for the
    notes themselves. The ``devel`` folder contains scripts to build the HTML, PDF, and ePub
@@ -540,10 +623,10 @@ from Bitbucket::
    course notes and will continue to do so when it comes to making improvements in this
    and future courses.
 
-So feel free to explore and use anything that we provide in our notes. It is entirely
-possible that you will find material and examples in these notes that we're unable to 
-cover during the regular course term.
 
-
-
-
+..  comment
+    ? no need for repository for this? 
+	So feel free to explore and use anything that we provide in our notes. 
+	It is entirely
+	possible that you will find material and examples in these notes that we're unable to 
+	cover during the regular course term.

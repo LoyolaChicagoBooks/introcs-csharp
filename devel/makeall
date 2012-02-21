@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # assume start in devel dir
-./makehtml
+./makehtml $*
 cd ../rst
 ./pause.py
 ./setofferings.py $USER

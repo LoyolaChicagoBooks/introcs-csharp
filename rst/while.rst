@@ -20,3 +20,4 @@ While Loops
    lab-number-game
    homework-gradecalculation2
    lab-monodevelop.rst
+   lab-versioncontrol
