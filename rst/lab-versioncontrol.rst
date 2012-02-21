@@ -1,8 +1,8 @@
-_lab-versioncontrol:
-
 .. index::
-   single: labs, hg
-   signle: labs, version control
+   double: labs; hg
+   double: labs; version control
+
+_lab-versioncontrol:
 
 Lab: Version Control
 ######################
@@ -30,7 +30,7 @@ personal machine from http://mercurial.selenic.com/downloads/ .
 
 There are other similar solutions to Bitbucket but none at present
 provides a completely *free* solution for hosting *private*
-repostories, which allow you to keep your work *secret* from others.
+repositories, which allow you to keep your work *secret* from others.
 
 The basic idea is to keep a main current copy of a project at a place
 like bitbucket.  Anywhere that you work, you can download a copy of the
@@ -38,7 +38,7 @@ central version.  You can add and change files.  There are several
 layers insulating changes to local files form changes to the
 central repository:
 
-- You must explictily *add* any new file names you want the repository to track.
+- You must explicitly *add* any new file names you want the repository to track.
 - Even on a tracked file, you must *commit* changes to the local repository.
 - For the committed changes to get to the central repository, you must *push* them.
 - You have control over what files get ignored.
@@ -83,6 +83,8 @@ you to start using version control right away for your own projects.
 
 Steps
 =====
+
+.. index:: bitbucket.org
 
 Create Bitbucket.org account
 ----------------------------
@@ -248,14 +250,14 @@ cloned from Bitbucket. (In the above, ``gkt170``).
 Here is a brief explanation of what we've included here and why:
 
 - ``syntax: glob`` indicates that uses the "glob" syntax, which comes
-  from MS-DOS (the commadn prompt still found on Windows). Glob syntax
+  from MS-DOS (the command prompt still found on Windows). Glob syntax
   allows you to do special things like match all files having a
   certain extension (e.g. ``*.exe`` matches ``Hello.exe`` and any
   other filename with extension .exe.)
 - ``Thumbs.db`` and ``.DS_Store``. Unfortunately, the Mac is still
   notorious for generating temporary files that serve no purpose,
   except on OS X. In general, we try to keep these files out of our
-  repository and encourage you to do the same, especially if your're a
+  repository and encourage you to do the same, especially if you are a
   Mac user.
 
 - ``*.exe`` and ``*.dll``. Anything that can be (re)produced by the
@@ -386,7 +388,7 @@ So let's do it:
 .. comment
    no idea what is in this hello project, what named, 
    already ignoring .exe 
-   This all makes more sense for a definite project like the follwoing one
+   This all makes more sense for a definite project like the following one
 
     #. Create or copy the *Hello, World* C# program into the labs folder. You already
        know how to do this. If it is in another folder on your computer, you can either
@@ -423,7 +425,7 @@ this command is run in the ``gkt170`` folder.
 Now let's do the following steps. Because most of these steps should be familiar to you,
 there will be few screenshots presented. If you like, you can redo the previous lab or
 move all of the files you created to the ``projects`` folder. We'll start by creating a 
-minimal project using MonoDevelop and go throught the same steps that we did in the 
+minimal project using MonoDevelop and go through the same steps that we did in the 
 immediately preceding section.
 
 #. Launch MonoDevelop.
