@@ -1,1 +1,1 @@
-rsync -avz $(pwd)/rst/_build/ thiruvathukal.com:/home/gkt/sites/introcs/
+rsync -avz $(pwd)/../build/ thiruvathukal.com:/home/gkt/sites/introcs/
