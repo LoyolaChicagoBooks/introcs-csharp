@@ -198,9 +198,8 @@ than ``b``.  At the end of loop, we know one of two things:
     #. ``a`` divides ``b`` perfectly, meaning there is no remainder.
     #. ``a`` doesn't divide ``b`` perfectly, meaning there is a
        remainder.
-
-This loop, therefore is computing :math:`a \bmod b` (or in C#
-terms ``a % b``.
+    #. This loop, therefore is computing :math:`a \bmod b` (or in C#
+       terms ``a % b``.
 
 The loop on line 9 is similar to the loop in line 5. For the same
 reasons as we already explained, this loop therefore is computing
