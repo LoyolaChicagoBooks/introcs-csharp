@@ -22,14 +22,12 @@ Introductory Programming in C#
    while
    foreach
    for
-   arrays
-   changelog
-
-.. no stubs yet
-
    files
+   arrays
    compoundtypes
    testingclasses
+   changelog
+
 
 Index and search
 ================

@@ -1,6 +1,11 @@
+.. index:: 
+   single: arrays; one dimensional
+
+.. _one-dim-arrays:
+
 One Dimensional Arrays
 ============================ 
 
 .. todo::
 
-   one dimensional arrays
+   anh:  1D arrays
