@@ -2,7 +2,7 @@
    double: labs; hg
    double: labs; version control
 
-_lab-versioncontrol:
+.. 	_lab-versioncontrol:
 
 Lab: Version Control
 ######################
@@ -35,7 +35,7 @@ repositories, which allow you to keep your work *secret* from others.
 The basic idea is to keep a main current copy of a project at a place
 like bitbucket.  Anywhere that you work, you can download a copy of the
 central version.  You can add and change files.  There are several
-layers insulating changes to local files form changes to the
+layers insulating changes to local files from changes to the
 central repository:
 
 - You must explicitly *add* any new file names you want the repository to track.
@@ -155,9 +155,11 @@ Set up your Mercurial commit username
 
 If you in a place where you have a permanent home directory,
 like on your machine or in the Linux Lab,
-create a file named ``.hgrc`` in your home directory. Your home directory is 
-where you are dumped when you open a DOS or Linux/OS X terminal. 
-This file must contain the following line::
+create a file named ``.hgrc`` in *your home directory*. Your home directory is 
+where you are dumped when you open a DOS or Linux/OS X terminal.  This is *not*
+inside your repository.
+This file must contain the following lines, witht he part after the equal sign
+personalized for you::
 
     [ui]
     username = John Doe <johndoe@johndoe.com>
@@ -170,6 +172,8 @@ Creating this file saves you the trouble of having to pass the ``-u username``
 option to ``hg`` each time you do a *commit* operation. 
 
 You can put this file in your home directory in Windows labs, but it disappears.
+YOu might want to keep an extra copy in your repostory, and copy it to the Windows 
+home folder when in the lab.
 
 As a gentle reminder, your home directory on Windows can be a bit difficult to find. 
 The easiest way is to use your editor to locate your home folder. 
@@ -183,11 +187,33 @@ For example, on Windows 7, you will see ``C:\Users\johndoe``.
    (the **hg** command) will not be able to find it--and you will receive an error.
 
 
-Clone repository from Bitbucket
--------------------------------
+Clone a repository from Bitbucket
+----------------------------------
 
-If all has gone well, you should now see your new repository on the
-list of repositories.
+Open a terminal or DOS command shell.  
+
+On Windows, the Mono shell is not appropriate. You can get a regular DOS
+command shell by clicking the start menu and typing ``cmd`` and into the text box
+at the bottom of the start menu, and pressing return.
+
+In the terminal/DOS-shell navigate with to the the directory 
+where you want to place the repository
+as a sub-directory.  This could be your home directory on your machine or
+a flash drive in a lab.
+
+**Windows only**:
+To navigate in a DOS-Shell to a flash drive, you need to enter the short command::
+
+   E:
+
+or possible another drive leter followed by a colon.  
+DOS drive letters are annoying because they be different another time with different
+resources loaded.  Once you see the proper drive displayed, ``cd`` to the desirted 
+directory.
+
+If all has gone well at bitbucket, you should be able to look at your
+bitbucket site and see your new repository on the
+list of repositories .
 
 For example, the co-author's new repository, ``gkt170``, shows up on
 the list of repositories (the dropdown) as ``gkthiruvathukal/gkt170``.
@@ -206,17 +232,13 @@ Somewhere on this screen, you should see this text::
     Clone this repository (size: 546 bytes): HTTPS / SSH
     hg clone https://yourusername@bitbucket.org/yourusername/yourrepository
 
-Using information we learned earlier in the course, open a terminal
-(or DOS command shell).  You can do this command (copied and pasted
-from Bitbucket) in the directory where you want to place the repository
-sub-directory.  This could be your home directory on your machine or
-a flash drive in a lab::
+Copy the command you see in the browser starting ```hg clone``, and paste it in
+as a command in your terminal/DOS-shell window. ::
 
-    hg clone https://yourusername@bitbucket.org/yourusername/yourrepository
+    hg clone https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
 
 You will see some output::
 
-    hg clone https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
     http authorization required
     realm: Bitbucket.org HTTP
     user: gkthiruvathukal
@@ -248,7 +270,12 @@ especially when changing the same files in a project.
 Add an .hgignore and Hello World file to your project
 -----------------------------------------------------
 
-The following is an example of a "dot hgignore" file.
+Change directory into the top-level directory of your local repository.
+That should mean `cd`` to the directory whose name matches the
+bitbucket repository name.
+
+The following is an example of a "dot hgignore" file.  Mercurial will neither
+list or otherwise pay attention the files in this list:
 
 .. literalinclude:: ../examples/hgignore.txt
 
@@ -280,7 +307,12 @@ Here is a brief explanation of what we've included here and why:
 Now do the following steps:
 
 #. Using your text editor, create a file ``.hgignore``. You can simply
-   copy and paste the above contents into this file.
+   copy and paste the above contents into this file.  Be careful of an editor
+   like notepad, which adds ".txt" to the end of file names by default.
+  
+  **Windows**: To change from the default extension, use Save As, and change the
+   file type from .txt by electing the drop-down menu beside file type, and
+   select "All files".
 
 #. Create or copy your existing ``Hello World`` example, hello.cs to the
    the ``labs`` folder.
@@ -318,7 +350,8 @@ Now do the following steps:
        
        gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 
-#. Commit the changes, and then see the log entry.  If you set the .hgrc file,
+#. Commit the changes, and then see the log entry
+   with the commands below.  If you set the .hgrc file,
    the command somewhere inside your local repository could be::
    
        hg commit -m "adding an .hgignore file and Hello, World to the project"
@@ -338,7 +371,8 @@ Now do the following steps:
        date:        Mon Feb 20 20:14:42 2012 -0600
        summary:     adding an .hgignore file and Hello, World to the project
 
-#. Push the changes to Bitbucket (you'll be prompted for user/password not shown here)::
+#. Push the changes to Bitbucket with the following command. 
+   (You'll be prompted for user/password not shown here)::
 
        hg push 
        
@@ -370,10 +404,7 @@ with version control. We suggest creating the following folders:
 
 So let's do it:
 
-#. Change to the checkout directory::
-
-       cd gkt170
-
+#. Make sure you are in the checkout directory, or ``cd`` to it.
    
 #. Create directories::
 
@@ -390,12 +421,6 @@ So let's do it:
       You are free to organize your project any way you like as long as we are able
       to find your homework assignments.
 
-.. comment
-   
-   No meaning to student yet:
-   Until
-   we create some actual *files* in these folders, we will not be putting anything
-   under version control just yet.
 
 .. comment
    no idea what is in this hello project, what named, 
