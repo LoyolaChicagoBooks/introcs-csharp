@@ -198,8 +198,9 @@ than ``b``.  At the end of loop, we know one of two things:
     #. ``a`` divides ``b`` perfectly, meaning there is no remainder.
     #. ``a`` doesn't divide ``b`` perfectly, meaning there is a
        remainder.
-    #. This loop, therefore is computing :math:``a \bmod b`` (or in C#
-       terms ``a % b``.
+
+This loop, therefore is computing :math:`a \bmod b` (or in C#
+terms ``a % b``.
 
 The loop on line 9 is similar to the loop in line 5. For the same
 reasons as we already explained, this loop therefore is computing
@@ -208,7 +209,7 @@ reasons as we already explained, this loop therefore is computing
 So the question is: Why the outer loop? As it turns out, the simple
 explanation is that we need to make sure that ``a`` and ``b`` are the
 same. Per the definition, we need to ensure that ``a`` is the result
-of :math:``gcd(a, 0)``. So an extra pass is required to cause
+of :math:``gcd(a, 0)``. So extra passes may be required to cause
 *convergence*.
 
 As an exercise to the reader, you may want to consider adding some
