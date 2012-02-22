@@ -1,5 +1,5 @@
-More While Examples
-===================
+Algorithms using While
+======================
 
 .. index::
    double:  %; binary operation
@@ -157,10 +157,65 @@ the candidate GCD, which we know is 1,000,000,000.
 GCD Subtraction Method
 ----------------------
 
+The subtraction method (also attributable to Euclid) to compute the
+Greatest Common Divisor works as follows:
+
+- Based on the *mathematical* definition in the previous section, the
+  greatest common divisor algorithm *works best* when we already have
+  ``a`` and ``b`` in the *right order*.
+
+- The *right order* means that :math:`a > b`. As we noted earlier, the
+  cleverness of the *mathematical* definition is that ``a`` and ``b``
+  are swapped as the first step to ensure that :math:`a > b`, after
+  which we can repeatedly divide to get the GCD.
+
+- Division, of course, is a form of repetetive subtraction, so the way
+  to divide by ``b`` is to repeatedly subtract it (from a) until ``a``
+  is no longer greater than ``b``.
+
+- The subtraction method basically makes no attempt to put ``a`` and
+  ``b`` in the right order. Instead, we just write similar loops to
+  allow for the possibility of either order.
+
+- A simple check must be performed to ensure that the approach of
+  repeated subtraction actually resulted in the GCD. This will happen
+  if ``a`` and ``b`` bump into one another, thereby meaning that we
+  have computed the GCD.
+
 .. literalinclude:: ../projects/GCD/GCDSubtractionMethod/GCDSubtractionMethod.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:
+
+
+A look at the source code more or less follows the above explanation.
+
+Let's start by looking at the inner loop at line 5, ``while (a >
+b)``. In this loop, we are repeatedly subtracting ``b`` from ``a``,
+which we know we can do, because ``a`` started out as being larger
+than ``b``.  At the end of loop, we know one of two things:
+
+    #. ``a`` divides ``b`` perfectly, meaning there is no remainder.
+    #. ``a`` doesn't divide ``b`` perfectly, meaning there is a
+       remainder.
+    #. This loop, therefore is computing :math:``a \bmod b`` (or in C#
+       terms ``a % b``.
+
+The loop on line 9 is similar to the loop in line 5. For the same
+reasons as we already explained, this loop therefore is computing
+:math:`b \bmod a`. 
+
+So the question is: Why the outer loop? As it turns out, the simple
+explanation is that we need to make sure that ``a`` and ``b`` are the
+same. Per the definition, we need to ensure that ``a`` is the result
+of :math:``gcd(a, 0)``. So an extra pass is required to cause
+*convergence*.
+
+As an exercise to the reader, you may want to consider adding some
+``Console.WriteLine()`` statements to print the values of ``a`` and
+``b`` within each loop, and after both loops have executed. It will
+allow yout see in visual terms how this method does its work.
+
 
 
 Preview: Recursive GCD
