@@ -1,0 +1,4 @@
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCD/bin/Debug/GCD.exe.mdb
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCD/bin/Debug/GCD.exe
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCD/obj/x86/Debug/GCD.exe
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCD/obj/x86/Debug/GCD.exe.mdb
