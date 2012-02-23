@@ -114,16 +114,16 @@ and the syntax is the same as for a string.  Print all elements of array ``b``::
        Console.WriteLine(b[i]); 
     }
     
-You could also use ``while`` syntax.  The foreach syntax would be::
+You could also use ``while`` syntax.  The ``foreach`` syntax would be::
 
    foreach( int x : b) {
       Console.WriteLine(x);
    }
 
-The int type for ``x`` matches the element type or the array ``b``.
+The int type for ``x`` matches the element type of the array ``b``.
 
 The shorter ``foreach`` syntax is not as general as the ``for`` syntax.  
-For example, to print only the first 3 elements of b::
+For example, to print only the first *3* elements of b::
 
    for(int i= 0; i < 3; i++) {
       Console.WriteLine(b[i]);
@@ -156,7 +156,8 @@ The Main function may take an array of strings as parameter, as in example
    :start-after: chunk
    :end-before: chunk
 
-By convention, the parameter name is args.  
+By convention, the formal parameter for ``Main`` is called ``args``, 
+short for arguments.  
 
 Compile and run the program from the command line.
 Run it again with some things at the end of the line like::
@@ -184,10 +185,46 @@ The quotes are important in many places.  For instance the **message** in the
 ``hg commit -m message`` command must be one parameter.  
 That generally requires quotes, unless you are given to one-word descriptions.
 
+.. index::
+   double: string; Split
+   
+.. _Split:
+
+.. rubric:: String Method Split
+
+A string method producing an array:
+
+``string[] Split(char`` **separator** ``)``   
+    Returns an array of substrings from *this* string.  They are the pieces left
+    after chopping out the separator character from the string.  Example:: 
+    
+		csharp> var fruitString = "apple pear banana";
+		csharp> string[] fruit = fruitString.Split(' ');
+		csharp> fruit;
+		{ "apple", "pear", "banana" }
+		csharp> fruit[1];
+		"pear"
+		
+Split is useful for parsing a line with several parts::
+
+    string line = InputLine("Enter integers on a line");
+    string[] tokens = line.Split(' ');
+    int[] nums = new int[tokens.Length];
+    for (int i = 0; i < nums.Length; i++) {
+       nums[i] = int.Parse(tokens[i]);
+    }
+
+Here if the user enters "2 5 22", then ``tokens`` is an array containing strings "2", "5",
+and "22".  If we want them all converted to integers and place in a new array,
+we need to create an array of the same length, and loop through, parsing each
+string in ``tokens`` into an integer in the corresponding location in ``nums``.
+
+
 Adder Command Line Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``Adder.cs`` calculates and prints the sum of command line parameters, so ::
+Write a program ``Adder.cs`` that calculates and prints the sum of 
+command line parameters, so ::
 
     mono Adder.exe 2 5 22
     
