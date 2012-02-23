@@ -141,6 +141,59 @@ rather than just use the values in expressions::
 Now the array ``b`` of our earlier examples (of length 4) would contain 0, 5,
 10, and 15.
 
+.. index::
+   double:  command line; parameters
+   double:  Main; parameters
+
+.. _command-line-param:
+
+.. rubric:: Parameters to Main
+
+The Main function may take an array of strings as parameter, as in example 
+:file:`PrintParam.cs`:
+
+.. literalinclude:: ../examples/PrintParam.cs
+   :start-after: chunk
+   :end-before: chunk
+
+By convention, the parameter name is args.  
+
+Compile and run the program from the command line.
+Run it again with some things at the end of the line like::
+
+     mono PrintParam.exe hi there 123
+
+This should print for you::
+
+    There are 3 command line parameters.
+    hi
+    there
+    123
+
+See what quoted strings do.  Run the command::
+
+     mono PrintParam.exe "hi there" 123
+
+This should print for you::
+
+    There are 2 command line parameters.
+    hi there
+    123
+    
+The quotes are important in many places.  For instance the **message** in the 
+``hg commit -m message`` command must be one parameter.  
+That generally requires quotes, unless you are given to one-word descriptions.
+
+Adder Command Line Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``Adder.cs`` calculates and prints the sum of command line parameters, so ::
+
+    mono Adder.exe 2 5 22
+    
+would print 29.
+
+
 ..  later
     example `arraysFor <../examples/arraysForfiles.zip>`_, finish in class
     In loops example, Notebook class, add print notes backwards,
