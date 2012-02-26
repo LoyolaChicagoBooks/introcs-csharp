@@ -59,13 +59,17 @@ Requirements
 ------------
 
 #. Unlike in previous assignments, this program must accept data from
-   a collection of input files (that is, it will not be reading from
-   the Console.  Examples are in example gradefiles.zip.
+   a collection of input files (that is, it will not be reading most of the 
+   data from
+   the Console.  
 
-#. The program may either prompt the user for the class abbreviation or
-   accept it as a command-line argument using the special form of
-   ``Main(string[] args)``.  The abbreviation should not include spaces.
-   An example would be Comp170.  All files will include the class
+#. The program needs a class abbreviation from the user.  If there
+   is a command line argument, use it.  Make sure your code can 
+   read a command-line argument using the special form of
+   ``Main(string[] args)``.  If there is not command line argument,
+   prompt the user for it.
+   The abbreviation should not include spaces.
+   An example would be Comp170.  All data files will include the class
    abbreviation as part of their name.  We will use Comp170 in the examples,
    but it could be something else.
 
@@ -77,35 +81,37 @@ Requirements
    
        Exam,Lab,Homework,Project,Class participation
        
-   Categories will be chosen so they start with different letters.
+   There may be extra spaces after the commas.  
+   Categories will be chosen so that each one starts with a different letter.
    
    The second line contains the integer weights for each category, like
    
-       40,15,15,20,10
+       40, 15, 15, 20, 10
        
    The third line will contain the number of grades in each category, like
    
-       2,5,3,1,2
+       2, 5, 3, 1, 2
        
    The second master file will be "Students" + the course abbreviation + ".txt".
+   For example :file:`StudentsComp170.txt`.
    It will contain a list of student information
    records. Each record (one per input line) will have the following
    structure:
 
       Student ID, Last Name, First Name
 
-   So for example::
+   For example::
 
-      P34323243343,Thiruvathukal,George
-      P87483743843,Harrington,Andrew
+      P34323243,Thiruvathukal,George
+      P87483743, Harrington, Andrew
 
  
 #. There will be a secondary file for each student, 
    named after the student id and the course abbreviation and ".dat". 
    For example,
    George's scores will be kept in a file named
-   ``P34323243343Comp170.dat``. Andy's scores are in
-   ``P87483743843Comp170.dat``. Each record (one per input line will have the
+   ``P34323243Comp170.dat``. Andy's scores are in
+   ``P87483743Comp170.dat``. Each record (one per input line will have the
    following structure:
 
       Category letter, Item, Points Earned
@@ -117,11 +123,20 @@ Requirements
    - item is a number within that category (0, 1, 2, ...)
    - points earned is a real number
    - the lines are in no special order.
+   
+   For example::
+   
+     L,1,100
+     H,1,85.5
+     H,2,70
+     E,1,72.5
+     H,3,70
+     P,1,100
 
 #. The program will process the data from each student file and
    calculate the average within each category and weighted average 
    and letter grade for
-   each student, using the code derived from the previous
+   each student, using code derived from the previous
    assignment. 
 
 #. The final report file is named with the course abbreviation 
@@ -133,7 +148,9 @@ Requirements
      Thiruvathukal, George 99.5 A
      Harrington, Andrew 91.2 A-
    
-   For extra credit include an addendum for each category where
+   For **extra credit** include an addendum starting with "Missing: ",
+   only if there are not enough grades in all
+   categories.  For each category where
    one or more grades is missing, including a count of the number of grades missing followed
    by the category letter.  An example is using the example categories is::
 
@@ -141,20 +158,45 @@ Requirements
       Smith, Chris 83.2 B Missing: 1 L
       Star, Anna 91.2 A-
       
-   meaning Doe has 2 labs missing and 1 homework missing.  Smith is missing one lab.
+   meaning Doe has 2 labs missing and 1 homework missing.  Smith is missing one lab.  Star
+   has done all assigned work.
 
+#. In the course repository, there is a stub for the
+   homework in subdirectory :file:`projects/HW/GradeFiles`.
+   Pull the latest version of the repository and copy the homework files to 
+   your solution area (hopefully in your own repostitory).  There is test data for
+   class abbreviations Comp170 and Comp150 in the project directory.   
+   There are also solution files for the 
+   summaries.  Their names end in ``Solution.txt`` to distinguish them from the
+   summary files you should generate in tests.
+   
+   While your program should certainly work for course abbreviations Comp170 and Comp150,
+   it should also work in general for any data files your refer to
+   in the defined formats.
+   
+   The stub of GradeFiles.cs has a Main function that just prints out the
+   current working directory.  That should help you check if you have the 
+   "Run With" parameters for MonoDevelop,
+   setting the working directory to be the main 
+   project directory, ``GradeFiles``, 
+   not the default :file:`bin/Debug` subdirectory. 
+   See :ref:`mondevelop-run-with`.
+   
 Hints
 -----
 
-#. You'll be able to learn how to use files by reading the Miles
-   chapter on Files. We'll also have a lab exercise for learning to
+#. You'll be able to learn how to use files by reading 
+   :ref:`files` and the Miles section 6.3 on Files. Be sure to read
+   :ref:`mondevelop-run-with`.
+   We'll also have a lab exercise for learning to
    work with file I/O. You're still going to need ReadLine() and
    WriteLine() in this assignment, the only difference is that we'll
    be making use of File classes to get the input from a file instead
-   of the Console. The actual syntax will be roughly equivalent.
+   of the Console. The parameter syntax will be the same.
 
-#. You'll want to use the string Split method, and then 
-   use indexing to get the field of interest
+#. You'll want to use the string Split method, and Trim to
+   remove surrounding spaces. Then 
+   use indexing to get the field of interest, 
 
 #. You'll need an *outer loop* to read the records from the master name
    file. You'll need an *inner loop* (or a loop inside of a function)
@@ -162,24 +204,16 @@ Hints
 
 #. When processing the records from a student file, you should process
    each one separately and not assumed they are grouped in any
-   particular order. For example, you could have data like this::
-
-     L,1,100
-     H,1,85.5
-     H,2,70
-     E,1,72.5
-     H,3,70
-     P,1,100
-     ...
-     etc.
+   particular order. 
 
    This means, specifically, that your program simply reads a record,
    decides what category it is in, and updates the running total for
    that category. Once the entire file has been read, you can compute
    the average for each category based on the *number of items* that
-   should be in that category.
+   *should* be in that category, which may be more than the number
+   of records in the file for items turned in.
 
-#. For now, you can assume that there is no need to *keep* a score
+#. There is no need to *keep* a score
    after you've read it and immediately used it.
    We will need to use an array, however, 
    for the running total
@@ -189,22 +223,29 @@ Hints
    possible first letter codes, youi will need to split the category
    name line into an array, say 
        
-       string[] category;
+       string[] categories;
        
    To know where to store data for each category, you can use this
-   function after you read in a code, to determine the proper index::
+   function after you read in a code, to determine the proper index.
+   It is already in the stub code::
    
-       static int codeIndex(string code, string[] category) 
-       {
-          for (int i = 0; i < category.length; i++) {
-             if (category[i].StartsWith(code)) {
-                return i;
-             }
-          }
-          return -1;
-       }
+      static int codeIndex(string code, string[] categories)
+      {
+         for (int i = 0; i < categories.Length; i++) {
+            if (categories[i].StartsWith(code)) {
+               return i;
+            }
+         }
+         return -1;
+      }
        
    You may assume the data is good and the -1 is never returned.
    
-#. You cannot have one canned formula to calculate the final weighted grade.
+#. You cannot have one fixed formula to calculate the final weighted grade,
+   because you do not know the number of categories when writing the code. 
    You will have to accumulate parts in a loop.
+   
+Grading Rubric
+---------------
+
+Coming....
