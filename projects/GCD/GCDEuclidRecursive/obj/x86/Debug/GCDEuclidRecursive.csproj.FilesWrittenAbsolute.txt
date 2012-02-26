@@ -1,0 +1,4 @@
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDEuclidRecursive/bin/Debug/GCDEuclidRecursive.exe.mdb
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDEuclidRecursive/bin/Debug/GCDEuclidRecursive.exe
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDEuclidRecursive/obj/x86/Debug/GCDEuclidRecursive.exe
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDEuclidRecursive/obj/x86/Debug/GCDEuclidRecursive.exe.mdb
