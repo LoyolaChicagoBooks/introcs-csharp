@@ -42,7 +42,7 @@ namespace Scales
          Console.WriteLine("{0} major scale", name);
          ComputeScale(name, major, scale);
          WriteScale(scale);
-         Console.WriteLine("{0} major scale", name);
+         Console.WriteLine("{0} minor scale", name);
          ComputeScale(name, minor, scale);
          WriteScale(scale);
       }
