@@ -1,0 +1,8 @@
+#! /bin/bash
+
+# assume start in devel dir
+cd ../rst
+./setofferings.py $USER
+make html $*
+./setofferings.py $USER no
+cd ../devel
