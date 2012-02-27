@@ -88,6 +88,11 @@ Requirements
    
        40, 15, 15, 20, 10
        
+   They do *not* need to add to 100.  If the sum is called totWeights,
+   get the final grade by summing for each category::
+   
+      (category weight)(category grade)/totWeights
+   
    The third line will contain the number of grades in each category, like
    
        2, 5, 3, 1, 2
@@ -148,19 +153,6 @@ Requirements
      Thiruvathukal, George 99.5 A
      Harrington, Andrew 91.2 A-
    
-   For **extra credit** include an addendum starting with "Missing: ",
-   only if there are not enough grades in all
-   categories.  For each category where
-   one or more grades is missing, including a count of the number of grades missing followed
-   by the category letter.  An example is using the example categories is::
-
-      Doe, John 68.5 D+ Missing: 2 L 1 H
-      Smith, Chris 83.2 B Missing: 1 L
-      Star, Anna 91.2 A-
-      
-   meaning Doe has 2 labs missing and 1 homework missing.  Smith is missing one lab.  Star
-   has done all assigned work.
-
 #. In the course repository, there is a stub for the
    homework in subdirectory :file:`projects/HW/GradeFiles`.
    Pull the latest version of the repository and copy the homework files to 
@@ -194,9 +186,11 @@ Hints
    be making use of File classes to get the input from a file instead
    of the Console. The parameter syntax will be the same.
 
-#. You'll want to use the string Split method, and Trim to
+#. For each file line you'll want to use the string ``Split`` method, 
+   and then the ``Trim`` 
+   method on each part to
    remove surrounding spaces. Then 
-   use indexing to get the field of interest, 
+   use indexing to get the field of interest. (More below.)
 
 #. You'll need an *outer loop* to read the records from the master name
    file. You'll need an *inner loop* (or a loop inside of a function)
@@ -215,8 +209,7 @@ Hints
 
 #. There is no need to *keep* a score
    after you've read it and immediately used it.
-   We will need to use an array, however, 
-   for the running total
+   *Do* use an array, however, for the running total
    for each category. 
 
 #. In order to deal with a varying number of categories and different 
@@ -239,13 +232,80 @@ Hints
          return -1;
       }
        
-   You may assume the data is good and the -1 is never returned.
+   You may assume the data is good and the -1 is never returned, 
+   but the compiler needs this line.
    
 #. You cannot have one fixed formula to calculate the final weighted grade,
    because you do not know the number of categories when writing the code. 
    You will have to accumulate parts in a loop.
    
-Grading Rubric
----------------
+Grading Rubric (25 points)
+---------------------------
 
-Coming....
+#. Get the abbreviation from the command line if it is there. [2]
+#. Otherwise get the abbreviation from prompting the user. [1]
+#. Read the Categories file and parse lines. [2]
+#. Deal with each student. [3]
+#. Calculate the cumulative grades in each category, reading
+   a student's file once, using arrays. [5]
+#. Calculate the overall grade and letter grade. [3]
+#. Generate summary entries. [3]
+#. Use functions where there would otherwise be two several-line blocks of code
+   differing only in the name of the data evaluated and the name of the
+   result generated. [2]
+#. Use good style:  formatting, naming conventions, 
+   meaningful names other than for simple array indices, lack of redundant code. [4]
+   
+Optional Extra Credit Opportunities!  You may choose to do 
+any combination that does not include both of the last two options about missing work.
+
+#. Format the summary file in nice columns.  Include the grades for each category,
+   rounded to one decimal place.  Include a heading line.    
+   For example the summary for the repository example Comp150 could start::
+   
+       Name: Last, First           Avg Gr     E     H     P
+       Hopper, Grace             100.0 A  100.0 100.0 100.0
+
+   You may assume the last-first name field fits in 25 columns.
+   Copy the first three column headings from above.
+   The column headings for the categories can just be their one letter code.
+   Names and letter grades should be left-justified (padded on the right, by 
+   using a negative field width). [2]
+#. Change the scheme for calculating letter grade to use a function that calculates
+   the proper grade, where the only ``if`` statement is one simple one
+   inside a loop.  The ``if`` statement will have a return statement in its body, 
+   and no ``else``.  The loop will need to use
+   corresponding arrays of data for grade cutoffs and grade names. [3]
+#. For any student who has missed passing in all the required items, 
+   generate extra data on missing work in the summary, at the right end of the
+   line for the student.  Add this to 
+   whichever version of the earlier parts you use.
+   Include an addendum starting with "Missing: "
+   only if there are not enough grades in one or more
+   categories.  For each category where
+   one or more grades is missing, including a count of the number of grades missing followed
+   by the category letter.  An example using the example categories is::
+
+      Doe, John 68.5 D+ Missing: 2 L 1 H
+      Smith, Chris 83.2 B M issing: 1 L
+      Star, Anna 91.2 A-
+      
+   meaning Doe has 2 labs missing and 1 homework missing.  Smith is missing one lab.  Star
+   has done all assigned work, since nothing is added. [3]
+#. This is a much harder alternate version for handling missing work:  
+   Unlike the previous format, do not count and print the number of missing 
+   entries in each category in a form like "2 L ".
+   Replace such an entry with a list of *each* item
+   missing, in order, as in "L:1, 4 ", meaning labs 1 and 4 were missing.  
+   Assume that the expected item numbers for a category 
+   run from 1 through the number of grades in the category.
+   You may assume no item number for the same category appears twice.
+   For example, with the sample data files given in the repository for
+   Comp170, the summary line for John Doe would be::
+       
+       Doe, John 78.9 C+ Missing: L: 1, 4 H: 3
+       
+   The most straightforward way to do this requires something 
+   like a 2-dimensional array. 
+   We may get to 2-dimensional arrays in time for the due date, 
+   or you may need to read ahead if you want to use this approach. [5]
