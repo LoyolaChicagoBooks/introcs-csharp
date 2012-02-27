@@ -23,7 +23,8 @@ translate from math into C#. Try each line separately in csharp ::
 
 You see that conditions are either ``true`` or ``false`` (with no
 quotes!). These are the only possible *Boolean* values (named after
-19th century mathematician George Boole). It is the type of the
+19th century mathematician George Boole). You can also use the
+abbreviation for the type ``bool``.  It is the type of the
 results of true-false conditions or tests.
 
 The simplest place to use conditions in a decision made with an 
@@ -31,4 +32,3 @@ The simplest place to use conditions in a decision made with an
 
 We will consider more complicated conditions later, but this is a 
 quick start.
-

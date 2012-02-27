@@ -188,8 +188,6 @@ nit very useful.  Instead let us consider if all the
 characters are digits.  This is a true-false question, so function
 to determine this would return a Boolean result:
 
-
-
 There are several ways to check if a character is a digit.  We could use the
 ``Contains`` idiom from above, but here is another option:
 The codes for digits are sequential,
@@ -212,7 +210,7 @@ you would want to remember that the string is not only digits.
 
 One way to do this is have a variable holding an answer so far::
 
-     Boolean allDigitsSoFar = true;
+     bool allDigitsSoFar = true;
      
 Of course initially, you have not found any non-digits, so it starts off true.  
 As you go through
@@ -228,9 +226,9 @@ final answer to be returned::
 
    /** Return true if s contains one or more digits
     * and nothing else. Otherwise return false. */
-   static Boolean IsDigits(string s)
+   static bool IsDigits(string s)
    {
-      Boolean allDigitsSoFar = true;
+      bool allDigitsSoFar = true;
       int i = 0;
       while (i < s.Length) {
          if (s[i] < '0' || s[i] > '9') {
@@ -255,7 +253,7 @@ so it checks the length and chooses the right value for ``allDigitsSoFar``,
 true or false, appropriate.  since we are selecting between two values,
 an ``if`` statement should occur to you::
 
-  Boolean allDigitsSoFar;
+  bool allDigitsSoFar;
   if (s.Length > 0) {
       allDigitsSoFar = true;
   }
@@ -277,7 +275,7 @@ the *value of the condition*.
 
 A *much* more concise and still equivalent initialization is just::
 
-    Boolean allDigitsSoFar = (s.Length > 0); 
+    bool allDigitsSoFar = (s.Length > 0); 
     
 In more generality this 
 conciseness comes from the fact that it is a *Boolean* value that

@@ -69,7 +69,7 @@ This variation of ``IndexOf`` has a second parameter:
 .. index::
    double: string; StartsWith
    
-``Boolean StartsWith(string prefix)`` 
+``bool StartsWith(string prefix)`` 
     Returns ``true`` if  **this** string object starts 
     with string ``prefix``, and ``false`` otherwise.
     Example::
@@ -84,7 +84,7 @@ This variation of ``IndexOf`` has a second parameter:
 .. index::
    double: string; EndsWith
    
-``Boolean EndsWith(string suffix)`` 
+``bool EndsWith(string suffix)`` 
     Returns ``true`` if  **this** string object ends 
     with string ``suffix``, and ``false`` otherwise.
     Example::
