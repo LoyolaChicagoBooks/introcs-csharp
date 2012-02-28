@@ -172,14 +172,14 @@ Requirements
    setting the working directory to be the main 
    project directory, ``GradeFiles``, 
    not the default :file:`bin/Debug` subdirectory. 
-   See :ref:`mondevelop-run-with`.
+   See :ref:`monodevelop-run-with`.
    
 Hints
 -----
 
 #. You'll be able to learn how to use files by reading 
    :ref:`files` and the Miles section 6.3 on Files. Be sure to read
-   :ref:`mondevelop-run-with`.
+   :ref:`monodevelop-run-with`.
    We'll also have a lab exercise for learning to
    work with file I/O. You're still going to need ReadLine() and
    WriteLine() in this assignment, the only difference is that we'll
