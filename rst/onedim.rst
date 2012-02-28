@@ -6,6 +6,9 @@
 One Dimensional Arrays
 ============================ 
 
+Basic Syntax
+---------------
+
 A string is an immutable sequence of characters.  Arrays provide more general sequences, 
 with the same indexing notation, but with free choice of the type of the items in the
 sequence, and the ability to change the elements in the sequence.
@@ -147,7 +150,8 @@ Now the array ``b`` of our earlier examples (of length 4) would contain 0, 5,
 
 .. _command-line-param:
 
-.. rubric:: Parameters to Main
+Parameters to Main
+---------------------
 
 The Main function may take an array of strings as parameter, as in example 
 :file:`PrintParam.cs`:
@@ -190,7 +194,8 @@ That generally requires quotes, unless you are given to one-word descriptions.
    
 .. _Split:
 
-.. rubric:: String Method Split
+String Method Split
+---------------------
 
 A string method producing an array:
 
@@ -219,8 +224,81 @@ and "22".  If we want them all converted to integers and place in a new array,
 we need to create an array of the same length, and loop through, parsing each
 string in ``tokens`` into an integer in the corresponding location in ``nums``.
 
+.. index:: alias
 
-Adder Command Line Exercise
+.. _alias:
+
+References and Aliases
+-------------------------
+
+Object variables like arrays being references has important implications for
+assignment.
+
+With a primitive type like an ``int``, an assignment copies the data:
+
+.. image:: images/intCopy.png
+   :alt: copying an int
+   :align: center
+
+In the diagram, the contents of the memory box labeled ``a`` is copied to the
+memory box labeled ``d``. The value of ``d`` starts off equal to the value of ``a``, 
+but can later be changed independently.
+
+Contrast an assignment with arrays.  The value that is copied is the *reference*,
+not the array data itself, so both end up pointing at the *same*  actual array:
+
+.. image:: images/arrayAlias.png
+   :alt: copying an array reference
+   :align: center
+
+Hereafter, array assignments like::
+
+   a[2] = -10;
+   d[1] = 55;
+   
+would both change the *same* array.  Now ``a`` and ``d`` are essentially
+names for the same thing (the actual array).  The technical term matches English:
+The names are *aliases*.
+
+This may seem like a pretty silly discussion.   Why bother to give two different 
+names to the same object?  Isn't one enough?  In fact it is very important
+in function/method calls.  An array reference can be passed as an actual value, 
+and it is the array *reference* that is copied to the formal parameter, so
+the formal parameter name is an **alias** for the actual parameter name.
+
+.. note::
+   If an array passed as a parameter to a method has elements changed in the
+   method, then the change affects the actual parameter array.
+   The change *remains* in the actual parameter array *after* the method has terminated.
+
+.. index::
+   double: example; Scale
+   double: Scale; array parameter
+
+For example, consider the following function::
+
+   /** Modify a by multiplying all elements by multiplier. */
+   static void Scale(int[] a, int multiplier)
+   {
+      for (int i = 0; i < a.Length; i++) {
+         a[i] *= multiplier;  // or:  a[i] = a[i] * multiplier
+      }
+   }
+   
+The fragment::
+
+   int[] nums = {2, 4, 1};
+   Scale(nums, 5);
+   
+would *change* nums, so it ends up containing elements 10, 20, and 5.
+
+.. index::
+   double: example; command line adder
+   double: Main; parameters
+
+.. _command-line-adder-exercise:
+   
+Command Line Adder Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program ``Adder.cs`` that calculates and prints the sum of 
@@ -230,6 +308,23 @@ command line parameters, so ::
     
 would print 29.
 
+.. index::
+   double: example; TrimAll
+   double: array; TrimAll
+
+.. _trim-all-exercise:
+   
+Trim All Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``Trimmer.cs`` that includes and tests a 
+function with heading::
+
+   /** Trim all elements of s and replace them in the array.
+       Example: If a contains {" is  ", " it", "trimmed?   "}
+       then after the function call the array contains
+       {"is", "it", "trimmed?"}.   */
+   static void TrimAll(string[] a) 
 
 ..  later
     example `arraysFor <../examples/arraysForfiles.zip>`_, finish in class
