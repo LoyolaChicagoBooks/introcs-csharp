@@ -139,11 +139,16 @@ Need more work to do? Keep working!
 #. Write a function that finds the minimum value in an array of
    integers. Start by assuming the first value of the array is the
    minimum. Iterate through the remaining array positions to see if
-   any given value is lower than the "trial" minimum
-
+   any given value is lower than the "trial" minimum. If a value is
+   found that is lower than what we think is the minimum, set the
+   minimum value to this array position's value.
 
    As with all of our previous examples, declare some arrays to test
    whether the minimum value has been correctly computed.
+
+   You will probably find it convenient to use a return statement to
+   return the minimum value once it has been determined. Then your
+   ``Main()`` method can print the answer.
 
 #. Write a function that computes the maximum value of an array of
    integers. You can probably modify the previous code to support this
@@ -180,3 +185,35 @@ Need more work to do? Keep working!
 
       // Should print 1.0 * 4.0 + 2.0 * 2.0 + 3.0 * -1.0 = 5.0
       
+#. Suppose we have loaded an array with the digits of an integer,
+   where the highest power is kept in position 0, next highest in
+   position 1, and so on. The ones position is always at position
+   array.Length - 1::
+
+
+      int[] digits = { 1, 9, 6, 7 };
+
+
+   Without showing you the code, here is how you would convert a
+   number from its digits to an integer::
+
+      num = 0
+      num = 10 * 0 + 1 = 1
+      num = 10 * 10 + 9 = 19
+      num = 10 * 19 + 6 = 196
+      num = 10 * 196 + 7 = 1967
+      done!
+
+   Write a function that converts the array of digits to its base 10
+   representation. For really long integers, you are encouraged to use
+   a ``long`` data type. Note that we only allow digits to be placed
+   in the array, so negative numbers are not addressed.
+
+#. Suppose that we not only have the digits but also the *base* that
+   in which the number is represented. Write a program (or revise the
+   previous solution) to convert the number to its base 10
+   representation.
+
+
+
+   
