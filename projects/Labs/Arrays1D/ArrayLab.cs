@@ -35,7 +35,7 @@ namespace Arrays1D
       }
                                                    //Minimum chunk
       /** Return the minimum value in a.
-       *  Example: If a is {5, 7, 4, 9},
+       *  Example: If a contains {5, 7, 4, 9},
        *  return 4.  */
       static int Minimum(int[] a)
       {
@@ -43,7 +43,7 @@ namespace Arrays1D
       }
                                                    //CountEven chunk
       /** Return the number of even values in a.
-       *  Example: If a is {-4, 7, 6, 12, 9},
+       *  Example: If a contains {-4, 7, 6, 12, 9},
        *  return 3.  */
       static int CountEven(int[] a)
       {
@@ -52,8 +52,8 @@ namespace Arrays1D
                                                    //PairwiseAdd chunk
       /** Add corresponding elements of a and b and place them in sum.
        *  Assume all arrays have the same Length.
-       *  Example: If a contains {2, 4, 6} and b contains {3, -1, 5}
-       *  then at the end sum should contain {5, 3, 11}. */
+       *  Example: If a contains {2, 4, 6} and b contains {7, -1, 8}
+       *  then at the end sum should contain {9, 3, 14}. */
       static void PairwiseAdd(int[] a, int[] b, int[] sum)
       {
 
@@ -101,5 +101,31 @@ namespace Arrays1D
       {
 
       }
-   }                                            // end PrintRuns chunk
+      //                                         // end PrintRuns chunk
+      // Keyboard input utilities /////////////////////////////////////
+
+      /** Return a line from the keyboard
+       * after displaying the prompt. */
+      static string InputLine(string prompt)
+      {
+         Console.Write(prompt);
+         return Console.ReadLine();
+      }
+   
+      /** Return an integer entered from the keyboard
+       * after displaying the prompt. */
+      static int InputInt(string prompt)
+      {
+         string nStr = InputLine(prompt).Trim(); //Trim removes enclosing blanks
+         return int.Parse(nStr);
+      }
+   
+      /** Return a double entered from the keyboard
+       * after displaying the prompt. */
+      static double InputDouble(string prompt)
+      {
+         string nStr = InputLine(prompt).Trim(); //Trim removes enclosing blanks
+         return double.Parse(nStr);
+      }
+   }
 }

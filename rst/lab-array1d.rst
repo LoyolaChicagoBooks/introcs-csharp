@@ -80,7 +80,8 @@ values. We're going to use the second line for this lab.
       :start-after: ReadInts chunk
       :end-before: Minimum chunk
 
-   This will allow user tests.
+   This will allow user tests.  The earlier input utility functions
+   are included at the end of the class.
 
 #. Complete and test the function with documentation and heading:
 
