@@ -293,6 +293,33 @@ The fragment::
 would *change* nums, so it ends up containing elements 10, 20, and 5.
 
 .. index::
+   single: array; anonymous initialization
+
+.. _Anonymous-Array-initialization:
+
+Anonymous Array Initialization
+--------------------------------
+
+Sometimes you want to use an array with specific values only
+as a parameter to a function.  You could write something like ::
+
+    int[] temp = {3, 1, 7};
+    SomeFunc(temp);
+
+but if ``temp`` is never going to be referenced again, you can 
+do this without using a name::
+
+    SomeFunc(new int[] {3, 1, 7});
+
+It is essential to include the ``new int[]``, not just the ``{3, 1, 7}``.
+
+Such an approach could also be used if you want to return a fixed
+length array, where you have values for each parts, as in::
+
+    return new int[] {minVal, maxVal};
+    
+    
+.. index::
    double: example; command line adder
    double: Main; parameters
 
@@ -325,6 +352,85 @@ function with heading::
        then after the function call the array contains
        {"is", "it", "trimmed?"}.   */
    static void TrimAll(string[] a) 
+   
+   
+.. index::
+   double: example; Dups
+   double: array; Dups
+
+.. _Dups-exercise:
+   
+Count Duplicates Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``CountDups.cs`` that includes and tests a 
+function with heading::
+
+	/** Return the number of duplicate pairs in an array a.  
+	 * Example: for elements 2, 5, 1, 5, 2, 5 
+	 * the return value would be 4 (one pair of 2's three pairs of 5's. */
+	public static int dups(int[] a)
+
+
+.. index::
+   double: example; Mirror
+   double: array; Mirror
+
+.. _Mirror-exercise:
+   
+Mirror Array Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``MakeMirror.cs`` that includes and tests a 
+function with heading::
+
+	/** Create a new array with the elements of a in th opposite order.
+	 * {"aA", "bB", "cC"} produces a new array {"cC", "bB", "aA"}
+	 */
+	public static string[] Mirror(string[] a)
+
+
+.. index::
+   double: example; Reverse
+   double: array; Reverse
+
+.. _Reverse-exercise:
+   
+Reverse Array Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``ReverseArray.cs`` that includes and tests a 
+function with heading::
+
+
+	/** Reverse the order of array elements.
+	 * {"aA", "bB", "cC"} -> {"cC", "bB", "aA"}
+	 */
+	public static void Reverse(string[] a)
+
+   
+.. index::
+   double: example; Histogram
+   double: array; Histogram
+
+.. _Histogram-exercise:
+   
+Histogram Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``MakeHistogram.cs`` that includes and tests a 
+function with heading::
+
+
+	/** Return a histogram array counting repetitions of values
+	 *  start through end in array a.  The count for value start+i
+	 *  is in index i of the returned array.  For example:
+	 *  Histogram(new int[]{2, 0, 3, 5, 3, 5}, 0, 5) returns
+	 *  a new array containing {1, 0, 1, 2, 0, 2}.  */
+	public static int[] Histogram(int[] a, int start, int end)
+
+   
+
 
 ..  later
     example `arraysFor <../examples/arraysForfiles.zip>`_, finish in class

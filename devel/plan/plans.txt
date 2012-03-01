@@ -26,18 +26,18 @@ D - Conditions
 
 
 E - Loops
-        do-while, while, for, foreach
-        testing/validating I/O
-        digital in whole number
+     x  do-while, while, for, foreach
+     p   testing/validating I/O
+     x   digital in whole number
         ints, fixed decimal 
-        gcd using brute force methods (up/down)
-        basic Euclid (recursive) -> forward reference
-        learning to increment/decrement by > 1
+     x   gcd using brute force methods (up/down)
+     x   basic Euclid (recursive) -> forward reference
+     x   learning to increment/decrement by > 1
         abstract graph paper with char I/O nested loops
         simple geometric shapes with char I/O
-        discrete probability example: rolling of the dice, die...
+     x   discrete probability example: rolling of the dice, die...
         Monte Carlo pi
-        number guessing game is a great interactive loop example (n-guess)
+     x   number guessing game is a great interactive loop example (n-guess)
                 ...variation with hints
         factorial and fibonacci non-recursive
         Horner’s method 
@@ -55,9 +55,9 @@ F - I/O Basics
 
 
 G - Strings
-        basic string operations (concatenate, replicate)
-        extract character using subscript
-        simple string algorithms isNumeric?, find, substring, replace
+    x    basic string operations (concatenate, replicate)
+    x    extract character using subscript
+    x    simple string algorithms isNumeric?, find, substring, replace
 
 
 H - Exception Handling
@@ -95,18 +95,19 @@ P - Classes and Interfaces
         private, public
         constructors
         overloading
-        interfaces - useful
+        interfaces - useful 
+            game lab
 
 
 Q - Arrays
-        sentinels?
-        initialize/populate array with data
+    x    sentinels?
+    x    initialize/populate array with data
         sequential search
-binary search
-isIncreassing()
-basic sort algorithms (insertion, selection)
-uniq(sorted array)
-isPalindrome()
+        binary search
+    x    isIncreassing()
+        basic sort algorithms (insertion, selection)
+        uniq(sorted array)
+        isPalindrome()
 
 
         2D array: imaginary graph paper with preview...
@@ -122,6 +123,8 @@ R - Structs and Enums
 
 T - Lists and Associative Arrays
         these can be parameterized (generics)
+        example:  test for cycle in iterative sequence        
+
 Sample Schedule
 
 
@@ -130,14 +133,14 @@ Prepare for Game project:
 
 
 1-3
-	4-7
-	8
-	9-10
-	11
-	12-15
-	A, B, D, M, N, F
-	C, E, L
-	First Quiz
-	I, K, P, Q, T
-	Exam
-	Project
+4-7
+8
+9-10
+11
+12-15
+A, B, D, M, N, F
+C, E, L
+First Quiz
+I, K, P, Q, T
+Exam
+Project

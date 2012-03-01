@@ -24,7 +24,10 @@ Introductory Programming in C#
    for
    files
    arrays
+   lists
+   dictionaries
    compoundtypes
+   interfaces
    testingclasses
    changelog
 
