@@ -1,0 +1,4 @@
+/Users/gkt/Arrays/WordSearchPuzzle/bin/Debug/WordSearchPuzzle.exe.mdb
+/Users/gkt/Arrays/WordSearchPuzzle/bin/Debug/WordSearchPuzzle.exe
+/Users/gkt/Arrays/WordSearchPuzzle/obj/x86/Debug/WordSearchPuzzle.exe
+/Users/gkt/Arrays/WordSearchPuzzle/obj/x86/Debug/WordSearchPuzzle.exe.mdb
