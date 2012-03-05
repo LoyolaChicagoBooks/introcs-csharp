@@ -112,6 +112,35 @@ namespace Arrays
          return true;
       }
 
+      /** Insert word if possible starting at
+       * (x, y),  moving in dirrction (dx, dy).
+       * Return true if the change succeeds. */
+      public static bool Insert(char[,] puzzle, int x, int y,
+                                int dx, int dy, string word) {
+         // check whether all of the positions are '.' or match the letter at the position
+         if (x + word.Length*dx > puzzle.GetLength(0) ||
+             y + word.Length*dy > puzzle.GetLength(1))
+            return false;
+
+         for (int i=0; i < word.Length; i++) {
+            char ch = puzzle[x+i*dx, y+i*dx];
+            if (ch != '.' && ch != word[i]) {
+               return false;
+            }
+         }
+
+         // Now we know it can fit so we can insert it into the game.
+         for (int i=0; i < word.Length; i++) {
+            Console.WriteLine ("({0}, {1}): {2}", x, y, word[i]);
+            puzzle[x, y] = word[i];
+            x += dx;
+            y += dy;
+         }
+
+         return true;
+      }
+
+
 
       public static void ClearWordSearch(char [,] puzzle) {
          for (int x=0; x < puzzle.GetLength(0); x++)

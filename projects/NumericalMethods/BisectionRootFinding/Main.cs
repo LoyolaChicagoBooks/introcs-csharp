@@ -8,7 +8,9 @@ namespace BisectionRootFinding
 
    public class MyFunction : Function {
       public double f(double x) {
-         return x * x * x - 3 * x * x - 3 * x + 1;  /* This should have solution x = -1.  -1 - 3 + 3 + 1 = 0 */
+         return x * x * x - 3 * x * x - 3 * x + 1;
+         /* This should have solution x = -1.  -1 - 3 + 3 + 1 = 0 */
+      }   
    }
 
    class BisectionMethod
@@ -58,6 +60,37 @@ namespace BisectionRootFinding
 
          }
          return double.NaN;
+      }
+
+      /*
+       * This is the basic bisection method for maximum accuracy,
+       * going until there is no double midpoint between the endpoints.
+       * Returns double.NaN if the F.f(a)*F.f(b) > 0.
+       */
+      public static double Bisection(Function F, double a, double b) {
+
+         if (Math.Sign(F.f (c)) == Math.Sign (F.f (a))) { //or F.f(a)*F.f(b)>0
+            return double.NaN;
+         }
+         if (F.f(a) == 0) {
+            return a;
+         }
+         if (F.f(b) == 0) {
+            return b;
+         }
+         double c = (a + b) / 2;
+         while (c != a && c != b) { // stop if there is no distinct midpoint
+            Console.WriteLine ("a = {0}  b= {1}", a, b);
+            if (F.f(c) == 0) {
+               return c;
+            }
+            if (Math.Sign(F.f (c)) == Math.Sign (F.f (a)))
+               a = c;
+            else
+               b = c;
+            c = (a + b) / 2;
+         }
+         return c;
       }
 
       public static void Main (string[] args)
