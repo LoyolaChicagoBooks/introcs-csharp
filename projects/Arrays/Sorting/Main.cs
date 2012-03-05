@@ -8,7 +8,7 @@ namespace Sorting
       /* This method swaps two items in the array during sorting. As we neeed to do this in multiple
        * sort methods, a function has been created for it.
        */
-      
+
       static void exchange(int[] data, int m, int n) {
          int temporary;
 
