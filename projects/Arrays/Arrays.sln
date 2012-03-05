@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSearchPuzzle", "WordSearchPuzzle\WordSearchPuzzle.csproj", "{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{F6D64697-6E50-481C-A9F3-A941E7B48F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searching", "Searching\Searching.csproj", "{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +17,14 @@ Global
 		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Debug|x86.Build.0 = Debug|x86
 		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Release|x86.ActiveCfg = Release|x86
 		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Release|x86.Build.0 = Release|x86
+		{F6D64697-6E50-481C-A9F3-A941E7B48F2A}.Debug|x86.ActiveCfg = Debug|x86
+		{F6D64697-6E50-481C-A9F3-A941E7B48F2A}.Debug|x86.Build.0 = Debug|x86
+		{F6D64697-6E50-481C-A9F3-A941E7B48F2A}.Release|x86.ActiveCfg = Release|x86
+		{F6D64697-6E50-481C-A9F3-A941E7B48F2A}.Release|x86.Build.0 = Release|x86
+		{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}.Debug|x86.ActiveCfg = Debug|x86
+		{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}.Debug|x86.Build.0 = Debug|x86
+		{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}.Release|x86.ActiveCfg = Release|x86
+		{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = WordSearchPuzzle\WordSearchPuzzle.csproj
