@@ -7,12 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searching", "Searching\Searching.csproj", "{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintTable", "PrintTable\PrintTable.csproj", "{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}.Debug|x86.ActiveCfg = Debug|x86
+		{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}.Debug|x86.Build.0 = Debug|x86
+		{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}.Release|x86.ActiveCfg = Release|x86
+		{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}.Release|x86.Build.0 = Release|x86
 		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Debug|x86.ActiveCfg = Debug|x86
 		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Debug|x86.Build.0 = Debug|x86
 		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Release|x86.ActiveCfg = Release|x86
