@@ -1,0 +1,26 @@
+To use NAnt on OS X to build the Hello, World example, you need to
+set this environment variable:
+
+export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig
+
+Then you can run NAnt to build the program. Here is the output on 
+my computer (named macaroni).
+
+macaroni:hello+nant gkt$ nant
+NAnt 0.91 (Build 0.91.4312.0; release; 10/22/2011)
+Copyright (C) 2001-2011 Gerry Shaw
+http://nant.sourceforge.net
+
+Buildfile: file:///Users/gkt/Work/gkt-comp-170/hello+nant/HelloWorld.build
+Target framework: Mono 2.0 Profile
+Target(s) specified: build 
+
+
+build:
+
+      [csc] Compiling 1 files to '/Users/gkt/Work/gkt-comp-170/hello+nant/HelloWorld.exe'.
+
+BUILD SUCCEEDED
+
+Total time: 1.1 seconds.
+

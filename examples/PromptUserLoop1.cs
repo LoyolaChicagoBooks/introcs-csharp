@@ -1,0 +1,41 @@
+using System;
+
+class PromptUser
+{
+
+   static void Main() //testing routine
+   {
+      int n = InputIntInRange("Enter a score: ", 0, 100);
+      Console.WriteLine("Your score is {0}.", n);
+      Console.WriteLine("Try another test.");
+      n = InputIntInRange("Enter a number: ", -10, 10);
+      Console.WriteLine("Your number is {0}.", n);
+   }
+
+   static string InputLine(string prompt)
+   {
+      Console.Write(prompt);
+      return Console.ReadLine();
+   }
+
+   static int InputInt(string prompt)
+   {
+      string nStr = InputLine(prompt).Trim(); //Removes blanks at either end
+      return int.Parse(nStr);
+   }
+                                             // new chunk
+   /** Continue to obtain a value from the user until it is in the
+    * range [lowLim, highLim].  Then return the value in range.
+    * Use the specified prompt, adding a reminder of the allowed range. */
+   static int InputIntInRange(string prompt, int lowLim, int highLim)
+   {
+      int number = InputInt(prompt);
+      while (number < lowLim || number > highLim) {
+         Console.WriteLine("{0} is out of range!", number);
+         number = InputInt(prompt);
+      }
+      return number;
+   }
+}                                           // past new chunk
+
+
