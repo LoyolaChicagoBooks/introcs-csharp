@@ -4,9 +4,12 @@ namespace Scales
 {
    class MainClass
    {
+      // chunk-tones-begin
       static string[] tones = { "C", "C#", "D", "D#", "E", "F",
          "F#", "G", "G#", "A", "A#", "B" };
+      // chunk-tones-end
 
+      // chunk-compute-begin
       static void ComputeScale(string key, int[] steps, int[] scale) {
          int sum = 0;
          int start;
@@ -24,14 +27,19 @@ namespace Scales
             sum += steps[i];
          }
       }
+      // chunk-compute-end
 
+      // chunk-write-begin
       static void WriteScale(int[] scale) {
          foreach (int i in scale) {
             Console.Write ("{0} ", tones[i]);
          }
          Console.WriteLine ();
       }
+      // chunk-write-end
 
+
+      // chunk-main-begin
       public static void Main (string[] args)
       {
          int[] scale = new int[8];
@@ -46,5 +54,6 @@ namespace Scales
          ComputeScale(name, minor, scale);
          WriteScale(scale);
       }
+      // chunk-main-end
    }
 }
