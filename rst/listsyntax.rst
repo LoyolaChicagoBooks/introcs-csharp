@@ -121,8 +121,20 @@ and ``RemoveAt``, which removes the element at a specified index.
 	csharp> words.RemoveAt(2); // "out" is at index 2
 	csharp> words;
 	{ "up", "in", "on" }
+	
+Removing does not leave a "hole" in the ``List``:  The list closes up,
+so the index decreases for the elements after the removed one::
+
+	csharp> words[2];
+	"on"
 	csharp> words.Count;
 	3
+	
+You can also remove all elements at once::
+
+	csharp> words.Clear();
+	csharp> words.Count;
+	0
 
 .. index::
    single: List; constructor with sequence
@@ -146,7 +158,7 @@ Interactive List Example
 Lists are handy when you do not know how much data there will be.  
 A simple example would be reading in lines from the user interactively::
 
-    /** Return a list of lines entered by the user in response
+    /** Return a List of lines entered by the user in response
       * to the prompt.  Lines in the List will be nonempty, since an
       * empty line terminates the input. */
     List<string> ReadLines(string prompt) 
@@ -161,4 +173,5 @@ A simple example would be reading in lines from the user interactively::
        }
        return lines;
     }
+    
     
