@@ -5,8 +5,9 @@ Arrays
    :maxdepth: 3
 
    onedim
-   sorting
    music
+   searching
+   sorting
    lab-array1d
    twodim
  
