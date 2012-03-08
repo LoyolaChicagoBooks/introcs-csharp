@@ -5,6 +5,7 @@ namespace BinarySearch
    class MainClass
    {
 
+      // chunk-linearsearch-begin
       public static int IntArrayLinearSearch(int[] data, int item) {
          int N=data.Length;
          for (int i=0; i < N; i++)
@@ -12,7 +13,9 @@ namespace BinarySearch
                return i;
          return -1;
       }
+      // chunk-linearsearch-end
 
+      // chunk-binarysearch-begin
       public static int IntArrayBinarySearch(int[] data, int item) {
 
          int min = 0;
@@ -31,11 +34,14 @@ namespace BinarySearch
          } while(min <= max);
          return -1;
       }
+      // chunk-binarysearch-end
 
+      // chunk-driver-begin
       public static void Main (string[] args)
       {
          Console.WriteLine ("Hello World!");
       }
+      // chunk-driver-end
 
    }
 }
