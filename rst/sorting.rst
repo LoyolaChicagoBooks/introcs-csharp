@@ -211,7 +211,12 @@ best sorting algorithms but, in practice, has a worst case performance also on t
 order :math:`O(n^2)`. When the data are randomly sorted (as in our experiments) 
 it does better at :math:`O(n \log n)`.
 
-Stay tuned.
+.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+   :start-after: chunk-quicksort-begin
+   :end-before: chunk-quicksort-end
+   :linenos:
+
+We'll have a bit more to say about this algorithm in our discussion of recursion.
 
 Random Data Generation
 ------------------------
@@ -352,3 +357,43 @@ that are sorted, these two conditions must apply:
 
 
 You can inspect this code to see that it is doing what we say it does.
+
+
+Running the Code
+----------------------
+
+Here's the output of a trial run on one of our computers. The results will vary
+depending on your computer's CPU, among other factors.
+
+.. literalinclude:: ../projects/Arrays/Sorting/output/results.txt
+   :language: text
+
+At least based on randomly-generated arrays, the performance can be summarized 
+as follows:
+
+- Bubble Sort is rather unimpressive as expected. In fact, this algorithm is never
+  used in practice but is of historical interest. Like the brute-force style of
+  searching, it does way too much work to come up with the right answer!
+
+- Selection Sort and Insertion Sort are also rather unimpressive. Even though 
+  Selection Sort can in theory do a lot less data movement, it must make repeated
+  passes to find the minimum value to be moved. Again it is way too much work.
+  Insertion Sort, while unimpressive, fares a bit better and turns out to be a 
+  nice building block (if modified) for the Shell Sort.
+
+- Shell Sort does rather well, especially when we pick the right intervals. 
+  In practice, the intervals also need to be adjusted based on the size of the
+  array, which is what we do as larger array sizes are considered. 
+
+- The Quick Sort (not shown yet) is on par with Shell Sort but is by far the
+  most commonly used sorting algorithm. Yet there are signs that shell sort
+  is making a comeback in embedded systems, because it doesn't require a stack
+  and therefore has greater memory efficiency than Quicksort. For an 
+  interesting look at this, see http://en.wikipedia.org/wiki/Shellsort. In our
+  testing, QuickSort still comes out on top but it is not as cut/dried a case
+  as one might expect, considering that our Shellsort is not at all tuned
+  to choose the optimum set of intervals.
+
+
+
+
