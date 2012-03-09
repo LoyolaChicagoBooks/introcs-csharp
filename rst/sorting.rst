@@ -1,3 +1,12 @@
+.. index::
+   double:  PF4; recursion
+   double:  SP1; history
+   double:  algorithms; arrays
+   
+
+.. _sorting:
+
+
 .. todo::
    This is completely in draft mode now and is at best in placeholder status.
    No revisions please.
@@ -49,6 +58,11 @@ have been reordered so we'll get closer to having a sorted array.
 
 Let's now take a look at the various sorting algorithms.
 
+.. index::
+   double: sorting; bubble sort
+   double: algorithms; bubble sort
+   single: arrays; nested loops
+   
 Bubble Sort
 -----------
 
@@ -86,6 +100,11 @@ Bubble Sort requires :math:`O(N^2)` exchanges.
    :linenos:
 
 
+.. index::
+   double: sorting; selection sort
+   double: algorithms; selection sort
+   single: arrays; nested loops
+
 Selection Sort
 --------------
 
@@ -122,6 +141,10 @@ sort when the data are nearly in the right order. When the data are in precisely
 opposite order (say, descending instead of ascending) the worst case behavior is on
 part with Bubble Sort, or :math:`O(N^2)` exchanges.  
 
+.. index::
+   double: sorting; insertion sort
+   double: algorithms; insertion sort
+   single: arrays; nested loops
    
 Insertion Sort
 --------------
@@ -147,6 +170,10 @@ preferable to the Bubble Sort algorithm by just about every measure.
    :start-after: chunk-insertionsort-begin
    :end-before: chunk-insertionsort-end
    :linenos:
+
+.. index::
+   double: sorting; Shell sort
+   single: arrays; nested loops
 
 Shell Sort
 ----------
@@ -199,6 +226,12 @@ in an *improved* shell sort.
    :end-before: chunk-shellsort-naive-end
    :linenos:
 
+.. index::
+   double: sorting; Quicksort
+   double: algorithms; Quicksort
+   single: arrays; nested loops
+   single: recursion
+
 Quicksort a.k.a. Partition Sort
 ----------------------------------
 
@@ -218,6 +251,11 @@ it does better at :math:`O(n \log n)`.
 
 We'll have a bit more to say about this algorithm in our discussion of recursion.
 
+.. index::
+   single: Random
+   double: random numbers; seeding
+   double: random numbers; regeneration
+   
 Random Data Generation
 ------------------------
 
@@ -247,6 +285,16 @@ There are a few things to note in this code:
    data, but it is kind of a waste of memory.)
 
 
+.. index::
+   double: performance; Stopwatch
+   double: performance; TimeSpan
+   
+
+.. index::
+   single: performance
+   double: timing; Stopwatch
+   double: timing; Timespan
+   
 Timing
 -------
 
