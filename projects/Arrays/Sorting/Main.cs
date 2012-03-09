@@ -47,8 +47,23 @@ namespace Sorting
       // chunk-insertionsort-end
 
       // chunk-selectionsort-begin
-      public static void IntArraySelectionSort(int[] data) {
+      public static int IntArrayMin(int[] data, int start) {
+         int minPos = start; 
+         for (int pos=start+1; pos < data.Length; pos++)
+            if (data[pos] < data[minPos])
+               minPos = pos;
+         return minPos; 
+      }
 
+      public static void IntArraySelectionSort(int[] data) {
+         int i;
+         int N = data.Length;
+
+         for (i=0; i < N-1; i++) {
+            int k = IntArrayMin(data, i);
+            if (i != k)
+               exchange(data, i, k);
+         }
       }
       // chunk-selectionsort-end
 
@@ -58,7 +73,7 @@ namespace Sorting
          int N=data.Length;
 
          // The intervals for the shell sort must be sorted, ascending
-         IntArrayInsertionSort(intervals)
+         IntArrayInsertionSort(intervals);
 
          for (k=intervals.Length-1;k>0;k--) {
             for (m=0;m<k;m++) {
