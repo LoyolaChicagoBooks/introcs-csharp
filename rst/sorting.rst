@@ -187,13 +187,154 @@ subsequences of elements 8 apart, then 4, 2, and 1.
    :linenos:
 
 
+In general, shell sort with subsequences that are powers of one another doesn't 
+do as well as one where the data are spread apart. This is because you can end up 
+sequences that need to be merged, which can increase the number of exchanges.
 
-Quick Sort
-----------
-
-Quick sort might be covered but also might be saved for a future class (271 or 363).
+Without too much explanation, we show how you can choose the intervals differently
+in an *improved* shell sort.
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
-   :start-after: chunk-quicksort-begin
-   :end-before: chunk-quicksort-end
+   :start-after: chunk-shellsort-naive-begin
+   :end-before: chunk-shellsort-naive-end
    :linenos:
+
+Random Data Generation
+------------------------
+
+Now it is time to talk about how we are going to check the performance in 
+a real-world situation. We're going to start by modeling the situationw here
+the data are in random order.
+
+The following code generates a random array:
+
+.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+   :start-after: chunk-random-begin
+   :end-before: chunk-random-end
+   :linenos:
+
+There are a few things to note in this code:
+
+#. We use the random number generator option to include a *seed*. Random numbers
+   aren't truly random. The reason you get this impression is that in typical
+   random number generation, the system clock is used to set the *seed*.
+
+#. In this particular example, we actually need the random sequence to be 
+   consistent so we know that each of the sorting algorithms is being tested
+   using the same random data.
+
+#. Because the sorting algorithms *modify* the data that are passed to it, we 
+   need to have a way of regenerating the sequence. (We could also copy the 
+   data, but it is kind of a waste of memory.)
+
+
+Timing
+-------
+
+In this code, we are actually beginning to make use of *classes* that are part of the
+.Net framework/library. 
+
+We need the ability to time the various sorting algorithms. Luckily, .Net gives us a
+way of doing so through its ``Stopwatch`` class. This class supports methods that you
+would expect if you've ever used a stopwatch (the kind found in sports):
+
+- Reset: Resets the elapsed time to zero. We need this so we can use the same Stopwatch
+  for each sorting algorithm.
+
+- Start: Starts the stopwatch. Will keep recording time until stopped.
+
+- Stop: Stops the stopwatch.
+
+- Elapsed: Not really a method but a property (like a variable). We'll use this to
+  get the total time that has elapsed between pairs of Start/Stop events.
+
+
+So let's take a look at how we compare the sorting algorithms by looking at the ``Main()``
+method's code. As this code is fairly lengthy, we're going to look at parts of it. The
+``Main()`` method should be thought of as an *experiment* that tests the performance
+of each of the sorting algorithms.
+
+.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+   :start-after: chunk-drivervars-begin
+   :end-before: chunk-drivervars-end
+   :linenos:
+
+The variables declared here are to set up the apparatus:
+
+- ``arraySize``: The size of the array where we wish to test the performance. We will
+  use this to create an array with ``arraySize`` random values.
+
+- ``randomSeed``: This allows the user to vary the seed that is used to create
+  the random array. We often want to do this to determine whether our performance
+  results are stable when run a large number of times with different distributions.
+  We won't go into too much detail here but consider it an important part of building
+  good performance benchmarks.
+
+- ``watch``: The stopwatch object we're using to do the timings of all experiments.
+
+
+.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+   :start-after: chunk-driverparameters-begin
+   :end-before: chunk-driverparameters-end
+   :linenos:
+
+This code is designed so we can accept the parameters ``arraySize`` and ``randomSeed``
+from the command line or by prompting the user. When programmers design benchmarks, they
+often try to make it possible to run them with minimal user interaction. For the purposes
+of teaching, we wanted to make it possible to run it with or without command-line parameters.
+
+
+.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+   :start-after: chunk-driverapparatus-begin
+   :end-before: chunk-driverapparatus-end
+   :linenos:
+
+This code fragment is actually replicated a few times in the actual ``Main()`` method (to
+run each of the different sorting algorithms). Essentially, we do the following for each
+of the sorting algorithms we want to benchmark:
+
+#. Create the random array of data.
+
+#. Reset the Stopwatch object to zero.
+
+#. Start the Stopwatch.
+
+#. Run the sorting algorithm of interest (here ``IntArrayBubbleSort()``). In the rest
+   of the ``Main()`` code, we change this line to call the function for each of the
+   other sorting algorithms.
+
+#. Stop the Stopwatch and get the elapsed time (watch.Elapsed). 
+
+#. Print the performance results.
+
+Speaking of printing the performance results, here is the method that does that:
+
+.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+   :start-after: chunk-printtime-begin
+   :end-before: chunk-printtime-end
+   :linenos:
+
+When you get ``watch.Elapsed``, this gives you a ``TimeSpan`` object that can be
+used to see how much time has elapsed in the desired units of measurement.
+
+We're going to forego a complete discussoin of all of the details of ``TimeSpan`` for
+now but you can observe for yourself that this method, indeed, prints the elapsed time
+in terms of hours:minutes:seconds:hundredths.
+
+Lastly, our apparatus actually tests whether the data were properly sorted. To have data
+that are sorted, these two conditions must apply:
+
+- the data are in increasing order (we are doing ascending sorting in these examples)
+
+- the sum of the data are the same in each of the test cases. (This is to ensure that
+  our sorting algorithm did not *lose* any data.) It is a *heuristic*, which means that
+  it is possible to have some data sets that return the same sum but were some values
+  got lost. We just wanted to make sure that our code was correct!
+
+.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+   :start-after: chunk-sortcheck-begin
+   :end-before: chunk-sortcheck-end
+   :linenos:
+
+
+You can inspect this code to see that it is doing what we say it does.
