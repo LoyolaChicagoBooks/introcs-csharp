@@ -100,12 +100,15 @@ namespace Sorting
 
       // chunk-shellsort-better-begin
       static void IntArrayShellSortBetter(int[] data) {
-         int[] intervals = { 1, 3, 5, 7 };
-         IntArrayShellSort(data, intervals);
+         if (data.Length < 10000) {
+            int[] intervals = { 1, 3, 5, 7 };
+            IntArrayShellSort(data, intervals);
+         } else {
+            int[] intervals = { 1, 3, 5, 7, data.Length / 5, data.Length / 7 };
+            IntArrayShellSort(data, intervals);
+         }
       }
       // chunk-shellsort-better-end
-
-      // chunk-quicksort-begin
 
       // chunk-quicksort-begin
       public static void IntArrayQuickSort(int[] data) {
