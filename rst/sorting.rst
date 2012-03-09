@@ -199,6 +199,20 @@ in an *improved* shell sort.
    :end-before: chunk-shellsort-naive-end
    :linenos:
 
+Quicksort a.k.a. Partition Sort
+----------------------------------
+
+.. todo::
+   This sort is a more advanced example that uses *recursion*. We're going to cover
+   it but elsewhere in our notes/book.
+
+Quicksort is a rather interesting case. It is often perceived to be one of the
+best sorting algorithms but, in practice, has a worst case performance also on the
+order :math:`O(n^2)`. When the data are randomly sorted (as in our experiments) 
+it does better at :math:`O(n \log n)`.
+
+Stay tuned.
+
 Random Data Generation
 ------------------------
 
