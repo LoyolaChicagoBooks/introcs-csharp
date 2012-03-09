@@ -101,18 +101,47 @@ namespace Sorting
       // chunk-shellsort-better-begin
       static void IntArrayShellSortBetter(int[] data) {
          if (data.Length < 10000) {
+
             int[] intervals = { 1, 3, 5, 7 };
             IntArrayShellSort(data, intervals);
          } else {
-            int[] intervals = { 1, 3, 5, 7, data.Length / 5, data.Length / 7 };
+            int[] intervals = { 1, 3, 5, 7, data.Length / 7, data.Length / 5 };
             IntArrayShellSort(data, intervals);
          }
       }
       // chunk-shellsort-better-end
 
       // chunk-quicksort-begin
-      public static void IntArrayQuickSort(int[] data) {
+      public static void IntArrayQuickSort(int[] data, int l, int r, int depth) {
+         int i, j;
+         int x;
+ 
+         i = l;
+         j = r;
 
+         //Console.WriteLine("l={0} r={1} stackdepth={2}", l, r, depth);
+         x = data[(l+r) / 2]; /* find pivot item */
+         while (true) {
+            while (data[i] < x)
+               i++;
+            while (x < data[j])
+               j--;
+            if (i <= j) {
+               exchange(data, i, j);
+               i++;
+               j--;
+            }
+            if (i > j)
+               break;
+         }
+         if (l < j)
+            IntArrayQuickSort(data, l, j, depth+1);
+         if (i < r)
+            IntArrayQuickSort(data, i, r, depth+1);
+      }
+
+      public static void IntArrayQuickSort(int[] data) {
+         IntArrayQuickSort(data, 0, data.Length-1, 0);
       }
       // chunk-quicksort-end
 
@@ -233,6 +262,15 @@ namespace Sorting
          watch.Stop();
          elapsedTime = watch.Elapsed;
          PrintElapsedTime("Better Shell Sort", elapsedTime);
+
+         IntArrayGenerate(data, randomSeed);
+         watch.Reset();
+         watch.Start();
+         IntArrayQuickSort(data);
+         SortCheckHeuristic(data);
+         watch.Stop();
+         elapsedTime = watch.Elapsed;
+         PrintElapsedTime("Quick Sort", elapsedTime);
 
       }
       // chunk-driver-end
