@@ -5,6 +5,10 @@
 Array Example: Searching 
 ===================================
 
+.. index::
+   double: search; linear
+   double: algorithms; linear search
+
 Linear Search
 ------------------
 
@@ -12,6 +16,10 @@ Linear Search
    :start-after: chunk-linearsearch-begin
    :end-before: chunk-linearsearch-end
    :linenos:
+
+.. index::
+   double: search; binary
+   double: algorithms; binary search
 
 Binary Search
 --------------
