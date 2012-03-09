@@ -166,11 +166,14 @@ namespace Sorting
       // chunk-driver-begin
       public static void Main (string[] args)
       {
+         // chunk-drivervars-begin
          int arraySize;
          int randomSeed;
          Stopwatch watch = new Stopwatch();
          TimeSpan elapsedTime;
+         // chunk-drivervars-end
 
+         // chunk-driverparameters-begin
          if (args.Length < 2) {
             Console.WriteLine("Please enter desired array size: ");
             arraySize = int.Parse(Console.ReadLine());
@@ -180,17 +183,20 @@ namespace Sorting
             arraySize = int.Parse(args[0]);
             randomSeed = int.Parse(args[1]);
          }
+         // chunk-driverparameters-end
 
          int[] data = new int[arraySize];
 
+         // chunk-driverapparatus-begin
          IntArrayGenerate(data, randomSeed);
          watch.Reset();
          watch.Start();
-         IntArrayBubbleSort(data);
+         IntArrayBubbleSort(data);  // the other experiments call a different method
          SortCheckHeuristic(data);
          watch.Stop();
          elapsedTime = watch.Elapsed;
          PrintElapsedTime("Bubble Sort", elapsedTime);
+         // chunk-driverapparatus-end
 
          IntArrayGenerate(data, randomSeed);
          watch.Reset();
