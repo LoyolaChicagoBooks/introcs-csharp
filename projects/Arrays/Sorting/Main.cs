@@ -1,4 +1,6 @@
 using System;
+using System.Diagnostics;
+
 
 namespace Sorting
 {
@@ -73,13 +75,14 @@ namespace Sorting
          int N=data.Length;
 
          // The intervals for the shell sort must be sorted, ascending
-         IntArrayInsertionSort(intervals);
 
-         for (k=intervals.Length-1;k>0;k--) {
-            for (m=0;m<k;m++) {
-              for (j=m+k;j<N;j+=k) {
-                  for (i=j;i>=k && data[i]<data[i-k];i-=k) {
-                     exchange(data, i,i-k);
+         for (k=intervals.Length-1;k>=0;k--) {
+            int interval = intervals[k];
+            Console.WriteLine("Interval {0}", interval);
+            for (m=0;m<interval;m++) {
+              for (j=m+interval;j<N;j+=interval) {
+                  for (i=j;i>=interval && data[i]<data[i-interval];i-=interval) {
+                     exchange(data, i,i-interval);
                   }
                }
             }
@@ -95,16 +98,133 @@ namespace Sorting
       }
       // chunk-shellsort-naive-end
 
+      // chunk-shellsort-better-begin
+      static void IntArrayShellSortBetter(int[] data) {
+         int[] intervals = { 1, 3, 5, 7 };
+         IntArrayShellSort(data, intervals);
+      }
+      // chunk-shellsort-better-end
+
+      // chunk-quicksort-begin
+
       // chunk-quicksort-begin
       public static void IntArrayQuickSort(int[] data) {
 
       }
       // chunk-quicksort-end
 
+      /*
+       * This program is designed to run from the command line.
+       * args[0] array size, integer. If no argument is specified,
+       * user will be prompted.
+       */
+
+
+      // chunk-random-begin
+
+      public static void IntArrayGenerate(int[] data, int randomSeed) {
+         Random r = new Random(randomSeed);
+         for (int i=0; i < data.Length; i++)
+            data[i] = r.Next();
+      }
+
+      // chunk-random-end
+
+      // chunk-printtime-begin
+      public static void PrintElapsedTime(string description, TimeSpan ts) {
+         string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+            ts.Hours, ts.Minutes, ts.Seconds,
+            ts.Milliseconds / 10);
+         Console.WriteLine("{0} {1}", description, elapsedTime);
+      }
+      // chunk-printtime-end
+
+      // chunk-sortcheck-begin
+      public static void SortCheckHeuristic(int[] data) {
+         if (data.Length == 0)
+            return;
+         int sum = data[0];
+         bool isSorted = true;
+         for (int i=1; i < data.Length; i++) {
+            if (data[i-1] > data[i])
+               isSorted = false;
+            sum += data[i];
+         }
+         if (isSorted)
+            Console.WriteLine("Array is sorted");
+         else
+            Console.WriteLine("Array is not sorted");
+         Console.WriteLine("Checksum = {0}", sum);
+      }
+            
+      // chunk-sortcheck-end
+
+
       // chunk-driver-begin
       public static void Main (string[] args)
       {
-         Console.WriteLine ("Hello World!");
+         int arraySize;
+         int randomSeed;
+         Stopwatch watch = new Stopwatch();
+         TimeSpan elapsedTime;
+
+         if (args.Length < 2) {
+            Console.WriteLine("Please enter desired array size: ");
+            arraySize = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter an initial random seed value: ");
+            randomSeed = int.Parse(Console.ReadLine());
+         } else {
+            arraySize = int.Parse(args[0]);
+            randomSeed = int.Parse(args[1]);
+         }
+
+         int[] data = new int[arraySize];
+
+         IntArrayGenerate(data, randomSeed);
+         watch.Reset();
+         watch.Start();
+         IntArrayBubbleSort(data);
+         SortCheckHeuristic(data);
+         watch.Stop();
+         elapsedTime = watch.Elapsed;
+         PrintElapsedTime("Bubble Sort", elapsedTime);
+
+         IntArrayGenerate(data, randomSeed);
+         watch.Reset();
+         watch.Start();
+         IntArraySelectionSort(data);
+         SortCheckHeuristic(data);
+         watch.Stop();
+         elapsedTime = watch.Elapsed;
+         PrintElapsedTime("Selection Sort", elapsedTime);
+         
+         IntArrayGenerate(data, randomSeed);
+         watch.Reset();
+         watch.Start();
+         IntArrayInsertionSort(data);
+         SortCheckHeuristic(data);
+         watch.Stop();
+         elapsedTime = watch.Elapsed;
+         PrintElapsedTime("Insertion Sort", elapsedTime);
+
+         IntArrayGenerate(data, randomSeed);
+         watch.Reset();
+         watch.Start();
+         IntArrayShellSortNaive(data);
+         SortCheckHeuristic(data);
+         watch.Stop();
+         elapsedTime = watch.Elapsed;
+         PrintElapsedTime("Naive Shell Sort", elapsedTime);
+
+         IntArrayGenerate(data, randomSeed);
+         watch.Reset();
+         watch.Start();
+         IntArrayShellSortBetter(data);
+         SortCheckHeuristic(data);
+         watch.Stop();
+         elapsedTime = watch.Elapsed;
+         PrintElapsedTime("Better Shell Sort", elapsedTime);
+
       }
       // chunk-driver-end
    }

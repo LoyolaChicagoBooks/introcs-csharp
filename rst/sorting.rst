@@ -79,20 +79,50 @@ and has no equal elements.
 Each exchange in Bubble Sort removes precisely one inversion; therefore,
 Bubble Sort requires :math:`O(N^2)` exchanges.
 
+
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-bubblesort-begin
    :end-before: chunk-bubblesort-end
    :linenos:
 
+
 Selection Sort
 --------------
+
+The Selection Sort algorithm works to minimize the amount of data movement,
+hence the number of ``exchange()`` calls. 
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-selectionsort-begin
    :end-before: chunk-selectionsort-end
    :linenos:
 
+It's a remarkably simple algorithm to explain. As shown in the code, the
+actual sorting is done by a function, ``IntArraySelectionSort()``, which 
+works just like Bubble sort and takes an array of data as its only parameter.
+The way Selection Sort works is as follows:
 
+#. An outer loop visits each item in the array to find out whether it is the
+   mininum. If it is not the minimum, it is going to be swapped with whatever
+   item in the rest of the array is the minimum.
+
+#. To find the minimum value in the rest of the array, we use a helper function, 
+   ``IntArrayMin()``. This function has a parameter, ``start`` to indicate where
+   we wish to begin the search. So as you can see from the loop in ``IntArraySelectionSort()``,
+   when we are looking at position ``i``, we are searching for the minimum from position
+   ``i + 1`` to the end of the array. 
+
+#. As a concrete example, if you have an array of 10 elements, this means that
+   ``i`` goes from 0 to 9. When we are looking at position 0, we check to see whether
+   positions 1..9 have the minimum value. If not, we find the minimum and swap it. Then
+   we consider ``i=1`` and look at positions 2..9. And so on.
+
+We won't do the full algorithmic analysis here. Selection Sort is a a potentially good
+sort when the data are nearly in the right order. When the data are in precisely the
+opposite order (say, descending instead of ascending) the worst case behavior is on
+part with Bubble Sort, or :math:`O(N^2)` exchanges.  
+
+   
 Insertion Sort
 --------------
 
@@ -143,14 +173,8 @@ Indeed, not satisfied with just one prepass, a Shell Sort may do several
 passes with decreasing values of k. The following examples experiment
 with different series of values of k.
 
-Shell Sort **Shell Sort**. In this first example, we sort all
-subsequences of elements 8 apart, then 4, 2, and 1. As we sort them, we
-color the elements based on what subsequences they are in. It becomes
-clear that this version of Shell Sort becomes a kind of merge sort where
-pairs of subsequences are merged together. Comparing the performance of
-this version to the two remaining, it also appears that this merging is
-not a great idea. The subsequences can be quite a distance apart.
-
+In this first example, we sort all
+subsequences of elements 8 apart, then 4, 2, and 1.
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-shellsort-begin
@@ -161,6 +185,8 @@ not a great idea. The subsequences can be quite a distance apart.
    :start-after: chunk-shellsort-naive-begin
    :end-before: chunk-shellsort-naive-end
    :linenos:
+
+
 
 Quick Sort
 ----------
