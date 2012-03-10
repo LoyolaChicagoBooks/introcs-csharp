@@ -1,3 +1,12 @@
+.. index::
+   double:  PF4; recursion
+   double:  SP1; history
+   double:  algorithms; arrays
+   
+
+.. _sorting:
+
+
 .. todo::
    This is still in draft mode. Corrections welcome (from Andy).
 
@@ -17,7 +26,7 @@ these classic algorithms are coded in the teaching language for this course, C#,
 understand the essentials of analyzing their performance, both theoretically and
 experimentally. For a full theoretical treatment, we recommend the outstanding textbook
 by Niklaus Wirth [WirthADP]_, who invented the Pascal language. (We have also adapted
-some examples from Thomas W. Christopher's [TCSortingJava] animated sorting algorithms
+some examples from Thomas W. Christopher's [TCSortingJava]_ animated sorting algorithms
 page.
 
 Exchanging Array Elements
@@ -59,6 +68,11 @@ have been reordered so we'll get closer to having a sorted array.
 
 Let's now take a look at the various sorting algorithms.
 
+.. index::
+   double: sorting; bubble sort
+   double: algorithms; bubble sort
+   single: arrays; nested loops
+   
 Bubble Sort
 -----------
 
@@ -95,6 +109,11 @@ Bubble Sort requires :math:`O(N^2)` exchanges.
    :end-before: chunk-bubblesort-end
    :linenos:
 
+
+.. index::
+   double: sorting; selection sort
+   double: algorithms; selection sort
+   single: arrays; nested loops
 
 Selection Sort
 --------------
@@ -135,6 +154,10 @@ number of *exchanges* is a bit complex for an introductory course but averages
 in our own performance experiments with randomly-generated data. 
 
 
+.. index::
+   double: sorting; insertion sort
+   double: algorithms; insertion sort
+   single: arrays; nested loops
    
 Insertion Sort
 --------------
@@ -165,6 +188,9 @@ like Quicksort and Shell sort.)
    :end-before: chunk-insertionsort-end
    :linenos:
 
+.. index::
+   double: sorting; Shell sort
+   single: arrays; nested loops
 
 Shell Sort
 ----------
@@ -228,6 +254,12 @@ techniques used to tune Shellsort (using prime numbers). In our testing (below)
 data sets through size 50,000 do fairly well with 4-6 intervals. Higher order
 data sets will require more intervals.
 
+.. index::
+   double: sorting; Quicksort
+   double: algorithms; Quicksort
+   single: arrays; nested loops
+   single: recursion
+
 Exercise:
 
 Donald Knuth has suggested a couple of methods for computing the intervals:
@@ -286,6 +318,11 @@ it does better at :math:`O(n \log n)`.
 
 We'll have a bit more to say about this algorithm in our discussion of recursion.
 
+.. index::
+   single: Random
+   double: random numbers; seeding
+   double: random numbers; regeneration
+   
 Random Data Generation
 ------------------------
 
@@ -315,6 +352,16 @@ There are a few things to note in this code:
    data, but it is kind of a waste of memory.)
 
 
+.. index::
+   double: performance; Stopwatch
+   double: performance; TimeSpan
+   
+
+.. index::
+   single: performance
+   double: timing; Stopwatch
+   double: timing; Timespan
+   
 Timing
 -------
 
@@ -475,5 +522,4 @@ as follows:
 .. [uClibc] http://en.wikipedia.org/wiki/UClibc
 
 .. [TCSortingJava] http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm
-
 
