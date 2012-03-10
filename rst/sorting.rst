@@ -457,24 +457,15 @@ We're going to forego a complete discussoin of all of the details of ``TimeSpan`
 now but you can observe for yourself that this method, indeed, prints the elapsed time
 in terms of hours:minutes:seconds:hundredths.
 
-Lastly, our apparatus actually tests whether the data were properly sorted. To have data
-that are sorted, these two conditions must apply:
+Getting the Code
+---------------------
 
-- the data are in increasing order (we are doing ascending sorting in these examples)
+If you already have performed a checkout of our entire project at 
+Bitbucket, you can find this code in the ``projects/Arrays/Sorting``
+folder (and open the solution ``Sorting.sln`` in MonoDevelop or Visual
+Studio). 
 
-- the sum of the data are the same in each of the test cases. (This is to ensure that
-  our sorting algorithm did not *lose* any data.) It is a *heuristic*, which means that
-  it is possible to have some data sets that return the same sum but were some values
-  got lost. We just wanted to make sure that our code was correct!
-
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
-   :start-after: chunk-sortcheck-begin
-   :end-before: chunk-sortcheck-end
-   :linenos:
-
-
-You can inspect this code to see that it is doing what we say it does.
-
+You can also view the full source code in our [Sorting]_ folder.
 
 Running the Code
 ----------------------
@@ -525,3 +516,4 @@ as follows:
 
 .. [TCSortingJava] http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm
 
+.. [Sorting] https://bitbucket.org/gkthiruvathukal/introcs-csharp/src/d82c38851f6a/projects/Arrays/Sorting/Main.cs
