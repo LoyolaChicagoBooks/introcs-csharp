@@ -260,8 +260,6 @@ data sets will require more intervals.
    single: arrays; nested loops
    single: recursion
 
-Exercise:
-
 Donald Knuth has suggested a couple of methods for computing the intervals:
 
 .. math::
@@ -288,9 +286,13 @@ He also suggests:
 
 This results in a sequence 1, 3, 7, 15, 31.
 
-We leave as an exercise to the reader to modify our programs to adjust the intervals
-and see whether you can come close to Quicksort's performance (which did the best
-in our basic testing).
+Here is the improvement to our naive method that dynamically calculates
+the intervals based on the above suggestions by Knuth:
+
+.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+   :start-after: chunk-shellsort-better-begin
+   :end-before: chunk-shellsort-better-end
+   :linenos:
 
 Shell sort is a complex sorting algorithm to make "work well", which is why it is not
 seen often in practice. It is, however, making a bit of a comeback in embedded systems.
