@@ -78,7 +78,7 @@ namespace Sorting
 
          for (k=intervals.Length-1;k>=0;k--) {
             int interval = intervals[k];
-            Console.WriteLine("Interval {0}", interval);
+            //Console.WriteLine("Interval {0}", interval);
             for (m=0;m<interval;m++) {
               for (j=m+interval;j<N;j+=interval) {
                   for (i=j;i>=interval && data[i]<data[i-interval];i-=interval) {
@@ -102,14 +102,11 @@ namespace Sorting
 		
       static int[] GenerateIntervals(int n) {
          int t = (int) (1.0 / Math.Log(3, n));
-         Console.WriteLine("t={0}", t);
+         //Console.WriteLine("t={0}", t);
          int[] intervals = new int[t];       
          intervals[0] = 1;
          for (int i=1; i < t; i++)
             intervals[i] = 3 * intervals[i-1] + 1;
-
-         for (int i=0; i < t; i++)
-            Console.WriteLine("i={0} intervals[i]={1}", i, intervals[i]);
          return intervals;
       }
 
@@ -128,7 +125,6 @@ namespace Sorting
          i = l;
          j = r;
 
-         //Console.WriteLine("l={0} r={1} stackdepth={2}", l, r, depth);
          x = data[(l+r) / 2]; /* find pivot item */
          while (true) {
             while (data[i] < x)
@@ -229,7 +225,6 @@ namespace Sorting
          watch.Reset();
          watch.Start();
          IntArrayBubbleSort(data);  // the other experiments call a different method
-         SortCheckHeuristic(data);
          watch.Stop();
          elapsedTime = watch.Elapsed;
          PrintElapsedTime("Bubble Sort", elapsedTime);
@@ -239,7 +234,6 @@ namespace Sorting
          watch.Reset();
          watch.Start();
          IntArraySelectionSort(data);
-         SortCheckHeuristic(data);
          watch.Stop();
          elapsedTime = watch.Elapsed;
          PrintElapsedTime("Selection Sort", elapsedTime);
@@ -248,7 +242,6 @@ namespace Sorting
          watch.Reset();
          watch.Start();
          IntArrayInsertionSort(data);
-         SortCheckHeuristic(data);
          watch.Stop();
          elapsedTime = watch.Elapsed;
          PrintElapsedTime("Insertion Sort", elapsedTime);
@@ -257,7 +250,6 @@ namespace Sorting
          watch.Reset();
          watch.Start();
          IntArrayShellSortNaive(data);
-         SortCheckHeuristic(data);
          watch.Stop();
          elapsedTime = watch.Elapsed;
          PrintElapsedTime("Naive Shell Sort", elapsedTime);
@@ -266,7 +258,6 @@ namespace Sorting
          watch.Reset();
          watch.Start();
          IntArrayShellSortBetter(data);
-         SortCheckHeuristic(data);
          watch.Stop();
          elapsedTime = watch.Elapsed;
          PrintElapsedTime("Better Shell Sort", elapsedTime);
@@ -275,7 +266,6 @@ namespace Sorting
          watch.Reset();
          watch.Start();
          IntArrayQuickSort(data);
-         SortCheckHeuristic(data);
          watch.Stop();
          elapsedTime = watch.Elapsed;
          PrintElapsedTime("Quick Sort", elapsedTime);
