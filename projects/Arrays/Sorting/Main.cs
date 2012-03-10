@@ -78,7 +78,6 @@ namespace Sorting
 
          for (k=intervals.Length-1;k>=0;k--) {
             int interval = intervals[k];
-            //Console.WriteLine("Interval {0}", interval);
             for (m=0;m<interval;m++) {
               for (j=m+interval;j<N;j+=interval) {
                   for (i=j;i>=interval && data[i]<data[i-interval];i-=interval) {
@@ -102,7 +101,6 @@ namespace Sorting
 		
       static int[] GenerateIntervals(int n) {
          int t = (int) (1.0 / Math.Log(3, n));
-         //Console.WriteLine("t={0}", t);
          int[] intervals = new int[t];       
          intervals[0] = 1;
          for (int i=1; i < t; i++)
@@ -118,7 +116,7 @@ namespace Sorting
       // chunk-shellsort-better-end
 
       // chunk-quicksort-begin
-      public static void IntArrayQuickSort(int[] data, int l, int r, int depth) {
+      public static void IntArrayQuickSort(int[] data, int l, int r) {
          int i, j;
          int x;
  
@@ -140,13 +138,13 @@ namespace Sorting
                break;
          }
          if (l < j)
-            IntArrayQuickSort(data, l, j, depth+1);
+            IntArrayQuickSort(data, l, j);
          if (i < r)
-            IntArrayQuickSort(data, i, r, depth+1);
+            IntArrayQuickSort(data, i, r);
       }
 
       public static void IntArrayQuickSort(int[] data) {
-         IntArrayQuickSort(data, 0, data.Length-1, 0);
+         IntArrayQuickSort(data, 0, data.Length-1);
       }
       // chunk-quicksort-end
 
@@ -175,26 +173,6 @@ namespace Sorting
          Console.WriteLine("{0} {1}", description, elapsedTime);
       }
       // chunk-printtime-end
-
-      public static void SortCheckHeuristic(int[] data) {
-         if (data.Length == 0)
-            return;
-         int sum = data[0];
-         bool isSorted = true;
-         for (int i=1; i < data.Length; i++) {
-            if (data[i-1] > data[i])
-               isSorted = false;
-            sum += data[i];
-         }
-         if (isSorted)
-            Console.WriteLine("Array is sorted");
-         else
-            Console.WriteLine("Array is not sorted");
-         Console.WriteLine("Checksum = {0}", sum);
-      }
-            
-      // chunk-sortcheck-end
-
 
       // chunk-driver-begin
       public static void Main (string[] args)
