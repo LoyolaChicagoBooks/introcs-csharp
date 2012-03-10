@@ -1,0 +1,21 @@
+outside
+east theatre  south lab  west pub
+outside the main entrance 
+of the university
+
+theatre
+west outside
+in a lecture theatre
+
+pub
+east outside
+in the campus pub
+
+lab
+north outside  east office
+in a computing lab
+
+office
+west lab 
+in the computing admin office
+

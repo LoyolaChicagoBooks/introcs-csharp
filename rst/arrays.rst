@@ -1,0 +1,13 @@
+Arrays
+######################
+
+.. toctree::
+   :maxdepth: 3
+
+   onedim
+   music
+   searching
+   sorting
+   lab-array1d
+   twodim
+ 

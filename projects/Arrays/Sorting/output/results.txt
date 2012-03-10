@@ -1,0 +1,33 @@
+$ ./bin/Debug/Sorting.exe 
+Please enter desired array size: 
+100000
+Please enter an initial random seed value: 
+34343
+Array is sorted
+Checksum = 1925097166
+Bubble Sort 00:00:36.97
+Array is sorted
+Checksum = 1925097166
+Selection Sort 00:00:21.00
+Array is sorted
+Checksum = 1925097166
+Insertion Sort 00:00:15.32
+Interval 8
+Interval 4
+Interval 2
+Interval 1
+Array is sorted
+Checksum = 1925097166
+Naive Shell Sort 00:00:02.09
+Interval 20000
+Interval 14285
+Interval 7
+Interval 5
+Interval 3
+Interval 1
+Array is sorted
+Checksum = 1925097166
+Better Shell Sort 00:00:00.57
+Array is sorted
+Checksum = 1925097166
+Quick Sort 00:00:00.01
