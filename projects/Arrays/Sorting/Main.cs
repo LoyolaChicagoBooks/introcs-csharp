@@ -99,16 +99,25 @@ namespace Sorting
       // chunk-shellsort-naive-end
 
       // chunk-shellsort-better-begin
-      static void IntArrayShellSortBetter(int[] data) {
-         if (data.Length < 10000) {
+		
+      static int[] GenerateIntervals(int n) {
+         int t = (int) (1.0 / Math.Log(3, n));
+         Console.WriteLine("t={0}", t);
+         int[] intervals = new int[t];       
+         intervals[0] = 1;
+         for (int i=1; i < t; i++)
+            intervals[i] = 3 * intervals[i-1] + 1;
 
-            int[] intervals = { 1, 3, 5, 7 };
-            IntArrayShellSort(data, intervals);
-         } else {
-            int[] intervals = { 1, 3, 5, 7, data.Length / 7, data.Length / 5 };
-            IntArrayShellSort(data, intervals);
-         }
+         for (int i=0; i < t; i++)
+            Console.WriteLine("i={0} intervals[i]={1}", i, intervals[i]);
+         return intervals;
       }
+
+      static void IntArrayShellSortBetter(int[] data) {
+         int[] intervals = GenerateIntervals(data.Length);
+         IntArrayShellSort(data, intervals);
+      }
+
       // chunk-shellsort-better-end
 
       // chunk-quicksort-begin
@@ -171,7 +180,6 @@ namespace Sorting
       }
       // chunk-printtime-end
 
-      // chunk-sortcheck-begin
       public static void SortCheckHeuristic(int[] data) {
          if (data.Length == 0)
             return;

@@ -1,6 +1,5 @@
 .. todo::
-   This is completely in draft mode now and is at best in placeholder status.
-   No revisions please.
+   This is still in draft mode. Corrections welcome (from Andy).
 
 Array Example: Sorting Algorithms
 ===================================
@@ -12,6 +11,17 @@ way of learning about why arrays are important well beyond mathematics.
 In this section, we're going to take a look at a number of well-known sorting algorithms
 with the hope of sensitizing you to the notion of *performance*--a topic that is covered
 in greater detail in courses suchs as algorithms and data structures.
+
+This is not intended to be a comprehensive reference at all. The idea is to learn how
+these classic algorithms are coded in the teaching language for this course, C#, and to
+understand the essentials of analyzing their performance, both theoretically and
+experimentally. For a full theoretical treatment, we recommend the outstanding textbook
+by Niklaus Wirth [WirthADP]_, who invented the Pascal language. (We have also adapted
+some examples from Thomas W. Christopher's [TCSortingJava] animated sorting algorithms
+page.
+
+Exchanging Array Elements
+-----------------------------
 
 We'll begin by introducing you to a simple method, whose only purpose in life is to 
 swap two data values at positions ``m`` and ``n`` in a given integer array:
@@ -117,10 +127,13 @@ The way Selection Sort works is as follows:
    positions 1..9 have the minimum value. If not, we find the minimum and swap it. Then
    we consider ``i=1`` and look at positions 2..9. And so on.
 
-We won't do the full algorithmic analysis here. Selection Sort is a a potentially good
-sort when the data are nearly in the right order. When the data are in precisely the
-opposite order (say, descending instead of ascending) the worst case behavior is on
-part with Bubble Sort, or :math:`O(N^2)` exchanges.  
+We won't do the full algorithmic analysis here. Selection Sort is interesting because
+it does most of its work through *comparsions*, which is always the same regardless
+of how the data are ordered, :math:`\frac{1}{2} O(n^2 - n)`. The analysis of the
+number of *exchanges* is a bit complex for an introductory course but averages
+:math:`O(n\ log\ n)`. The comparisons are a non-trivial cost, however, and do show
+in our own performance experiments with randomly-generated data. 
+
 
    
 Insertion Sort
@@ -136,17 +149,22 @@ since only one inversion is removed per exchange. So Insertion Sort also
 requires :math:`O(N^2)` exchanges. However, the average distance an
 element must move for random input is one-half the length of the sorted
 portion, so Insertion Sort should, in practice, be twice as fast as
-Bubble Sort. (That is, it runs in 1/2 the time.)
+Bubble Sort. (The same is true for Selection Sort but the fixed cost
+of comparisons tends to make it a bit slower.)
 
 It is worth noting that in systems programming, when an item needs to move
-a shorter distance in memory, it is said to have good *locality*. So
+a shorter distance in memory, it is said to have better *locality*. So
 Insertion Sort, while far from the perfect sorting algorithm, is vastly
-preferable to the Bubble Sort algorithm by just about every measure.
+preferable to the Bubble Sort algorithm by just about every measure. (And
+on randomly-generated data, it works a bit faster than Selection Sort but
+is still unimpressive compared to other more powerful sorting algorithms
+like Quicksort and Shell sort.)
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-insertionsort-begin
    :end-before: chunk-insertionsort-end
    :linenos:
+
 
 Shell Sort
 ----------
@@ -173,8 +191,9 @@ Indeed, not satisfied with just one prepass, a Shell Sort may do several
 passes with decreasing values of k. The following examples experiment
 with different series of values of k.
 
-In this first example, we sort all
-subsequences of elements 8 apart, then 4, 2, and 1.
+In this first example, we sort all subsequences of elements 8 apart, 
+then 4, 2, and 1. Please note that these intervals are to show how the 
+method works--not how the method works *best*.
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-shellsort-begin
@@ -189,15 +208,64 @@ subsequences of elements 8 apart, then 4, 2, and 1.
 
 In general, shell sort with subsequences that are powers of one another doesn't 
 do as well as one where the data are spread apart. This is because you can end up 
-sequences that need to be merged, which can increase the number of exchanges.
+sequences that need to be merged, which can increase the number of exchanges. In 
+addition, the number of intervals must be increased as the size of the array to
+be sorted increases, which explains why we allow an *arbitrary* array of intervals
+to be specified. 
 
 Without too much explanation, we show how you can choose the intervals differently
-in an *improved* shell sort.
+in an *improved* shell sort, where the intervals have been chosen so as not to be
+multiples of one another.
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-shellsort-naive-begin
    :end-before: chunk-shellsort-naive-end
    :linenos:
+
+An interesting exercise is to use something like the prime numbers (> 7) to 
+add more intervals as the size of the data to be sorted increases. There are many
+techniques used to tune Shellsort (using prime numbers). In our testing (below)
+data sets through size 50,000 do fairly well with 4-6 intervals. Higher order
+data sets will require more intervals.
+
+Exercise:
+
+Donald Knuth has suggested a couple of methods for computing the intervals:
+
+.. math::
+
+   h_k-1 = 3 h_k + 1
+
+   h_t = 1
+
+   t = \lfloor log_3 n \rfloor - 1
+
+This results in a sequence 1, 4, 13, 40, 121. You stop computing values in the 
+sequence when :math:`t = log_3 n - 1`. (So for n=50,000, you should have about 9-10
+intervals.)
+
+He also suggests:
+
+.. math::
+
+   h_k-1 = 2 h_k + 1
+
+   h_t = 1
+
+   t = \lfloor log_2 n \rfloor - 1
+
+This results in a sequence 1, 3, 7, 15, 31.
+
+We leave as an exercise to the reader to modify our programs to adjust the intervals
+and see whether you can come close to Quicksort's performance (which did the best
+in our basic testing).
+
+Shell sort is a complex sorting algorithm to make "work well", which is why it is not
+seen often in practice. It is, however, making a bit of a comeback in embedded systems.
+
+We nevertheless think it is a very cool algorithm to have heard of as a computer science
+student and think it has promise in a number of situations, especially in systems where
+there are limits on available memory (e.g. embedded systems).
 
 Quicksort a.k.a. Partition Sort
 ----------------------------------
@@ -375,25 +443,37 @@ as follows:
   used in practice but is of historical interest. Like the brute-force style of
   searching, it does way too much work to come up with the right answer!
 
-- Selection Sort and Insertion Sort are also rather unimpressive. Even though 
-  Selection Sort can in theory do a lot less data movement, it must make repeated
-  passes to find the minimum value to be moved. Again it is way too much work.
+- Selection Sort and Insertion Sort are also rather unimpressive on their own. Even though 
+  Selection Sort can in theory do a lot less data movement, it must make a large
+  number of comparisons to find the minimum value to be moved. Again it is way too much work.
   Insertion Sort, while unimpressive, fares a bit better and turns out to be a 
-  nice building block (if modified) for the Shell Sort.
+  nice building block (if modified) for the Shell Sort. Varying the interval size
+  drastically reduces the amount of data movement (and the distance it has to move).
 
 - Shell Sort does rather well, especially when we pick the right intervals. 
   In practice, the intervals also need to be adjusted based on the size of the
-  array, which is what we do as larger array sizes are considered. 
+  array, which is what we do as larger array sizes are considered. This is no trivial
+  task but a great deal of work has already been done in the past to determine
+  functions that generate good intervals. 
 
 - The Quick Sort (not shown yet) is on par with Shell Sort but is by far the
-  most commonly used sorting algorithm. Yet there are signs that shell sort
+  most commonly used sorting algorithm. Yet there are signs that Shell sort
   is making a comeback in embedded systems, because it doesn't require a stack
   and therefore has greater memory efficiency than Quicksort. For an 
-  interesting look at this, see http://en.wikipedia.org/wiki/Shellsort. In our
+  interesting look at this, see [WikipediaShellSort]_, where it is mentioned that
+  the [uClibc]_ library makes use of Shell sort in its ``qsort()`` implementation.
+  The  In our
   testing, QuickSort still comes out on top but it is not as cut/dried a case
   as one might expect, considering that our Shellsort is not at all tuned
-  to choose the optimum set of intervals.
+  to choose the optimum set of intervals (an exercise we left to the reader).
 
 
+.. [WirthADP] Niklaus Wirth, Algorithms + Data Structures = Programs, Prentice Hall, 1976.
+
+.. [WikipediaShellSort] http://en.wikipedia.org/wiki/Shellsort
+
+.. [uClibc] http://en.wikipedia.org/wiki/UClibc
+
+.. [TCSortingJava] http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm
 
 
