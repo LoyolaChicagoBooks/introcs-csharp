@@ -100,7 +100,13 @@ namespace Sorting
       // chunk-shellsort-better-begin
 		
       static int[] GenerateIntervals(int n) {
-         int t = (int) (1.0 / Math.Log(3, n));
+         int t;
+         if (n < 9) {
+            t = 1;
+         }
+         else {
+            t = (int)Math.Log(n, 3) - 1;
+         }
          int[] intervals = new int[t];       
          intervals[0] = 1;
          for (int i=1; i < t; i++)
