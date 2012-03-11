@@ -1,8 +1,8 @@
 using System;
 
-namespace BinarySearch
+namespace Arrays
 {
-   class MainClass
+   public class Searching
    {
 
       // chunk-linearsearch-begin

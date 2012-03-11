@@ -2,10 +2,9 @@ using System;
 using System.Diagnostics;
 
 
-namespace Sorting
+namespace Arrays
 {
-
-   class MainClass
+   public class Sorting
    {
       /* This method swaps two items in the array during sorting. As we neeed to do this in multiple
        * sort methods, a function has been created for it.
