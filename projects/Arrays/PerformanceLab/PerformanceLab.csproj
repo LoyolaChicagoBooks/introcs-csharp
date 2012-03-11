@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}</ProjectGuid>
+    <ProjectGuid>{3FB35E7D-A4CE-4C5C-A429-500CB32783A6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WordSearchPuzzle</RootNamespace>
-    <AssemblyName>WordSearchPuzzle</AssemblyName>
+    <RootNamespace>PerformanceLab</RootNamespace>
+    <AssemblyName>PerformanceLab</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,4 +38,14 @@
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Searching\Searching.csproj">
+      <Project>{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}</Project>
+      <Name>Searching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sorting\Sorting.csproj">
+      <Project>{F6D64697-6E50-481C-A9F3-A941E7B48F2A}</Project>
+      <Name>Sorting</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
