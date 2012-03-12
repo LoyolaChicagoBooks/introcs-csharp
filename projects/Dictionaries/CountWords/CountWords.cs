@@ -61,6 +61,7 @@ people, by the people, for the people, shall not perish from the earth.";
          return wc;
       }
 
+      /** Print each word and its count, if the count is at least minCount. */
       public static void PrintCounts(Dictionary<string, int> wc, int minCount)
       {
          List<string> words = new List<string>(wc.Keys);
