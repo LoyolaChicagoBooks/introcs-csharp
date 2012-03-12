@@ -8,6 +8,7 @@ Arrays
    music
    searching
    sorting
+   binarysearching
    lab-array1d
    lab-searching-arrays-lists-maps
    twodim

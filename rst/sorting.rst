@@ -94,12 +94,6 @@ we also say that there is corresponding data *movement*. If you look at the
 to take place, which happens very quickly on most processors but still amounts
 to a significant cost. 
 
-.. george, this next part is too little to convey anything. Wait until locality?
-	In systems programming, moving between the CPU and memory
-	is relatively expensive to operations that happen on the CPU proper. You'll
-	learn more about this topic in courses on systems programming and
-	operating systems.
-
 There can be at most :math:`N \cdot \frac{N-1}{2}` inversions in the array. The maximum
 number of inversions occurs when the array is sorted in reverse order
 and has no equal elements.
@@ -181,18 +175,6 @@ requires :math:`O(N^2)` exchanges. On average Insertion Sort requires
 only half as many comparisons as Bubble Sort, since the average distance an
 element must move for random input is one-half the length of the sorted
 portion. 
-
-..  george, your bubble sort does not know when to stop.  It is always comparing 
-    adjacent elements, like Insertion sort.  The difference has little
-    to do with locality.
-
-	It is worth noting that in systems programming, when an item needs to move
-	a shorter distance in memory, it is said to have better *locality*. So
-	Insertion Sort, while far from the perfect sorting algorithm, is vastly
-	preferable to the Bubble Sort algorithm by just about every measure. (And
-	on randomly-generated data, it works a bit faster than Selection Sort but
-	is still unimpressive compared to other more powerful sorting algorithms
-	like Quicksort and Shell sort.)
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-insertionsort-begin
@@ -287,6 +269,10 @@ He also suggests:
 
 This results in a sequence 1, 3, 7, 15, 31....
 
+For completeness, we note that :math:`log_3 n` must be sufficiently large (and > 2)
+for this method to work. Our code ensures this by taking the *maximum* of
+:math:`log_3 n` and 1.
+
 Here is the improvement to our naive method that dynamically calculates
 the intervals based on the above suggestions by Knuth:
 
@@ -294,17 +280,6 @@ the intervals based on the above suggestions by Knuth:
    :start-after: chunk-shellsort-better-begin
    :end-before: chunk-shellsort-better-end
    :linenos:
-
-An interesting exercise is to use something like the prime numbers for jump sizes. 
-There are many
-techniques used to tune Shell Sort using prime numbers. 
-
-..  george, were you saying only start the prime numbers after you get jumps well into the
-    thousands?
-    
-	In our testing (below)
-	data sets through size 50,000 do fairly well with 4-6 intervals. Higher order
-	data sets will require more intervals.
 
 Shell sort is a complex sorting algorithm to make "work well", which is why it is not
 seen often in practice. It is, however, making a bit of a comeback in embedded systems.
@@ -524,12 +499,6 @@ as follows:
 ..  george, shell sort is still of higher order.  I do not see what all this is about
     You also mentioned the quicksort stack, but that is way less than just the extra space
     to code it.
-
-    The  In our
-    testing, QuickSort still comes out on top but it is not as cut/dried a case
-    as one might expect, considering that our Shell Sort is not at all tuned
-    to choose the optimum set of intervals (an exercise we left to the reader).
-
 
 .. [WirthADP] Niklaus Wirth, Algorithms + Data Structures = Programs, Prentice Hall, 1976.
 
