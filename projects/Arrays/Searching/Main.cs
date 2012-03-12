@@ -15,33 +15,43 @@ namespace Arrays
       }
       // chunk-linearsearch-end
 
-      // chunk-binarysearch-begin
-      public static int IntArrayBinarySearch(int[] data, int item) {
-
-         int min = 0;
+      // chunk-linearsearchfrom-begin
+      public static int IntArrayLinearSearch(int[] data, int item, int start) {
          int N=data.Length;
-         int max= N-1;
-         do {
-            int mid = (min+max) / 2;
-            if (item > data[mid])
-               min = mid + 1;
-            else
-               max = mid - 1;
-            if (data[mid] == item)
-               return mid;
-            //if (min > max)
-            //   break;
-         } while(min <= max);
+         if (start < 0)
+            return -1;
+         for (int i=start; i < N; i++)
+            if (data[i] == item)
+               return i;
          return -1;
       }
-      // chunk-binarysearch-end
+      // chunk-linearsearchfrom-end
 
       // chunk-driver-begin
       public static void Main (string[] args)
       {
-         Console.WriteLine ("Hello World!");
-      }
-      // chunk-driver-end
+         Console.WriteLine ("Please enter some integers, separated by spaces:");
+         string input = Console.ReadLine();
+         string[] integers = input.Split(' ');
+         int[] data = new int[integers.Length];
+         for (int i=0; i < data.Length; i++)
+            data[i] = int.Parse(integers[i]);
 
+         while (true) {
+            Console.WriteLine("Please enter a number you want to find (blank line to end):");
+            input = Console.ReadLine();
+            if (input.Length == 0)
+               break;
+            int searchItem = int.Parse(input);
+            Console.WriteLine("Please enter a position to start searching from (0 for beginning): ");
+            input = Console.ReadLine();
+            int searchPos = int.Parse(input);
+            int foundPos = IntArrayLinearSearch(data, searchItem, searchPos);
+            if (foundPos < 0)
+               Console.WriteLine("Item {0} not found", searchItem);
+            else
+               Console.WriteLine("Item {0} found at position {1}", searchItem, foundPos);
+         }
+      }
    }
 }
