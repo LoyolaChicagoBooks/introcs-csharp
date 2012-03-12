@@ -9,5 +9,6 @@ Arrays
    searching
    sorting
    lab-array1d
+   lab-searching-arrays-lists-maps
    twodim
  

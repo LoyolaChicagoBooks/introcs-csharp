@@ -6,7 +6,7 @@ We have explored several ways of storing a collection of the same type of data:
 - arrays: built-in syntax, unchanging size of the collection
 - List: generic class type, allows the size of the collection to grow
 
-Both approaches allow refernece to data elements using a 
+Both approaches allow reference to data elements using a 
 numerical index between square brackets, as in ``words[i]``.  
 The index provides an order for the elements,
 but there is no meaning to the index beyond the sequence order.
@@ -107,7 +107,7 @@ Note the method ``ContainsKey``::
 
 
 
-The method Remove takes a key as paramter.  Like a ``List`` and other
+The method Remove takes a key as parameter.  Like a ``List`` and other
 collections, a ``Dictionary`` has a ``Clear`` method::
 
     csharp> e2sp.Count;
