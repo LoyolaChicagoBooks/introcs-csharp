@@ -47,5 +47,9 @@
       <Project>{F6D64697-6E50-481C-A9F3-A941E7B48F2A}</Project>
       <Name>Sorting</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BinarySearching\BinarySearching.csproj">
+      <Project>{39207049-D768-4638-A518-5CB63C72514E}</Project>
+      <Name>BinarySearching</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

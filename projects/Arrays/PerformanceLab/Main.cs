@@ -34,7 +34,7 @@ namespace Arrays
          watch.Start ();
          // perform the m lookups
          for (int i=0; i < data.Length; i += m) {
-            var datum = Searching.IntArrayBinarySearch (data, data [i]);
+            var datum = BinarySearching.IntArrayBinarySearch (data, data [i]);
          }
          watch.Start ();
          watch.Stop ();
@@ -50,30 +50,22 @@ namespace Arrays
          watch.Reset ();       
          watch.Start ();
          for (int i=0; i < data.Length; i += m) {
-            var datum = dataAsList [data [i]];
+            var datum = dataAsList.IndexOf(data [i]);
          }
          watch.Stop ();
          return watch.Elapsed;
       }
 
-      public static TimeSpan ExperimentDictionarySearch (int n, int m, int seed)
+      public static TimeSpan ExperimentSetSearch (int n, int m, int seed)
       {
-         Stopwatch watch = new Stopwatch ();
-         Dictionary<int, int> dictionary = new Dictionary<int, int> ();
-         int[] data = new int[n];
-         Random r = new Random (seed);
-         for (int i=0; i < n; i++) {
-            int randomValue;
-            do {
-               randomValue = r.Next ();
-            } while (dictionary.ContainsKey(randomValue));
-            dictionary [randomValue] = randomValue;
-            data [i] = randomValue;
-         }         
+         var watch = new Stopwatch ();
+         var data = new int[n];
+         Sorting.IntArrayGenerate (data, seed);         
+         var myset = new HashSet<int> (data);
          watch.Reset ();       
          watch.Start ();
          for (int i=0; i < data.Length; i += m) {
-            var datum = dictionary [data [i]];
+            var datum = myset.Contains(data [i]);
          }
          watch.Stop ();
          return watch.Elapsed;
