@@ -176,45 +176,6 @@ namespace Arrays
       }
 
       // chunk-random-end
-
-      /** Return a line from the keyboard in response to prompt. */
-      public static string InputLine(string prompt)
-      {
-        Console.Write(prompt);
-        return Console.ReadLine();
-      }
-
-      /** True when s consists of only 1 or more digits. */
-      public static bool IsDigits(string s)
-      {
-         foreach( char ch in s) {
-            if (ch <'0' || ch > '9') {
-               return false;
-            }
-       }
-         return (s.Length > 0);
-      }
-
-      /** True if s is the string form of an int. */
-      public static bool IsIntString(string s)
-      {
-         if (s.StartsWith("-")) {
-            s = s.Substring(1);
-         }
-         return IsDigits(s);
-      }
-
-      /** Prompt the user to enter an integer until the response is legal.
-          Return the result as in int. */
-      public static int InputInt(string prompt)
-      {
-         string nStr = InputLine(prompt).Trim();
-         while (!IsIntString(nStr)) {
-            Console.WriteLine("Bad int format!  Try again.");
-            nStr = InputLine(prompt).Trim();
-         }
-         return int.Parse(nStr);
-      }
                                                  
       // chunk-driver-begin
       public static void Main (string[] args)
@@ -228,8 +189,9 @@ namespace Arrays
 
          // chunk-driverparameters-begin
          if (args.Length < 2) {
-            arraySize = InputInt("Please enter desired array size: ");
-            randomSeed = InputInt("Please enter an initial random seed value: ");
+            arraySize = Input.InputInt("Please enter desired array size: ");
+            randomSeed = Input.InputInt(
+               "Please enter an initial random seed value: ");
          } else {
             arraySize = int.Parse (args [0]);
             randomSeed = int.Parse (args [1]);

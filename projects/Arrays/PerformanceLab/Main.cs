@@ -84,50 +84,7 @@ namespace Arrays
          // Write the code to run each of the experiments for rep and
          // a value of n
        
-         // Generate a comparative table for all values fo n specified.
+         // Generate a comparative table for all values of n specified.
       }
-      
-      /** Return a line from the keyboard in response to prompt. */
-      public static string InputLine(string prompt)
-      {
-        Console.Write(prompt);
-        return Console.ReadLine();
-      }
-  
-      // Input functions follow...
-      
-      /** True when s consists of only 1 or more digits. */
-      public static bool IsDigits(string s)
-      {
-         foreach( char ch in s) {
-            if (ch <'0' || ch > '9') {
-               return false;
-            }
-       }
-         return (s.Length > 0);
-      }
-
-      /** True if s is the string form of an int. */
-      public static bool IsIntString(string s)
-      {
-         if (s.StartsWith("-")) {
-            s = s.Substring(1);
-         }
-         return IsDigits(s);
-      }
-
-      /** Prompt the user to enter an integer until the response is legal.
-          Return the result as in int. */
-      public static int InputInt(string prompt)
-      {
-         string nStr = InputLine(prompt).Trim();
-         while (!IsIntString(nStr)) {
-            Console.WriteLine("Bad int format!  Try again.");
-            nStr = InputLine(prompt).Trim();
-         }
-         return int.Parse(nStr);
-      }
-                                                 
-
    }
 }

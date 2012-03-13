@@ -38,4 +38,10 @@
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\UInput\UInput.csproj">
+      <Project>{B5F00793-C588-46EB-B494-49EE4830068A}</Project>
+      <Name>UInput</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
