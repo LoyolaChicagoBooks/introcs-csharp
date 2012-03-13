@@ -20,7 +20,7 @@ C - Parameterless Functions   Done
 
 D - Conditions
       x  read data in range
-         min, max, 
+      x  min, max, 
       x   sign  exercise
       x  preview: number game (one guess)
 
