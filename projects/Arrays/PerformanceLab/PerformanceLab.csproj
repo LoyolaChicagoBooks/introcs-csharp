@@ -52,7 +52,7 @@
       <Name>BinarySearching</Name>
     </ProjectReference>
     <ProjectReference Include="..\UInput\UInput.csproj">
-      <Project>{B5F00793-C588-46EB-B494-49EE4830068A}</Project>
+      <Project>{95D84B03-9648-44A4-B1AB-CF0946337FB6}</Project>
       <Name>UInput</Name>
     </ProjectReference>
   </ItemGroup>
