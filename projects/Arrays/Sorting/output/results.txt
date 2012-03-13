@@ -1,47 +1,35 @@
-bin/Debug/Sorting.exe 1000 34432
-Bubble Sort 00:00:00.00
-Selection Sort 00:00:00.00
-Insertion Sort 00:00:00.00
-Naive Shell Sort 00:00:00.00
-Better Shell Sort 00:00:00.00
-Quick Sort 00:00:00.00
-
-bin/Debug/Sorting.exe 10000 34432
-Bubble Sort 00:00:00.36
-Selection Sort 00:00:00.21
-Insertion Sort 00:00:00.15
-Naive Shell Sort 00:00:00.02
-Better Shell Sort 00:00:00.00
-Quick Sort 00:00:00.00
-
-bin/Debug/Sorting.exe 25000 34432
-Bubble Sort 00:00:02.30
-Selection Sort 00:00:01.30
-Insertion Sort 00:00:00.96
-Naive Shell Sort 00:00:00.13
-Better Shell Sort 00:00:00.00
-Quick Sort 00:00:00.00
-
-bin/Debug/Sorting.exe 50000 34432
-Bubble Sort 00:00:09.18
-Selection Sort 00:00:05.23
-Insertion Sort 00:00:03.97
-Naive Shell Sort 00:00:00.53
-Better Shell Sort 00:00:00.01
-Quick Sort 00:00:00.00
-
-bin/Debug/Sorting.exe 100000 34432
-Bubble Sort 00:00:36.75
-Selection Sort 00:00:21.12
-Insertion Sort 00:00:15.40
-Naive Shell Sort 00:00:02.12
-Better Shell Sort 00:00:00.03
-Quick Sort 00:00:00.01
-
-bin/Debug/Sorting.exe 200000 34432
-Bubble Sort 00:02:29.46
-Selection Sort 00:01:24.25
-Insertion Sort 00:01:01.14
-Naive Shell Sort 00:00:08.32
-Better Shell Sort 00:00:00.07
-Quick Sort 00:00:00.03
+bin/Debug$ mono Sorting.exe 1000 12
+Quick Sort: 0.000
+Naive Shell Sort: 0.000
+Better Shell Sort: 0.000
+Insertion Sort: 0.001
+Selection Sort: 0.002
+Bubble Sort: 0.003
+bin/Debug$ mono Sorting.exe 1000 55
+Quick Sort: 0.000
+Naive Shell Sort: 0.000
+Better Shell Sort: 0.000
+Insertion Sort: 0.001
+Selection Sort: 0.002
+Bubble Sort: 0.003
+bin/Debug$ mono Sorting.exe 10000 2
+Quick Sort: 0.001
+Naive Shell Sort: 0.019
+Better Shell Sort: 0.002
+Insertion Sort: 0.134
+Selection Sort: 0.174
+Bubble Sort: 0.321
+bin/Debug$ mono Sorting.exe 50000 2
+Quick Sort: 0.006
+Naive Shell Sort: 0.441
+Better Shell Sort: 0.015
+Insertion Sort: 3.239
+Selection Sort: 4.172
+Bubble Sort: 8.028
+bin/Debug$ mono Sorting.exe 100000 2
+Quick Sort: 0.014
+Naive Shell Sort: 1.794
+Better Shell Sort: 0.034
+Insertion Sort: 13.158
+Selection Sort: 16.736
+Bubble Sort: 31.334
