@@ -94,7 +94,8 @@ we also say that there is corresponding data *movement*. If you look at the
 to take place, which happens very quickly on most processors but still amounts
 to a significant cost. 
 
-There can be at most :math:`N \cdot \frac{N-1}{2}` inversions in the array. The maximum
+There can be at most :math:`N \cdot \frac{N-1}{2}` inversions in the 
+array of length :math:`N`. The maximum
 number of inversions occurs when the array is sorted in reverse order
 and has no equal elements.
 
@@ -151,8 +152,9 @@ we consider ``i=1`` and look at positions 2..9. And so on.
 
 We won't do the full algorithmic analysis here. Selection Sort is interesting because
 it does most of its work through *comparisons*, which is always the same regardless
-of how the data are ordered, :math:`\frac{1}{2} O(n^2 - n)`. The 
-number of *exchanges* is O(n). The comparisons are a non-trivial cost, however, and do show
+of how the data are ordered, :math:`N \cdot \frac{N-1}{2}`, which is 
+:math:`O(N^2)` The 
+number of *exchanges* is O(N ). The comparisons are a non-trivial cost, however, and do show
 in our own performance experiments with randomly-generated data. 
 
 
@@ -253,11 +255,15 @@ Donald Knuth has suggested a couple of methods for computing the intervals:
 Here we are using notation for the *floor* function 
 :math:`\lfloor x \rfloor` means the largest integer :math:`\le x`.
 
-This results in a sequence 1, 4, 13, 40, 121. You stop computing values in the 
+This results in a sequence 1, 4, 13, 40, 121.... You stop computing values in the 
 sequence when :math:`t = log_3 n - 1`. (So for n=50,000, you should have about 9-10
 intervals.)
 
-He also suggests:
+For completeness, we note that :math:`log_3 n` must be sufficiently large (and > 2)
+for this method to work. Our code ensures this by taking the *maximum* of
+:math:`log_3 n` and 1.
+
+Knuth also suggests:
 
 .. math::
 
@@ -269,12 +275,8 @@ He also suggests:
 
 This results in a sequence 1, 3, 7, 15, 31....
 
-For completeness, we note that :math:`log_3 n` must be sufficiently large (and > 2)
-for this method to work. Our code ensures this by taking the *maximum* of
-:math:`log_3 n` and 1.
-
 Here is the improvement to our naive method that dynamically calculates
-the intervals based on the above suggestions by Knuth:
+the intervals based on the first suggestion of Knuth:
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-shellsort-better-begin
@@ -303,8 +305,8 @@ elsewhere in our notes/book.
 
 Quicksort is a rather interesting case. It is often perceived to be one of the
 best sorting algorithms but, in practice, has a worst case performance also on the
-order :math:`O(n^2)`. When the data are randomly sorted (as in our experiments) 
-it does better at :math:`O(n \log n)`.
+order :math:`O(N ^2)`. When the data are randomly sorted (as in our experiments) 
+it does better at :math:`O(N  \log N)`.
 
 .. literalinclude:: ../projects/Arrays/Sorting/Main.cs
    :start-after: chunk-quicksort-begin
@@ -322,7 +324,7 @@ Random Data Generation
 ------------------------
 
 Now it is time to talk about how we are going to check the performance in 
-a real-world situation. We're going to start by modeling the situationw here
+a real-world situation. We're going to start by modeling the situation here
 the data are in random order.
 
 The following code generates a random array:
@@ -458,7 +460,7 @@ Bitbucket, you can find this code in the ``projects/Arrays/Sorting``
 folder (and open the solution ``Sorting.sln`` in MonoDevelop or Visual
 Studio). 
 
-You can also view the full source code in our [SortingFolder]_ folder.
+You can also view the full source code in our [SortingFolder]_.
 
 Running the Code
 ----------------------
@@ -492,13 +494,10 @@ as follows:
 - The Quicksort is generally fastest.  It is by far the
   most commonly used sorting algorithm. Yet there are signs that Shell sort
   is making a comeback in embedded systems, because it concise to code
-  and is still quite fast.  Hybrid sorts are a fancier elaboration.  See
+  and is still quite fast.  See
   [WikipediaShellSort]_, where it is mentioned that
-  the [uClibc]_ library makes use of Shell sort in its ``qsort()`` implementation.
-
-..  george, shell sort is still of higher order.  I do not see what all this is about
-    You also mentioned the quicksort stack, but that is way less than just the extra space
-    to code it.
+  the [uClibc]_ library makes use of Shell sort in its ``qsort()`` implementation,
+  rather than implementing the library sort with the more common quicksort.
 
 .. [WirthADP] Niklaus Wirth, Algorithms + Data Structures = Programs, Prentice Hall, 1976.
 
