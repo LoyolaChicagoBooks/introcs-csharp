@@ -38,7 +38,6 @@ namespace Arrays
          for (int k=0, i=0; k < rep; k++, i=(i+m)%n) {
             BinarySearching.IntArrayBinarySearch (data, data [i]);
          }
-         watch.Start ();
          watch.Stop ();
          return watch.ElapsedMilliseconds;
       }
