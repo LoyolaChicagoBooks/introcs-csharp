@@ -1,7 +1,3 @@
-.. todo::
-   This is completely in draft mode now and is at best in placeholder status.
-   No revisions please.
-
 .. _binarysearching:
 
 Array Example: Binary Searching 
@@ -10,18 +6,19 @@ Array Example: Binary Searching
 Binary search is an improvement over linear searching that works only
 if the data in the array are sorted beforehand.
 
-Suppose we have the following array data::
+Suppose we have the following array data, showing indices underneath::
 
-   10   20   30   40   50   60   70   80   90   100  115  125  135  145  155  178  198  
+   10   20   30   40   50   60   70   80   90   100  115  125  135  145  155  178  198
+    0    1    2    3    4    5    6    7    8     9   10   11   12   13   14   15   16
 
 If we are looking for a number, say, 115, here is a visual on how we might go about it::
 
    10   20   30   40   50   60   70   80   90   100  115  125  135  146  155  178  198  
-   min=0 max=16 mid=8
+   min=0 max=16 mid=8: 90 < 115
                                                 100  115  125  135  146  155  178  198  
-   min=9 max=16 mid=12
+   min=9 max=16 mid=12: 135 > 115
                                                 100  115  125                           
-   min=9 max=11 mid=10
+   min=9 max=11 mid=10: found 115
 
 
 Binary search works by keeping track of the midpoint (mid) and the minimum (min) and 

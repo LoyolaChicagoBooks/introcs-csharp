@@ -106,6 +106,9 @@ namespace Arrays
     
       static int[] GenerateIntervals (int n)
       {
+         if (n < 2) {  // no sorting will be needed
+            return new int[0];
+         }
          int t = Math.Max (1, (int)Math.Log (n, 3) - 1);
          int[] intervals = new int[t];       
          intervals [0] = 1;
