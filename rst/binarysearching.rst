@@ -1,6 +1,6 @@
 .. _binarysearching:
 
-Array Example: Binary Searching 
+Binary Searching 
 ===================================
 
 Binary search is an improvement over linear searching that works only

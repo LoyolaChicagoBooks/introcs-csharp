@@ -6,7 +6,7 @@
 
 .. _sorting:
 
-Array Example: Sorting Algorithms
+Sorting Algorithms
 ===================================
 
 Sorting algorithms represent foundational knowledge that every computer scientist and 
