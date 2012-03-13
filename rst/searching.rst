@@ -4,7 +4,7 @@
 
 .. _searching:
 
-Array Example: Linear Searching 
+Linear Searching 
 ===================================
 
 In this section, we'll take a look at how to search for a value in an

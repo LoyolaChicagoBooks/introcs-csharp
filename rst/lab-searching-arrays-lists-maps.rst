@@ -1,16 +1,12 @@
 .. _lab-search-performance:
 
 
-Performance
-===============
+Lab: Performance
+=================
 
-In this lab, we're going to learn a bit about performance. In our lecture on 
-Sorting Algorithms (see :ref:`sorting`), we have shown how to do basic 
-benchmarking to compare the various approaches. The art of benchmarking is
-something that is easy to learn but takes a lifetime to master (to borrow
-a phrase from the famous Othello board game).
-
-In this lecture, we took advantage of a few ideas:
+In the sorting notes (see :ref:`sorting`) we took advantage of a few ideas
+to show how to do basic 
+benchmarking to compare the various approaches.
 
 - using randomly-generated data
 
@@ -21,9 +17,14 @@ In this lecture, we took advantage of a few ideas:
 - using a timer with sufficiently high resolution (the ``Stopwatch`` gives 
   us measurements in milliseconds).
 
+In this lab, you get your chance  to learn a bit more about performance
+by comparing *searches*.
+The art of benchmarking is
+something that is easy to learn but takes a lifetime to master (to borrow
+a phrase from the famous Othello board game).
 
 Most of the algorithms we cover in introductory courses tend to be *polynomial*
-in nature. That is, the time can be expressed as a polynomial function of the size
+in nature. That is, the execution time can be expressed as a polynomial function of the size
 of the data size :math:`n`. Examples
 include but are not limited to:
 
@@ -57,11 +58,11 @@ The Experiments
 We're going to measure the performance of data structures we have been learning
 about in lectures. For this lab, we'll focus on:
 
-- integer arrays using linear and binary searching
+- Integer arrays using :ref:`searching` and :ref:`binarysearching`
 
-- :ref:`sets` of integers
+- :ref:`lists` of integers with linear searching
 
-- Lists of integer with linear searching
+- :ref:`sets` of integers; checking if an item is contained in the set
 
 In the interest of fairness, we are only going to look at the time it takes
 to perform the various search operations. We're not going to count the time 
