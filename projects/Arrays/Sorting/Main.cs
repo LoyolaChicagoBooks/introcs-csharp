@@ -168,7 +168,6 @@ namespace Arrays
 
 
       // chunk-random-begin
-
       public static void IntArrayGenerate (int[] data, int randomSeed)
       {
          Random r = new Random (randomSeed);
@@ -178,16 +177,45 @@ namespace Arrays
 
       // chunk-random-end
 
-      // chunk-printtime-begin
-      public static void PrintElapsedTime (string description, TimeSpan ts)
+      /** Return a line from the keyboard in response to prompt. */
+      public static string InputLine(string prompt)
       {
-         string elapsedTime = String.Format ("{0:00}:{1:00}:{2:00}.{3:00}",
-            ts.Hours, ts.Minutes, ts.Seconds,
-            ts.Milliseconds / 10);
-         Console.WriteLine ("{0} {1}", description, elapsedTime);
+        Console.Write(prompt);
+        return Console.ReadLine();
       }
-      // chunk-printtime-end
 
+      /** True when s consists of only 1 or more digits. */
+      public static bool IsDigits(string s)
+      {
+         foreach( char ch in s) {
+            if (ch <'0' || ch > '9') {
+               return false;
+            }
+       }
+         return (s.Length > 0);
+      }
+
+      /** True if s is the string form of an int. */
+      public static bool IsIntString(string s)
+      {
+         if (s.StartsWith("-")) {
+            s = s.Substring(1);
+         }
+         return IsDigits(s);
+      }
+
+      /** Prompt the user to enter an integer until the response is legal.
+          Return the result as in int. */
+      public static int InputInt(string prompt)
+      {
+         string nStr = InputLine(prompt).Trim();
+         while (!IsIntString(nStr)) {
+            Console.WriteLine("Bad int format!  Try again.");
+            nStr = InputLine(prompt).Trim();
+         }
+         return int.Parse(nStr);
+      }
+                                                 
       // chunk-driver-begin
       public static void Main (string[] args)
       {
@@ -195,15 +223,13 @@ namespace Arrays
          int arraySize;
          int randomSeed;
          Stopwatch watch = new Stopwatch ();
-         TimeSpan elapsedTime;
+         double elapsedTime;  // time in second, accurate to about millseconds
          // chunk-drivervars-end
 
          // chunk-driverparameters-begin
          if (args.Length < 2) {
-            Console.WriteLine ("Please enter desired array size: ");
-            arraySize = int.Parse (Console.ReadLine ());
-            Console.WriteLine ("Please enter an initial random seed value: ");
-            randomSeed = int.Parse (Console.ReadLine ());
+            arraySize = InputInt("Please enter desired array size: ");
+            randomSeed = InputInt("Please enter an initial random seed value: ");
          } else {
             arraySize = int.Parse (args [0]);
             randomSeed = int.Parse (args [1]);
@@ -212,57 +238,57 @@ namespace Arrays
 
          int[] data = new int[arraySize];
 
-         // chunk-driverapparatus-begin
          IntArrayGenerate (data, randomSeed);
          watch.Reset ();
          watch.Start ();
-         IntArrayBubbleSort (data);  // the other experiments call a different method
+         IntArrayQuickSort (data);
          watch.Stop ();
-         elapsedTime = watch.Elapsed;
-         PrintElapsedTime ("Bubble Sort", elapsedTime);
-         // chunk-driverapparatus-end
-
-         IntArrayGenerate (data, randomSeed);
-         watch.Reset ();
-         watch.Start ();
-         IntArraySelectionSort (data);
-         watch.Stop ();
-         elapsedTime = watch.Elapsed;
-         PrintElapsedTime ("Selection Sort", elapsedTime);
-         
-         IntArrayGenerate (data, randomSeed);
-         watch.Reset ();
-         watch.Start ();
-         IntArrayInsertionSort (data);
-         watch.Stop ();
-         elapsedTime = watch.Elapsed;
-         PrintElapsedTime ("Insertion Sort", elapsedTime);
+         elapsedTime = watch.ElapsedMilliseconds/1000.0;
+         Console.WriteLine ("Quick Sort: {0:F3}", elapsedTime);
 
          IntArrayGenerate (data, randomSeed);
          watch.Reset ();
          watch.Start ();
          IntArrayShellSortNaive (data);
          watch.Stop ();
-         elapsedTime = watch.Elapsed;
-         PrintElapsedTime ("Naive Shell Sort", elapsedTime);
+         elapsedTime = watch.ElapsedMilliseconds/1000.0;
+         Console.WriteLine ("Naive Shell Sort: {0:F3}", elapsedTime);
 
          IntArrayGenerate (data, randomSeed);
          watch.Reset ();
          watch.Start ();
          IntArrayShellSortBetter (data);
          watch.Stop ();
-         elapsedTime = watch.Elapsed;
-         PrintElapsedTime ("Better Shell Sort", elapsedTime);
+         elapsedTime = watch.ElapsedMilliseconds/1000.0;
+         Console.WriteLine ("Better Shell Sort: {0:F3}", elapsedTime);
 
          IntArrayGenerate (data, randomSeed);
          watch.Reset ();
          watch.Start ();
-         IntArrayQuickSort (data);
+         IntArrayInsertionSort (data);
          watch.Stop ();
-         elapsedTime = watch.Elapsed;
-         PrintElapsedTime ("Quick Sort", elapsedTime);
+         elapsedTime = watch.ElapsedMilliseconds/1000.0;
+         Console.WriteLine ("Insertion Sort: {0:F3}", elapsedTime);
 
-      }
+         IntArrayGenerate (data, randomSeed);
+         watch.Reset ();
+         watch.Start ();
+         IntArraySelectionSort (data);
+         watch.Stop ();
+         elapsedTime = watch.ElapsedMilliseconds/1000.0;
+         Console.WriteLine ("Selection Sort: {0:F3}", elapsedTime);
+         
+         // chunk-driverapparatus-begin
+         IntArrayGenerate (data, randomSeed);
+         watch.Reset ();
+         watch.Start ();
+         IntArrayBubbleSort (data);  // the other experiments call a different method
+         watch.Stop ();
+         elapsedTime = watch.ElapsedMilliseconds/1000.0;
+         Console.WriteLine ("Bubble Sort: {0:F3}", elapsedTime);
+         // chunk-driverapparatus-end
+
+       }
       // chunk-driver-end
    }
 }

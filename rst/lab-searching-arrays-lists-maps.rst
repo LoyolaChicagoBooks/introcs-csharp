@@ -19,11 +19,12 @@ In this lecture, we took advantage of a few ideas:
 - making sure that we try a range of sizes to observe the effects of scaling
 
 - using a timer with sufficiently high resolution (the ``Stopwatch`` gives 
-  us measurements via a ``TimeSpan`` instance.
+  us measurements in milliseconds).
 
 
 Most of the algorithms we cover in introductory courses tend to be *polynomial*
-in nature. That is, the time can be expressed as a polynomial function. Examples
+in nature. That is, the time can be expressed as a polynomial function of the size
+of the data size :math:`n`. Examples
 include but are not limited to:
 
 - :math:`O(n)` is linear time; often characterized by a single loop
@@ -43,9 +44,12 @@ In this lab, we're going to look at a few different data structures and methods
 that perform searches on them and do *empirical* analysis to get an idea of how
 well each combination works. Contrasted with other labs where you had to write 
 a lot of code, we're going to give you some code to do all of the needed work 
-but ask you to do the actual analysis and produce a basic chart (using Excel or
-other spreadsheet/analysis software like OpenOffice, Gnuplot, etc.) You can use
-anything you like to make your charts.
+but ask you to do the actual analysis and produce a basic table.
+
+.. george can't wait.  I do not know what tools you are expecting.
+   chart (using Excel or
+   other spreadsheet/analysis software like OpenOffice, Gnuplot, etc.) You can use
+   anything you like to make your charts.
 
 The Experiments
 -------------------
@@ -55,7 +59,7 @@ about in lectures. For this lab, we'll focus on:
 
 - integer arrays using linear and binary searching
 
-- Dictionaries with integer keys using lookups by integer key
+- :ref:`sets` of integers
 
 - Lists of integer with linear searching
 
@@ -70,23 +74,23 @@ focus on search.
 The experimental apparatus that we are constructing will do the following
 for each of the cases:
 
-- create the data structure (e.g. new array, new list, new dictionary)
+- create the data structure (e.g. new array, new list, new set)
 
 - use a random seed ``seed``, initialize a random generator that will generate
-  ``n`` *distinct* values. 
+  ``n`` values. 
 
-- insert the random values into the data structure until the structure contains
-  ``n`` values. For the case of dictionaries, which eliminate duplicates, it is
-  entirely possible you will have to generate more than ``n`` values until the
-  structure is filled with ``n`` actual values.
+- insert the random values into the data structure . 
+  For the case of sets, which eliminate duplicates, it is
+  entirely possible you will end up with a tiny fraction of a percent
+  fewer than ``n`` values.
 
 - to measure the performance of any given search method, we need to perform a 
   significant number of lookups (based on numbers in the random sequence) to
   ensure that we get an accurate idea of the *average* lookup time in practice. 
-  We'll call this parameter, ``m``, which will pick one of every ``m`` values
-  in the random sequence to test whether it's in the data structure. (We're only
-  going to look up values that we know are in the data structure.)
-
+  We'll call this parameter, ``rep``.  We will spread out the values looked for 
+  by checking data elements that have indices at a regular interval throughout the array.
+  The separation is ``m = n/rep`` when ``rep < n``. We wrap around if ``rep > n``.
+  
 - We'll start a Stopwatch just before entering the loop to perform the lookups. 
 
 
@@ -99,17 +103,19 @@ solution. You can find this in ``projects/Arrays``. You need this entire folder.
 
 To make your life easier, we have put together a project within this solution,
 ``PerformanceLab`` that contains the code for all of the experiments you need
-to run. (That's right, we're giving you the code, but you're going to write
+to run. (That's right, we're giving you the code for the experiments, 
+but you're going to write
 some code to run the various experiments and then run for varying sizes of ``n``.)
 
 
-.. todo::
-   George is still working on this part. I will put some text in to explain each
-   of the experiments. It should be quick.
-
-.. todo::
-   Need to give some explanation of what they need to produce at the end. I would
-   like to see them produce nice looking charts for each of the experiments.
+..  george not sure what you still want to di with this
+    .. todo::
+       George is still working on this part. I will put some text in to explain each
+       of the experiments. It should be quick.
+    
+    .. todo::
+       Need to give some explanation of what they need to produce at the end. I would
+       like to see them produce nice looking charts for each of the experiments.
 
 
 Here is the code for the first experiment, to test the performance of linear
@@ -136,22 +142,47 @@ less detail, except to highlight the differences:
   in the habit of doing it, because we sometimes reuse the same stopwatch and want
   to make sure it is completely zeroed out. A call to ``Reset()`` ensures it is zero.
 
-- Line 7 actually starts the stopwatch. WE are starting here as opposed to before line
+- Line 7 actually starts the stopwatch. We are starting here as opposed to before line
   3, because the random data generation has nothing to do with the actual searching of
   the array data structure.
 
-- Lines 8 through 10 are searching every ``m`` values for an item already known to
+- Line 8 converts the number of repetitions into the increment in index values for each
+  time.
+  
+- Lines 10 through 12 are searching ``rep`` times for an item already known to
   be in the array. 
 
-- Line 12 stops the stopwatch.
+- Line 13 stops the stopwatch.
 
-- Line 13 returns the elapsed time between the ``Start()`` and ``Stop()`` method calls,
+- Line 14 returns the elapsed time in milliseconds
+  between the ``Start()`` and ``Stop()`` method calls,
   which reflects the actual time of the experiment.
 
+Each of the other experiments is constructed similarly. For linear search and binary search
+we use the methods created earlier.  For the lists and the set we use the built-in ``Contains`` 
+method to search.  The list and set are directly initialized in their constructors from the
+array data.
 
-Each of the other experiments is constructed similarly. We will explain each of these,
-focusing on the obvious differences.
+You need to fill in the Main method:
 
-.. todo::
-   George to finish this Sunday, I hope.
+#. Write the code to parse command line args for the parameters rep and *any number* 
+   of values for n.  For instance:
+   
+      mono PerformanceLab.exe 50 1000 10000 100000
 
+   would generate the table shown below for 50 repetitions for each of the values of n, 1000,
+   10000, and 100000.
+   
+#. Write the code to run each of the experiments for ``rep`` and a given value of ``n``.
+
+#. Iterate through the values of ``n`` and print a table,
+   something like the following, with the number of seconds calculated.
+   Experiment and adjust the repetitions to get perceptable values.  
+   Our choice of 50 may not be appropriate with these ``n`` values.  ::
+
+           n   rep   linear    binary    list     set
+        1000    50   ??.???    ??.???  ??.???  ??.???
+       10000    50   ??.???    ??.???  ??.???  ??.???
+      100000    50   ??.???    ??.???  ??.???  ??.???
+  
+  The table would be longer if more values of n were entered on the command line.

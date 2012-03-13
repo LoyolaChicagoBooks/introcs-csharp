@@ -438,19 +438,8 @@ of the sorting algorithms we want to benchmark:
 
 #. Print the performance results.
 
-Speaking of printing the performance results, here is the method that does that:
-
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
-   :start-after: chunk-printtime-begin
-   :end-before: chunk-printtime-end
-   :linenos:
-
-When you get ``watch.Elapsed``, this gives you a ``TimeSpan`` object that can be
-used to see how much time has elapsed in the desired units of measurement.
-
-We're going to forego a complete discussion of all of the details of ``TimeSpan`` for
-now but you can observe for yourself that this method, indeed, prints the elapsed time
-in terms of hours:minutes:seconds:hundredths.  
+When you get ``watch.ElapsedMilliseconds``, this gives you an integer (long) number of
+milliseconds (thousandths of a second).
 
 Getting the Code
 ---------------------
