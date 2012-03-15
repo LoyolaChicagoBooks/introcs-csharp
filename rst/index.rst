@@ -30,7 +30,7 @@ Introductory Programming in C#
    interfaces
    testingclasses
    changelog
-
+   todolist
 
 Index and search
 ================
@@ -41,5 +41,4 @@ Index and search
 TODO's
 =======
 
-.. todolist::
 
