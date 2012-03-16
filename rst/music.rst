@@ -2,7 +2,7 @@
    This is completely in draft mode now and is at best in placeholder status.
    No revisions please.
 
-Array Example: Music
+Musical Scales and Arrays
 ===========================
 
 Music in the western classical tradition uses a twelve-tone *chromatic* 
