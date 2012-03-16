@@ -9,22 +9,31 @@ namespace Scales
          "F#", "G", "G#", "A", "A#", "B" };
       // chunk-tones-end
 
+      // chunk-findtone-begin
+      static int FindTone(string key) {
+         for (int i=0; i < tones.GetLength(0); i++) {
+            if (key == tones[i])
+               return i;
+         }
+         return -1;
+      }
+      // chunk-findtone-end
+
+
       // chunk-compute-begin
       static void ComputeScale(string key, int[] steps, int[] scale) {
-         int sum = 0;
-         int start;
-         for (start=0; start < scale.GetLength(0); start++) {
-            if (key == tones[start])
-               break;
-         }
+         int tonePosition = 0;
+         int startTone;
 
-         if (steps.GetLength(0) != scale.GetLength(0))
+         startTone = FindTone(key);
+         if (startTone < 0)
             return;
-
-         sum = start;
+         if (steps.GetLength(0)+1 != scale.GetLength(0))
+            return;
+         tonePosition = startTone;
          for (int i=0; i < steps.GetLength(0); i++) {
-            scale[i] = sum % tones.GetLength(0);
-            sum += steps[i];
+            scale[i] = tonePosition % tones.GetLength(0);
+            tonePosition += steps[i];
          }
       }
       // chunk-compute-end
@@ -43,8 +52,8 @@ namespace Scales
       public static void Main (string[] args)
       {
          int[] scale = new int[8];
-         int[] major = { 2, 2, 1, 2, 2, 2, 1, 0 };
-         int[] minor = { 2, 1, 2, 2, 1, 2, 2, 0 };
+         int[] major = { 2, 2, 1, 2, 2, 2, 1 };
+         int[] minor = { 2, 1, 2, 2, 1, 2, 2 };
 
          string name = args[0];
          Console.WriteLine("{0} major scale", name);
