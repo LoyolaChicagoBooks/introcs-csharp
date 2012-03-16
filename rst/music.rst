@@ -43,7 +43,7 @@ with this array::
    B + 1 = C
 
 So given any starting note, the major scale can be *generated* from the
-intervals (represented as an array)::
+intervals (represented as an array).
 
 So, for example, if you want the F-major scale, you can get it by starting
 at F and applying the steps of 2, 2, 1, 2, 2, 2, 1::

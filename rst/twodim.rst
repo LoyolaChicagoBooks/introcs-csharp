@@ -1,5 +1,6 @@
+.. _multi-dimensional-arrays:
 
-Introduction to Multi-dimensional Arrays
+Multi-dimensional Arrays
 ========================================
 
 .. index::
@@ -8,8 +9,8 @@ Introduction to Multi-dimensional Arrays
 Rectangular Arrays (Two Dimensional)
 --------------------------------------
 
-You should be familiar with one dimensional  arrays. The data in arrays
-may be any type. While a one dimensional  array
+You should be familiar with one dimensional arrays. The data in arrays
+may be any type. While a one dimensional array
 works for a sequence of data, 
 we need something more for a two dimensional table,
 where data values vary over both row and column.  
@@ -38,7 +39,7 @@ and to create a new array with default values:
 
     new **type** ``[`` *intExpression1*\ ``,`` *intExpression2* ``]`` 
     
-where the expressions evaluate to positive integers for the dimensions.
+where the expressions evaluate to integers for the dimensions.
 
 To assign the 8 in the table above, consider that it is in the second
 row in normal counting, but we start array indices at 0, so there are
@@ -60,7 +61,7 @@ but we will *stick with* the original ``[row, column]`` model.
 
 Data indexed by more than two integer indices can be stored in a higher
 dimension array, with more indices between the square braces.  We
-will only consider two dimensional  arrays in the examples here.
+will only consider two dimensional arrays in the examples here.
 
 A shorthand for initializing all the data in the table, 
 analogous to initializing one dimensional arrays is:: 
@@ -102,14 +103,14 @@ The following csharp sequence illustrates the syntax needed::
     2
     4
     7
-    15
+    55
     3
     1
     8
     10
     6
     0
-    9
+    49
     12
 
 Note:
@@ -210,6 +211,7 @@ Hint: Create an array of widths and an array of format strings.
 
 .. index::
    single: array; of arrays 
+   single: array; two-dimensional, ragged 
 
 Advanced topic: Array of Arrays
 ---------------------------------

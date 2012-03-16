@@ -168,7 +168,7 @@ A simple example would be reading in lines from the user interactively::
        Console.WriteLine("An empty line terminates input.");
        string line = Console.ReadLine();
        while (line.Length > 0) {
-          lines.add(line);
+          lines.Add(line);
           line = Console.ReadLine();
        }
        return lines;
