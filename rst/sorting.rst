@@ -376,8 +376,8 @@ would expect if you've ever used a stopwatch (the kind found in sports):
 
 - Stop: Stops the stopwatch.
 
-- Elapsed: Not really a method but a property (like a variable). We'll use this to
-  get the total time that has elapsed between pairs of Start/Stop events.
+- ElapsedMilliseconds: Not really a method but a property (like a variable). We'll use this to
+  get the total time that has elapsed between pairs of Start/Stop events in milliseconds.
 
 
 So let's take a look at how we compare the sorting algorithms by looking at the ``Main()``
