@@ -24,7 +24,7 @@ straightforward.
 
 The well-known C-major scale, which is often sung as::
 
-   Do Re Me Fa So la Ti Do
+   Do Re Mi Fa So La Ti Do
 
 has the following progression::
 
