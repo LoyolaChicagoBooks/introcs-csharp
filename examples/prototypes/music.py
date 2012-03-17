@@ -133,9 +133,14 @@ measure_number = 0
 for note_token in yankee_tokens:
    while s.measure(measure_number).isFull():
       measure_number = measure_number + 1
-   note_text = note_token + ":1:0"
-   tokens = note_text.split(":")
-   (tone_name, duration, octave) = tokens[:3]
+   tokens = note_token.split(":")
+   if len(tokens) == 3:
+      (tone_name, duration, octave) = tokens
+   elif len(tokens) == 2:
+      (tone_name, duration, octave) = tokens + ["0"]
+   else:
+      (tone_name, duration, octave) = tokens + ["1", "0"]
+
    duration_fraction = Fraction(duration + "/4")
    print "Adding %s %s %s to measure %s" % (tone_name, duration_fraction, octave, measure_number)
    s.measure(measure_number).addNote(tone_name, duration_fraction, int(octave)) 
