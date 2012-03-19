@@ -63,5 +63,52 @@ namespace Music
          }
       }
    }
+
+   [TestFixture()]
+   public class ScoreTests
+   {
+      [Test()]
+      public void TestScoreBasic() {
+         Scale cscale = new Scale("C", Scale.ScaleTypes.Major);
+         Score score = new Score(new Rational(4, 4), cscale, new string[] { "Piano", "S", "A", "T", "B" });
+         score.AddMeasures(3);
+         int[] yankee = { 0, 0, 2, 4, 0, 4, 2 };
+         Rational[] durations = { new Rational(1, 4), new Rational(1, 4),
+            new Rational(1, 4), new Rational(1, 4), new Rational(1, 4),
+            new Rational(1, 4), new Rational(2, 4) };
+
+         int item = 0;
+         for (int measure=0; measure < 3; measure++) {
+            bool ok = false;
+            do {
+               if (item < yankee.Length) {
+                  ok = score.AddNote("Piano", measure, new Note(yankee[item], 0, durations[item]));
+                  item++;
+               } else
+                  break;
+            } while(ok);
+         }
+
+         // There should only be 2 of 3 measures full
+         // measure one contains (C, 1/4) (C, 1/4), (D, 1/4), (E, 1/4)
+
+         Measure m0 = score.GetMeasure("Piano", 0);
+         Note n0 = m0.GetNote(0);
+         Note n1 = m0.GetNote(1);
+         Note n2 = m0.GetNote(2);
+         Note n3 = m0.GetNote(3);
+
+         Assert.IsTrue(n0.GetTone() == yankee[0]);
+         Assert.IsTrue(n1.GetTone() == yankee[1]);
+         Assert.IsTrue(n2.GetTone() == yankee[2]);
+         Assert.IsTrue(n3.GetTone() == yankee[3]);
+
+         // measure two contains (C, 1/4) (E, 1/4), (D, 1/2)
+         // measure three is empty
+
+
+
+      }
+   }
 }
 

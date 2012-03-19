@@ -13,6 +13,14 @@ namespace Music
          return duration;
       }
 
+      public int GetTone() {
+         return tone;
+      }
+
+      public int GetOctave() {
+         return octave;
+      }
+
       public Note(int tone, int octave, Rational duration) {
          this.tone = tone;
          this.octave = octave;
@@ -48,6 +56,14 @@ namespace Music
             voice.Add(note);
             return true;
          }
+      }
+
+      public Note GetNote(int position) {
+         Note noNote = new Note(0, 0, new Rational(0, 0)); /* a note with 0 tone, octave, duration */
+         if (position <  voice.Count)
+            return voice[position];
+         else
+            return noNote;
       }
    }
 
@@ -122,11 +138,62 @@ namespace Music
 
    }
 
+   // We are starting with a fairly simple score structure that assumes the time/key signature never change.
+   // Again we are taking an agile approach but will extend this later.
+
+   // All staff labels (e.g. Piano, S, A, T, B) must be specified up front. Keep in mind that Piano must
+   // be specified as PianoLine1 and PianoLine2 if you want both treble and bass clefs.
+
+
    public class Score {
       private Rational timeSignature;
       private Scale keySignature;
 
+      private Dictionary<string, List<Measure>> staff;
 
+      public Score(Rational timeSignature, Scale keySignature, string[] staffLabels) {
+         this.timeSignature = timeSignature;
+         this.keySignature = keySignature;
+         staff = new Dictionary<string, List<Measure>>();
+         foreach (string label in staffLabels) {
+            staff[label] = new List<Measure>();
+         }
+      }
+
+      // must add measure each time you want a new one. You can allocate all desired measures up front.
+      // You can also add just one at a time. This method is completely re-entrant and simply appends "howMany"
+      // measure objects for each staff line.
+
+      public void AddMeasures(int howMany) {
+         for (int i=0; i < howMany; i++) {
+            foreach (var pair in staff) {
+               List<Measure> measures = pair.Value;
+               measures.Add(new Measure(timeSignature));
+            }
+         }
+      }
+
+      public bool AddNote(string label, int measureNumber, Note note) {
+         // find the staff label of interest
+         if (staff.ContainsKey(label)) {
+            List<Measure> measures = staff[label];
+            if (measureNumber < measures.Count) {
+               Measure m = measures[measureNumber];
+               return m.AddNote(note);
+            }
+         }
+         return false;
+      }
+
+      public Measure GetMeasure(string label, int measureNumber) {
+         if (staff.ContainsKey(label)) {
+            List<Measure> measures = staff[label];
+            if (measureNumber < measures.Count)
+               return measures[measureNumber];
+         }
+         return null;
+
+      }
    }
 
    class MainClass
