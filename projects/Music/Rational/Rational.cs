@@ -38,7 +38,17 @@ namespace Music
          denom = denominator;
          normalize();
       }
-   
+
+      public int GetNumerator()
+      {
+         return num;
+      }
+
+      public int GetDenominator()
+      {
+         return denom;
+      }
+
       /**
        * Create a fraction for an integer value.
        *  num  numerator
