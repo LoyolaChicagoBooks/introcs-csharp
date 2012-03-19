@@ -79,7 +79,7 @@ namespace CSProject
          do {
             line = reader.ReadLine();  // drops newline
          } while (line.Trim().Length == 0);
-         while (line != null && line.Trim().Length > 0) {
+         while (!string.IsNullOrEmpty(line)) {
             para += line + "\n";  // add back newline
             line = reader.ReadLine();
          }
