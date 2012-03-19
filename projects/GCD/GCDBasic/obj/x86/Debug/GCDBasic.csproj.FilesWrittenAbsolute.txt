@@ -1,0 +1,4 @@
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDBasic/bin/Debug/GCDBasic.exe.mdb
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDBasic/bin/Debug/GCDBasic.exe
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDBasic/obj/x86/Debug/GCDBasic.exe
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDBasic/obj/x86/Debug/GCDBasic.exe.mdb

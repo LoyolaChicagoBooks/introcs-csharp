@@ -1,0 +1,8 @@
+#! /bin/bash
+
+# assume start in devel dir
+cd ../rst
+make html
+make latexpdf
+make epub
+rsync -avz $(pwd)/../build/ gkt@thiruvathukal.com:/home/gkt/sites/introcs/

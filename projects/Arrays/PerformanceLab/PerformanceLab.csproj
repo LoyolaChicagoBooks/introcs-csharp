@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FB35E7D-A4CE-4C5C-A429-500CB32783A6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PerformanceLab</RootNamespace>
+    <AssemblyName>PerformanceLab</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Searching\Searching.csproj">
+      <Project>{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}</Project>
+      <Name>Searching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sorting\Sorting.csproj">
+      <Project>{F6D64697-6E50-481C-A9F3-A941E7B48F2A}</Project>
+      <Name>Sorting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BinarySearching\BinarySearching.csproj">
+      <Project>{39207049-D768-4638-A518-5CB63C72514E}</Project>
+      <Name>BinarySearching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UInput\UInput.csproj">
+      <Project>{95D84B03-9648-44A4-B1AB-CF0946337FB6}</Project>
+      <Name>UInput</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
