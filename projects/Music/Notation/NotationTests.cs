@@ -83,7 +83,10 @@ namespace Music
             do {
                if (item < yankee.Length) {
                   ok = score.AddNote("Piano", measure, new Note(yankee[item], 0, durations[item]));
-                  item++;
+                  if (ok) {
+                     Console.WriteLine("Added note {0} to measure {1}", yankee[item], measure);
+                     item++;
+                  }
                } else
                   break;
             } while(ok);
@@ -93,20 +96,30 @@ namespace Music
          // measure one contains (C, 1/4) (C, 1/4), (D, 1/4), (E, 1/4)
 
          Measure m0 = score.GetMeasure("Piano", 0);
-         Note n0 = m0.GetNote(0);
-         Note n1 = m0.GetNote(1);
-         Note n2 = m0.GetNote(2);
-         Note n3 = m0.GetNote(3);
+         Note m0n0 = m0.GetNote(0);
+         Note m0n1 = m0.GetNote(1);
+         Note m0n2 = m0.GetNote(2);
+         Note m0n3 = m0.GetNote(3);
 
-         Assert.IsTrue(n0.GetTone() == yankee[0]);
-         Assert.IsTrue(n1.GetTone() == yankee[1]);
-         Assert.IsTrue(n2.GetTone() == yankee[2]);
-         Assert.IsTrue(n3.GetTone() == yankee[3]);
+         Assert.IsTrue(m0n0.GetTone() == yankee[0] && m0n0.GetDuration().CompareTo(durations[0]) == 0);
+         Assert.IsTrue(m0n1.GetTone() == yankee[1] && m0n1.GetDuration().CompareTo(durations[1]) == 0);
+         Assert.IsTrue(m0n2.GetTone() == yankee[2] && m0n2.GetDuration().CompareTo(durations[2]) == 0);
+         Assert.IsTrue(m0n3.GetTone() == yankee[3] && m0n3.GetDuration().CompareTo(durations[3]) == 0);
 
          // measure two contains (C, 1/4) (E, 1/4), (D, 1/2)
+         Measure m1 = score.GetMeasure("Piano", 1);
+         Note m1n0 = m1.GetNote(0);
+         Note m1n1 = m1.GetNote(1);
+         Note m1n2 = m1.GetNote(2);
+
+         Assert.IsTrue(m1n0.GetTone() == yankee[4] && m1n0.GetDuration().CompareTo(durations[4]) == 0);
+         Assert.IsTrue(m1n1.GetTone() == yankee[5] && m1n1.GetDuration().CompareTo(durations[5]) == 0);
+         Assert.IsTrue(m1n2.GetTone() == yankee[6] && m1n2.GetDuration().CompareTo(durations[6]) == 0);
+
          // measure three is empty
 
-
+         Measure m2 = score.GetMeasure("Piano", 2);
+         Assert.IsTrue(m2.Length().CompareTo(new Rational(0)) == 0);
 
       }
    }
