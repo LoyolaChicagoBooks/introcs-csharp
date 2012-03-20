@@ -22,15 +22,15 @@ All the strings for the responses are pre-coded for you there, but if
 you were writing your own it would be a pain. There is all the
 repetitious code to make multiline strings and then to add to the
 List and Dictionary. This lab will provide simple versatile methods to
-fill a List<string> or a Dictionary<string, string> which only need
+fill a ``List<string>`` or a ``Dictionary<string, string>`` which only need
 you to write the string data itself into a text file, with the only
 overhead being a few extra newlines. Minor further adaptations could
 save time later in your game project, too.
 
-In the revised project with main class 
+In the revised lab project with Main class 
 :file:`projects/Dictionaries/FakeAdviseLab/MainLab.cs`,
 the List and Dictionary filling code is made more general and moved
-to the class FileUtil.  The main program chooses the files to read.
+to the class FileUtil for easy reuse.  The main program chooses the files to read.
 The results will look the same as the original program to the user, 
 but the second version will be easier 
 for a programmer to read and generalize to other situations 
@@ -43,18 +43,19 @@ You will need to complete very short versions of functions
 take a StreamReader as parameter.
 The files that they read will contain the basic data.  
 You can look in the lab project at the first data file:
-:file:`projects/Dictionaries/FakeAdviseLab/HelpNotDefaults.txt`.  
-You can see that it includes the data for the welcome
-and goodbye strings followed by all the data to go in the ``List`` of random answers.
-
-One complication is that many of these strings take up several lines, in what we call
-a paragraph.  We follow a standard convention for puting paragraphs into plain text: 
-Put a blank line after a paragraph to mark its end.  That is how 
-:file:`HelpNotDefaults.txt` is set up. Here are the first few paragraphs:
+:file:`HelpNotDefaults.txt`, and the beginning is shown below:  
 
 .. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/HelpNotDefaults.txt
    :language: none
    :lines: 1-15
+
+You can see that it includes the data for the welcome
+and goodbye strings followed by all the data to go in the ``List`` of random answers.
+
+One complication is that many of these strings take up several lines, in what we call
+a paragraph.  We follow a standard convention for putting paragraphs into plain text: 
+Put a blank line after a paragraph to mark its end.  As you can see, that is how 
+:file:`HelpNotDefaults.txt` is set up. 
 
 Steps
 -----------------
@@ -63,7 +64,8 @@ All of the additions you need to make are in the class ``FileUtil``.
 
 The class already has one completed method, ``GetDataReader``, 
 that is a kludge to make opening files work either if the file is in the 
-main project folder or two folders below with the exe file.  This is already used
+main project folder or two folders below with the exe file 
+(so no need for special run configurations).  This function is used
 in the Main program to read the two data files.
 
 ReadParagraph
@@ -143,10 +145,9 @@ Here is the stub of the function to complete, reading such data:
    :end-before: chunk
 
 When you complete this function, the program should behave like the earlier
-verbose version with the data-coded data.
+verbose version with the hard-coded data.
 
-Note that the data corresponds to the data hard-coded into the earlier
-version of ``GetDictionary``.  Be careful to distinguish this data file from
+Be careful to distinguish the data file :file:`HelpNotResponses.txt` from
 :file:`HelpNotResponses2.txt`, used in the extra credit.
 
 This should also be an extremely short amount of coding!  
@@ -159,8 +160,9 @@ Extra credit (1 point)
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The crude word classification scheme would recognize "crash", but not
-"crashed" or "crashes".  You could make whole repetitive file entries
-for each variation.  Another approach is to use a data file
+"crashed" or "crashes".  You could make whole file entries
+for each key variation, repeating the value paragraph.  
+A concise approach is to use a data file
 like :file:`HelpNotResponses2.txt`.  Here are the first few lines:
 
 .. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/HelpNotResponses2.txt
@@ -171,12 +173,12 @@ The line that used to have one key now may have several blank-separated keys.
 
 Here is how the documentation for GetDictionary should be changed:
 
-.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/MainLab.cs
+.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/FileUtil.cs
    :start-after: Extra credit documentation
    :end-before: }
 
 Modify the lab project to use this file effectively:  Rename
-"HelpNotResponses.txt" to "OneKeyResponses.txt" and rename
+"HelpNotResponses.txt" to "OneKeyResponses.txt" and then rename
 "HelpNotResponses2.txt" to "HelpNotResponses.txt", so the Main program reads it.
 
 In your test of the program, be sure to use several of the keys that apply to the

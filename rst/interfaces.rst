@@ -7,7 +7,7 @@ Interfaces
 
    Interfaces
 
-.. add subparts   
+.. add interface subparts   
 
    .. toctree::
       :maxdepth: 3
