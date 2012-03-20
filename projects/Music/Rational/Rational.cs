@@ -30,7 +30,7 @@ namespace Music
          return new Rational(int.Parse(parts[0].Trim()),
                              int.Parse(parts[1].Trim()));
       }
-   
+                                    // constructor chunk
       /** Create a fraction given numerator and denominator. */
       public Rational(int numerator, int denominator)
       {
@@ -38,7 +38,17 @@ namespace Music
          denom = denominator;
          normalize();
       }
-   
+                                    // numerator chunk
+      public int GetNumerator()
+      {
+         return num;
+      }
+
+      public int GetDenominator()
+      {
+         return denom;
+      }
+                                    // alternate constructor chunk
       /**
        * Create a fraction for an integer value.
        *  num  numerator
@@ -47,7 +57,7 @@ namespace Music
            this(wholeNumber, 1)  // new syntax, before body, refers to
       {                         // other constructor using name "this"
       }
-   
+                                     // ToString chunk
       /**
        * Return a string of the fraction in lowest terms,
        * omitting the denominator if it is 1.
@@ -58,31 +68,31 @@ namespace Music
             return string.Format("{0}/{1}", num, denom);
          return ""+num;
       }
-   
+                                   // ToDouble chunk
       /** Return a double approximation to the fraction. */
       public double ToDouble()
       {
          return ((double)num)/denom;
       }
-   
+                                   // ToDecimal chunk
       /** Return a decimal approximation to the fraction. */
       public decimal ToDecimal()
       {
          return ((decimal)num)/denom;
       }
-   
+                                   // Negate chunk
       /** Return a new Rational which is this Rational negated.*/
       public Rational Negate()
       {
          return new Rational(-num, denom);
       }
-   
+                                   // Reciprocal chunk
       /** Return a new Rational which is the reciprocal of this Rational.*/
       public Rational Reciprocal()
       {
          return new Rational(denom, num);
       }
-   
+                                   // Multiply chunk
       /** Return a new Rational which is the product of this Rational and f. */
       public Rational Multiply(Rational f)
       {
