@@ -25,8 +25,7 @@ What do you have to say?");
                Console.Write(answer + "\n" + prompt);
             }
          } while (fromUser != "bye");
-         Console.WriteLine(@"
-We-Give-Answers
+         Console.WriteLine(@"We-Give-Answers
 thanks you for your patronage.
 Call again if we can help you
 with any other problem!");
