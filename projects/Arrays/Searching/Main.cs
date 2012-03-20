@@ -33,9 +33,14 @@ namespace Arrays
          Console.WriteLine ("Please enter some integers, separated by spaces:");
          string input = Console.ReadLine();
          string[] integers = input.Split(' ');
+         for (int i=0; i < integers.Length; i++)
+            Console.WriteLine("i={0} integers[i]={1}", i, integers[i]);
          int[] data = new int[integers.Length];
          for (int i=0; i < data.Length; i++)
             data[i] = int.Parse(integers[i]);
+
+         for (int i=0; i < data.Length; i++)
+            Console.WriteLine("i={0} data[i]={1}", i, data[i]);
 
          while (true) {
             Console.WriteLine("Please enter a number you want to find (blank line to end):");
