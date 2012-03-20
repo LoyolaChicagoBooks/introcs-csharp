@@ -3,14 +3,11 @@
 Compound Types
 ######################
 
+
+
 .. todo::
 
    gkt: compound types
 
-.. add subparts   
-
-   .. toctree::
-      :maxdepth: 3
-
-
+   not used at present - split at higher level.
 
