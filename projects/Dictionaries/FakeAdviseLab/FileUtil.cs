@@ -72,7 +72,7 @@ namespace FakeAdviseLab
                                           // end GetDictionary chunk
       //Altered Extra credit documentation for GetDictionary:
       /*  Return a new Dictionary, taking data for it from reader.
-       *  Reader contains key-value pairs, where where one or more space
+       *  Reader generates key-value pairs, where one or more space
        *  separated keys on a line are followed by a possibly multi-line
        *  paragraph value that is terminated by an empty line.  Each
        *  key on the line is mapped to the same paragraph that follows.
