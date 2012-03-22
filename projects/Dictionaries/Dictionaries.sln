@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountWords", "CountWords\CountWords.csproj", "{00C26F32-5C5F-4BAF-AFCE-F46A2371E6CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishSpanish", "EnglishSpanish\EnglishSpanish.csproj", "{651F1CA4-91B7-4267-979A-20A7A5CFFF79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeAdviseVerbose", "FakeAdviseVerbose\FakeAdviseVerbose.csproj", "{3DF40585-D964-49AC-884A-AEF58682CD54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeAdviseLab", "FakeAdviseLab\FakeAdviseLab.csproj", "{AC23C456-2EBD-4272-ADD9-EE4C321FD699}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00C26F32-5C5F-4BAF-AFCE-F46A2371E6CC}.Debug|x86.ActiveCfg = Debug|x86
+		{00C26F32-5C5F-4BAF-AFCE-F46A2371E6CC}.Debug|x86.Build.0 = Debug|x86
+		{00C26F32-5C5F-4BAF-AFCE-F46A2371E6CC}.Release|x86.ActiveCfg = Release|x86
+		{00C26F32-5C5F-4BAF-AFCE-F46A2371E6CC}.Release|x86.Build.0 = Release|x86
+		{3DF40585-D964-49AC-884A-AEF58682CD54}.Debug|x86.ActiveCfg = Debug|x86
+		{3DF40585-D964-49AC-884A-AEF58682CD54}.Debug|x86.Build.0 = Debug|x86
+		{3DF40585-D964-49AC-884A-AEF58682CD54}.Release|x86.ActiveCfg = Release|x86
+		{3DF40585-D964-49AC-884A-AEF58682CD54}.Release|x86.Build.0 = Release|x86
+		{651F1CA4-91B7-4267-979A-20A7A5CFFF79}.Debug|x86.ActiveCfg = Debug|x86
+		{651F1CA4-91B7-4267-979A-20A7A5CFFF79}.Debug|x86.Build.0 = Debug|x86
+		{651F1CA4-91B7-4267-979A-20A7A5CFFF79}.Release|x86.ActiveCfg = Release|x86
+		{651F1CA4-91B7-4267-979A-20A7A5CFFF79}.Release|x86.Build.0 = Release|x86
+		{AC23C456-2EBD-4272-ADD9-EE4C321FD699}.Debug|x86.ActiveCfg = Debug|x86
+		{AC23C456-2EBD-4272-ADD9-EE4C321FD699}.Debug|x86.Build.0 = Debug|x86
+		{AC23C456-2EBD-4272-ADD9-EE4C321FD699}.Release|x86.ActiveCfg = Release|x86
+		{AC23C456-2EBD-4272-ADD9-EE4C321FD699}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = CountWords\CountWords.csproj
+	EndGlobalSection
+EndGlobal
