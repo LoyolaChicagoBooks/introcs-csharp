@@ -9,7 +9,7 @@ namespace Music
    public struct Rational
    {                          // INVARIENT:
       private int num, denom; // denom > 0, fraction is reduced to lowest terms
-   
+                                    // Parse chunk
       /** Parse a string of an integer, fraction (with /) or decimal (with .)
        *  and return the corresponding Rational. */
       public static Rational Parse(string s)
@@ -95,16 +95,16 @@ namespace Music
                                    // Multiply chunk
       /** Return a new Rational which is the product of this Rational and f. */
       public Rational Multiply(Rational f)
-      {
+      {                           // end Multiply heading chunk
          return new Rational(num*f.num, denom*f.denom);
       }
-   
+                                   // Divide chunk
       /** Return a new Rational which is the quotient of this Rational and f. */
       public Rational Divide(Rational f)
       {
          return new Rational(num*f.denom, denom*f.num);
       }
-   
+                                   // Add chunk
       /** Return a new Rational which is the sum of this Rational and f. */
       public Rational Add(Rational f)
       {

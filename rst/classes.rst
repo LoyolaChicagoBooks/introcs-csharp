@@ -3,14 +3,9 @@
 Classes
 ######################
 
-.. todo::
-
-   Classes
-
-.. add Classes subparts   
-
-   .. toctree::
-      :maxdepth: 3
-
-
+.. toctree::
+   :maxdepth: 3
+   
+   classes-and-structs
+   hw-booklist
 
