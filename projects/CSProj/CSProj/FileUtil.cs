@@ -68,7 +68,7 @@ namespace CSProject
         * consisting of one or more nonempty lines terminated by an empty
         * line, and return a single string, preserving the newlines.
         * The reader stops reading after the first empty line or the
-        * end of the file.
+        * end of the file.  Skip over any initial empty lines.
         * Return the whole paragraph, with the newlines after each line,
         *   ending with the newline after the last nonempty line.
         */
