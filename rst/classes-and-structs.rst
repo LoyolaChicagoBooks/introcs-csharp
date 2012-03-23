@@ -28,7 +28,7 @@ Rational a struct, since it only contains two integers.  Its size is no more tha
 
 The behavior of a Rational is the same either way, because it is immutable.  If we
 allowed mutating methods, then a struct version and a class version would not behave
-the same way.
+the same way, due to the fact the reference types can have aliases, and value types cannot.
 
 There are some more complicated situations where structs cannot be used.
 Also structs have 
