@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project name="Music" default="build" basedir=".">
+
+  <description>NAnt build file for Music examples</description>
+
+  <property name="debug" value="true" overwrite="false"/>
+  <property name="build.dir" value="bin"/>
+
+  <target name="clean" description="remove all generated files">
+    <delete dir="${build.dir}" failonerror="false"/>
+  </target>
+
+  <target name="build" description="compiles the source code">
+    <mkdir dir="${build.dir}" failonerror="false"/>
+
+    <csc target="exe" output="${build.dir}/Scales.exe" debug="${debug}">
+      <sources>
+        <include name="Scales/*.cs"/>
+      </sources>
+      <references>
+        <include name="nunit.framework.dll"/>
+      </references>
+    </csc>
+
+    <csc target="library" output="${build.dir}/Rational.dll" debug="${debug}">
+      <sources>
+        <include name="Rational/*.cs"/>
+      </sources>
+      <references>
+        <include name="nunit.framework.dll"/>
+      </references>
+    </csc>
+
+    <csc target="library" output="${build.dir}/Notation.dll" debug="${debug}">
+      <sources>
+        <include name="Notation/*.cs"/>
+        <include name="Rational/*.cs"/>
+        <exclude name="Rational/AssemblyInfo.cs"/>
+      </sources>
+      <references>
+        <include name="nunit.framework.dll"/>
+      </references>
+    </csc>
+
+  </target>
+</project>
