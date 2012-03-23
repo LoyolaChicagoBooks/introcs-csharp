@@ -115,5 +115,33 @@ following commands in roughly this order:
   hosting site for Mercurial projects).
 
 
+Conflict Avoidance
+----------------------
+
+We'll cover how to avoid conflicting changes.
+
+If you absolutely must have conflicts, you'll need to master 
+``hg merge`` and ``hg resolve``.
+
+
+E-mail Notifications
+----------------------
+
+The Bitbucket service has a way of pushing out e-mail whenever a commit
+operation takes place.
+
+Steps
+
+#. Make sure your repository is selected.
+
+#. Admin tab
+
+#. Services (left navigation)
+
+#. Add the Email or Email Diff service
+
+#. Add the email notification address. You can only have one address.
+   A good way to overcome this limitation is to set up a group service,
+   say, at Google Groups.
 
 
