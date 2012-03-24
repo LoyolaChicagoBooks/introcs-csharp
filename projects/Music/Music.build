@@ -5,6 +5,7 @@
 
   <property name="debug" value="true" overwrite="false"/>
   <property name="build.dir" value="bin"/>
+  <property name="nunit.dll" value="nunit.framework.dll" overwrite="false"/>
 
   <target name="clean" description="remove all generated files">
     <delete dir="${build.dir}" failonerror="false"/>
@@ -18,7 +19,7 @@
         <include name="Scales/*.cs"/>
       </sources>
       <references>
-        <include name="nunit.framework.dll"/>
+        <include name="${nunit.dll}"/>
       </references>
     </csc>
 
@@ -27,7 +28,7 @@
         <include name="Rational/*.cs"/>
       </sources>
       <references>
-        <include name="nunit.framework.dll"/>
+        <include name="${nunit.dll}"/>
       </references>
     </csc>
 
@@ -38,9 +39,16 @@
         <exclude name="Rational/AssemblyInfo.cs"/>
       </sources>
       <references>
-        <include name="nunit.framework.dll"/>
+        <include name="${nunit.dll}"/>
       </references>
     </csc>
 
+  </target>
+  <target name="test" depends="build">
+    <nunit2>
+        <formatter type="Plain" />
+        <test assemblyname="${build.dir}/Rational.dll" />
+        <test assemblyname="${build.dir}/Notation.dll" />
+    </nunit2>
   </target>
 </project>
