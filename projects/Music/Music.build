@@ -4,15 +4,12 @@
   <description>NAnt build file for Music examples</description>
 
   <property name="debug" value="true" overwrite="false"/>
-
   <property name="build.dir" value="bin"/>
-
   <property name="linux.gac.dir" value="/usr/lib/mono/gac"/>
-
   <property name="nunit.dll" value="nunit.framework.dll" overwrite="false"/>
-
   <property name="dotnet.framework" value="${framework::get-runtime-framework()}"/>
-  <property name="dotnet.framework.dir" value="${framework::get-assembly-directory(dotnet.framework)}"/>
+  <property name="dotnet.framework.dir"
+            value="${framework::get-assembly-directory(dotnet.framework)}"/>
 
   <!-- Assume NUnit is in the Mono Framework (true on OS X and Linux) -->
   <property name="nunit.dir" value="${dotnet.framework.dir}"/>
@@ -28,10 +25,12 @@
 
   <target name="build" description="compiles the source code">
     <mkdir dir="${build.dir}" failonerror="false"/>
+    <!--
     <echo message="NUnit DLL ${nunit.dll}"/>
     <echo message="framework ${dotnet.framework}"/>
     <echo message="framework.dir ${dotnet.framework.dir}"/>
     <echo message="nunit.dir ${nunit.dir}"/>
+    -->
     <csc target="exe" output="${build.dir}/Scales.exe" debug="${debug}">
       <sources>
         <include name="Scales/*.cs"/>
