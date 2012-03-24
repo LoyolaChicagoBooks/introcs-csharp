@@ -1,3 +1,14 @@
+Update:
+These notes no longer apply to OS X. It appears that Mono now ships with
+a proper functioning NAnt installation.
+
+If you run into problems, you can try the workaround here, but it should
+no longer be necessary!
+
+
+----
+From George's earlier attempts on OS X:
+
 To use NAnt on OS X to build the Hello, World example, you need to
 set this environment variable:
 
