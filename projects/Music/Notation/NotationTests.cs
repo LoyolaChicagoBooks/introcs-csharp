@@ -56,9 +56,9 @@ namespace Music
 
          Scale dscale = new Scale("D", Scale.ScaleTypes.Major);
          int[] dintervals = { 2, 4, 6, 7, 9, 11, 1, 2 };
-         dscale.Output();
+         //dscale.Output();
          for (int i=0; i < 8; i++) {
-            Console.WriteLine("i={0} actual={1} expected={2}", i, dscale.GetTone(i), dintervals[i]);
+            //Console.WriteLine("i={0} actual={1} expected={2}", i, dscale.GetTone(i), dintervals[i]);
             Assert.AreEqual(dscale.GetTone(i), dintervals[i]);
          }
       }
@@ -84,7 +84,7 @@ namespace Music
                if (item < yankee.Length) {
                   ok = score.AddNote("Piano", measure, new Note(yankee[item], 0, durations[item]));
                   if (ok) {
-                     Console.WriteLine("Added note {0} to measure {1}", yankee[item], measure);
+                     //Console.WriteLine("Added note {0} to measure {1}", yankee[item], measure);
                      item++;
                   }
                } else
