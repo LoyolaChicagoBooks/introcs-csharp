@@ -26,7 +26,6 @@ Introductory Programming in C#
    arrays
    lists
    dictionaries
-   structs
    classes
    interfaces
    testingclasses
