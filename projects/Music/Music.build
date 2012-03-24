@@ -5,6 +5,10 @@
 
   <property name="debug" value="true" overwrite="false"/>
   <property name="build.dir" value="bin"/>
+
+  <!-- This workaround is for Linux platforms. For some reason, the
+       csc task cannot find nunit.framework.dll. -->
+  <property name="gac.dir" value="/usr/lib/mono/gac"/>
   <property name="nunit.dll" value="nunit.framework.dll" overwrite="false"/>
 
   <target name="clean" description="remove all generated files">
@@ -13,13 +17,16 @@
 
   <target name="build" description="compiles the source code">
     <mkdir dir="${build.dir}" failonerror="false"/>
-
+    <echo message="NUnit DLL ${nunit.dll}"/>
     <csc target="exe" output="${build.dir}/Scales.exe" debug="${debug}">
       <sources>
         <include name="Scales/*.cs"/>
       </sources>
       <references>
-        <include name="${nunit.dll}"/>
+        <include name="${gac.dir}/**/${nunit.dll}"
+                 if="${directory::exists(gac.dir)}"/>
+        <include name="${nunit.dll}"
+                 if="${not directory::exists(gac.dir)}"/>
       </references>
     </csc>
 
@@ -28,7 +35,10 @@
         <include name="Rational/*.cs"/>
       </sources>
       <references>
-        <include name="${nunit.dll}"/>
+        <include name="${gac.dir}/**/${nunit.dll}"
+                 if="${directory::exists(gac.dir)}"/>
+        <include name="${nunit.dll}"
+                 if="${not directory::exists(gac.dir)}"/>
       </references>
     </csc>
 
@@ -39,16 +49,19 @@
         <exclude name="Rational/AssemblyInfo.cs"/>
       </sources>
       <references>
-        <include name="${nunit.dll}"/>
+        <include name="${gac.dir}/**/${nunit.dll}"
+                 if="${directory::exists(gac.dir)}"/>
+        <include name="${nunit.dll}"
+                 if="${not directory::exists(gac.dir)}"/>
       </references>
     </csc>
 
   </target>
   <target name="test" depends="build">
     <nunit2>
-        <formatter type="Plain" />
-        <test assemblyname="${build.dir}/Rational.dll" />
-        <test assemblyname="${build.dir}/Notation.dll" />
+      <formatter type="Plain" />
+      <test assemblyname="${build.dir}/Rational.dll" />
+      <test assemblyname="${build.dir}/Notation.dll" />
     </nunit2>
   </target>
 </project>

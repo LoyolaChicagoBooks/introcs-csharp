@@ -1,8 +1,0 @@
-#!/usr/bin/bash
-
-# This will probably only work on Ubuntu 11.10
-
-NUNITDLL=$(find /usr/lib/mono/gac -name nunit.framework.dll)
-
-nant -D:nunit.dll=$NUNITDLL "$@"
-
