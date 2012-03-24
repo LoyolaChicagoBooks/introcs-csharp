@@ -6,7 +6,7 @@ namespace Music
     * Class for fractions (rational numbers),
     * including basic arithmetic operations.
     */
-   public struct Rational
+   public class Rational
    {                          // INVARIENT:
       private int num, denom; // denom > 0, fraction is reduced to lowest terms
                                     // Parse chunk
@@ -129,7 +129,8 @@ namespace Music
       }
    
       /* Return the positive greatest common divisor of parameters a and b.*/
-      private static int gcd(int a, int b) {  // assume not both a, b are 0
+      private static int gcd(int a, int b)
+      {  // assume a or b is not 0
          if (a == 0)
             return Math.Abs(b);
          while (b != 0) {  // Euclid's algorithm
@@ -139,9 +140,10 @@ namespace Music
          }
          return Math.Abs(a);
       }
-   
+                                  // start normalize chunk
       /* Force the invarient: in lowest terms with a positive denominator.*/
-      private void normalize() {
+      private void normalize()
+      {                           // end heading chunk
          if (denom == 0) { // We really should force an Exception, but we won't.
             Console.WriteLine("Zero denominator changed to 1!");
             denom = 1;
