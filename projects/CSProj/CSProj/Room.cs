@@ -49,7 +49,10 @@ namespace CSProject
          while (!reader.EndOfStream) {
             string name = reader.ReadLine ();
             string exitPairs = reader.ReadLine ();
-            string description = FileUtil.readParagraph(reader);
+            // You could also substitute your lab's ReadParagraph for the two
+            //   lines below if you want to format each paragraph line yourself.
+            string description = FileUtil.LineWrap(reader);
+            reader.ReadLine(); // assume empty line after description
             rooms [name] = new Room (description);
             exitStrings [name] = exitPairs;
          }

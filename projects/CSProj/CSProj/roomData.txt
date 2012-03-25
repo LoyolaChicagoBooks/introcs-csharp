@@ -1,7 +1,6 @@
 outside
 east theatre  south lab  west pub
-outside the main entrance 
-of the university
+outside the main entrance of the university that prepares people for extraordinary lives.  It would help to be prepared now...
 
 theatre
 west outside
