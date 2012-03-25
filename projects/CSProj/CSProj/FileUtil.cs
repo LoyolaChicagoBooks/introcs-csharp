@@ -27,10 +27,12 @@ namespace CSProject
 
       /**
         * Read a long line and return it wrapped into lines.
+        * Such data is easiest generated in a regular word
+        * processor that automatically wraps lines.
         */    
-      public static string lineWrap(StreamReader reader)
+      public static string LineWrap(StreamReader reader)
       {
-         return wordWrap(reader.ReadLine(), 79);
+         return WordWrap(reader.ReadLine(), 79);
       }
 
       private static char[] noChar = {};
@@ -44,7 +46,7 @@ namespace CSProject
       /**
         * Add line breaks to s so it wraps within a specified
         * number of columns. */
-      public static string wordWrap(string s, int columns)
+      public static string WordWrap(string s, int columns)
       {
          string wrapped = "";
          s = s.Trim();
@@ -61,29 +63,6 @@ namespace CSProject
          }
          wrapped += s;
          return wrapped;
-      }
-       
-      /**
-        * Read a paragraph from reader
-        * consisting of one or more nonempty lines terminated by an empty
-        * line, and return a single string, preserving the newlines.
-        * The reader stops reading after the first empty line or the
-        * end of the file.  Skip over any initial empty lines.
-        * Return the whole paragraph, with the newlines after each line,
-        *   ending with the newline after the last nonempty line.
-        */
-      public static string readParagraph(StreamReader reader)
-      {
-         string para = "";
-         string line;
-         do {
-            line = reader.ReadLine();  // drops newline
-         } while (line.Trim().Length == 0);
-         while (!string.IsNullOrEmpty(line)) {
-            para += line + "\n";  // add back newline
-            line = reader.ReadLine();
-         }
-         return para;
       }
    }
 }
