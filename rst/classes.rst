@@ -8,6 +8,7 @@ Classes
    
    a-first-class
    classes-and-structs
+   classexamples
    hw-booklist
    hgteamwork
 
