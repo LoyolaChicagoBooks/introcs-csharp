@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSProj", "CSProj\CSProj.csproj", "{2938AD88-0C7C-4156-BDAF-2348740B1AAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSProj1", "CSProj1\CSProj1.csproj", "{9DB5FBAD-F5DC-48C4-9837-2E74209F5463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{2938AD88-0C7C-4156-BDAF-2348740B1AAB}.Debug|x86.Build.0 = Debug|x86
 		{2938AD88-0C7C-4156-BDAF-2348740B1AAB}.Release|x86.ActiveCfg = Release|x86
 		{2938AD88-0C7C-4156-BDAF-2348740B1AAB}.Release|x86.Build.0 = Release|x86
+		{9DB5FBAD-F5DC-48C4-9837-2E74209F5463}.Debug|x86.ActiveCfg = Debug|x86
+		{9DB5FBAD-F5DC-48C4-9837-2E74209F5463}.Debug|x86.Build.0 = Debug|x86
+		{9DB5FBAD-F5DC-48C4-9837-2E74209F5463}.Release|x86.ActiveCfg = Release|x86
+		{9DB5FBAD-F5DC-48C4-9837-2E74209F5463}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = CSProj\CSProj.csproj
