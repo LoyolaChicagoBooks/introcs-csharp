@@ -144,8 +144,9 @@ choices in practice:
 - use ``hg merge`` and ``hg resolve`` to merge your changes.
 
 - make a copy of the conflicting files (e.g. Copy ``Hello.cs`` to
-  ``Hello.cs-backup`` and use ``hg update --clean`` to just accept
-  the latest versions of all files from the repository.
+  ``Hello.cs-backup`` and use ``hg update --clean`` (changing your
+  copy to match the current version in the remote repository) to just
+  accept the latest versions of all files from the repository.
 
 In our experience, the first option is tricky. You are given the
 option to perform the merge anyway or use a merge tool to select the
