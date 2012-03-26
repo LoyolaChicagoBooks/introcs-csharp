@@ -1,5 +1,4 @@
-.. todo::
-   Not quite ready yet but getting there...
+
 
 Mercurial and Teamwork
 =========================
@@ -8,7 +7,7 @@ As this course has a team project, this lecture is about how to work as
 a team and make effective use of the version control system, Mercurial,
 that we have been using throughout the semester. While the focus is on
 the use of Mercurial, the principles we are introducing here can be
-adapted to other situations.
+adapted to other situations (and alternate version control systems).
 
 
 Planning and Communication
@@ -45,16 +44,19 @@ again as a pair to integrate the work you've done independently.
 It's easier said than done, but this is intended as a suggestion for 
 how to collaborate.
 
-In any event, the above suggests that you actually need to *communicate*
-if you want to get anything done. You should start by discussing what needs
-to be done and work in *real time* to do what has been described above. 
-Then you start coding. As you are coding, you are going to realize that 
-as well as you planned the work to be done, you "forgot" or "misunderstood"
-some aspect. When this happens, you and your partner(s) need to communicate.
+In any event, the above suggests that you actually need to
+*communicate* if you want to get anything done. You should start by
+discussing what needs to be done and work in *real time* to do what
+has been described above.  Then you start coding. As you are coding,
+you are going to realize that as well as you planned the work to be
+done, you "forgot" or "misunderstood" some aspect. When this happens,
+you and your partner(s) need to communicate.
+
 In the modern era of software development, we are richly blessed with
-text messaging, chat, and other forms of synchronous collaboration. When you
-and your partner(s) are working on the project, we highly encourage you
-to keep a chat window open (Google Talk, AIM, Yahoo, IRC, whatever) and 
+synchronous communication methods such as instant messaging, texting,
+group chat, and other forms of synchronous collaboration. When you and
+your partner(s) are working on the project, we highly encourage you to
+keep a chat window open (Google Talk, AIM, Yahoo, IRC, whatever) and
 use it to communicate any issues as they arise.
 
 
@@ -118,30 +120,96 @@ following commands in roughly this order:
 Conflict Avoidance
 ----------------------
 
-We'll cover how to avoid conflicting changes.
+Inevitably, when you are working on project, you are likely to end up
+in a situation where you and your partner(s) make changes that
+conflict with one another. In many cases, the version control software
+can automatically merge the changes. Here are just a few examples of
+where it is possible to do so:
 
-If you absolutely must have conflicts, you'll need to master 
-``hg merge`` and ``hg resolve``.
+- You make changes to different files.
 
+- You make additions to the repository.
+
+- You make changes to a common file that do not overlap. An example of
+  this might be where you have two functions in your program and both
+  you and your partner are careful not to modify them.
+
+In general, we encourage you to coordinate your efforts, especially
+when you are doing something like the third situation.
+
+Where you get into trouble is when there are changes to a common file
+that conflict with one another. When this happens, you have two
+choices in practice:
+
+- use ``hg merge`` and ``hg resolve`` to merge your changes.
+
+- make a copy of the conflicting files (e.g. Copy ``Hello.cs`` to
+  ``Hello.cs-backup`` and use ``hg update --clean`` to just accept
+  the latest versions of all files from the repository.
+
+In our experience, the first option is tricky. You are given the
+option to perform the merge anyway or use a merge tool to select the
+changes of interest (and decide between them).
+
+The second option basically results in two copies of the file. You can
+open up your editor to compare the files side-by-side or use a tool
+like ``diff` on Unix, which gives a side-by-side diff::
+
+   diff -y Hello.cs MyHello.cs
+
+This tool is not always available everywhere (especially in Windows
+labs) but is one that comes preinstalled on both Windows and OS X.
 
 E-mail Notifications
 ----------------------
 
-The Bitbucket service has a way of pushing out e-mail whenever a commit
-operation takes place.
+One of the best ways to avoid conflicts when working on a team is to
+enable e-mail notification on your repository. 
 
-Steps
+Bitbucket, the hosting service we are using and recommending for our
+students, provides full support for e-mail notification. Whenever you
+or your partner(s) push changes to the hosted repository, an e-mail
+will be generated.
 
-#. Make sure your repository is selected.
+These are the steps to set it up. (Owing to the changing nature of web
+interfaces, we are providing generic instructions that should be
+adaptable if the Bitbucket service decides to change its web user interface.)
 
-#. Admin tab
+#. Make sure your repository is selected. This is always the
+   especially when you visit your repository by URL.
 
-#. Services (left navigation)
+#. Select the administrative (Admin) tab.
 
-#. Add the Email or Email Diff service
+#. Select Services (left-hand-side navigation).
 
+#. Add the Email or Email Diff service. These services are basically
+   equivalent, but one will generate links so you can view the
+   differences that were just pushed. We recomend Email Diff.
+  
 #. Add the email notification address. You can only have one address.
    A good way to overcome this limitation is to set up a group service,
    say, at Google Groups.
 
+Communication is Key to Success
+-------------------------------------
 
+At the risk of repeating ourselves, we close by reminding you of the
+central importance of good communication. The authors of this book
+communicate when it comes to their changes--even before we make
+them. Yet we occasionally trip over each other, and there is usually a
+fair amount of manual reconciliation required to deal with conflicts
+when we end up touching the same file by mistake. 
+
+When you absolutely and positively need to change a common file, it is
+important to ask yourself the important question: Shouldn't we be
+sitting together to make these changes? It's a rhetorical question,
+but working closely together, either in the same room or through a
+chat session/phone call, can result in significantly fewer headaches,
+especially during the early stages of a project.
+
+So please take this time to stop what you are doing and
+communicate. You'll know your communication is good if you never need
+to do anything that has been described on this page. Then again, we're
+human. So you it is likely to happen at least once. (We know from
+experience but are doing everything possible to avoid conflicts in our
+work!)
