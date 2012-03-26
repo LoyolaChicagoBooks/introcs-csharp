@@ -6,43 +6,43 @@ namespace CSProject
 {
    
    /**
-    * A "Room" represents one location in the scenery of the game.  It is 
-    * connected to other rooms via exits.  For each existing exit, the room 
-    * stores a reference to the neighboring room.
+    * A "Place" represents one location in the scenery of the game.  It is 
+    * connected to other places via exits.  For each existing exit, the place 
+    * stores a reference to the neighboring place.
     * 
     * Derived from work of  Michael Kolling and David J. Barnes
     */
-   public class Room
+   public class Place
    {
       public string Description { get; private set; }
 
-      private Dictionary<string, Room> exits; // stores exits of this room.
+      private Dictionary<string, Place> exits; // stores exits of this place.
    
       /**
-        * Create a room described by description. Initially, it has
+        * Create a place described by description. Initially, it has
         * no exits.  The description is something like "in a kitchen" or
         * "in an open court yard".
         */
-      public Room (string description)
+      public Place (string description)
       {
          Description = description;
-         exits = new Dictionary<string, Room> ();
+         exits = new Dictionary<string, Place> ();
       }
        
       /**
-        * Create rooms and their interconnections by taking room names, exit 
+        * Create places and their interconnections by taking place names, exit 
         * data and descriptions from a text file.  
-        * Return a map of room names to rooms.  File format for each room: 
-        *   First line:  room name (one word)
-        *   Second line: pairs of exit direction and neighbor room name 
-        *   Remaining paragraph: room description, blank line terminated  */
-      public static Dictionary<string, Room> createRooms (string fileName)
+        * Return a map of place names to places.  File format for each place: 
+        *   First line:  place name (one word)
+        *   Second line: pairs of exit direction and neighbor place name 
+        *   Remaining paragraph: place description, blank line terminated  */
+      public static Dictionary<string, Place> createPlaces (string fileName)
       {
          StreamReader reader = FileUtil.GetDataReader(fileName);
          // Map to return
-         Dictionary<string, Room> rooms = new Dictionary<string, Room> ();
+         Dictionary<string, Place> places = new Dictionary<string, Place> ();
           
-         // temporary Map to delay recording exits until all rooms exist
+         // temporary Map to delay recording exits until all places exist
          Dictionary<string, string> exitStrings =
                                        new Dictionary<string, string> ();
           
@@ -53,34 +53,34 @@ namespace CSProject
             //   lines below if you want to format each paragraph line yourself.
             string description = FileUtil.LineWrap(reader);
             reader.ReadLine(); // assume empty line after description
-            rooms [name] = new Room (description);
+            places [name] = new Place (description);
             exitStrings [name] = exitPairs;
          }
          reader.Close ();
-         // need rooms before you can map exits
+         // need places before you can map exits
          // go back and use exitPairs to map exits:
-         foreach (string name in rooms.Keys) {
-            Room room = rooms [name];
+         foreach (string name in places.Keys) {
+            Place place = places [name];
             string[] parts = FileUtil.SplitWhite(exitStrings[name]);
             for (int i = 0; i < parts.Length; i += 2) {
-               room.setExit (parts [i], rooms [parts [i + 1]]);
+               place.setExit (parts [i], places [parts [i + 1]]);
             }
          }
-         return rooms;
+         return places;
       }
    
       /**
-        * Define an exit from this room.
+        * Define an exit from this place.
         *  Going to the exit in this direction 
-        *  leads to neighbor room.
+        *  leads to neighbor place.
         */
-      public void setExit (string direction, Room neighbor)
+      public void setExit (string direction, Place neighbor)
       {
          exits [direction] = neighbor;
       }
       
       /**
-        * Return a description of the room in the form:
+        * Return a description of the place in the form:
         *     You are in the kitchen.
         *     Exits: north west
         */
@@ -90,7 +90,7 @@ namespace CSProject
       }
    
       /**
-        * Return a string describing the room's exits, for example
+        * Return a string describing the place's exits, for example
         * "Exits: north west".
         */
       private string getExitstring ()
@@ -103,10 +103,10 @@ namespace CSProject
       }
    
       /**
-        * Return the room that is reached if we go from this room in direction
-        * "direction". If there is no room in that direction, return null.
+        * Return the place that is reached if we go from this place in direction
+        * "direction". If there is no place in that direction, return null.
         */
-      public Room getExit (string direction)
+      public Place getExit (string direction)
       {
          if (exits.ContainsKey (direction)) {
             return exits [direction];
