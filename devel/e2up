@@ -1,0 +1,8 @@
+#! /bin/bash
+
+cp ../examples/* ../examples-cs/
+
+cd ../examples-cs
+rm ../examples.zip
+rm *.py
+zip ../examples.zip * 

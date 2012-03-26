@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSearchPuzzle", "WordSearchPuzzle\WordSearchPuzzle.csproj", "{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{F6D64697-6E50-481C-A9F3-A941E7B48F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searching", "Searching\Searching.csproj", "{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintTable", "PrintTable\PrintTable.csproj", "{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceLab", "PerformanceLab\PerformanceLab.csproj", "{3FB35E7D-A4CE-4C5C-A429-500CB32783A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearching", "BinarySearching\BinarySearching.csproj", "{39207049-D768-4638-A518-5CB63C72514E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UInput", "UInput\UInput.csproj", "{95D84B03-9648-44A4-B1AB-CF0946337FB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39207049-D768-4638-A518-5CB63C72514E}.Debug|x86.ActiveCfg = Debug|x86
+		{39207049-D768-4638-A518-5CB63C72514E}.Debug|x86.Build.0 = Debug|x86
+		{39207049-D768-4638-A518-5CB63C72514E}.Release|x86.ActiveCfg = Release|x86
+		{39207049-D768-4638-A518-5CB63C72514E}.Release|x86.Build.0 = Release|x86
+		{3FB35E7D-A4CE-4C5C-A429-500CB32783A6}.Debug|x86.ActiveCfg = Debug|x86
+		{3FB35E7D-A4CE-4C5C-A429-500CB32783A6}.Debug|x86.Build.0 = Debug|x86
+		{3FB35E7D-A4CE-4C5C-A429-500CB32783A6}.Release|x86.ActiveCfg = Release|x86
+		{3FB35E7D-A4CE-4C5C-A429-500CB32783A6}.Release|x86.Build.0 = Release|x86
+		{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}.Debug|x86.ActiveCfg = Debug|x86
+		{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}.Debug|x86.Build.0 = Debug|x86
+		{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}.Release|x86.ActiveCfg = Release|x86
+		{72F3BAB7-6537-4932-A7B7-E2FDF9FF0331}.Release|x86.Build.0 = Release|x86
+		{95D84B03-9648-44A4-B1AB-CF0946337FB6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95D84B03-9648-44A4-B1AB-CF0946337FB6}.Debug|x86.Build.0 = Debug|Any CPU
+		{95D84B03-9648-44A4-B1AB-CF0946337FB6}.Release|x86.ActiveCfg = Release|Any CPU
+		{95D84B03-9648-44A4-B1AB-CF0946337FB6}.Release|x86.Build.0 = Release|Any CPU
+		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Debug|x86.ActiveCfg = Debug|x86
+		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Debug|x86.Build.0 = Debug|x86
+		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Release|x86.ActiveCfg = Release|x86
+		{A52636DB-2EE7-4A58-BAB2-8ACBAF52DD1C}.Release|x86.Build.0 = Release|x86
+		{F6D64697-6E50-481C-A9F3-A941E7B48F2A}.Debug|x86.ActiveCfg = Debug|x86
+		{F6D64697-6E50-481C-A9F3-A941E7B48F2A}.Debug|x86.Build.0 = Debug|x86
+		{F6D64697-6E50-481C-A9F3-A941E7B48F2A}.Release|x86.ActiveCfg = Release|x86
+		{F6D64697-6E50-481C-A9F3-A941E7B48F2A}.Release|x86.Build.0 = Release|x86
+		{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}.Debug|x86.ActiveCfg = Debug|x86
+		{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}.Debug|x86.Build.0 = Debug|x86
+		{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}.Release|x86.ActiveCfg = Release|x86
+		{FCBFD7BE-A06D-4AF2-9A7D-5E6FB32358C4}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = WordSearchPuzzle\WordSearchPuzzle.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.FileWidth = 120
+		$1.TabWidth = 3
+		$1.NoTabsAfterNonTabs = True
+		$1.RemoveTrailingWhitespace = True
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 3
+		$3.NoTabsAfterNonTabs = True
+		$3.RemoveTrailingWhitespace = True
+		$3.inheritsSet = VisualStudio
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+	EndGlobalSection
+EndGlobal

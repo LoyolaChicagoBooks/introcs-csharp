@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD", "GCD\GCD.csproj", "{51970EEA-DE92-41B9-8979-7EEF962164F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCDBasic", "GCDBasic\GCDBasic.csproj", "{68A7EBBB-2855-4786-BD82-6458B7799BDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCDSubtractionMethod", "GCDSubtractionMethod\GCDSubtractionMethod.csproj", "{82A1321F-AA06-4EF4-85B3-C41C74370D81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCDEuclidRecursive", "GCDEuclidRecursive\GCDEuclidRecursive.csproj", "{CB01A5E1-E46D-4E0D-A70E-C79967235947}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51970EEA-DE92-41B9-8979-7EEF962164F5}.Debug|x86.ActiveCfg = Debug|x86
+		{51970EEA-DE92-41B9-8979-7EEF962164F5}.Debug|x86.Build.0 = Debug|x86
+		{51970EEA-DE92-41B9-8979-7EEF962164F5}.Release|x86.ActiveCfg = Release|x86
+		{51970EEA-DE92-41B9-8979-7EEF962164F5}.Release|x86.Build.0 = Release|x86
+		{68A7EBBB-2855-4786-BD82-6458B7799BDC}.Debug|x86.ActiveCfg = Debug|x86
+		{68A7EBBB-2855-4786-BD82-6458B7799BDC}.Debug|x86.Build.0 = Debug|x86
+		{68A7EBBB-2855-4786-BD82-6458B7799BDC}.Release|x86.ActiveCfg = Release|x86
+		{68A7EBBB-2855-4786-BD82-6458B7799BDC}.Release|x86.Build.0 = Release|x86
+		{82A1321F-AA06-4EF4-85B3-C41C74370D81}.Debug|x86.ActiveCfg = Debug|x86
+		{82A1321F-AA06-4EF4-85B3-C41C74370D81}.Debug|x86.Build.0 = Debug|x86
+		{82A1321F-AA06-4EF4-85B3-C41C74370D81}.Release|x86.ActiveCfg = Release|x86
+		{82A1321F-AA06-4EF4-85B3-C41C74370D81}.Release|x86.Build.0 = Release|x86
+		{CB01A5E1-E46D-4E0D-A70E-C79967235947}.Debug|x86.ActiveCfg = Debug|x86
+		{CB01A5E1-E46D-4E0D-A70E-C79967235947}.Debug|x86.Build.0 = Debug|x86
+		{CB01A5E1-E46D-4E0D-A70E-C79967235947}.Release|x86.ActiveCfg = Release|x86
+		{CB01A5E1-E46D-4E0D-A70E-C79967235947}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = GCD\GCD.csproj
+	EndGlobalSection
+EndGlobal
