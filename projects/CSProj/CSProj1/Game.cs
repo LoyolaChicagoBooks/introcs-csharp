@@ -16,10 +16,23 @@ namespace CSProject
     *  by authors  Michael Kolling and David J. Barnes. */
    public class Game 
    {
-      public Place CurrentPlace {get; set;} // controls public access
+      private Place currentPlace;
       private Dictionary<string, Place> places; //places can be found by name
-      private CommandMapper commandMapper;
-       
+
+      private Helper helper;
+      private Goer goer;
+      private Quitter quitter;
+
+      public void SetCurrentPlace(Place place)
+      {
+         currentPlace = place;
+      }
+
+      public Place GetCurrentPlace()
+      {
+         return currentPlace;
+      }
+
       public static void Main(string[] args)
       {
          Game game = new Game();
@@ -37,8 +50,15 @@ namespace CSProject
       public Game()
       {
          places = Place.createPlaces("placeData.txt");
-         CurrentPlace = places["outside"];
-         commandMapper = new CommandMapper(this);
+         currentPlace = places["outside"];
+         quitter =  new Quitter();
+         goer = new Goer(this);
+         Dictionary<string, string> helpDetails =
+            new Dictionary<string, string>();
+         helper = new Helper(helpDetails);
+         helpDetails["help"] = helper.Help();
+         helpDetails["go"] = goer.Help();
+         helpDetails["quit"] = quitter.Help();
       }
    
       /**
@@ -64,7 +84,7 @@ namespace CSProject
 This is a pretty boring game, unless you modify it.
 Type 'help' if you need help.
 
-{0}", CurrentPlace.getLongDescription());
+{0}", currentPlace.getLongDescription());
       }
    
       /**
@@ -73,12 +93,20 @@ Type 'help' if you need help.
         */
       private bool processCommand(Command command)
       {
-         if(!commandMapper.isCommand(command.CommandWord)) {
+         string cmd = command.GetCommandWord();
+         if(!CommandMapper.isCommand(cmd)) {
             Console.WriteLine("I don't know what you mean...");
             return false;
          }
-         Response response = commandMapper.getResponse(command.CommandWord);
-         return response.Execute(command);
+         bool toQuit;
+         if (cmd == "help") {
+            toQuit = helper.Execute(command);
+         } else if (cmd == "go") {
+            toQuit = goer.Execute(command);
+         } else {
+            toQuit = quitter.Execute(command);
+         }
+         return toQuit;
       }
    }
 }

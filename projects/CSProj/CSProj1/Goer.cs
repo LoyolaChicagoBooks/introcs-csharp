@@ -5,9 +5,8 @@ namespace CSProject
    /**
     * Response to try to go to a new place.
     */
-   public class Goer : Response
+   public class Goer
    {
-      public string CommandName {get; private set;}
       private Game game;
       
       /**
@@ -22,14 +21,14 @@ namespace CSProject
             Console.WriteLine("Go where?");
             return false;
          }
-         string direction = command.SecondWord;
+         string direction = command.GetSecondWord();
          // Try to leave current place.
-         Place nextPlace = game.CurrentPlace.getExit(direction);
+         Place nextPlace = game.GetCurrentPlace().getExit(direction);
          if (nextPlace == null) {
             Console.WriteLine("There is no door!");
          }
          else {
-            game.CurrentPlace = nextPlace;
+            game.SetCurrentPlace(nextPlace);
             Console.WriteLine(nextPlace.getLongDescription());
          }
          return false;
@@ -49,7 +48,6 @@ The direction should be in the list of exits for the current place.";
       public Goer(Game game)
       {
          this.game = game;
-         CommandName = "go";
       }
    }
 }

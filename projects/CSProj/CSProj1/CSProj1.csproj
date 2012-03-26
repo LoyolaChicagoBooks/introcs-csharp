@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2938AD88-0C7C-4156-BDAF-2348740B1AAB}</ProjectGuid>
+    <ProjectGuid>{9DB5FBAD-F5DC-48C4-9837-2E74209F5463}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CSProj</RootNamespace>
-    <AssemblyName>CSProj</AssemblyName>
+    <RootNamespace>CSProj1</RootNamespace>
+    <AssemblyName>CSProj1</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -43,9 +43,8 @@
     <Compile Include="Goer.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Input.cs" />
-    <Compile Include="Quitter.cs" />
-    <Compile Include="Response.cs" />
     <Compile Include="Place.cs" />
+    <Compile Include="Quitter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
