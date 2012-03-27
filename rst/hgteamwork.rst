@@ -154,7 +154,7 @@ changes of interest (and decide between them).
 
 The second option basically results in two copies of the file. You can
 open up your editor to compare the files side-by-side or use a tool
-like ``diff` on Unix, which gives a side-by-side diff::
+like ``diff`` on Unix, which gives a side-by-side diff::
 
    diff -y Hello.cs MyHello.cs
 

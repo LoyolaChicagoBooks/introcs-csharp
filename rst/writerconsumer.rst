@@ -34,3 +34,7 @@ facts about the functions you call. You do not need to know exactly
 On the other hand when you *write* a function you need to figure
 out exactly how to accomplish your goal, name relevant variables,
 and write your code, which brings us to the next section.
+
+The jargon for these parts are the *interface* (for the consumer)
+and the *implementation* (for the programmer, who must be sure
+to satisfy the public interface).
