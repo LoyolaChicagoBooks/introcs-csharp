@@ -1,8 +1,8 @@
 Class Examples
 ================================
 
-Converting Static Game to Game Instance
-----------------------------------------
+Converting A Static Game to A Game Instance
+----------------------------------------------
 
 For a comparison of procedural and object-oriented coding,
 consider converting :ref:`lab-number-game` so that a Game
@@ -27,7 +27,7 @@ the keyboard goes out through a return value, and you are done with it.
 A simple function works fine each time.  Do not get fancy for nothing.
 
 What state would a game hold?  We might set it up so the user
-chooses size of the range of choices just once, and remember it 
+chooses the size of the range of choices just once, and remember it 
 for possibly multiple plays of the Game.  The variable was
 ``big`` before, we can keep the name.  
 If we are going to remember it inside our Game instance, 
@@ -148,6 +148,15 @@ Other lines are computer responses::
 	Thank you for playing.  Good bye.
 
 Think and discuss how to organize things first.
+
+The different parts of a multi-class project interact through their public methods.
+Remember the two roles of writer and consumer.  The consumer needs good documentation
+of how to use (not implement) these methods.  These methods that allow the
+interaction between classes provide the *interface* between classes.  Unfortunately 
+"interface" is used in more than one way.  Here it means publicly specified ways
+for different parts to interact.
+
+As you think how to break this game into parts, also think how the parts interact.
 
 In the projects in :file:`CSProj/CSProj1` is code that generated the exchange above.
 
