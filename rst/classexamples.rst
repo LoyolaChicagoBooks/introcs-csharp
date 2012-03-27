@@ -66,32 +66,39 @@ You still need a static main method to first create the Game object.  You could 
 the user for the value for ``big`` to send to the constructor.  Once you have an object, 
 you can call *instance method* ``Play``.  What about parameters? What needs to change?
 
-Animal Exercise
-~~~~~~~~~~~~~~~~~
+Animal Class Lab
+------------------
 
-Create a simple class of for Animal:
+**Objectives**:
+Write from scratch a simple (silly) class, with constructor and methods,
+including a ToString Method, and a separte testing class.
 
-- An animal has a name and a gut.  In our version the gut is a List of strings 
+
+#. Create a simple class Animal:
+
+- An Animal has a name and a gut.  In our version the gut is a List of strings 
   describing the contents, in the order eaten.  
   A newly created Animal gets a name
-  passed as a parameter to the constructor, while the gut starts off empty.
+  passed as a parameter to the constructor, while the gut starts off *empty*.
 
-- An Animal has a Greet method, so an animal "Froggy" would say (print) 
+- An Animal has a Greet method, so an animal "Froggy" would say (that is, print) 
     
      Hello, my name is Froggy.
 
-- An Animal can Eat (a string naming the food), adding the food to the gut.
+- An Animal can Eat a string naming the food, adding the food to the gut.
 
 - An Animal can Excrete (removing and printing what was *first* in the gut List). 
   Recall the method ``RemoveAt``.
   
-- A ToString method (remember the override keyword).  For example, it would return for Froggy: 
+- A ToString method (remember the override keyword).  For example, it would return the
+  string for Froggy: 
   
      "Animal: Froggy"
      
-- All the methods that print should be void.  Which need parameters?
+- All the methods that print should be void.  Which need parameter, or what type?
 
-Write a testing program to create a couple of Animals and test all the code.
+#. Write a class with a Main method, testing Animal: 
+   create a couple of Animals and visibly test all the code.
 
 
 Planning A Class Structure
