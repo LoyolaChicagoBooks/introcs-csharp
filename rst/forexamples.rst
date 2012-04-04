@@ -122,19 +122,34 @@ and we generate the neater::
 
 We are using two new formatting forms:
 
-   | ``{``\ index``,``\ fieldWidth``}``  and 
-   | ``{``\ index``,``\ fieldWidth``\ ``:``\F``\ #``}``   
+   | ``{``\ index\ ``,``\ fieldWidth\ ``}``  and 
+   | ``{``\ index\ ``,``\ fieldWidth\ ``:F``\ #\ ``}``   
 
 where index, fieldWidth, and # are replaces by specific integers.
 The new part with the comma (not colon) and fieldWidth, sets the *minimum*
 number of columns used for the substituted string, padding with blanks as needed.
 
-If the string to be inserted is wider than the fieldWidth, then the whole string is
-inserted, ignoring the fieldWidth.  Example::
+.. warning::
+   There is a *special* language for the
+   characters between the braces in a format string.  
+   The rules are different than in regular C# code, where
+   comma and colon are symbols, 
+   and the parser allows *optional whitespace* around them.
+   This is *not* the case inside the braces of a format string:
+   There cannot be a space after the colon or before the comma.
+   Some blanks are legal; some blanks lead to exceptions being thrown, 
+   and other positions for blanks 
+   just silently give the wrong format. 
+   
+   The safest approach for a programmer is just to have
+   *no* blanks between the braces in a format string.
+
+*If the string to be inserted is wider than the fieldWidth,* 
+then the *whole* string is inserted, *ignoring* the fieldWidth.  Example::
 
     string s = "stuff";
     Console.WriteLine("123456789");
-    Console.WriteLine("{0, 9}\n{0, 7}\n{0, 5}\n{0, 3}", s);
+    Console.WriteLine("{0,9}\n{0,7}\n{0,5}\n{0,3}", s);
     
 generates::
 
@@ -144,8 +159,8 @@ generates::
     stuff
     stuff
 
-filling 9, 7, and then 5 columns, by padding with 4, 2, and 0 blanks.  The
-last line sticks out past the proposed 3-column fieldWidth.
+filling 9, 7, and then 5 columns, by padding with 4, 2, and 0 blanks.  
+*The last line sticks out past the proposed 3-column fieldWidth.*
 
 One more thing to add to our power table is a heading.  We might want::
 
@@ -467,7 +482,7 @@ integer embedded in the format string, but our number of digits in n is *variabl
 Here is a good trick:  Construct the format string inside the program.  
 We can do that with *another* format string.  To get the  format for a 
 number and an extra space
-mod 7, we want format string "{0, 1} ", but for mod 11, we want "{0, 2} ".  We can 
+mod 7, we want format string "{0,1} ", but for mod 11, we want "{0,	2} ".  We can 
 create a format string to substitute into the place where the 1 or 2 goes.  
 This 1 or 2 to substitute is the number of characters in n as a string, 
 given by ``("" + n).Length``.
@@ -478,7 +493,7 @@ Recall the explicit braces are doubled.  Putting this all together, we can
 create our main format string with::
 
     int numberWidth = ("" + n).Length;
-    string colFormat = string.Format("{{0, {0}}} ", numberWidth);
+    string colFormat = string.Format("{{0,{0}}} ", numberWidth);
 
 The whole function code is below and in example :file:`ModMultTable.cs`.
 
