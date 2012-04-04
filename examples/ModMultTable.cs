@@ -19,7 +19,7 @@ class ModMultTable
    static void MultTable(int n)
    {
       int numberWidth = ("" + n).Length;
-      string colFormat = string.Format("{{0, {0}}} ", numberWidth);
+      string colFormat = string.Format("{{0,{0}}} ", numberWidth);
       string headerFormat = colFormat + "| ";
       // heading
       Console.Write(headerFormat,"*");
