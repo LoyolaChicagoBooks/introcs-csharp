@@ -1,5 +1,36 @@
 ﻿COMP 170 Categories
 
+revisions:
+	code:
+		nant, one project per directory under source/
+		IntroCS namespace everywhere
+		.build file generator
+		.sln file generator
+		consistenty use of Stub in name of skeletons
+	
+	notes:
+		summary at the end of each chapter
+		text not code blocks where appropriate
+		:file: consistent.  
+		What C# names with `` ?
+		more index
+		fix unintelligible triple index items
+		index names consistent (not Format and format)
+		more exercises
+		kill todo's
+		syntax intro considstently given, consistent notation
+		music output?
+		integrate CS examples better
+		new name for notes
+		jEdit tool notes
+
+		eliminate Miles:
+		   *our* CS intro
+		   *our* intro example
+		   file intro
+   
+	style:
+		? new css ... style?
 
 A - Arithmetic Calculator
        / essential primitive types : mostly ref to Miles at this pont
@@ -12,7 +43,7 @@ B - Strings
       x  int.Parse(“100”)
       x  formatting output
       x  basics methods in string lab and intro
-         more methods
+      X  more methods
 
 C - Parameterless Functions   Done
       x  reading input in Main
@@ -29,7 +60,7 @@ E - Loops
      x  do-while, while, for, foreach
      p   testing/validating I/O
      x   digital in whole number
-        ints, fixed decimal 
+     x   ints, fixed decimal 
      x   gcd using brute force methods (up/down)
      x   basic Euclid (recursive) -> forward reference
      x   learning to increment/decrement by > 1

@@ -144,3 +144,27 @@ your code.  There is less jumping around.
 Aim for strong cohesion, clear separation of concerns, and loose coupling.  Together 
 they make your code clearer, easier to modify, and easier to debug.
 
+IGame Interface Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On a much smaller scale than the project, this exercise offers you
+experience 
+writing classes implementing and using an interface
+
+1. Copy project :file:`IGame/IGame` to your space or to a different name.
+
+2. Look at the IGame interface in :file:`IGame.cs`. Then look at :file:`AdditionGame.cs`, 
+   that implements the interface. See how a new ``AdditionGame`` can be added to list of
+   ``IGame``\ 's. Run :file:`PlayGames.cs`. Randomly choosing a game when there is
+   only one to choose from is pretty silly, but it gives you a start on a
+   more elaborate list of games.  The ``PopRandom`` method is a good general
+   model for choosing, removing, and returning a random element.
+
+3. Write several very simple classes implementing the IGame interface,
+   and modify Main in PlayGames.cs to create and add a new game of each
+   type. (Test adding one at a time.)
+   
+   One such game to create with little more work would be a variation on
+   instance based Guessing Game discussed earlier.  You need to make slight
+   modifications.  You could make Play return the opposite of the number of guesses, 
+   so more guesses does generate a worse score.

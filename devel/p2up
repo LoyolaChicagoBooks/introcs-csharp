@@ -2,6 +2,6 @@
 
 cd ../projects
 rm ../projects.zip
-zip ../projects.zip * */* */*/* */*/*/* -x *.exe *.exe.* *.dll *.pidb bin/ bin/* bin/*/*
+zip ../projects.zip * */* */*/* */*/*/* -x *.exe *.exe.* *.dll *.pidb */*/bin/ */*/bin/Debug/ */*/bin/Debug/*
 
 cd ../devel
