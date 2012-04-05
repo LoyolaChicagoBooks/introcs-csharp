@@ -325,7 +325,7 @@ One submission of the group work is due one hour before the final presentations.
    file name
 #. Overall project and process review in a document named
    :file:`projectReview.rtf`.  
-   A `template is already in the skeleton
+   A template is already in the skeleton
    project directory.
 
    -  The first section should be Changes. So the instructor does not 
