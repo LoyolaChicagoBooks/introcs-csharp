@@ -12,9 +12,9 @@ While our last example, Rational, is in fact a very practical
 use of object-oriented programming, this is somewhat more artificial,
 but hopefully informative, particularly with the transformation.
 Here is a procedural version, project file 
-:file:`Game\StaticGame\GuessGame.cs`
+:file:`Game/GameStatic/Game.cs`
 
-.. literalinclude:: ../projects//Game/GameStatic/Game.cs
+.. literalinclude:: ../projects/Game/GameStatic/Game.cs
    :start-after:  chunk
    :end-before: chunk
 

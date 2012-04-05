@@ -241,7 +241,7 @@ the same:
 We can add a newline after each of these is printed.  This requires a test::
 
    for (int i = 32; i < 127; i++) {
-      Console.Write("{0, 3} {1}  ", i, (char)i);
+      Console.Write("{0,3} {1}  ", i, (char)i);
       if (i % 8 == 7) {
          Console.WriteLine();
       }
