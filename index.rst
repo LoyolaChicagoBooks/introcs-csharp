@@ -23,6 +23,10 @@ all the C# example programs and projects that go with the notes.
 To quickly browse and download individual files in the examples and projects folders, go to:
    
    http://bitbucket.org/gkthiruvathukal/introcs-csharp/src.
+   
+The change history is at
+ 
+   http://bitbucket.org/gkthiruvathukal/introcs-csharp/changesets
 
 .. old
    For a quick look, you may also 
