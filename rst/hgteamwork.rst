@@ -154,12 +154,20 @@ changes of interest (and decide between them).
 
 The second option basically results in two copies of the file. You can
 open up your editor to compare the files side-by-side or use a tool
-like ``diff`` on Unix, which gives a side-by-side diff::
+like ``diff`` on Unix or a Mac, which gives a side-by-side comparison::
 
    diff -y Hello.cs MyHello.cs
 
-This tool is not always available everywhere (especially in Windows
-labs) but is one that comes preinstalled on both Windows and OS X.
+(You will need to expand the width of your console window to see clearly!)
+
+This tool is not built into Windows.  In the Windows lab, you can use the
+much less visually helpful  ::
+
+   fc Hello.cs MyHello.cs
+
+to show differing segments from each file.
+You can also download difference display tools for Windows that are more 
+visually helpful.  One of many choices is at http://winmerge.org.
 
 E-mail Notifications
 ----------------------
