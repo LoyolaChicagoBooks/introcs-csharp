@@ -13,7 +13,6 @@ Introductory Programming in C#
    :maxdepth: 2
    :numbered:
 
-   offerings
    context
    data
    functions
