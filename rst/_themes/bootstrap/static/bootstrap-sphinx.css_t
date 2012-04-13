@@ -29,41 +29,19 @@ body {
 	margin-left: 0%;
 }
 
-div.sphinxsidebarwrapper {
-    padding: 0;
+.sphinxsidebar .nav-list {
+    padding-right: 0px;
 }
 
 div.sphinxsidebar {
     margin: 0;
     padding: 0.5em 15px 15px 0;
-    width: {{ theme_sidebarwidth|toint - 20 }}px;
+    width: {{ theme_sidebarwidth|toint - 30 }}px;
     font-size: 1em;
     text-align: left;
 }
 
-/*div.sphinxsidebar h3, div.sphinxsidebar h4 {
-    margin: 1em 0 0.5em 0;
-    font-size: 1em;
-    padding: 0.1em 0 0.1em 0.5em;
-    color: white;
-    border: 1px solid #86989B;
-    background-color: #AFC1C4;
-}
 
-div.sphinxsidebar h3 a {
-    color: white;
-}
-
-div.sphinxsidebar ul {
-    padding-left: 1.5em;
-    margin-top: 7px;
-    padding: 0;
-    line-height: 130%;
-}
-
-div.sphinxsidebar ul ul {
-    margin-left: 20px;
-}*/
 /* Footer -------------------------------------------------- */
 footer {
   margin-top: 35px;
