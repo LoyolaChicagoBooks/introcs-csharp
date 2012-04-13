@@ -37,12 +37,12 @@
 {# Override sidebar() macro inherited from basic/layout.html #}
 {%- macro bootstraop_sidebar() %}
       {%- if render_sidebar %}
-      <div class="well sphinxsidebar">
+      <div class="well bootstrapsidebar">
           {%- block sidebartoc %}
           <ul class="nav nav-list">
             <li class="nav-header">
               <a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></li>
-          {{ toc }}
+          <li>{{ toc }}</li>
           {%- endblock %}
           {%- block sidebarrel %}
           {%- if prev %}

@@ -25,15 +25,22 @@ body {
 	padding-top:50px;
 }
 
-.sphinxsidebar {
+.bootstrapsidebar {
 	margin-left: 0%;
 }
 
-.sphinxsidebar .nav-list {
+.bootstrapsidebar .nav-list {
     padding-right: 0px;
 }
+.bootstrapsidebar ul {
+    list-style:none;
+}
 
-div.sphinxsidebar {
+.bootstrapsidebar ul ul {
+    margin-left:10px;
+}
+
+div.bootstrapsidebar {
     margin: 0;
     padding: 0.5em 15px 15px 0;
     width: {{ theme_sidebarwidth|toint - 30 }}px;
