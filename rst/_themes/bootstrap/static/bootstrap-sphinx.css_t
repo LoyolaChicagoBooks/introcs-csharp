@@ -22,6 +22,7 @@ body {
 
 /* Sidebar -------------------------------------------------- */
 div.bootstrapsidebar {
+    position: fixed;
     margin: 0;
     padding: 0.5em 15px 15px 0;
     width: {{ theme_sidebarwidth|toint - 30 }}px;
