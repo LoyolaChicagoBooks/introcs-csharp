@@ -6,27 +6,63 @@
 	<array>
 		<dict>
 			<key>filename</key>
-			<string>globaltoc.html</string>
+			<string>theme.conf</string>
+			<key>lastUsed</key>
+			<date>2012-04-14T21:37:16Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>layout.html</string>
+			<string>../../rst/conf.py</string>
 		</dict>
 		<dict>
-			<key>filename</key>
-			<string>localtoc.html</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>filename</key>
+					<string>static/bootstrap-sphinx.css_t</string>
+				</dict>
+			</array>
+			<key>expanded</key>
+			<true/>
+			<key>name</key>
+			<string>Static</string>
 		</dict>
 		<dict>
-			<key>filename</key>
-			<string>relations.html</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>searchbox.html</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>sourcelink.html</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>filename</key>
+					<string>globaltoc.html</string>
+					<key>lastUsed</key>
+					<date>2012-04-14T21:37:13Z</date>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>layout.html</string>
+					<key>lastUsed</key>
+					<date>2012-04-14T21:37:02Z</date>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>localtoc.html</string>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>relations.html</string>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>searchbox.html</string>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>sourcelink.html</string>
+				</dict>
+			</array>
+			<key>expanded</key>
+			<true/>
+			<key>name</key>
+			<string>Templates</string>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
