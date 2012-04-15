@@ -10,6 +10,12 @@ html, body {
 body {
     padding-top:60px;
 }
+pre {
+    overflow:auto;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+}
 
 .wrapper {
     min-height: 100%;
@@ -18,6 +24,29 @@ body {
 }
 .push {
     height: 112px;
+}
+/* jFontSize Buttons ------------------------------------------*/
+#jFontSize-Buttons {
+    position: fixed;
+}
+.jfontsize-button {
+    background: white;
+    font: bold 12px arial;
+    padding: 3px;
+    border: solid 1px #ccc;
+}
+ 
+.jfontsize-button:hover {
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    border: solid 1px #333;
+}
+ 
+.jfontsize-disabled, .jfontsize-disabled:hover {
+    color: #aaa;
+    border: solid 1px #eee;
+    background: #eee;
 }
 
 /* Sidebar -------------------------------------------------- */
