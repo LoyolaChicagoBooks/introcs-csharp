@@ -5,8 +5,8 @@
 
 
 
-Introductory Programming in C#
-==============================
+Introduction to Computer Science in C#
+=======================================
 
 
 .. toctree::
