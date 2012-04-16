@@ -29,6 +29,7 @@ Introduction to Computer Science in C#
    classes
    interfaces
    testingclasses
+   acknowledgments
    changelog
    todolist
 
