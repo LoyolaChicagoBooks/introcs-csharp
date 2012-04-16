@@ -2,6 +2,7 @@
 
 # assume start in devel dir
 cd ../rst
+make clean
 make html
 make latexpdf
 make epub
