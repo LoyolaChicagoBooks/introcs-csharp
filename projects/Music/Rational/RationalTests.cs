@@ -8,6 +8,7 @@ namespace Music
    [TestFixture()]
 	public class RationalTests
    {
+      // snip-ConstructorTest-begin
       [Test()]
       public void ConstructorTest()
       {
@@ -18,7 +19,9 @@ namespace Music
          Assert.IsTrue(r.GetNumerator() == 125);
          Assert.IsTrue(r.GetDenominator() == 1);
       }
+      // snip-ConstructorTest-end
 
+      // snip-ParseTest-begin
       [Test()]
       public void ParseTest()
       {
@@ -30,7 +33,9 @@ namespace Music
          r = Rational.Parse("1.125");
          Assert.IsTrue(r.CompareTo(new Rational(9, 8)) == 0);
       }
+      // snip-ParseTest-begin
 
+      // snip-BasicArithmeticTest-begin
       [Test()]
       public void BasicArithmeticTests() {
          Rational r, r1, r2;
@@ -55,6 +60,9 @@ namespace Music
          r = r1.Negate();
          Assert.IsTrue(r.CompareTo(new Rational(-47, 64)) == 0);
       }
+      // snip-BasicArithmeticTest-end
+
+      // snip-BasicComparisonTests-begin
 
       [Test()]
       public void BasicComparisonTests() {
@@ -65,7 +73,9 @@ namespace Music
          Assert.IsTrue(r2.CompareTo(r1) > 0);
          Assert.IsTrue(r2.CompareTo(r3) == 0);
       }
+      // snip-BasicComparisonTests-end
 
+      // snip-BasicConversionTests-begin
       [Test()]
       public void ConversionTests() {
          Rational r1 = new Rational(3, 6);
@@ -77,6 +87,8 @@ namespace Music
          Assert.IsTrue(r2.ToDouble() == -0.5);
          Assert.IsTrue(r1.ToString().Equals("1/2"));
       }
+      // snip-BasicConversionTests-end
+
    }
 }
 
