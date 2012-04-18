@@ -9,7 +9,7 @@ namespace IntroCS
    {
       private static Random rand = new Random();
 
-      static IGame PopRandom(List<IGame> g)
+      public static IGame PopRandom(List<IGame> g)
       {
          int n = g.Count;
          int i = rand.Next(n);
@@ -29,10 +29,10 @@ namespace IntroCS
            
            
          int totScore = 0;
-         while (games.Count > 0 && Input.Agree("Want a game? ")) {
+         do {
             IGame g = PopRandom(games);
             totScore += g.Play();  // use numerical result from the game
-         }
+         } while (games.Count > 0 && Input.Agree("Want a game? "));
          Console.WriteLine("Thanks for Playing!");
          Console.WriteLine("Your total score is " + totScore);
       }
