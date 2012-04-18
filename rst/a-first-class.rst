@@ -25,12 +25,33 @@ number as *one* entity.  A way to do that is to create a ``class``.
 We will call our class ``Rational``.
 
 An alternate way we consider later, that has most of the same properties, 
-is a ``class`` defining a new kind of object.
+is a ``struct`` defining a new kind of object.
+
+The idea of creating an object opens new ground for managing data.  
+Thus far we have stored data as local variables, and we have called functions,
+with two ways to get information in and out of functions:
+
+#. In through parameters and out through returned data.
+#. Directly via the user: in through the keyboard and out to the screen.
+
+We have stored and passed around built-in types of object using this model.  
+
+Now we have alternatives for storing and accessing data.  
+Now we have the idea of an object that has *internal* state
+(like a rational number with a numerator and a denominator).  This state is *not* 
+stored in local variables and does *not* need to be passed through parameters.
+
+This is quite a shift.
+Do not take it lightly.  
+
+An instance of a class, like a particular rational number, is a container for data,
+its internal state.  Pay careful attention to this new location for data and the new ways
+of interacting with it.
 
 .. index:: 
    double: OOP; constructor
 
-We can create a new class with the ``new`` syntax.
+We can create a new object with the ``new`` syntax.
 We can give parameters defining the state of the new object,
 most obviously, a numerator and denominator, so we can plan that ::
 
@@ -74,12 +95,23 @@ One complication with fractions is that there is more than one representation
 for the same number.  As in grade school we will always reduce to
 *lowest terms*.
 
+We are using the same object oriented notation that we have for many other classes:
+*Calls to instance methods are always attached to a specific object.*
+So far that has always been
+the object of
+
+   *object*\ ``.``\ *method*\ ``(``  ... ``)``
+   
+So far we have been thinking and illustrating how we would like objects in this
+Rational class to look like and behave from the *outside*.  We could be
+describing another library class.  Now, for the first time, we start to delve inside,
+to the code and concepts needed to make this happen:
+
+Some of the parts are harder than 
+others.  We start with the most basic ones.  First we need a ``class``.
+
 Class Syntax
 --------------
-
-Much of the rest of this section will discuss how we generate 
-code to make this vision happen.  Some of the parts are harder than 
-others.  We start with the most basic ones.  First we need a ``class``.
 
 Our code is nested inside ::
 
@@ -90,7 +122,8 @@ Our code is nested inside ::
     
     }   
        
-This is the same wrapper we have used for our Main programs!  Before everything was
+This is the same sort of wrapper we have used for our Main programs!  Before everything 
+inside was
 labeled ``static``.  Now we see what happens with the ``static`` keyword omitted....
 
 .. index::
@@ -110,6 +143,7 @@ an *instance variable*, that is the particular data for an *individual* Rational
 number.
 
 We declare these *in* the class and *outside* any method declaration.  
+
 They are *fields* of the class.  As we will
 discuss more in terms of safety and security, we add the word "private" at the beginning::
 
@@ -122,14 +156,22 @@ discuss more in terms of safety and security, we add the word "private" at the b
     
     }   
 
-You also see that we are lazy and abbreviate the long words numerator and denominator 
+You also see that we are lazy in this example,
+and abbreviate the long words numerator and denominator 
 in our names.  
 
 It is important to distinguish *instance* variables of a class and *local* variables.
 While a local variable is only accessible inside the one method where it was declared,
-the class fields  ``num`` and ``denom`` are in scope *anywhere inside the class code*,
-as long as the object exists.
+the class fields  ``num`` and ``denom`` are in scope 
+*anywhere inside the class code for constructors and instance methods*,
+as long as the object is in use.  This is a totally new situation.  We repeat:
 
+.. note::
+   *Instance* variable have a completely different lifetime and scope from *local* variables.
+   An object and its instance variables, persist from the time a new object is created
+   with ``new`` for as long
+   as it remains referenced in the program.
+   
 We need to get values into our field variables.  They describe the state of our Rational.
 
 We have *used* constructors for built-in types.  Now for the first time we *create* one.
@@ -145,7 +187,9 @@ kind of object constructed, the class name (Rational here),
 and it has *no return type* (and *no* ``static``).  Implicitly you
 are creating the kind of object named, a **Rational** in this case.
 The constructor can have parameters like a regular method.  We will certainly
-want to give values to the numerator and denominator.  We could use just ::
+want to give a state to our new object.
+that means giving values to its numerator and denominator.  Recall we are want to
+store this state in instance variables ``num`` and ``denom``.  We could use just ::
 
       public Rational(int numerator, int denominator)
       {
@@ -156,18 +200,19 @@ want to give values to the numerator and denominator.  We could use just ::
 While the local variables in the formal parameters disappear after the constructor terminates,
 we want the data to live on as the state of the object.
 In order to remember state after the constructor terminates, 
-we must make sure the information gets into the instance variables of the class.
+we must *make sure the information gets into the instance variables* for the object.
 This is the basic operation of most constructors:  Copy desired
 parameters in to initialize the state in the fields.  
 
-Note that we are not using full object notation with an object reference and a
+Note that we are *not* using full object notation with an object reference and a
 dot, as we have when referring to a field in a different (so far always built-in)
 class, like ``arrayObject.Length``.  
 
 C# allows a shorthand notation inside a constructor or instance method 
 (discussed below):
 The instance variable names used without an object reference and dot refer to the 
-*current* instance.  In this case it is the instance being created with the constructor.
+*current* instance.  Remember there is *always* a current object.  In a constructor,
+it is the object being constructed.  
 
 There is actually a bit more to do in the constructor than we showed:  
 Validate the data.  The actual constructor is 
@@ -176,13 +221,13 @@ Validate the data.  The actual constructor is
    :start-after: constructor chunk
    :end-before: chunk
 
-The last line calls a helping method, ``normalize``, to make sure the denominator is not 0,
+The last line calls an instance method, ``normalize``, to make sure the denominator is not 0,
 and to reduce the fraction to lowest terms.
 
-Like with the instance variable there is not the full object notation: object.method.
+Like with the instance variable there is not the full object notation: object.method().
 Again C# is allowing a shorthand:  With the explicit object reference missing, the 
-assumption is that the method be applied to the current object, the one just being
-intialized in this constructor.
+assumption is that the method be applied to the current object, in this case that is 
+the one just being initialized in this constructor.
 
 .. index::
    double: OOP; instance method
@@ -197,16 +242,56 @@ Look at the heading for ``normalize``:
    :start-after: normalize chunk
    :end-before: chunk
 
-You see that there is *no* static, so the method is 
-attached to the current instance implicitly.
+You see that there is *no* static in the method heading, so the method is 
+attached to the current instance implicitly.  
+It can only be called when there *is* a current instance.
 Since the method only deals with the instance variables, no further
 parameters need to be given explicitly.
 
-(It is also declared ``private`` - it is a helping method used only, privately,
+(It is also declared ``private`` - it is a helping method only used privately,
 inside the class.)
 
 The method uses the :ref:`gcd` function, discussed in the ``while`` loop section,
 to reduce the Rational to lowest terms.
+
+To summarize where there is a current object that can access its private instance variables:
+
+#.  In a constructor, referring to the object being created.
+#.  When some method methodName is called with explicit dot notation, 
+    ``someObject.methodName()``, then it is acting on someObject and its instance variables.
+#.  When a constructor or instance method (no ``static``) is called for the class,
+    there must already be a current object.  If that constructor or instance method calls a
+    further instance method inside the same class, without using dot notation, 
+    then the further method has the *same* current object.
+
+.. warning::
+   These are the only places where there is a current object.  Inside a ``static`` method there
+   is *no* current object.  A common compiler error is to try to have a static method call
+   an instance method without dot notation for a specific object.  The shorthand notation
+   without an explicit object reference and dot cannot be used, because there is no
+   current object to insert implicitly::
+   
+	   public void AnInstanceMethod() 
+	   {
+		 ...
+	   }
+	   
+	   public static void AStaticMethod()  // no current object
+	   {
+		  AnInstanceMethod();  // Compiler error caused
+	   }
+	
+   On the other hand, there is no issue when
+   an instance method calls a static method.
+   
+The current object is implicit inside a constructor of instance method definition,
+but it can be referred to explicitly.  It is called ``this``.  We will see that there are places
+where there is reason for an object to refer to itself explicitly, and use ``this`` as the object
+name.
+
+In these places where instance variables are accessible, you have an extra way of getting 
+data in and out of a method:  Reading or setting instance variables.  
+The simplest methods do nothing but that....
 
 .. index::
    double: OOP; getter
@@ -217,7 +302,7 @@ Getters
 We have chosen to make our Rationals immutable.  The ``private`` in front
 of the field declarations was important to keep code outside the
 class from messing with the values.  On the other hand we do want
-others to be able to inspect the numerator and denominator,
+others to be able to *inspect* the numerator and denominator,
 so how do we do that?  
 
 Use **public methods**. 
@@ -229,7 +314,7 @@ can be used from outside the class, we can simply code
    :start-after: numerator chunk
    :end-before: chunk
 
-These methods allow one-way communication of the values out of the class.  
+These methods allow one-way communication of the numerator value out of the class.  
 
 Note again that there is no ``static``.  The field value for the *current*
 Rational is returned.
@@ -307,10 +392,11 @@ All the built-in type can be concatenated into strings with the '+' operators.
 We would like that behavior with our custom types, too.  How can the compiler
 know how to handle types that were *not invented* when the compiler was written?
 
-The answer is to have common features commmon to all objects.  Any object has a ``ToString``
+The answer is to have common features among all objects.  Any object has a ``ToString``
 method.  The default version supplied by the system is not very useful for an object 
 that it knows nothing about!  To define your own version, one that knows how you have defined
-your type, and to have that version used *in place of* the default,
+your type with its own specific instance variables, 
+and to have that version used *in place of* the default,
 you need to *override* the default.  To emphasize the change
 in meaning, the word ``override`` must be in the heading:
 
