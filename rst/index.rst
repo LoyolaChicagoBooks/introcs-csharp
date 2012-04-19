@@ -28,7 +28,7 @@ Introduction to Computer Science in C#
    dictionaries
    classes
    interfaces
-   testingclasses
+   testing
    acknowledgments
    changelog
    todolist
