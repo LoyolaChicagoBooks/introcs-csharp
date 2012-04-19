@@ -38,9 +38,8 @@ namespace Music
          Assert.IsTrue(r.CompareTo(new Rational(123)) == 0);
          r = Rational.Parse("1.125");
          Assert.IsTrue(r.CompareTo(new Rational(9, 8)) == 0);
-         Assert.IsTrue(r.ToString().Equals("9/8"));
       }
-      // snip-ParseTest-end
+      // snip-ParseTest-begin
 
       // snip-BasicArithmeticTest-begin
       [Test()]
@@ -92,7 +91,7 @@ namespace Music
          Assert.IsTrue(r2.ToDecimal() == -0.5m);
          Assert.IsTrue(r1.ToDouble() == 0.5);
          Assert.IsTrue(r2.ToDouble() == -0.5);
-
+         Assert.IsTrue(r1.ToString().Equals("1/2"));
       }
       // snip-BasicConversionTests-end
 
