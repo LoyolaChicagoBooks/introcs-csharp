@@ -19,7 +19,7 @@ class CharLoop
    static void OneCharPerLine(string s)
    {
       int i = 0;
-      while (i < s.length) {
+      while (i < s.Length) {
          Console.WriteLine(s[i]);
          i++;
       }

@@ -12,11 +12,11 @@ class StringManip
         Console.WriteLine();
         // to embed a quote inside a string constant, precede it by backslash(\).
         Console.WriteLine("Let us do some \"cutting and pasting\" of strings!");
-        string str3 = replaceFirst(str1, "best", "worse");
+        string str3 = replaceFirst(str1, "best", "worst");
         Console.WriteLine("str3 = str1 with best => worst: " + str3);
-        string str4 = replaceFirst(str2, "best", "worse");
+        string str4 = replaceFirst(str2, "best", "worst");
         Console.WriteLine("str2 with best => worst: " + str4);
-        string str5 = replaceFirst(str3, "worse", "best");
+        string str5 = replaceFirst(str3, "worst", "best");
         Console.WriteLine("str3 with worst => best: " + str5);
     }
     

@@ -46,9 +46,9 @@ The ``while`` loop condition needs to allow indices through
 ``s.length - 1``.  We could write a condition with ``<=`` or more
 concisely::
 
-    while (i < s.length) {
+    while (i < s.Length) {
 
-In the bode of the loop, the main thing is to print the next character,
+In the body of the loop, the main thing is to print the next character,
 and the next character is ``s[i]``::
 
     Console.WriteLine(s[i]);
