@@ -192,13 +192,13 @@ There are several ways to check if a character is a digit.  We could use the
 ``Contains`` idiom from above, but here is another option:
 The codes for digits are sequential,
 and since characters are technically a kind of integer, we can 
-compare:  ``s[i]`` is a digit if it is in the range from ``'0'``
+compare:  The character ``s[i]`` is a digit if it is in the range from ``'0'``
 to ``'9'``, so the condition can be written::
 
     '0' <= s[i] && s[i] <= '9'
     
 Similarly  the condition ``s[i]`` is not a digit, can be written 
-negating the condition above or using the sam ideas as when we 
+negating the condition above or using the same ideas as when we 
 considered out of range values::
 
     s[i] < '0' || s[i] > '9'
