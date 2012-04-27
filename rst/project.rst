@@ -263,8 +263,10 @@ how much your plans matched reality.
    and who is it assigned to? The report writer is responsible to get a
    clear statement from each team member.
 
-Intermediate deliverables, due in Blackboard Thursday April 19
---------------------------------------------------------------
+Intermediate deliverables, as Intermediate folder in Bitbucket 
+------------------------------------------------------------------------------------
+
+This folder should be in place on Thursday April 19, right under your project's root folder.
 
 -  Include parts 2-4 listed below under Final Deliverables, but for an
    intermediate version that runs, and does *not* need to have the goal
@@ -304,13 +306,16 @@ Final Deliverables
 
 One submission of the group work is due one hour before the final presentations.
 
-#. Zip file containing parts 2-5. Be sure the zip
-   file name is the team abbreviation, and a suffix to distinguish
-   versions. The final submissions will be accessible to the whole class
+#. All files listed in parts 2-5 in a folder FinalProject in BitBucket,
+   right under the root of your project.
+   Also include a zip file, named with your team abbreviation, 
+   containing a Windows executable with (a separate copy of) any other 
+   image and data files needed.  Test to make sure you can
+   unzip and run the executable. 
+   The final submissions will be accessible to the whole class
    -- so we can all play them!
 #. Source code. You can name the classes appropriately
-   for the content of your game. Only the zip file needs to include the
-   team name.
+   for the content of your game. 
 #. User instructions. These should be partly built into the program. The
    most extensive documentation may be in a document file separate from
    the program, if you like. (Plain text, MS Word, Rich text (rtf), or
@@ -341,7 +346,7 @@ One submission of the group work is due one hour before the final presentations.
    -  How could we administer this project better? What particularly
       worked about the structure we set up?
 
-#. A 10-15 minute presentation of your work to the class in final exam
+#. A 10 minute presentation of your work to the class in final exam
    period. What would you want to hear about other projects? (Say it
    about yours.) What was the overall idea? What was the overall
    organization? What did you learn that was beyond the regular class
@@ -356,7 +361,7 @@ and check with the whole team to make sure your collection is complete.
 **Your Assessment of Individuals in the Group**:
 
 This is due 10 minutes after the final class presentation period,
-from each team member, *independently*.  
+from each team member, *independently*, in Blackboard.  
 
 Change the name of the file in the skeleton project,
 :file:`Indiv-Mem-Assessment.rtf` to your
