@@ -41,9 +41,9 @@ That is our initialization.  We need a ``while`` loop continuation
 condition.
 For the 3-character string example, the last index above is 2.
 In general we want *all* the characters.  Recall the index of the last 
-character is the length - 1, or with our parameter``s``, ``s.length - 1``
+character is the length - 1, or with our parameter ``s``, ``s.Length - 1``
 The ``while`` loop condition needs to allow indices through 
-``s.length - 1``.  We could write a condition with ``<=`` or more
+``s.Length - 1``.  We could write a condition with ``<=`` or more
 concisely::
 
     while (i < s.Length) {
@@ -184,7 +184,7 @@ This variation is in example ``Vowels2.cs``.
 
 Consider a variation, determining if *all* the characters
 in a string are vowels.  We could work on that, but it is 
-nit very useful.  Instead let us consider if all the 
+not very useful.  Instead let us consider if all the 
 characters are digits.  This is a true-false question, so function
 to determine this would return a Boolean result:
 
