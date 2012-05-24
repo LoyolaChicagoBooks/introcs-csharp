@@ -1,0 +1,17 @@
+This is quick documentation for Andy and Bob:
+
+We now have a generic NAnt file for all one-off examples in this folder.
+
+By way of example, to compile the birthday1.cs example to birthday1.exe,
+do this:
+
+nant -D:program=birthday1
+
+To clean any example you no longer want, do this:
+
+nant -D:program=birthday1 clean
+
+
+At some point, we will allow build.dir to be specified. The current script
+will place the build targets in the same directory as the sources, which 
+is probably easiest for students.
