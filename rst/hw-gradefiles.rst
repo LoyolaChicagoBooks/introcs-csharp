@@ -10,17 +10,17 @@ In this assignment, we're going to begin taking steps to help you
 achieve greater *independence* when it comes to programming. This
 means (among other things) that you will be given what is commonly
 known as a specification. In software development--and in the business
-world in general, it is customary to capture a set of *business
-requirements* in what is commonly known as a *requirements
-specification* document. While what you read here will be much more
-concise, we want you to become familar with requirements-driven
+world in general, it is customary to capture a set of 
+*business requirements* in what is commonly known as a 
+*requirements specification* document. While what you read here will be much more
+concise, we want you to become familiar with requirements-driven
 thinking, without which many real-world software projects fail.
 
 After presenting the set of requirements, we will give you some hints
 for how to *implement* the requirements. These hints may or may not
-prove compltely helful to you, and you are also invited to come up
+prove completely helpful to you, and you are also invited to come up
 with your own solutions. As we inch closer to the semester project,
-you're going to want touse your imagination to create a good solution
+you're going to want to use your imagination to create a good solution
 to a problem.
 
 
@@ -36,10 +36,9 @@ summary reports could be generated.
 
 In this assignment, the problem we are trying to solve is to take all
 of the *raw* grade data from one or more student files and prepare a
-*grade report* for each student, along with a *summary report* for the
-entire class.
+*summary report* with a line for each student.
 
-Although we could do all of what we're decribing here with a
+Although we could do all of what we're describing here with a
 *spreadsheet*, the point is to show how we can use C# to read in a
 simplified form of comma-separated data, process it, and do some
 general-purpose calculations on the data.
@@ -50,7 +49,8 @@ Using C#
 We'll be making use of a number of C# features (some old, some new) in
 this homework:
 
-- decisions, loops, strings, and functions (basically all of our notes, chapters 1-5)
+- decisions, loops, strings, and functions 
+  (basically all of our notes, chapters 1-5)
 - files
 - arrays
 
@@ -112,11 +112,11 @@ Requirements
 
  
 #. There will be a secondary file for each student, 
-   named after the student id and the course abbreviation and ".dat". 
+   named after the student id and the course abbreviation and ".data". 
    For example,
    George's scores will be kept in a file named
-   ``P34323243Comp170.dat``. Andy's scores are in
-   ``P87483743Comp170.dat``. Each record (one per input line will have the
+   ``P34323243Comp170.data``. Andy's scores are in
+   ``P87483743Comp170.data``. Each record (one per file line will have the
    following structure:
 
       Category letter, Item, Points Earned
@@ -146,7 +146,8 @@ Requirements
 
 #. The final report file is named with the course abbreviation 
    + "Summary.txt".  Example: Comp170Summary.txt.
-   This file must have a line for each student showing the student's last name, first name,
+   This file must have a line for each student showing the 
+   student's last name, first name,
    weighted average rounded to one decimal place, and letter grade.  
    For example::
    
@@ -156,7 +157,7 @@ Requirements
 #. In the course repository, there is a stub for the
    homework in subdirectory :file:`projects/HW/GradeFiles`.
    Pull the latest version of the repository and copy the homework files to 
-   your solution area (hopefully in your own repostitory).  There is test data for
+   your solution area (hopefully in your own repository).  There is test data for
    class abbreviations Comp170 and Comp150 in the project directory.   
    There are also solution files for the 
    summaries.  Their names end in ``Solution.txt`` to distinguish them from the
@@ -213,7 +214,7 @@ Hints
    for each category. 
 
 #. In order to deal with a varying number of categories and different 
-   possible first letter codes, youi will need to split the category
+   possible first letter codes, you will need to split the category
    name line into an array, say 
        
        string[] categories;
@@ -287,7 +288,7 @@ any combination that does not include both of the last two options about missing
    by the category letter.  An example using the example categories is::
 
       Doe, John 68.5 D+ Missing: 2 L 1 H
-      Smith, Chris 83.2 B M issing: 1 L
+      Smith, Chris 83.2 B Missing: 1 L
       Star, Anna 91.2 A-
       
    meaning Doe has 2 labs missing and 1 homework missing.  Smith is missing one lab.  Star
