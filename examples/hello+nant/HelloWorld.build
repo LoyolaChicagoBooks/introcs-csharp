@@ -5,15 +5,17 @@
 
   <property name="debug" value="true" overwrite="false"/>
 
+  <property name="program" value="HelloWorld" overwrite="true"/>
+
   <target name="clean" description="remove all generated files">
-    <delete file="%(PROG)s.exe" failonerror="false"/>
-    <delete file="%(PROG)s.exe.pdb" failonerror="false"/>
+    <delete file="${program}.exe" failonerror="false"/>
+    <delete file="${program}.exe.pdb" failonerror="false"/>
   </target>
 
   <target name="build" description="compiles the source code">
-    <csc target="exe" output="%(PROG)s.exe" debug="${debug}">
+    <csc target="exe" output="${program}.exe" debug="${debug}">
       <sources>
-        <include name="%(PROG)s.cs"/>
+        <include name="${program}.cs"/>
       </sources>
     </csc>
   </target>
