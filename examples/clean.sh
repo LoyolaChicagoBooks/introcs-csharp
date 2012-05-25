@@ -2,7 +2,7 @@ ARGS=$#
 echo $ARGS
 
 if [ $ARGS -lt 1 ]; then
-   echo "usage: build EXAMPLE (without .cs)"
+   echo "usage: clean EXAMPLE (without .cs)"
    exit 1
 fi
 
