@@ -21,7 +21,7 @@ namespace Music
          r = new Rational(6, 10);
          Assert.IsTrue(r.GetNumerator() == 3);
          Assert.IsTrue(r.GetDenominator() == 5);
-         r = new Rational(125);
+         r = new Rational(125, 1);
          Assert.IsTrue(r.GetNumerator() == 125);
          Assert.IsTrue(r.GetDenominator() == 1);
       }
@@ -35,7 +35,7 @@ namespace Music
          r = Rational.Parse("-12/30");
          Assert.IsTrue(r.CompareTo(new Rational(-12, 30)) == 0);
          r = Rational.Parse("123");
-         Assert.IsTrue(r.CompareTo(new Rational(123)) == 0);
+         Assert.IsTrue(r.CompareTo(new Rational(123, 1)) == 0);
          r = Rational.Parse("1.125");
          Assert.IsTrue(r.CompareTo(new Rational(9, 8)) == 0);
          Assert.IsTrue(r.ToString().Equals("9/8"));
