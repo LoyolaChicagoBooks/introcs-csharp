@@ -17,7 +17,7 @@ translate from math into C#. Try each line separately in csharp ::
 
     2 < 5; 
     3 > 7; 
-    var x = 11; 
+    int x = 11; 
     x > 10; 
     2 * x < x; 
 

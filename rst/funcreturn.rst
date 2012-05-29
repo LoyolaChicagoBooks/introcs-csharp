@@ -83,7 +83,7 @@ statement. Read, follow, and run the example program
    :linenos:
 
 Many have a hard time following the flow of execution with functions.
-Even more is involved when there are return vaues.  
+Even more is involved when there are return values.  
 Make sure you completely follow the details of the execution:
 
 #. Lines 12: Start at Main
@@ -132,7 +132,7 @@ if each does just one unified thing.  The function
 sumProblem in :file:`addition1.cs` does two thing:  It creates a sentence,
 and prints it.  If that is all you have, you are out of luck if you want
 to do something different with the sentence string.  A better way is
-to have a functon that just creates the sentence, and returns it for
+to have a function that just creates the sentence, and returns it for
 whatever further use you want.  After returning that value,
 printing is one possibility, done in
 :file:`addition2.cs`:

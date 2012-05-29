@@ -169,7 +169,7 @@ Greatest Common Divisor works as follows:
   are swapped as the first step to ensure that :math:`a > b`, after
   which we can repeatedly divide to get the GCD.
 
-- Division, of course, is a form of repetetive subtraction, so the way
+- Division, of course, is a form of repetitive subtraction, so the way
   to divide by ``b`` is to repeatedly subtract it (from a) until ``a``
   is no longer greater than ``b``.
 
@@ -214,7 +214,7 @@ of :math:``gcd(a, 0)``. So extra passes may be required to cause
 As an exercise to the reader, you may want to consider adding some
 ``Console.WriteLine()`` statements to print the values of ``a`` and
 ``b`` within each loop, and after both loops have executed. It will
-allow yout see in visual terms how this method does its work.
+allow you to see in visual terms how this method does its work.
 
 
 

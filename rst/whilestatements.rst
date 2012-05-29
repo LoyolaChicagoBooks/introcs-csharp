@@ -432,7 +432,7 @@ answers for things that will take perceptible time.  Try working up to
    
 By hand it is a lot slower, unless you totally change the algorithm:
 There is a classic story about how a calculation like this
-was done in gradeschool (n=100) by the famous
+was done in grade school (n=100) by the famous
 mathematician Gauss. His teacher was trying to keep him busy.
 Gauss discovered the general, exact, mathematical formula:  
     
@@ -509,13 +509,13 @@ when wrong.
 
 We need to force the *calculation* to produce a ``long``. 
 In the correct looping version ``sum`` was a ``long``, and that
-forced all the later arithmentic to be with longs.  Here are two variations
+forced all the later arithmetic to be with longs.  Here are two variations
 that work::
     
     long nLong = n;
     return nLong*(nLong+1)/2;
     
-or we can avoid a new variable name by doing a cast to ``long``, convering
+or we can avoid a new variable name by doing a cast to ``long``, converting
 the first (left) operand to ``long``, so all the later left-to-right
 operations are forced to be ``long``::
 

@@ -9,7 +9,7 @@ Dr. Harrington's Offerings
 
 - Dr. Harrington's `COMP 170 Site <http://anh.cs.luc.edu/170/index.html>`_
  
-Dr. Thriuvathukal's Offerings
+Dr. Thiruvathukal's Offerings
 --------------------------------
 
 - `Fall 2012 Syllabus <http://www.thiruvathukal.com/170/syllabus.html>`_

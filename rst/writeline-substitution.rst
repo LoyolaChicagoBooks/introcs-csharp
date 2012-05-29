@@ -6,7 +6,7 @@ Output With ``+``
 -----------------
 
 An elaboration of a "Hello, World" program, could greet the user,
-after obtaining the user's name.  If the user enters thje name
+after obtaining the user's name.  If the user enters the name
 Kim, the program could print 
 
     Hello, Kim!

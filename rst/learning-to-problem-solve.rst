@@ -37,7 +37,7 @@ You do NOT need to memorize *everything* immediately!
   
 - Some things you will use all the time, but of course they start off as new and maybe strange.
   Knowing where to go to check is still useful but not sufficient. For much-used material
-  that you do not find yourself obsorbing immediately, 
+  that you do not find yourself absorbing immediately, 
   consider writing down a summary of the current topic.  
   Both thinking of a summary and writing help reinforce things and get you to remember faster.  
   Also, if you have the current things of interest summarized in one place, they are easy to look
@@ -77,7 +77,7 @@ For now, as beginners, it is important to know:
 - You can get information from a user and return information via keyboard and screen.
 - You can remember and recall and use information using variables.
 - You can deal directly with various kinds of data: numbers and Strings at this point.
-- There are basic operations you can do with the data (arithmetic, contatenating string,
+- There are basic operations you can do with the data (arithmetic, concatenating string,
   converting between data types).
 - At a slightly higher level, you might already have the idea of basic recurring patterns,
   like solving a straightforward problem with **input-processing-output**.
@@ -119,9 +119,9 @@ quickly and efficiently doing this and have one less thing to obsess about when 
 
 This list of things-to-check-separately should come from experience.  
 Keep track of the errors you make.  Some people even keep an error log.
-What errors keep occuring?
+What errors keep occurring?
 Make entries in things-to-check-separately,
-so you will make scans checking for the specific thinsg you frequently slip up on.
+so you will make scans checking for the specific things that you frequently slip up on.
 
 This things-to-check-separately list, too, will evolve.  Revise it occasionally.  
 If Dr. Harrington does enough
@@ -147,12 +147,12 @@ What is important?  The most obvious thing you will need at a higher level of re
 *just messed you up*, what you missed until doing this problem:  After finishing the
 actual problem, *actively* follow up and ask yourself:
 
-- What did I get in the end that I was misssing initially? What was the connection I made?
+- What did I get in the end that I was missing initially? What was the connection I made?
 - Does this example fit in to some larger idea/abstraction/generalization in a way that
   I did not see before?
 - How am I going to look at this so I can make a similar connection
   in a similar (or maybe only partly similar) problem?
-- Is there a kernal here that I can think of as a new tool in my bag of tricks?
+- Is there a kernel here that I can think of as a new tool in my bag of tricks?
   
 Your answers are the most important things to take away.  
 The extra consideration puts them more in

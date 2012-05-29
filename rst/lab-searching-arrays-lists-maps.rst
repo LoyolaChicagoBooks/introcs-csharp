@@ -178,7 +178,7 @@ You need to fill in the Main method:
 
 #. Iterate through the values of ``n`` and print a table,
    something like the following, with the number of seconds calculated.
-   Experiment and adjust the repetitions to get perceptable values.  
+   Experiment and adjust the repetitions to get perceptible values.  
    Our choice of 50 may not be appropriate with these ``n`` values.  ::
 
            n   rep   linear    binary    list     set

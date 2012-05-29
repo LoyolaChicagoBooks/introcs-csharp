@@ -145,7 +145,7 @@ that a scale should be printed in a normalized way. For example, the F-major
 scale (shown above in our earlier explanation) is never written with A# as
 one of its notes. It is written as B-flat. It's easy to manage the various
 cases by consulting the circle of fifths, which gives us guidance on the
-number of flats/sharps each scale has. We'll revist this topic again later
+number of flats/sharps each scale has. We'll revisit this topic again later
 during our discussion of the OOP version.
 
 Lastly, we put this all together.

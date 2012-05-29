@@ -78,7 +78,7 @@ Style Requirements
 
 #. For this assignment, you are expected to start using functions for all
    aspects of the assignment. For example, it can become tedious in a hurry
-   to write code to prompt for each of exams, labs, homeworks, etc. when 
+   to write code to prompt for each of exams, labs, homework, etc. when 
    a single function (with parameter named *category*) could be used to
    avoid repeating yourself. (And per the Hints section, you will also
    want to write your function to take advantage of our *input* 
@@ -107,7 +107,7 @@ Style Requirements
    - This guide from CIS 193 at [UPennCSharp]_ 
      provides a nice set of conventions
      to follow. We include this here so you know that other faculty at 
-     other universities also consider neatness/apperance to be important.
+     other universities also consider neatness/appearance to be important.
 
 Hints
 -----

@@ -12,7 +12,7 @@ Dictionary Examples
 Sets
 --------------------------
 
-In the next section we will have an example making central use of a dinctionary.
+In the next section we will have an example making central use of a dictionary.
 It will also make use of a set.  The generic C# version is
 a ``HashSet``, which models a mathematical set:  a collection
 with no repetitions and no defined order.  We use a ``HashSet`` for the 
@@ -73,7 +73,7 @@ collection, possibly of another type, is used twice: first
 to create a ``HashSet`` from an array, and later to create a ``List`` from a ``HashSet``.  
 The latter is needed so the ``List`` can be sorted in alphabetical order with its 
 ``Sort`` method, used here for the first time.  Our table contains the words in
-alphabeticaly order.
+alphabetical order.
 
 Also used for the first time are two string methods: the pretty clearly named ``ToCharArray`` and
 another variation on ``Split``.  An alternative to supplying a single character to split on,

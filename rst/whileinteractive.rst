@@ -16,10 +16,10 @@ We consider them now for three reasons:
 - We will illustrate some general techniques for understanding and developing
   ``while`` loops.
 - As a practical matter, 
-  we can greatly improve the utilty input functions we have been using, and
+  we can greatly improve the utility input functions we have been using, and
   add some more.
   
-We alredy have discussed the InputInt function.  The user can choose
+We already have discussed the InputInt function.  The user can choose
 any int.  Sometimes we only want an integer in a certain range.
 Miles has examples that handle this by just silently changing
 a bad value to one at the end of the allowed range.  
@@ -73,7 +73,7 @@ Consider the sequence above in pseudocode.
 
 
 We can break into a repeating
-pattern in two ways.  The most obvious is theofllowing, 
+pattern in two ways.  The most obvious is the following, 
 with three repetitions of a basic pattern, 
 with the last two line not in the same pattern 
 (so they would go after the loop).  :
@@ -120,7 +120,7 @@ Now we can think more of the basic process to turn this into a C# solution:
 What variables do we need?   We will call the user's response ``number``.
 
 What is the test in the while loop heading?
-The easilest thing to think of is that we are done when
+The easiest thing to think of is that we are done when
 we get something correct.  That, however, is a *termination* condition.
 We need to reverse it to get the *continuation condition*, that the answer is
 out of range.  There are two ways to be out of range::
@@ -158,7 +158,7 @@ The concrete example *also* shows another step in the loop, asking
 the user for input.  It is
 easy to think 
 "I already have the code included to read a value from the user,
-so there is nothing really to do."  WRONG!  The intitialization code with
+so there is nothing really to do."  WRONG!  The initialization code with
 the input from the user is *before* the loop.  C# execution approaches the 
 test in the ``while`` headings from *two* places: 
 the initialization *and* coming back

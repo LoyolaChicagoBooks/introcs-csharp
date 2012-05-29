@@ -70,7 +70,7 @@ Installing Mono
 
 Because the Mono Project web page is known to change frequently, these
 instructions are designed to be as generic as possible. If you have
-any questions, you should contact the intructors immediately or seek
+any questions, you should contact the instructors immediately or seek
 tutoring help.
 
 
@@ -103,7 +103,7 @@ OS X
    which you should download and double-click to mount on your desktop.
 
 #. This time, you will see an App for MonoDevelop, 
-   which you can drag and drop into the Applications foldeer.
+   which you can drag and drop into the Applications folder.
 
 Here is how to do a quick sanity check of your Mono setup:
 

@@ -167,7 +167,7 @@ going to leave this part to your imagination.
 Once we have all of the weights and scores entered, we
 can calculate the grade as follows.  This is a long
 expression: It is continued on multiple lines.  Recall all
-the ``>`` sybols are csharp prompts, not part of the
+the ``>`` symbols are csharp prompts, not part of the
 expression::
 
     csharp> double grade = (exam_weight * exam_grade +  

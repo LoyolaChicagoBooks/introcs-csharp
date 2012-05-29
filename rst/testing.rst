@@ -35,7 +35,7 @@ Here are some examples of assertions:
 - Assert.IsTrue(false): The assertion is not successful, because the boolean value
   *false* is true.
   
-- Assert.IsFalse(false): This assertion is succeesful, because the test for whether
+- Assert.IsFalse(false): This assertion is successful, because the test for whether
   *false* is equal to *false* is true.
   
 - Assert.IsTrue(5 > 0): success
@@ -206,7 +206,7 @@ into an actual (reduced) rational number. We test three general cases:
 - The ability to take a whole number and get a proper Rational, e.g. 123 is equal to
   Rational(123)
 
-- The ability to take a textual representation (1.125) amd get a proper Rational(9, 8)
+- The ability to take a textual representation (1.125) and get a proper Rational(9, 8)
   representation. In this case, we are also getting an extra test to ensure the result
   is reduced.
 

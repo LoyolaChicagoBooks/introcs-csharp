@@ -28,10 +28,10 @@ comparison of Rationals:
   | ``r1.CompareTo(r2) == 0`` means r1 is equal to r2
   | ``r1.CompareTo(r2) != 0`` means r1 is not equal to r2
   
-None of the other mehtods for Rationals make any difference for
+None of the other methods for Rationals make any difference for
 sorting:  Just this one method is needed.  Of course the
 comparison of strings or doubles are done with 
-totalluy idfferent implementations, but they have methods
+totally different implementations, but they have methods
 with the same name, CompareTo, and with the same abstract
 meaning.  Still C# is strongly typed and we are talking about
 totally different types.

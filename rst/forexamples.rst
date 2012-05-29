@@ -262,7 +262,7 @@ next line.  A program printing this table should include an extra
 .. rubric::  Modular Multiplication Table
 
 We have introduced the remainder operator ``%`` and mentioned have the corresponding
-mathematical term is "mod".  We can extend that to the idea of mudular arithmetic 
+mathematical term is "mod".  We can extend that to the idea of modular arithmetic 
 systems.  For example, if we only look at remainders mod 7, we can just consider
 numbers 0, 1, 2, 3, 4, 5, and 6.  We can do multiplication and addition and take 
 remainders mod 7 to get answers in the same range.  For example 3 * 5 mod 7 
@@ -366,7 +366,7 @@ Most new students can get successfully to line 4:
    =====  ==  ==  ==========  =====================
 
 After reaching the bottom of the loop, where do you go?  
-You finsh the innermost statement that you are in.  
+You finish the innermost statement that you are in.  
 You are in the inner loop, so the next line is the *inner* loop heading
 where you increment c and continue with the loop since 1 < 7.  This 
 inner loop continues until you reach the bottom of the inner loop,
@@ -413,7 +413,7 @@ all rows are completed.
 
 The common error here is to forget what loop is the innermost one 
 that you are working on, and exit that loop before is is totally finished. 
-It finishes when the test of the condition controling the loop becomes false.
+It finishes when the test of the condition controlling the loop becomes false.
 
 Look back one more time and make sure the code for this *simpler* table makes
 sense before we continue to the one with labels....
@@ -531,7 +531,7 @@ a. Write a program StringRep.cs with a function ``PrintDup``,
    with heading::
  
        /** Print n repetitions of s on one line (n >= 0). */
-       static void PrintDup(stirng s, int n)
+       static void PrintDup(string s, int n)
 
 b. More versatile is to add and test a function ``StringRep``:
 
