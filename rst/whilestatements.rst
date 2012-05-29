@@ -71,7 +71,7 @@ that is involved (particularly any that change) and a place for
 comments about what is happening.  The comment line can be used any time
 it is helpful.  If should be used in particular when something
 is printed and when something is returned, since neither of these
-important actions appear int he variable list.
+important actions appear in the variable list.
 
 If you play computer and follow the path of execution, you could
 generate the following table. Remember, that each time you reach
