@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project name="Hello World" default="build" basedir=".">
+
+  <description>The Hello World of build files.</description>
+
+  <property name="debug" value="true" overwrite="false"/>
+  <property name="build.dir" value="bin"/>
+
+  <target name="clean" description="remove all generated files">
+    <delete file="${build.dir}/${program}.exe" failonerror="false"/>
+    <delete file="${build.dir}/${program}.exe.pdb" failonerror="false"/>
+    <delete file="${build.dir}/${program}.exe.mdb" failonerror="false"/>
+  </target>
+
+  <target name="build" description="compiles the source code">
+    <csc target="exe" output="${build.dir}/${program}.exe" debug="${debug}">
+      <sources>
+        <include name="${program}.cs"/>
+      </sources>
+    </csc>
+  </target>
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project name="GCD" default="build" basedir=".">
+
+  <description>NAnt build file for GCD examples</description>
+
+  <property name="debug" value="true" overwrite="false"/>
+  <property name="build.dir" value="bin"/>
+
+  <target name="clean" description="remove all generated files">
+    <delete dir="${build.dir}" failonerror="false"/>
+  </target>
+
+  <target name="build" description="compiles the source code">
+    <mkdir dir="${build.dir}" failonerror="false"/>
+
+    <csc target="exe" output="${build.dir}/GCDBasic.exe" debug="${debug}">
+      <sources>
+        <include name="GCDBasic/*.cs"/>
+      </sources>
+    </csc>
+
+    <csc target="exe" output="${build.dir}/GCDSubtractionMethod.exe" debug="${debug}">
+      <sources>
+        <include name="GCDSubtractionMethod/*.cs"/>
+      </sources>
+    </csc>
+
+    <csc target="exe" output="${build.dir}/GCDEuclidRecursive.exe" debug="${debug}">
+      <sources>
+        <include name="GCDEuclidRecursive/*.cs"/>
+      </sources>
+    </csc>
+
+  </target>
+</project>

@@ -1,0 +1,177 @@
+﻿COMP 170 Categories
+
+revisions:
+	code:
+		nant, one project per directory under source/
+		IntroCS namespace everywhere
+		.build file generator
+		.sln file generator
+		consistenty use of Stub in name of skeletons
+	
+	notes:
+		summary at the end of each chapter
+		text not code blocks where appropriate
+		:file: consistent.  
+		What C# names with `` ?
+		more index
+		fix unintelligible triple index items
+		index names consistent (not Format and format)
+		more exercises
+		kill todo's
+		syntax intro considstently given, consistent notation
+		music output?
+		integrate CS examples better
+		new name for notes
+		jEdit tool notes
+
+		eliminate Miles:
+		   *our* CS intro
+		   *our* intro example
+		   file intro
+   
+	style:
+		? new css ... style?
+
+A - Arithmetic Calculator
+       / essential primitive types : mostly ref to Miles at this pont
+       / essential conversions : mostly ref to Miles
+       / random numbers using math rand? in guess lab - not double though 
+        our approach: conversions is the only use of cast.
+
+
+B - Strings   
+      x  int.Parse(“100”)
+      x  formatting output
+      x  basics methods in string lab and intro
+      X  more methods
+
+C - Parameterless Functions   Done
+      x  reading input in Main
+
+
+D - Conditions
+      x  read data in range
+      x  min, max, 
+      x   sign  exercise
+      x  preview: number game (one guess)
+
+
+E - Loops
+     x  do-while, while, for, foreach
+     p   testing/validating I/O
+     x   digital in whole number
+     x   ints, fixed decimal 
+     x   gcd using brute force methods (up/down)
+     x   basic Euclid (recursive) -> forward reference
+     x   learning to increment/decrement by > 1
+        abstract graph paper with char I/O nested loops
+        simple geometric shapes with char I/O
+     x   discrete probability example: rolling of the dice, die...
+        Monte Carlo pi
+     x   number guessing game is a great interactive loop example (n-guess)
+                ...variation with hints
+        factorial and fibonacci non-recursive
+        Horner’s method 
+                special cases of 2^k for 2, 8, and 16 conversion...
+                precomputation using arrays!!
+
+
+F - I/O Basics
+        learing the basics of what a  REPL does
+        prompt -> input -> parse -> validate -> action
+        example in Miles, 3.1.4
+        
+        lab creating utility functions reading paragraphs, 
+        canned (game) data into list and mapping
+
+
+G - Strings
+    x    basic string operations (concatenate, replicate)
+    x    extract character using subscript
+    x    simple string algorithms isNumeric?, find, substring, replace
+
+
+H - Exception Handling
+        
+I - Recursion
+        gcd, fib, fact
+        towers of Hanoi
+        maze search
+        fill
+        fractals
+        almost all of these are in Lewis...
+
+
+J - .Net Architecture
+
+
+K - Unit Testing
+
+
+L - Tools
+
+
+M - Working with the OS Shell
+
+
+N - Computing History
+
+
+O - Not used, too much like #0. ;)
+
+
+P - Classes and Interfaces
+        polynomial multiplication!
+        accessor, mutator (get/set)
+        private, public
+        constructors
+        overloading
+        interfaces - useful 
+            game lab
+
+
+Q - Arrays
+    x    sentinels?
+    x    initialize/populate array with data
+        sequential search
+        binary search
+    x    isIncreassing()
+        basic sort algorithms (insertion, selection)
+        uniq(sorted array)
+        isPalindrome()
+
+
+        2D array: imaginary graph paper with preview...
+        matrix multiply - opportunity to introduce out
+        adjacency matrix
+                distance matrix?
+        
+R - Structs and Enums
+        quick
+        calendar usage
+        N-E-S-W for Maze search
+
+
+T - Lists and Associative Arrays
+        these can be parameterized (generics)
+        example:  test for cycle in iterative sequence        
+
+Sample Schedule
+
+
+Prepare for Game project:
+   translate/improve Game of Zuul
+
+
+1-3
+4-7
+8
+9-10
+11
+12-15
+A, B, D, M, N, F
+C, E, L
+First Quiz
+I, K, P, Q, T
+Exam
+Project

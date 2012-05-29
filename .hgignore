@@ -1,0 +1,25 @@
+syntax: glob
+
+Thumbs.db
+.DS_Store
+bin/
+build/
+*.pyc
+*.exe
+*.exe.*
+*.dll
+*.pidb
+*.userprefs
+*.csproj.*
+examples-cs/
+CSharpHtml/
+examples.zip
+CSharpHtml.zip
+index.html
+ProgrammingInCSharp.pdf
+projects.zip
+java/
+projSol/
+test-results/
+TestResult.xml
+projects2/
