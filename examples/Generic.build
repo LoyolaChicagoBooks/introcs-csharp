@@ -4,7 +4,7 @@
   <description>The Hello World of build files.</description>
 
   <property name="debug" value="true" overwrite="false"/>
-  <property name="build.dir" value="bin"/>
+  <property name="build.dir" value="."/>
 
   <include buildfile="../include/NUnit.include" />
 
