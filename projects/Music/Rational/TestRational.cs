@@ -6,9 +6,6 @@ namespace Music
    {
       public static void Main()
       {
-         ShowParse("-12/30");
-         ShowParse("123");
-         ShowParse("1.125");
          Rational f = new Rational(6, -10);
          Console.WriteLine("6/(-10) simplifies to {0}", f);
          Console.WriteLine("reciprocal of {0} is {1}", f, f.Reciprocal());
@@ -21,6 +18,9 @@ namespace Music
          Console.WriteLine("{0} > {1} ? {2}", h, f, (h.CompareTo(f) > 0));
          Console.WriteLine("{0} as a double is {1}", f, f.ToDouble());
          Console.WriteLine("{0} as a decimal is {1}", h, h.ToDecimal());
+         ShowParse("-12/30");  // see helping function below
+         ShowParse("123");
+         ShowParse("1.125");
       }
 
       static void ShowParse(string s)

@@ -77,9 +77,6 @@ We will discuss it more later.
 
 The results we would like when running this testing code::
 
-	Parse "-12/30" to Rational: -2/5
-	Parse "123" to Rational: 123
-	Parse "1.125" to Rational: 9/8
 	6/(-10) simplifies to -3/5
 	reciprocal of -3/5 is -5/3
 	-3/5 negated is 3/5
@@ -90,6 +87,9 @@ The results we would like when running this testing code::
 	1/2 > -3/5 ? True
 	-3/5 as a double is -0.6
 	1/2 as a decimal is 0.5
+	Parse "-12/30" to Rational: -2/5
+	Parse "123" to Rational: 123
+	Parse "1.125" to Rational: 9/8
 
 One complication with fractions is that there is more than one representation
 for the same number.  As in grade school we will always reduce to
@@ -249,23 +249,27 @@ Since the method only deals with the instance variables, no further
 parameters need to be given explicitly.
 
 (It is also declared ``private`` - it is a helping method only used privately,
-inside the class.)
+from *inside* the class.)
 
 The method uses the :ref:`gcd` function, discussed in the ``while`` loop section,
 to reduce the Rational to lowest terms.
 
-To summarize where there is a current object that can access its private instance variables:
+Summarizing where there is a current object that can access 
+its private instance variables:
 
 #.  In a constructor, referring to the object being created.
 #.  When some method methodName is called with explicit dot notation, 
-    ``someObject.methodName()``, then it is acting on someObject and its instance variables.
+    ``someObject.methodName()``, 
+    then it is acting on ``someObject`` and its instance variables.
 #.  When a constructor or instance method (no ``static``) is called for the class,
-    there must already be a current object.  If that constructor or instance method calls a
+    there must already be a current object.  
+    If that constructor or instance method calls a
     further instance method inside the same class, without using dot notation, 
     then the further method has the *same* current object.
 
 .. warning::
-   These are the only places where there is a current object.  Inside a ``static`` method there
+   These are the only places where there is a current object. 
+   Inside a ``static`` method there
    is *no* current object.  A common compiler error is to try to have a static method call
    an instance method without dot notation for a specific object.  The shorthand notation
    without an explicit object reference and dot cannot be used, because there is no
@@ -282,12 +286,14 @@ To summarize where there is a current object that can access its private instanc
 	   }
 	
    On the other hand, there is no issue when
-   an instance method calls a static method.
+   an instance method calls a static method.  (The instance variables are just 
+   inaccessible inside the static method.)
    
-The current object is implicit inside a constructor of instance method definition,
-but it can be referred to explicitly.  It is called ``this``.  We will see that there are places
-where there is reason for an object to refer to itself explicitly, and use ``this`` as the object
-name.
+The current object is *implicit* inside a constructor of instance method definition,
+but it can be referred to *explicitly*.  It is called ``this``.  
+We will see in later sections that there are places
+where there is reason for an object to refer to itself explicitly, 
+and use ``this`` as the object name.
 
 In these places where instance variables are accessible, you have an extra way of getting 
 data in and out of a method:  Reading or setting instance variables.  
@@ -358,17 +364,20 @@ Method Parameters of the Same Type
 -------------------------------------
 
 We can deal with the current object without using dot notation.  What if we are
-dealing with more than one Rational, the current one and another parameter, as in Multiply:
+dealing with more than one Rational, the current one *and* another parameter, 
+as in Multiply:
 
 .. literalinclude:: ../projects//Music/Rational/Rational.cs
    :start-after: Multiply chunk
    :end-before: chunk
 
-We can mix the shorthand notation for the current object's fields and dot notation for another
+We can mix the shorthand notation for the current object's fields 
+and dot notation for another
 named object:  ``num`` and ``denom`` refer to the fields in the *current* object, and
 ``f.num`` and ``f.denom`` refer to fields for the other ``Rational``, the parameter ``f``.
 
-Note that I did not refer to the fields of ``f``through the public methods ``GetNumerator`` and 
+Note that I did not refer to the fields of ``f``through the public methods 
+``GetNumerator`` and 
 ``GetDenominator``.  Though ``f`` is not the same *object*, it is the same *type*: 
 *Private members of another object of the same type are accessible.*  The full method is:
 
@@ -394,10 +403,11 @@ know how to handle types that were *not invented* when the compiler was written?
 
 The answer is to have common features among all objects.  Any object has a ``ToString``
 method.  The default version supplied by the system is not very useful for an object 
-that it knows nothing about!  To define your own version, one that knows how you have defined
+that it knows nothing about!  To define your own version, 
+one that knows how you have defined
 your type with its own specific instance variables, 
-and to have that version used *in place of* the default,
-you need to *override* the default.  To emphasize the change
+and to have that version used *in place of* the default:
+You need to *override* the default.  To emphasize the change
 in meaning, the word ``override`` must be in the heading:
 
 .. literalinclude:: ../projects//Music/Rational/Rational.cs

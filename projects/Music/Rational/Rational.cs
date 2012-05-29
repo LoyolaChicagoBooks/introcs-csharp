@@ -48,15 +48,6 @@ namespace Music
       {
          return denom;
       }
-                                    // alternate constructor chunk
-      /**
-       * Create a fraction for an integer value.
-       *  num  numerator
-       */
-      public Rational(int wholeNumber):
-           this(wholeNumber, 1)  // new syntax, before body, refers to
-      {                         // other constructor using name "this"
-      }
                                      // ToString chunk
       /**
        * Return a string of the fraction in lowest terms,
@@ -125,7 +116,7 @@ namespace Music
        */
       public int CompareTo(Rational f)
       {
-         return num*f.denom - denom*f.num;
+         return num*f.denom - denom*f.num; //numerator of this - f
       }
    
       /* Return the positive greatest common divisor of parameters a and b.*/
