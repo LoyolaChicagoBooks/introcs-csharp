@@ -122,7 +122,7 @@ would return with various values for ``target``:
 Assume each repetition is completely separate, so
 ``CountRep("Wheee!", "ee")`` returns 1.  The last
 two e's do not count, since the middle e is already
-used int he match of the first two e's.
+used in the match of the first two e's.
 
       
 .. index::

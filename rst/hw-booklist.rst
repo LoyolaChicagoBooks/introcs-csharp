@@ -146,7 +146,7 @@ Book class.  Requires the constructor.  Then
 - [1] public string GetTitle()
 - [1] public string GetAuthor()
 - [1] public int GetYear()
-- [2] public overload string ToString()
+- [2] public override string ToString()
  
 BookList class
 

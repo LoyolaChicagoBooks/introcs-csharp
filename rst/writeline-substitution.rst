@@ -109,6 +109,8 @@ that *cannot* be duplicated with a simple string ``+`` operation.
 We will just use the simple numbered substitutions for now, 
 to get used to the idea of substitution.
 
+.. index:: format; literal {}
+    
 A technical point: Since braces have special meaning in a format
 string, there must be a special rule if you want braces to actually
 be included in the final *formatted* string. The rule is to double
@@ -120,4 +122,26 @@ the braces: ``'{{'`` and ``'}}'``. The fragment ::
 produces ::
 
     The set is {2, 3}.
+
+.. index:: 
+   double: method; overloading
+
+Overloading
+    The ``WriteLine`` function can take parameters in different ways:
+    
+    - It can take a single parameter of an type (and print its string representation).
+    - It can take a string parameter followed by any number of parameters used to 
+      substitute into the initial format string.
+    - It can take no parameters, and just advance to the next line (not used yet in
+      these notes).
+      
+    Though each of these uses has the same name, ``Console.WriteLine``, 
+    they are technically all different functions:  A function is not just recognized
+    by its name, but by its *signature*, 
+    which also includes the number and types of parameters.
+    The technical term for using the same name with different signatures for different
+    functions is function (or method) *overloading*.
+    
+    This only makes practical sense for a group of closely related functions, where the
+    use of the same name is more helpful than confusing.
     
