@@ -101,7 +101,7 @@ cases:
 - As you can observe from the code, we perform basic assertion testing to ensure that 
   the numerators and denominators are what we expect. For example::
 
-     Assert.IsTrue(r.GetNumerator() = 3)
+     Assert.IsTrue(r.GetNumerator() == 3)
 
   Tests whether the newly minted rational number, Rational(3, 5), actually has the 
   expected numerator of 3.
