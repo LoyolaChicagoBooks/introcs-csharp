@@ -34,7 +34,7 @@ so the type of ``person`` is ``string``.
 
 The function definition indicates that the variable name ``person``
 will be used inside the function by inserting it between the
-parentheses of the definition, preceeded by its type. 
+parentheses of the definition, preceded by its type. 
 Then in the body of the definition
 of the function, person is used in place of the real data for any
 specific person's name. Read and then run example program
@@ -49,7 +49,7 @@ variable name is a *placeholder* for the real name of the person
 being sung to.
 
 Main now has two calls to the same function, 
-but between the parentheses, where there was the palceholder ``person`` 
+but between the parentheses, where there was the placeholder ``person`` 
 in the definition, now we have the actual people being sung to.
 The value between the parentheses here in the function call
 is referred to as an *argument* or *actual parameter* of the
@@ -120,7 +120,7 @@ parameter values.
        where the code is merely instructions to be remembered,
        not acted on immediately.
 
-    2. *Calling* a function with an *actual* paramerer value to be
+    2. *Calling* a function with an *actual* parameter value to be
        substituted for the formal parameter, 
        (with *no* type included!) and have the function
        code actually *run* when the instruction containing the call
@@ -203,7 +203,7 @@ Make your own further change to ``birthday4.cs`` and save it as
 ``birthdayMany.cs``: Add a function call
 (but *not* another function *definition*), so Maria gets a verse, in
 addition to Emily and Andre. Also print a blank line between
-verses. (There ae two ways to handle the blank lines: 
+verses. (There are two ways to handle the blank lines: 
 You may *either* do this by adding a print line to the
 function definition, *or* by adding a print line between all calls to
 the function.  Recall that if you give Console.WriteLine an empty

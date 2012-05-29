@@ -158,7 +158,7 @@ like on your machine or in the Linux Lab,
 create a file named ``.hgrc`` in *your home directory*. Your home directory is 
 where you are dumped when you open a DOS or Linux/OS X terminal.  This is *not*
 inside your repository.
-This file must contain the following lines, witht he part after the equal sign
+This file must contain the following lines, with the part after the equal sign
 personalized for you::
 
     [ui]
@@ -172,7 +172,7 @@ Creating this file saves you the trouble of having to pass the ``-u username``
 option to ``hg`` each time you do a *commit* operation. 
 
 You can put this file in your home directory in Windows labs, but it disappears.
-YOu might want to keep an extra copy in your repostory, and copy it to the Windows 
+YOu might want to keep an extra copy in your repository, and copy it to the Windows 
 home folder when in the lab.
 
 As a gentle reminder, your home directory on Windows can be a bit difficult to find. 
@@ -206,9 +206,9 @@ To navigate in a DOS-Shell to a flash drive, you need to enter the short command
 
    E:
 
-or possible another drive leter followed by a colon.  
+or possible another drive letter followed by a colon.  
 DOS drive letters are annoying because they be different another time with different
-resources loaded.  Once you see the proper drive displayed, ``cd`` to the desirted 
+resources loaded.  Once you see the proper drive displayed, ``cd`` to the desired 
 directory.
 
 If all has gone well at bitbucket, you should be able to look at your
@@ -561,7 +561,7 @@ Do the following:
       :alt: MonoDevelop Image
       :align: center
 
-#. If all was done properly, you will see three objects: .hgnore, labs, and projects. These
+#. If all was done properly, you will see three objects: .hgignore, labs, and projects. These
    were all the result of our earlier sequence of commit+push operations. You can click on
    any of these folders to drill into the hierarchy of folders/files that have been pushed
    to Bitbucket (from your local repository). If you drill into the Hello example, you 

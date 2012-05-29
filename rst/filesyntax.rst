@@ -26,13 +26,28 @@ We are not sure why Miles first declared an input file, ``reader``,
 as a ``TextReader`` rather than a ``StreamReader``.  In later discussion of
 inheritance, we will see more about how one type of object can be declared as another.
 
-Without comment he switches
+Without comment Miles switches
 in the ``EndOfStream`` testing to declaring ``reader`` as a ``StreamReader``, which
-has more capacities than a ``TextReader``, in particular it has the property ``EndOfStream``.
+has more capacities than a ``TextReader``: In particular it has the property ``EndOfStream``.
 The simpler thing would be to us a StreamReader declaration consistently.  
-Also in that case you could use the more compact declaration with ``var``::
 
-    var reader = new StreamReader("test.txt");
+.. index:: 
+   double: var; type
+
+``var``
+	Also you could declare ``reader`` using the more compact syntax with ``var``::
+	
+		var reader = new StreamReader("test.txt");
+	
+	You can use ``var`` in place of a declared type to shorten your code 
+	with a couple of restrictions:
+	
+	- Use an initializer, from which the type of the variable can be inferred.
+	- Declare a local variable inside a method or in a loop heading.
+	- Declare a single variable in the statement.
+	
+	You could have used this syntax long ago, but as the type names become longer, 
+	it is more useful!
 
 Things to note about reading from files:
 

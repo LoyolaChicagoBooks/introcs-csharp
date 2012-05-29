@@ -25,9 +25,9 @@ they are called *reference objects*.  We distinguished the types ``int`` and
 ``double`` and ``bool``, where the actual value of the data is stored in the space 
 for a variable of the type.  They are *value types*.  A struct is also a value
 type.  In practice this is efficient for small objects.  We made Rational a class because
-you have already seen the class constuct with
+you have already seen the class construct with
 ``static`` entries, and classes are more generally useful.  
-In fact being a ``stuct`` would be a good choice for Rational, 
+In fact being a ``struct`` would be a good choice for Rational, 
 since it only contains two integers.  Its size is no more than one double.
 
 The behavior of a Rational is the same either way, because it is immutable.  If we

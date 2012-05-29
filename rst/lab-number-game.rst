@@ -89,7 +89,7 @@ Sample play could look like:
     | Guess the number:  **29**
     | Good job!  You win!
     
-You could alspo make the game stop immediately, 
+You could also make the game stop immediately, 
 (since you know the secret number):
 
     | Guess the number:  **29**
@@ -177,7 +177,7 @@ In ``Game``, make the following alterations and additions:
     | Guess the number: **68**
     | Good job!  You win!
    
-   For degugging purposes, you might want to have ``secret`` 
+   For debugging purposes, you might want to have ``secret`` 
    be printed out right away 
    (but eliminate that part when everything works)!
 
@@ -244,7 +244,7 @@ Should you finish everything early, try the following:
    his/her head, and press return to continue. 
    (You can throw away the string entered - this is just to cause a pause.)
    Then the computer guesses.
-   For simpicity let the human enter "L" for lower, "H" for higher, and
+   For simplicity let the human enter "L" for lower, "H" for higher, and
    "E" for equal (when the computer wins).
    As you saw in the initial example with George and Andy,
    each hint reduces the range of the possible secret numbers.

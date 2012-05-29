@@ -35,7 +35,7 @@ and run. It is part of learning to think like a computer scientist and
 software developer. Furthermore, we want to be able to assume that you
 know at least one of the *basics*: executable programs and how to run
 them. When we compile a Mono program, we get an output file named
-*Name*.exe, where this *Name* can be anyhing, say,
+*Name*.exe, where this *Name* can be anything, say,
 ``HelloWorld.exe``. When we use the IDE, MonoDevelop, we'll still be
 getting this executable and be able to run it either within our
 outside of MonoDevelop.

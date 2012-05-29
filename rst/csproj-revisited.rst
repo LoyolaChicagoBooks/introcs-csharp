@@ -21,8 +21,8 @@ would only get more repetitious!
 You would like to think of having a loop to go through
 repetitious code.  
 
-A major use of a C# interface will allow this all to work.\
-inneat loops.
+A major use of a C# interface will allow this all to work 
+in neat loops.
 For the first time we define our own interface, and 
 use that interface as a type in a declaration.
 
@@ -36,7 +36,7 @@ We add a string property CommandWord to each of them.
 
 We will add an extra convenience feature of C# here.
 Thus far we have used private instance variables and public
-getter methods.  We get use a public instance varaible declaration
+getter methods.  We get use a public instance variable declaration
 with a similar effect as in::
 
           public string CommandName {get; private set;}
@@ -44,8 +44,8 @@ with a similar effect as in::
 The extra syntax in braces says that users in a another class 
 may freely *get* (read) the variable, but setting the variable is
 still *private*: it may only be done inside the class.  This is more
-concise than using a geter method:  No getter needs to be declared,
-and referencint the data is shorter too, since it is a property,
+concise than using a getter method:  No getter needs to be declared;
+referencing the data is shorter too, since it is a property,
 no method parentheses are needed.  
 
 Note the unusual syntax: the declaration does

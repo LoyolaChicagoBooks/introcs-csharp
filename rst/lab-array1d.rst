@@ -70,7 +70,7 @@ values. We're going to use the second line for this lab.
       :start-after: PrintInts chunk
       :end-before: ReadInts chunk
 
-   This will be handy for labellng later tests.  Note that you end
+   This will be handy for labeling later tests.  Note that you end
    on the same line, but a later label can start with ``\n`` 
    to advance to the next line.
 

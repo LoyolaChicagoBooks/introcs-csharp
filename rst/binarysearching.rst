@@ -24,7 +24,7 @@ If we are looking for a number, say, 115, here is a visual on how we might go ab
 Binary search works by keeping track of the midpoint (mid) and the minimum (min) and 
 maximum (max) positions where the item *might be*.
 
-Let's see how we migth search for the value 115.
+Let's see how we might search for the value 115.
 
 - We start by testing the data at position 8. 115 is greater than the value at position
   8 (100), so we assume that the value must be somewhere between positions 9 and 16.
@@ -81,7 +81,7 @@ Here's a quick explanation, because it largely follows from the above explanatio
 - The binary search either returns the *position* where we found the item, or it returns -1 (to 
   indicate not found). The -1 value is a commonly-returned function in most search operations
   (especially on lists and strings), so we use this mostly out of respect for tradition. 
-  It makes particular sense, becuase -1 is not within the *index set* of the array (which starts
+  It makes particular sense, because -1 is not within the *index set* of the array (which starts
   at 0 in C# and ends at ``data.Length - 1``. 
 
 Similar to linear searching, we provide a main program that tests it out. Because the

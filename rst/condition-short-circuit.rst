@@ -25,7 +25,7 @@ try the condition again.  Will you get ``false``? ::
 	System.DivideByZeroException: Division by zero
 	...
 
-No, one of the parts invoves dividing by zero, and you see the result.
+No, one of the parts involves dividing by zero, and you see the result.
 What if we swap the two conditions to get the *logically equivalent*  ::
 
 	csharp> x != 0 && y/x > z;
@@ -45,7 +45,7 @@ this feature.
 
 It also applies to ``||``.  In what situation do you know 
 what the final result is after evaluating
-the first conditon?  In this case you know:: 
+the first condition?  In this case you know:: 
 
     true || ??
 
@@ -75,7 +75,7 @@ come from conditionThatWillBombWithBadData.  There are two cases,
 however, depending on what result
 you want if the data for this condition *is bad*, so you cannot evaluate it:  
 
-- If you want ther result to be ``false`` with bad data for the dangerous
+- If you want the result to be ``false`` with bad data for the dangerous
   condition, use
 
     falseConditionIfDataBad ``&&`` conditionThatWillBombWithBadData

@@ -12,14 +12,15 @@ Some functions are void, and get used as a whole instruction in your code:
 They go off and do something, leaving some lasting side effect; 
 come back, and are ready to go on to the next task.
 
-Some functions return a value, and get used as an expression in a larger statement.
-The statement uses the value returned.  Usually the only effect of such a function is in the
+Some functions return a value, and get used as an expression in a larger calling statement.
+The calling statement uses the value returned.  
+Usually the only effect of such a function is in the
 value returned.
 
 Usually there is this division:  
 
 #. Void; do something as whole instruction, with a side effect in the larger system
-#. Return a value to use in a larger statement
+#. Return a value to use in a larger calling statement
 
 It is legal to *both* accomplish something with a side effect in the system,
 like add to a set, leaving it changed, *and* return a value.
@@ -32,7 +33,7 @@ An example is the method ``Add`` for :ref:`sets`:
 *and*
 
   it returns a boolean value, so ``someSet.Add(element)`` can be used
-  in a larger statement.
+  in a larger statement, making note of the boolean valu e returned.
   
 There is a purpose to the return value in this situation:  Adding to a set
 may or may not change the set, since sets ignore duplicates.  The method returns 
@@ -41,9 +42,8 @@ true if the set was changed.
 You may or may not find that returned information useful.  You might use it,
 as in this trivial example::
 
-    if (someSet.Add(element)) {
-        Console.WriteLine("Set changed!");
-    }
+    bool changed = someSet.Add(element));
+    Console.WriteLine("Set changed: {0}.", changed);
     
 or if you do not care about the returned value you can *ignore* it, and use
 the method call as a *whole* statement, as you would use a void method::
@@ -68,12 +68,13 @@ you actually want for the logic of your program.   For example with this definit
        return result;
     }
     
-you might  try to use it in this bad code::
+you might try to use it in this bad code::
 
     CalcResult(x);
     Console.WriteLine(result);
     
-You went to the trouble to calculate ``result`` in the function.  Why not just use it?
+You went to the trouble to calculate ``result`` in the function.  
+Why can you not just use it this way?
 
 The reason is the *scope* rules for functions:  The local variable ``result`` 
 disappears when the function returns.  It has no meaning later in the calling function.  
@@ -93,4 +94,4 @@ Any of the following alternatives are OK::
     Console.WriteLine(CalcResult(x));  
     
 The last version works as long as you do not need the 
-returned value in a second place, later.
+returned value in another place, later.

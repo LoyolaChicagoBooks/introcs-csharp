@@ -73,7 +73,7 @@ Animal Class Lab
 
 **Objectives**:
 Write from scratch a simple (silly) class, with constructor and methods,
-including a ToString Method, and a separte testing class.
+including a ToString Method, and a separate testing class.
 
 
 #. Create a simple class Animal:
@@ -110,7 +110,7 @@ We are going to build up to a game for you to write.  Here is
 an idea for a skeleton of a text (adventure?) game.  It does not
 have much in it yet, but it can be considered in terms of classes.
 Classes with instances correspond to nouns you would be using, 
-particularly nons used in more than one place with differeent data being remembered.
+particularly nouns used in more than one place with different data being remembered.
 Verbs associated with nouns you use tend to be methods.  Think how you might break 
 this down.  The parts appearing after the '>' prompt are entries by the user.
 Other lines are computer responses::
@@ -171,5 +171,5 @@ In the projects in :file:`CSProj/CSProj1` is code that generated the exchange ab
 
 The code uses many of the topics discussed so far in these notes.
 
-We will add some features from interfaces and discuss the revsion in 
+We will add some features from interfaces and discuss the revision in 
 :file:`CSProj/CSProj` (no 1).  You *might* use this as a basis of a project....

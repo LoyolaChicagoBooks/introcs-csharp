@@ -41,7 +41,7 @@ we cannot change the string class, we will write a
 static function to generate the new string.  
 
 For simplicity at the moment we will only change
-the first occurence, and for now we will assume the
+the first occurrence, and for now we will assume the
 replacement makes sense.  The following heading 
 (with documentation) should work:
 
@@ -62,7 +62,7 @@ to test the function in different ways and display the results:
 Writing tests *first* is a good idea to focus you on what really 
 needs to be accomplished, and then running tests later is a snap!
 
-The human brain and eys are fabulous in the way they process
+The human brain and eyes are fabulous in the way they process
 many things in parallel and use tools you have accumulated over
 a lifetime.  In particular this substitution idea should 
 seem pretty reasonable, and given any *specific concrete* example,
@@ -72,7 +72,7 @@ parameters stated in general, with just placeholder names
 like ``s`` and ``target``, and given the limited set of approaches
 you have in a programming language, the complexion of this
 problem changes completely.  Many students guess the general problem will
-be nearly as simple as the concrete exmples they do in their heads,
+be nearly as simple as the concrete examples they do in their heads,
 and then get very discouraged when the answer does not flow out of 
 them.  In fact it takes practice and experience, and it is easier
 to handle if you acknowledge that up front!

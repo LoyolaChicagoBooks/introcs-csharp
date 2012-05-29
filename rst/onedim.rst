@@ -384,7 +384,7 @@ Mirror Array Exercise
 Write a program ``MakeMirror.cs`` that includes and tests a 
 function with heading::
 
-	/** Create a new array with the elements of a in th opposite order.
+	/** Create a new array with the elements of a in the opposite order.
 	 * {"aA", "bB", "cC"} produces a new array {"cC", "bB", "aA"}
 	 */
 	public static string[] Mirror(string[] a)

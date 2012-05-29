@@ -98,7 +98,7 @@ following commands in roughly this order:
 
   - ``?``: This means that a file is *untracked* in the repository. If you
     see a file with the ``?`` status that is important, you'll want
-    to add it usin ``hg add`` as explained above.
+    to add it using ``hg add`` as explained above.
 
   - ``M``: This means that a file has been *modified*.
 
@@ -193,7 +193,7 @@ adaptable if the Bitbucket service decides to change its web user interface.)
 
 #. Add the Email or Email Diff service. These services are basically
    equivalent, but one will generate links so you can view the
-   differences that were just pushed. We recomend Email Diff.
+   differences that were just pushed. We recommend Email Diff.
   
 #. Add the email notification address. You can only have one address.
    A good way to overcome this limitation is to set up a group service,

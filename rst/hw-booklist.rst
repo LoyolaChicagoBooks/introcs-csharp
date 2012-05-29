@@ -180,7 +180,7 @@ To get full credit for any particular option, tests for it must be
 *fully integrated* into TestBookList!
 
 #.  [2 points] Complete the ToString method for the BookList class that returns (not prints)
-    the content described by the PrintlList method above as a single string
+    the content described by the PrintList method above as a single string
     (including a final newline). Also *change* the PrintList method body to
     the one line::
     

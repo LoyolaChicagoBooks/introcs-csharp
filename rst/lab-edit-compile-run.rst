@@ -105,7 +105,7 @@ religiously at least once to ensure you were successful.)
     command shell basically awaits user input and does whatever it is
     told (and does nothing otherwise). You'll begin by using the "cd"
     command to change your working directory to where you saved
-    ``Hello.cs``.  Note: Replace Dr. Thiruvathukals's login id gkt by
+    ``Hello.cs``.  Note: Replace Dr. Thiruvathukal's login id gkt by
     your login id.  Also note for Mac/Unix examples that his machine
     is called macaroni.
     
@@ -215,14 +215,14 @@ Other Useful Text Editors
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Gedit, http://gedit.org, is a very nice editor that comes with most
-Linux/Gnome distributions. Although it allegedely runs on Windows and OS X, we
+Linux/Gnome distributions. Although it allegedly runs on Windows and OS X, we
 have not had a chance to test it and cannot recommend it at this time.
 
 #. Vim,  http://www.vim.org/docs.php, is another popular editor based
    on the famous **vi** text editor that goes back a number of
    decades. There are graphical versions for Linux, Mac, and Windows.
 
-Unfortuntely, these are not available in the Windows labs yet (unlike
+Unfortunately, these are not available in the Windows labs yet (unlike
 Emacs); however, students working in the Linux laboratory have access
 to these editors and may wish to learn them. 
 

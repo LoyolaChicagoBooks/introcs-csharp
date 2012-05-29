@@ -42,7 +42,7 @@ If you always put an open brace at the end of the line of a condition,
 you are less likely to make this error.
 
 The corresponding error at the end of a method heading will at least 
-generate a compiler error, though it may appear crypic::
+generate a compiler error, though it may appear cryptic::
 
     static void badSemicolon(int x);
     {

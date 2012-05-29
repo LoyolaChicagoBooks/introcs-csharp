@@ -15,7 +15,7 @@ On the other hand, try in csharp::
 
 	14/4;
 	
-you get something that looks strange:  Just and addition, subtraction, and multiplication
+you get something that looks strange:  Just as addition, subtraction, and multiplication
 of ``int``\ s produces and ``int``, so, too with division.
 
 In C#, the result of the / operator depends on the

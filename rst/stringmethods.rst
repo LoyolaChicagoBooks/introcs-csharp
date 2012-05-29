@@ -66,31 +66,31 @@ the length property is also listed.
 In the heading *this* object is not shown explicitly, so be careful
 when applying these methods and the length property: In actual use
 they must be
-preceeded by a reference to a string, followed by a dot, as shown in 
+preceded by a reference to a string, followed by a dot, as shown in 
 all the  examples.  The reference to *this* string can be
 a variable name, a literal, or any expression evaluating to a string.
 
 .. ugly!
 
-   +------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | **String METHOD or PROPERTY**            | **DESCRIPTION**                                                                                                                                 | **EXAMPLE**                                                |
-   +------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``int IndexOf(string string2)``          | returns the index of the begining of the first occurrence of the string ``string2`` in this string object. Returns -1 if ``string2`` not found. | ``string greeting = "Bonjour", word = "jou";``             |
-   |                                          |                                                                                                                                                 |  ``greeting.IndexOf(word)`` returns 3.                     |
-   +------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``string substring(int start)``          | returns the substring of this string object starting from index ``start`` through to the end of the string object.                              | ``string name = "Sheryl Crow";``                           |
-   |                                          |                                                                                                                                                 |  ``name.Substring(7)`` returns the string ``"Crow"``       |
-   +------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``string substring(int start, int len)`` | returns the substring of this string object starting from index ``start``, including a total of ``len`` characters                              | ``string name = "Sheryl Crow";``                           |
-   |                                          |                                                                                                                                                 |  ``name.Substring(3,5)`` returns the string ``"ryl C"``    |
-   +------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``string ToUpper()``                     | return this string converted to upper case.                                                                                                     | ``"Hi Jane!".ToUpper()`` returns the string ``"HI JANE!"`` |
-   +------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``string ToLower()``                     | return this string converted to lower case.                                                                                                     | ``"Hi Jane!".ToLower()`` returns the string ``"hi jane!"`` |
-   +------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``int length``                           | refers to the length of this string object                                                                                                      | ``string greeting = "Bonjour";``                           |
-   | (property)                               |                                                                                                                                                 |  ``greeting.Length( )`` returns the value 7.               |
-   +------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+   | **String METHOD or PROPERTY**            | **DESCRIPTION**                                                                                                                                  | **EXAMPLE**                                                |
+   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+   | ``int IndexOf(string string2)``          | returns the index of the beginning of the first occurrence of the string ``string2`` in this string object. Returns -1 if ``string2`` not found. | ``string greeting = "Bonjour", word = "jou";``             |
+   |                                          |                                                                                                                                                  |  ``greeting.IndexOf(word)`` returns 3.                     |
+   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+   | ``string substring(int start)``          | returns the substring of this string object starting from index ``start`` through to the end of the string object.                               | ``string name = "Sheryl Crow";``                           |
+   |                                          |                                                                                                                                                  |  ``name.Substring(7)`` returns the string ``"Crow"``       |
+   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+   | ``string substring(int start, int len)`` | returns the substring of this string object starting from index ``start``, including a total of ``len`` characters                               | ``string name = "Sheryl Crow";``                           |
+   |                                          |                                                                                                                                                  |  ``name.Substring(3,5)`` returns the string ``"ryl C"``    |
+   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+   | ``string ToUpper()``                     | return this string converted to upper case.                                                                                                      | ``"Hi Jane!".ToUpper()`` returns the string ``"HI JANE!"`` |
+   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+   | ``string ToLower()``                     | return this string converted to lower case.                                                                                                      | ``"Hi Jane!".ToLower()`` returns the string ``"hi jane!"`` |
+   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+   | ``int length``                           | refers to the length of this string object                                                                                                       | ``string greeting = "Bonjour";``                           |
+   | (property)                               |                                                                                                                                                  |  ``greeting.Length( )`` returns the value 7.               |
+   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
 
 .. _string-methods-length:
 
@@ -98,7 +98,7 @@ Summary of String Length and Some Instance Methods
 ----------------------------------------------------
 
 ``int IndexOf(string target)``
-    Returns the index of the begining of the first occurrence of the 
+    Returns the index of the beginning of the first occurrence of the 
     string ``target`` 
     in **this** string object. Returns -1 if ``target`` not found. Example:: 
     
