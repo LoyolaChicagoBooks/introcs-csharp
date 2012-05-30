@@ -17,7 +17,6 @@ Though the initial problems will be tiny and often silly, they will serve as lea
 to prepare for substantive problems.
 
 
-
 .. comment 
 
 	Nothing used from here on:
