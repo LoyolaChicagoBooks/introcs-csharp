@@ -6,7 +6,9 @@ bin/
 build/
 *.pyc
 *.exe
-*.exe.*
+*.exe
+*.mdb
+*.pdb
 *.dll
 *.pidb
 *.userprefs

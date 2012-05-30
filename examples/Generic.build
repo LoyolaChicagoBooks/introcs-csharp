@@ -4,7 +4,9 @@
   <description>The Hello World of build files.</description>
 
   <property name="debug" value="true" overwrite="false"/>
-  <property name="build.dir" value="bin"/>
+  <property name="build.dir" value="."/>
+
+  <include buildfile="../include/NUnit.include" />
 
   <target name="clean" description="remove all generated files">
     <delete file="${build.dir}/${program}.exe" failonerror="false"/>
@@ -16,7 +18,11 @@
     <csc target="exe" output="${build.dir}/${program}.exe" debug="${debug}">
       <sources>
         <include name="${program}.cs"/>
+        <include name="intro_cs_lib/**/*.cs"/>
       </sources>
+      <references>
+        <include name="${nunit.dir}/**/${nunit.dll}"/>
+      </references>
     </csc>
   </target>
 </project>
