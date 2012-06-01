@@ -212,7 +212,7 @@ A string method producing an array:
 		
 Split is useful for parsing a line with several parts::
 
-    string line = InputLine("Enter integers on a line");
+    string line = UI.PromptLine("Enter integers on a line");
     string[] tokens = line.Split(' ');
     int[] nums = new int[tokens.Length];
     for (int i = 0; i < nums.Length; i++) {
