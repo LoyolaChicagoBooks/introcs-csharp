@@ -13,6 +13,7 @@ build/
 *.pidb
 *.userprefs
 *.csproj.*
+*.cs~
 examples-cs/
 CSharpHtml/
 examples.zip
