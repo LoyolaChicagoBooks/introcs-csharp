@@ -102,8 +102,8 @@ This variation of ``IndexOf`` has a second parameter:
 
 .. _countrep:
 
-Count Repetitions in a String
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Count Repetitions in a String Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program :file:`TestCountRep.cs`, with a Main testing method,
 that tests a function with the following heading::
@@ -126,19 +126,19 @@ used in the match of the first two e's.
 
       
 .. index::
-   double: exercise; safe InputInt
-   double: exercise; safe InputDouble
+   double: exercise; safe PromptInt
+   double: exercise; safe PromptDouble
    
 .. _safe-input-number:
 
-Safe InputInt and InputDouble Exercise
+Safe PromptInt and PromptDouble Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Save the example ``SafeNumberInputStub.cs`` as ``SafeNumberInput.cs``.
 
 The idea is to write safe versions of the utility functions
-InputInt and InputDouble (which can then be used in further
-places like InputIntInRange).  
+PromptInt and PromptDouble (which can then be used in further
+places like PromptIntInRange).  
 
 Be sure you are familiar with :ref:`safe-whole-number-input`,
 and the development of its ``InputWhole`` function.
@@ -161,8 +161,8 @@ legal places, remove them, and see that what is left is digits.
 The recently introduced string methods should help....
 
 Develop the functions in order and test after each one:
-write ``IsIntString``, revise ``InputInt``, 
-write ``IsDecimalString``, and revise ``InputDouble``.
+write ``IsIntString``, revise ``PromptInt``, 
+write ``IsDecimalString``, and revise ``PromptDouble``.
 
 Be sure to test carefully.  Not only confirm that all
 appropriate strings return ``true``:
@@ -170,8 +170,11 @@ Also be sure to test that you return ``false"``
 for *all* sorts of bad strings.  
 
 Hopefully
-you learned something from writing the earlier InputWhole.
+you learned something from writing the earlier PromptWhole.
 Probably it is not worth keeping in our utility library
 any longer, since we have 
-the more general and safe InputInt, and we can
-restrict to many ranges with InputIntInRange.  
+the more general and safe PromptInt, and we can
+restrict to many ranges with PromptIntInRange.
+
+We will arrange for these functions to be a library class later.
+For now just develop and test them in this one class. 

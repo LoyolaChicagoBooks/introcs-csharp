@@ -29,9 +29,9 @@ loop, so there is no need to gather data before the loop::
     int a, b, c;
     do {
         Console.WriteLine("Think of integer sides for a right triangle.");
-        a = IntInput("Enter integer leg: ");
-        b = IntInput("Enter another integer leg: ");
-        c = IntInput("Enter integer hypotenuse: ");
+        a = UI.PromptInt("Enter integer leg: ");
+        b = UI.PromptInt("Enter another integer leg: ");
+        c = UI.PromptInt("Enter integer hypotenuse: ");
         if (a*a + b*b != c*c) {
             Console.WriteLine("Not a right triangle: Try again!");
     } while (a*a + b*b != c*c);
@@ -68,4 +68,3 @@ loop rubric above, can have the form::
 
 It only sets the data to be tested once.  
 (The tradeoff is that the condition is tested twice.)
-

@@ -1,6 +1,7 @@
 .. index::
-   triple: interactive; loop; while
-
+   double: interactive; loop
+   single: loop; while
+   double: interactive; while
    
 .. _Interactive-while-Loops:
 	
@@ -19,39 +20,39 @@ We consider them now for three reasons:
   we can greatly improve the utility input functions we have been using, and
   add some more.
   
-We already have discussed the InputInt function.  The user can choose
+We already have discussed the PromptInt function.  The user can choose
 any int.  Sometimes we only want an integer in a certain range.
 Miles has examples that handle this by just silently changing
 a bad value to one at the end of the allowed range.  
-Another approach is to not accept a bad value, and get the user to explicitly
+Another approach is to not accept a bad value, and get the user to repeat
+trying and explicitly
 enter a value in the right range.  In theory the user could make errors
 for some time, so a loop makes sense.  For instance we might have a slow
 user, and there could be an exchange like the following
 when you want a number from 0 to 100.  For illustration, user input is shown
 in boldface:
 
-   | Enter a score: (0 to 100) **233**
+   | Enter a score: (0 through 100) **233**
    | 233 is out of range!
-   | Enter a score: (0 to 100) **101**
+   | Enter a score: (0 through 100) **101**
    | 101 is out of range!
-   | Enter a score: (0 to 100) **-1**
+   | Enter a score: (0 through 100) **-1**
    | -1 is out of range!
-   | Enter a score: (0 to 100) **100**
+   | Enter a score: (0 through 100) **100**
    
 and the value 100 would be accepted.
 
 This is a well-defined idea.  A function makes sense.  Its heading
 includes a prompt and low and high limits of the allowed range:
 
-.. literalinclude:: ../examples/PromptUserLoop1.cs
+.. literalinclude:: ../examples/InputInRange1.cs
    :start-after: chunk
    :end-before: {
 
-There is no need to put the limits in the prompt, since the function can
-create that part from the limit parameters.  For example to generate
+For example to generate
 sequence above, the call would be: 
 
-   ``InputIntInRange("Enter a score: ", 0, 100)``
+   ``InputIntInRange("Enter a score: (0 through 100) ", 0, 100)``
 
 .. index::
    double: concrete example; splitting a loop
@@ -142,17 +143,17 @@ the ``while`` loop, so we immediately have something to test
 in the ``while`` heading's condition.
 
 Do not reinvent the wheel!  
-We can use our earlier general ``IntInput`` function.  It needs a prompt.
+We can use our earlier general ``PromptInt`` function.  It needs a prompt.
 As a first version, we can use the parameter ``prompt``::
 
-   int number = InputInt(prompt);
+   int number = PromptInt(prompt);
 
 That is the initialization step before the loop.
 
 .. index::
    double: pitfall; repeat interactive input
    
-If we get into the body of the loop, it means there is an error, 
+*If* we get into the body of the loop, it means there is an error, 
 and the concrete example indicates we print a warning message.
 The concrete example *also* shows another step in the loop, asking
 the user for input.  It is
@@ -176,7 +177,7 @@ loop (and indent it)::
 
 Luckily you will get a compiler error in that situation, avoiding
 more major troubleshooting:  
-The complete copy of the line copies the declaration
+The complete copy of the line copies the *declaration*
 part as well as the assignment part, and mono sees the declaration of 
 ``number`` already there 
 from the scope outside the while block, and complains.
@@ -189,13 +190,16 @@ When the loop condition becomes false, and you get past the loop,
 you have a correct value in ``number``.  You have done all the hard work.  
 Do not forget to return it at the end.  
 
-.. literalinclude:: ../examples/PromptUserLoop1.cs
+.. literalinclude:: ../examples/InputInRange1.cs
    :start-after: chunk
    :end-before: chunk
 
-You can try this full example, ``PromptUserLoop1.cs``.  Look at it
-and then try compiling and running.  If you ran it without looking
-at the Main code, you might be confused about what values it would accept.
+You can try this full example, ``InputInRange1.cs``.  Look at it
+and then try compiling and running.  Look at the Main code.
+It is redundant - the limits are written both in the prompt and in the
+parameters.  We can do better.  In general we endeavor to supply data only
+once, and let the program use it in several places if it needs to.  In this
+case we can complete the last part of the prompt automatically in the code:
 
 There are two approaches here:  The caller could give a more explicit
 prompt.  Since the limits are given as parameters, anyway, we prefer
@@ -206,7 +210,8 @@ We could use  ::
     
     Console.Write(" ({0} through {1}) ", lowLim, highLim);
     
-but we need the code twice, and it is quite a mouthful.  
+but we need the code twice, and it is quite a mouthful....
+  
 Thus far we have only seen the use of format strings when immediately 
 printing with ``Console.Write`` (or ``WriteLine``).
 Here we would like to generate a string, for *use later*.  
@@ -220,20 +225,23 @@ The parameters
 have the same form as for ``Console.Write``, but the formatted string is
 *returned*.
 
-Here is a revised version, in example ``PromptUserLoop2.cs``:
+Here is a revised version, in example ``InputInRange2.cs``, 
+without redundancy in the prompts in ``Main``:
 
-.. literalinclude:: ../examples/PromptUserLoop2.cs
+.. literalinclude:: ../examples/InputInRange2.cs
    :start-after: chunk
    :end-before: chunk
 
 The only caveat with ``string.Format`` is that
-there is *no* special function corresponding to ``Console.WriteLine``.
+there is *no* special function corresponding to ``Console.WriteLine``,
+with an automatic terminating newline.
 You can generate a newline with string.Format:  Remember the
 escape code ``"\n"``.  Put it at the end to go on to a newline.
 
 This time around we did the user input correctly, with the 
 request for new input *repeated* at the end of the loop.
-That repetition *is* easy to forget.  Before we see what happens, note:
+That repetition *is* easy to forget.  Before we see what happens
+when you forget, note:
 
 .. index::
    double: pitfall; infinite loop
@@ -253,9 +261,9 @@ In particular you get an infinite loop
 if you fail to get new input from the user at the
 end of the loop.  The condition uses the bad
 original choice forever.  Here is the mistaken version, 
-from example  ``PromptUserLoop2Bad.cs``:
+from example  ``InputInRange2Bad.cs``:
 
-.. literalinclude:: ../examples/PromptUserLoop2Bad.cs
+.. literalinclude:: ../examples/InputInRange2Bad.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -277,7 +285,7 @@ running the program.
 Agree Function Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save example ``PrompUserLoop4Stub.cs`` as ``PromptUserLoop4.cs``.
+Save example ``TestAgreeStub.cs`` as ``TestAgreeStubAgree.cs``.
 
 Yes-no (true/false) questions are common.
 How might you write an input utility function ``Agree``? 
@@ -311,13 +319,13 @@ Safe Whole Number Input Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Save example :file:`TestInputWholeStub.cs` as
-``TestInputWhole.cs`` that tests
-a function ``InputWhole``, as described below.
+``TestInputWhole.cs``.  The code should test
+a function ``PromptWhole``, as described below.
 
-There is an issue with reading in numbers with the InputInt function.
+There is an issue with reading in numbers with the PromptInt function.
 If you make a typo and enter something that cannot be converted from a
 string to the right kind of number, a naive program will bomb.
-This is avoidable if you test the string and repeat if the string is illegal.
+This is avoidable if you test the string and repeat the input if the string is illegal.
 Places where more complicated tests for illegality are needed are
 considered in :ref:`safe-input-number`.  For now we just consider
 reading in whole numbers (integers greater than or equal to 0).  
@@ -325,6 +333,8 @@ Note that such
 a number is written as just a sequence of digits.   
 Follow the interactive model of InputIntInRange, looping until
 the user enters something that is legal: in this case, all digits.
+
+The stub code already includes the earlier function ``IsDigits``.
 
 	
 .. later  some after arrays, some just more work for exercises (strange func)

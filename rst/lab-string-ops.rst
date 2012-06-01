@@ -27,7 +27,7 @@ ShowLength, SentenceType, LastFirst1, LastFirst),
 and have Main call all the ones
 you have written so far (or for testing purposes, just the one you
 are working on, with the other function calls commented out).
-All input from the user should be preceded by a meaningful prompt.
+Use the UIF class for user input.  
 
 #. Read a string from the keyboard 
    and print the length of the string, with a label.

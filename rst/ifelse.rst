@@ -15,7 +15,7 @@ depending on the input. The main code of ``Clothes.cs`` is:
    :end-before: chunk
    :linenos:
 
-The lines labeled 3-8 are an |if-else| statement. Again it is
+The lines labeled 2-7 are an |if-else| statement. Again it is
 close to English, though you might say "otherwise" instead of
 "else" (but else is shorter!). There are two indented statements
 in braces:

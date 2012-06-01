@@ -1,7 +1,8 @@
 
 .. index::
-   triple: homework; input-output; decisions
-   triple: homework; input-output; loops
+   double: homework; input-output;
+   double: homework; decisions
+   double: homework; loops
    
 .. _homework-grade-calculation2:
 
@@ -81,7 +82,7 @@ Style Requirements
    to write code to prompt for each of exams, labs, homework, etc. when 
    a single function (with parameter named *category*) could be used to
    avoid repeating yourself. (And per the Hints section, you will also
-   want to write your function to take advantage of our *input* 
+   want to write your function to take advantage of our ``UI`` 
    functions.
 
 #. Also beginning with this assignment, it is expected that your work 
@@ -116,20 +117,7 @@ This assignment will be the first one where you need to start using
 functions. Otherwise, you'll find yourself getting tired within minutes
 of starting your work.`
 
-You need to have two functions to prompt the user to input 
-integer and double
-data. We're going to give you the code for these here and in 
-example ``PromptUser1.cs``.  Your job is to
-copy them into your program and make use of them in your solution.  The
-first function is
-a supporting function to return a string in response to a prompt.
-These versions are sufficient for the assignment, 
-though you are *welcomed* to replace these
-with more *robust* versions that get developed in class later:
-
-.. literalinclude:: ../examples/PromptUser1.cs
-   :start-after: chunk
-   :end-before: chunk
+Use the ``UI`` class to get data from the user.
    
 .. [CamelCase] http://en.wikipedia.org/wiki/CamelCase
 

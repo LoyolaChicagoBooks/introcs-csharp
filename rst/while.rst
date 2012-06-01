@@ -15,6 +15,7 @@ While Loops
    condition-short-circuit
    whileexamples
    stringmethods2
+   userinput
    gcdexamples
    do-while
    lab-number-game

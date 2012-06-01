@@ -569,6 +569,5 @@ then you can choose to print ``Heads`` or ``Tails`` with an
     
 In your Main method have a ``for`` loop calling  ``Flip()``
 10 times to test it, so you generate a random sequence of 
-10 ``Heads`` and/or
-``Tails``.
+10 heads and/or tails.
 

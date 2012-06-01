@@ -1,5 +1,7 @@
 .. index::
-   triple:  while; index; sequence
+   double:  while; index
+   double:  index; sequence
+   double:  while; sequence
 
 .. _While-Sequence:
 
@@ -336,6 +338,6 @@ code for the function:
 The full code with a ``Main`` testing program is in 
 example :file:`CheckDigits2.cs`.
 
-Returning put of a loop 
-is a good pattern to remember for when you are searching for something, 
+Returning out of a loop 
+is a good pattern to remember when you are searching for something, 
 and you know the final answer for your function as soon as you find it.

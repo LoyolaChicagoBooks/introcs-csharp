@@ -57,7 +57,7 @@ the class heading to::
 
 In general one or more interface names can be listed after the class name and a  colon,
 and before the opening brace of the class body.  This particular interface is defined in
-System.Collections.Generic, so we ned to be using that namespace.
+System.Collections.Generic, so we need to be using that namespace.
 
 Project :file:`Interfaces/Rational` has the modified Rational and a :file:`Main.cs`
 to test this with a list of Rationals.  This program:

@@ -97,7 +97,7 @@ including a ToString Method, and a separate testing class.
 	  
 		 "Animal: Froggy"
 		 
-	- All the methods that print should be void.  Which need parameter, or what type?
+	- All the methods that print should be void.  Which need a parameter, of what type?
 
 #. Write a class with a Main method, testing Animal: 
    create a couple of Animals and visibly test all the code.
