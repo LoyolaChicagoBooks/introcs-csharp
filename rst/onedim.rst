@@ -231,7 +231,7 @@ string in ``tokens`` into an integer in the corresponding location in ``nums``.
 References and Aliases
 -------------------------
 
-Object variables like arrays being references has important implications for
+Object variables, like arrays, being references has important implications for
 assignment.
 
 With a primitive type like an ``int``, an assignment copies the data:

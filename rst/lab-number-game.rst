@@ -178,8 +178,8 @@ In ``Game``, make the following alterations and additions:
     | Good job!  You win!
    
    For debugging purposes, you might want to have ``secret`` 
-   be printed out right away 
-   (but eliminate that part when everything works)!
+   be printed out right away. 
+   (Eliminate that part when everything works!)
 
 Part 4:  Let the Player Set the Range of Values
 ------------------------------------------------

@@ -2,7 +2,6 @@ using System;
 
 class ModMultTable
 {
-
    static void Main()
    {                                 // start chunk
       //heading
@@ -32,8 +31,6 @@ class ModMultTable
       }
       return ret;
    }
-
-
 }
 
 

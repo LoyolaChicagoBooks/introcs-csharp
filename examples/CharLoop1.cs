@@ -1,29 +1,24 @@
 using System;
-
-class CharLoop
+namespace IntroCS
 {
-
-   static void Main() //testing routine
+   class CharLoop
    {
-      string s = InputLine("Enter a line: ");
-      OneCharPerLine(s);
-   }
-
-   static string InputLine(string prompt)
-   {
-      Console.Write(prompt);
-      return Console.ReadLine();
-   }
-                                            // new chunk
-   /** Print the characters of s, one per line. */
-   static void OneCharPerLine(string s)
-   {
-      int i = 0;
-      while (i < s.Length) {
-         Console.WriteLine(s[i]);
-         i++;
+      
+      static void Main() //testing routine
+      {
+         string s = UIF.PromptLine("Enter a line: ");
+         OneCharPerLine(s);
+      } 
+                                       // new chunk
+      // Print the characters of s, one per line.
+      static void OneCharPerLine(string s)
+      {
+         int i = 0;
+         while (i < s.Length) {
+            Console.WriteLine(s[i]);
+            i++;
+         }
       }
-   }
-}                                           // past new chunk
-
+   }                              // past new chunk
+}
 

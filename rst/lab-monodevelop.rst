@@ -171,64 +171,21 @@ to it one at a time.
 
 #. Create a library project for the Input Utilities.
 
-   In many of our examples, we have made use of some functions to
-   handle various aspects of user input. For example:
-
-   .. literalinclude:: ../examples/PromptUser1.cs
-      :start-after: chunk
-      :end-before: chunk
-
-   It is rather tedious for us to copy these functions every time we
-   want to make use of them. In MonoDevelop, we can *package* these
-   functions into a *library*. Much like your local public library,
-   where you can grab a book when you need it, a library in
-   MonoDevelop allows you to grab methods whenever you need them. In
-   this case, we'll create a simple class to hold our input methods
-   named ``InputUtilities`` and copy the above code into it. Let's do
-   it.
+   In many of our examples, we have made use of a User Input class like ``UI``. 
 
    - On the solution you have created for your overall project, right
      click and select Add -> Add New Project.
    - Select C# and Library/C#.
-   - Enter ``InputUtils`` as the project name and press Forward as
+   - Enter ``UI`` as the project name and press Forward as
      many times as required to complete the process.
    - You now have a new library project.
-   - You'll see a class named ``MyClass.cs``. You can keep this name,
-     but it would be nice to give this class a name that has something
-     to do with *input*. Right click on MyClass.cs to select the
-     Rename option and give it any name you like (we suggest
-     ``InputUtils.cs``).
-   - Now double click on the file to open it in the editor. We're
-     going to make a few alterations.
-
-     - Change namespace to ``namespace InputUtils``, if it has not been set this
-       way already.
-     - Change ``public MyClass`` to ``public Input``.
-     - If you see a method named ``public MyClass``, remove it and its
-       braces. This is called a class constructor and is not needed
-       (but is harmless if you want to keep it).
-     - Copy the code for the two Input functions above in between the
-       brackets (inside the class Input). 
-     - We need to make one change, now that we are putting our
-       functions into a library. We need to add the ``public`` keyword
-       before the word ``static``. This indicates that these functions
-       can be used by *anyone* who has access to the class
-       ``Input``. We'll come to understand this in more detail when we
-       learn about classes and objects. (So just do it, even if you
-       don't fully understand it yet!)
-
-   - When you are done,  you should have something like the following:
-
-     .. image:: images/lab-monodevelop/InputUtilsCS.png
-        :height: 400 px
-     	:alt: MonoDevelop Image
-     	:align: center
-
+   - Remove class named ``MyClass.cs``. 
+   - Add the class ``UI``
    - As in the previous part, let's check whether our entire solution
      *builds* properly. From the Build menu, select Build All. If you
      encounter any errors, you'll have to correct them.
 
-#. Create a console project that makes use of the Input Utilities by
+#. Create a console project that makes use of ``UI`` by
    adding a reference to the Input Utilities library (created in the
    previous step).
 
@@ -247,29 +204,18 @@ to it one at a time.
    - In the Solution pane (explorer), you will see a folder named
      References underneath InputTesting. Right click to Edit
      References.
-   - If all has gone according to plan, you should see ``InputUtils``
+   - If all has gone according to plan, you should see ``UI``
      as an "assembly" (.Net's fancy name for a compiled
-     library). Check the checkbox next to InputUtils so we can use it
+     library). Check the checkbox next to UI so we can use it
      in our new project.
 
    - Now click on ``MyClass.cs`` in the ``InputTesting`` project and
      do the following:
 
-     - Add ``using InputUtils``.
+     - Change the namespace to ``IntroCS``.
      - Create a Main() method to prompt the user for any desired input
        (integer, string, etc.) We are just testing whether we can see
-       the functions that we referenced in InputUtils.
-     - To call the input functions, we need to do things a bit
-       differently than in the past. Because we are now using a
-       separate class (Input) from the class that is using the
-       functions (MyClass), we need to use the *dot* syntax to call
-       it. For example, this::
-
-          int i = InputInt("Please enter an integer: ");
-
-       is now::
-
-          int i = Input.InputInt("Please enter an integer: ");
+       the functions that we referenced in ``UI``.
 
    - As before, you should be able to Build -> Build All and then run
      this simple program. You might want to use a
@@ -290,8 +236,4 @@ you to build on ideas we have explored previously. As you become more
 yourself saying, "I think I have done something like this before." If
 properly packaged into a library, you can make use of the code again
 and again in your work, which can be a real time saver!
-
-
-
-
-   
+x

@@ -1,6 +1,7 @@
-.. index::
-   triple: function; return; math
-   double: function; sequence
+
+.. index::   
+   double: function; return
+   double: function; execution sequence
 
 .. _Returned-Function-Values:
 
@@ -125,6 +126,9 @@ the function and returns nothing explicitly. On the other hand
 caller gets to decide what to do with the string, and above it is
 printed in ``Main``.
 
+.. index::
+   double: example; addition2.cs
+   
 In general functions should do a single thing.
 You can easily combine a sequence of functions, and you have more
 flexibility in the combinations
@@ -140,8 +144,9 @@ printing is one possibility, done in
 .. literalinclude:: ../examples/addition2.cs
 
 **In class recommendation**:  Improve Miles' original example
-with functions.  What makes sense? The original example is saved
-as :file:`GlazerCalc1.cs`.
+with functions.  What operations get repeated (and are likely to appear in other
+programs, too)? The original example is saved
+as :file:`glazer_calc.cs`.
 	
 .. _QuotientStringEx:
 	

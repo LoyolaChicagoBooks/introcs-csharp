@@ -82,9 +82,7 @@ variable overtimeHours. You are encouraged to think about a
 solution before going on and examining mine.
 
 You can try running my complete example program, :file:`Wages1.cs`, 
-also
-shown below. The program uses the keyboard input functions
-developed in class.  
+also shown below.  
 
 .. literalinclude:: ../examples/Wages1.cs
    
@@ -95,7 +93,7 @@ displaying decimal numbers:
    :start-after: chunk2
    :end-before: chunk2
 
-Inside the format string you see ``{1:F2}`` and ``{2:F2}``:  inside 
+In the format string are ``{1:F2}`` and ``{2:F2}``:  Inside 
 the braces, after the parameter index, you see a new part,
 ``:F2``.  
 The part after the colon gives optional formatting information.

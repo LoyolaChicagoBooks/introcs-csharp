@@ -2,7 +2,7 @@ CSProj Revisited
 ==================
 
 The CSProj1 skeleton was set up with the different commands
-set up in different classes, keeping related things together.
+in different classes, keeping related things together.
 
 On the other hand they had high level structure in common.  
 Similar names were consciously used for methods:
@@ -36,7 +36,7 @@ We add a string property CommandWord to each of them.
 
 We will add an extra convenience feature of C# here.
 Thus far we have used private instance variables and public
-getter methods.  We get use a public instance variable declaration
+getter methods.  We can use a public instance variable declaration
 with a similar effect as in::
 
           public string CommandName {get; private set;}

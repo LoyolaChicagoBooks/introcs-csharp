@@ -1,4 +1,4 @@
-﻿COMP 170 Categories
+COMP 170 Categories
 
 revisions:
 	code:
@@ -11,11 +11,11 @@ revisions:
 	notes:
 		summary at the end of each chapter
 		text not code blocks where appropriate
-		:file: consistent.  
+		:file: consistent, :menuitem:, :keyb: .  
 		What C# names with `` ?
 		more index
-		fix unintelligible triple index items
-		index names consistent (not Format and format)
+		fix unintelligible triple index items  search triple:
+		index names consistent.  topic lower case, method upper?
 		more exercises
 		kill todo's
 		syntax intro considstently given, consistent notation
