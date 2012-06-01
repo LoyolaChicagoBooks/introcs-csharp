@@ -277,7 +277,7 @@ the formal parameter name is an **alias** for the actual parameter name.
 
 For example, consider the following function::
 
-   /** Modify a by multiplying all elements by multiplier. */
+   // Modify a by multiplying all elements by multiplier. 
    static void Scale(int[] a, int multiplier)
    {
       for (int i = 0; i < a.Length; i++) {
@@ -347,10 +347,10 @@ Trim All Exercise
 Write a program ``Trimmer.cs`` that includes and tests a 
 function with heading::
 
-   /** Trim all elements of s and replace them in the array.
-       Example: If a contains {" is  ", " it", "trimmed?   "}
-       then after the function call the array contains
-       {"is", "it", "trimmed?"}.   */
+   // Trim all elements of s and replace them in the array.
+   //  Example: If a contains {" is  ", " it", "trimmed?   "}
+   //  then after the function call the array contains
+   //  {"is", "it", "trimmed?"}.   
    static void TrimAll(string[] a) 
    
    
@@ -366,9 +366,9 @@ Count Duplicates Exercise
 Write a program ``CountDups.cs`` that includes and tests a 
 function with heading::
 
-	/** Return the number of duplicate pairs in an array a.  
-	 * Example: for elements 2, 5, 1, 5, 2, 5 
-	 * the return value would be 4 (one pair of 2's three pairs of 5's. */
+	// Return the number of duplicate pairs in an array a.  
+	// Example: for elements 2, 5, 1, 5, 2, 5 
+	// the return value would be 4 (one pair of 2's three pairs of 5's. 
 	public static int dups(int[] a)
 
 
@@ -384,9 +384,8 @@ Mirror Array Exercise
 Write a program ``MakeMirror.cs`` that includes and tests a 
 function with heading::
 
-	/** Create a new array with the elements of a in the opposite order.
-	 * {"aA", "bB", "cC"} produces a new array {"cC", "bB", "aA"}
-	 */
+	// Create a new array with the elements of a in the opposite order.
+	// {"aA", "bB", "cC"} produces a new array {"cC", "bB", "aA"}
 	public static string[] Mirror(string[] a)
 
 
@@ -403,9 +402,8 @@ Write a program ``ReverseArray.cs`` that includes and tests a
 function with heading::
 
 
-	/** Reverse the order of array elements.
-	 * {"aA", "bB", "cC"} -> {"cC", "bB", "aA"}
-	 */
+	// Reverse the order of array elements.
+	// {"aA", "bB", "cC"} -> {"cC", "bB", "aA"}
 	public static void Reverse(string[] a)
 
    
@@ -422,11 +420,11 @@ Write a program ``MakeHistogram.cs`` that includes and tests a
 function with heading::
 
 
-	/** Return a histogram array counting repetitions of values
-	 *  start through end in array a.  The count for value start+i
-	 *  is in index i of the returned array.  For example:
-	 *  Histogram(new int[]{2, 0, 3, 5, 3, 5}, 0, 5) returns
-	 *  a new array containing {1, 0, 1, 2, 0, 2}.  */
+	// Return a histogram array counting repetitions of values
+	//  start through end in array a.  The count for value start+i
+	//  is in index i of the returned array.  For example:
+	//  Histogram(new int[]{2, 0, 3, 5, 3, 5}, 0, 5) returns
+	//  a new array containing {1, 0, 1, 2, 0, 2}.  
 	public static int[] Histogram(int[] a, int start, int end)
 
    

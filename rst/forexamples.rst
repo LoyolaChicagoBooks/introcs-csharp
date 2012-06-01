@@ -530,7 +530,7 @@ String Repeating Exercise
 a. Write a program StringRep.cs with a function ``PrintDup``, 
    with heading::
  
-       /** Print n repetitions of s on one line (n >= 0). */
+       // Print n repetitions of s on one line (n >= 0). 
        static void PrintDup(string s, int n)
 
 b. More versatile is to add and test a function ``StringRep``:

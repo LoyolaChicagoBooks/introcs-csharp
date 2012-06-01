@@ -20,6 +20,8 @@ appropriate::
        Console.WriteLine("Code for {0} is {1}.", ch, (int)ch);
    }
    
+Try this in csharp.
+
 Many more examples will come when we introduce more kinds of sequence.
    
 
