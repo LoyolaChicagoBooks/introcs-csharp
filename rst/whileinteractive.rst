@@ -52,7 +52,7 @@ includes a prompt and low and high limits of the allowed range:
 For example to generate
 sequence above, the call would be: 
 
-   ``InputIntInRange("Enter a score: (0 through 100) ", 0, 100)``
+   ``PromptIntInRange("Enter a score: (0 through 100) ", 0, 100)``
 
 .. index::
    double: concrete example; splitting a loop
@@ -173,7 +173,7 @@ You might decide to be quick
 and just copy the initialization line into the bottom of the
 loop (and indent it)::
 
-   int number = InputInt(prompt);
+   int number = PromptInt(prompt);
 
 Luckily you will get a compiler error in that situation, avoiding
 more major troubleshooting:  
@@ -184,7 +184,7 @@ from the scope outside the while block, and complains.
 
 Hence copy the line, *minus* the `` int`` declaration::
 
-   number = InputInt(prompt);
+   number = PromptInt(prompt);
 
 When the loop condition becomes false, and you get past the loop,
 you have a correct value in ``number``.  You have done all the hard work.  
@@ -331,7 +331,7 @@ considered in :ref:`safe-input-number`.  For now we just consider
 reading in whole numbers (integers greater than or equal to 0).  
 Note that such
 a number is written as just a sequence of digits.   
-Follow the interactive model of InputIntInRange, looping until
+Follow the interactive model of PromptIntInRange, looping until
 the user enters something that is legal: in this case, all digits.
 
 The stub code already includes the earlier function ``IsDigits``.

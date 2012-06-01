@@ -65,8 +65,8 @@ projects:
    will be used to make sure that everyone can create something that 
    works, much like we did in the first lab.
 
-#. A project that contains the *input* functions that we have been
-   using in various examples (e.g. InputInt and InputString).
+#. A project that contains the user input functions of ``UIF`` that we have been
+   using in various examples.
 
 #. A project that makes use of the *input* functions. This project 
    can contain whatever code you like, including your homework 

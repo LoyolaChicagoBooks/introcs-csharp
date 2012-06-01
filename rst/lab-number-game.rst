@@ -63,8 +63,6 @@ for playing the number game in a function called ``Game``::
         
 For now your Main function can just call ``Game()``.
 
-Copy in the functions from previous code so you can use ``InputInt``.
-
 In ``Game``:
 
 #. For the simplest versions, which help testing, have the
@@ -72,7 +70,9 @@ In ``Game``:
    secret number (like 29), and call it ``secret``.  
    Admittedly, this is not much fun for the player the second time!
 
-#. Prompt the player for a guess.  Every time the player guesses wrong,
+#. Prompt the player for a guess.  
+   You can use ``UI.PromptInt``.
+   Every time the player guesses wrong,
    print "Wrong!".  A later version will give clues.  Keep
    prompting for another number until the player guesses correctly.
    (Since you, the programmer, knows the secret number, this need not go

@@ -108,8 +108,7 @@ Count Repetitions in a String Exercise
 Write a program :file:`TestCountRep.cs`, with a Main testing method,
 that tests a function with the following heading::
 
-   /**Return the number of separate repetitions of target
-    * in s. */
+  // Return the number of separate repetitions of target in s.
   static int CountRep(string s, string target)
 
 For example here is what ``CountRep( "Mississippi", target)`` 
@@ -147,7 +146,7 @@ A legal whole number string consists entirely of digits.  We have
 already written example ``IsDigits`` to identify a string for a
 whole number.
 
-The  improvements to InputInt and InputDouble are 
+The  improvements to PromptInt and PromptDouble are 
 very similar and straightforward *if* you have developed the two main
 Boolean support functions,
 ``IsIntString`` and``IsDecimalString`` respectively.  
