@@ -1,6 +1,6 @@
 using System;
 
-namespace Comp170
+namespace IntroCS
 {
    public class Hello
    {    
