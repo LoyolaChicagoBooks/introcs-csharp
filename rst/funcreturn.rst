@@ -146,7 +146,7 @@ printing is one possibility, done in
 **In class recommendation**:  Improve Miles' original example
 with functions.  What operations get repeated (and are likely to appear in other
 programs, too)? The original example is saved
-as :file:`glazer_calc.cs`.
+as :file:`glazer_calc.cs`.  Copy it to :file:`glazer_input.cs` and modify it.
 	
 .. _QuotientStringEx:
 	
