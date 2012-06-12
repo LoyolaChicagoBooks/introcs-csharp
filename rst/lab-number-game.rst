@@ -158,8 +158,8 @@ In ``Game``, make the following alterations and additions:
       2
 
    In general the minimum possible value of the number returned by ``r.Next``
-   is the first parameter, and the value returned is always less than
-   the second parameter.
+   is the first parameter, and the value returned is always *less* than
+   the second parameter, *never equal*.  
    
    You can see that ``r.Next()`` is smart enough to give what appears to
    be a randomly chosen number every time. If you call it 100 times, it is

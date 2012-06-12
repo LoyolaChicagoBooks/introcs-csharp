@@ -187,3 +187,11 @@ You need to fill in the Main method:
       100000    50   ??.???    ??.???  ??.???  ??.???
   
   The table would be longer if more values of n were entered on the command line.
+  
+  Because the range of speeds is so enormous, make an accommodation with the 
+  slow linear version:  If rep >= 100 and (long)n*rep  >= 100000000, then, 
+  for the linear column only, time with rep2 = rep/100 instead of rep, 
+  and then compensate by multiplying the time by (double)rep/rep2.
+  (This multiplier 
+  is not just 100, since the integer division creating rep2 may not be exact.)  
+  
