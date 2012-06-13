@@ -75,8 +75,11 @@ Animal Class Lab
 Write from scratch a simple (silly) class, with constructor and methods,
 including a ToString Method, and a separate testing class.
 
+Add the two files to the :file:`animal_lab` folder.  Use the file names specified
+below, and then the nant build script in that folder will work!
 
-#. Create a simple class Animal:
+
+#. Create a simple class Animal in a file `animal.cs`:
 
 	- An Animal has a name and a gut.  In our version the gut is a List of strings 
 	  describing the contents, in the order eaten.  
@@ -99,8 +102,10 @@ including a ToString Method, and a separate testing class.
 		 
 	- All the methods that print should be void.  Which need a parameter, of what type?
 
-#. Write a class with a Main method, testing Animal: 
-   create a couple of Animals and visibly test all the code.
+#. Write a file :file:`test_animal.cs` with a class with a Main method, testing Animal: 
+   create a couple of Animals and visibly test all the code, 
+   with enough explanation that someone running the test program, 
+   but *not* looking at the code, can see that everything works.
 
 
 Planning A Class Structure
@@ -167,7 +172,8 @@ for different parts to interact.
 
 As you think how to break this game into parts, also think how the parts interact.
 
-In the projects in :file:`CSProj/CSProj1` is code that generated the exchange above.
+The code that generated the exchange above is the 
+project folder :file:`CSProj/CSProj1`.
 
 The code uses many of the topics discussed so far in these notes.
 
