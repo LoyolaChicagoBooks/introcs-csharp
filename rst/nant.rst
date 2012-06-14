@@ -1,4 +1,10 @@
-This is quick documentation for Andy and Bob:
+NAnt 
+====
+
+This will eventually become a page about NAnt. It is not linked to the
+table of contents and hasn't even been started. 
+
+These are some notes from the original README.nant file.
 
 How to build examples manually.
 
