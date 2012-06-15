@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 // Names:
 
-namespace Books
+namespace IntroCS
 {
    /** A class that maintains a list of books. */
    public class BookList

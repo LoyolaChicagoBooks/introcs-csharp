@@ -22,7 +22,7 @@ namespace IntroCS
            for (int i = 0; i < 3; i++) {
                int x = rand.Next(n), y = rand.Next(n), ans = x+y;
                string prompt = string.Format("Enter the sum: {0} + {1} = ", x, y);
-               int val = Input.InputInt(prompt);
+               int val = UI.PromptInt(prompt);
                if (ans == val) {
                    Console.WriteLine("Correct!");
                    score++;

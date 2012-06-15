@@ -1,16 +1,13 @@
 using System;
 using System.IO;
-namespace CSProject
+namespace IntroCS
 {
    
-   /**
-    * File utilities for reading from a text file.
-    */
+   // File utilities for reading from a text file.
    public class FileUtil
    {
-      /** Open fileName and return the stream.
-       * MonoDevelop kludge looks up two directories if need be.
-       * Provides a message if cannot find fileName, and returns null. */
+      // MonoDevelop kludge looks up two directories if need be.
+      // Provides a message if cannot find fileName, and returns null. 
       public static StreamReader GetDataReader(string fileName)
       {
          // MonoDevelop kludge!!!!
@@ -25,11 +22,9 @@ namespace CSProject
          return new StreamReader(fileName);
       }
 
-      /**
-        * Read a long line and return it wrapped into lines.
-        * Such data is easiest generated in a regular word
-        * processor that automatically wraps lines.
-        */    
+      // Read a long line and return it wrapped into lines.
+      // Such data is easiest generated in a regular word
+      // processor that automatically wraps lines.
       public static string LineWrap(StreamReader reader)
       {
          return WordWrap(reader.ReadLine(), 79);
@@ -37,15 +32,14 @@ namespace CSProject
 
       private static char[] noChar = {};
 
-      /** Split s at any number of whitespace characters.
-       *  No empty strings are inserted. */
+      // Split s at any number of whitespace characters.
+      //  No empty strings are inserted. 
       public static string[] SplitWhite(string s)
       {   // such a mouthfull!
          return s.Split(noChar, StringSplitOptions.RemoveEmptyEntries);
       }
-      /**
-        * Add line breaks to s so it wraps within a specified
-        * number of columns. */
+      // Add line breaks to s so it wraps within a specified
+      // number of columns. 
       public static string WordWrap(string s, int columns)
       {
          string wrapped = "";

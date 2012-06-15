@@ -2,9 +2,7 @@ using System;
 using System.Collections.Generic;
 namespace IntroCS
 {
-   /**
-    * Starting point for Lab 8.
-    */
+   // Starting point for Interface Lab.
    public class PlayGames
    {
       private static Random rand = new Random();
@@ -32,7 +30,7 @@ namespace IntroCS
          do {
             IGame g = PopRandom(games);
             totScore += g.Play();  // use numerical result from the game
-         } while (games.Count > 0 && Input.Agree("Want a game? "));
+         } while (games.Count > 0 && UI.Agree("Want a game? "));
          Console.WriteLine("Thanks for Playing!");
          Console.WriteLine("Your total score is " + totScore);
       }

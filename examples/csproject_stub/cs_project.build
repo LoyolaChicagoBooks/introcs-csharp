@@ -19,7 +19,7 @@
   <target name="build" description="compiles the source code">
     <mkdir dir="${build.dir}" failonerror="false"/>
 
-    <csc target="exe" output="${build.dir}/Game.exe" debug="${debug}">
+    <csc target="exe" output="${build.dir}/game.exe" debug="${debug}">
       <sources>
         <include name="game.cs"/>
         <include name="command.cs"/>
@@ -27,10 +27,10 @@
         <include name="file_util.cs"/>
         <include name="goer.cs"/>
         <include name="helper.cs"/>
-        <include name="input.cs"/>
         <include name="place.cs"/>
         <include name="quitter.cs"/>
         <include name="response.cs"/>
+        <include name="../intro_cs_lib/**/*.cs"/>
       </sources>
     </csc>
   </target>

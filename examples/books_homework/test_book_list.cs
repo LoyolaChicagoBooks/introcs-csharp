@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 // Names:
 
-namespace Books
+namespace IntroCS
 {
    /** A main program to test the class BookList. */
    class TestBookList
