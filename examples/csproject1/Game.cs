@@ -49,7 +49,7 @@ namespace CSProject
         */
       public Game()
       {
-         places = Place.createPlaces("placeData.txt");
+         places = Place.createPlaces("place_data.txt");
          currentPlace = places["outside"];
          quitter =  new Quitter();
          goer = new Goer(this);
