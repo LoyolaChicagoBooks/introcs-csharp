@@ -2,7 +2,7 @@ using System;
 
 namespace Arrays1D
 {
-   class ArrayLab
+   public class ArrayLab
    {
       public static void Main(string[] args)
       { // Include tests. Display test input and
