@@ -31,7 +31,7 @@ Exchanging Array Elements
 We'll begin by introducing you to a simple method, whose only purpose in life is to 
 swap two data values at positions ``m`` and ``n`` in a given integer array:
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-exchange-begin
    :end-before: chunk-exchange-end
    :linenos:
@@ -103,7 +103,7 @@ Each exchange in Bubble Sort removes precisely one inversion; therefore,
 Bubble Sort requires :math:`O(N^2)` exchanges.
 
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-bubblesort-begin
    :end-before: chunk-bubblesort-end
    :linenos:
@@ -120,7 +120,7 @@ Selection Sort
 The Selection Sort algorithm works to minimize the amount of data movement,
 hence the number of ``exchange()`` calls. 
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-selectionsort-begin
    :end-before: chunk-selectionsort-end
    :linenos:
@@ -178,7 +178,7 @@ only half as many comparisons as Bubble Sort, since the average distance an
 element must move for random input is one-half the length of the sorted
 portion. 
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-insertionsort-begin
    :end-before: chunk-insertionsort-end
    :linenos:
@@ -219,12 +219,12 @@ In this first example, we sort all subsequences of elements 8 apart,
 then 4, 2, and 1. Please note that these intervals are to show how the 
 method works--not how the method works *best*.
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-shellsort-begin
    :end-before: chunk-shellsort-end
    :linenos:
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-shellsort-naive-begin
    :end-before: chunk-shellsort-naive-end
    :linenos:
@@ -278,7 +278,7 @@ This results in a sequence 1, 3, 7, 15, 31....
 Here is the improvement to our naive method that dynamically calculates
 the intervals based on the first suggestion of Knuth:
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-shellsort-better-begin
    :end-before: chunk-shellsort-better-end
    :linenos:
@@ -308,7 +308,7 @@ best sorting algorithms but, in practice, has a worst case performance also on t
 order :math:`O(N ^2)`. When the data are randomly sorted (as in our experiments) 
 it does better at :math:`O(N  \log N)`.
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-quicksort-begin
    :end-before: chunk-quicksort-end
    :linenos:
@@ -329,7 +329,7 @@ the data are in random order.
 
 The following code generates a random array:
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-random-begin
    :end-before: chunk-random-end
    :linenos:
@@ -385,7 +385,7 @@ method's code. As this code is fairly lengthy, we're going to look at parts of i
 ``Main()`` method should be thought of as an *experiment* that tests the performance
 of each of the sorting algorithms.
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-drivervars-begin
    :end-before: chunk-drivervars-end
    :linenos:
@@ -404,7 +404,7 @@ The variables declared here are to set up the apparatus:
 - ``watch``: The stopwatch object we're using to do the timings of all experiments.
 
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-driverparameters-begin
    :end-before: chunk-driverparameters-end
    :linenos:
@@ -415,7 +415,7 @@ often try to make it possible to run them with minimal user interaction. For the
 of teaching, we wanted to make it possible to run it with or without command-line parameters.
 
 
-.. literalinclude:: ../projects/Arrays/Sorting/Main.cs
+.. literalinclude:: ../examples/arrays/Sorting.cs
    :start-after: chunk-driverapparatus-begin
    :end-before: chunk-driverapparatus-end
    :linenos:
@@ -444,12 +444,10 @@ milliseconds (thousandths of a second).
 Getting the Code
 ---------------------
 
-If you already have performed a checkout of our entire project at 
-Bitbucket, you can find this code in the ``projects/Arrays/Sorting``
-folder (and open the solution ``Sorting.sln`` in MonoDevelop or Visual
-Studio). 
+You can find this code in  :file:`examples/arrays/Sorting.cs`. 
 
-You can also view the full source code in our [SortingFolder]_.
+.. out of date
+    You can also view the full source code in our [SortingFolder]_.
 
 Running the Code
 ----------------------
@@ -457,7 +455,7 @@ Running the Code
 Here's the output of a trial run on one of our computers. The results will vary
 depending on your computer's CPU, among other factors.
 
-.. literalinclude:: ../projects/Arrays/Sorting/output/results.txt
+.. literalinclude:: ../examples/arrays/output/results.txt
    :language: text
 
 At least based on randomly-generated arrays, the performance can be summarized 
@@ -496,4 +494,5 @@ as follows:
 
 .. [TCSortingJava] http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm
 
-.. [SortingFolder] https://bitbucket.org/gkthiruvathukal/introcs-csharp/src/d82c38851f6a/projects/Arrays/Sorting/Main.cs
+.. out of date
+   .. [SortingFolder] https://bitbucket.org/gkthiruvathukal/introcs-csharp/src/d82c38851f6a/projects/Arrays/Sorting/Main.cs

@@ -85,7 +85,7 @@ Let's get started.
 Testing the Constructor
 --------------------------
 
-.. literalinclude:: ../projects/Music/Rational/RationalTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
    :start-after: snip-ConstructorTest-begin
    :end-before: snip-ConstructorTest-end
    :linenos:
@@ -115,7 +115,7 @@ at how the rest of our testing is done.
 Testing Rational Comparisons
 ----------------------------------
 
-.. literalinclude:: ../projects/Music/Rational/RationalTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
    :start-after: snip-BasicComparisonTests-begin
    :end-before: snip-BasicComparisonTests-end
    :linenos:
@@ -137,7 +137,7 @@ an *expected result* (e.g. 1/4 + 2/4 == 3/4).
 Testing Rational Arithmetic
 -------------------------------
 
-.. literalinclude:: ../projects/Music/Rational/RationalTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
    :start-after: snip-BasicArithmeticTest-begin 
    :end-before: snip-BasicArithmeticTest-end
    :linenos:
@@ -177,7 +177,7 @@ minimal explanation as they are in many ways variations on the theme.
 Testing Rational Conversions (to other types)
 -------------------------------------------------
 
-.. literalinclude:: ../projects/Music/Rational/RationalTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
    :start-after: snip-BasicConversionTests-begin
    :end-before: snip-BasicConversionTests-end
    :linenos:
@@ -191,7 +191,7 @@ representations.
 Testing the Parsing Feature
 -----------------------------------
 
-.. literalinclude:: ../projects/Music/Rational/RationalTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
    :start-after: snip-ParseTest-begin
    :end-before: snip-ParseTest-end
    :linenos:
@@ -219,7 +219,7 @@ ships with Mono on the generated executable (.exe) or (.dll). You can pass any .
 file to nunit-console, and nunit-console will examine it for the presents of unit tests
 and attempt to run all of them.
 
-.. literalinclude:: ../projects/Music/output/Rational.nunit.out
+.. literalinclude:: ../examples/music/output/Rational.nunit.out
    :language: text
 
 

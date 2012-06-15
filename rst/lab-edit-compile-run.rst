@@ -44,14 +44,13 @@ To be completed in the lab
 The following is the code for a very well-known program, *Hello,
 World!*:
 
-.. literalinclude:: ../examples/hello+nant/HelloWorld.cs
+.. literalinclude:: ../examples/HelloWorld.cs
    :language: csharp
    :emphasize-lines: 9
    :linenos:
    
 This program is deliberately simple, so you can type it into a text
-editor (Emacs is recommended but your instructor may introduce you to
-a different editor, subject to availability in the lab) quickly and become familiar with how
+editor quickly and become familiar with how
 to create, edit, and save a program. Perform the following steps. (You
 are free to deviate but may want to consider following the steps
 religiously at least once to ensure you were successful.)

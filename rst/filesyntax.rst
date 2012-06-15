@@ -99,12 +99,12 @@ from a file containing one number per line (plus possible white space)::
          return sum;
       }
 
-Below and in project ``Files/SumFile/SumFile.cs`` is a more elaborate, complete example,
+Below and in project ``files/SumFile.cs`` is a more elaborate, complete example,
 that also skips lines that contain only whitespace.  
 ``Main`` takes a command line parameter containing the filename, and it gives several checks
 and warning messages.  
 
-.. literalinclude:: ../projects/Files/SumFile/SumFile.cs
+.. literalinclude:: ../examples/files/SumFile.cs
 
 A useful function used in ``Main`` for avoiding filename typo errors 
 is in the System.IO namespace :: 

@@ -81,7 +81,7 @@ following commands in roughly this order:
   repository. This operation has the potential to *overwrite* changes you
   are currently making, so you should make sure that the incoming changes
   that you observed above are sensible. For example, if you are editing
-  a file named ``projects/MyProject/MyProject.cs`` and the incoming log 
+  a file named ``examples/MyProject/MyProject.cs`` and the incoming log 
   suggests that the same file has been modified, you're likely to end up
   with a conflict when performing the update. (We'll cover conflict 
   resolution shortly.)

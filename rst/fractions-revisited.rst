@@ -62,7 +62,7 @@ System.Collections.Generic, so we need to be using that namespace.
 Project :file:`Interfaces/Rational` has the modified Rational and a :file:`Main.cs`
 to test this with a list of Rationals.  This program:
    
-.. literalinclude:: ../projects/Interfaces/Rational/Main.cs
+.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
 
 which prints:
 

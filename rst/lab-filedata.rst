@@ -13,10 +13,10 @@ Overview
 ~~~~~~~~~~
 
 The idea of this lab is to replace project file 
-:file:`projects/Dictionaries/FakeAdviseVerbose/MainVerbose.cs` with an improved
+:file:`examples/dict_lab_stub/FakeHelp.cs` with an improved
 project. 
 
-Open the original :file:`projects/Dictionaries/FakeAdviseVerbose/MainVerbose.cs` and
+Open :file:`examples/FakeHelpVerbose.cs` and
 look at the methods ``GetParagraphs()`` and ``GetDictionary()``.
 All the strings for the responses are pre-coded for you there, but if
 you were writing your own it would be a pain. There is all the
@@ -27,9 +27,11 @@ you to write the string data itself into a text file, with the only
 overhead being a few extra newlines. Minor further adaptations could
 save time later in your game project, too.
 
-In the revised lab project with Main class 
-:file:`projects/Dictionaries/FakeAdviseLab/MainLab.cs`,
-the List and Dictionary filling code is made more general and moved
+Copy folder examples/dict_lab_stub to examples/dict_lab, and look in the new folder.
+
+In the lab project with Main class 
+:file:`examples/dict_lab/FakeHelp.cs`,
+you make the List and Dictionary filling code more general.  The stubs are moved
 to the class FileUtil for easy reuse.  The main program chooses the files to read.
 The results will look the same as the original program to the user, 
 but the second version will be easier 
@@ -39,13 +41,13 @@ in your program (like in a game you might write soon).
 
 You will need to complete very short versions of functions
 ``GetParagraphs`` and ``GetDictionary`` that have been moved to
-:file:`projects/Dictionaries/FakeAdviseLab/FileUtil.cs` and now
+:file:`examples/dict_lab/FileUtil.cs` and now
 take a StreamReader as parameter.
 The files that they read will contain the basic data.  
 You can look in the lab project at the first data file:
 :file:`HelpNotDefaults.txt`, and the beginning is shown below:  
 
-.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/HelpNotDefaults.txt
+.. literalinclude:: ../examples/dict_lab_stub/HelpNotDefaults.txt
    :language: none
    :lines: 1-15
 
@@ -74,7 +76,7 @@ ReadParagraph
 The first method is useful by itself and later for use in the new
 ``GetParagraphs`` and ``GetDictionary``.  A stub is in :file:`FileUtil.cs`:
 
-.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/FileUtil.cs
+.. literalinclude:: ../examples/dict_lab_stub/FileUtil.cs
    :start-after: ReadParagraph chunk
    :end-before: chunk
 
@@ -113,7 +115,7 @@ insert a few remaining lines of code to complete the next method
 ``GetParagraphs``, that reads to the end of the file, and likely
 processes more than one paragraph.  
 
-.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/FileUtil.cs
+.. literalinclude:: ../examples/dict_lab_stub/FileUtil.cs
    :start-after: GetParagraphs chunk
    :end-before: chunk
 
@@ -134,13 +136,13 @@ stub is also modified to take a StreamReader as parameter.  In the
 Main program this function is called to read from
 :file:`HelpNotResponses.txt`.  Here are the first few lines:
 
-.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/HelpNotResponses.txt
+.. literalinclude:: ../examples/dict_lab_stub/HelpNotResponses.txt
    :language: none
    :lines: 1-15
 
 Here is the stub of the function to complete, reading such data:
 
-.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/FileUtil.cs
+.. literalinclude:: ../examples/dict_lab_stub/FileUtil.cs
    :start-after: GetDictionary chunk
    :end-before: chunk
 
@@ -165,7 +167,7 @@ for each key variation, repeating the value paragraph.
 A concise approach is to use a data file
 like :file:`HelpNotResponses2.txt`.  Here are the first few lines:
 
-.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/HelpNotResponses2.txt
+.. literalinclude:: ../examples/dict_lab_stub/HelpNotResponses2.txt
    :language: none
    :lines: 1-15
 
@@ -173,7 +175,7 @@ The line that used to have one key now may have several blank-separated keys.
 
 Here is how the documentation for GetDictionary should be changed:
 
-.. literalinclude:: ../projects/Dictionaries/FakeAdviseLab/FileUtil.cs
+.. literalinclude:: ../examples/dict_lab_stub/FileUtil.cs
    :start-after: Extra credit documentation
    :end-before: }
 

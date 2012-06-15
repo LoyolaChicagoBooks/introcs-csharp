@@ -1,7 +1,7 @@
-CSProj Revisited
-==================
+csproject Revisited
+=====================
 
-The CSProj1 skeleton was set up with the different commands
+The csproject1 skeleton was set up with the different commands
 in different classes, keeping related things together.
 
 On the other hand they had high level structure in common.  
@@ -57,7 +57,7 @@ Now we can define our own interface taking all of these common features
 together.  Since each is a response to a command, we will call our interface
 Response:
 
-.. literalinclude:: ../projects/CSProj/CSProj/Response.cs
+.. literalinclude:: ../examples/csproject_stub/Response.cs
 
 Things to note:
 
@@ -92,7 +92,7 @@ CommandMapper, and the the CommandMapper constructor creates the Dictionary
 used to look up the Response that goes with each command word.  Here is the whole code for 
 ResponseMapper, taking advantage of the Dictionary in other methods, too.
 
-.. literalinclude:: ../projects/CSProj/CSProj/CommandMapper.cs
+.. literalinclude:: ../examples/csproject_stub/CommandMapper.cs
 
 There is even more to recommend this setup:  The old setup had references in multiple places 
 to various details about the collection of Responses.  That made it harder to follow and
@@ -101,7 +101,7 @@ Now after writing the new class to respond to a new command,  the *only* thing y
 need to do is add a new instance of that class to the array initializer in the
 CommandMapper constructor!
 
-The revised MonoDevelop project is :file:`CSProj/CSProj` (no 1 this time).
+The revised MonoDevelop project is :file:`csproject_stub` (no 1 this time).
 
 See how the Game class is simplified, too.
 

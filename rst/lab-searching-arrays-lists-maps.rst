@@ -99,11 +99,11 @@ for each of the cases:
 Starter Project
 ------------------
 
-You will probably find it convenient to start from our ``Arrays`` MonoDevelop
-solution. You can find this in ``projects/Arrays``. You need this entire folder.
+Copy folder examples/performance_lab_stub to  examples/performance_lab,
+so you have your own copy to modify.
 
-To make your life easier, we have put together a project within this solution,
-``PerformanceLab`` that contains the code for all of the experiments you need
+To make your life easier, there we have put together a project with a build file
+that refers to all the code for all of the experiments you need
 to run. (That's right, we're giving you the code for the experiments, 
 but you're going to write
 some code to run the various experiments and then run for varying sizes of ``n``.)
@@ -122,7 +122,7 @@ some code to run the various experiments and then run for varying sizes of ``n``
 Here is the code for the first experiment, to test the performance of linear
 searching on integer arrays:
 
-.. literalinclude:: ../projects/Arrays/PerformanceLab/Main.cs
+.. literalinclude:: ../examples/performance_lab_stub/PerformanceLab.cs
    :start-after: chunk-experiment1-begin
    :end-before: chunk-experiment1-end
    :linenos:

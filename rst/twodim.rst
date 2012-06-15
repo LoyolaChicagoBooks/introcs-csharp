@@ -76,7 +76,7 @@ Often two dimensional  arrays, like one dimensional  arrays, are processed
 in loops. Multiple dimension arrays are often processed in nested loops.
 We could print out this table using columns 5 spaces wide with the code:
 
-.. literalinclude:: ../projects/Arrays/PrintTable/PrintTable.cs
+.. literalinclude:: ../examples/PrintTable.cs
    :start-after: };
    :end-before: chunk
 
@@ -139,7 +139,7 @@ A more elaborate table might include row and column sums::
 
 
 For example, the following function from project 
-:file:`Arrays/PrintTable/PrintTable.cs`,
+:file:`PrintTable.cs`,
 prints out a table of integers 
 neatly, including row and column sums.  It illustrates
 a number of things.  It shows the interplay between
@@ -157,7 +157,7 @@ to chug through all the data.
 The code refers once to the earlier :ref:`StringRepeatingExercise`
 for the row of dashes setting off the column sums:
 
-.. literalinclude:: ../projects/Arrays/PrintTable/PrintTable.cs
+.. literalinclude:: ../examples/PrintTable.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -195,7 +195,7 @@ column numbers neatly for the normal human counting system, starting from 1.
 Varying Column Width Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Copy the project file :file:`Arrays/PrintTable/PrintTable.cs` to 
+Copy the project file :file:`PrintTable.cs` to 
 :file:`PrintVaryingWidthTable.cs`. Edit it so that *each* column
 is only as wide as it needs to be: the width for the widest entry in
 that column.  The earlier data would now print as::

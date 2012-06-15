@@ -106,7 +106,7 @@ For example 810/729 > 0 and 729/810 = 0.
 
 Without further ado, let's take a look at a basic version of GCD:
 
-.. literalinclude:: ../projects/GCD/GCDBasic/GCDBasic.cs
+.. literalinclude:: ../examples/GCDBasic.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:
@@ -182,7 +182,7 @@ Greatest Common Divisor works as follows:
   if ``a`` and ``b`` bump into one another, thereby meaning that we
   have computed the GCD.
 
-.. literalinclude:: ../projects/GCD/GCDSubtractionMethod/GCDSubtractionMethod.cs
+.. literalinclude:: ../examples/GCDSubtractionMethod.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:
@@ -228,7 +228,7 @@ inside its definition. We don't expect you to master this
 technique immediately but do feel that it is important you at least
 *hear* about it and see its tremendous power:
 
-.. literalinclude:: ../projects/GCD/GCDEuclidRecursive/GCDEuclidRecursive.cs
+.. literalinclude:: ../examples/GCDEuclidRecursive.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:

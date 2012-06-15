@@ -12,9 +12,9 @@ While our last example, Rational, is in fact a very practical
 use of object-oriented programming, this is somewhat more artificial,
 but hopefully informative, particularly with the transformation.
 Here is a procedural version, project file 
-:file:`Game/GameStatic/Game.cs`
+:file:`static_version.cs`
 
-.. literalinclude:: ../projects/Game/GameStatic/Game.cs
+.. literalinclude:: ../examples/static_version.cs
    :start-after:  chunk
    :end-before: chunk
 
@@ -173,9 +173,9 @@ for different parts to interact.
 As you think how to break this game into parts, also think how the parts interact.
 
 The code that generated the exchange above is the 
-project folder :file:`CSProj/CSProj1`.
+project folder :file:`csproject1`.
 
 The code uses many of the topics discussed so far in these notes.
 
 We will add some features from interfaces and discuss the revision in 
-:file:`CSProj/CSProj` (no 1).  You *might* use this as a basis of a project....
+:file:`csproject_stub` (no 1).  You *might* use this as a basis of a project....
