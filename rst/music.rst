@@ -14,7 +14,7 @@ ivory (white) keys.
 The following declaration shows how to initialize an array consisting
 of the twelve tones of the chromatic scale, starting from the C note.
 
-.. literalinclude:: ../examples/music/Scales.cs
+.. literalinclude:: ../examples/music/scales.cs
    :start-after: chunk-tones-begin
    :end-before: chunk-tones-end
    :linenos:
@@ -69,7 +69,7 @@ Then we can use this position to compute the scale given the major
 (or minor, covered shortly) interval array.
 
 
-.. literalinclude:: ../examples/music/Scales.cs
+.. literalinclude:: ../examples/music/scales.cs
    :start-after: chunk-findtone-begin
    :end-before: chunk-findtone-end
    :linenos:
@@ -90,7 +90,7 @@ computing a scale, given a key and an array of steps. The scale array
 is allocated by the ``Main()`` method, primarily to allow the same
 array to be used repeatedly for calculating other scales.
 
-.. literalinclude:: ../examples/music/Scales.cs
+.. literalinclude:: ../examples/music/scales.cs
    :start-after: chunk-compute-begin
    :end-before: chunk-compute-end
    :linenos:
@@ -135,7 +135,7 @@ array to be used repeatedly for calculating other scales.
 The following function writes the scale out (rather naively) by just
 printing the notes from our existing ``tones`` array.
 
-.. literalinclude:: ../examples/music/Scales.cs
+.. literalinclude:: ../examples/music/scales.cs
    :start-after: chunk-write-begin
    :end-before: chunk-write-end
    :linenos:
@@ -150,7 +150,7 @@ during our discussion of the OOP version.
 
 Lastly, we put this all together.
 
-.. literalinclude:: ../examples/music/Scales.cs
+.. literalinclude:: ../examples/music/scales.cs
    :start-after: chunk-main-begin
    :end-before: chunk-main-end
    :linenos:

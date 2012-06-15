@@ -3,12 +3,12 @@
 Simple ``if`` Statements
 ------------------------
 
-Compile and run this example program, ``Suitcase.cs``. 
+Compile and run this example program, ``suitcase.cs``. 
 Try it at least twice, with
 inputs: 30 and then 55. As you an see, you get an extra result,
 depending on the input. The main code is:
 
-.. literalinclude:: ../examples/Suitcase.cs
+.. literalinclude:: ../examples/suitcase.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:

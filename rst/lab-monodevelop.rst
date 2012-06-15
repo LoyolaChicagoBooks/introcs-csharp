@@ -118,8 +118,8 @@ to it one at a time.
    - Press the Forward button.
    - At the Project Features form, just press ok.
    - You'll now see the Hello folder. Click on Hello (beneath the
-     Solution) in the left panel and you'll see ``Main.cs``. If you
-     double click on Main.cs, you will notice the familiar "Hello,
+     Solution) in the left panel and you'll see ``main.cs``. If you
+     double click on main.cs, you will notice the familiar "Hello,
      World!" program. In the current versions of mono, a new C#
      console project always creates a minimal, functioning program so
      you can test MonoDevelop and Mono for their ability to build a
@@ -161,7 +161,7 @@ to it one at a time.
      something similar.
    - You don't need to retype the code that you've already created,
      compiled, and run. Instead, you can just open it up in the text
-     editor and copy/paste it into the ``Main.cs`` file for your new
+     editor and copy/paste it into the ``main.cs`` file for your new
      project. (You'll first want to delete the "Hello, World!" code
      that MonoDevelop creates *every time* you add a new C# project.
    - You should now have *two* projects: Hello and Homework1 (or
@@ -179,7 +179,7 @@ to it one at a time.
    - Enter ``UI`` as the project name and press Forward as
      many times as required to complete the process.
    - You now have a new library project.
-   - Remove class named ``MyClass.cs``. 
+   - Remove class named ``my_class.cs``. 
    - Add the class ``UI``
    - As in the previous part, let's check whether our entire solution
      *builds* properly. From the Build menu, select Build All. If you
@@ -209,7 +209,7 @@ to it one at a time.
      library). Check the checkbox next to UI so we can use it
      in our new project.
 
-   - Now click on ``MyClass.cs`` in the ``InputTesting`` project and
+   - Now click on ``my_class.cs`` in the ``InputTesting`` project and
      do the following:
 
      - Change the namespace to ``IntroCS``.

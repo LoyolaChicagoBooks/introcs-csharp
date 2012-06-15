@@ -59,12 +59,12 @@ Combine each ``else`` and following ``if`` onto the same line,
 and note that the ``if`` part after an else is just a *single*
 (possibly very complicated) statement, allowing some braces to be removed:
 
-.. literalinclude:: ../examples/Grade1.cs
+.. literalinclude:: ../examples/grade1.cs
    :start-after: chunk
    :end-before: chunk
 
 A program testing the letterGrade function is in
-example program ``Grade1.cs``.
+example program ``grade1.cs``.
 
 See :ref:`gradeEx`.
 
@@ -89,7 +89,7 @@ there is not a problem.
 Sign Exercise
 ~~~~~~~~~~~~~             
    
-Write a program ``Sign.cs`` to ask the user for a number. Print out
+Write a program ``sign.cs`` to ask the user for a number. Print out
 which category the number is in: ``"positive'``, ``"negative"``, or
 ``"zero"``.
 
@@ -99,8 +99,8 @@ which category the number is in: ``"positive'``, ``"negative"``, or
 Grade Exercise
 ~~~~~~~~~~~~~~              
 
-Copy ``Grade1.cs`` to ``Grade2.cs`` Modify
-``Grade2.cs`` so it has an equivalent version of the letterGrade
+Copy ``grade1.cs`` to ``grade2.cs`` Modify
+``grade2.cs`` so it has an equivalent version of the letterGrade
 function that tests in the opposite order, first for F, then D, C,
 .... Hint: How many tests do you need to do? [#grade]_
 
@@ -110,8 +110,8 @@ inputs that test all the different paths through the program.
 Wages Exercise
 ~~~~~~~~~~~~~~              
    
-Modify the ``Wages1.cs`` or the ``Wages2.cs`` example to create a
-program ``Wages3.cs`` that assumes people are paid double time for
+Modify the ``wages1.cs`` or the ``wages2.cs`` example to create a
+program ``wages3.cs`` that assumes people are paid double time for
 hours over 60. Hence they get paid for at most 20 hours overtime at
 1.5 times the normal rate. For example, a person working 65 hours
 with a regular wage of $10 per hour would work at $10 per hour for
@@ -120,7 +120,7 @@ with a regular wage of $10 per hour would work at $10 per hour for
 
     10*40 + 1.5*10*20 + 2*10*5 = $800.
 
-You may find ``Wages2.cs`` easier to adapt than ``Wages1.cs``.
+You may find ``wages2.cs`` easier to adapt than ``wages1.cs``.
 
 
 .. [#grade]

@@ -62,7 +62,7 @@ Word Count Example
 Counting the number of repetitions of words in a text provides a realistic
 example of using a ``Dictionary``.  With each word that you find, you want to associate
 a number of repetitions.  a complete program is in the  project file 
-:file:`Dictionaries/CountWords/CountWords.cs`. 
+:file:`Dictionaries/CountWords/count_words.cs`. 
 
 
 The central functions are excerpted below, and they also introduce some extra 
@@ -85,7 +85,7 @@ We separate the processing into two functions, one calculating the dictionary, a
 a table.  To reduce the amount of clutter in the ``Dictionary``, the function
 ``GetCounts`` takes a set of words to ignore as a parameter.
 
-.. literalinclude:: ../examples/CountWords.cs
+.. literalinclude:: ../examples/count_words.cs
    :start-after: chunk
    :end-before: chunk
 

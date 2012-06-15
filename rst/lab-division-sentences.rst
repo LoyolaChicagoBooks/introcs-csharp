@@ -211,7 +211,7 @@ character (which must be a *letter* or an *underscore*)::
 So effectively we have shown everything you need to understand to
 complete this lab. Your job in the remaining time is to see whether
 you can use a text editor to create a program, which you can name
-anything you like. We suggest calling it ``DoTheMath.cs``. To help you
+anything you like. We suggest calling it ``do_the_math.cs``. To help you
 get started, we provided this simple *template*. You'll probably find
 it convenient to cut and paste code that you've already "tried out" (in
 the C# interpreter) into your text editor::
@@ -270,7 +270,7 @@ keywords like ``namespace`` but otherwise seems to work in our
 testing.
 
 When in Emacs, you can enable Java mode in your buffer for
-``DoTheMath.cs`` by typing Escape-x. The minibuffer (the space you see
+``do_the_math.cs`` by typing Escape-x. The minibuffer (the space you see
 at the bottom of the screen where an ``M-x`` or similar prompt is
 shown) will wait for you to type the name of a command. Enter
 *java-mode* and you will be able to take advantage of the magical

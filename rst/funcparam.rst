@@ -170,15 +170,15 @@ This last version illustrates several important ideas:
 		
 		happyBirthday(2)
 	
-	as in example file ``birthdayBad.cs``, and then run it, you get
+	as in example file ``birthday_bad.cs``, and then run it, you get
 	something close to:
 	
 	  | Traceback (most recent call last):
-	  |   File "/hands-on/examples/birthdayBad.cs", line 15, in <module>
+	  |   File "/hands-on/examples/birthday_bad.cs", line 15, in <module>
 	  |     main()
-	  |   File "/hands-on/examples/birthdayBad.cs", line 13, in main
+	  |   File "/hands-on/examples/birthday_bad.cs", line 13, in main
 	  |     happyBirthday(2)
-	  |   File "/hands-on/examples/birthdayBad.cs", line 6, in happyBirthday
+	  |   File "/hands-on/examples/birthday_bad.cs", line 6, in happyBirthday
 	  |     print("Happy Birthday, dear " + person + ".")
 	  | TypeError: Can't convert 'int' object to str implicitly
 	
@@ -200,7 +200,7 @@ Birthday Function Exercise
 ---------------------------
 
 Make your own further change to ``birthday4.cs`` and save it as
-``birthdayMany.cs``: Add a function call
+``birthday_many.cs``: Add a function call
 (but *not* another function *definition*), so Maria gets a verse, in
 addition to Emily and Andre. Also print a blank line between
 verses. (There are two ways to handle the blank lines: 

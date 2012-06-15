@@ -153,7 +153,7 @@ as :file:`glazer_calc.cs`.  Copy it to :file:`glazer_input.cs` and modify it.
 Quotient String Return Exercise
 ---------------------------------
 
-Create :file:`quotientReturn.cs` by modifying :file:`quotientProb.cs` in
+Create :file:`quotient_return.cs` by modifying :file:`quotient_prob.cs` in
 :ref:`QuotientFunctionEx` so that the program accomplishes the same
 thing, but everywhere change the quotientProblem function into one
 called ``quotientString`` that merely *returns* the string rather

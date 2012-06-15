@@ -71,7 +71,7 @@ place for a function enclosing the calculation.
 
 *Read* the setup for the function:
 
-.. literalinclude:: ../examples/Wages1.cs
+.. literalinclude:: ../examples/wages1.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -81,15 +81,15 @@ more than 40 hours are worked, it is convenient to introduce a
 variable overtimeHours. You are encouraged to think about a
 solution before going on and examining mine.
 
-You can try running my complete example program, :file:`Wages1.cs`, 
+You can try running my complete example program, :file:`wages1.cs`, 
 also shown below.  
 
-.. literalinclude:: ../examples/Wages1.cs
+.. literalinclude:: ../examples/wages1.cs
    
 This program also introduces new notation for 
 displaying decimal numbers:  
 
-.. literalinclude:: ../examples/Wages1.cs
+.. literalinclude:: ../examples/wages1.cs
    :start-after: chunk2
    :end-before: chunk2
 
@@ -106,12 +106,12 @@ a different number of digits after the decimal point.
 More formatting instructions will be discussed later. 
 
 Below is an equivalent alternative version of the body of
-``CalcWeeklyWages``, used in ``Wages2.cs``. It uses just one
+``CalcWeeklyWages``, used in ``wages2.cs``. It uses just one
 general calculation formula and sets the parameters for the formula
 in the ``if`` statement. There are generally a number of ways you might
 solve the same problem!
 
-.. literalinclude:: ../examples/Wages2.cs
+.. literalinclude:: ../examples/wages2.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -121,7 +121,7 @@ solve the same problem!
 Graduate Exercise
 ~~~~~~~~~~~~~~~~~
    
-Write a program, ``Graduate.cs``, that prompts students for how
+Write a program, ``graduate.cs``, that prompts students for how
 many credits they have. Print whether of not they have enough
 credits for graduation. (At Loyola University Chicago 120 credits
 are needed for graduation.)

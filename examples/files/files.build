@@ -21,7 +21,7 @@
 
     <csc target="exe" output="${build.dir}/SumFile.exe" debug="${debug}">
       <sources>
-        <include name="SumFile.cs"/>
+        <include name="sum_file.cs"/>
       </sources>
     </csc>
   </target>

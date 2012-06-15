@@ -81,7 +81,7 @@ following commands in roughly this order:
   repository. This operation has the potential to *overwrite* changes you
   are currently making, so you should make sure that the incoming changes
   that you observed above are sensible. For example, if you are editing
-  a file named ``examples/MyProject/MyProject.cs`` and the incoming log 
+  a file named ``examples/MyProject/my_project.cs`` and the incoming log 
   suggests that the same file has been modified, you're likely to end up
   with a conflict when performing the update. (We'll cover conflict 
   resolution shortly.)
@@ -143,8 +143,8 @@ choices in practice:
 
 - use ``hg merge`` and ``hg resolve`` to merge your changes.
 
-- make a copy of the conflicting files (e.g. Copy ``Hello.cs`` to
-  ``Hello.cs-backup`` and use ``hg update --clean`` (changing your
+- make a copy of the conflicting files (e.g. Copy ``hello.cs`` to
+  ``hello.cs-backup`` and use ``hg update --clean`` (changing your
   copy to match the current version in the remote repository) to just
   accept the latest versions of all files from the repository.
 
@@ -156,14 +156,14 @@ The second option basically results in two copies of the file. You can
 open up your editor to compare the files side-by-side or use a tool
 like ``diff`` on Unix or a Mac, which gives a side-by-side comparison::
 
-   diff -y Hello.cs MyHello.cs
+   diff -y hello.cs my_hello.cs
 
 (You will need to expand the width of your console window to see clearly!)
 
 This tool is not built into Windows.  In the Windows lab, you can use the
 much less visually helpful  ::
 
-   fc Hello.cs MyHello.cs
+   fc hello.cs my_hello.cs
 
 to show differing segments from each file.
 You can also download difference display tools for Windows that are more 

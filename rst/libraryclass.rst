@@ -73,6 +73,6 @@ if the user enters an illegal format for a number.
 Quotient UI Exercise
 ---------------------------------
 
-Create :file:`quotientUI.cs` by modifying :file:`quotientReturn.cs` in
+Create :file:`quotient_u_i.cs` by modifying :file:`quotient_return.cs` in
 :ref:`QuotientStringEx` so that the program accomplishes the same
 thing, but use the UIF class for all user input.

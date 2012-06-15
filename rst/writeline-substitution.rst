@@ -37,15 +37,15 @@ construction, better called fill-in-the-braces,
 that can be used with ``Console.WriteLine``.
 
 Instead of inserting user input with the ``+`` operation as in 
-``HelloYou1.cs``:
+``hello_you1.cs``:
 
-.. literalinclude:: ../examples/HelloYou1.cs
+.. literalinclude:: ../examples/hello_you1.cs
 
-look at a variation, ``HelloYou2.cs``, shown below.
+look at a variation, ``hello_you2.cs``, shown below.
 Both programs  
 look exactly the same to the user:
 
-.. literalinclude:: ../examples/HelloYou2.cs
+.. literalinclude:: ../examples/hello_you2.cs
    
 ``Console.WriteLine`` actually can take parameters *after* an initial string,
 but only when  the string is in the form of a *format string*,

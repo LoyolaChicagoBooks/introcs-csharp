@@ -76,7 +76,7 @@ Things to note about reading from files:
 If you just want the whole file read in at once as a single (multiline) string, use the
 ``StreamReader`` method ``ReadToEnd``::
 
-    var reader new StreamReader("someFile.txt");
+    var reader new StreamReader("some_file.txt");
     string wholeFile = reader.ReadToEnd();
     reader.close();
     
@@ -99,12 +99,12 @@ from a file containing one number per line (plus possible white space)::
          return sum;
       }
 
-Below and in project ``files/SumFile.cs`` is a more elaborate, complete example,
+Below and in project ``files/sum_file.cs`` is a more elaborate, complete example,
 that also skips lines that contain only whitespace.  
 ``Main`` takes a command line parameter containing the filename, and it gives several checks
 and warning messages.  
 
-.. literalinclude:: ../examples/files/SumFile.cs
+.. literalinclude:: ../examples/files/sum_file.cs
 
 A useful function used in ``Main`` for avoiding filename typo errors 
 is in the System.IO namespace :: 
@@ -113,7 +113,7 @@ is in the System.IO namespace ::
 
 It is true if the filename exists.
 
-See :ref:`monodevelop-run-with` for testing SumFile.cs inside MonoDevelop.  
+See :ref:`monodevelop-run-with` for testing sum_file.cs inside MonoDevelop.  
 
 .. index::
    double: MonoDevelop; working directory
@@ -170,8 +170,8 @@ Example Copy to Upper Case
 
 Here is a simple example copying a file line by line to a new file in upper case::
 
-         var reader = new StreamReader("Text.txt");
-         var writer = new StreamWriter("UpperText.txt");
+         var reader = new StreamReader("text.txt");
+         var writer = new StreamWriter("upper_text.txt");
          while (!reader.EndOfStream) {
             string line = reader.ReadLine();
             writer.WriteLine(line.ToUpper());
@@ -181,7 +181,7 @@ Here is a simple example copying a file line by line to a new file in upper case
 
 You can try this in csharp:
 
-- First create a :file:`Text.txt`, 
+- First create a :file:`text.txt`, 
 - Open csharp in the same directory.
 - Give the command in csharp::
 
@@ -189,7 +189,7 @@ You can try this in csharp:
 
 - Then paste the lines above.
 
-Outside of csharp you can look at UpperText.txt.
+Outside of csharp you can look at upper_text.txt.
 
 This example of line by line processing was intended to be simple.  
 In fact this processing is

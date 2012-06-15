@@ -66,7 +66,7 @@ is the same as  ::
 .. index::
    double: format; field width
    double: format; table
-   double: example; PowerTable.cs
+   double: example; power_table.cs
 
 .. rubric::  Tables
 
@@ -168,9 +168,9 @@ One more thing to add to our power table is a heading.  We might want::
     
 To make the data line up with the heading titles,
 we can expand the columns, with code in example
-``PowerTable.cs``:
+``power_table.cs``:
 
-.. literalinclude:: ../examples/PowerTable.cs
+.. literalinclude:: ../examples/power_table.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -257,7 +257,7 @@ next line.  A program printing this table should include an extra
 .. index::
    double: table; nested loops
    double: format; table
-   double: example; ModMultTable.cs
+   double: example; mod_mult_table.cs
 
 .. rubric::  Modular Multiplication Table
 
@@ -448,10 +448,10 @@ Thinking ahead, we will leave that expression unsimplified.
 We have done most of the work for the rows of the body of the table i the simpler
 version.  We just 
 have a bit of printing for the initial row label before the column loop.  The row
-label is r.  The whole code is in example ``Mod7Table.cs`` and below:
+label is r.  The whole code is in example ``mod7_table.cs`` and below:
 
 
-..  literalinclude:: ../examples/Mod7Table.cs
+..  literalinclude:: ../examples/mod7_table.cs
     :start-after: chunk
     :end-before: chunk
       
@@ -495,9 +495,9 @@ create our main format string with::
     int numberWidth = ("" + n).Length;
     string colFormat = string.Format("{{0,{0}}} ", numberWidth);
 
-The whole function code is below and in example :file:`ModMultTable.cs`.
+The whole function code is below and in example :file:`mod_mult_table.cs`.
 
-..  literalinclude:: ../examples/ModMultTable.cs
+..  literalinclude:: ../examples/mod_mult_table.cs
     :start-after: chunk
     :end-before: chunk
 
@@ -527,7 +527,7 @@ The whole function code is below and in example :file:`ModMultTable.cs`.
 String Repeating Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-a. Write a program StringRep.cs with a function ``PrintDup``, 
+a. Write a program string_rep.cs with a function ``PrintDup``, 
    with heading::
  
        // Print n repetitions of s on one line (n >= 0). 
@@ -535,7 +535,7 @@ a. Write a program StringRep.cs with a function ``PrintDup``,
 
 b. More versatile is to add and test a function ``StringRep``:
 
-   ..  literalinclude:: ../examples/ModMultTable.cs
+   ..  literalinclude:: ../examples/mod_mult_table.cs
        :start-after: StringRep chunk
        :end-before: {
 
@@ -550,7 +550,7 @@ b. More versatile is to add and test a function ``StringRep``:
 Head or Tails Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``HeadsTails.cs``. It should include a function ``Flip()``,
+Write a program ``heads_tails.cs``. It should include a function ``Flip()``,
 that will randomly prints ``Heads`` or ``Tails``.
 Accomplish this by choosing 0 or 1 arbitrarily with a random
 number generator.  Recall in :ref:`lab-number-game`::

@@ -11,7 +11,7 @@ Savings Exercise
 
 The idea here is to see how many years it will take a bank account to grow
 to at least a given value, assuming a fixed annual interest.
-Write a program ``Savings.cs``.
+Write a program ``savings.cs``.
 Prompts the user for three numbers: an initial balance, the annual percentage
 for interest as a decimal. like .04 for 4%, and the final balance desired.
 Print the initial balance, and the balance each year until
@@ -37,7 +37,7 @@ a target of $550, the program prints::
 Strange Sequence Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save the example program ``StrangeSeqStub.cs`` as ``StrangeSeq.cs``,
+Save the example program ``strange_seq_stub.cs`` as ``strange_seq.cs``,
 
 There are three functions to complete.  Do one at a time and test.
 
@@ -76,8 +76,8 @@ starting from parameter value ``n``, until the result is 1.
 just count them, and return the count.
 
 .. later - sequence of counts?
-    After you have finished and saved ``JumpSeq.cs`` copy it and save
-	the file as ``JumpSeqLengths.cs``.
+    After you have finished and saved ``jump_seq.cs`` copy it and save
+	the file as ``jump_seq_lengths.cs``.
 
 	First modify the main method so it prompts the user
 	for a value of n, and then prints just the length of the iterative sequence

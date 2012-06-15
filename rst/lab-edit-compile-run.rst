@@ -44,7 +44,7 @@ To be completed in the lab
 The following is the code for a very well-known program, *Hello,
 World!*:
 
-.. literalinclude:: ../examples/HelloWorld.cs
+.. literalinclude:: ../examples/hello_world.cs
    :language: csharp
    :emphasize-lines: 9
    :linenos:
@@ -77,7 +77,7 @@ religiously at least once to ensure you were successful.)
 #.  Once you have entered the text, you will want to *save* it, just
     as if you were saving a file in your word processor. (In the Emacs
     text editor, you use Control-x, Control-s. You will want to save
-    the file with the name ``Hello.cs``. If you are using a graphical
+    the file with the name ``hello.cs``. If you are using a graphical
     text editor (like the case) then you will usually be able to save
     from the File menu, much like you would do in a regular word
     processor. Keep in mind, however, that you will eventually want to
@@ -87,7 +87,7 @@ religiously at least once to ensure you were successful.)
 
 
 #.  If all has gone well, you will now have a version of *Hello,
-    World* in a file named ``Hello.cs`` in a folder named ``hello``
+    World* in a file named ``hello.cs`` in a folder named ``hello``
     (located in ``Documents``).
 
 #.  Now we are going to learn how to compile this program. For this,
@@ -104,7 +104,7 @@ religiously at least once to ensure you were successful.)
     command shell basically awaits user input and does whatever it is
     told (and does nothing otherwise). You'll begin by using the "cd"
     command to change your working directory to where you saved
-    ``Hello.cs``.  Note: Replace Dr. Thiruvathukal's login id gkt by
+    ``hello.cs``.  Note: Replace Dr. Thiruvathukal's login id gkt by
     your login id.  Also note for Mac/Unix examples that his machine
     is called macaroni.
     
@@ -125,7 +125,7 @@ religiously at least once to ensure you were successful.)
         $ ls
 
         macaroni:hello gkt$ ls
-        Hello.cs
+        hello.cs
 
         $ pwd
         /Users/gkt/Documents/hello
@@ -141,25 +141,25 @@ religiously at least once to ensure you were successful.)
 		
 		01/16/2012  06:07 PM    <DIR>          .
 		01/16/2012  06:07 PM    <DIR>          ..
-		11/04/2011  08:20 PM               646 Hello.cs
+		11/04/2011  08:20 PM               646 hello.cs
 		
 		...
 
-#.  If you are unable to see ``Hello.cs`` at this stage, you need to
+#.  If you are unable to see ``hello.cs`` at this stage, you need to
     go back and check all previous steps. It is entirely possible you
     did not create the folder or save properly. If you think you
     completed these steps, this is a good time to ask the instructor
     or teaching assistant for help.
 
-#.  Assuming you are able to see ``Hello.cs`` in the ``hello`` folder,
+#.  Assuming you are able to see ``hello.cs`` in the ``hello`` folder,
     we are now ready for *the good stuff*~~the technical term we use
     when we are about to learn something that we need to know how to
-    do *for life*. We're going to compile the ``Hello.cs`` program
+    do *for life*. We're going to compile the ``hello.cs`` program
     into ``Hello.exe`` so we can run it. FYI, you should still be in
     the Terminal/DOS window where we just listed the directory (this
     works regardless of what OS you are using). Enter::
 
-        gmcs Hello.cs
+        gmcs hello.cs
 
 #.  If everything worked right, you will not see any output. If you
     spot any error messages, it means that you probably made a typo
@@ -170,7 +170,7 @@ religiously at least once to ensure you were successful.)
     edit your program.) If your text editor is not still open, then
     you need to re-open the file, which can be done easily by using
     File ``->`` Open and browsing your folder structure to find folder
-    ``hello``, then ``Hello.cs``.
+    ``hello``, then ``hello.cs``.
 
 #.  Now for the great moment you have been awaiting: You can *run*
     ``Hello.exe``.  Enter::
@@ -183,7 +183,7 @@ religiously at least once to ensure you were successful.)
 
 At this point, we have accomplished the major objective for Lab 0: to
 enter, compile, and run a C# program. In the next lab, we will work on
-some revisions to ``Hello.cs`` to personalize it a bit.
+some revisions to ``hello.cs`` to personalize it a bit.
 
 As this point, you should grab the instructor or teaching assistant so
 they can perform a quick inspection of your work and check it off. Per

@@ -493,9 +493,9 @@ immediately preceding section.
    and produce a response like::
    
         ? projects/Hello/Hello.sln
-        ? projects/Hello/Hello/AssemblyInfo.cs
+        ? projects/Hello/Hello/assembly_info.cs
         ? projects/Hello/Hello/Hello.csproj
-        ? projects/Hello/Hello/Main.cs
+        ? projects/Hello/Hello/main.cs
 
    Mercurial shows you the tracked files that are modified (none here)
    or files not not being tracked (ater a '?'),
@@ -514,9 +514,9 @@ immediately preceding section.
    and produce a response like::
    
         adding projects/Hello/Hello.sln
-        adding projects/Hello/Hello/AssemblyInfo.cs
+        adding projects/Hello/Hello/assembly_info.cs
         adding projects/Hello/Hello/Hello.csproj
-        adding projects/Hello/Hello/Main.cs
+        adding projects/Hello/Hello/main.cs
 
    If you inadvertently added something that you truly don't want in the repository, you
    can use the **hg rm** command to remove it. We have nothing at the moment that
@@ -565,7 +565,7 @@ Do the following:
    were all the result of our earlier sequence of commit+push operations. You can click on
    any of these folders to drill into the hierarchy of folders/files that have been pushed
    to Bitbucket (from your local repository). If you drill into the Hello example, you 
-   will eventually reach the folder containing your source code (for Hello.cs). Then you
+   will eventually reach the folder containing your source code (for hello.cs). Then you
    can look at it--through the web! When you do so, you'll see something like this.
 
    .. image:: images/lab-hg/HelloWorld.png
@@ -636,13 +636,13 @@ a team on developing the course notes and examples.
    directory to introcs-csharp/examples to see all of our code examples::
 
         gkt@gkt-mini:~/introcs-csharp/examples$ ls
-        addition1.cs       GlazerCalc1.cs          return2.cs
-        addition2.cs       goodscope.cs            SafeNumberInputStub.cs
-        badscope.cs        Grade1.cs               StrangeSeqStub.cs
+        addition1.cs       glazer_calc1.cs          return2.cs
+        addition2.cs       goodscope.cs            safe_number_input_stub.cs
+        badscope.cs        grade1.cs               strange_seq_stub.cs
         ...
-        Cool.cs            promptuser.cs           Vowels2.cs
-        gcdbruteforce.cs   PromptUserLoop1.cs      Vowels.cs
-        gcd.cs             PromptUserLoop2Bad.cs   Wages1.cs
+        cool.cs            promptuser.cs           vowels2.cs
+        gcdbruteforce.cs   prompt_user_loop1.cs      vowels.cs
+        gcd.cs             prompt_user_loop2_bad.cs   wages1.cs
         ...
 
    (Some output has been eliminated for conciseness.)

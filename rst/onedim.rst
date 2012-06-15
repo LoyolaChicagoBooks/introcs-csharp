@@ -154,9 +154,9 @@ Parameters to Main
 ---------------------
 
 The Main function may take an array of strings as parameter, as in example 
-:file:`PrintParam.cs`:
+:file:`print_param.cs`:
 
-.. literalinclude:: ../examples/PrintParam.cs
+.. literalinclude:: ../examples/print_param.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -328,7 +328,7 @@ length array, where you have values for each parts, as in::
 Command Line Adder Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``Adder.cs`` that calculates and prints the sum of 
+Write a program ``adder.cs`` that calculates and prints the sum of 
 command line parameters, so ::
 
     mono Adder.exe 2 5 22
@@ -344,7 +344,7 @@ would print 29.
 Trim All Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``Trimmer.cs`` that includes and tests a 
+Write a program ``trimmer.cs`` that includes and tests a 
 function with heading::
 
    // Trim all elements of s and replace them in the array.
@@ -363,7 +363,7 @@ function with heading::
 Count Duplicates Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``CountDups.cs`` that includes and tests a 
+Write a program ``count_dups.cs`` that includes and tests a 
 function with heading::
 
 	// Return the number of duplicate pairs in an array a.  
@@ -381,7 +381,7 @@ function with heading::
 Mirror Array Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``MakeMirror.cs`` that includes and tests a 
+Write a program ``make_mirror.cs`` that includes and tests a 
 function with heading::
 
 	// Create a new array with the elements of a in the opposite order.
@@ -398,7 +398,7 @@ function with heading::
 Reverse Array Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``ReverseArray.cs`` that includes and tests a 
+Write a program ``reverse_array.cs`` that includes and tests a 
 function with heading::
 
 
@@ -416,7 +416,7 @@ function with heading::
 Histogram Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``MakeHistogram.cs`` that includes and tests a 
+Write a program ``make_histogram.cs`` that includes and tests a 
 function with heading::
 
 
@@ -451,7 +451,7 @@ function with heading::
     
     -  My extra loop and array exercises, with solutions, in the examples
        `arrayLoopProblems.html <../examples/arrayLoopProblems.html>`_,
-       `arrayLoopSolutions.txt <../examples/arrayLoopSolutions.txt>`_,
+       `array_loop_solutions.txt <../examples/array_loop_solutions.txt>`_,
        moreLoopArrayProblems
        (`.doc <../examples/moreLoopArrayProblems.doc>`_ or
        `.pdf <../examples/moreLoopArrayProblems.pdf>`_) with solutions

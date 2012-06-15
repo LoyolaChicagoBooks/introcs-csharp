@@ -122,7 +122,7 @@ some code to run the various experiments and then run for varying sizes of ``n``
 Here is the code for the first experiment, to test the performance of linear
 searching on integer arrays:
 
-.. literalinclude:: ../examples/performance_lab_stub/PerformanceLab.cs
+.. literalinclude:: ../examples/performance_lab_stub/performance_lab.cs
    :start-after: chunk-experiment1-begin
    :end-before: chunk-experiment1-end
    :linenos:

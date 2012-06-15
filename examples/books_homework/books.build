@@ -21,10 +21,10 @@
 
     <csc target="exe" output="${build.dir}/TestBookList.exe" debug="${debug}">
       <sources>
-        <include name="TestBookList.cs"/>
-        <include name="BookList.cs"/>
-        <include name="Book.cs"/>
-        <include name="FileUtil.cs"/>
+        <include name="test_book_list.cs"/>
+        <include name="book_list.cs"/>
+        <include name="book.cs"/>
+        <include name="file_util.cs"/>
       </sources>
     </csc>
 

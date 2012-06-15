@@ -46,9 +46,9 @@ tea starts at 115 degrees Fahrenheit. You want it at 112 degrees. A
 chip of ice turns out to lower the temperature one degree each
 time. You test the temperature each time, and also print out the
 temperature before reducing the temperature. In C# you could
-write and run the code below, saved in example program Cool.cs:
+write and run the code below, saved in example program cool.cs:
 
-.. literalinclude:: ../examples/Cool.cs
+.. literalinclude:: ../examples/cool.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
@@ -127,12 +127,12 @@ the term *successive modification loop* for loops following this pattern.
 Test yourself: Follow the code.  Figure out what is printed.
 If it helps, get detailed and play computer:
 
-.. literalinclude:: ../examples/TestWhile1.cs
+.. literalinclude:: ../examples/test_while1.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
 
-Check yourself by running the example program ``TestWhile1.cs``.
+Check yourself by running the example program ``test_while1.cs``.
 
 .. note::
    In C#, ``while`` is not used *quite* like in English. In
@@ -145,12 +145,12 @@ Check yourself by running the example program ``TestWhile1.cs``.
 previous example, switching the order in the loop body. Follow it
 carefully, one step at a time.
 
-.. literalinclude:: ../examples/TestWhile2.cs
+.. literalinclude:: ../examples/test_while2.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
 
-Check yourself by running the example program ``TestWhile2.cs``.
+Check yourself by running the example program ``test_while2.cs``.
 
 The sequence order is important. The variable ``i`` is increased before
 it is printed, so the first number printed is 6. Another common
@@ -217,9 +217,9 @@ preparation for the next value of time is:  ``time = time - 1``.
 
 Putting that all together, and remembering the one thing we noted 
 to do after the loop,
-we get ``Blastoff.cs``:
+we get ``blastoff.cs``:
 
-.. literalinclude:: ../examples/Blastoff.cs
+.. literalinclude:: ../examples/blastoff.cs
 
 Look back and see how we fit the general rubric.  
 There are a bunch of things to think about with a while loop, so
@@ -403,7 +403,7 @@ We write that the time is O(n), spoken "oh of n", or "big oh of n" or
    double: pitfall; limit on number size
    
 Computers are pretty fast, so you can try the testing program 
-``SumToNTest.cs``
+``sum_to_n_test.cs``
 and it will go by so fast, that you will hardly notice.  Try these specific
 numbers in tests: 5, 6, 1000, 10000, 98765.  All look OK?  Now try 66000.
 On many systems you will get quite a surprise!  
@@ -420,7 +420,7 @@ for 66000 pops out at you.  Did you guess before you saw the answer for
 calculated!  It is a big deal that the system fails *silently* 
 in such situations.  *Think* how large the data may be that you deal with!
 
-Now look at, compile, and run ``SumToNLong.cs``.  The sum is
+Now look at, compile, and run ``sum_to_n_long.cs``.  The sum is
 a ``long`` integer here. Check out in csharp how big
 a ``long`` can be (``long.MaxValue``).  This version of the program
 works for 100000 and for 98765.  We can get correct
@@ -458,11 +458,11 @@ We can write a ridiculously short
 function following Gauss's model.  Here I introduce the variable average,
 as in the motivation for Gauss's answer:
 
-.. literalinclude:: ../examples/SumToNLongBad.cs
+.. literalinclude:: ../examples/sum_to_n_long_bad.cs
    :start-after: chunk
    :end-before: chunk
 
-Compile and test the example program containing it: ``SumToNLongBad.cs``.
+Compile and test the example program containing it: ``sum_to_n_long_bad.cs``.
 
 Test it with 5, and then try 6. ???
 
@@ -485,11 +485,11 @@ last, when we know the answer will be an integer, things should be better::
    
 Here is a shot at the whole function:
 
-.. literalinclude:: ../examples/SumToNLongBad2.cs
+.. literalinclude:: ../examples/sum_to_n_long_bad2.cs
    :start-after: chunk
    :end-before: chunk
 
-Compile and test the example program containing it: ``SumToNLongBad2.cs``.
+Compile and test the example program containing it: ``sum_to_n_long_bad2.cs``.
 
 Test it with 5, and then try 6. Ok so far, but go on to long integer range:
 try 66000 that messed us up before.  ??? You get an answer that is not
@@ -521,7 +521,7 @@ operations are forced to be ``long``::
 
     return (long)n*(n+1)/2;
     
-You can try example ``SumToNLongQuick.cs`` to finally get a result that
+You can try example ``sum_to_n_long_quick.cs`` to finally get a result that
 is dependably fast and correct.
 
 Important lessons from this humble summation problem:
