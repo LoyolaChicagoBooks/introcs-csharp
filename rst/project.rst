@@ -33,7 +33,7 @@ Objectives
 
 - Make something that is fun
 
-See the project :file:`CSProj/CSProj`, already discussed in class.
+See the project :file:`csproject_stub`, already discussed in class.
 
 
 **What to turn in:** 

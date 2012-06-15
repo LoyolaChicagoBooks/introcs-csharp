@@ -54,7 +54,7 @@ Binary Search
 
 Now that we've seen how the method works, here is the code that does the work:
 
-.. literalinclude:: ../projects/Arrays/BinarySearching/Main.cs
+.. literalinclude:: ../examples/arrays/BinarySearching.cs
    :start-after: chunk-binarysearch-begin
    :end-before: chunk-binarysearch-end
    :linenos:
@@ -87,7 +87,7 @@ Here's a quick explanation, because it largely follows from the above explanatio
 Similar to linear searching, we provide a main program that tests it out. Because the
 code is so similar, we will leave the study thereof to you, the reader.
 
-.. literalinclude:: ../projects/Arrays/BinarySearching/Main.cs
+.. literalinclude:: ../examples/arrays/BinarySearching.cs
    :start-after: chunk-driver-begin
    :end-before: chunk-driver-end
    :linenos:

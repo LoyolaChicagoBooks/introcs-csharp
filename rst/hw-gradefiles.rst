@@ -155,7 +155,7 @@ Requirements
      Harrington, Andrew 91.2 A-
    
 #. In the course repository, there is a stub for the
-   homework in subdirectory :file:`projects/HW/GradeFiles`.
+   homework in subdirectory :file:`examples/grade_file_homework`.
    Pull the latest version of the repository and copy the homework files to 
    your solution area (hopefully in your own repository).  There is test data for
    class abbreviations Comp170 and Comp150 in the project directory.   
@@ -168,12 +168,8 @@ Requirements
    in the defined formats.
    
    The stub of GradeFiles.cs has a Main function that just prints out the
-   current working directory.  That should help you check if you have the 
-   "Run With" parameters for MonoDevelop,
-   setting the working directory to be the main 
-   project directory, ``GradeFiles``, 
-   not the default :file:`bin/Debug` subdirectory. 
-   See :ref:`monodevelop-run-with`.
+   current working directory, to check if you will be in the same directory 
+   as the text files.
    
 Hints
 -----

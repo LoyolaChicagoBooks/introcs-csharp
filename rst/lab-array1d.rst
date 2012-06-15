@@ -43,7 +43,7 @@ In this lab, we're going to learn:
 Tasks
 -----
 
-Start from the stub in the projects, :file:`Labs/Array1D/ArrayLab.cs`.
+Start from the stub in the projects, :file:`Labs/Array1D/ArrayLabStub.cs`.
 It si set up as a MonoDevelop Project, though you may use a different editor
 and use command line tools if you like.  Complete the body of a function
 for each main part, and call each function in ``Main`` several times with
@@ -66,7 +66,7 @@ values. We're going to use the second line for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: PrintInts chunk
       :end-before: ReadInts chunk
 
@@ -76,7 +76,7 @@ values. We're going to use the second line for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: ReadInts chunk
       :end-before: Minimum chunk
 
@@ -85,19 +85,19 @@ values. We're going to use the second line for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: Minimum chunk
       :end-before: CountEven chunk
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: CountEven chunk
       :end-before: PairwiseAdd chunk
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: PairwiseAdd chunk
       :end-before: NewPairwiseAdd chunk
 
@@ -108,7 +108,7 @@ values. We're going to use the second line for this lab.
    
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: NewPairwiseAdd chunk
       :end-before: IsAscending chunk
       
@@ -116,7 +116,7 @@ values. We're going to use the second line for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: IsAscending chunk
       :end-before: PrintAscendingValues chunk
 
@@ -127,14 +127,14 @@ values. We're going to use the second line for this lab.
    
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: PrintAscendingValues chunk
       :end-before: PrintRuns chunk
 
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../projects/Labs/Arrays1D/ArrayLab.cs
+   .. literalinclude:: ../examples/ArrayLabStub.cs
       :start-after: PrintRuns chunk
       :end-before: PrintRuns chunk
 

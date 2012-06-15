@@ -2,4 +2,4 @@
 
 cd ../examples
 rm ../examples.zip
-zip ../examples.zip * 
+zip ../examples.zip * */* */*/*
