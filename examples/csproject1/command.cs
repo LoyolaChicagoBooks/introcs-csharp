@@ -1,17 +1,12 @@
 using System;
-namespace CSProject
+namespace IntroCS
 {
-   /**
-    * This class holds information about a command that was issued by the user.
-    * A command currently consists of two strings: a command word and a second
-    * word (for example, if the command was "take map", then the two strings
-    * obviously are "take" and "map").
-    * 
-    * If the command had only one word, then the second word is <null>.
-    * 
-    * modified from  Michael Kolling and David J. Barnes
-    */
-   
+   // This class holds information about a command that was issued by the user.
+   // A command currently consists of two strings: a command word and a second
+   // word (for example, if the command was "take map", then the two strings
+   // obviously are "take" and "map").
+   // If the command had only one word, then the second word is <null>.
+   // modified from  Michael Kolling and David J. Barnes
    public class Command
    {
       private string commandWord;
@@ -31,7 +26,7 @@ namespace CSProject
       {
          string cmd;
          string parameter = null;
-         string line = Input.InputLine("> ").Trim();
+         string line = UI.PromptLine("> ").Trim();
 
          int i = line.IndexOf(" ");
          if (i == -1) {
@@ -44,19 +39,15 @@ namespace CSProject
          return new Command(cmd, parameter);
       }
 
-      /**
-        * Create a command object. First and second word must be supplied, but
-        * either one (or both) can be null.
-        */
+      // Create a command object. First and second word must be supplied, but
+      // either one (or both) can be null.
       public Command(string firstWord, string secondWord)
       {
          commandWord = firstWord;
          this.secondWord = secondWord;
       }
       
-      /**
-        * Return true if the command has a second word.
-        */
+      // Return true if the command has a second word.
       public bool hasSecondWord()
       {
          return (secondWord != null);
