@@ -1,18 +1,16 @@
 using System;
-namespace CSProject
+namespace IntroCS
 {
-   /** Quit Response */
+   // Quit Response 
    public class Quitter
    {
       public Quitter()
       {
       }
    
-      /**
-        * "Quit" was entered. Check the rest of the command to see
-        * whether we really quit the game.
-        * Return true, if this command quits the game, false otherwise.
-        */
+      // "Quit" was entered. Check the rest of the command to see
+      // whether we really quit the game.
+      // Return true, if this command quits the game, false otherwise.
       public bool Execute(Command command)
       {
          if(command.hasSecondWord()) {
@@ -20,7 +18,7 @@ namespace CSProject
             return false;
          }
          else {
-            return Input.Agree("Do you really want to quit? ");
+            return UI.Agree("Do you really want to quit? ");
          }
       }
 

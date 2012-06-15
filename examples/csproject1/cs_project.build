@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
-<project name="GCD" default="build" basedir=".">
+<project name="cs project" default="build" basedir=".">
 
-  <description>NAnt build file for Grade Calculation using File I/O example</description>
+  <description>NAnt build file for cs project</description>
 
   <property name="debug" value="true" overwrite="false"/>
   <property name="build.dir" value="."/>
+
+  <include buildfile="../../include/NUnit.include" />
 
   <target name="clean" description="remove all generated files">
     <delete>
@@ -19,19 +21,22 @@
   <target name="build" description="compiles the source code">
     <mkdir dir="${build.dir}" failonerror="false"/>
 
-    <csc target="exe" output="${build.dir}/Game.exe" debug="${debug}">
+    <csc target="exe" main="IntroCS.Game" output="${build.dir}/game.exe" debug="${debug}">
       <sources>
+        <include name="../intro_cs_lib/**/*.cs"/>
         <include name="game.cs"/>
         <include name="command.cs"/>
         <include name="command_mapper.cs"/>
         <include name="file_util.cs"/>
         <include name="goer.cs"/>
         <include name="helper.cs"/>
-        <include name="input.cs"/>
         <include name="place.cs"/>
         <include name="quitter.cs"/>
         <include name="response.cs"/>
       </sources>
+      <references>
+        <include name="${nunit.dir}/**/${nunit.dll}"/>
+      </references>
     </csc>
   </target>
 </project>

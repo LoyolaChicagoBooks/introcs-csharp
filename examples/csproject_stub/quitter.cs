@@ -21,7 +21,7 @@ namespace IntroCS
             return false;
          }
          else {
-            return Input.Agree("Do you really want to quit? ");
+            return UI.Agree("Do you really want to quit? ");
          }
       }
 

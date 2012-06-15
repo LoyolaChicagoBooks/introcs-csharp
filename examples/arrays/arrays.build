@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Hello World" default="build" basedir=".">
+<project name="Array Examples" default="build" basedir=".">
 
   <description>Array examples</description>
 
@@ -19,22 +19,8 @@
   </target>
 
   <target name="build" description="compiles the source code">
-    <csc target="exe" main="IntroCS.PerformanceLab" output="${build.dir}/PerformanceLab.exe" debug="${debug}">
-      <sources>
-        <include name="performance_lab.cs"/>
-        <include name="input.cs"/>
-        <include name="searching.cs"/>
-        <include name="binary_searching.cs"/>
-        <include name="sorting.cs"/>
-        <include name="../intro_cs_lib/**/*.cs"/>
-      </sources>
-      <references>
-        <include name="${nunit.dir}/**/${nunit.dll}"/>
-      </references>
-    </csc>
     <csc target="exe" main="IntroCS.Sorting" output="${build.dir}/Sorting.exe" debug="${debug}">
       <sources>
-        <include name="input.cs"/>
         <include name="sorting.cs"/>
         <include name="../intro_cs_lib/**/*.cs"/>
       </sources>
@@ -44,7 +30,6 @@
     </csc>
     <csc target="exe" main="IntroCS.Searching" output="${build.dir}/Searching.exe" debug="${debug}">
       <sources>
-        <include name="input.cs"/>
         <include name="searching.cs"/>
         <include name="../intro_cs_lib/**/*.cs"/>
       </sources>
@@ -54,7 +39,6 @@
     </csc>
     <csc target="exe" main="IntroCS.BinarySearching" output="${build.dir}/BinarySearching.exe" debug="${debug}">
       <sources>
-        <include name="input.cs"/>
         <include name="binary_searching.cs"/>
         <include name="sorting.cs"/>
         <include name="../intro_cs_lib/**/*.cs"/>

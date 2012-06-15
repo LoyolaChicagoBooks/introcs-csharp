@@ -186,8 +186,8 @@ namespace IntroCS
 
          // chunk-driverparameters-begin
          if (args.Length < 2) {
-            arraySize = Input.InputInt("Please enter desired array size: ");
-            randomSeed = Input.InputInt(
+            arraySize = UI.PromptInt("Please enter desired array size: ");
+            randomSeed = UI.PromptInt(
                "Please enter an initial random seed value: ");
          } else {
             arraySize = int.Parse (args [0]);

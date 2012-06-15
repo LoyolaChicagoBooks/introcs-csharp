@@ -1,6 +1,6 @@
 using System;
 
-namespace Music
+namespace IntroCS
 {
    public class TestRational
    {
