@@ -1,4 +1,0 @@
-You must copy PerformanceLabStub.cs to PerformanceLab.cs. The NAnt file
-assumes you are copying the version we are giving you as a starting point.
-This will allow you to revert to the original version more easily,
-if you mess up.
