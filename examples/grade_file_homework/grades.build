@@ -21,7 +21,7 @@
 
     <csc target="exe" output="${build.dir}/TestBookList.exe" debug="${debug}">
       <sources>
-        <include name="GradeFiles.cs"/>
+        <include name="grade_files.cs"/>
       </sources>
     </csc>
 

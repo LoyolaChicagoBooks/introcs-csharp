@@ -21,16 +21,16 @@
 
     <csc target="exe" output="${build.dir}/Game.exe" debug="${debug}">
       <sources>
-        <include name="Game.cs"/>
-        <include name="Command.cs"/>
-        <include name="CommandMapper.cs"/>
-        <include name="FileUtil.cs"/>
-        <include name="Goer.cs"/>
-        <include name="Helper.cs"/>
-        <include name="Input.cs"/>
-        <include name="Place.cs"/>
-        <include name="Quitter.cs"/>
-        <include name="Response.cs"/>
+        <include name="game.cs"/>
+        <include name="command.cs"/>
+        <include name="command_mapper.cs"/>
+        <include name="file_util.cs"/>
+        <include name="goer.cs"/>
+        <include name="helper.cs"/>
+        <include name="input.cs"/>
+        <include name="place.cs"/>
+        <include name="quitter.cs"/>
+        <include name="response.cs"/>
       </sources>
     </csc>
   </target>

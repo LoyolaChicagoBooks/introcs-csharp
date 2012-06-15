@@ -45,7 +45,7 @@ and the value 100 would be accepted.
 This is a well-defined idea.  A function makes sense.  Its heading
 includes a prompt and low and high limits of the allowed range:
 
-.. literalinclude:: ../examples/InputInRange1.cs
+.. literalinclude:: ../examples/input_in_range1.cs
    :start-after: chunk
    :end-before: {
 
@@ -190,11 +190,11 @@ When the loop condition becomes false, and you get past the loop,
 you have a correct value in ``number``.  You have done all the hard work.  
 Do not forget to return it at the end.  
 
-.. literalinclude:: ../examples/InputInRange1.cs
+.. literalinclude:: ../examples/input_in_range1.cs
    :start-after: chunk
    :end-before: chunk
 
-You can try this full example, ``InputInRange1.cs``.  Look at it
+You can try this full example, ``input_in_range1.cs``.  Look at it
 and then try compiling and running.  Look at the Main code.
 It is redundant - the limits are written both in the prompt and in the
 parameters.  We can do better.  In general we endeavor to supply data only
@@ -225,10 +225,10 @@ The parameters
 have the same form as for ``Console.Write``, but the formatted string is
 *returned*.
 
-Here is a revised version, in example ``InputInRange2.cs``, 
+Here is a revised version, in example ``input_in_range2.cs``, 
 without redundancy in the prompts in ``Main``:
 
-.. literalinclude:: ../examples/InputInRange2.cs
+.. literalinclude:: ../examples/input_in_range2.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -261,9 +261,9 @@ In particular you get an infinite loop
 if you fail to get new input from the user at the
 end of the loop.  The condition uses the bad
 original choice forever.  Here is the mistaken version, 
-from example  ``InputInRange2Bad.cs``:
+from example  ``input_in_range2_bad.cs``:
 
-.. literalinclude:: ../examples/InputInRange2Bad.cs
+.. literalinclude:: ../examples/input_in_range2_bad.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -285,7 +285,7 @@ running the program.
 Agree Function Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save example ``TestAgreeStub.cs`` as ``TestAgreeStubAgree.cs``.
+Save example ``test_agree_stub.cs`` as ``test_agree_stub_agree.cs``.
 
 Yes-no (true/false) questions are common.
 How might you write an input utility function ``Agree``? 
@@ -304,7 +304,7 @@ giving ambiguous answers....
 Interactive Sum Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``SumAll.cs`` that prompts the user to enter
+Write a program ``sum_all.cs`` that prompts the user to enter
 numbers, one per line, ending with a line containing 0, and keep a
 running sum of the numbers. Only print out the sum after all the
 numbers are entered (at least in your *final* version).
@@ -318,8 +318,8 @@ numbers are entered (at least in your *final* version).
 Safe Whole Number Input Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save example :file:`TestInputWholeStub.cs` as
-``TestInputWhole.cs``.  The code should test
+Save example :file:`test_input_whole_stub.cs` as
+``test_input_whole.cs``.  The code should test
 a function ``PromptWhole``, as described below.
 
 There is an issue with reading in numbers with the PromptInt function.
@@ -352,10 +352,10 @@ The stub code already includes the earlier function ``IsDigits``.
 	you want to let a user enter a sequence of lines of text, and want
 	to remember each line in a list. This could easily be done with a
 	simple repeat loop if you knew the number of lines to enter. For
-	example, in ``readLines0.cs``, the user is prompted for the exact
+	example, in ``read_lines0.cs``, the user is prompted for the exact
 	number of lines to be entered:
 	
-	.. literalinclude:: ../examples/readLines0.cs
+	.. literalinclude:: ../examples/read_lines0.cs
 	   :lines: 3-
 	
 	The user may want to enter a bunch of lines and not count them all
@@ -364,9 +364,9 @@ The stub code already includes the earlier function ``IsDigits``.
 	still the question of how to test whether the user wants to
 	continue. An obvious but verbose way to do this is to ask before
 	every line if the user wants to continue, as shown below and in the
-	example file ``readLines1.cs``. Read it and then run it:
+	example file ``read_lines1.cs``. Read it and then run it:
 	
-	.. literalinclude:: ../examples/readLines1.cs
+	.. literalinclude:: ../examples/read_lines1.cs
 	   :lines: 3-
 	
 	See the *two* statements setting ``testAnswer``:  
@@ -379,7 +379,7 @@ The stub code already includes the earlier function ``IsDigits``.
 	   data for the test must also be set up a second time, *in* the loop
 	   body.  It is easy to forget the second time!
 	
-	The ``readLines1.cs`` code works, but it may be more annoying than
+	The ``read_lines1.cs`` code works, but it may be more annoying than
 	counting ahead! Two lines must be entered for every one you
 	actually want! A practical alternative is to use a *sentinel*: a
 	piece of data that would *not* make sense in the regular sequence,
@@ -403,9 +403,9 @@ The stub code already includes the earlier function ``IsDigits``.
 	
 		line != ''
 		
-	Run the example program ``readLines2.cs``, shown below:
+	Run the example program ``read_lines2.cs``, shown below:
 	
-	.. literalinclude:: ../examples/readLines2.cs
+	.. literalinclude:: ../examples/read_lines2.cs
 	   :lines: 3-
 	
 	Again the data for the test in the while loop heading must be

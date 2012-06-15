@@ -21,8 +21,8 @@
 
     <csc target="exe" output="${build.dir}/TestRational.exe" debug="${debug}">
       <sources>
-        <include name="TestRational.cs"/>
-        <include name="Rational.cs"/>
+        <include name="test_rational.cs"/>
+        <include name="rational.cs"/>
       </sources>
     </csc>
   </target>

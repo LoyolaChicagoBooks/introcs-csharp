@@ -19,8 +19,8 @@ Book List Assignment
    methods clearly and completely for a user looking at the output
    of the program and *not* the source code..
 
-Stubs for the assignment files are :file:`Book.cs`, :file:`BookList.cs` and 
-:file:`TestBookList.cs` in the
+Stubs for the assignment files are :file:`book.cs`, :file:`book_list.cs` and 
+:file:`test_book_list.cs` in the
 project :file:`HW/Books`. 
 
 Some of the method stubs included are only to be fleshed out if you are doing

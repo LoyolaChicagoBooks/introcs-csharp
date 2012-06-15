@@ -6,11 +6,11 @@
 |if-else| Statements
 ----------------------------
 
-Run the example program, ``Clothes.cs``. Try it at least twice, with
+Run the example program, ``clothes.cs``. Try it at least twice, with
 inputs 50 and then 80. As you can see, you get different results,
-depending on the input. The main code of ``Clothes.cs`` is:
+depending on the input. The main code of ``clothes.cs`` is:
 
-.. literalinclude:: ../examples/Clothes.cs
+.. literalinclude:: ../examples/clothes.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:

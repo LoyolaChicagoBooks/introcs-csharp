@@ -66,7 +66,7 @@ convert it to a double approximation, or print it, or do arithmetic.
 Thinking ahead to what we would like for our Rational numbers, here is
 some testing code with hopefully clear and reasonable method names:
 
-.. literalinclude:: ../examples/TestRational.cs
+.. literalinclude:: ../examples/test_rational.cs
 
 Like other numerical types we would like to be about to parse strings.
 The helping function ShowParse makes the display neater.
@@ -217,7 +217,7 @@ it is the object being constructed.
 There is actually a bit more to do in the constructor than we showed:  
 Validate the data.  The actual constructor is 
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: constructor chunk
    :end-before: chunk
 
@@ -238,7 +238,7 @@ Instance Methods
 
 Look at the heading for ``normalize``:
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: normalize chunk
    :end-before: chunk
 
@@ -316,7 +316,7 @@ Use **public methods**.
 Since the fields are accessible anywhere *inside* the class, and public methods
 can be used from outside the class, we can simply code
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: numerator chunk
    :end-before: chunk
 
@@ -327,7 +327,7 @@ Rational is returned.
 
 Another simple method returns a ``double`` approximation:
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: ToDouble chunk
    :end-before: chunk
 
@@ -337,7 +337,7 @@ How do we do it?
 We have a constructor!  We can easily use it.  The reciprocal
 swaps the numerator and denominator:
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: Reciprocal chunk
    :end-before: chunk
 
@@ -356,7 +356,7 @@ and then parses the integers.  Note that the method *is* ``static``.  There is n
 being referred to when it starts, but in this case the method returns one:
 
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: Parse chunk
    :end-before: chunk
 
@@ -367,7 +367,7 @@ We can deal with the current object without using dot notation.  What if we are
 dealing with more than one Rational, the current one *and* another parameter, 
 as in Multiply:
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: Multiply chunk
    :end-before: chunk
 
@@ -381,7 +381,7 @@ Note that I did not refer to the fields of ``f``through the public methods
 ``GetDenominator``.  Though ``f`` is not the same *object*, it is the same *type*: 
 *Private members of another object of the same type are accessible.*  The full method is:
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: Multiply chunk
    :end-before: Divide chunk
 
@@ -410,7 +410,7 @@ and to have that version used *in place of* the default:
 You need to *override* the default.  To emphasize the change
 in meaning, the word ``override`` must be in the heading:
 
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: ToString chunk
    :end-before: chunk
    

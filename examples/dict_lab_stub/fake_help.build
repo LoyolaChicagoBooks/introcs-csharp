@@ -21,15 +21,15 @@
 
     <csc target="exe" output="${build.dir}/MainLab.exe" debug="${debug}">
       <sources>
-        <include name="MainLab.cs"/>
-        <include name="FileUtil.cs"/>
+        <include name="main_lab.cs"/>
+        <include name="file_util.cs"/>
       </sources>
     </csc>
 
     <csc target="exe" output="${build.dir}/MainVerbose.exe" debug="${debug}">
       <sources>
-        <include name="MainVerbose.cs"/>
-        <include name="FileUtil.cs"/>
+        <include name="main_verbose.cs"/>
+        <include name="file_util.cs"/>
       </sources>
     </csc>
 

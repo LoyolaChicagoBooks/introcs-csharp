@@ -74,7 +74,7 @@ Requirements
    but it could be something else.
 
 #. There are two master files. One is "Categories" + the course abbreviation
-   + ".txt".  For example, CategoriesComp170.txt.
+   + ".txt".  For example, categories_comp170.txt.
    
    It will contain three lines.
    The first line is a comma separated list of category names like
@@ -98,7 +98,7 @@ Requirements
        2, 5, 3, 1, 2
        
    The second master file will be "Students" + the course abbreviation + ".txt".
-   For example :file:`StudentsComp170.txt`.
+   For example :file:`students_comp170.txt`.
    It will contain a list of student information
    records. Each record (one per input line) will have the following
    structure:
@@ -145,7 +145,7 @@ Requirements
    assignment. 
 
 #. The final report file is named with the course abbreviation 
-   + "Summary.txt".  Example: Comp170Summary.txt.
+   + "summary.txt".  Example: comp170_summary.txt.
    This file must have a line for each student showing the 
    student's last name, first name,
    weighted average rounded to one decimal place, and letter grade.  
@@ -160,14 +160,14 @@ Requirements
    your solution area (hopefully in your own repository).  There is test data for
    class abbreviations Comp170 and Comp150 in the project directory.   
    There are also solution files for the 
-   summaries.  Their names end in ``Solution.txt`` to distinguish them from the
+   summaries.  Their names end in ``solution.txt`` to distinguish them from the
    summary files you should generate in tests.
    
    While your program should certainly work for course abbreviations Comp170 and Comp150,
    it should also work in general for any data files your refer to
    in the defined formats.
    
-   The stub of GradeFiles.cs has a Main function that just prints out the
+   The stub of grade_files.cs has a Main function that just prints out the
    current working directory, to check if you will be in the same directory 
    as the text files.
    

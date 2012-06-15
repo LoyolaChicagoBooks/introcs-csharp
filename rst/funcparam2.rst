@@ -50,7 +50,7 @@ Quotient Function Exercise
 
 Modify :file:`quotient.cs`from
 :ref:`QuotientProblem` and save it
-as ``quotientProb.cs``.
+as ``quotient_prob.cs``.
 You should create a function ``quotientProblem`` with int
 parameters.  Like in the earlier versions, it should print a full
 sentence with inputs, quotient, and remainder.

@@ -13,10 +13,10 @@ Overview
 ~~~~~~~~~~
 
 The idea of this lab is to replace project file 
-:file:`examples/dict_lab_stub/FakeHelp.cs` with an improved
+:file:`examples/dict_lab_stub/fake_help.cs` with an improved
 project. 
 
-Open :file:`examples/FakeHelpVerbose.cs` and
+Open :file:`examples/fake_help_verbose.cs` and
 look at the methods ``GetParagraphs()`` and ``GetDictionary()``.
 All the strings for the responses are pre-coded for you there, but if
 you were writing your own it would be a pain. There is all the
@@ -30,7 +30,7 @@ save time later in your game project, too.
 Copy folder examples/dict_lab_stub to examples/dict_lab, and look in the new folder.
 
 In the lab project with Main class 
-:file:`examples/dict_lab/FakeHelp.cs`,
+:file:`examples/dict_lab/fake_help.cs`,
 you make the List and Dictionary filling code more general.  The stubs are moved
 to the class FileUtil for easy reuse.  The main program chooses the files to read.
 The results will look the same as the original program to the user, 
@@ -41,13 +41,13 @@ in your program (like in a game you might write soon).
 
 You will need to complete very short versions of functions
 ``GetParagraphs`` and ``GetDictionary`` that have been moved to
-:file:`examples/dict_lab/FileUtil.cs` and now
+:file:`examples/dict_lab/file_util.cs` and now
 take a StreamReader as parameter.
 The files that they read will contain the basic data.  
 You can look in the lab project at the first data file:
-:file:`HelpNotDefaults.txt`, and the beginning is shown below:  
+:file:`help_not_defaults.txt`, and the beginning is shown below:  
 
-.. literalinclude:: ../examples/dict_lab_stub/HelpNotDefaults.txt
+.. literalinclude:: ../examples/dict_lab_stub/help_not_defaults.txt
    :language: none
    :lines: 1-15
 
@@ -57,7 +57,7 @@ and goodbye strings followed by all the data to go in the ``List`` of random ans
 One complication is that many of these strings take up several lines, in what we call
 a paragraph.  We follow a standard convention for putting paragraphs into plain text: 
 Put a blank line after a paragraph to mark its end.  As you can see, that is how 
-:file:`HelpNotDefaults.txt` is set up. 
+:file:`help_not_defaults.txt` is set up. 
 
 Steps
 -----------------
@@ -74,9 +74,9 @@ ReadParagraph
 ~~~~~~~~~~~~~~
 
 The first method is useful by itself and later for use in the new
-``GetParagraphs`` and ``GetDictionary``.  A stub is in :file:`FileUtil.cs`:
+``GetParagraphs`` and ``GetDictionary``.  A stub is in :file:`file_util.cs`:
 
-.. literalinclude:: ../examples/dict_lab_stub/FileUtil.cs
+.. literalinclude:: ../examples/dict_lab_stub/file_util.cs
    :start-after: ReadParagraph chunk
    :end-before: chunk
 
@@ -115,11 +115,11 @@ insert a few remaining lines of code to complete the next method
 ``GetParagraphs``, that reads to the end of the file, and likely
 processes more than one paragraph.  
 
-.. literalinclude:: ../examples/dict_lab_stub/FileUtil.cs
+.. literalinclude:: ../examples/dict_lab_stub/file_util.cs
    :start-after: GetParagraphs chunk
    :end-before: chunk
 
-Look again at :file:`HelpNotDefaults.txt` to see how the data is set up.
+Look again at :file:`help_not_defaults.txt` to see how the data is set up.
 
 This lab requires very few lines of code. Be sure to read the examples
 and instructions carefully (several times). A lot of ideas get packed
@@ -131,26 +131,26 @@ responses in the lab project program should work as enter lines in the program.
 GetDictionary
 ~~~~~~~~~~~~~~~
 
-The last stub to complete in :file:`FileUtil.cs`` is GetDictionary.  Its
+The last stub to complete in :file:`file_util.cs`` is GetDictionary.  Its
 stub is also modified to take a StreamReader as parameter.  In the
 Main program this function is called to read from
-:file:`HelpNotResponses.txt`.  Here are the first few lines:
+:file:`help_not_responses.txt`.  Here are the first few lines:
 
-.. literalinclude:: ../examples/dict_lab_stub/HelpNotResponses.txt
+.. literalinclude:: ../examples/dict_lab_stub/help_not_responses.txt
    :language: none
    :lines: 1-15
 
 Here is the stub of the function to complete, reading such data:
 
-.. literalinclude:: ../examples/dict_lab_stub/FileUtil.cs
+.. literalinclude:: ../examples/dict_lab_stub/file_util.cs
    :start-after: GetDictionary chunk
    :end-before: chunk
 
 When you complete this function, the program should behave like the earlier
 verbose version with the hard-coded data.
 
-Be careful to distinguish the data file :file:`HelpNotResponses.txt` from
-:file:`HelpNotResponses2.txt`, used in the extra credit.
+Be careful to distinguish the data file :file:`help_not_responses.txt` from
+:file:`help_not_responses2.txt`, used in the extra credit.
 
 This should also be an extremely short amount of coding!  
 Think of following through the data file, and get the corresponding 
@@ -165,9 +165,9 @@ The crude word classification scheme would recognize "crash", but not
 "crashed" or "crashes".  You could make whole file entries
 for each key variation, repeating the value paragraph.  
 A concise approach is to use a data file
-like :file:`HelpNotResponses2.txt`.  Here are the first few lines:
+like :file:`help_not_responses2.txt`.  Here are the first few lines:
 
-.. literalinclude:: ../examples/dict_lab_stub/HelpNotResponses2.txt
+.. literalinclude:: ../examples/dict_lab_stub/help_not_responses2.txt
    :language: none
    :lines: 1-15
 
@@ -175,13 +175,13 @@ The line that used to have one key now may have several blank-separated keys.
 
 Here is how the documentation for GetDictionary should be changed:
 
-.. literalinclude:: ../examples/dict_lab_stub/FileUtil.cs
+.. literalinclude:: ../examples/dict_lab_stub/file_util.cs
    :start-after: Extra credit documentation
    :end-before: }
 
 Modify the lab project to use this file effectively:  Rename
-"HelpNotResponses.txt" to "OneKeyResponses.txt" and then rename
-"HelpNotResponses2.txt" to "HelpNotResponses.txt", so the Main program reads it.
+"help_not_responses.txt" to "one_key_responses.txt" and then rename
+"help_not_responses2.txt" to "help_not_responses.txt", so the Main program reads it.
 
 In your test of the program, be sure to use several of the keys that apply to the
 same response, and show to your TA.

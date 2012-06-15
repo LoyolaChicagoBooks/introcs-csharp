@@ -20,7 +20,7 @@ characters that we can index.
    
 Consider the following silly function description and heading as a start:
 
-.. literalinclude:: ../examples/CharLoop1.cs
+.. literalinclude:: ../examples/char_loop1.cs
    :start-after: chunk
    :end-before: {
  
@@ -70,11 +70,11 @@ This increases the value of the numeric variable i by 1.
 
 So all together:
 
-.. literalinclude:: ../examples/CharLoop1.cs
+.. literalinclude:: ../examples/char_loop1.cs
    :start-after: chunk
    :end-before: chunk
  
-You can test this with example :file:`CharLoop1.cs``.
+You can test this with example :file:`char_loop1.cs``.
 
 This is a very common pattern.  
 We could do anything we want with each individual character, 
@@ -100,7 +100,7 @@ no just print it.
 
 Let us get more complicated.  Consider the function described:
 
-.. literalinclude:: ../examples/Vowels.cs
+.. literalinclude:: ../examples/vowels.cs
    :start-after: chunk
    :end-before: {
 
@@ -142,7 +142,7 @@ nose is just to consider all the cases where it is true::
 How do you combine them into a condition?  
 The letter can be a *or* e *or* i *or* o *or* u.  We get the code:
 
-.. literalinclude:: ../examples/Vowels.cs
+.. literalinclude:: ../examples/vowels.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -170,9 +170,9 @@ The function is still not as general as it might be:
 Only lowercase vowels are listed.  We could do something with
 ``ToLower``, or just use the condition: ``"aeiouAEIOU".Contains(""+s[i])``
 
-This variation is in example ``Vowels2.cs``.
+This variation is in example ``vowels2.cs``.
 
-.. literalinclude:: ../examples/Vowels2.cs
+.. literalinclude:: ../examples/vowels2.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -294,11 +294,11 @@ and below.
 
 The whole function would be:
 
-.. literalinclude:: ../examples/CheckDigits1.cs
+.. literalinclude:: ../examples/check_digits1.cs
    :start-after: chunk
    :end-before: chunk
 
-You can try this code in example :file:`CheckDigits1.cs`.
+You can try this code in example :file:`check_digits1.cs`.
 
 .. index::  return; from inside loop
    
@@ -331,12 +331,12 @@ they are all digits. There are
 Again we do not need an ``if`` statement for a check.  Look in the full
 code for the function:
 
-.. literalinclude:: ../examples/CheckDigits2.cs
+.. literalinclude:: ../examples/check_digits2.cs
    :start-after: chunk
    :end-before: chunk
 
 The full code with a ``Main`` testing program is in 
-example :file:`CheckDigits2.cs`.
+example :file:`check_digits2.cs`.
 
 Returning out of a loop 
 is a good pattern to remember when you are searching for something, 

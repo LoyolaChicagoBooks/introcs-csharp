@@ -41,7 +41,7 @@
       <sources>
         <include name="Notation/*.cs"/>
         <include name="Rational/*.cs"/>
-        <exclude name="Rational/AssemblyInfo.cs"/>
+        <exclude name="Rational/assembly_info.cs"/>
       </sources>
       <references>
         <include name="${nunit.dir}/**/${nunit.dll}"/>

@@ -85,7 +85,7 @@ Let's get started.
 Testing the Constructor
 --------------------------
 
-.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational_unit_tests.cs
    :start-after: snip-ConstructorTest-begin
    :end-before: snip-ConstructorTest-end
    :linenos:
@@ -115,7 +115,7 @@ at how the rest of our testing is done.
 Testing Rational Comparisons
 ----------------------------------
 
-.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational_unit_tests.cs
    :start-after: snip-BasicComparisonTests-begin
    :end-before: snip-BasicComparisonTests-end
    :linenos:
@@ -137,7 +137,7 @@ an *expected result* (e.g. 1/4 + 2/4 == 3/4).
 Testing Rational Arithmetic
 -------------------------------
 
-.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational_unit_tests.cs
    :start-after: snip-BasicArithmeticTest-begin 
    :end-before: snip-BasicArithmeticTest-end
    :linenos:
@@ -177,7 +177,7 @@ minimal explanation as they are in many ways variations on the theme.
 Testing Rational Conversions (to other types)
 -------------------------------------------------
 
-.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational_unit_tests.cs
    :start-after: snip-BasicConversionTests-begin
    :end-before: snip-BasicConversionTests-end
    :linenos:
@@ -191,7 +191,7 @@ representations.
 Testing the Parsing Feature
 -----------------------------------
 
-.. literalinclude:: ../examples/intro_cs_lib/RationalUnitTests.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational_unit_tests.cs
    :start-after: snip-ParseTest-begin
    :end-before: snip-ParseTest-end
    :linenos:

@@ -23,7 +23,7 @@ like ``"\n"``. They would not conflict. They would be
 independent. This avoids lots of errors!
 
 For example, the following code in the example program
-``badScope.cs`` causes an execution error. Read it and try to run it, and
+``bad_scope.cs`` causes an execution error. Read it and try to run it, and
 see:
 
 .. literalinclude:: ../examples/badscope.cs

@@ -32,7 +32,7 @@ look up the character at each index::
 
 Examples have been in :ref:`While-Sequence`, like
 
-.. literalinclude:: ../examples/CharLoop1.cs
+.. literalinclude:: ../examples/char_loop1.cs
    :start-after: chunk
    :end-before: chunk
  

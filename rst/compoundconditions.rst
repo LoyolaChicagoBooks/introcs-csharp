@@ -97,11 +97,11 @@ Congress Exercise
    
 A person is eligible to be a US Senator who is at least 30 years
 old and has been a US citizen for at least 9 years. Write a version
-of a program ``Congress.cs`` to obtain age and length of
+of a program ``congress.cs`` to obtain age and length of
 citizenship from the user and print out if a person is eligible to
 be a Senator or not. A person is eligible to be a US Representative
 who is at least 25 years old and has been a US citizen for at least
-7 years. Elaborate your program ``Congress.cs`` so it obtains age
+7 years. Elaborate your program ``congress.cs`` so it obtains age
 and length of citizenship and prints whether a person is eligible
 to be a US Representative only, or is eligible for both offices, or
 is eligible for neither.

@@ -105,7 +105,7 @@ This variation of ``IndexOf`` has a second parameter:
 Count Repetitions in a String Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program :file:`TestCountRep.cs`, with a Main testing method,
+Write a program :file:`test_count_rep.cs`, with a Main testing method,
 that tests a function with the following heading::
 
   // Return the number of separate repetitions of target in s.
@@ -133,7 +133,7 @@ used in the match of the first two e's.
 Safe PromptInt and PromptDouble Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save the example ``SafeNumberInputStub.cs`` as ``SafeNumberInput.cs``.
+Save the example ``safe_number_input_stub.cs`` as ``safe_number_input.cs``.
 
 The idea is to write safe versions of the utility functions
 PromptInt and PromptDouble (which can then be used in further

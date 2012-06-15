@@ -57,7 +57,7 @@ Now we can define our own interface taking all of these common features
 together.  Since each is a response to a command, we will call our interface
 Response:
 
-.. literalinclude:: ../examples/csproject_stub/Response.cs
+.. literalinclude:: ../examples/csproject_stub/response.cs
 
 Things to note:
 
@@ -92,7 +92,7 @@ CommandMapper, and the the CommandMapper constructor creates the Dictionary
 used to look up the Response that goes with each command word.  Here is the whole code for 
 ResponseMapper, taking advantage of the Dictionary in other methods, too.
 
-.. literalinclude:: ../examples/csproject_stub/CommandMapper.cs
+.. literalinclude:: ../examples/csproject_stub/command_mapper.cs
 
 There is even more to recommend this setup:  The old setup had references in multiple places 
 to various details about the collection of Responses.  That made it harder to follow and
@@ -153,15 +153,15 @@ writing classes implementing and using an interface
 
 1. Copy project :file:`IGame/IGame` to your space or to a different name.
 
-2. Look at the IGame interface in :file:`IGame.cs`. Then look at :file:`AdditionGame.cs`, 
+2. Look at the IGame interface in :file:`i_game.cs`. Then look at :file:`addition_game.cs`, 
    that implements the interface. See how a new ``AdditionGame`` can be added to list of
-   ``IGame``\ 's. Run :file:`PlayGames.cs`. Randomly choosing a game when there is
+   ``IGame``\ 's. Run :file:`play_games.cs`. Randomly choosing a game when there is
    only one to choose from is pretty silly, but it gives you a start on a
    more elaborate list of games.  The ``PopRandom`` method is a good general
    model for choosing, removing, and returning a random element.
 
 3. Write several very simple classes implementing the IGame interface,
-   and modify Main in PlayGames.cs to create and add a new game of each
+   and modify Main in play_games.cs to create and add a new game of each
    type. (Test adding one at a time.)
    
    One such game to create with little more work would be a variation on

@@ -59,10 +59,10 @@ In general one or more interface names can be listed after the class name and a 
 and before the opening brace of the class body.  This particular interface is defined in
 System.Collections.Generic, so we need to be using that namespace.
 
-Project :file:`Interfaces/Rational` has the modified Rational and a :file:`Main.cs`
+Project :file:`Interfaces/Rational` has the modified Rational and a :file:`main.cs`
 to test this with a list of Rationals.  This program:
    
-.. literalinclude:: ../examples/intro_cs_lib/Rational.cs
+.. literalinclude:: ../examples/intro_cs_lib/rational.cs
 
 which prints:
 
