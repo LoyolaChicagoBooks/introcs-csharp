@@ -36,7 +36,7 @@ namespace CSProject
         */
       public Game()
       {
-         places = Place.createPlaces("placeData.txt");
+         places = Place.createPlaces("place_data.txt");
          CurrentPlace = places["outside"];
          commandMapper = new CommandMapper(this);
       }

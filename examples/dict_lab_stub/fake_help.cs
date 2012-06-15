@@ -11,7 +11,7 @@ namespace FakeAdviseLab
       public static void Main()
       {
          // set up data reading with utilities in class FileUtil
-         StreamReader reader = FileUtil.GetDataReader("HelpNotDefaults.txt");
+         StreamReader reader = FileUtil.GetDataReader("help_not_defaults.txt");
          // special data in first two paragraphs
          string welcome = FileUtil.ReadParagraph(reader);
          string goodbye = FileUtil.ReadParagraph(reader);
@@ -19,7 +19,7 @@ namespace FakeAdviseLab
                    FileUtil.GetParagraphs(reader); //rest is random list
          reader.Close();
 
-         reader = FileUtil.GetDataReader("HelpNotResponses.txt");
+         reader = FileUtil.GetDataReader("help_not_responses.txt");
          Dictionary<string, string> responses =
                                         FileUtil.GetDictionary(reader);
          reader.Close();
