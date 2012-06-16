@@ -7,7 +7,7 @@ using System.Collections.Generic;
 /* Help details:
 */
 
-namespace Books
+namespace IntroCS
 {
 
    /** A class that maintains information on a book. */

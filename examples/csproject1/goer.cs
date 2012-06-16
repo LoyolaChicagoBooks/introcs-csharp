@@ -1,5 +1,5 @@
 using System;
-namespace CSProject
+namespace IntroCS
 {
    
    /**
