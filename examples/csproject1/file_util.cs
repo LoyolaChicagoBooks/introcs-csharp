@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-namespace CSProject
+namespace IntroCS
 {
    
    /**

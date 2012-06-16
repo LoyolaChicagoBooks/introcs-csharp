@@ -1,6 +1,6 @@
 using System;
 
-namespace CSProj1
+namespace IntroCS
 {
    class MainClass
    {
