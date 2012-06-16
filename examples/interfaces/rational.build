@@ -19,7 +19,7 @@
   <target name="build" description="compiles the source code">
     <mkdir dir="${build.dir}" failonerror="false"/>
 
-    <csc target="exe" output="${build.dir}/TestRational.exe" debug="${debug}">
+    <csc target="exe" output="${build.dir}/test_rational.exe" debug="${debug}">
       <sources>
         <include name="test_rational.cs"/>
         <include name="rational.cs"/>

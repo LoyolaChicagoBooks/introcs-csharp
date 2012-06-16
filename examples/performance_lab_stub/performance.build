@@ -19,7 +19,7 @@
   </target>
 
   <target name="build" description="compiles the source code">
-    <csc target="exe" main="IntroCS.PerformanceLab" output="${build.dir}/PerformanceLab.exe" debug="${debug}">
+    <csc target="exe" main="IntroCS.PerformanceLab" output="${build.dir}/performance_lab.exe" debug="${debug}">
       <sources>
         <include name="performance_lab.cs"/>
         <include name="../intro_cs_lib/**/*.cs"/>
