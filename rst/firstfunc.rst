@@ -66,7 +66,7 @@ something is
 
 Lines 6-11: The remaining lines form the function *body*.  They are enclosed
 in braces.  By convention the lines inside the braces are indented by a
-consistent amount. Four spaces is common indentation.
+consistent amount. Three spaces is a common indentation.
 
 The whole definition does just that: *defines* the meaning of the
 name ``happyBirthdayEmily``, but it does not do anything else yet -
@@ -84,7 +84,7 @@ Look at the first statement inside Main, line 15::
 
 Note that the ``static void`` of the function definition is missing,
 but we still have the function name and parentheses. 
-C# goes back and looks up
+When ``Main`` is running, C# goes back and looks up
 the definition, and only then, executes the code inside the
 function definition. The term for this action is a *function call*
 or function *invocation*.  In this simple situation the format is
@@ -109,7 +109,7 @@ The *execution* sequence for the program is different from the
 #. Lines 5-11: Jump!  The code of the function is executed for the first
    time, printing out the song.
 
-#. End of line 15: Back from the function call. continue on.
+#. End of line 15: Back from the function call; continue on.
 
 #. Line 16:  Just to mix things up, print out a "Hip, hip, hooray".
 
@@ -126,6 +126,10 @@ Functions alter execution order in several ways: by statements not
 being executed as the definition is first read, and then when the
 function is called during execution, jumping to the function code,
 and back at the the end of the function execution.
+
+Understanding the jumping around in the code with function calls is
+crucial.  Be sur you follow the sequence detailed above.  In particular,
+be sure to distinguish function **definition** from function **call**.
 
 If it also happens to be Andre's birthday, we might define a
 function ``happyBirthdayAndre``, too. Think how to do that before

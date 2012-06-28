@@ -3,7 +3,7 @@ namespace IntroCS
 {
    class Addition3  // using UIF
    {
-      static string sumProblemString(int x, int y)
+      static string SumProblemString(int x, int y)
       {
          int sum = x + y;
          string sentence = "The sum of " + x + " and " + y + " is " + sum + ".";
@@ -12,12 +12,12 @@ namespace IntroCS
       
       public static void Main()
       {
-         Console.WriteLine(sumProblemString(2, 3));
-         Console.WriteLine(sumProblemString(12345, 53579));
+         Console.WriteLine(SumProblemString(2, 3));
+         Console.WriteLine(SumProblemString(12345, 53579));
          Console.Write("Enter an integer: ");
          int a = UIF.PromptInt("Enter an integer: ");      //NEW
          int b = UIF.PromptInt("Enter another integer: "); //NEW
-         Console.WriteLine(sumProblemString(a, b));
+         Console.WriteLine(SumProblemString(a, b));
       }
    }
 }

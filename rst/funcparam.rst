@@ -32,9 +32,8 @@ this stand-in.  It will be a variable in the program,
 so it needs a type in C#.  The names are strings, 
 so the type of ``person`` is ``string``.
 
-The function definition indicates that the variable name ``person``
-will be used inside the function by inserting it between the
-parentheses of the definition, preceded by its type. 
+In between the parentheses of the function definition heading, we insert the variable
+name ``person``, preceded  by its type, ``string``.
 Then in the body of the definition
 of the function, person is used in place of the real data for any
 specific person's name. Read and then run example program
@@ -43,28 +42,29 @@ specific person's name. Read and then run example program
 .. literalinclude:: ../examples/birthday4.cs
    :linenos:
 
-In the definition heading for ``happyBirthday``, ``person`` is
+In the definition heading for ``HappyBirthday``, ``person`` is
 referred to as a *parameter*, or a *formal parameter*. This
 variable name is a *placeholder* for the real name of the person
-being sung to.
+being sung to.  In the definition we give instructions for singing
+Happy Birthday *without* knowing the exact name of the person who might be sung to.
 
 Main now has two calls to the same function, 
-but between the parentheses, where there was the placeholder ``person`` 
-in the definition, now we have the actual people being sung to.
+but between the parentheses, where there was the **placeholder** ``person`` 
+in the definition, now we have the **actual people** being sung to.
 The value between the parentheses here in the function call
 is referred to as an *argument* or *actual parameter* of the
 function call. The argument supplies the actual data to be used in
 the function execution. When the call is made, C# does this by
-associating the formal parameter name ``person`` with the actual
+associating the **formal** parameter name ``person`` with the **actual**
 parameter data, as in an assignment statement. In the first call,
 this actual data is ``'Emily'``. We say the actual parameter value
-is *passed* to the function.
+is *passed* to the function foe execution.
 
 The execution in greater detail:
 
 #. Lines 13: Execution starts in Main.  
 
-#. Line 15: Call to ``happyBirthday``, with actual parameter
+#. Line 15: Call to ``HappyBirthday``, with actual parameter
    ``'Emily'``.
 
 #. Line 5: ``'Emily'`` is passed to the function, so
@@ -77,7 +77,7 @@ The execution in greater detail:
 
 #. End of line 15 after returning from the function call
 
-#. Line 16: Call to ``happyBirthday``, this time with actual
+#. Line 16: Call to ``HappyBirthday``, this time with actual
    parameter ``'Andre'``
 
 #. Line 5: ``'Andre'`` is passed to the function, so
@@ -94,7 +94,7 @@ The execution in greater detail:
 The beauty of this system is that the same function definition can
 be used for a call with a different actual parameter variable, and
 then have a different effect. The value of the variable person is
-used in the third line of ``happyBirthday``, to put in whatever
+used in the third line of ``HappyBirthday``, to put in whatever
 actual parameter value was given.
 
 .. index:: abstraction
@@ -130,7 +130,7 @@ parameter values.
 
 We can combine function parameters with user input, and have the
 program be able to print Happy Birthday for anyone. Check out the
-main method and run ``birthday_who.cs``:
+``Main`` method and run ``birthday_who.cs``:
 
 .. literalinclude:: ../examples/birthday_who.cs
    :linenos:
@@ -145,8 +145,8 @@ This last version illustrates several important ideas:
 
 #. It is a good idea to separate the *internal* processing of data
    from the *external* input from the user by the use of distinct
-   functions. Here the user interaction is in ``main``, and the data
-   is manipulated in ``happyBirthday``.
+   functions. Here the user interaction is in ``Main``, and the data
+   is manipulated in ``HappyBirthday``.
 
 #. In the first examples of actual parameters, we used literal
    values. In general an actual parameter can be an expression. The
@@ -156,8 +156,8 @@ This last version illustrates several important ideas:
    only the value of the actual parameter that is passed, not any
    variable name, there is *no need* to have a variable name used in
    an actual parameter match a formal parameter name. (Here we have the
-   value of ``userName`` in ``main`` becoming the value of ``person``
-   in ``happyBirthday``.)
+   value of ``userName`` in ``Main`` becoming the value of ``person``
+   in ``HappyBirthday``.)
 
 .. comment get this idea in somewhere else?
 
@@ -165,20 +165,20 @@ This last version illustrates several important ideas:
 	   triple: traceback; error; execution
 	
 	Now that we have nested function calls, it is worth looking further
-	at tracebacks from execution errors.  If I add a line to main in
-	``birthday7.cs``::
+	at tracebacks from execution errors.  If I add a line to ``Main`` in
+	``birthday4.cs``::
 		
-		happyBirthday(2)
+		HappyBirthday(2)
 	
 	as in example file ``birthday_bad.cs``, and then run it, you get
 	something close to:
 	
 	  | Traceback (most recent call last):
 	  |   File "/hands-on/examples/birthday_bad.cs", line 15, in <module>
-	  |     main()
+	  |     Main()
 	  |   File "/hands-on/examples/birthday_bad.cs", line 13, in main
-	  |     happyBirthday(2)
-	  |   File "/hands-on/examples/birthday_bad.cs", line 6, in happyBirthday
+	  |     HappyBirthday(2)
+	  |   File "/hands-on/examples/birthday_bad.cs", line 6, in HappyBirthday
 	  |     print("Happy Birthday, dear " + person + ".")
 	  | TypeError: Can't convert 'int' object to str implicitly
 	
@@ -191,7 +191,7 @@ This last version illustrates several important ideas:
 	where the error was *detected*.  
 	Going further up the traceback, you find the sequence of function
 	calls that led to the line where the error was detected.
-	You can see that in ``main`` I call ``happyBirthday``
+	You can see that in ``main`` I call ``HappyBirthday``
 	with the bad parameter, 2.
 
 .. _BirthdayFunctionEx:

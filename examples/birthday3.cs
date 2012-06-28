@@ -4,11 +4,11 @@ class Birthday3
 {
    static void Main()
    {   
-       happyBirthdayEmily();
-       happyBirthdayAndre();
+       HappyBirthdayEmily();
+       HappyBirthdayAndre();
    }
 
-   static void happyBirthdayEmily()
+   static void HappyBirthdayEmily()
    {
       Console.WriteLine ("Happy Birthday to you!");
       Console.WriteLine ("Happy Birthday to you!");
@@ -16,7 +16,7 @@ class Birthday3
       Console.WriteLine ("Happy Birthday to you!");
    }
 
-   static void happyBirthdayAndre()
+   static void HappyBirthdayAndre()
    {   
       Console.WriteLine ("Happy Birthday to you!");
       Console.WriteLine ("Happy Birthday to you!");

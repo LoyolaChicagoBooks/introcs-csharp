@@ -35,13 +35,13 @@ remainder 2.
 
 C# has separate operation to generate the remainder part.  There is no standard
 single operator character operator in regular math, so C# grabs an unused symbol 
-(the same ias in many other computer languages): % is the remainder operator.
+(the same as in many other computer languages): % is the remainder operator.
 
 Try in the csharp shell::
 
     14%4;
     
-You see you do get the remainder from our grade school division.
+You see that you do get the remainder from our grade school division.
 
 Now predict and then try each in the csharp shell::
 
@@ -52,8 +52,9 @@ Now predict and then try each in the csharp shell::
     6%8; 
     6.0/8;
 
-The / operator can be confusing, depending on the type, not the mathematical value.
-Note that if at least one operand is double, the result was be.
+The / operator can be confusing, since it depends on the type representing the numbers, 
+not on the mathematical values.
+Note that if at least one operand is double, the result will also be double.
 
 Finding remainders will prove more useful than you might think in
 the future!
@@ -69,3 +70,5 @@ prompts the user for two integers, and then prints them out in a
 sentence with an integer division problem like ::
 
    The quotient of 14 and 3 is 4 with a remainder of 2
+
+.. FIX make text

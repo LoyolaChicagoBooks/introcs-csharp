@@ -9,8 +9,8 @@ Returned Function Values
 ========================
 
 ..
-	:math:`$f(x)=x^{2}$`, then it follows that
-	:math:`$f(3)$` is :math:`$3^{2}=9$`, and :math:`$f(3)+f(4)$` is
+	:math:`$F(x)=x^{2}$`, then it follows that
+	:math:`$F(3)$` is :math:`$3^{2}=9$`, and :math:`$F(3)+F(4)$` is
 	:math:`$3^{2}+4^{2}=25$`
 
 
@@ -18,9 +18,9 @@ You probably have used mathematical functions in algebra class, but
 they all had calculated values associated with them. For instance
 if you defined 
 
-   f(x)=x\ :sup:`2`
+   F(x)=x\ :sup:`2`
 
-then it follows that f(3) is 3\ :sup:`2`, and f(3)+f(4) is
+then it follows that F(3) is 3\ :sup:`2`, and F(3)+F(4) is
 3\ :sup:`2` + 4\ :sup:`2`
 
 Function calls in expressions get
@@ -47,10 +47,10 @@ In place of ``void`` is ``int``.  The ``void`` in earlier function headings
 meant nothing was returned.  The ``int`` here means that a value *is*
 returned and its type is ``int``.
 
-After the function ``f``
+After the function ``F``
 finishes executing from inside ::
 
-	Console.WriteLine(f(3));
+	Console.WriteLine(F(3));
 
 it is as if the statement temporarily became ::
 
@@ -58,16 +58,16 @@ it is as if the statement temporarily became ::
 
 and similarly when executing ::
 
-	Console.WriteLine(f(3) + f(4)); 
+	Console.WriteLine(F(3) + F(4)); 
 
-the interpreter first evaluates f(3) and effectively replaces the
+the interpreter first evaluates F(3) and effectively replaces the
 call by the returned result, 9, as if the statement temporarily
 became ::
 
-	Console.WriteLine(9 + f(4));
+	Console.WriteLine(9 + F(4));
 
 
-and then the interpreter evaluates f(4) and effectively replaces
+and then the interpreter evaluates F(4) and effectively replaces
 the call by the returned result, 16, as if the statement
 temporarily became ::
 
@@ -75,7 +75,7 @@ temporarily became ::
 
 resulting finally in 25 being calculated and printed.
 
-**C#** functions can return any type of data, not just numbers, and
+C# functions can return any type of data, not just numbers, and
 there can be any number of statements executed before the return
 statement. Read, follow, and run the example program
 :file:`return2.cs`:
@@ -120,9 +120,9 @@ Make sure you completely follow the details of the execution:
 
 Compare :file:`return2.cs` and :file:`addition1.cs`, from the previous
 section. Both use functions. Both print, but where the printing *is
-done* differs. The function ``sumProblem`` prints directly inside
+done* differs. The function ``SumProblem`` prints directly inside
 the function and returns nothing explicitly. On the other hand
-``lastFirst`` does not print anything but returns a string. The
+``LastFirst`` does not print anything but returns a string. The
 caller gets to decide what to do with the string, and above it is
 printed in ``Main``.
 
@@ -133,7 +133,7 @@ In general functions should do a single thing.
 You can easily combine a sequence of functions, and you have more
 flexibility in the combinations
 if each does just one unified thing.  The function
-sumProblem in :file:`addition1.cs` does two thing:  It creates a sentence,
+SumProblem in :file:`addition1.cs` does two thing:  It creates a sentence,
 and prints it.  If that is all you have, you are out of luck if you want
 to do something different with the sentence string.  A better way is
 to have a function that just creates the sentence, and returns it for
@@ -155,7 +155,7 @@ Quotient String Return Exercise
 
 Create :file:`quotient_return.cs` by modifying :file:`quotient_prob.cs` in
 :ref:`QuotientFunctionEx` so that the program accomplishes the same
-thing, but everywhere change the quotientProblem function into one
-called ``quotientString`` that merely *returns* the string rather
+thing, but everywhere change the QuotientProblem function into one
+called ``QuotientString`` that merely *returns* the string rather
 than printing the string directly. Have ``Main`` print
-the result of each call to the ``quotientString`` function.
+the result of each call to the ``QuotientString`` function.
