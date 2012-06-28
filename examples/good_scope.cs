@@ -1,13 +1,13 @@
 using System;
 
-class BadScope
+class GoodScope
 {
    static void Main()
    {
       int x = 3;
-      f(x);
+      F(x);
    }
-   static void f(int x)
+   static void F(int x)
    {
       Console.WriteLine(x);
    }

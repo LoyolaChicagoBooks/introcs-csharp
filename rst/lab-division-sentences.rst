@@ -66,8 +66,8 @@ As an example of how this program will ultimately work::
 We will later learn how to turn the 3 2/4 into a reduced
 fraction. This will be achieved using a famous method known as the
 *greatest common divisor* algorithm, which has a very simple
-formulation that is credited to Euclid, of of the great early
-mathematicians (among other things).
+formulation that is credited to Euclid, one of the great early
+mathematicians (among other accomplishments).
 
 csharp
 ------
@@ -104,31 +104,26 @@ there are some cases where you might find yourself a bit
 confused. Here's an example of something that could happen to you in
 the course of typing a statement::
 
-    csharp> int denominator = int.Parse(
-    >
+    csharp> int denominator = int.Parse(input)
+          >
 
-In this example, I accidentally hit the return/enter key after
-entering the left parenthesis. For ``int.Parse(`` to work, it needs
-more input to bring the statement to completion. For example, it needs
-to know *what to parse* and must be a complete C# statement. The
-closing parenthesis and statement terminator (semicolon) need to be
-typed for this to happen.
+In this example, I accidentally hit the return/enter key before entering the
+required semicolon .  The secondary prompt '>' means that you have an incomplete
+statement: complete it.
 
 So we can either continue entering the input::
     
-    csharp> int denominator = int.Parse(
-    > input);       
+    csharp> int denominator = int.Parse(input)
+          > ;       
 
 
-Or we can type semicolon (;) followed by return/enter to end the input
-and try again::
+If you get to the semicolon, but make a syntax error, like::
 
-    csharp> int denominator = int.Parse(
-    > ;
+    csharp> int denominator = int.Parse(;
     {interactive}(2,0): error CS1525: Unexpected symbol `;'
 
-This will force the statement to be processed by the C# interpreter
-and give an error. You can then *try again* if you like!
+This reminds you that there is an error.  What you typed is ignored, and 
+you can then *try again* if you like!
 
 A particularly useful feature of the C# interpreter is the
 ``ShowVars()`` function. (Yes, we know you haven't fully learned
@@ -155,13 +150,16 @@ Now let's use the C# operators to get the quotient and the remainder::
     csharp> int remainder = numerator % denominator;
     csharp> Console.WriteLine(remainder);
     2
-    csharp> Console.WriteLine("{0} / {1} = {2} remainder {3}", numerator, denominator, quotient, remainder);
+    csharp> Console.WriteLine("{0} / {1} = {2} remainder {3}", 
+          > numerator, denominator, quotient, remainder);
     14 / 4 = 3 remainder 2
+    
 
 Because we are working with integer data, we need the ability to get
 the result of the division and the remainder *as integers*. As shown,
-14 / 4 results in 3. That's because the remainder is not included (nor
-can it be) unless we use another data type (float) that can hold the
+14 / 4 results in 3. That's because the remainder is not included in the
+single integer result, and there is no decimal result 
+unless we use another data type (float) that can hold the
 full result of a division operation.
 
 C# gives you the ability to get the remainder using a separate
@@ -218,24 +216,24 @@ the C# interpreter) into your text editor::
 
     using System;
 
-    namespace Comp170 {
+    namespace IntroCS {
        class DoTheMath {
-          public static void main() {
-	      // Prompt the user for the numerator using
-              // Console.WriteLine().
+          public static void Main() {
+            // Prompt the user for the numerator using
+             //   Console.WriteLine().
        
-	      // Convert this text into int numerator using
-	      // int.Parse().
+            // Convert this text into int numerator using
+            // int.Parse().
 
-	      // Do the same for the denominator.
+            // Do the same for the denominator.
 
-	      // Calculate quotient and remainder (as integers)
-	      // Use Console.WriteLine() to make the results pretty as
-	      // above.
+            // Calculate quotient and remainder (as integers)
+            // Use Console.WriteLine() to make the results pretty as
+            // above.
 
-	      // Do the same but using floating point division and not
-	      // doing the remainder calculation.
-	  }
+            // Do the same but using floating point division and not
+            // doing the remainder calculation.
+          }
        }
     }
 

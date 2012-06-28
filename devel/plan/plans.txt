@@ -2,13 +2,16 @@ COMP 170 Categories
 
 revisions:
 	code:
-		nant, one project per directory under source/
-		IntroCS namespace everywhere
-		.build file generator
-		.sln file generator
-		consistenty use of Stub in name of skeletons
+		nant, one project per directory under examples/
+		IntroCS namespace everywhere there might be a reference to another file
+		?? .sln file generator
 	
 	notes:
+		When use function, when method?
+		I suggest using function for the static things, and only mention
+			method initially as being sometimes used as a synonym in C#,
+			though we will generally use it in object-oriented situations,
+			discussed later.		
 		summary at the end of each chapter
 		text not code blocks where appropriate
 		:file: consistent, :menuitem:, :keyb: .  
@@ -27,10 +30,27 @@ revisions:
 		eliminate Miles:
 		   *our* CS intro
 		   *our* intro example
-		   file intro
+		   later file intro
    
 	style:
 		? new css ... style?
+		
+		
+	particular details:
+		jbuilder intro before ?emacs - move such things to appendix?
+		
+		I see csharp intro as staying in text, since we clearly illustrate with it.
+		
+		csharp intro in notes before remainders.html (anh 2.4) (from lab-division 2.7.3)
+		
+		lab-division is repetitious on the details of the forms of division.  
+		I prefer more concise reminders, and a reference back to the division section.
+		homework-grade-calc refers to and executive summary, and then immediately has a
+		section called details.  Those do not seem consistent.
+		
+		
+		
+		
 
 A - Arithmetic Calculator
        / essential primitive types : mostly ref to Miles at this pont

@@ -13,7 +13,7 @@ Kim, the program could print
 
 This is a very simple
 input-process-output program (in fact with almost no "process").
-Think how would you code it? 
+Think how would you code it. 
 
 You need to obtain a name, remember it and use it in your output.
 A solution is in the next section.
@@ -60,7 +60,7 @@ initial string are implicitly numbered,
 Starting with 0 is consistent with other numbering sequences in C#.
 So here, where there is just one value to substitute, it gets the index 0,
 and where it is substituted, the braces get 0 inside, to indicate
-that parameter 0 is to be substituted.
+that parameter with index 0 is to be substituted.
 
 Everything in the initial string that is *outside* the braces is just
 repeated verbatim.  In particular, if the only parameter is a string 
@@ -123,6 +123,8 @@ produces ::
 
     The set is {2, 3}.
 
+.. FIX text
+
 .. index:: 
    double: method; overloading
 
@@ -138,9 +140,9 @@ Overloading
     Though each of these uses has the same name, ``Console.WriteLine``, 
     they are technically all different functions:  A function is not just recognized
     by its name, but by its *signature*, 
-    which also includes the number and types of parameters.
+    which includes the name **and** the number and types of parameters.
     The technical term for using the same name with different signatures for different
-    functions is function (or method) *overloading*.
+    functions is *overloading* the function (or method).
     
     This only makes practical sense for a group of closely related functions, where the
     use of the same name is more helpful than confusing.

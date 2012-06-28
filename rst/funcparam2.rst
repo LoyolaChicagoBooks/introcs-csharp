@@ -4,11 +4,12 @@
 Multiple Function Parameters
 ================================
 
-A function can have more than one parameter in a parameter list
+A function can have more than one parameter in a parameter list.  The 
+list entries are
 separated by commas. Each formal parameter name is preceded by its type.
 For example the example program :file:`addition1.cs` 
 uses 
-a function to make it easy to display many sum problems. Read and
+a function, ``SumProblem``,  to make it easy to display many sum problems. Read and
 follow the code, and then run:
 
 .. literalinclude:: ../examples/addition1.cs
@@ -37,11 +38,11 @@ Functions provide extremely important functionality to programs,
 allowing tasks to be defined once and performed repeatedly with
 different data. It is essential to see the difference between the
 **formal** parameters used to describe what is done inside the function
-definition (like x and y in the definition of sumProblem) and the
+definition (like x and y in the definition of SumProblem) and the
 **actual** parameters (like 2 and 3 or 12345 and 53579)
 which *substitute* for the formal parameters when the function is
 actually executed. ``Main`` uses three different sets
-of actual parameters in the three calls to sumProblem.
+of actual parameters in the three calls to SumProblem.
 
 .. _QuotientFunctionEx:
 
@@ -51,10 +52,10 @@ Quotient Function Exercise
 Modify :file:`quotient.cs`from
 :ref:`QuotientProblem` and save it
 as ``quotient_prob.cs``.
-You should create a function ``quotientProblem`` with int
+You should create a function ``QuotientProblem`` with int
 parameters.  Like in the earlier versions, it should print a full
 sentence with inputs, quotient, and remainder.
 ``Main``
-should test the ``quotientProblem`` function
+should test the ``QuotientProblem`` function
 on several sets of literal values, and also test the function with
 input from the user.

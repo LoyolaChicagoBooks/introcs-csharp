@@ -42,7 +42,9 @@ The calls to the birthday functions
 *happen* to be in the same order as their definitions, but that is
 arbitrary. If the two lines of the body of ``Main`` were swapped, 
 the order of
-operations would change. 
+operations would change, but if the order of the whole function 
+definitions were changed,
+it would make no diference in execution.
 
 Functions that you write can also call other functions you write.
 In this case Main calls each of the birthday functions.
