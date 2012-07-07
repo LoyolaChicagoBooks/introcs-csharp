@@ -13,7 +13,6 @@ Introduction to Computer Science in C#
    :maxdepth: 2
    :numbered:
 
-   offerings
    context
    data
    functions
@@ -29,10 +28,8 @@ Introduction to Computer Science in C#
    classes
    interfaces
    testing
-   acknowledgments
-   changelog
-   todolist
-
+   appendix
+   
 Index and search
 ================
 

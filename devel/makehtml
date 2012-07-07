@@ -2,7 +2,7 @@
 
 # assume start in devel dir
 cd ../rst
-./setofferings.py $USER
+# ./setofferings.py $USER
 make  $* html
-./setofferings.py $USER no
+# ./setofferings.py $USER no
 cd ../devel
