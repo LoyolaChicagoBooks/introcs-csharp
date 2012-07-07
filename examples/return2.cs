@@ -2,7 +2,7 @@ using System;
 
 class Return2
 {
-   static string lastFirst(string firstName, string lastName)
+   static string LastFirst(string firstName, string lastName)
    {
       string separator = ", ";
       string result = lastName + separator + firstName;
@@ -11,7 +11,7 @@ class Return2
 
     static void Main()
     {
-        Console.WriteLine(lastFirst("Benjamin", "Franklin"));
-        Console.WriteLine(lastFirst("Andrew", "Harrington"));
+        Console.WriteLine(LastFirst("Benjamin", "Franklin"));
+        Console.WriteLine(LastFirst("Andrew", "Harrington"));
     }
 }

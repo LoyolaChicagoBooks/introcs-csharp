@@ -21,11 +21,11 @@ revisions:
 		index names consistent.  topic lower case, method upper?
 		more exercises
 		kill todo's
-		syntax intro considstently given, consistent notation
+		syntax intro consistently given, consistent notation
 		music output?
 		integrate CS examples better
 		new name for notes
-		jEdit tool notes
+		jEdit tool notes to appendix
 
 		eliminate Miles:
 		   *our* CS intro
