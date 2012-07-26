@@ -1,0 +1,21 @@
+gkt@tirtha:~/Work/introcs-csharp/examples/hello+nant$ nant
+NAnt 0.91 (Build 0.91.4312.0; release; 10/22/2011)
+Copyright (C) 2001-2011 Gerry Shaw
+http://nant.sourceforge.net
+
+Buildfile: file:///Users/gkt/Work/introcs-csharp/examples/hello+nant/hello.build
+Target framework: Mono 2.0 Profile
+Target(s) specified: build 
+
+
+build:
+
+      [csc] Compiling 1 files to '/Users/gkt/Work/introcs-csharp/examples/hello+nant/hello.exe'.
+
+BUILD SUCCEEDED
+
+Total time: 0.4 seconds.
+
+gkt@tirtha:~/Work/introcs-csharp/examples/hello+nant$ ls
+HelloWorld.exe.mdb	hello.build		hello.exe
+README			hello.cs		hello.exe.mdb
