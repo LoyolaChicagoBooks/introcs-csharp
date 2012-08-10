@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Introductioni to Computer Science in C# documentation build configuration file, created by
+# Introduction to Computer Science in C# documentation build configuration file, created by
 # sphinx-quickstart on Tue Dec  6 14:14:02 2011.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -108,7 +108,7 @@ rst_epilog = """
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+#html_theme = 'default'
 html_theme = 'bootstrap'
 
 # Theme options are theme-specific and customize the look and feel of a theme
