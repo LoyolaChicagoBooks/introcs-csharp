@@ -278,6 +278,7 @@ The following is an example of a "dot hgignore" file.  Mercurial will neither
 list or otherwise pay attention the files in this list:
 
 .. literalinclude:: ../examples/hgignore.txt
+   :language: none
 
 Here is a brief explanation of what we've included here and why:
 

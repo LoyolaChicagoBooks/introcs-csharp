@@ -3,7 +3,8 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build -c $(USER)/
+SPHINXBUILD   = sphinx-build
+#SPHINXBUILD   = sphinx-build -c $(USER)/
 PAPER         =
 BUILDDIR      = ../build
 
@@ -104,6 +105,7 @@ latex:
 
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	./fixgenindex.py $(BUILDDIR)/latex/comp170.tex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."

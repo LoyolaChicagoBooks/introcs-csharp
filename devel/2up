@@ -2,7 +2,7 @@
 
 rm ../CSharpHtml/* ../CSharpHtml/*/*
 cp -R ../build/html/* ../CSharpHtml/
-cp ../build/latex/ProgrammingInCSharp.pdf ..
+cp ../build/latex/comp170.pdf ../ProgrammingInCSharp.pdf
 #zip rst.zip rst/*.rst rst/conf.py
 #mv rst.zip ..
 cd ..

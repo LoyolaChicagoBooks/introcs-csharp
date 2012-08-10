@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Introductory Programming in C# documentation build configuration file, created by
+# Introduction to Computer Science in C# documentation build configuration file, created by
 # sphinx-quickstart on Tue Dec  6 14:14:02 2011.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -42,7 +42,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Introductory Programming in C#'
+project = u'Introduction to Computer Science in C#'
 copyright = u'2012, Andrew N. Harrington and George Thiruvathukal'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -62,7 +62,7 @@ release = '1.0'
 # non-false value, then it is used:
 #today = ''
 # Else, today_fmt is used as the format for a strftime call.
-#today_fmt = '%B %d, %Y'
+today_fmt = '%d-%B-%Y %H:%M:%S'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -108,15 +108,16 @@ rst_epilog = """
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
+#html_theme = 'default'
 html_theme = 'bootstrap'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = { 'collapsiblesidebar' : True }
+#html_theme_options = { 'collapsiblesidebar' : True }
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['../../themes']
+html_theme_path = ['../themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -138,12 +139,12 @@ html_short_title = 'COMP 170'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+html_static_path = ['_static']
 
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%d-%B-%Y %H:%M:%S'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -169,7 +170,7 @@ html_short_title = 'COMP 170'
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
@@ -183,7 +184,7 @@ html_short_title = 'COMP 170'
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ProgrammingInCSharpdoc'
+htmlhelp_basename = 'comp170doc'
 
 highlight_language = 'csharp'
 
@@ -203,7 +204,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ProgrammingInCSharp.tex', u'Introductory Programming in C\\#',
+  ('index', 'comp170.tex', u'Introduction to Computer Science in C\\#',
    u'Andrew N. Harrington and George K. Thiruvathukal', 'manual'),
 ]
 
@@ -233,7 +234,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'programmingincsharp', u'Introductory Programming in C#',
+    ('index', 'introcscsharp', u'Introduction to Computer Science in C#',
      [u'Andrew N. Harrington and George K. Thiruvathukal'], 1)
 ]
 
@@ -247,8 +248,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ProgrammingInCSharp', u'Introductory Programming in C#',
-   u'Andrew N. Harrington and George K. Thiruvathukal', 'ProgrammingInCSharp', 
+  ('index', 'comp170', u'Introduction to Computer Science in C#',
+   u'Andrew N. Harrington and George K. Thiruvathukal', 'comp170', 
    'C# Notes.',
    'Miscellaneous'),
 ]
@@ -261,3 +262,9 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+
+
+# -- Options for epub output"
+
+epub_basename = 'comp170'

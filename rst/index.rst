@@ -8,7 +8,6 @@
 Introduction to Computer Science in C#
 =======================================
 
-
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -30,9 +29,5 @@ Introduction to Computer Science in C#
    testing
    appendix
    
-Index and search
-================
-
-* :ref:`genindex`
-* :ref:`search`
+:ref:`genindex`
 
