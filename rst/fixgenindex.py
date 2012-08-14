@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-Remove stand final genindex in pdf
+Remove  final word genindex appearing in pdf
 '''
 
 import sys
