@@ -5,6 +5,5 @@ Files
    :maxdepth: 3
 
    filesyntax
-   hw-gradefiles
  
 
