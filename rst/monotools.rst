@@ -14,22 +14,37 @@ only on Windows and is the primary development framework for all
 things Microsoft.
 
 The Mono Project SDK <http://mono-project.com> is the free/open source
-equivalent implementation of the Microsoft SDK. It runs on all major platforms (including Windows) and is needed in situations where you want to develop .Net applications on non-Windows platforms.
+equivalent implementation of the Microsoft SDK. 
+It runs on all major platforms (including Windows) and is needed in situations 
+where you want to develop .Net applications on non-Windows platforms.
 
 As an interesting aside, the company whose developers lead the work on
 the Mono SDK are working on commercial tools that allow you to
 develop/run applications written in .Net on Apple iOS and Android
 mobile devices (phones and tablets).
 
+Editing and Building Tools
+--------------------------
+
+Early programs were written with rudimentary text editors, 
+more primitive than Windows Notepad.  Gradually tools got better.
+Now there are editors that are highly optimized for editing code.
+
+After code is edited, it has to be converted into an executable program.
+That may involve several files and libraries and other dependencies.
+Streamlining and automating this process was a big deal.  There
+are a variety of building tools that can be used with, or built into
+an SDK:  make, ant, and now NAnt for .net.
+
+Many developers use an a la carte approach, using their favorite editor along
+with their favorite building tool.  In these notes we will discuss
+the editor :ref`jEdit`, and the build tool *NAnt*.
+ 
 About Integrated Development Environments (IDE)
 -----------------------------------------------
 
-While just about everything you need to create programs can, indeed,
-be found in the SDK, it is not long before you wish there were an "app
-for that" so to speak. While most programmers who developed code (like
-your instructors) in the 1970s-1990s learned to program directly with
-the SDK using the *command line*, today's programmers largely to
-prefer working in an IDE.
+There are also all-in-one tools that combine an editor and build tools.
+These are also used by many developers.
 
 There are two major IDEs for .Net development, which we explain briefly below:
 
@@ -50,17 +65,21 @@ Our Approach
 ------------
 
 In the interest of providing a consistent experience for our students,
-we will be using Mono (the SDK) and MonoDevelop (the IDE) for
-everything we demonstrate in class. We will also be encouraging you to
-use it for your work, especially if you are interested in
-non-Microsoft platforms.
+we will be using the multi-platform Mono (the SDK), which comes with the build tool NAnt.
+You can use a variety of editors, but we will introduce :ref:`jEdit` as a
+free, convenient, multi-platform alternative.
 
-Our notes assume for the most part that you are working with Mono and
-MonoDevelop. In most cases, what we are showing you in Mono and
-MonoDevelop will translate almost *as is* to the Microsoft
-equivalents. However, there are some tools, such as the ``csharp``
-interpreter, that have a rough analog in Microsoft's tools but in a somewhat
-limited form. As there is significant evolution of both the Microsoft
+MonoDevelop could be used, but while its defaults may be OK for very complex projects, 
+they are highly constraining for projects at this level.
+
+Our notes assume for the most part that you are working with Mono and NAnt.  The
+editor is less critical, though we will discuss jEdit.
+
+Mono has an extra advantage in the tool csharp, which has a rough analog 
+in Microsoft's tools but in a somewhat
+limited form. 
+
+As there is significant evolution of both the Microsoft
 and Mono *toolchains*--a fancy word we want you to know and a more
 elegant way of saying SDK--we'll issue updates to these notes.
 
@@ -89,21 +108,7 @@ OS X
    to download this image and double-click it. Open the image and run
    the installer. Administrative privileges are required to run the
    installer, so if you do not know this information, please stop
-   here.
-
-#. Once installation is completed, you have everything needed to start
-   using the IDE, MonoDevelop. 
-
-#. Now go to <http://mono-develop.com>.
-
-#. As with Mono, we need to look for the downloads link. 
-   You should download the *stable* version.
-
-#. As with Mono, you will see a DMG file, 
-   which you should download and double-click to mount on your desktop.
-
-#. This time, you will see an App for MonoDevelop, 
-   which you can drag and drop into the Applications folder.
+   here.   
 
 Here is how to do a quick sanity check of your Mono setup:
 
@@ -121,7 +126,23 @@ Here is how to do a quick sanity check of your Mono setup:
    ``/usr/bin/dmcs`` as output.  ``dmcs`` is one of the interfaces to
    the C# compiler.
 
-#. If the two preceding steps were successful, you can launch
+Optional Mono-develop Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Make sure Mono is installed first. 
+
+#. Now go to <http://mono-develop.com>.
+
+#. As with Mono, we need to look for the downloads link. 
+   You should download the *stable* version.
+
+#. As with Mono, you will see a DMG file, 
+   which you should download and double-click to mount on your desktop.
+
+#. This time, you will see an App for MonoDevelop, 
+   which you can drag and drop into the Applications folder.
+
+#. If the preceding steps were successful, you can launch
    MonoDevelop by double-clicking the icon in your Applications
    folder. (You won't know what to do with it yet, but at least you can
    verify that it launches correctly and then use Command-Q to exit.)
@@ -144,17 +165,6 @@ Windows
    security, UAM, that makes sure you really want to install something
    you downloaded from the internet.
 
-#. Once installation is completed, you have everything needed to start
-   using the IDE, MonoDevelop. 
-
-#. Now go to <http://mono-develop.com>.
-
-#. As with Mono, we need to look for the downloads link. You should
-   download the *stable* version.
-
-#. As with Mono, you will see a self-extracting installer, 
-   which you should run as before.
-
 Here is how to do a quick sanity check of your Mono setup:
 
 #. Open the Start Menu and type "mono" in the text field at the bottom.  
@@ -167,7 +177,20 @@ Here is how to do a quick sanity check of your Mono setup:
    finding the Mono folder, expanding it, and clicking on]
    the Mono Command Prompt.
 
-#. If the two preceding steps were successful, you can launch
+Optional Mono-develop Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Make sure Mono is installed first. 
+
+#. Now go to <http://mono-develop.com>.
+
+#. As with Mono, we need to look for the downloads link. You should
+   download the *stable* version.
+
+#. As with Mono, you will see a self-extracting installer, 
+   which you should run as before.
+
+#. If the preceding steps were successful, you can launch
    MonoDevelop by double-clicking the icon in your Applications
    folder. (You won't know what to do with it yet, but at least you can
    verify that it launches correctly and then close the window.
@@ -182,7 +205,9 @@ as Ubuntu.
 
 #. Using the command-line ``apt-get`` tool, you can install everything
    that you need using ``apt-get install monodevelop``. This should be
-   run as the **root** user (using the ``sudo`` command).
+   run as the **root** user (using the ``sudo`` command).  If you
+   do not want monodevelop, it is enough to use
+   ``apt-get install mono``.
 
 #. You can test the sanity of your setup by following the instructions
    under OS X.

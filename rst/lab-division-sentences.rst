@@ -201,9 +201,11 @@ character (which must be a *letter* or an *underscore*)::
     csharp> float quotient2 = numerator2/denominator2;
     csharp> Console.WriteLine(quotient2);              
     3.5
-    csharp> Console.WriteLine("{0} / {1} = {2} remainder {3}", numerator, denominator, quotient, remainder);
+    csharp> Console.WriteLine("{0} / {1} = {2} remainder {3}", 
+          >                   numerator, denominator, quotient, remainder);
     14 / 4 = 3 remainder 2
-    csharp> Console.WriteLine("{0} / {1} = {2} approximately", numerator2, denominator2, quotient2);
+    csharp> Console.WriteLine("{0} / {1} = {2} approximately", 
+          >                   numerator2, denominator2, quotient2);
     14 / 4 = 3.5 approximately
 
 So effectively we have shown everything you need to understand to
@@ -237,67 +239,64 @@ the C# interpreter) into your text editor::
        }
     }
 
-.. _java-mode:
 
-.. index::
-   double: emacs; java-mode
+..  keep? goes where?
 
-Proper Indentation and Emacs java-mode
---------------------------------------
-
-With this exercise, we are now entering a phase where we must start
-paying a bit more attention to the basic *appearance* of our code. As
-programs become larger, they also can become harder to maintain (let
-alone understand) if they are not formatted according to some basic
-style guidelines.
-
-As you'll come to learn in programming, different communities have
-different conventions. The folks who make another open source C# tool,
-known as SharpDevelop (not used in this class but an awesome project)
-have their own style guide that is particularly well written. See
-http://www.icsharpcode.net/technotes/sharpdevelopcodingstyle03.pdf.
-
-In any event, luckily for us, we have access to editors like Emacs and
-Gedit (in the Linux lab anyway) that support automatic source-code
-indenting. In Emacs, you can enable this support by using
-*java-mode*. At the time of writing, there is actually a *csharp-mode*
-but it is not yet a part of the standard Emacs distribution. For the
-most part, you can get by using *java-mode*, given that C# is very
-similar to Java in terms of its overall syntax. It doesn't understand
-keywords like ``namespace`` but otherwise seems to work in our
-testing.
-
-When in Emacs, you can enable Java mode in your buffer for
-``do_the_math.cs`` by typing Escape-x. The minibuffer (the space you see
-at the bottom of the screen where an ``M-x`` or similar prompt is
-shown) will wait for you to type the name of a command. Enter
-*java-mode* and you will be able to take advantage of the magical
-support in Emacs for automatic formatting of your source code. Your
-instructor will show you how to make effective use of it.  Two features
-are worthy of immediate notice:
-
-- The program becomes color-coded.  On of the most useful things
-  is that literal strings have a different color.  
-  Forgetting the final quote mark at the end of a literal string
-  ia=s a common
-  error that may not be associated with good error messages.
-  The color coding makes it very obvious that the editor sees the
-  string as being too long.
-  
-- Nice indentation is done with very little effort.  Pressing the
-  Enter key still takes you to the beginning of the next line,
-  but a single further press of the tab key 
-  generally indents to exactly where the line should start.
-
-If you are feeling a bit adventurous, you can download *csharp-mode*
-from the Emacs Wiki at
-http://www.emacswiki.org/emacs/CSharpMode. All you need to do is save
-the Emacs Lisp file (a file with the .el suffix) anywhere in your home
-folder. Then you can use Emacs to load this file (Esc-x, then type
-*load-file*). You'll need to browse to the folder where you saved the
-*csharp-mode* code to complete the process. Then you ca type
-*csharp-mode* instead of *java-mode*.
-
-As this is a bit of an advanced topic, this explanation will have to
-suffice for now. We're hopeful that future versions of Emacs will
-include *csharp-mode* by default.
+	.. _java-mode:
+	
+	.. index::
+	   double: emacs; java-mode
+	
+	Proper Indentation and Emacs java-mode
+	--------------------------------------
+	
+	With this exercise, we are now entering a phase where we must start
+	paying a bit more attention to the basic *appearance* of our code. As
+	programs become larger, they also can become harder to maintain (let
+	alone understand) if they are not formatted according to some basic
+	style guidelines.
+	
+	In any event, luckily for us, we have access to editors like Emacs and
+	Gedit (in the Linux lab anyway) that support automatic source-code
+	indenting. In Emacs, you can enable this support by using
+	*java-mode*. At the time of writing, there is actually a *csharp-mode*
+	but it is not yet a part of the standard Emacs distribution. For the
+	most part, you can get by using *java-mode*, given that C# is very
+	similar to Java in terms of its overall syntax. It doesn't understand
+	keywords like ``namespace`` but otherwise seems to work in our
+	testing.
+	
+	When in Emacs, you can enable Java mode in your buffer for
+	``do_the_math.cs`` by typing Escape-x. The minibuffer (the space you see
+	at the bottom of the screen where an ``M-x`` or similar prompt is
+	shown) will wait for you to type the name of a command. Enter
+	*java-mode* and you will be able to take advantage of the magical
+	support in Emacs for automatic formatting of your source code. Your
+	instructor will show you how to make effective use of it.  Two features
+	are worthy of immediate notice:
+	
+	- The program becomes color-coded.  On of the most useful things
+	  is that literal strings have a different color.  
+	  Forgetting the final quote mark at the end of a literal string
+	  ia=s a common
+	  error that may not be associated with good error messages.
+	  The color coding makes it very obvious that the editor sees the
+	  string as being too long.
+	  
+	- Nice indentation is done with very little effort.  Pressing the
+	  Enter key still takes you to the beginning of the next line,
+	  but a single further press of the tab key 
+	  generally indents to exactly where the line should start.
+	
+	If you are feeling a bit adventurous, you can download *csharp-mode*
+	from the Emacs Wiki at
+	http://www.emacswiki.org/emacs/CSharpMode. All you need to do is save
+	the Emacs Lisp file (a file with the .el suffix) anywhere in your home
+	folder. Then you can use Emacs to load this file (Esc-x, then type
+	*load-file*). You'll need to browse to the folder where you saved the
+	*csharp-mode* code to complete the process. Then you ca type
+	*csharp-mode* instead of *java-mode*.
+	
+	As this is a bit of an advanced topic, this explanation will have to
+	suffice for now. We're hopeful that future versions of Emacs will
+	include *csharp-mode* by default.
