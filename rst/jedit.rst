@@ -63,7 +63,7 @@ Some conventions are slightly different than many other editors:
   does *not* change the name of the file 
   being worked on in the editor.
 - Look at the Redo keyboard shortcut - it is not the usual one.
-- :menuselection:`Search->Find` does both find and replace.
+- :menuselection:`Search->Find` can do both find and replace.
 - There is not the common direct correspondence between open files and visible
   editing regions.
   

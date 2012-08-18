@@ -23,12 +23,78 @@ The key difference between HTML and XML is the ability to create user-defined ta
 For more information about this
 language, see http://markuplanguages.courses.thiruvathukal.com.
 
+To get you started with one-file programs in your examples folder, 
+you do not need to know anything about NAnt at all.
+
+Convenience Build Scripts
+----------------------------------
+
+We have separate Windows and OSX/Linux scripts to simplify common tasks for the
+single-file programs directly in the examples folder: our examples or ones you add.  
+Windows scripts end in ".cmd",
+and the Mac/Linux scripts end in ".sh".  The Mac/Linux scripts should be  
+called by starting the line with "sh ".  
+
+There are four scripts.  Example calls are given for Windows and then Mac/Linux.
+
+*Call them from a console window with current directory* :file:`examples`.
+
+- buildall (useful to initially build all the given single-file examples so you
+  can directly execute them). This takes a while!
+
+    | buildall.cmd
+    | sh buildal.sh
+
+- build (a particular program).  This compiles, but does not run.
+  Do not include the ".cs" at the end of the program file name:
+
+    | build.cmd birthday1
+    | sh build.sh birthday1
+    
+- run (a particular program).  
+  Do not include the ".cs" from the program file name.  
+  It builds, only if necessary, and runs in debug mode so
+  runtime errors are better located.  Command line parameters for
+  your program may also be added at the end of the line.
+
+    | run.cmd birthday1
+    | sh build.sh birthday1
+    
+    | run.cmd print_param first second third
+    | sh run.sh print_param first second third
+    
+- clean (remove all build products for a program):
+
+    | clean.cmd birthday1
+    | sh clean.sh birthday1
+
+Hence you can repeat
+
+- save a program you are testing from an editor like :ref:`jedit` 
+- switch to the console window and use the run script line to test
+
+and continue until you have fixed and tested the program thoroughly.
+
+This is all you need for single-file programs.  
+
+Running Programs in Subdirectories of examples
+----------------------------------------------
+
+.. todo::
+
+   gkt building subdirectory projects
+   
+
 An Really Simple Example NAnt Script
 ------------------------------------
 
+Now we get into the internal details of NAnt scripts.  Some of this
+is important when you start doing multi-file projects with file names that
+you choose.
+
 Let's begin by taking a look at an example NAnt build script, which we'll use to 
 compile the Hello, World
-program that we have studied extensively:
+program:
 
 .. literalinclude:: ../examples/hello+nant/hello.build
    :language: xml
@@ -72,7 +138,7 @@ Hello, World program. In this session,
 the file Hello.build is present in the same folder/directory as hello.cs.
 
 .. literalinclude:: ../examples/hello+nant/nant-build.txt
-   :language: txt
+   :language: text
 
 When nant is run, you can observe that the Hello.build file is being used to copile 
 the program. That's because NAnt *tells you* so by indicating the Buildfile it is using. 
@@ -116,7 +182,7 @@ The following shows how to invoke the clean target to remove all of the stuff
 that we could easily rebuild from our source code.
 
 .. literalinclude:: ../examples/hello+nant/nant-clean.txt
-   :language: txt
+   :language: text
 
 In this case, we typed "nant clean" instead of "nant", 
 because the default target is "build" (when we just type "nant"). 
@@ -133,21 +199,16 @@ when you get to the more advanced class project,
 where you might need to add some code to the build 
 target. Luckily, we have already gone through and done much of the work for you, 
 but you may still find yourself needing to make modifications to our build files.
+This file takes a parameter for the program file being built.
 
-Here's our generic build file:
+Here's our Generic.build file:
 
-.. literalinclude:: ../examples/hello+nant/Generic.build
+.. literalinclude:: ../examples/Generic.build
    :language: xml
    :linenos:
 
-(George is still working on this part of the write-up.)
 
-This will eventually become a page about NAnt. It is not linked to the
-table of contents and hasn't even been started. 
-
-These are some notes from the original README.nant file.
-
-How to build examples manually.
+How to build examples in the examples folder manually:
 
 nant -D:program=birthday1
 
@@ -155,12 +216,6 @@ To clean any example you no longer want, do this:
 
 nant -D:program=birthday1 clean
 
-The resulting executable/debug data goes to the "bin" subdirectory
-
-If on Linux/OS X, I have two convenience scripts. Someone can feel free to
-create a .bat version for Windows.
-
-sh build.sh birthday1
-sh clean.sh birthday1
+Again, the convenience scripts simplify this.
 
 

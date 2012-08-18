@@ -3,8 +3,8 @@
 
 .. _hw-gradefiles:
 
-Grade File Homework
-============================ 
+Homework: Grade File 
+===================== 
 
 In this assignment, we're going to begin taking steps to help you
 achieve greater *independence* when it comes to programming. This
@@ -174,14 +174,14 @@ Requirements
 Hints
 -----
 
-#. You'll be able to learn how to use files by reading 
-   :ref:`files` and the Miles section 6.3 on Files. Be sure to read
-   :ref:`monodevelop-run-with`.
-   We'll also have a lab exercise for learning to
-   work with file I/O. You're still going to need ReadLine() and
+#. Read  
+   :ref:`files`.
+   You're still going to need ReadLine() and
    WriteLine() in this assignment, the only difference is that we'll
    be making use of File classes to get the input from a file instead
    of the Console. The parameter syntax will be the same.
+   There is also have a lab exercise for learning to
+   work with file I/O. 
 
 #. For each file line you'll want to use the string ``Split`` method, 
    and then the ``Trim`` 
@@ -258,10 +258,10 @@ any combination that does not include both of the last two options about missing
 
 #. Format the summary file in nice columns.  Include the grades for each category,
    rounded to one decimal place.  Include a heading line.    
-   For example the summary for the repository example Comp150 could start::
+   For example the summary for the repository example Comp150 could start:
    
-       Name: Last, First           Avg Gr     E     H     P
-       Hopper, Grace             100.0 A  100.0 100.0 100.0
+       | Name: Last, First           Avg Gr     E     H     P
+       | Hopper, Grace             100.0 A  100.0 100.0 100.0
 
    You may assume the last-first name field fits in 25 columns.
    Copy the first three column headings from above.
@@ -281,11 +281,11 @@ any combination that does not include both of the last two options about missing
    only if there are not enough grades in one or more
    categories.  For each category where
    one or more grades is missing, including a count of the number of grades missing followed
-   by the category letter.  An example using the example categories is::
+   by the category letter.  An example using the example categories is:
 
-      Doe, John 68.5 D+ Missing: 2 L 1 H
-      Smith, Chris 83.2 B Missing: 1 L
-      Star, Anna 91.2 A-
+      | Doe, John 68.5 D+ Missing: 2 L 1 H
+      | Smith, Chris 83.2 B Missing: 1 L
+      | Star, Anna 91.2 A-
       
    meaning Doe has 2 labs missing and 1 homework missing.  Smith is missing one lab.  Star
    has done all assigned work, since nothing is added. [3]

@@ -10,6 +10,7 @@ Appendix
    homework-gradecalculation
    homework-gradecalculation2
    hw-gradefiles
+   nant
    offerings
    acknowledgments
    changelog
