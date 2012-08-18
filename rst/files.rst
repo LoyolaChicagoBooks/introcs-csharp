@@ -1,9 +1,15 @@
+.. index:: files
+
+.. _files:
+
 Files
 ######################
 
 .. toctree::
    :maxdepth: 3
 
-   filesyntax
- 
+   fileabstraction
+   filewrite
+   fileread
+   
 

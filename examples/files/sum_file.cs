@@ -3,7 +3,7 @@ using System.IO;
 
 namespace IntroCS
 {
-   class SumFile
+   class SumFile  // sum a file integers, one per line
    {
       public static void Main(string[] args)
       {
@@ -21,8 +21,8 @@ namespace IntroCS
       }
 
       // Read the named file and
-      // print the sum of an int from each line
-      // that is not just white space. 
+      // return the sum of an int 
+      // from each line that is not just white space. 
       static int CalcSum(string filename)
       {
          int sum = 0;

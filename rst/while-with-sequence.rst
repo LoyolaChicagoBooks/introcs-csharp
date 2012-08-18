@@ -74,7 +74,7 @@ So all together:
    :start-after: chunk
    :end-before: chunk
  
-You can test this with example :file:`char_loop1.cs``.
+You can test this with example :file:`char_loop1.cs`.
 
 This is a very common pattern.  
 We could do anything we want with each individual character, 
