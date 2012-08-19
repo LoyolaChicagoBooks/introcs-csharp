@@ -141,8 +141,8 @@ Basic display:
 - When you have your cursor directly after a delimiter character 
   ``{}()[]``, a box appears around the matching delimiter.
   
-It is easy to forget the terminal quote on a literal,
-that error may not be associated with good error messages.  The literal coloration
+It is easy to forget the terminal quote on a literal, and
+that mistake may not be associated with good error messages.  The literal coloration
 makes this error easy to spot and fix!
 
 Basic Editing:
@@ -180,7 +180,7 @@ Fancier editing tools:
   all of the lines selected are commented out with ``//``.
 - If you start typing a keyword or a previously defined variable and click 
   :menuselection:`Edit->Complete Word`, (or more likely its keyboard shortcut),
-  the word is automatically completed, if possible, or you get options shown.
+  the word is automatically completed, if possible, or else you get options shown.
 
 The complete word feature encourages meaningful (and maybe long) identifiers,
 since you never need to enter a whole long identifier more than once!
