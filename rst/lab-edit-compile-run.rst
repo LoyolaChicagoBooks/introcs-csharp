@@ -122,9 +122,9 @@ religiously at least once to ensure you were successful.)
     
     If you did everything right, you can do this on Windows:
     
-        | C:\Windows\System32> cd C:\Users\gkt
-        | C:\Users\gkt> cd Documents\hello
-        | C:\Users\gkt\Documents\hello> 
+        | C:\Windows\\System32> cd C:\\Users\\gkt
+        | C:\\Users\\gkt> cd Documents\\hello
+        | C:\\Users\\gkt\\Documents\\hello> 
 
     Mac/Linux::
 
@@ -221,6 +221,9 @@ For further reinforcement
 #. Make sure you can do everything that you just completed in the lab.
 
 #. Can you make a new program variant print out two separate lines?
+
+#. Go beyond the minimal tools introductions in the lab and see appendices 
+   :ref:`commandline` and :ref:`jedit`.
 
 #. See whether you can get a head start on :ref:`lab-division`.
 
