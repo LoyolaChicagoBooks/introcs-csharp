@@ -203,3 +203,25 @@ real tabs.  Also you can convert a file in jEdit, removing the tabs,
 by selecting the whole program and using
 :menuselection:`Edit->Indent->Tabs to Spaces`.
 
+
+Other Useful Free Text Editors
+------------------------------
+
+#. Emacs is available in the Loyola labs.  It is an extremely popular
+   among software professionals, with earlier versions that goes back a number of
+   decades.  It csn be used
+   as an all-in-one environment
+   with many powerful tools, but it has *quite* a leaning curve.
+   
+   - The GNU Emacs Tutorial is http://www.gnu.org/software/emacs/tour/
+   - University of Chicago Libraries Emacs Tutorial,
+     http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html
+
+#. Vim,  http://www.vim.org/docs.php, is another popular editor 
+   with a long history.
+   There are graphical versions for Linux, Mac, and Windows.
+
+#. Gedit, http://gedit.org, is a very nice editor that comes with most
+   Linux/Gnome distributions. Although it allegedly runs on Windows and OS X, we
+   have not had a chance to test it and cannot recommend it at this time.
+
