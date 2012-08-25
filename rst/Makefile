@@ -47,6 +47,13 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
+html2:
+	./togglesidebar.py
+	$(SPHINXBUILD) -b html -D html_theme=bootstrap -D html_show_sphinx=0 $(ALLSPHINXOPTS) $(BUILDDIR)/html2
+	./togglesidebar.py
+	@echo
+	@echo "Build finished. The bootstrap HTML pages are in $(BUILDDIR)/html2."
+
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo
