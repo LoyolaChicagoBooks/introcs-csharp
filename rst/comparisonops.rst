@@ -32,8 +32,8 @@ for *assignment* in C#, so it is not available for tests.
    It is a common error to use only one equal sign when you mean to *test*
    for equality, and not make an assignment!
 
-Tests for equality do not make an assignment, and they do not
-require a variable on the left. 
+Tests for equality do not make an assignment, and they can have an 
+arbitrary expression on the left, not necessarily just a variable. 
 
 All these tests work for numbers,
 and characters.  Strings can be tested for

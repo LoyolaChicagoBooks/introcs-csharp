@@ -391,17 +391,8 @@ Create an initial structure for your project
 --------------------------------------------
 
 We suggest that you follow a scheme similar to what we use when working
-with version control. We suggest creating the following folders:
-
-- projects: A folder that will be used to keep your MonoDevelop projects.
-
-- examples: A folder that will be used to keep examples that you are working
-  on in class but are not necessarily big enough to be full projects. A good
-  example might be something you copied and pasted from the notes.
-
-- labs: A folder that will be used to keep your labs. You could even create
-  some folder structure within this folder (e.g. hello, division, strings, 
-  etc.)
+with version control. We suggest that your source code goes in
+one or more folders, like work, or hw and labs.
 
 So let's do it:
 
@@ -409,7 +400,7 @@ So let's do it:
    
 #. Create directories::
 
-       mkdir projects
+       mkdir hw
        mkdir labs
 
    We will be creating items in each one of these folders during the lab. 
@@ -452,87 +443,54 @@ So let's do it:
        after which we can **push** the changes back to Bitbucket. (More on that later.)
     
        
-MonoDevelop
------------
+Create and Test Content
+------------------------
 
-In the previous lab, we learned to work with MonoDevelop. Let's use MonoDevelop to 
-create a simple project in the ``projects`` folder (which you created earlier). If you've 
-not created it, be sure to ``mkdir projects`` in the top-level folder. In the author's case,
-this command is run in the ``gkt170`` folder.
+#. copy in or create a simple program in a directory you created, 
+   like labs/hello.cs
 
-Now let's do the following steps. Because most of these steps should be familiar to you,
-there will be few screenshots presented. If you like, you can redo the previous lab or
-move all of the files you created to the ``projects`` folder. We'll start by creating a 
-minimal project using MonoDevelop and go through the same steps that we did in the 
-immediately preceding section.
+#. Run it.
 
-#. Launch MonoDevelop.
+#. Now go back to the command prompt, and enterEnter:
 
-#. Start a New Solution from the main workbench screen.
+     hg status
 
-#. Select C#, Console Project.
-
-#. Name ``Hello``.
-
-#. Location is the ``projects`` folder of your repository. 
-   In the instructors case, it is ``/home/gkt/gkt170/projects``.
-
-#. Solution ``Hello``.
-
-#. Don't select any project features and press Forward.
-
-#. If all has gone well, you should see the familiar default C# console project, 
-   probably with the Hello World Console output.
-
-#. Build All, Run, and Save. At this point, you can feel free to quit MonoDevelop.
-
-#. Now go back to the command prompt. We will not be using MonoDevelop itself, owing to
-   the lack of integrated support for Mercurial (MonoDevelop only supports Git)::
-
-        gkt@gkt-mini:~/gkt170$ hg status
-        
    and produce a response like::
    
-        ? projects/Hello/Hello.sln
-        ? projects/Hello/Hello/assembly_info.cs
-        ? projects/Hello/Hello/Hello.csproj
-        ? projects/Hello/Hello/main.cs
+        ? labs/hello.cs
 
    Mercurial shows you the tracked files that are modified (none here)
    or files not not being tracked (ater a '?'),
    except for those files explicitly ignored.  As you can see,
-   MonoDevelop's solution (.sln), project (.csproj), and source (.cs) files are shown, but
-   no "binary" objects (e.g. anything in or beneath the ``bin`` directory) are present,
+   the source (.cs) file is shown, but
+   no "binary" objects (like an .exe file),
    since you gave instructions to ignore all such files.
 
 #. Add the new solution/projects to Mercurial. At this point, if the above list looks 
    "reasonable" to you, you can go ahead and just add *everything*. The **hg** command 
    makes this easy for you. Instead of adding the specific files,
-   you can just type the following (nothing after the add)::
+   you can just type the following (nothing after the add):
 
-        gkt@gkt-mini:~/gkt170$ hg add
+        hg add
         
    and produce a response like::
    
-        adding projects/Hello/Hello.sln
-        adding projects/Hello/Hello/assembly_info.cs
-        adding projects/Hello/Hello/Hello.csproj
-        adding projects/Hello/Hello/main.cs
+        adding do_the_math.cs
 
    If you inadvertently added something that you truly don't want in the repository, you
    can use the **hg rm** command to remove it. We have nothing at the moment that
    we want to remove, but want to make you aware that correcting mistakes is possible.
 
-#. As before, commit and push::
+#. As before, commit and push.  Here is a sequence from Dr. Thiruvathukal's Mac::
 
-        gkt@gkt-mini:~/gkt170$ hg commit -m "adding Hello project"
+        gkt@gkt-mini:~/gkt170$ hg commit -m "adding hello program"
         gkt@gkt-mini:~/gkt170$ hg push
         pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170\
         searching for changes
         remote: adding changesets
         remote: adding manifests
         remote: adding file changes
-        remote: added 1 changesets with 4 changes to 4 files
+        remote: added 1 changesets with 1 change to 1 file
         remote: bb/acl: gkthiruvathukal is allowed. accepted payload.
 
 Verify that your stuff really made it to bitbucket.org
@@ -562,11 +520,11 @@ Do the following:
       :alt: MonoDevelop Image
       :align: center
 
-#. If all was done properly, you will see three objects: .hgignore, labs, and projects. These
+#. If all was done properly, you will see .hgignore and labs. These
    were all the result of our earlier sequence of commit+push operations. You can click on
-   any of these folders to drill into the hierarchy of folders/files that have been pushed
-   to Bitbucket (from your local repository). If you drill into the Hello example, you 
-   will eventually reach the folder containing your source code (for hello.cs). Then you
+   any folder to drill into the hierarchy of folders/files that have been pushed
+   to Bitbucket (from your local repository). In labs you find
+   your source code (for hello.cs). Then you
    can look at it--through the web! When you do so, you'll see something like this.
 
    .. image:: images/lab-hg/HelloWorld.png
@@ -648,12 +606,7 @@ a team on developing the course notes and examples.
 
    (Some output has been eliminated for conciseness.)
 
-#. You can explore introcs-csharp/projects to see our MonoDevelop projects. Just launch
-   MonoDevelop, browse to the introcs-csharp/projects folder and you can load the GCD
-   example solution.
-   
-   You can use the MonoDevelop import instruction to copy a project or file into your
-   MonoDevelop Solution from ours.
+#. You can explore introcs-csharp/examples to see our programs. 
 
 #. There are other folders, too. The ``rst`` folder contains the "source code" for the
    notes themselves. The ``devel`` folder contains scripts to build the HTML, PDF, and ePub

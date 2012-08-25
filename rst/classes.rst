@@ -10,5 +10,4 @@ Classes
    classes-and-structs
    classexamples
    hw-booklist
-   hgteamwork
 

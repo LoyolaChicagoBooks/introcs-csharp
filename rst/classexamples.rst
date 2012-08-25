@@ -1,6 +1,17 @@
 Class Examples
 ================================
 
+Getters and Setters
+--------------------
+
+The example :file:`example_class.cs` has none of the
+functionality of of our :file:`rational.cs`, but it is very simple,
+just illustrating several getters and setters:
+
+.. literalinclude:: ../examples/example_class.cs
+
+Make sure the code and the output from running make sense.
+
 Converting A Static Game to A Game Instance
 ----------------------------------------------
 

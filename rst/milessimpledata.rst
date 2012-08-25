@@ -12,7 +12,7 @@ Page 27
 	Mostly used are int and char, and possibly long for really big numbers.
 
 Page 28  
-	We will mostly stick to double for convenience.  
+	For real numbers we will mostly stick to double for convenience.  
 	Using smaller versions is only important if you have enormous collections of data.  
 	You do not need to use the E notation – though you may see it.
 
@@ -27,18 +27,16 @@ Page 33
 	The precedence table is very misleading:
 	It does not distinguish operands with the SAME precedence:
 	Operators \* and /, have the same precedence. 
-	The binary operations + and - have the same precedence.
+	The binary operations + and - have the same precedence. 
 	
-	This is the same precedence as in normal math.  See the related section added below
+	This is the same precedence as in normal math.  See :ref:`Division-and-Remainders`
 	about another useful operator related to division, the remainder operator, %.
 	It has the same precedence as \* and /. 
 
 Page 34-35:   
-	The idea of casting numbers is important, 
-	that the same abstract number may have different representations, 
+	The idea of casting numbers is important: 
+	The same abstract number may have different representations, 
 	and some are more or less accurate.  
 	In practice the main cast for us will be int to double.  
 	Make sure you realize that casting double to int is NOT the same as rounding; instead
-	it removes the fractional part whether high, .999, low, 0.1, or in the middle, .5.
-
-
+	it removes the fractional part whether high (.999), low (0.1), or in the middle (.5).

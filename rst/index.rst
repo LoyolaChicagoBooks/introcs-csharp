@@ -25,8 +25,8 @@ Introduction to Computer Science in C#
    lists
    dictionaries
    classes
-   interfaces
    testing
+   interfaces
    appendix
    
 :ref:`genindex`

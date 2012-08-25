@@ -19,5 +19,3 @@ While Loops
    gcdexamples
    do-while
    lab-number-game
-   lab-monodevelop.rst
-   lab-versioncontrol

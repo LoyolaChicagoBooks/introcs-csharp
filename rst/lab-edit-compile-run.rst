@@ -227,15 +227,18 @@ For further reinforcement
 
 #. See whether you can get a head start on :ref:`lab-division`.
 
-What's in the next lab?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In :ref:`lab-division`
-we'll continue learning more about C#. The next lab will give you
-exposure to the C# interactive mode (in Mono, the ``csharp`` command),
-where we will learn to work with arithmetic and basic primitive types.
-The ``csharp`` command allows you to use C# as a sort of "toy
-calculator" language. It also allows you to test capabilities of the C#
-*programming library*. For example, we will learn some other things you
-can do with the ``Console`` interfaces, including how to prompt a user
-for input.
+..  comment  now written, so can look there!
+
+    What's in the next lab?
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    In :ref:`lab-division`
+    we'll continue learning more about C#. The next lab will give you
+    exposure to the C# interactive mode (in Mono, the ``csharp`` command),
+    where we will learn to work with arithmetic and basic primitive types.
+    The ``csharp`` command allows you to use C# as a sort of "toy
+    calculator" language. It also allows you to test capabilities of the C#
+    *programming library*. For example, we will learn some other things you
+    can do with the ``Console`` interfaces, including how to prompt a user
+    for input.

@@ -13,7 +13,11 @@ Appendix
    homework-gradecalculation
    homework-gradecalculation2
    hw-gradefiles
+   lab-versioncontrol
+   hgteamwork
    offerings
    acknowledgments
-   changelog
    todolist
+
+.. comment
+   lab-monodevelop.rst
