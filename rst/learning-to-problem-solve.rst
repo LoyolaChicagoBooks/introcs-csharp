@@ -54,7 +54,7 @@ You do NOT need to memorize *everything* immediately!
 - Earliest exercises
   should have the general steps needed pretty apparent, and you can just concentrate on
   translating simple ideas into C# syntax
-  (likely concentrating on the material most recently introduced).
+  (mostly from the material most recently introduced).
   In this case the focus is mostly on syntax.
 
 Memorizing syntax is not going to directly get you to solve real problems.  In any domain:

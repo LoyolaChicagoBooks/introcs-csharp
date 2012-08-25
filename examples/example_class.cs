@@ -29,7 +29,7 @@ class Example // nothing in here is marked static
       this.d = d;
    }
    
-   public override string ToString() // “override” is required
+   public override string ToString() // 'override' is required
    {
       return "Example: n = " + n + ", d = " + d;
    }

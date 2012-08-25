@@ -22,6 +22,6 @@ You can look at the code all together in :file:`examples/intro_cs_lib/ui.cs`.
 The functions are still not perfect:  
 It is possible to blow things up by entering too long an integer.
 Though that could be addressed with our present technology, 
-it probably makes sense to wait for the introduction
+it probably makes sense to wait for an introduction
 of Exception handling syntax to really make things bulletproof.
 Meanwhile you have good examples of interactive loops and string manipulation.

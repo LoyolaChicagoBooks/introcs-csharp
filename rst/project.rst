@@ -118,8 +118,9 @@ Roles
    may be fluid. The lead programmer might be involved in pairs more
    often than others, but be sure the other coders get to drive often.
 #. Librarian/version coordinator: You are strongly encouraged to
-   use Bitbucket and Mercurial.  If you do, the main responsibility
-   of this person is to be well informed on Mercurial, and help
+   use something like Dropbox or the more capable Bitbucket and Mercurial.  
+   The latter will have a learning curve, and in that case this person 
+   should be the best informed on Mercurial, and help
    the other team members.  Only commit working code.
    Comment out incomplete additions that you want to show to everyone,
    or comment out the call to a method that compiles but does not yet 
@@ -239,8 +240,10 @@ If you are making many substitutions
 of static textual data, put the data into a resource file in a variation
 of the Fake Advise Lab. 
 
-Weekly reports (due in Blackboard each Tuesday)
+Weekly reports 
 ------------------------------------------------
+
+Reports are due from the report writer each Tuesday.
 
 A sample form to fill out on the computer is in the skeleton project
 :file:`Weekly-Report.rtf`. Table cells expand. It is easy
@@ -263,10 +266,11 @@ how much your plans matched reality.
    and who is it assigned to? The report writer is responsible to get a
    clear statement from each team member.
 
-Intermediate deliverables, as Intermediate folder in Bitbucket 
-------------------------------------------------------------------------------------
+Intermediate deliverables
+-------------------------
 
-This folder should be in place on Thursday April 19, right under your project's root folder.
+These materials should be submitted electronically
+on Thursday April 19.
 
 -  Include parts 2-4 listed below under Final Deliverables, but for an
    intermediate version that runs, and does *not* need to have the goal
@@ -306,8 +310,7 @@ Final Deliverables
 
 One submission of the group work is due one hour before the final presentations.
 
-#. All files listed in parts 2-5 in a folder FinalProject in BitBucket,
-   right under the root of your project.
+#. All files listed in parts 2-5.
    Also include a zip file, named with your team abbreviation, 
    containing a Windows executable with (a separate copy of) any other 
    image and data files needed.  Test to make sure you can
@@ -360,8 +363,8 @@ and check with the whole team to make sure your collection is complete.
    
 **Your Assessment of Individuals in the Group**:
 
-This is due 10 minutes after the final class presentation period,
-from each team member, *independently*, in Blackboard.  
+This is due electronically 10 minutes after the final class presentation period,
+from each team member, *independently*.  
 
 Change the name of the file in the skeleton project,
 :file:`Indiv-Mem-Assessment.rtf` to your

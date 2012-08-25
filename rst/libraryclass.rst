@@ -54,8 +54,9 @@ as an example of using ``UIF``:
 .. literalinclude:: ../examples/addition3.cs
 
 To allow access to UIF, we have added the IntroCS namespace for the class.
-To reference the static functions in the different class ``UIF``, ``UIF.``
-is the start of each reference to a static function in ``UIF``.
+To reference the static functions in the different class ``UIF``, we put ``UIF.``
+(with the dot) at the start of each reference to a static function in 
+the class ``UIF``.
 
 If you run the generic nant build script from the examples directory,
 it is set up to automatically allow the use of 

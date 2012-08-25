@@ -29,23 +29,22 @@ floating point data? That's why we need this lab.
 Goals
 -----
 
-In this lab, we're going to learn:
+In this lab, we're going to practice:
 
-- how to create arrays that hold numerical data.
+- creating arrays that hold numerical data.
 
-- how to populate an array with data
+- populating an array with data
 
-- how to use the tools of loops and decisions to do something interesting with the data
+- using the tools of loops and decisions to do something interesting with the data
 
-- how to print the data
+- printing the data
 
 
 Tasks
 -----
 
-Start from the stub in the projects, :file:`Labs/Array1D/array_lab_stub.cs`.
-It si set up as a MonoDevelop Project, though you may use a different editor
-and use command line tools if you like.  Complete the body of a function
+Start from the stub in the examples, :file:`array_lab_stub.cs`.
+Complete the body of a function
 for each main part, and call each function in ``Main`` several times with
 actual parameters chosen to test it well.  To label your illustrations, make
 liberal use of the first function, PrintNums, to display and label inputs 

@@ -13,9 +13,8 @@ Number Guessing Game Lab
 - Use decisions
 - Introduce random values
 
-This lab is inspired by a famous game played by children (and grown-ups,
-too) known as the number-guessing game. It is often played by two
-people but could be played by any number of people.
+This lab is inspired by a famous children's game
+known as the number-guessing game. We suppose two people are playing.
 
 The rules are:
 
