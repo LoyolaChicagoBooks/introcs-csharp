@@ -212,7 +212,8 @@ Other Useful Free Text Editors
    decades.  It csn be used
    as an all-in-one environment
    with many powerful tools, but it has *quite* a leaning curve.
-   
+   - Emacs `Windows download <http://ftp.gnu.org/gnu/emacs/windows/emacs-24.1-bin-i386.zip>`_
+   - `Mac variation Aquamacs <http://aquamacs.org/download-release.shtml>`_
    - The GNU Emacs Tutorial is http://www.gnu.org/software/emacs/tour/
    - University of Chicago Libraries Emacs Tutorial,
      http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html
