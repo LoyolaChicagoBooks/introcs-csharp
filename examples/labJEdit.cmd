@@ -1,1 +1,1 @@
-start jedit -settings=P:\jeditSettings %*
+start jedit -settings=P:\jEditSettings
