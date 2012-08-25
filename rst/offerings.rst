@@ -16,8 +16,9 @@ Dr. Thiruvathukal's Offerings
 - `Fall 2012 Schedule <http://www.thiruvathukal.com/170/schedule.html>`_
 
 
-Dr. Yacobellis's Offerings
-----------------------------
-
-- Summer 2012, TBD
+..  comment
+    Dr. Yacobellis's Offerings
+    ----------------------------
+    
+    - Summer 2012, TBD
 
