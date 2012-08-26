@@ -1,8 +1,0 @@
-#! /bin/bash
-
-# assume start in devel dir
-cd ../rst
-make clean
-make html
-./pause.py
-make latexpdf
