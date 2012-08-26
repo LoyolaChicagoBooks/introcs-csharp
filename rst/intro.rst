@@ -18,7 +18,7 @@ Though the initial problems will be tiny and often silly, they will serve as lea
 to prepare for substantive problems.
 
 The *essential resource* to download and unzip onto your machine is the 
-`course example file <http://introcs.cs.luc.edu/book/downloads/examples.zip>`_.
+`course example file <http://introcs.cs.luc.edu/book/download/comp170code.zip>`_.
 
 To quickly browse and view individual files in the examples folder, go to:
    
@@ -30,19 +30,19 @@ Alternate Notes Formats
 
 You may use any of the C# Notes formats:
 
-- `Web pages online <http://introcs.cs.luc.edu/book/html>`_ or a version with the
+- `Web pages online <http://introcs.cs.luc.edu/book/html/default>`_ (Sphinx default theme) or a version with the
   same content and 
-  `alternate formatting <http://introcs.cs.luc.edu/book/html2>`_.
+  `a responsive web theme <http://introcs.cs.luc.edu/book/html/bootstrap>`_ (best for mobile devices).
 
 - Download a
-  `zip file <http://introcs.cs.luc.edu/book/downloads/html.zip>`_
+  `zip file <http://introcs.cs.luc.edu/book/download/default/comp170html.zip>`_
   to unzip and browse *locally*.  Start your browser on the page index.html.	
   Or if you prefer, download
-  `the alternate formatting <http://introcs.cs.luc.edu/book/downloads/html2.zip>`_.
+  `the version with a responsive theme <http://introcs.cs.luc.edu/book/download/bootstrap/comp170html.zip>`_.
 	
 - `PDF file <ProgrammingInCSharp.pdf>`_ in fixed paged format for printing
   and for somewhat prettier computer viewing if your screen is wide enough.
 
 - These and possible additional file formats are all linked at
-  http://introcs.cs.luc.edu/book/downloads.
+  http://introcs.cs.luc.edu/book/download.
 

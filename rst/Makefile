@@ -2,8 +2,14 @@
 #
 
 # You can set these variables from the command line.
+# Make sure to keep -N so we don't have messy terminal output (for unattended
+# usage in cron). Also, CONFIG is a required variable on the command line
+# to use themes other than default.
+# e.g. make CONFIG=<THEME> ... where <THEME>=default|bootstrap. New themes
+# can be configured by adding a folder in rst with a user-defined name
+# By default, build the default theme....if not set on command line
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build -c $(CONFIG)/
+SPHINXBUILD   = sphinx-build -N -c $(CONFIG)/
 PAPER         =
 BUILDDIR      = ../build
 
@@ -46,12 +52,12 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-html2:
-	./togglesidebar.py
-	$(SPHINXBUILD) -b html -D html_theme=bootstrap -D html_show_sphinx=0 $(ALLSPHINXOPTS) $(BUILDDIR)/html2
-	./togglesidebar.py
-	@echo
-	@echo "Build finished. The bootstrap HTML pages are in $(BUILDDIR)/html2."
+#html2:
+#	./togglesidebar.py
+#	$(SPHINXBUILD) -b html -D html_theme=bootstrap -D html_show_sphinx=0 $(ALLSPHINXOPTS) $(BUILDDIR)/html2
+#	./togglesidebar.py
+#	@echo
+#	@echo "Build finished. The bootstrap HTML pages are in $(BUILDDIR)/html2."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
