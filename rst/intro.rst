@@ -40,8 +40,11 @@ You may use any of the C# Notes formats:
   Or if you prefer, download
   `the version with a responsive theme <http://introcs.cs.luc.edu/book/download/bootstrap/comp170html.zip>`_.
 	
-- `PDF file <ProgrammingInCSharp.pdf>`_ in fixed paged format for printing
+- `PDF file <http://introcs.cs.luc.edu/book/download/comp170.pdf>`_ in fixed paged format for printing
   and for somewhat prettier computer viewing if your screen is wide enough.
+
+- `eBook file <http://introcs.cs.luc.edu/book/download/comp170.epub>`_ for offline reading on smartphones and tablets
+  (or desktop computers running a soft reader application).
 
 - These and possible additional file formats are all linked at
   http://introcs.cs.luc.edu/book/download.
