@@ -1,5 +1,8 @@
+#!/bin/bash
+
 ARGS=$#
-echo $ARGS
+
+. darwin.sh
 
 if [ $ARGS -lt 1 ]; then
    echo "usage: clean EXAMPLE (without .cs)"

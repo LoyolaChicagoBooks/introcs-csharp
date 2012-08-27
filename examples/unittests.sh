@@ -1,5 +1,6 @@
 ARGS=$#
-echo $ARGS
+
+. darwin.sh
 
 if [ $ARGS -lt 1 ]; then
    echo "usage: tests EXAMPLE (without .cs)"
