@@ -1,3 +1,6 @@
+#!/bin/bash
+
+. darwin.sh
 
 for example_cs in *.cs
 do
