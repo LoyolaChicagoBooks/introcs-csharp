@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project name="Build COMP 170 Unit Tests" default="build" basedir=".">
+
+  <description>
+    This build file is used to compile the examples having unit tests. We identify these cases as follows. Say you have
+    an example file named examples/file.cs. A corresponding entry (for the unit test) exists in examples/unittests/file.cs. 
+    This build file is smart enough to build programs that don't have tests, but when the tests are run, no output will
+    be generated.
+
+    Lastly, the class name of the unit test must be (filename without .cs)_UnitTests. So by way of example, we have 
+    examples/unittests/gcd.cs with a class named gcd_UnitTests. This allows us to set the testname attribute as shown
+    in the text XML element under nunit2.
+  </description>
+
+  <property name="debug" value="true" overwrite="false"/>
+  <property name="build.dir" value="."/>
+
+  <include buildfile="../include/NUnit.include" />
+
+  <target name="clean" description="remove all generated files">
+    <delete file="${build.dir}/${program}.dll" failonerror="false"/>
+    <delete file="${build.dir}/${program}.dll.pdb" failonerror="false"/>
+    <delete file="${build.dir}/${program}.dll.mdb" failonerror="false"/>
+  </target>
+
+  <target name="build" description="compiles the source code">
+    <csc target="library" output="${build.dir}/${program}.dll" debug="${debug}">
+      <sources>
+        <include name="${program}.cs"/>
+        <include name="unittests/${program}.cs"/>
+        <include name="intro_cs_lib/**/*.cs"/>
+      </sources>
+      <references>
+        <include name="${nunit.dir}/**/${nunit.dll}"/>
+      </references>
+    </csc>
+  </target>
+
+  <target name="test" depends="build">
+    <nunit2>
+      <formatter type="Plain" />
+      <test assemblyname="${build.dir}/${program}.dll" testname="IntroCS.${program}_UnitTests"/>
+    </nunit2>
+  </target>
+
+</project>
