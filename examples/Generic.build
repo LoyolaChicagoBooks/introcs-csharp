@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<project name="Hello World" default="build" basedir=".">
+<project name="Generic COMP 170 NAnt Build File" default="build" basedir=".">
 
-  <description>The Hello World of build files.</description>
+  <description>This is used to build an executable (.exe) for any given example (.cs) file.</description>
 
   <property name="debug" value="true" overwrite="false"/>
   <property name="build.dir" value="."/>
@@ -25,4 +25,5 @@
       </references>
     </csc>
   </target>
+
 </project>
