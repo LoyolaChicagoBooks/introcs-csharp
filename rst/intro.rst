@@ -9,13 +9,13 @@ C# Yellow Book.  There are some issues with it:
   2011 and 2012 version, *but* you need care in downloading and choosing the right one,
   apparently depending on your operating system.
 
-- In many browsers on any operating system, it seems you cannot open either version
+- In some browsers in some circumstances, it seems you *cannot* open either version
   by just a regular click on the link.  
   But if you right click and select Save File As...., 
   you can download the appropriate version.
 
 - `Miles' 2012 version <http://www.robmiles.com/c-yellow-book/Rob%20Miles%20CSharp%20Yellow%20Book%202012.pdf>`_
-  seems to work on a Mac, but not Windows.
+  seems to work on a Mac, but *not Windows*.
 
 - Windows users should download 
   `Miles' 2011 version <http://www.robmiles.com/c-yellow-book/Rob%20Miles%20CSharp%20Yellow%20Book%202011.pdf>`_.
