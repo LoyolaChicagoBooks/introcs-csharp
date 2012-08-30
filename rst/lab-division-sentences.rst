@@ -66,7 +66,7 @@ As an example of how this program will ultimately work::
    Integer division result = 3 remainder 2
    Result as a fraction = 3 2/4
 
-We will later learn how to turn the 3 2/4 into a reduced
+See :ref:`gcd` to learn how to turn the 3 2/4 into a reduced
 fraction. This will be achieved using a famous method known as the
 *greatest common divisor* algorithm, which has a very simple
 formulation that is credited to Euclid, one of the great early
