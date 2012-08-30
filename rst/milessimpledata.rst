@@ -6,6 +6,29 @@ Start by reading through section 2.3.1, ending on page 38.  As you *read it*,
 note the specific comments below.   The chapter does not mention the Mono tool,
 csharp, which makes it very easy to test simple data operations. 
 
+Page 18
+    The examples folder in our zipped
+    `course example file <http://introcs.cs.luc.edu/book/download/comp170code.zip>`_
+    includes :file:`glazer_calc.cs`, which corresponds to Miles'
+    introductory example.
+    
+    Of course you can run it as in the previous lab, with gmcs and mono
+    commands, or you can use the command line
+    shortcut that we have provided specifically for our
+    examples directory (with further documentation in the appendix :ref:`nant`):
+    
+    #. Make sure the examples archive is expanded.  Note where you put it!
+    #. Open a Mono command line window.  Change directory into the examples.
+    #. Run the command (Windows):
+    
+          run.cmd glazer_calc
+       
+       On a Mac:
+       
+          sh run.sh glazer_calc
+          
+       Note you omit the ".cs" from the file name when using our scripts. 
+          
 Page 27
 	The table is for reference, context, and completeness:  
 	You do NOT need to memorize all the types, particularly now!  
