@@ -8,6 +8,7 @@ Algorithms using While
    double:  PF4; recursion
    double:  SP1; history
    double:  history; Euclid
+   double:  algorithm; greatest common divisor
 
 .. _gcd:
 
