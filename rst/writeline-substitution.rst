@@ -88,11 +88,11 @@ Or try in csharp::
 
     int x = 7;
     int y = 5;
-    Console.WriteLine("{0} plus {1} = {2}; {0} times {1} = {3}.", x, y, x+y, x*y);
+    Console.WriteLine("{0} plus {1} is {2}; {0} times {1} is {3}.", x, y, x+y, x*y);
     
-and see it print::
+and see it print:
 
-    7 plus 5 = 12; 7 times 5 = 35.
+    7 plus 5 is 12; 7 times 5 is 35.
     
 Note the following features:
 
@@ -104,7 +104,7 @@ Note the following features:
   
 In fact the simple use of format strings
 shown so far can be completed replaced by long expressions with ``+``,
-if that is your taste.  Miles later (on page 50) discusses fancier formatting,
+if that is your taste.  We later discusses fancier formatting in :ref:`tables`,
 that *cannot* be duplicated with a simple string ``+`` operation.
 We will just use the simple numbered substitutions for now, 
 to get used to the idea of substitution.
@@ -119,11 +119,10 @@ the braces: ``'{{'`` and ``'}}'``. The fragment ::
     int a = 2, b = 3;
     Console.WriteLine("The set is {{{0}, {1}}}.", a, b);
 
-produces ::
+produces
 
     The set is {2, 3}.
 
-.. FIX text
 
 .. index:: 
    double: method; overloading
