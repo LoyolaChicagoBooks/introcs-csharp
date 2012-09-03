@@ -1,12 +1,28 @@
 .. index:: 
    double: division; remainder 
+   double: %; remainder 
+   double: division; /
 
 .. _Division-and-Remainders:
    
 Division and Remainders
 =========================
 
-Try in the csharp shell.  Be sure to include the decimal points:
+.. todo::
+
+   Introduce the csharp shell.
+   
+Start a command window, following the  
+directions at the start of the
+:ref:`commandline`.
+
+Then enter the command 
+
+   csharp
+
+This brings up the handy mono tool, csharp.
+Enter the lines below.  Be sure to include the decimal points and the
+final semicolons:
 
 .. code-block:: none
 
@@ -20,10 +36,12 @@ On the other hand, try in csharp:
 	14/4;
 	
 you get something that looks strange:  Just as addition, subtraction, and multiplication
-of ``int``\ s produces and ``int``, so, too with division.
+of ``int``\ s produces and ``int``, so too, with division.
 
-In C#, the result of the / operator depends on the
-type of the operands, not on the mathematical value of the operands.
+.. note::
+   
+   In C#, the result of the / operator depends on the
+   *type* of the operands, not on the *mathematical value* of the operands.
 
 If you think about it, you learned several ways to do division.
 Eventually you learned how to do division resulting in a decimal.
