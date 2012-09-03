@@ -1,3 +1,5 @@
+.. index:: development tools
+
 Development Tools
 =================
 
@@ -83,6 +85,8 @@ As there is significant evolution of both the Microsoft
 and Mono *toolchains*--a fancy word we want you to know and a more
 elegant way of saying SDK--we'll issue updates to these notes.
 
+.. index::
+   double: mono; installation
 
 Installing Mono
 ---------------
@@ -167,15 +171,28 @@ Windows
 
 Here is how to do a quick sanity check of your Mono setup:
 
+.. index::
+   single: mono command prompt (Windows)
+   double: csharp; mono command prompt (Windows)
+   
+.. _mono-command-prompt:
+
+Mono Command Prompt
+~~~~~~~~~~~~~~~~~~~~
+
 #. Open the Start Menu and type "mono" in the text field at the bottom.  
-   You should see a short list places "mono" appears.
+   You should see a short list of places "mono" appears.
    
 #. Click on the choice that says "Mono 2.10... Command prompt".  
-   If it comes up, you are all set.  
-   Close the window, or save it for later use....
-   You can also find the program in the Start Menu manually,
-   finding the Mono folder, expanding it, and clicking on]
-   the Mono Command Prompt.
+   (This is probably faster than going to the Start Menu,
+   finding the Mono folder, expanding it, and clicking on
+   the Mono Command Prompt.)
+
+If it comes up, you are all set for an initial installation check. This will be the first
+step later, when you want to run the handy csharp program or compile and run your
+own programs.  When working, you can just leave this window open, 
+saving it for later use, 
+(or close and reopen later....)  
 
 Optional Mono-develop Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

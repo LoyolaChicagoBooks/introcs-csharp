@@ -6,7 +6,6 @@
 Lab: Division Sentences
 =======================
 
-
 Overview
 --------
 
@@ -21,7 +20,6 @@ computer:
     operations. The particular sequence of operations can be changed
     readily, allowing the computer to solve more than one kind of
     problem.
-
 
 In other words, a computer is a calculator--and much
 more. Furthermore, the definition of a computer goes on to include
@@ -41,7 +39,8 @@ If you are using jEdit, see the :ref:`jedit` appendix for an overview and
 particularly to set it up neatly for C#.
 
 Also look at the appendix :ref:`nant`, through the section on Convenience Scripts.
-When you go to the command line, this should save you some typing.
+When you go to the command line, this should save you some typing 
+for compiling and running.
 
 Requirements
 ------------
@@ -58,28 +57,33 @@ We want to develop a program that can do the following:
 - Calculate the quotient and the remainder (e.g. 10/4 = 2 with a
   remainder of 2 = 2 2/4).
 
+.. highlight:: text
+
 As an example of how this program will ultimately work::
 
    Please enter the numerator? 14
    Please enter the denominator? 4
-   Floating point division result = 3.5
    Integer division result = 3 remainder 2
-   Result as a fraction = 3 2/4
+   Floating point division result = 3.5
+   Result as a mixed fraction = 3 2/4
 
-See :ref:`gcd` to learn how to turn the 3 2/4 into a reduced
-fraction. This will be achieved using a famous method known as the
-*greatest common divisor* algorithm, which has a very simple
+For this lab the example format ``3 2/4`` is sufficient.
+It would look better as ``3 1/2``, but a general 
+efficient way to reduce fractions to
+lowest terms is not covered until the section on the algorithm :ref:`gcd`.  
+This algorithm has a very simple
 formulation that is credited to Euclid, one of the great early
 mathematicians (among other accomplishments).
+
+.. index:: csharp
 
 csharp
 ------
 
 So let's get this party started by firing up the **csharp**
-command. Open a terminal (Linux or OS X) or command window for the
-Mono tools, which we know how to use from previous work::
+command. Open a terminal (Linux or OS X) or :ref:`mono-command-prompt`
+window in Windows, and enter the command ``csharp``.  You should see  ::
 
-    $ csharp
     Mono C# Shell, type "help;" for help
 
     Enter statements below.
@@ -90,7 +94,7 @@ and is awaiting input. This allows you to create C# variables and
 execute C# statements without having to write a full program. 
 
 You can also use features of the C# programming
-library (e.g. the ``Console.WriteLine`` we learned about in the
+library (e.g. the ``Console.WriteLine``  that we practiced with in the
 previous lab)::
 
     csharp> Console.WriteLine("Please enter the numerator?");
@@ -111,7 +115,7 @@ the course of typing a statement::
           >
 
 In this example, I accidentally hit the return/enter key before entering the
-required semicolon .  The secondary prompt '>' means that you have an incomplete
+required semicolon.  The secondary prompt '>' means that you have an incomplete
 statement: complete it.
 
 So we can either continue entering the input::
@@ -120,7 +124,7 @@ So we can either continue entering the input::
           > ;       
 
 
-If you get to the semicolon, but make a syntax error, like::
+You might get to the semicolon, but make a syntax error, like::
 
     csharp> int denominator = int.Parse(;
     {interactive}(2,0): error CS1525: Unexpected symbol `;'
@@ -129,9 +133,7 @@ This reminds you that there is an error.  What you typed is ignored, and
 you can then *try again* if you like!
 
 A particularly useful feature of the C# interpreter is the
-``ShowVars()`` function. (Yes, we know you haven't fully learned
-functions yet, but we're introducing some things by doing them and
-will be explaining more formally later.) ``ShowVars()`` prints the
+``ShowVars()`` function.  ``ShowVars()`` prints the
 list of variables and their values that have been defined in a given
 session::
 
@@ -145,7 +147,7 @@ This just happens to be the list of variables/values that are defined
 in my session. Yours may vary depending on what variables you typed,
 etc.
 
-Now let's use the C# operators to get the quotient and the remainder::
+Now let's practice using the C# operators of :ref:`Division-and-Remainders`::
 
     csharp> int quotient = numerator / denominator;
     csharp> Console.WriteLine(quotient);
@@ -156,29 +158,10 @@ Now let's use the C# operators to get the quotient and the remainder::
     csharp> Console.WriteLine("{0} / {1} = {2} remainder {3}", 
           > numerator, denominator, quotient, remainder);
     14 / 4 = 3 remainder 2
-    
 
-Because we are working with integer data, we need the ability to get
-the result of the division and the remainder *as integers*. As shown,
-14 / 4 results in 3. That's because the remainder is not included in the
-single integer result, and there is no decimal result 
-unless we use another data type (float) that can hold the
-full result of a division operation.
 
-C# gives you the ability to get the remainder using a separate
-operation known as the *modulus* operator. This operator is what we
-sometimes call a *convenience* operator, because we all learned in
-basic mathematics that the remainder = numerator - quotient *
-denominator (here the remainder is 14 - 3 * 4 = 2).
-
-In the above, we are also introducing the ability to take the results
-of a calculation and *format* them using ``Console.WriteLine``. Here
-{0}, {1}, {2}, and {3} refer to each of the variables that follow the
-text that we wish to print. Each of these variables will be
-substituted into the string to produce the beautifully formatted
-output that is shown::
-
-    14 / 4 = 3 remainder 2
+In the above, we are also practicing using a :ref:`Format-Strings` 
+with ``Console.WriteLine``. 
 
 You may find this example to be helpful to print the output according
 to the requirements::
@@ -211,7 +194,9 @@ character (which must be a *letter* or an *underscore*)::
           >                   numerator2, denominator2, quotient2);
     14 / 4 = 3.5 approximately
 
-So effectively we have shown everything you need to understand to
+.. highlight:: csharp
+
+We have shown everything you need to understand to
 complete this lab. Your job in the remaining time is to see whether
 you can use a text editor to create a program, which you can name
 anything you like. We suggest calling it ``do_the_math.cs``. To help you

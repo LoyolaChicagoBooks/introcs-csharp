@@ -2,14 +2,16 @@
 #
 
 # You can set these variables from the command line.
-# Make sure to keep -N so we don't have messy terminal output (for unattended
-# usage in cron). Also, CONFIG is a required variable on the command line
+# Now makehtml.sh set $FORCRON to -N by default 
+# so we don't have messy terminal output (for unattended usage in cron). 
+# Undefining $FORCRON makes the normal terminal output with curses.
+# Also, CONFIG is a required variable on the command line
 # to use themes other than default.
 # e.g. make CONFIG=<THEME> ... where <THEME>=default|bootstrap. New themes
 # can be configured by adding a folder in rst with a user-defined name
 # By default, build the default theme....if not set on command line
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build -N -c $(CONFIG)/
+SPHINXBUILD   = sphinx-build $(FORCRON) -c $(CONFIG)/
 PAPER         =
 BUILDDIR      = ../build
 
