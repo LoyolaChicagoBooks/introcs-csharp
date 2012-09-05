@@ -43,7 +43,7 @@ More string methods are listed below, some with further parameters.
 
 
 Data can also be associated with object *properties*.  
-A property of a string is its length (an int).  References to property values
+A property of a string is its Length (an int).  References to property values
 use dot notation but do not have a parameter list at the end::
 
     csharp> string s = "Hello";
@@ -65,7 +65,7 @@ string object to which the method is being applied is referred to as
 the length property is also listed.
 In the heading *this* object is not shown explicitly, so be careful
 when applying these methods and the length property: In actual use
-they must be
+in your programs they must be
 preceded by a reference to a string, followed by a dot, as shown in 
 all the  examples.  The reference to *this* string can be
 a variable name, a literal, or any expression evaluating to a string.
@@ -154,8 +154,14 @@ Testing Strings For Equality
 ------------------------------
 
 Strings can be tested for equality like numbers,
-with ``==``: *two* equal signs, not the *one* equal sign used for assignment.
-The case of letters matters::
+with ``==``: *two* equal signs, not the *one* equal sign used for *assignment*.
+The result of an equality test operation is a ``bool`` or ``boolean`` 
+(``true`` or ``false``).  
+Hence we will see shortly that
+string expressions can be used in ``if`` statements, introduced in 
+:ref:`Simple-if-Statements`.
+
+When testing for equality, the case of letters matters::
 
     csharp> string s = "Hello"; // initial value assigned
     csharp> string t = "HELLO";
@@ -169,4 +175,3 @@ The case of letters matters::
     csharp> u == "High";
     false
 
-Hence string expressions can be used in ``if`` statements.
