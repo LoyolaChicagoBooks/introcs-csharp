@@ -155,10 +155,12 @@ Testing Strings For Equality
 
 Strings can be tested for equality like numbers,
 with ``==``: *two* equal signs, not the *one* equal sign used for *assignment*.
-The result of an equality test operation is a ``bool`` or ``boolean`` 
-(``true`` or ``false``).  
-Hence we will see shortly that
-string expressions can be used in ``if`` statements, introduced in 
+The result of an equality test operation is of type``Boolean`` 
+(or use the abbreviation ``bool``). The allowed bool values are 
+``true`` or ``false``.  
+We will see shortly that
+string expressions can be used for the Boolean conditions 
+in ``if`` statements, introduced in 
 :ref:`Simple-if-Statements`.
 
 When testing for equality, the case of letters matters::
