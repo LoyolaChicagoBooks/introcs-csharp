@@ -16,7 +16,7 @@ Less than              :math:`<`        ``<``
 Greater than           :math:`>`        ``>``
 Less than or equal     :math:`\leq`     ``<=``
 Greater than or equal  :math:`\geq`     ``>=``
-Equals                 =                ``==``
+Equals                 :math:`=`        ``==``
 Not equal              :math:`\neq`     ``!=``
 =====================  ==============   ============== 
 
@@ -36,8 +36,8 @@ Tests for equality do not make an assignment, and they can have an
 arbitrary expression on the left, not necessarily just a variable. 
 
 All these tests work for numbers,
-and characters.  Strings can be tested for
-equality or inequality (!=). 
+and characters.  Strings can also be compared, most often for
+equality (==) or inequality (!=). 
 
 Predict the results and try each line in csharp::
 
