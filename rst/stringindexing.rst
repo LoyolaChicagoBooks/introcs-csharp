@@ -7,15 +7,16 @@ String Indexing
 ==================================
 
 Strings are composed of characters, but be careful of the different
-kinds of quotes, single for individual characters, double for strings
-of 0 or more characters:
+kinds of quotes: single for individual characters, double for strings
+of 0 or more characters.  For example,
 'u' (single quotes) is a char type literal, while "u" is a string
 literal, referencing a string object. While "you" is a legal string
 literal, 'you' generates a compiler error (too many characters - only
-one allowed).
+*one* allowed).
 
-Many of the operations on strings depend upon counting positions of characters
-in the string. In C#, positions are counted *starting at 0*, not 1.
+Many of the operations on strings depend upon referring to the 
+positions of characters in the string. 
+In C#, positions are counted *starting at 0*, not 1.
 The indices of the characters in the string "coding" are labeled:
 
 +-------------+-----+-----+-----+-----+-----+-----+

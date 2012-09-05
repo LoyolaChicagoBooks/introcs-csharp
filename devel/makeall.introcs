@@ -32,5 +32,5 @@ cp epub/*.epub $DOWNLOAD
 rsync -av $(pwd)/html/ $HTML
 
 cd ..
-tar czf $DOWNLOAD/comp170code.tar.gz examples
-zip -r $DOWNLOAD/comp170code.zip examples
+tar czf $DOWNLOAD/comp170code.tar.gz examples include/*
+zip -r $DOWNLOAD/comp170code.zip examples include/*
