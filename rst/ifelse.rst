@@ -28,7 +28,7 @@ executed when the original condition is *false*. In an |if-else|
 statement exactly one of two possible parts in braces is executed.
 
 A final line is also shown that is not indented, about getting exercise.
-The `if` and `else` clauses each only embed a single statement
+The `if` and `else` clauses each only embed a single (possibly compound) statement
 as option, so the last statement is not part of the |if-else|
 statement.  Instead it is a part of the normal sequential
 flow of statements.  It is *always* executed after the
@@ -72,6 +72,7 @@ As a result the following code makes no sense::
     {
        if ( x < 100) {
           int val = x + 2;
+       }
        else {
           int val = x - 2:
        }
@@ -83,7 +84,9 @@ because whichever compound statement gets executed,
 ``val`` ceases being defined after the
 closing brace of its compound statement, 
 so the ``val`` in the return statement has
-not been declared or given a value.  
+not been declared or given a value.  It
+would generate a compiler error. 
+ 
 If we want ``val`` be used inside the braces and 
 to make sense past the end of the compound statement,
 it cannot be declared inside the braces. Instead it must be
@@ -95,6 +98,7 @@ declared before the compound statements that are parts of the
        int val;
        if ( x < 100) {
           val = x + 2;
+       }
        else {
           val = x - 2:
        }

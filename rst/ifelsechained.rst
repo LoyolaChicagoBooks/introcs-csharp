@@ -8,7 +8,7 @@ Multiple Tests and |if-else| Statements
 Often you want to distinguish between more than two distinct cases,
 but conditions only have two possible results, ``true`` or ``false``,
 so the only direct choice is between two options. As anyone who has
-played "20 Questions" knows, you can distinguish more cases by
+played "20 Questions" knows, you can distinguish more cases with
 further questions. If there are more than two choices, a single
 test may only reduce the possibilities, but further tests can
 reduce the possibilities further and further. Since most any kind
@@ -19,7 +19,7 @@ For instance consider a
 function to convert a numerical grade to a letter grade, 'A', 'B',
 'C', 'D' or 'F', where the cutoffs for 'A', 'B', 'C', and 'D' are
 90, 80, 70, and 60 respectively. One way to write the function
-would be test for one grade at a time, and resolve all the
+would be to test for one grade at a time, and resolve all the
 remaining possibilities inside the next ``else`` clause. 
 If we do this consistent with our indentation conventions so far::
 
@@ -56,8 +56,9 @@ the ``else`` clause can be annoying and distracting. Here is a preferred
 alternative in this situation, that avoids all this further
 indentation:  
 Combine each ``else`` and following ``if`` onto the same line, 
-and note that the ``if`` part after an else is just a *single*
-(possibly very complicated) statement, allowing some braces to be removed:
+and note that the ``if`` part after each else is just a *single*
+(possibly very complicated) statement.  This allows the elimination of
+some of the braces:
 
 .. literalinclude:: ../examples/grade1.cs
    :start-after: chunk
@@ -68,11 +69,29 @@ example program ``grade1.cs``.
 
 See :ref:`gradeEx`.
 
-While an |if-else| statement always chooses an alternative to execute,
-a plain ``if`` statement may end up executing no sub-statement.  If
-you have a more complicated embedding of |if-else| and ``if`` 
-statements, you must look carefully to see how many different 
-sub-statements may be chosen.  For example consider this
+As in a basic |if-else| statement, in the general format,
+
+   | ``if (`` *condition1* ``) {``
+   |      statement-block-run-if-condition1-is-true;       
+   | ``}``  
+   | ``else if (`` *condition2* ``) {``
+   |      statement-block-run-if-condition2-is-the-first-true;       
+   | ``}``  
+   | ``else if (`` *condition3* ``) {``
+   |      statement-block-run-if-condition3-is-the-first-true;       
+   | ``}`` 
+   | // ...
+   | ``else {    //`` *no condition!* 
+   |      statement-block-run-if-no condition-is-true;       
+   | ``}`` 
+    
+*exactly one* of the statement blocks gets executed:
+If some condition is true,
+the first block following a true condition is executed.
+If no condition is true,
+the ``else`` block is executed.
+
+Here is a variation. Consider this
 fragment *without* a final ``else``::
 
     if (weight > 120) {
@@ -85,6 +104,15 @@ fragment *without* a final ``else``::
 This statement only prints one of two lines if there is a
 problem with the weight of the suitcase.  Nothing is printed if 
 there is not a problem.
+
+If the final ``else`` clause is omitted from the general ``if` ... ``else if`` ...
+pattern above, at most one block after a condition
+is executed:  That is the block after the first true condition.  
+If all the conditions are false, none of the statement blocks 
+will be executed.
+
+It is also possible to embed |if-else| statements inside other ``if`` or
+|if-else| statements in more complicated patterns.
 
 Sign Exercise
 ~~~~~~~~~~~~~             
@@ -106,6 +134,9 @@ function that tests in the opposite order, first for F, then D, C,
 
 Be sure to run your new version and test with different
 inputs that test all the different paths through the program.
+
+Be careful for edge cases:  Test the grades on the "edge" of a 
+change in the result.
 
 Wages Exercise
 ~~~~~~~~~~~~~~              

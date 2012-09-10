@@ -10,6 +10,7 @@ Appendix
    jedit
    cmdline
    nant
+   precedence
    homework-gradecalculation
    homework-gradecalculation2
    hw-gradefiles
