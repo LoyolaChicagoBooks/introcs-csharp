@@ -8,7 +8,8 @@ Compound Boolean Expressions
 
 To be eligible to graduate from Loyola University Chicago, you must
 have 120 credits *and* a GPA of at least 2.0. C# does not use the
-word *and*.  Instead it uses ``&&``.  Then the statement 
+word *and*.  Instead it uses ``&&`` (inherited from the C language).  
+Then the requirement 
 translates directly into C# as a *compound condition*::
 
 	credits >= 120 && GPA >=2.0      
@@ -34,9 +35,15 @@ The new C# syntax for the operator ``&&``:
 The compound condition is true if both of the component conditions
 are true. It is false if at least one of the conditions is false.
 
-Suppose we want a condition that is true if the mathematical
-condition is true: low < val < high.  Unfortunately the math is not a
-C# expression.  The operator ``<`` is binary.  There is a C# version::
+Suppose we want a C# condition that is true in the same situations as the mathematical
+expression: low < val < high.  Unfortunately the math is not a
+C# expression.  The C# operator ``<`` is binary.  In C# the statement above is
+equivalent to 
+
+    (low < val) < high
+
+comparing a Boolean result to high, and causing a compiler error.
+There is a C# version.  Be sure to use this pattern::
 
    low < val && val < high
 
@@ -54,7 +61,7 @@ The new C# syntax for the operator ``||``:
 	*condition1* ``||`` *condition2*
 
 The compound condition is true if at least one of the component conditions
-are true. It is false if at both conditions are false.
+are true. It is false if both conditions are false.
 
 Another logical way to express the opposite of the condition low < val < high
 is that it is *not* the case
@@ -85,10 +92,20 @@ Remember when such a condition is used in an ``if`` statement, *outer*
 parentheses are also needed:
 
 	``if (!(`` *condition* ``)) {`` 
+	
+We now have a lot of operators!  Most of those in appendix :ref:`precedence`
+have now been considered.
+	
+**Compound Overkill**:  Look back to the code converting a score to a letter grade
+in :ref:`Multiple-Tests`.
+The condition before assigning the B grade could have been::
 
-For other examples and different words of introduction to ``if`` statements, 
-braces, and compound conditions, you might look at 
-Miles, section 2.3.2.
+    (score >= 80 && score < 90)
+    
+That would have totally nailed the condition, but it is overly verbose in the
+``if`` .. ``else if`` ... code where it appeared:  
+Since you only get to consider a B as a grade if the grade was *not* already
+set to A, the second part of the compound condition above is redundant.  
 
 .. _congressEx:
 
@@ -106,6 +123,9 @@ and length of citizenship and prints whether a person is eligible
 to be a US Representative only, or is eligible for both offices, or
 is eligible for neither.
 
+This exercise could be done by making an exhaustive treatment of all 
+possible combinations of age and citizenship.  Try to avoid that.  
+(Note the paragraph just before this exercise.)
 
 ..   java short circuit
 

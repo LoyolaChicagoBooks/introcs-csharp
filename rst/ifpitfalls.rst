@@ -55,10 +55,11 @@ generate a compiler error, though it may appear cryptic::
 Match Wrong ``if`` With ``else``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The fact that the else part of an if statement is optional can cause
-problems if you do not consistently put the substatements for the true
-and false choices inside braces. Even if you do
-this consistently, you may well need to read code that does not place
+If you do not consistently put the substatements for the true
+and false choices inside braces, you can run into problems from
+the fact that the else part of an if statement is optional. 
+Even if you use braces consistently, 
+you may well need to read code that does not place
 braces around single statements. If C# understood indentation as
 in the recommended formatting style (or as required in Python), 
 the following would be OK::
