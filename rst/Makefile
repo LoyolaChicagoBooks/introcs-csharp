@@ -12,6 +12,7 @@
 # By default, build the default theme....if not set on command line
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build $(FORCRON) -c $(CONFIG)/
+#SPHINXBUILD   = sphinx-build -N -c $(CONFIG)/
 PAPER         =
 BUILDDIR      = ../build
 
