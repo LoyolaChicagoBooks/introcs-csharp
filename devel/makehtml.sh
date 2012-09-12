@@ -4,6 +4,10 @@
 # two themes I set up in rst (e.g. rst/default and rst/bootstrap).
 
 export CONFIG=$1
+export FORCRON=-N
+if [ $2 == "nocron" ]; then
+    export FORCRON=
+fi
 
 # Adding a second parameter "nocron" lets sphinx-build use curses.
 
