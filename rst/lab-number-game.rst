@@ -28,7 +28,7 @@ The rules are:
 
 So as an example:
 
-- George and Andy are playing the game.
+- George and Andy play the game.
 
 - George chooses a positive number less than 100 (29) and puts it in his
   head.
