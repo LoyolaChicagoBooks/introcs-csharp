@@ -11,6 +11,10 @@ PREFIX=/var/www/book
 
 export CONFIG=$1
 
+if [ $2 != "nocron" ]; then
+    export FORCRON=-N
+fi
+
 HTML=$PREFIX/html/$CONFIG
 DOWNLOAD=$PREFIX/download/$CONFIG
 mkdir -p $HTML
