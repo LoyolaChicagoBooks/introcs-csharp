@@ -212,7 +212,7 @@ public interface should be limited and easy to comprehend.
 
 Ideally have one individual
 (or pair) assigned a whole class. One useful feature for allowing
-compiling is to first generate a stub file like I have given you for
+compiling is to first generate a stub file like we have given you for
 homework, that includes the public interface documentation, 
 headings, and dummy return values
 and compiles but does nothing. You will then provide your team members
@@ -299,7 +299,7 @@ on Thursday April 19.
    have no misunderstandings about the final version. We will give you
    feedback from this version to incorporate in the final version. We do
    not want to have to say anyone did anything "wrong" on the final
-   version. I want to be able to concentrate on your creative
+   version. We want to be able to concentrate on your creative
    accomplishments.
 -  Look through the list of deliverables again and make sure your collection is complete.
 

@@ -15,7 +15,7 @@ There are several varieties.  The simplest place to start is with
 
 A C#
 ``while`` loop behaves quite similarly to common English usage. If
-I say
+you hear
 
     While your tea is too hot, add a chip of ice.
 
@@ -53,7 +53,7 @@ write and run the code below, saved in example program cool.cs:
    :end-before: chunk
    :linenos:
 
-I added a final line after the ``while`` loop to remind you that
+We added a final line after the ``while`` loop to remind you that
 execution follows sequentially after a loop completes.
 
 It is extremely important to totally understand how the flow of
@@ -237,7 +237,7 @@ Looking ahead to more complicated and interesting problems,
 here is a more complete list of questions to ask yourself when
 designing a function with a ``while`` loop:
 
--  What variables do I need?
+-  What variables do We need?
 -  What needs to be initialized and how? This certainly includes any
    variable tested in the condition.
 -  What is the condition that will allow the loop to continue?
@@ -455,7 +455,7 @@ The point is here that 1 is a constant.  The time is of *constant order*.
    double: pitfall; division
    
 We can write a ridiculously short
-function following Gauss's model.  Here I introduce the variable average,
+function following Gauss's model.  Here we introduce the variable average,
 as in the motivation for Gauss's answer:
 
 .. literalinclude:: ../examples/sum_to_n_long_bad.cs

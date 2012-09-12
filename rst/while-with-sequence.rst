@@ -78,7 +78,7 @@ You can test this with example :file:`char_loop1.cs`.
 
 This is a very common pattern.  
 We could do anything we want with each individual character, 
-no just print it.
+not just print it.
 
 ..  later maybe
 	.. rubric:: Print Backwards
@@ -110,12 +110,12 @@ For instance PrintVowels("hello") would print:
     | o
 
 We have seen that we can go through the whole string and do the same
-thing each time through the loop, use ``s[i]`` in some specific way.
+thing each time through the loop, using ``s[i]`` in some specific way.
 
 This new description seems like a problem.  We do *not* appear to want to do
 the same thing each time:  We only want to print *some* of the 
 characters.  Again your eyes and mind are so fast, you likely miss what you
-need to do when go through ``PrintVowels`` by hand.  Your
+need to do when you go through ``PrintVowels`` by hand.  Your
 eyes let you just grab the vowels easily, but think, what is actually
 happening?  You are checking each character to see if it is a vowel,
 and printing it if it is:  You are doing the same thing each time -
@@ -187,7 +187,7 @@ This variation is in example ``vowels2.cs``.
 Consider a variation, determining if *all* the characters
 in a string are vowels.  We could work on that, but it is 
 not very useful.  Instead let us consider if all the 
-characters are digits.  This is a true-false question, so function
+characters are digits.  This is a true-false question, so the function
 to determine this would return a Boolean result:
 
 There are several ways to check if a character is a digit.  We could use the
@@ -200,15 +200,14 @@ to ``'9'``, so the condition can be written::
     '0' <= s[i] && s[i] <= '9'
     
 Similarly  the condition ``s[i]`` is not a digit, can be written 
-negating the condition above or using the same ideas as when we 
-considered out of range values::
+negating the compound condition as in :ref:`Compound-Boolean-Expressions`::
 
     s[i] < '0' || s[i] > '9'
     
 If you think of going through by hand and checking, 
 you would check through the 
 characters sequentially and if you find a non-digit,
-you would want to remember that the string is not only digits.
+you would want to *remember* that the string is not only digits.
 
 One way to do this is have a variable holding an answer so far::
 
@@ -252,7 +251,7 @@ There are many ways to fix this.  We will know right up front that the answer
 is false if the length is 0, and we could immediately set
 ``allDigitsSoFar`` to false.  We would need to change the initialization 
 so it checks the length and chooses the right value for ``allDigitsSoFar``,
-true or false, appropriate.  since we are selecting between two values,
+true or false. Since we are selecting between two values,
 an ``if`` statement should occur to you::
 
   bool allDigitsSoFar;
@@ -265,7 +264,7 @@ an ``if`` statement should occur to you::
       
 If we substitute this initialization for ``allDigitsSoFar``, 
 the code will satisfy the edge case, and the code will always 
-work. 
+work.  Still, this code can be improved: 
 
 Examine the ``if`` statement more closely:
 
@@ -284,7 +283,7 @@ conciseness comes from the fact that it is a *Boolean* value that
 you are trying to set, based on a *Boolean* condition:  You do not
 need to do that with an ``if`` statement!  You just need an 
 assignment statement!  If you use an ``if`` statement in such a situation,
-you mark yourself as a novice.
+you being verbose and marking yourself as a novice.
 
 It could even be slightly more concise:  The precedence of assignment is
 very low, lower than the comparison ``>``, 

@@ -126,8 +126,8 @@ Here is how to do a quick sanity check of your Mono setup:
 #. Type ``which csharp`` and hit enter/return. You should see
    ``/usr/bin/csharp`` as output. ``csharp`` is the C# interpreter.
 
-#. Type ``which dmcs`` and hit enter/return. You should see
-   ``/usr/bin/dmcs`` as output.  ``dmcs`` is one of the interfaces to
+#. Type ``which gmcs`` and hit enter/return. You should see
+   ``/usr/bin/gmcs`` as output.  ``gmcs`` is one of the interfaces to
    the C# compiler.
 
 Optional Mono-develop Installation

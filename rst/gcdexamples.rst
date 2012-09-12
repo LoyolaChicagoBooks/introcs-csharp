@@ -98,14 +98,13 @@ we might have to think a bit more.
 Before we learn to find the factors of numbers, 
 we will often just "try" numbers until we get the 
 greatest common divisor. This sort of trial process can take place in a loop, 
-where we start at 1 and end at min(a, b)? Why the minimum? 
-Well, we know that none of the values after the minimum can divide both a and b
-(in integer division) because either a / b = 0 or b / a = 0, if a != b.
+where we start at 1 and end at min(a, b). Why the minimum? 
+We know that none of the values after the minimum can divide both a and b
+(in integer division),
+because no larger number can divide a smaller positive number. The smaller 
+number would be the (non-zero) remainder.
 
-You can verify this by picking any two different values of a and b. 
-For example 810/729 > 0 and 729/810 = 0.
-
-Without further ado, let's take a look at a basic version of GCD:
+Now take a look at a basic version of GCD:
 
 .. literalinclude:: ../examples/g_c_d_basic.cs
    :start-after: chunk-gcd-begin
@@ -119,17 +118,13 @@ This code works as follows:
   values in C#. Technically, we don't need to use the minimum of a and b, 
   but there is no
   point in doing any more work than necessary. 
-  We'll use the variable ``i`` as the loop index
-  and the variable ``gcd`` will hold the currently known value of the GCD.
-
-- The line ``i = gcd = 1`` means we'll start i at 1 
-  and assume that the GCD is one until
-  we find a higher value that also divides a and b.
-
+- We'll use the variable ``i`` as the loop index, starting at 1.
+- The variable ``gcd`` will hold the largest currently known common divisor.
+  We start with 1, which divides any integer, and we will
+  look for a higher value that also divides a and b.
 - The line ``while (i <= n)`` is used to indicate that we are 
   iterating the values of
   ``i`` until the minimum of ``a`` and ``b`` (computed earlier) is reached.
-
 - The line ``if (a % i == 0 && b % i == 0)`` 
   is used to check whether we have found a
   new value that replaces our previous *candidate* for the GCD. 
@@ -139,21 +134,28 @@ This code works as follows:
   operator ``%`` is our way of determining whether there is a 
   remainder from the
   division operation ``a / i`` or ``b / i``. 
-
 - The line ``i = i + 1`` is our way of going to the next value of ``i`` 
   to be tested as the new GCD.
-
 - When this loop terminates, the greatest common divisor has been found. 
 
 So this gives you a relatively straightforward way of calculating the 
 greatest common divisor. While simple, it is not necessarily the most 
-efficient way of determining the GCD? If you think about what is going on, 
+efficient way of determining the GCD. If you think about what is going on, 
 this loop could run a significant number of times. 
 For example, if you were calculating the GCD two very large numbers, say,
 one billion (1,000,000,000) and two billion (2,000,000,000) 
 it is painfully evident that you would consider a large number of values 
 (a billion, in fact) before obtaining
 the candidate GCD, which we know is 1,000,000,000.
+
+Brute-Force GCD Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The code above goes though all integers 2 through ``min(a, b)``.  That is
+not generally necessary when the GCD is greater than 1, 
+even with a brute-force mindset.   Write a
+``g_c_d_basic_faster.cs`` to do this with a slightly different
+``GreatestCommonDivisor`` function.
 
 GCD Subtraction Method
 ----------------------
@@ -162,7 +164,7 @@ The subtraction method (also attributable to Euclid) to compute the
 Greatest Common Divisor works as follows:
 
 - Based on the *mathematical* definition in the previous section, the
-  greatest common divisor algorithm *works best* when we already have
+  greatest common divisor algorithm saves a step when we already have
   ``a`` and ``b`` in the *right order*.
 
 - The *right order* means that :math:`a > b`. As we noted earlier, the
@@ -172,7 +174,7 @@ Greatest Common Divisor works as follows:
 
 - Division, of course, is a form of repetitive subtraction, so the way
   to divide by ``b`` is to repeatedly subtract it (from a) until ``a``
-  is no longer greater than ``b``.
+  is no longer greater than ``b``.  
 
 - The subtraction method basically makes no attempt to put ``a`` and
   ``b`` in the right order. Instead, we just write similar loops to
@@ -188,36 +190,35 @@ Greatest Common Divisor works as follows:
    :end-before: chunk-gcd-end
    :linenos:
 
-
 A look at the source code more or less follows the above explanation.
 
 Let's start by looking at the inner loop at line 5, ``while (a >
 b)``. In this loop, we are repeatedly subtracting ``b`` from ``a``,
 which we know we can do, because ``a`` started out as being larger
-than ``b``.  At the end of loop, we know one of two things:
+than ``b``.  At the end of loop ``a`` is reduced to either
 
-    #. ``a`` divides ``b`` perfectly, meaning there is no remainder.
-    #. ``a`` doesn't divide ``b`` perfectly, meaning there is a
-       remainder.
-    #. This loop, therefore is computing :math:`a \bmod b` (or in C#
-       terms ``a % b``.
+#. ``b``, in which case ``b`` exactly divided the ealier ``a``,
+   and ``b`` is the GCD, or 
+#. a number less than ``b``, namely 
+   :math:`a \bmod b` (or in C# terms ``a % b``), and the process continues....
 
 The loop on line 9 is similar to the loop in line 5. For the same
-reasons as we already explained, this loop therefore is computing
+reasons as we already explained, ``b`` ends up equal to ``a``,
+which is the GCD, or ``b`` ends up as 
 :math:`b \bmod a`. 
 
-So the question is: Why the outer loop? As it turns out, the simple
-explanation is that we need to make sure that ``a`` and ``b`` are the
-same. Per the definition, we need to ensure that ``a`` is the result
-of :math:``gcd(a, 0)``. So extra passes may be required to cause
-*convergence*.
+As discussed above, if ``a`` and ``b`` end up as the same number,
+that is the GCD.  On the other hand, 
+the first GCD algorithm example showed how remainders may need to be to
+be calculated over and over.  The outer loop in this version keeps this up
+until ``a`` and ``b`` are reduced to equal
+values.  At this point the inner loops would make no further changes, 
+and the common value is the GCD.
 
 As an exercise to the reader, you may want to consider adding some
 ``Console.WriteLine()`` statements to print the values of ``a`` and
 ``b`` within each loop, and after both loops have executed. It will
 allow you to see in visual terms how this method does its work.
-
-
 
 Preview: Recursive GCD
 ----------------------
@@ -250,4 +251,8 @@ from the examples that it works very well.  The important point is that
 the calls to the same function are not completely the same:
 *Successive* calls have *smaller* second numbers, and the second
 number eventually reaches 0, and in that case 
-there is a direct final answer.
+there is a direct final answer.  
+
+The general idea of recursion is for a
+function to call itself with *simpler* parameters, until a simple enough place
+is reached, where the answer cam be directly calculated.

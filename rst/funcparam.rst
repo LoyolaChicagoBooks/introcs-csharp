@@ -165,7 +165,7 @@ This last version illustrates several important ideas:
 	   triple: traceback; error; execution
 	
 	Now that we have nested function calls, it is worth looking further
-	at tracebacks from execution errors.  If I add a line to ``Main`` in
+	at tracebacks from execution errors.  If we add a line to ``Main`` in
 	``birthday4.cs``::
 		
 		HappyBirthday(2)
@@ -191,7 +191,7 @@ This last version illustrates several important ideas:
 	where the error was *detected*.  
 	Going further up the traceback, you find the sequence of function
 	calls that led to the line where the error was detected.
-	You can see that in ``main`` I call ``HappyBirthday``
+	You can see that in ``main`` we call ``HappyBirthday``
 	with the bad parameter, 2.
 
 .. _BirthdayFunctionEx:

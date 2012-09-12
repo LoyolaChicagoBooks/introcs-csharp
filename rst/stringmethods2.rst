@@ -149,9 +149,9 @@ whole number.
 The  improvements to PromptInt and PromptDouble are 
 very similar and straightforward *if* you have developed the two main
 Boolean support functions,
-``IsIntString`` and``IsDecimalString`` respectively.  
+``IsIntString`` and ``IsDecimalString`` respectively.  
 
-The issue with integer and decimal strings 
+A complicating issue with integer and decimal strings 
 is that they may include parts other than
 digits.  An integer may start with a minus sign.  A
 decimal number can also contain a decimal point in an appropriate 

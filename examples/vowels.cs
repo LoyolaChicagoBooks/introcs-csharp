@@ -15,7 +15,7 @@ namespace IntroCS
          int i = 0;
          while (i < s.Length) {
             if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' ||
-               s[i] == 'o' || s[i] == 'u') {
+                s[i] == 'o' || s[i] == 'u') {
                Console.WriteLine(s[i]);
             }
             i = i+1;

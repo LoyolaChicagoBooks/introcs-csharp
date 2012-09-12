@@ -47,11 +47,6 @@ well each combination works. Contrasted with other labs where you had to write
 a lot of code, we're going to give you some code to do all of the needed work 
 but ask you to do the actual analysis and produce a basic table.
 
-.. george can't wait.  I do not know what tools you are expecting.
-   chart (using Excel or
-   other spreadsheet/analysis software like OpenOffice, Gnuplot, etc.) You can use
-   anything you like to make your charts.
-
 The Experiments
 -------------------
 
@@ -107,17 +102,6 @@ that refers to all the code for all of the experiments you need
 to run. (That's right, we're giving you the code for the experiments, 
 but you're going to write
 some code to run the various experiments and then run for varying sizes of ``n``.)
-
-
-..  george not sure what you still want to di with this
-    .. todo::
-       George is still working on this part. I will put some text in to explain each
-       of the experiments. It should be quick.
-    
-    .. todo::
-       Need to give some explanation of what they need to produce at the end. I would
-       like to see them produce nice looking charts for each of the experiments.
-
 
 Here is the code for the first experiment, to test the performance of linear
 searching on integer arrays:
