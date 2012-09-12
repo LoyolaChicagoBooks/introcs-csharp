@@ -2,7 +2,7 @@ using System;
 namespace IntroCS
 {
    class PromptUser // Infinite loop version!
-   {                                        // start chunk  
+   {                                        
       static void Main() //testing routine
       {
          int n = PromptIntInRange("Enter a score: ", 0, 100);
@@ -19,13 +19,14 @@ namespace IntroCS
       {
          string longPrompt = string.Format("{0} ({1} through {2}) ",
                                            prompt, lowLim, highLim);
+                                                            // start chunk  
          int number = UIF.PromptInt(longPrompt);
          while (number < lowLim || number > highLim) {
             Console.WriteLine("{0} is out of range!", number);
-            // number = UIF.PromptInt(longPrompt); //OMIT repeated prompt!
+            // number = UIF.PromptInt(longPrompt); //OMITS repeated prompt!
          }
          return number;
-      }
-   }                                           // past new chunk
+      }                                                     // past new chunk
+   }                                          
 }
 

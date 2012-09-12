@@ -137,7 +137,7 @@ In ``Game``, make the following alterations and additions:
    In case you are wondering, we are creating a *new object* 
    of the *class* ``Random`` which serves as the
    random number generator. We'll cover this in more detail when we
-   get to the Classes and Objects section. Here is some illustration
+   get to the :ref:`classes` chapter. Here is some illustration
    in csharp.  Your answers will not be the same!  ::
 
       csharp> Random r = new Random();
@@ -161,8 +161,7 @@ In ``Game``, make the following alterations and additions:
    the second parameter, *never equal*.  
    
    You can see that ``r.Next()`` is smart enough to give what appears to
-   be a randomly chosen number every time. If you call it 100 times, it is
-   likely that you'll see the same number twice!
+   be a randomly chosen number every time. 
 
    Example (where ``secret`` ended up as 68):
    
@@ -236,10 +235,18 @@ Should you finish everything early, try the following:
    Continue to play games until the player enters 0 for the bound.
    
 #. **(40% extra credit)**
-   Write the opposite program, where the user is the one who knows the secret
+   In ``Main`` prompt users to see if they want to guess numbers or reverse roles and
+   choose
+   the secret number.  In the first case, just call the existing Game function.
+   In the second case you need a new function, 
+   where the user is the one who knows the secret
    number and the computer guesses numbers until the answer
-   is obtained. You can keep the same ``Main``, that sets ``big``.
-   The new Game will tell the user to put a number in
+   is obtained. Write and use a new function  ::
+   
+      static void GameReversed(int big)
+      
+   Pass it the parameter ``big``, still set in ``Main``.
+   The new ``GameReversed`` will tell the user to put a number in
    his/her head, and press return to continue. 
    (You can throw away the string entered - this is just to cause a pause.)
    Then the computer guesses.

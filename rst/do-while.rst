@@ -10,9 +10,11 @@ Suppose you want the user to enter three integers for sides of a
 right triangle.  If they do not make a right triangle, say so
 and make the user try again.
 
-One way to look at the while statement rubric is::
+One way to look at the while statement rubric is:
 
-    set data for conditions
+.. code-block:: none
+
+    set data for condition
     while (condition) {
        accomplish something
        set data for condition
@@ -20,8 +22,8 @@ One way to look at the while statement rubric is::
     
 As we have pointed out before this involves setting data in two places.
 With the triangle problem, three pieces fo data need to be entered, 
-while the condition to test is fairly simple (and in any case the condition 
-could be calculated in a function).
+and the condition to test is fairly simple.   (In any case the condition 
+could be calculated in a function.)
 
 A |do-while| loop will help here.  It tests the condition at the end of the
 loop, so there is no need to gather data before the loop::
@@ -42,7 +44,7 @@ The general form of a |do-while| statement is
     |    statement(s)
     | ``} while (`` *continuationCondition* ``);``
     
-Here the block of statement(s) is always executed, but it continues
+Here the block of statement(s) is *always* executed at least once, but it continues
 to be executed in a loop only so long as the condition tested 
 after the loop body is true.
 
@@ -56,8 +58,10 @@ after the loop body is true.
 
 
 A |do-while| loop, like the example above, 
-that accomplishes exactly the same thing as the ``while``
-loop rubric above, can have the form::
+can accomplish exactly the same thing as the ``while``
+loop rubric at the beginning of this section.  It has the general form:
+
+.. code-block:: none
 
     do {
        set data for condition

@@ -206,7 +206,7 @@ To get full credit for any particular option, tests for it must be
           * Nothing beyond the line with the year is read. */
         public Book(StreamReader reader)
 
-    I made it easy to open a data file with ``FileUtil.GetDataReader``, copied from
+    We made it easy to open a data file with ``FileUtil.GetDataReader``, copied from
     your recent lab, as in::
     
         StreamReader reader = FileUtil.GetDataReader("books.txt");
@@ -222,7 +222,7 @@ To get full credit for any particular option, tests for it must be
           * may or may not be preceded by an empty line. */
         public BookList(StreamReader reader)
     
-    I also included files in the right format for testing:
+    We also included files in the right format for testing:
     :file:`books.txt` and :file:`morebooks.txt`.
 
 #.  [4 points] 

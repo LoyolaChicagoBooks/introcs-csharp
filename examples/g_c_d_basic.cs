@@ -8,9 +8,8 @@ namespace IntroCS
       public static int GreatestCommonDivisor (int a, int b)
       {
          int n = Math.Min (a, b);
-         int gcd, i;
+         int gcd = 1, i = 1;
 
-         i = gcd = 1;
          while (i <= n) {
             if (a % i == 0 && b % i == 0)
                gcd = i;

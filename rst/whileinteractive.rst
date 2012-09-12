@@ -8,8 +8,8 @@
 Interactive ``while`` Loops
 ---------------------------
 
-Next we consider a particular form of ``while`` loops, interactive ones,
-involving input from the user each time through.  
+Next we consider a particular form of ``while`` loops:  Interactive while loops
+involve input from the user each time through.  
 We consider them now for three reasons:
 
 - Interactive ``while`` loops have one special 'gotcha'
@@ -22,11 +22,9 @@ We consider them now for three reasons:
   
 We already have discussed the PromptInt function.  The user can choose
 any int.  Sometimes we only want an integer in a certain range.
-Miles has examples that handle this by just silently changing
-a bad value to one at the end of the allowed range.  
-Another approach is to not accept a bad value, and get the user to repeat
-trying and explicitly
-enter a value in the right range.  In theory the user could make errors
+One approach is to not accept a bad value, but make the user repeat
+trying until explicitly
+entering a value in the right range.  In theory the user could make errors
 for some time, so a loop makes sense.  For instance we might have a slow
 user, and there could be an exchange like the following
 when you want a number from 0 to 100.  For illustration, user input is shown
@@ -73,7 +71,7 @@ Consider the sequence above in pseudocode.
    | Return 100
 
 
-We can break into a repeating
+We can break this into a repeating
 pattern in two ways.  The most obvious is the following, 
 with three repetitions of a basic pattern, 
 with the last two line not in the same pattern 
@@ -94,7 +92,7 @@ with the last two line not in the same pattern
 
 Another choice, since  
 you can split a loop at any point, would be the following, with the first and
-last lines not in the  pattern repeating three times in the middle:
+last lines not in the  pattern that repeats three times in the middle:
 
    | Input a number with prompt (233)
    |
@@ -115,7 +113,7 @@ in the body of the loop, you must be *able* to run the test in the
 while heading.  We will be testing the latest input from the user. 
 
 It is the second version that has us getting new input 
-*before the first* loop and at the *end of each* loop!
+*before the first* loop *and* at the *end of each* loop!
 
 Now we can think more of the basic process to turn this into a C# solution:
 What variables do we need?   We will call the user's response ``number``.
@@ -158,8 +156,11 @@ and the concrete example indicates we print a warning message.
 The concrete example *also* shows another step in the loop, asking
 the user for input.  It is
 easy to think 
-"I already have the code included to read a value from the user,
-so there is nothing really to do."  WRONG!  The initialization code with
+
+   "I already have the code included to read a value from the user,
+   so there is nothing really to do."  
+   
+WRONG!  The initialization code with
 the input from the user is *before* the loop.  C# execution approaches the 
 test in the ``while`` headings from *two* places: 
 the initialization *and* coming back
@@ -177,12 +178,12 @@ loop (and indent it)::
 
 Luckily you will get a compiler error in that situation, avoiding
 more major troubleshooting:  
-The complete copy of the line copies the *declaration*
+The *complete* copy of the line copies the *declaration*
 part as well as the assignment part, and mono sees the declaration of 
 ``number`` already there 
 from the scope outside the while block, and complains.
 
-Hence copy the line, *minus* the `` int`` declaration::
+Hence copy the line, *without* the `` int`` declaration::
 
    number = PromptInt(prompt);
 
@@ -260,14 +261,14 @@ when you forget, note:
 In particular you get an infinite loop 
 if you fail to get new input from the user at the
 end of the loop.  The condition uses the bad
-original choice forever.  Here is the mistaken version, 
+original choice forever.  Here is the loop in the mistaken version, 
 from example  ``input_in_range2_bad.cs``:
 
 .. literalinclude:: ../examples/input_in_range2_bad.cs
    :start-after: chunk
    :end-before: chunk
 
-You can run it.  Remember :kbd:`Ctrl-C` !
+You can run the program.  Remember :kbd:`Ctrl-C` !
 There are two tests in ``Main``.  
 If you give a legal answer immediately in the first test, 
 it works fine (never getting into the loop body).  If you 
@@ -285,7 +286,7 @@ running the program.
 Agree Function Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save example ``test_agree_stub.cs`` as ``test_agree_stub_agree.cs``.
+Save example ``test_agree_stub.cs`` as ``test_agree.cs``.
 
 Yes-no (true/false) questions are common.
 How might you write an input utility function ``Agree``? 

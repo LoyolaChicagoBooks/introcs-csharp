@@ -112,39 +112,39 @@ Missing Braces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Another place you can fool yourself with nice indenting style is
-something like this.  Suppose I start with a perfectly reasonable ::
+something like this.  Suppose we start with a perfectly reasonable ::
 
     if (x > 0)
         Console.WriteLine("x is: positive");
 
-I may decide to avoid the braces, since there *is* just one statement
-that I want as the if-true part, but if I later decide 
-that I want this on two lines
+We may decide to avoid the braces, since there *is* just one statement
+that we want as the if-true part, but if we later decide 
+that we want this on two lines
 and change it to ::
 
     if (x > 0)
         Console.WriteLine("x is:");
         Console.WriteLine("  positive");
 
-I am not going to get the behavior I want.  
+We am not going to get the behavior we want.  
 The positive part will *always* be printed.
 
-If I had first taken a bit more effort originally to write ::
+If we had first taken a bit more effort originally to write ::
 
     if (x > 0) {
         Console.WriteLine("x is: positive");
     }
     
-then I could have split successfully into  ::
+then we could have split successfully into  ::
 
     if (x > 0) {
         Console.WriteLine("x is:");
         Console.WriteLine("  positive");
     }
 
-This way I do not have to keep worrying when I revise:
-Have I switched to multiple lines after the ``if``
-and need to introduce braces?
+This way we do not have to keep worrying about this question when we revise:
+"Have I switched to multiple lines after the ``if``
+and need to introduce braces?"
 
 All three of the pitfalls mentioned in this section are fixed or 
 minimized by consistent

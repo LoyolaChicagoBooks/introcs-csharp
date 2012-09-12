@@ -114,7 +114,7 @@ the course of typing a statement::
     csharp> int denominator = int.Parse(input)
           >
 
-In this example, I accidentally hit the return/enter key before entering the
+In this example, we accidentally hit the return/enter key before entering the
 required semicolon.  The secondary prompt '>' means that you have an incomplete
 statement: complete it.
 
