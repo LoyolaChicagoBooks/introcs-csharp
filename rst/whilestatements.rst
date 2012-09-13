@@ -223,8 +223,8 @@ we get ``blastoff.cs``:
 
 Look back and see how we fit the general rubric.  
 There are a bunch of things to think about with a while loop, so
-going one step at a time, thinking of the rubric and the specific
-needs of the current problem, helps.
+it helps to go one step at a time, thinking of the rubric and the specific
+needs of the current problem.
 
 There are many different (and more exciting) patterns of change coming
 for loops, 
@@ -250,15 +250,16 @@ designing a function with a ``while`` loop:
    the next time through the loop?
 -  Have I thought of variables needed in the middle and declared them;
    do other things need initialization?
--  Will the continuation condition eventually fail?
--  Separate thing to be done once before the repetition (code before the
-   loop) from repetitive actions (in loop) from actions not repeated but
+-  Will the continuation condition eventually fail?  *Be sure to think about this!*
+-  Separate actions to be done once before the repetition (code before the
+   loop) from repetitive actions (in the loop) from actions not repeated, but
    done after the loop (code after the loop). Missing this distinction
    is a *common error*!
 
 .. _SumToN:
 
-.. rubric:: Sum To ``n``
+Sum To ``n``
+------------
 
 Let us write a function to sum the numbers from 1 to ``n``::
 
