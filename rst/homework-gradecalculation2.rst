@@ -25,16 +25,15 @@ the number of items within each category (e.g. number of exams, number
 of labs, etc.), have the user enter individual grades, and have the program
 calculate the average for the category.
 
-As usual, we will begin by specifying *requirements*. Whenever required,
-we will explain how you would approach the solution to the requirement
-in C#.  User responses are shown **bold faced**.
+As usual, we will begin by specifying *requirements*. 
+User responses are shown **bold faced**.
 
 Functional Requirements
 -----------------------
 
-#. Instead of bombing out if the weights don't add up to 100, use a 
-   ``do { ... } while`` loop (see Miles p. 43-44) to prompt the user again
-   for all of the weights until they do add up to 100. The ``do { ... } while``
+#. Instead of bombing out if the weights don't add up to 100, use :ref:`do-while`  
+   to prompt the user again
+   for all of the weights until they do add up to 100. A ``do { ... } while``
    loop is the right choice here, because you can test all of the weights
    at the end of the loop, after each time they have been entered 
    in the loop.
@@ -81,9 +80,9 @@ Style Requirements
    aspects of the assignment. For example, it can become tedious in a hurry
    to write code to prompt for each of exams, labs, homework, etc. when 
    a single function (with parameter named *category*) could be used to
-   avoid repeating yourself. (And per the Hints section, you will also
-   want to write your function to take advantage of our ``UI`` 
-   functions.
+   avoid repeating yourself. In particular you should 
+   write your function to take advantage of our ``UI`` 
+   class, from :ref:`UI`.
 
 #. Also beginning with this assignment, it is expected that your work 
    will be presented neatly. That is, we expect the following:
@@ -109,15 +108,7 @@ Style Requirements
      provides a nice set of conventions
      to follow. We include this here so you know that other faculty at 
      other universities also consider neatness/appearance to be important.
-
-Hints
------
-
-This assignment will be the first one where you need to start using 
-functions. Otherwise, you'll find yourself getting tired within minutes
-of starting your work.`
-
-Use the ``UI`` class to get data from the user.
+ 
    
 .. [CamelCase] http://en.wikipedia.org/wiki/CamelCase
 
@@ -176,7 +167,9 @@ Just omit the parts about a partner if you do not have one.
    Name the log file with the exact file name: 
    "log.txt" and make it a plain text file.  
    You can create it in a program editor or in a fancy document editor.
-   If you use a fancy document editor, be sure to save it an a plain text file,
-   usually indicated by the ".txt" suffix.
-
+   If you use a fancy document editor, be sure to a "Save As..." dialog,
+   and select the file format "plain text",
+   usually indicated by the ".txt" suffix.  
+   It does not work to save a file in the default word processor format, and
+   then just change its name (but not its format) in the file system. 
 
