@@ -23,8 +23,10 @@ this time for reading as a ``StreamReader`` object.
 A ``StreamReader`` can only open an existing file, so
 ``sample.txt``, must already exist.  
 
-The ``ReadLine`` method returns the next line from the file,
-here assigned to ``line``. Each call the ReadLine reads the
+Again we have parallel names to those used with ``Console``,
+but in this case the ``ReadLine`` method returns the next line from the file.
+Here the string from the file line is assigned to 
+the variable ``line``. Each call the ReadLine reads the
 next line of the file.
 
 Using the ``Close`` method is
@@ -176,7 +178,7 @@ You can try this in csharp:
 Outside of csharp you can look at upper_text.txt.
 
 This is another case where ``ReadToEnd`` could have eliminated the loop. 
-[#finalNewline]_
+[#finalNewline]_  ::
 
     string contents = reader.ReadToEnd();
     writer.Write(contents.ToUpper());
@@ -195,57 +197,3 @@ This is another case where ``ReadToEnd`` could have eliminated the loop.
    final line written with ``WriteLine``.  
    The ``ReadToEnd`` version will have newlines exactly matching the input.
 
-.. omit?
-   See :ref:`monodevelop-run-with` for testing sum_file.cs inside MonoDevelop.  
-   
-   .. index::
-      double: MonoDevelop; working directory
-      double: MonoDevelop; execution arguments
-      double: MonoDevelop; custom execution
-      
-   .. _monodevelop-run-with:
-      
-   Setting the Working Directory and Command Line Arguments in MonoDevelop
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   
-   ..  warning::
-   
-      If you are using files with MonoDevelop, note that the *default* directory to start from
-      when running a program, is the subdirectory :file:`bin/Debug`.  
-      We will keep data files in the 
-      main project directory.  To avoid needing directory path names with test data, 
-      you need to make sure the working directory matches the test data location.
-      
-   Before you run your program:
-   
-   -   Select in the menu :menuselection:`Run --> Run With --> Edit Custom Modes...`.
-   -   This brings up the dialog window, Custom Execution Modes.  
-      Click the :guilabel:`Add` button.
-   -   This is one way to reach the dialog window, Execution Arguments.
-      The first field is Arguments.  This lets you set command line arguments to 
-      pass to the ``string[] args`` parameter in ``Main``. 
-      If you want to be able to change the parameters to a new value each time you run,
-      click on the check-box in the bottom left corner of the window, 
-      "Always show the parameters...".
-   -   Browse to select the working directory, like the project directory.
-   -   Particularly if you want to add several settings, you can change the identifying 
-      name at the bottom Custom Mode Name field to something more descriptive than
-      Default (Custom).
-   
-   Later when running your program:
-   
-   -   Select in the menu :menuselection:`Run --> Run With`, and click on the name you chose
-      to describe the custom way to run your program.
-   
-   You can add a text data file as a part of your project in your project directory by 
-   :menuselection:`File --> New --> File`, bringing up the New File dialog.
-   Select Misc on the left column 
-   and then Empty Text File in the next column, and enter the file name.
-   
-   You can test all of this with the project ``Files/SumFile``.  There is a test file in the
-   project directory :file:`numbers.txt`.  You could make a custom run mode using the
-   command line parameter ``examples.txt`` and setting the working directory to the project
-   directory :file:`SumFile`.  You might want to copy the project to your repository. open
-   it in MonoDevelop, add a new data file, and use that as a command line parameter.
-
-   (omitted above)

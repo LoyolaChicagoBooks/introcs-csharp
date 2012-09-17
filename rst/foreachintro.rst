@@ -91,7 +91,11 @@ See the advantages of ``foreach`` in these examples:
 - They keep the emphasis on the characters, not the secondary indicies.
 - The ``foreach`` heading emphasizes that a particular sequence is being 
   processed.
-  
-*If* you have explicit need to refer to the indices of the items in the sequence,
-then this pattern does not work.  You can use a ``while`` loop, or perhaps a
-``for`` loop, introduced soon....
+
+.. warning::  
+   
+   *If* you have explicit need to refer to the indices of the items in the sequence,
+   then a ``foreach`` statement does not work.  
+   
+Of course you can refer to the indices of items in  sequence with a flexible 
+``while`` loop, or see :ref:`For-Loops`, coming soon....
