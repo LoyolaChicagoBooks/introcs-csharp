@@ -9,7 +9,7 @@
 Writing Files
 ==============
    
-*Open a console window for examples folder.*
+*Open a console window for our examples folder.*
 First note that there is no file named sample.txt. 
 
 Then compile and run the example program ``first_file.cs``, shown below:
@@ -20,7 +20,7 @@ Nothing shows on the screen when you run the program:
 it is just writing to a file.
 
 Look at the code.  Note the extra namespace being used at the top.  You will
-always need to use ``System.IO`` when working with files.
+always need to be using ``System.IO`` when working with files.
  
 The first line of ``Main`` creates a ``StreamWriter`` object assigned to the
 variable  ``reader``.  A ``StreamWriter`` 
@@ -37,7 +37,8 @@ gives the name of the file to connect to the program, ``sample.txt``.
 If you do not use
 any operating system directory separators in the name (``'\'`` or ``'/'``,
 depending on your operating system), then the file will lie in the
-current directory. 
+current directory. :ref:`file-and-directory-paths` discusses 
+the use of directory separators.
 
 The second and third lines of ``Main`` write the specified strings to lines in the file.
 Note that the ``StreamReader`` object ``reader``, not ``Console``, 
@@ -67,6 +68,7 @@ it in :ref:`jEdit` (or your favorite word processor) and see its contents, or
 jut print it to your console window.
 
 As with ``Console`` methods ``Write`` and ``WriteLine``, 
-you can also use a format string and embed fields by using braces in 
+you can also use a format string with a ``StreamWriter``, 
+and embed fields by using braces in 
 the format string.
 

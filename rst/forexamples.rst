@@ -236,7 +236,7 @@ blank character.  All the other characters are visible.
 Let us make a more concise table, putting 8 entries per line.
 We can print successive parts use ``Write`` not ``WriteLine``,
 but we still need to advance to the next line after every 8th
-entry, for 39, 47, 55, ....
+entry, for codes 39, 47, 55, ....
 Since they are 8 apart, their remainder when divided by 8 is always
 the same:  
 
@@ -450,7 +450,7 @@ seven columns, and in a row header, we need a digit and an space or
 (7+1)*(1+1) characters, plus one for the '|':  1 + (7+1)*(1+1).  
 Thinking ahead, we will leave that expression unsimplified.
 
-We have done most of the work for the rows of the body of the table i the simpler
+We have done most of the work for the rows of the body of the table in the simpler
 version.  We just 
 have a bit of printing for the initial row label before the column loop.  The row
 label is r.  The whole code is in example ``mod7_table.cs`` and below:
@@ -461,7 +461,7 @@ label is r.  The whole code is in example ``mod7_table.cs`` and below:
     :end-before: chunk
       
 Besides the 0 row and 0 column in the mod 7 table,
-note that each line the products are a permutation of all the numbers 1-6.  
+note that in each line the products are a permutation of all the numbers 1-6.  
 That means it is
 possible to define the *inverse* of the multiplication operation, and mod 7 arithmetic
 actually forms a mathematical *field*.  A lot more math is useful!
@@ -559,7 +559,7 @@ Head or Tails Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program ``heads_tails.cs``. It should include a function ``Flip()``,
-that will randomly prints ``Heads`` or ``Tails``.
+that will randomly prints ``Heads`` or ``Tails`` *once*.
 Accomplish this by choosing 0 or 1 arbitrarily with a random
 number generator.  Recall in :ref:`lab-number-game`::
 

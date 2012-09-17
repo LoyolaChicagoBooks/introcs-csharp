@@ -5,7 +5,7 @@ foreach Examples
 
 .. _codeofstringchar:
 
-In :ref:`IsDigits <IsDigits>` we use the underlying int code value
+In :ref:`IsDigits <IsDigits>` we use the underlying int Unicode value
 of the characters in comparisons.  
 When printing, you cannot see this code directly,
 since the ``char`` type prints as *characters*!
@@ -17,12 +17,12 @@ string, ``s``.  We do not need indices here, so a ``foreach`` loop is
 appropriate::
 
    foreach (char ch in s) {
-       Console.WriteLine("Code for {0} is {1}.", ch, (int)ch);
+       Console.WriteLine("Unicode for {0} is {1}.", ch, (int)ch);
    }
    
 Try this in csharp.
 
-Many more examples will come when we introduce more kinds of sequence.
+We will have many more examples after we introduce more kinds of sequences.
    
 
 

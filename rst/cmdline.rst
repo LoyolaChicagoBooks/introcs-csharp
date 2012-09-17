@@ -54,7 +54,9 @@ you get to a terminal, so we will only distinguish Windows and Mac OS-X.
 
 .. index::
    double:  command line; paths
-   
+
+.. _file-and-directory-paths:
+
 File and Directory Paths
 ------------------------
 

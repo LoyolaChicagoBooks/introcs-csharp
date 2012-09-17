@@ -86,7 +86,7 @@ parts they normally separate may be omitted.
 If the condition part is omitted, the condition is 
 interpreted as always true, leading to an infinite loop, that can only
 terminate due to a ``return`` or ``break`` statement in the body.
-See Miles, page 46, for a discussion of ``break``. 
+If you are interested in exploring ``break`` statements, see Miles, about page 46.
 
 **Other variations**
 
