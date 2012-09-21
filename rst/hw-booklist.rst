@@ -1,7 +1,6 @@
 .. index::
-   double: assignment; booklist
-   double: assignment; OOP
-   double:  OOP; assignment
+   double: homework; booklist
+   double: homework; OOP
 
 .. _booklist:
 

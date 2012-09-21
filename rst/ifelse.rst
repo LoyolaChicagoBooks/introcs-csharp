@@ -57,7 +57,7 @@ without braces, except in one otherwise ambiguous situation discussed
 later with two ``if``\ s and an ``else``.
 
 .. index::
-   double scope; compound statement
+   double: scope; compound statement
 
 .. rubric:: More on Compound Statements and Scope
 

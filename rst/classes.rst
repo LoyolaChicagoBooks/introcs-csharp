@@ -1,3 +1,5 @@
+.. index:: class
+
 .. _Classes:
 
 Classes

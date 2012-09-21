@@ -1,4 +1,4 @@
-.. index:: files
+.. index:: file
 
 .. _files:
 

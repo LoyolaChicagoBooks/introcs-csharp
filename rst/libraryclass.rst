@@ -6,6 +6,9 @@
 Library Classes
 ========================
 
+.. index::
+   library; UIF
+   
 In :ref:`Returned-Function-Values`, the suggestion was made to look at 
 the GlazerCalc class and split out repeated ideas into functions, leading to
 a function to prompt the user and return a double value.  The same section included
@@ -21,7 +24,7 @@ in file :file:`uif.cs`.  We explain the namespace line after the code:
 .. literalinclude:: ../examples/intro_cs_lib/uif.cs
 
 .. index:: 
-   double namespace; IntroCS
+   double: namespace; IntroCS
 
 We have been ``using System;`` in every program.  ``System`` is a *namespace* that 
 collects a particular group of class names, making them available to the program,

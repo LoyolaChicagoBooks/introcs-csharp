@@ -1,8 +1,8 @@
 
 .. index::
-   double: homework; input-output;
-   double: homework; decisions
-   double: homework; loops
+   double: homework; input-output
+   double: homework; decision
+   double: homework; loop
    
 .. _homework-grade-calculation2:
 

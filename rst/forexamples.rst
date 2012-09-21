@@ -40,11 +40,11 @@ This means to increment the variable i by k.
     is also legal, and just assigns the value of k to i.
 
 .. index::
-   double operator; +=
-   double operator; -=
-   double operator; *=
-   double operator; /=
-   double operator; %=
+   double: operator; +=
+   double: operator; -=
+   double: operator; *=
+   double: operator; /=
+   double: operator; %=
 
 Most C# binary operations have a similar variation.  For instance
 if *op* is ``+``, ``-``, ``*``, ``/`` or ``%``,
@@ -259,7 +259,7 @@ next line.  A program printing this table should include an extra
 ``Console.WriteLine()`` after the loop.
 
 .. index::
-   double: table; nested loops
+   double: table; nested loop
    double: format; table
    double: example; mod_mult_table.cs
 

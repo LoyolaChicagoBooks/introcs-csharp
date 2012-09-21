@@ -1,7 +1,7 @@
 .. index::
    double:  PF4; recursion
    double:  SP1; history
-   double:  algorithms; arrays
+   double:  algorithms; array
    
 
 .. _sorting:
@@ -72,7 +72,7 @@ Let's now take a look at the various sorting algorithms.
 .. index::
    double: sorting; bubble sort
    double: algorithms; bubble sort
-   single: arrays; nested loops
+   single: array; nested loop
    
 Bubble Sort
 -----------
@@ -112,7 +112,7 @@ Bubble Sort requires :math:`O(N^2)` exchanges.
 .. index::
    double: sorting; selection sort
    double: algorithms; selection sort
-   single: arrays; nested loops
+   single: array; nested loop
 
 Selection Sort
 --------------
@@ -161,7 +161,7 @@ in our own performance experiments with randomly-generated data.
 .. index::
    double: sorting; insertion sort
    double: algorithms; insertion sort
-   single: arrays; nested loops
+   single: array; nested loop
    
 Insertion Sort
 --------------
@@ -185,7 +185,7 @@ portion.
 
 .. index::
    double: sorting; Shell sort
-   single: arrays; nested loops
+   single: array; nested loop
 
 Shell Sort
 ----------
@@ -293,7 +293,7 @@ there are limits on available memory (e.g. embedded systems).
 .. index::
    double: sorting; Quicksort
    double: algorithms; Quicksort
-   single: arrays; nested loops
+   single: array; nested loop
    single: recursion
 
 
@@ -352,12 +352,7 @@ There are a few things to note in this code:
 .. index::
    double: performance; Stopwatch
    double: performance; TimeSpan
-   
-
-.. index::
-   single: performance
    double: timing; Stopwatch
-   double: timing; Timespan
    
 Timing
 -------
@@ -445,9 +440,6 @@ Getting the Code
 ---------------------
 
 You can find this code in  :file:`examples/arrays/sorting.cs`. 
-
-.. out of date
-    You can also view the full source code in our [SortingFolder]_.
 
 Running the Code
 ----------------------

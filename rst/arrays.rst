@@ -1,3 +1,7 @@
+.. index:: array
+
+.. _array:
+
 Arrays
 ######################
 

@@ -1,3 +1,5 @@
+.. index:: dictionary
+
 .. _dictionary:
 
 Dictionaries

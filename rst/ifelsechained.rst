@@ -1,4 +1,4 @@
-.. index:: if-else-if; if
+.. index:: if-else-if
         
 .. _Multiple-Tests:
 

@@ -47,7 +47,7 @@ which is :math:`log_2 16 = 4`.
 
 .. index::
    double: search; binary
-   double: algorithms; binary search
+   single: algorithms; binary search
 
 Binary Search
 ------------------

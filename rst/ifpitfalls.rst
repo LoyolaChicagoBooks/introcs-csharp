@@ -3,7 +3,8 @@ If-statement Pitfalls
 ------------------------
 
 .. index::
-   triple: pitfall; semicolon after condition; if statement
+   semicolon after condition; pitfall
+   double: pitfall; if
 
 .. _dangerous-semicolon:
 
@@ -50,7 +51,8 @@ generate a compiler error, though it may appear cryptic::
         // ...
 
 .. index::
-   triple: pitfall; dangling else; if-else
+   double: pitfall; dangling else;
+   if-else; dangling else pitfall 
 
 Match Wrong ``if`` With ``else``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,7 +108,8 @@ printed will be true: ``x`` is not positive, and the test of ``y`` is skipped.
    
 
 .. index::
-   triple: pitfall; need braces; if statement
+   pitfall; need braces for if
+   double: if; need braces
 
 Missing Braces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

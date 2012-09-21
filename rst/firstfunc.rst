@@ -95,7 +95,7 @@ Can you predict what the program will do?  Note the two function calls
 to ``happyBirthdayEmily``.  To see, load and run ``birthday2.cs``. 
 
 .. index::
-   triple: function; execution; sequence
+   double: function; execution sequence
 
 The *execution* sequence for the program is different from the 
 *textual* sequence.  Execution always starts in Main:

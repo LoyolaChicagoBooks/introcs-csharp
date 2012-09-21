@@ -1,4 +1,4 @@
-.. index::  string; methods
+.. index::  string; method
    
 .. _more-string-methods:
 	
