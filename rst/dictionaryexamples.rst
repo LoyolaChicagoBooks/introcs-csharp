@@ -5,7 +5,7 @@ Dictionary Examples
 
 .. index::
    double: HashSet; set
-   double HashSet; generic
+   double: HashSet; generic
 
 .. _sets:
 

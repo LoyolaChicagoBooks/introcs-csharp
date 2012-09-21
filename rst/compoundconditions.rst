@@ -47,6 +47,9 @@ There is a C# version.  Be sure to use this pattern::
 
    low < val && val < high
 
+.. index::
+   triple:  ||; or; boolean operation
+
 Now suppose we want the opposite condition:  that val is *not* 
 strictly between low and high.
 There are several approaches.  
@@ -62,6 +65,9 @@ The new C# syntax for the operator ``||``:
 
 The compound condition is true if at least one of the component conditions
 are true. It is false if both conditions are false.
+
+.. index::
+   triple:  !; not; boolean operation
 
 Another logical way to express the opposite of the condition low < val < high
 is that it is *not* the case
@@ -127,63 +133,3 @@ This exercise could be done by making an exhaustive treatment of all
 possible combinations of age and citizenship.  Try to avoid that.  
 (Note the paragraph just before this exercise.)
 
-..   java short circuit
-
-     && and \|\|
-     ~~~~~~~~~~~
-    
-     Start the example project andOr, class AndOr Consider the method:
-     public static boolean and1(int x, int y, int z)
-     {
-     return (y/x > z) && (x != 0);
-     }
-     run it with the parameters below and predict the results before seeing
-     the answer.
-     (2, 5, 1)
-     (2, 5, 4)
-     (0, 2, 1)
-     Note the error. Division by 0 stops execution.
-     Now consider
-     public static boolean and2(int x, int y, int z)
-     {
-     return (x != 0) && (y/x > z);
-     }
-     This is apparently logically equivalent. Run parameters (0, 2, 1) with
-     this method.
-     The different result is caused by short-circuiting. The result of
-     false && anything
-     is always false -- there is no need to evaluate the second operand, and
-     there is an advantage to skipping it sometimes, so that is how Java (and
-     many other computer languages) behave.
-     Now see if you have an easier time predicting the behavior of
-     public static boolean or1(int x, int y, int z)
-     {
-     return (y/x > z) \|\| (x == 0);
-     }
-     Guess the behavior of calling it with parameters
-     (2, 5, 4)
-     (0, 2, 1)
-     Again division by 0.
-     How could we avoid it? Hopefully you thought of
-     public static boolean or2(int x, int y, int z)
-     {
-     return (x == 0) \|\| (y/x > z);
-     }
-     Try parameters (0, 2, 1) with this method.
-     Again short-circuiting.
-     true \|\| anything
-     is true, and lava skips considering the second operand.
-     Now guess the result with parameters (2, 7, 3) and try it.
-     It will test
-     2==0 \|\| 7/2 > 3
-     If you did not get it right think about it.....
-     All the parameters are ints. What is 7/2 ? It is 3 (dropping the
-     remainder).
-     Consider
-     public static boolean or3(int x, double y, int z)
-     {
-     return (x == 0) \|\| (y/x > z);
-     }
-     Note the double type of y. Now try parameters (2, 7, 3) again. Watch
-     out for the difference between Java integer division with '/' and the
-     use you see in pure math.

@@ -1,5 +1,5 @@
 .. index:: 
-   double loop; foreach
+   double: loop; foreach
 
 .. _foreach:
 

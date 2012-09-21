@@ -3,8 +3,7 @@
 .. index::
    double: function; scope
    double: function; not use return value
-   double: scope; not use return value
-
+   
 Not using Return Values
 ==================================
 

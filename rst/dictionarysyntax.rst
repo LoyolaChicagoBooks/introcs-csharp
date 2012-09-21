@@ -51,6 +51,9 @@ There is no restriction on the value type.  There is one important technical
 restriction on the key type: it should be immutable. This has to do with the implementation
 referenced in :ref:`dictionary-efficiency`.
 
+.. index::
+   double:  dictionary; [ ]
+   
 Similar to an array or ``List``,  you can assign and reference elements of a ``Dictionary``, 
 using square bracket notation.  The difference is that the reference be through a key
 value, not a sequential index, as in::

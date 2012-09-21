@@ -14,7 +14,6 @@ namespace IntroCS
       {
          Console.WriteLine(SumProblemString(2, 3));
          Console.WriteLine(SumProblemString(12345, 53579));
-         Console.Write("Enter an integer: ");
          int a = UIF.PromptInt("Enter an integer: ");      //NEW
          int b = UIF.PromptInt("Enter another integer: "); //NEW
          Console.WriteLine(SumProblemString(a, b));

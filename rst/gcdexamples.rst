@@ -220,13 +220,34 @@ As an exercise to the reader, you may want to consider adding some
 ``b`` within each loop, and after both loops have executed. It will
 allow you to see in visual terms how this method does its work.
 
+GCD Remainder Loop
+--------------------
+
+There are several ways to code the shorter Euclidean algorithm at the beginning of this
+GCD section.  It is a repetitive pattern, 
+and a loop can be used, looping while ``b != 0``.
+One extra variable needs to be introduced for the remainder, 
+to get both ``a`` and ``b`` ready
+for the next time through the loop:
+
+.. literalinclude:: ../examples/g_c_d_remainder_loop.cs
+   :start-after: gcd chunk
+   :end-before: gcd end chunk
+
+
 Preview: Recursive GCD
 ----------------------
 
-As it turns out, we can transform the earlier definition of greatest
-common divisor (as formulated by Euclid) directly into C# using a
-technique known as *recursion*, where a function calls *itself*
-inside its definition. We don't expect you to master this
+The first statement of Euclid's algorithm said (in C#) when  ::
+    
+    gcd(a, b) = gcd(b, a % b)
+
+It is saying the result of the function with one set of parameters is equal to
+calling the function with another set of parameters.  If we put this into a
+C# function definition, ti would mean the instructions for the function say 
+to *call itself*.  This is a broadly useful technique called *recursion*, 
+where a function calls *itself* inside its definition. 
+We don't expect you to master this
 technique immediately but do feel that it is important you at least
 *hear* about it and see its tremendous power:
 
@@ -236,22 +257,24 @@ technique immediately but do feel that it is important you at least
    :linenos:
 
 - Recalling our earlier definition, the case :math:`gcd(a, 0) = a` is
-  handled by lines 3-6.
+  handled by lines 3-5.
 
 - And the case :math:`gcd(a, b) = gcd(b, a \bmod b)` is handled by
-  line 11.
+  line 10.
 
-- Lines 4 and 8-10 exist to show you all of the *steps* that Euclid's
+- Lines 4 and 7-9 exist to show you all of the *steps* that Euclid's
   algorithm takes to compute the greatest common divisor.
 
-The mathematical definition of gcd *refers to itself* in its own definition.  
 The recursive version of the ``gcd`` function *refers to itself*
 by *calling* itself.  Though this seems circular, you can see
 from the examples that it works very well.  The important point is that
 the calls to the same function are not completely the same:
 *Successive* calls have *smaller* second numbers, and the second
 number eventually reaches 0, and in that case 
-there is a direct final answer.  
+there is a direct final answer.  Hence the function is not really circular.
+
+This recursive version is a much more direct translation of the original mathematical
+algorithm than the looping version.
 
 The general idea of recursion is for a
 function to call itself with *simpler* parameters, until a simple enough place

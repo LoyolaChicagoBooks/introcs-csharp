@@ -88,9 +88,7 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
-rst_prolog = """
-.. highlight:: csharp
-   
+rst_prolog = """.. highlight:: csharp  
 """
 
 rst_epilog = """

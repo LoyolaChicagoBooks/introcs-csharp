@@ -1,11 +1,14 @@
 .. index:: 
-   single: arrays; one dimensional
+   single: array; one dimensional
 
 .. _one-dim-arrays:
 
 One Dimensional Arrays
 ============================ 
 
+.. index::
+   double: array; [ ]
+   
 Basic Syntax
 ---------------
 
