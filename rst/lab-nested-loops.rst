@@ -93,7 +93,7 @@ and fill in function bodies for each part below:
        ++
        ++
     
-    Suggestion:  Building up a complicated solution incrementally is always encouraged.
+    Suggestion:  You are always encouraged to build up to a complicated solution 
+    incrementally.
     You might start by just creating the inner rectangle, without the border.
     
-
