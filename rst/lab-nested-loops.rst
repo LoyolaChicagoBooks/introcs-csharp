@@ -10,8 +10,13 @@ Goals for this lab:
 - Practice with loops.  You are encouraged to use a ``for`` loop where appropriate.
 - Use nested loops where appropriate.
 
-First copy example :file:`loop_lab_stub.cs` to :file:`loop_lab.cs`, 
-and fill in function bodies for each part below: 
+The lab stub was added to the examples on 9/21/12.  You can download and unzip 
+a *new* copy of the 
+`course example file <http://introcs.cs.luc.edu/book/download/comp170code.zip>`_.
+Alternately, you can directly download the example
+`loop_lab_stub.cs <https://bitbucket.org/gkthiruvathukal/introcs-csharp/raw/default/examples/loop_lab_stub.cs>`_.
+Then copy example :file:`loop_lab_stub.cs` to :file:`loop_lab.cs`, 
+and fill in function bodies in :file:`loop_lab.cs` for each part below: 
 
 #.  Complete  
 
@@ -60,7 +65,7 @@ and fill in function bodies for each part below:
 
     **ALSO** find the largest value of ``n`` for which the function works.
     (You might want to add a bit of code further testing Factorial,
-    to test this easier.)
+    to make this easier.)
     
 #.  Modify the function to return a ``long``.  
     Then what is the largest value of ``n`` for which the function works?
