@@ -392,7 +392,7 @@ Create an initial structure for your project
 
 We suggest that you follow a scheme similar to what we use when working
 with version control. We suggest that your source code goes in
-one or more folders, like work, or hw and labs.
+one or more folders, like work, or homework and labs.
 
 So let's do it:
 
@@ -460,7 +460,7 @@ Create and Test Content
         ? labs/hello.cs
 
    Mercurial shows you the tracked files that are modified (none here)
-   or files not not being tracked (ater a '?'),
+   or files not not being tracked (after a '?'),
    except for those files explicitly ignored.  As you can see,
    the source (.cs) file is shown, but
    no "binary" objects (like an .exe file),

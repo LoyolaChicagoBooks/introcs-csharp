@@ -107,7 +107,7 @@ out of your home directory (where the Mac users start automatically).
 
 For Windows 7 or 8 users enter the command below (substituting your login ID):
 
-   cd C:\\Users\\*YourLoginID*
+   cd C:\\Users\\YourLoginId
    
 The cd is short for "Change Directory", changing the current directory.
 

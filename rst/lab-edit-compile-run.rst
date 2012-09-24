@@ -44,7 +44,7 @@ the development environments
 Visual Studio (from Microsoft) and MonoDevelop (an open source
 implementation similar to Visual Studio).
 These environments are optimized for more complex projects 
-han in this introductory course, so we will avoid the intial learning curve 
+than found in this introductory course, so we will avoid the initial learning curve 
 needed for such environments. 
 
 
@@ -173,7 +173,7 @@ religiously at least once to ensure you were successful.)
 
         gmcs hello.cs
     
-    This compiles and links your source code to produce an executabel program.
+    This compiles and links your source code to produce an executable program.
     
 #.  If everything worked right, you will not see any output. If you
     spot any error messages, it means that you probably made a typo

@@ -44,7 +44,7 @@ arbitrary. If the two lines of the body of ``Main`` were swapped,
 the order of
 operations would change, but if the order of the whole function 
 definitions were changed,
-it would make no diference in execution.
+it would make no difference in execution.
 
 Functions that you write can also call other functions you write.
 In this case Main calls each of the birthday functions.

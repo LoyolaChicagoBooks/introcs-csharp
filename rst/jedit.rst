@@ -97,7 +97,7 @@ clicking on the heading and switching to another current file in memory.
 One view can be split into a left and right view.  Between the headings of two views
 is a small icon
 pointing both left and right.  Clicking this undoes the corresponding split.  Similarly,
-when a view has been split into top and botom parts,
+when a view has been split into top and bottom parts,
 there is an icon pointing up and down just above the bottom view .  
 Unfortunately neither of these little icons have a
 tool tip reminding you of their use.
@@ -160,7 +160,7 @@ Basic Editing:
   * if parts of more than one line are selected, you should indent each of
     these lines further.
 
-- When you press Shift-Tab, the reverse happens, un-indenting.
+- When you press Shift-Tab, the reverse happens, unindenting.
 
 This means proper indentation is mostly kept for you automatically,
 and you rarely need to adjust it by hand.  When you do need to adjust

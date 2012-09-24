@@ -58,7 +58,7 @@ You do NOT need to memorize *everything* immediately!
   In this case the focus is mostly on syntax.
 
 Memorizing syntax is not going to directly get you to solve real problems.  In any domain:
-programming, construction, organizing political action, ..., you need to analyse the problem
+programming, construction, organizing political action, ..., you need to analyze the problem
 and figure out a sequence of steps, knowing what powers and resources you have.  
   
 For example with political action:
@@ -129,11 +129,11 @@ concentrated C#, *maybe* he will find that entering semicolons becomes automatic
 and he can take the separate round of semicolon checking off his list.
 
 What to do *after* you finish an exercise is important, too.  The natural thing psychologically,
-particularly if you had a struggle, is to think, "Whew, outa here!!!!"
+particularly if you had a struggle, is to think, "Whew, outta here!!!!"
 
 On something that came automatically or flowed smoothly, that is not a big deal - 
 you will probably get it just as fast the next time. If you had a hard time and only eventually
-got to success, you may be doing yourself a disservice with "Whew, outa here!!!"
+got to success, you may be doing yourself a disservice with "Whew, outta here!!!"
 
 We have already mentioned how not everything is equally important, and some things are more
 important to keep in your head than others.  The same applies to all the steps in solving

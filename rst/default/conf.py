@@ -273,3 +273,8 @@ epub_basename = 'comp170'
 spelling_word_list_filename='wordlist.txt'
 spelling_ignore_wiki_words=True
 
+import os
+sys.path.append(os.getcwd())
+from introcs_filters import *
+spelling_filters = [ JavaCaseFilter, AcronymFilter ]
+

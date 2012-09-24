@@ -32,7 +32,7 @@ An example is the method ``Add`` for :ref:`sets`:
 *and*
 
   it returns a boolean value, so ``someSet.Add(element)`` can be used
-  in a larger statement, making note of the boolean valu e returned.
+  in a larger statement, making note of the boolean value returned.
   
 There is a purpose to the return value in this situation:  Adding to a set
 may or may not change the set, since sets ignore duplicates.  The method returns 

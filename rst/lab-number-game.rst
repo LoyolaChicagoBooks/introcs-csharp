@@ -277,5 +277,5 @@ Should you finish everything early, try the following:
    
    Have the computer complain that the human is cheating (and stop the game) 
    if the computer
-   guesses the only posible value, and the human does *not* respond with "E".
+   guesses the only possible value, and the human does *not* respond with "E".
    
