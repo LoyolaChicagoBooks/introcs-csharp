@@ -253,7 +253,7 @@ when you forget, note:
    *always* true, and the loop *never* stops by itself.  
    This is an *infinite loop*.
    In practice, in many operating environments, particularly
-   where you are geting input from the user, 
+   where you are getting input from the user, 
    you can abort the execution of a program in 
    an infinite loop by entering 
    :kbd:`Ctrl-C`.
