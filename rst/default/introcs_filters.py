@@ -17,13 +17,22 @@ class AcronymFilter(Filter):
                 )
 
 class JavaCaseFilter(Filter):
-   """Ignore CamelCase where the first letter is lowercase"""
+   """Ignore CamelCase where the first letter is lowercase
+   Allow final digits"""
 
-   _pattern = re.compile(r"^([A-Za-z]\w+[A-Z]+\w+)")
+   # p2 = r"^([A-Za-z]\w+[A-Z]+\w+)"
+   _pattern = re.compile(r'[a-z]+[A-Z]([a-z]*[A-Z])*[a-z]+[1-9]*')
 
    def _skip(self, word):
-       if self._pattern.match(word):
-          return True
-       return False
+       return bool(self._pattern.match(word))
+
+class UnderscoreFilter(Filter):
+   """underscore sep
+   Allow final digits with no _ before"""
+
+   _pattern = re.compile(r'[a-z]+_([a-z]+_)*[a-z]+[1-9]*')
+
+   def _skip(self, word):
+       return bool(self._pattern.match(word))
 
       

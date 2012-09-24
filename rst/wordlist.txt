@@ -17,7 +17,6 @@ Drs
 EditHello
 Foreach
 Froggy
-Gausss
 Gedit
 getters
 Hm
@@ -60,7 +59,6 @@ cmd
 cmdline
 csc
 csharp
-csn
 csproject
 current
 customizations
