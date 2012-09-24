@@ -72,7 +72,7 @@ a Mac it is typically /Users/*yourLogin*.
    double: command line; ls
    
 Files in the current working directory can to referred to by their simple names,
-eg, *myfile.txt*.  You can list all the files in the directory with the simple
+e.g., *myfile.txt*.  You can list all the files in the directory with the simple
 command ``dir`` (short for directory) in Windows or ``ls`` (short for list) on a Mac.
 
 You will see below that you can change the current
@@ -107,7 +107,7 @@ out of your home directory (where the Mac users start automatically).
 
 For Windows 7 or 8 users enter the command below (substituting your login ID):
 
-   cd C:\\Users\\*yourLoginID*
+   cd C:\\Users\\*YourLoginID*
    
 The cd is short for "Change Directory", changing the current directory.
 
@@ -121,7 +121,7 @@ indicate the root directory.  For example, if you are in you home directory,
 If the Downloads directory contained a file, ``myFile.txt``, you could refer to it 
 in commands as ``Downloads\myFile.txt`` or  ``Downloads/myFile.txt`` on a Mac.
 
-Referring to files in the curent directory just by their plain file name is
+Referring to files in the current directory just by their plain file name is
 actually an example of using relative paths.
 
 With relative paths, you sometimes want to move up the directory hierarchy:  ..
@@ -203,7 +203,7 @@ cd
 
   Mac Note: if you type just *cd* and press Enter you will change back to
   your home directory.  There is also a shorthand name for your home
-  directory in command paths:  tilda (~), often shifted backquote.
+  directory in command paths:  tilde (~), often shifted backquote.
 
 .. index:
    double: command line; mkdir
@@ -213,7 +213,7 @@ mkdir
   you can use *mkdir* to create a new empty directory in the current
   directory.
 
-  For example, on a Mac with current directory /Users/*yourLogin*,
+  For example, on a Mac with current directory /Users/*YourLogin*,
   type *mkdir hello* and press Enter – this will create a new directory
   /Users/*yourLogin*/hello if it did not exist before; you can now create
   a C# source file in that directory and enter *cd hello* in the command shell.
@@ -224,7 +224,7 @@ mkdir
    double: command line; rmdir
 
 rmdir
-    removes an *empty* directory that you give as parameter, eg,
+    removes an *empty* directory that you give as parameter, e.g.,
     
        rmdir hello
 
@@ -235,7 +235,7 @@ gmcs
   compiles one or more listed C# source files.
 
 csharp
-  is the interactive C# statement tesing program.
+  is the interactive C# statement testing program.
   
 nant
   is used to build (particularly more complicated) projects, assuming
@@ -299,7 +299,7 @@ Help on a command:
   | *commandName* --help
   
 Note the double dash above: This 
-sometimes works for concise help on a Mac while you can genrally get
+sometimes works for concise help on a Mac while you can generally get
 immensely detailed help overload on a Mac from
 
    man *commandName*

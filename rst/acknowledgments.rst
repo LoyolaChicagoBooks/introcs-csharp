@@ -1,4 +1,4 @@
-Acknowledgements
+Acknowledgments
 ==================
 
 - The Sphinx team at http://sphinx.pocoo.org for creating such an awesome documentation

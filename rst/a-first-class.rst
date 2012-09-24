@@ -258,7 +258,7 @@ Summarizing where there is a current object that can access
 its private instance variables:
 
 #.  In a constructor, referring to the object being created.
-#.  When some method methodName is called with explicit dot notation, 
+#.  When some method ``methodName`` is called with explicit dot notation, 
     ``someObject.methodName()``, 
     then it is acting on ``someObject`` and its instance variables.
 #.  When a constructor or instance method (no ``static``) is called for the class,

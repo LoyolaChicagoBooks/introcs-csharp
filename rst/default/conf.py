@@ -25,7 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax']
+extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax', 'sphinxcontrib.spelling' ]
 
 todo_include_todos = True
 
@@ -266,3 +266,10 @@ texinfo_documents = [
 # -- Options for epub output"
 
 epub_basename = 'comp170'
+
+
+# -- Options for Spelling 
+
+spelling_word_list_filename='wordlist.txt'
+spelling_ignore_wiki_words=True
+

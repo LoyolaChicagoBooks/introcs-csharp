@@ -42,7 +42,7 @@ Reading to End of Stream
 -------------------------
 
 In ``first_file.cs``, we explicitly coded reading two lines.  You will often
-want to proces each line in a file, without knowing the total number of
+want to process each line in a file, without knowing the total number of
 lines ahead of time.  This will require a loop and a new test to make sure that you
 have not yet come to the end of the file's stream.  You can use the ``EndOfStream``
 method, though it has the wrong sense (true at the end of the file), so we negate it,
