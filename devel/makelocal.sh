@@ -5,8 +5,8 @@
 # No error checking. This must be set to "default" or "bootstrap" (the only
 # two themes I set up in rst (e.g. rst/default and rst/bootstrap).
 
-sh ./makehtml.sh default
-sh ./makehtml.sh bootstrap
+sh ./makehtml.sh default nocron
+sh ./makehtml.sh bootstrap nocron
 
 DOWNLOAD=../all/download
 

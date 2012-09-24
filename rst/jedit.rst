@@ -209,7 +209,7 @@ Other Useful Free Text Editors
 
 #. Emacs is available in the Loyola labs.  It is an extremely popular
    among software professionals, with earlier versions that goes back a number of
-   decades.  It csn be used
+   decades.  It can be used
    as an all-in-one environment
    with many powerful tools, but it has *quite* a leaning curve.
 

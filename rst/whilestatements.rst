@@ -474,7 +474,7 @@ Though (n+1)/2 is fine as math, recall the division operator does not
 always give correct answers in C#.  You get an integer answer from the
 integer (or long) operands.  Of course the exact mathematical final answer
 is an integer when *adding* integers, but splitting it according to
-Gausss's motivation can put a mathematical non-integer in the middle.
+Gauss's motivation can put a mathematical non-integer in the middle.
 
 The C# fix: The final answer is clearly an integer, so if we do the division
 last, when we know the answer will be an integer, things should be better::
