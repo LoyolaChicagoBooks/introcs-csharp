@@ -128,7 +128,7 @@ function is called during execution, jumping to the function code,
 and back at the the end of the function execution.
 
 Understanding the jumping around in the code with function calls is
-crucial.  Be sur you follow the sequence detailed above.  In particular,
+crucial.  Be sure you follow the sequence detailed above.  In particular,
 be sure to distinguish function **definition** from function **call**.
 
 If it also happens to be Andre's birthday, we might define a

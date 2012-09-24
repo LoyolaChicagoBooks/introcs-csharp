@@ -98,7 +98,7 @@ the braces, after the parameter index, you see a new part,
 ``:F2``.  
 The part after the colon gives optional formatting information.
 In this case display with the decimal point  
-**f**\ ixed so  **2** places beyond the decimal
+fixed (hence the **f**) so  **2** places beyond the decimal
 point are shown.  Also the result is *rounded*.  
 This is appropriate for money with dollars and cents.  
 Replace the 2 to display

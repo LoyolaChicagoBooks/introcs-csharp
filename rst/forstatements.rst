@@ -13,7 +13,7 @@ equivalent syntax by the compiler.  For example::
        sum = sum + i;
     }
    
-is exactly equivalent to this code simliar to part of 
+is exactly equivalent to this code similar to part of 
 :ref:`SumToN <SumToN>`::
 
     i= 2;

@@ -434,7 +434,7 @@ If we go back to our pseudocode we could add to it::
        print body row
     }
 
-First analyse the heading row:  Some parts are repetitive and
+First analyze the heading row:  Some parts are repetitive and
 some are not: Print ``"* |"`` once, and then there is a repetitive pattern printing
 0 - 6, which we can do with a simpler loop than in the table body::
 

@@ -118,7 +118,7 @@ Example: Sum Numbers in File
 -------------------------------
 
 We have summed the numbers from 1 to ``n``.  In that case we generated
-the next number ``i`` automatically using i++.  We coud also read numbers
+the next number ``i`` automatically using i++.  We could also read numbers
 from a file containing one number per line (plus possible white space)::
 
       static int CalcSum(string filename)

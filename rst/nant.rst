@@ -140,7 +140,7 @@ the file Hello.build is present in the same folder/directory as hello.cs.
 .. literalinclude:: ../examples/hello+nant/nant-build.txt
    :language: text
 
-When nant is run, you can observe that the Hello.build file is being used to copile 
+When nant is run, you can observe that the Hello.build file is being used to compile 
 the program. That's because NAnt *tells you* so by indicating the Buildfile it is using. 
 Even though we did not use Hello.build anywhere on the command line, 
 NAnt decided to look for it by finding *any* filename that ends in .build.
@@ -158,7 +158,7 @@ your program.
 For completeness, we show the output of ls (dir on Windows) that clearly demonstrates 
 that the resulting hello.exe file was created successfully. 
 Because our compilation task is designed to create files needed for
-symbolic debugging, you can seee that hello.exe.mdb is also present.
+symbolic debugging, you can see that hello.exe.mdb is also present.
 
 Removing the Build Products
 ---------------------------

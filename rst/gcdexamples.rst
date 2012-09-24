@@ -197,7 +197,7 @@ b)``. In this loop, we are repeatedly subtracting ``b`` from ``a``,
 which we know we can do, because ``a`` started out as being larger
 than ``b``.  At the end of loop ``a`` is reduced to either
 
-#. ``b``, in which case ``b`` exactly divided the ealier ``a``,
+#. ``b``, in which case ``b`` exactly divided the earlier ``a``,
    and ``b`` is the GCD, or 
 #. a number less than ``b``, namely 
    :math:`a \bmod b` (or in C# terms ``a % b``), and the process continues....

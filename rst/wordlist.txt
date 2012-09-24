@@ -1,3 +1,8 @@
+cs
+txt
+exe
+rst
+Todo
 Acknowledgments
 Bitbucket
 Buildfile
@@ -81,6 +86,7 @@ getter
 gkt
 glazer
 gmcs
+gung
 hg
 hgignore
 hgrc
@@ -114,6 +120,7 @@ nonblank
 nums
 nunit
 ok
+outta
 overtimeHours
 pdb
 possible
@@ -141,7 +148,10 @@ substatements
 substring
 substrings
 taskbar
+tablature
+texting
 th
+unindenting
 unsimplified
 username
 versa

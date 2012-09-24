@@ -42,7 +42,7 @@ See the project :file:`csproject_stub`, already discussed in class.
 - intermediate implementation
 - a final presentation
 - a final implementation
-  including user and programer documentation and process documentation
+  including user and programmer documentation and process documentation
 - individual evaluations
 
 Overview
@@ -127,10 +127,10 @@ Roles
    function logically.
 #. Report coordinator: Gather the contributions for reports from team
    members and make sure the whole reports get to posted on schedule. 
-   Your instrutor needs
+   Your instructor needs
    a clear idea of the contributions of each member each week. If a team
    member is not clear on this to the report writer, the report writer
-   needs to be insistant.
+   needs to be insistent.
 #. Instruction coordinator: Make sure there are clear written documents
    and help within the program for the user, who you assume is not a
    C# programmer and knows nothing about your program at the start.
@@ -149,7 +149,7 @@ Roles
 
 Conflict resolution: You will certainly have disagreements and possibly
 conflicts. Try to resolve them within the team. When that is not
-working, anyone can go to the instrutor with a problem.
+working, anyone can go to the instructor with a problem.
 
 The process
 ------------
