@@ -41,7 +41,6 @@ Thiruvathukal
 VMware
 Wirth
 WriteLine
-YOu
 analyze
 anh
 args
@@ -104,7 +103,6 @@ login
 lookup
 lookups
 mdb
-mens
 mkdir
 moduli
 monodevelop
