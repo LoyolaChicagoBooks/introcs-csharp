@@ -172,7 +172,7 @@ Creating this file saves you the trouble of having to pass the ``-u username``
 option to ``hg`` each time you do a *commit* operation. 
 
 You can put this file in your home directory in Windows labs, but it disappears.
-YOu might want to keep an extra copy in your repository, and copy it to the Windows 
+You might want to keep an extra copy in your repository, and copy it to the Windows 
 home folder when in the lab.
 
 As a gentle reminder, your home directory on Windows can be a bit difficult to find. 
