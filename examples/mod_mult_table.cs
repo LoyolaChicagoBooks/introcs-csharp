@@ -29,7 +29,7 @@ namespace IntroCS
          }
          Console.WriteLine();
          
-         Console.WriteLine(StringRep("-",(numberWidth+1)*(n+1) + 1));
+         Console.WriteLine(StringOfReps("-",(numberWidth+1)*(n+1) + 1));
          
          for (int r = 0; r < n; r++) { //rows of table body
             Console.Write(headerFormat, r);
@@ -41,7 +41,7 @@ namespace IntroCS
       }
                                              // StringRep chunk
       // Return s repeated n times.
-      static string StringRep(string s, int n)
+      static string StringOfReps(string s, int n)
       {
          string ret = "";
          for (int i = 0; i < n; i++) {

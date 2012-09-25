@@ -155,7 +155,7 @@ width that is just large enough for the longest numbers.
 When looking through the data for string lengths, the row and column
 structure is not important, so the code illustrates ``foreach`` loops
 to chug through all the data.
-The code refers once to the earlier :ref:`StringRepeatingExercise`
+The code refers once to the earlier ``StringOfReps`` in :ref:`lab-loops` 
 for the row of dashes setting off the column sums:
 
 .. literalinclude:: ../examples/print_table.cs

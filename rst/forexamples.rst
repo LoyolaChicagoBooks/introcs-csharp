@@ -234,7 +234,7 @@ the first line printed does not appear to have a character:  That is the
 blank character.  All the other characters are visible.
 
 Let us make a more concise table, putting 8 entries per line.
-We can print successive parts use ``Write`` not ``WriteLine``,
+We can print successive parts using ``Write`` instead of ``WriteLine``,
 but we still need to advance to the next line after every 8th
 entry, for codes 39, 47, 55, ....
 Since they are 8 apart, their remainder when divided by 8 is always
@@ -250,6 +250,8 @@ We can add a newline after each of these is printed.  This requires a test::
          Console.WriteLine();
       }
    }
+
+Recall that ``Console.WriteLine()`` with no parameters *only* advances to the next line.
 
 Paste that whole code at once into csharp to see the result.
 
@@ -444,8 +446,8 @@ some are not: Print ``"* |"`` once, and then there is a repetitive pattern print
       }
       Console.WriteLine();
 
-The dashed line can be generated using ``StringRep`` from 
-:ref:`StringRepeatingExercise`.  How many dashes?  For each of
+The dashed line can be generated using ``StringOfReps`` from 
+:ref:`lab-loops`.  How many dashes?  For each of
 seven columns, and in a row header, we need a digit and an space or 
 (7+1)*(1+1) characters, plus one for the '|':  1 + (7+1)*(1+1).  
 Thinking ahead, we will leave that expression unsimplified.
@@ -506,9 +508,6 @@ The whole function code is below and in example :file:`mod_mult_table.cs`.
     :start-after: chunk
     :end-before: chunk
 
-.. todo::
-
-   Do some of these examples backwards.
 
 .. todo::
 
@@ -519,36 +518,10 @@ The whole function code is below and in example :file:`mod_mult_table.cs`.
    Palindrome
 
 .. todo::
-   ASCII art, triangles; see for loop lab.
-
-.. todo::
    Make restructured text table with fixed rows, columns, and width empty content.
 
 Exercises
 ----------
-
-.. index::
-   double: exercise; StringRepeating
-
-.. _StringRepeatingExercise:
-
-String Repeating Exercise
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-a. Write a program string_rep.cs with a function ``PrintDup``, 
-   with heading::
- 
-       // Print n repetitions of s on one line (n >= 0). 
-       static void PrintDup(string s, int n)
-
-b. More versatile is to add and test a function ``StringRep``:
-
-   ..  literalinclude:: ../examples/mod_mult_table.cs
-       :start-after: StringRep chunk
-       :end-before: {
-
-   This takes more thought and work that just printing repeatedly.  
-   You need to accumulate the final string to return.
 
 
 .. index::
@@ -579,3 +552,23 @@ In your Main method have a ``for`` loop calling  ``Flip()``
 10 times to test it, so you generate a random sequence of 
 10 heads and/or tails.
 
+
+.. index:: exercise; GroupFlips
+
+Group Flips Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``format_flips.cs``. It should include the function ``Flip()``, 
+from the last exercise, but include another function::
+ 
+   // Print out the results from the total number of random flips of a coin.
+   // Group them groupSize per line, each followed by a space.
+   // The last line may contain fewer than groupSize flips 
+   // if total is not a multiple of groupSize.  The last line
+   // should be followed by exactly one newline in all cases.
+   static void GroupFlips(int total, int groupSize)
+
+Test this with a variety of calls to ``GroupFlips`` in ``Main``.  
+The previous exercise would correspond to a single call in ``Main``::
+
+    GroupFlips(10, 1);

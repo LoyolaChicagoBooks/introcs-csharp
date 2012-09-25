@@ -47,7 +47,7 @@ namespace IntroCS
 	        }
 	        Console.WriteLine("| " + format, rowSum[r]);
 	     }   
-	     Console.WriteLine(StringRep("-",(width+1)*(t.GetLength(1)+1) + 1));
+	     Console.WriteLine(StringOfReps("-",(width+1)*(t.GetLength(1)+1) + 1));
 	     for (int c = 0; c < t.GetLength(1); c++) {
 	        Console.Write(format, colSum[c]);
 	     }
@@ -55,7 +55,7 @@ namespace IntroCS
 	  }
                                          // end of print with siums chunk
      /** Return s repeated n times. */
-     static string StringRep(string s, int n)
+     static string StringOfReps(string s, int n)
      {
         string ret = "";
         for (int i = 0; i < n; i++) {
@@ -67,6 +67,7 @@ namespace IntroCS
      public static void Main()
      {
          PrintTable();
+         Console.WriteLine();
          int[,] a = { {2, 4,  7, 55},
                       {3, 1,  8, 10},
                       {6, 0, 49, 12} };

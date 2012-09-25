@@ -1,9 +1,9 @@
 .. index:: labs; loops
 
-.. _lab-nested-loops:
+.. _lab-loops:
    
-Lab: Loops and Nested Loops
-==================================
+Lab: Loops
+==========
 
 Goals for this lab:
 
@@ -17,6 +17,8 @@ Alternately, you can directly download the example
 `loop_lab_stub.cs <https://bitbucket.org/gkthiruvathukal/introcs-csharp/raw/default/examples/loop_lab_stub.cs>`_.
 Then copy example :file:`loop_lab_stub.cs` to :file:`loop_lab.cs`, 
 and fill in function bodies in :file:`loop_lab.cs` for each part below: 
+
+.. index:: PrintReps
 
 #.  Complete  
 
@@ -35,6 +37,8 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     
     This is a counting loop.
     
+    .. index:: StringOfReps
+    
 #.  Complete  
 
     .. literalinclude:: ../examples/loop_lab_stub.cs
@@ -44,6 +48,8 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     Note the distinction from the previous part:  Here the function prints nothing.
     Its work is *returned* as a single string.  You have to build up the final
     string.
+    
+    .. index:: Factorial
     
 #.  Complete ``Factorial``, in a format much like SumToN in example ``sum_to_n.cs``:  
     
@@ -74,6 +80,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     to tell the TA's checking out your work.*
 
     .. index:: loop; nested
+       PrintRectangle
       
 #.  Complete the method
 
