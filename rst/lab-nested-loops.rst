@@ -90,8 +90,8 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     
     Here are further examples::
         
-        printRectangle(5, 1, ' ', 'B');
-        printRectangle(0, 2, '-', '+');
+        PrintRectangle(5, 1, ' ', 'B');
+        PrintRectangle(0, 2, '-', '+');
     
     would print
     
@@ -108,4 +108,36 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     Suggestion:  You are always encouraged to build up to a complicated solution 
     incrementally.
     You might start by just creating the inner rectangle, without the border.
+
+#.  **40% Extra Credit** Complete the method below.  The comments looks better in the
+    source code, because Sphinx turns comments to italics, so the vertical bars
+    do not appear vertical below!
+
+    .. literalinclude:: ../examples/loop_lab_stub.cs
+       :start-after: PrintTableBorders chunk
+       :end-before: body
     
+    Here is further example::
+        
+        PrintTableBorders(2, 1, 6, 3);
+    
+    would print (with actual vertical bars)
+    
+    .. code-block:: none
+
+       +------+------+
+       |      |      |
+       |      |      |
+       |      |      |
+       +------+------+
+    
+    You can do this with lots of nested loops, 
+    or much more simply you can use ``StringOfReps``, possibly six times, 
+    and print a single string.  Think of larger and larger building blocks.
+   
+    The source of this book is plain text where some of the tables are laid out
+    in a format similar to the output of this function.  The Emacs editor 
+    has a mode that maintains
+    a fancier related setup on the screen, on the fly,
+    as content is added inside the cells!
+   

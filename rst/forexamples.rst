@@ -517,9 +517,6 @@ The whole function code is below and in example :file:`mod_mult_table.cs`.
 
    Palindrome
 
-.. todo::
-   Make restructured text table with fixed rows, columns, and width empty content.
-
 Exercises
 ----------
 
