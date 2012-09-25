@@ -17,6 +17,8 @@ namespace IntroCS
          PrintRectangle(3, 2, 'i', 'e');
          PrintRectangle(5, 1, ' ', 'B');
          PrintRectangle(0, 2, '-', '+');
+         PrintTableBorders(3, 2, 4, 1);
+         PrintTableBorders(2, 1, 6, 3);
       } 
                                                              // PrintReps chunk
       // Print n copies of s, end to end.
@@ -53,6 +55,25 @@ namespace IntroCS
       {                                                     // body
          Console.WriteLine("Not implemented");
       }
+                                                     //PrintTableBorders chunk
+      // Print the borders of the cells of a table. 
+      // The borders divide the table into rows and columns.
+      // The blank space within a cell is width characters wide
+      // for height lines.
+      // The horizontal borders are dashes '-' and the vertical borders
+      // are vertical bars, '|', except that all intersections are '+'.
+      // For example PrintTableBorders(3, 2, 4, 1) prints
+      //    +----+----+----+
+      //    |    |    |    |
+      //    +----+----+----+
+      //    |    |    |    |
+      //    +----+----+----+
+      static void PrintTableBorders(int columns, int rows, 
+                                    int width, int height)
+      {                                                     // body
+         Console.WriteLine("Extra Credit Not implemented");
+      }
+
    }
 }
 
