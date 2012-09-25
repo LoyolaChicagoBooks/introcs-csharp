@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<project name="Music" default="build" basedir=".">
+
+  <description>NAnt build file for Music examples</description>
+
+  <!-- set true/false to include/exclude debugging information -->
+  <property name="debug" value="true" overwrite="false"/>
+
+  <!-- all of our projects default to "bin" in top-level project folder -->
+  <property name="build.dir" value="bin"/>
+
+  <!-- this line must be included in all projects to get NUnit support -->
+  <include buildfile="../../include/NUnit.include" />
+
+  <target name="clean" description="remove all generated files">
+    <delete dir="${build.dir}" failonerror="false"/>
+  </target>
+
+  <target name="build" description="compiles the source code">
+    <mkdir dir="${build.dir}" failonerror="false"/>
+
+    <csc target="exe" output="${build.dir}/Scales.exe" debug="${debug}">
+      <sources>
+        <include name="Scales/*.cs"/>
+      </sources>
+      <references>
+        <include name="${nunit.dir}/**/${nunit.dll}"/>
+      </references>
+    </csc>
+
+    <csc target="library" output="${build.dir}/Rational.dll" debug="${debug}">
+      <sources>
+        <include name="Rational/*.cs"/>
+      </sources>
+      <references>
+        <include name="${nunit.dir}/**/${nunit.dll}"/>
+      </references>
+    </csc>
+
+    <csc target="library" output="${build.dir}/Notation.dll" debug="${debug}">
+      <sources>
+        <include name="Notation/*.cs"/>
+        <include name="Rational/*.cs"/>
+        <exclude name="Rational/AssemblyInfo.cs"/>
+      </sources>
+      <references>
+        <include name="${nunit.dir}/**/${nunit.dll}"/>
+      </references>
+    </csc>
+
+  </target>
+
+  <target name="test" depends="build">
+    <nunit2>
+      <formatter type="Plain" />
+      <test assemblyname="${build.dir}/Rational.dll" />
+      <test assemblyname="${build.dir}/Notation.dll" />
+    </nunit2>
+  </target>
+
+</project>
