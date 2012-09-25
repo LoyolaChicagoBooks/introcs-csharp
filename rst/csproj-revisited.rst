@@ -151,7 +151,7 @@ On a much smaller scale than the project, this exercise offers you
 experience 
 writing classes implementing and using an interface
 
-1. Copy project :file:`IGame/IGame` to your space or to a different name.
+1. Copy example folder :file:`igame_stub` to :file:`igame`.
 
 2. Look at the IGame interface in :file:`i_game.cs`. Then look at :file:`addition_game.cs`, 
    that implements the interface. See how a new ``AdditionGame`` can be added to list of
