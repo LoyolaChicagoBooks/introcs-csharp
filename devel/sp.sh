@@ -1,6 +1,6 @@
 #! /bin/bash
 
-export CONFIG=default
+export CONFIG=spellcheck
 
 # assume start in devel dir or rst
 cd ../rst
