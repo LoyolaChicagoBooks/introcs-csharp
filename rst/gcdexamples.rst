@@ -228,7 +228,7 @@ GCD section.  It is a repetitive pattern,
 and a loop can be used, looping while ``b != 0``.
 One extra variable needs to be introduced for the remainder, 
 to get both ``a`` and ``b`` ready
-for the next time through the loop:
+for the next time through the loop.  This code is from :file:`g_c_d_remainder_loop.cs`:
 
 .. literalinclude:: ../examples/g_c_d_remainder_loop.cs
    :start-after: gcd chunk
