@@ -13,6 +13,7 @@
 
 import sys, os
 
+print (sys.path)
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -25,7 +26,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax' ]
+extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax', 'sphinxcontrib.spelling' ]
 
 todo_include_todos = True
 
@@ -267,4 +268,14 @@ texinfo_documents = [
 
 epub_basename = 'comp170'
 
+
+# -- Options for Spelling 
+
+spelling_word_list_filename='wordlist.txt'
+spelling_ignore_wiki_words=True
+
+import os
+sys.path.append(os.getcwd())
+from introcs_filters import *
+spelling_filters = [ JavaCaseFilter, AcronymFilter ]
 
