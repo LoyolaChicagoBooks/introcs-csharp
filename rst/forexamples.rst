@@ -565,8 +565,8 @@ from the last exercise, *and* include another function::
    // should be followed by exactly one newline in all cases.
    // For example, GroupFlips(10, 4) *could* produce:
    //   Heads Heads Tails Heads 
-   //   Heads Tails Heads Tales
-   //   Tales Tales 
+   //   Heads Tails Heads Tails
+   //   Tails Tails 
    static void GroupFlips(int total, int groupSize)
 
 Test this with a variety of calls to ``GroupFlips`` in ``Main``.  
