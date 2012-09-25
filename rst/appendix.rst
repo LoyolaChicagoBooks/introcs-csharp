@@ -18,7 +18,6 @@ Appendix
    hgteamwork
    offerings
    acknowledgments
-   todolist
 
 .. comment
    lab-monodevelop.rst
