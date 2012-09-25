@@ -556,13 +556,17 @@ Group Flips Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program ``format_flips.cs``. It should include the function ``Flip()``, 
-from the last exercise, but include another function::
+from the last exercise, *and* include another function::
  
    // Print out the results from the total number of random flips of a coin.
    // Group them groupSize per line, each followed by a space.
    // The last line may contain fewer than groupSize flips 
    // if total is not a multiple of groupSize.  The last line
    // should be followed by exactly one newline in all cases.
+   // For example, GroupFlips(10, 4) *could* produce:
+   //   Heads Heads Tails Heads 
+   //   Heads Tails Heads Tales
+   //   Tales Tales 
    static void GroupFlips(int total, int groupSize)
 
 Test this with a variety of calls to ``GroupFlips`` in ``Main``.  
