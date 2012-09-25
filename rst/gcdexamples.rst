@@ -225,10 +225,14 @@ GCD Remainder Loop
 
 There are several ways to code the shorter Euclidean algorithm at the beginning of this
 GCD section.  It is a repetitive pattern, 
-and a loop can be used, looping while ``b != 0``.
-One extra variable needs to be introduced for the remainder, 
-to get both ``a`` and ``b`` ready
-for the next time through the loop.  This code is from :file:`g_c_d_remainder_loop.cs`:
+and a loop can be used.  There are two parameters, ``a`` and ``b``, to the gcd, 
+and they can be successively changed, suggesting a loop.  What is the continuation
+condition?  You stop when ``b`` is 0, so you continue while ``b != 0``.
+The parameters ``a`` and ``b`` need to be replaced by ``b`` and ``a % b``.
+One extra variable needs to be introduced to make this double change work.  The simplest
+is to introduce a variable ``r`` for the remainder.  Check and see for yourself that you
+need an extra variable like ``r``.
+This code is from :file:`g_c_d_remainder_loop.cs`:
 
 .. literalinclude:: ../examples/g_c_d_remainder_loop.cs
    :start-after: gcd chunk
