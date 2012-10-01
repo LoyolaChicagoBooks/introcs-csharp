@@ -45,7 +45,7 @@ In ``first_file.cs``, we explicitly coded reading two lines.  You will often
 want to process each line in a file, without knowing the total number of
 lines ahead of time.  This will require a loop and a new test to make sure that you
 have not yet come to the end of the file's stream.  You can use the ``EndOfStream``
-method, though it has the wrong sense (true at the end of the file), so we negate it,
+property. It has the wrong sense (true at the end of the file), so we negate it,
 testing for ``!reader.EndOfStream`` in the example program ``print_file_lines.cs``.
 This little program reads and prints the contents of a file specified by the 
 user, one line at a time:
@@ -135,8 +135,6 @@ from a file containing one number per line (plus possible white space)::
 
 Below and in project ``files/sum_file.cs`` is a more elaborate, complete example,
 that also skips lines that contain only whitespace.  
-``Main`` takes a command line parameter containing the filename, 
-and it gives several checks and warning messages.  
 
 .. literalinclude:: ../examples/files/sum_file.cs
 
@@ -149,6 +147,11 @@ It is true if the named files exists in the file system.
 
 .. index::
    double: example; copy file to upper case
+   
+
+.. todo::
+   
+   Safe Sum File Exercise
        
 
 Example Copy to Upper Case

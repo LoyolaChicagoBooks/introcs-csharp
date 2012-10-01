@@ -26,7 +26,7 @@ The first line of ``Main`` creates a ``StreamWriter`` object assigned to the
 variable  ``reader``.  A ``StreamWriter`` 
 links C# to your
 computer's file system for writing, not reading. 
-Files are objects, like arrays, and use the ``new`` syntax to create a new one. 
+Files are objects, like a Random, and use the ``new`` syntax to create a new one. 
 The parameter in the constructor
 gives the name of the file to connect to the program, ``sample.txt``. 
 
@@ -41,7 +41,7 @@ current directory. :ref:`file-and-directory-paths` discusses
 the use of directory separators.
 
 The second and third lines of ``Main`` write the specified strings to lines in the file.
-Note that the ``StreamReader`` object ``reader``, not ``Console``, 
+Note that the ``StreamWriter`` object ``reader``, not ``Console``, 
 comes before the dot and method.
 
 The last line of ``Main`` is important for cleaning up. Until this line, this
@@ -64,11 +64,11 @@ Usually this means you forgot to close the file!
 
 Switch focus and look at the examples
 directory. You should now see a file ``sample.txt``. You can open
-it in :ref:`jEdit` (or your favorite word processor) and see its contents, or
+it in :ref:`jEdit` (or your favorite text processor) and see its contents, or
 jut print it to your console window.
 
-As with ``Console`` methods ``Write`` and ``WriteLine``, 
+As you can use a :ref:`Format-Strings` with 
+``Console`` methods ``Write`` and ``WriteLine``, 
 you can also use a format string with a ``StreamWriter``, 
 and embed fields by using braces in 
 the format string.
-

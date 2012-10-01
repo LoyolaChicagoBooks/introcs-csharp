@@ -5,18 +5,15 @@ namespace IntroCS
 {
    class SumFile  // sum a file integers, one per line
    {
-      public static void Main(string[] args)
+      static void Main()
       {
-         if (args.Length == 0){
-            Console.WriteLine(
-               "Expect on command line: a file name for a file of integers!");
-
-         }
-         else if (File.Exists(args[0])) {
-            Console.WriteLine("The sum is {0}", CalcSum(args[0]));
+         string filename = UI.PromptLine(
+                            "Enter the name of a file of integers: ");
+         if (File.Exists(filename)) {
+            Console.WriteLine("The sum is {0}", CalcSum(filename));
          }
          else {
-            Console.WriteLine("Bad file name {0}", args[0]);
+            Console.WriteLine("Bad file name {0}", filename);
          }
       }
 

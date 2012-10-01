@@ -7,7 +7,8 @@ namespace GradeFiles
    {
       public static void Main(string[] args)
       {
-         // test setup!  Remove this code in the final version.
+         // Test your setup!  Remove this code in the final version.  Make
+         //   sure you are starting off in the same folder as the data files!
          Console.WriteLine(Directory.GetCurrentDirectory());
       }
 
@@ -21,14 +22,6 @@ namespace GradeFiles
             }
          }
          return -1;
-      }
-
-      /** Return a line from the keyboard
-       * after displaying the prompt. */
-      static string InputLine(string prompt)
-      {
-         Console.Write(prompt);
-         return Console.ReadLine();
       }
    }
 }
