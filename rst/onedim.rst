@@ -167,31 +167,42 @@ By convention, the formal parameter for ``Main`` is called ``args``,
 short for arguments.  
 
 Compile and run the program from the command line.
-Run it again with some things at the end of the line like::
+Run it again with some things at the end of the line like:
 
-     mono PrintParam.exe hi there 123
+..   code-block:: none
 
-This should print for you::
+     mono print_param.exe hi there 123
+
+This should print for you:
+
+..  code-block:: none
 
     There are 3 command line parameters.
     hi
     there
     123
 
-See what quoted strings do.  Run the command::
+Our run scripts also allow command line parameters.  You can compile and run all at
+once to get the same result with Windows:
 
-     mono PrintParam.exe "hi there" 123
+..   code-block:: none
 
+     run.cmd print_param hi there 123
+
+or OS-X:
+ 
+..   code-block:: none
+
+     sh run.sh print_param hi there 123
+
+See what quoted strings do.  Use command line parameters (with the quotes)  
+``"hi there" 123``.
 This should print for you::
 
     There are 2 command line parameters.
     hi there
     123
     
-The quotes are important in many places.  For instance the **message** in the 
-``hg commit -m message`` command must be one parameter.  
-That generally requires quotes, unless you are given to one-word descriptions.
-
 .. index::
    double: string; Split
    
@@ -204,7 +215,9 @@ A string method producing an array:
 
 ``string[] Split(char`` **separator** ``)``   
     Returns an array of substrings from *this* string.  They are the pieces left
-    after chopping out the separator character from the string.  Example:: 
+    after chopping out the separator character from the string.  Example: 
+
+    ..  code-block:: none
     
 		csharp> var fruitString = "apple pear banana";
 		csharp> string[] fruit = fruitString.Split(' ');
@@ -213,6 +226,9 @@ A string method producing an array:
 		csharp> fruit[1];
 		"pear"
 		
+Note: The response with the list in braces is a purely *csharp* convention for displaying
+sequences for the user.  There is no corresponding string displayed by C# Write commands.
+
 Split is useful for parsing a line with several parts::
 
     string line = UI.PromptLine("Enter integers on a line");
@@ -227,6 +243,9 @@ and "22".  If we want them all converted to integers and place in a new array,
 we need to create an array of the same length, and loop through, parsing each
 string in ``tokens`` into an integer in the corresponding location in ``nums``.
 
+The use of the same index in more than one array is a standard way to have entries in
+corresponding positions.
+
 .. index:: alias
 
 .. _alias:
@@ -234,7 +253,7 @@ string in ``tokens`` into an integer in the corresponding location in ``nums``.
 References and Aliases
 -------------------------
 
-Object variables, like arrays, being references has important implications for
+Object variables, like arrays, are references, and this has important implications for
 assignment.
 
 With a primitive type like an ``int``, an assignment copies the data:
@@ -303,7 +322,7 @@ would *change* nums, so it ends up containing elements 10, 20, and 5.
 Anonymous Array Initialization
 --------------------------------
 
-Sometimes you want to use an array with specific values only
+Sometimes you only want to use an array with specific values 
 as a parameter to a function.  You could write something like ::
 
     int[] temp = {3, 1, 7};
@@ -332,9 +351,11 @@ Command Line Adder Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program ``adder.cs`` that calculates and prints the sum of 
-command line parameters, so ::
+command line parameters, so in Windows:
 
-    mono Adder.exe 2 5 22
+..  code-block:: none
+
+    run.cmd adder 2 5 22
     
 would print 29.
 
@@ -435,16 +456,9 @@ function with heading::
 
 ..  later
     example `arraysFor <../examples/arraysForfiles.zip>`_, finish in class
-    In loops example, Notebook class, add print notes backwards,
-     interactive input loop, sentinels
-     Finish `Scanner <JDK15Library.html#Scanner>`_ in the 1.5 lib web page
-     Fill out stubs in the example utility class
-    `UI <../examples/UIfiles.zip>`_.
-     `Assignment 3 <../hw/hw3.html>`_
+    
      loops project examples
-     sumToN
      bitsNeeded
-     See JDK library: String format method
      final loops project example
      loan table
      work in class stub of example
