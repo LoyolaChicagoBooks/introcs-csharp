@@ -1,3 +1,5 @@
+.. index:: NAnt
+
 .. _nant:
 
 NAnt and Automatic Compilation 
@@ -25,6 +27,11 @@ language, see http://markuplanguages.courses.thiruvathukal.com.
 
 To get you started with one-file programs in your examples folder, 
 you do not need to know anything about NAnt at all.
+
+.. index:: build scripts
+   run script
+   
+.. _build-scripts:
 
 Convenience Build Scripts
 ----------------------------------
@@ -63,6 +70,11 @@ There are four scripts.  Example calls are given for Windows and then Mac/Linux.
     | run.cmd print_param first second third
     | sh run.sh print_param first second third
     
+  An advantage of the run scripts is that they automatically find and include
+  any code needed from our library classes, in particular UIF and UI.
+  Using gmcs and these libraries requires extra verbiage that we are avoiding
+  by using a run script.
+    
 - clean (remove all build products for a program):
 
     | clean.cmd birthday1
@@ -77,6 +89,34 @@ and continue until you have fixed and tested the program thoroughly.
 
 This is all you need for single-file programs.  
 
+.. index::  work folder
+
+.. _work-folder:
+
+A Folder For Your Work
+----------------------
+
+If you want to add all your single-file programs to the examples folder,
+you can complue and run them just like the given examples, with the appropriate
+run script.  If you would like your work separate, here is a suggested setup:
+
+#. The :file:`examples` and :file:`include` folders 
+   should be sitting in some parent folder, 
+   like :file:`comp170files`.  In the same parent folder create a new 
+   sub-folder for your work.
+   To be specific we will call it :file:`work`.
+
+#. Copy from folder :file:`examples` to :file:`work`:
+   
+   * :file:`Generic.build` 
+   * All the scripts for your operating system (ending in .cmd for Windows, 
+     and .sh for a Mac).  
+
+#. Then write a program in :file:`work`, and test it with your run script 
+   (run.cmd or run.sh).  And so on as you write more programs....
+   As long as you use namespace IntroCS, you can freely use the library classes
+   like ``UI`` and ``UIF``.
+       
 Running Programs in Subdirectories of examples
 ----------------------------------------------
 

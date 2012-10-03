@@ -1,6 +1,7 @@
 
 .. index::
-   triple: homework; input-output; decision
+   double: homework; input-output
+   double: homework; decision
 
 .. _homework-grade-calculation:
 
@@ -31,16 +32,48 @@ your program according to the guidelines set forth here.
 Program Summary
 ---------------
 
-We're going to begin with an *executive summary* of what the
-first homework assignment will actually accomplish. We want
-to train your brain early about the importance of not only
-understanding what you are doing but also the great 
-importance of being able to explain your ideas to others. 
-
 Our first program is based on a common task that every
 course professor/instructor needs to do: make grades. In 
 any given course, there is a *grading scale* and a set of
-*categories*.
+*categories*.  
+
+Here is sample output from two runs of the program. 
+The only data entered by the user are
+show in **boldface** for illustration here.
+
+One successful run with the data used above:
+
+    | Enter weights for each part as an integer 
+    | percentage of the final grade:
+    | Exams: **40**
+    | Labs: **15**
+    | Homework: **15**
+    | Project: **20**
+    | Participation: **10**
+    |
+    | Enter decimal numbers for the averages in each part:
+    | Exams: **50**
+    | Labs: **100**
+    | Homework: **100**
+    | Project: **100**
+    | Participation: **5**
+    |
+    | Your grade is 70.5%
+    | Your letter grade is C-.
+
+A run with bad weights:
+
+    | Enter weights for each part as an integer 
+    | percentage of the final grade:
+    | Exams: **30**
+    | Labs: **10**
+    | Homework: **10**
+    | Project: **10**
+    | Participation: **10**
+    |
+    | Your weights add to 70, not 100.
+    | This grading program is ending. 
+
 
 Details
 -------
@@ -97,7 +130,6 @@ covered extensively in courses like COMP 264/Systems
 Programming and even more advanced courses like Numerical
 Analysis, Comp 308.)
 
-
 We are going to pretend
 that we already know our score (as a percentage) for each
 one of these categories, so it will be fairly simple to
@@ -121,7 +153,9 @@ averages for each category to date:
 
 The following session with the ``csharp`` interpreter shows
 the how you would declare all of the needed variables and
-the calculation to be performed::
+the calculation to be performed:
+
+..  code-block:: none
 
     csharp> int exam_weight = 40;
     csharp> int lab_weight = 15;
@@ -150,25 +184,13 @@ the calculation to be performed::
 This is intended only to be as an example though. Your 
 program must ask the user to enter each of these variables.
 
-Here is an example of how to prompt for an exam weight and
-grade::
-
-    csharp> Console.WriteLine("Enter the weight for exams: ");
-    Enter the weight for exams: 
-    csharp> string input = Console.ReadLine();
-    csharp> int exam_weight = int.Parse(input);
-    csharp> Console.WriteLine("You entered {0} for exams.", exam_weight);
-    You entered 40 for exams.
-
-The code is similar for entering the exam grade. Where you
-see the ``int`` type, you'll want to use ``double``. We are
-going to leave this part to your imagination.
-
 Once we have all of the weights and scores entered, we
 can calculate the grade as follows.  This is a long
 expression: It is continued on multiple lines.  Recall all
-the ``>`` symbols are csharp prompts, not part of the
-expression::
+the ``>`` symbols are csharp prompts are not part of the
+expression:
+
+..  code-block:: none
 
     csharp> double grade = (exam_weight * exam_grade +  
           > homework_weight* homework_grade + 
@@ -176,7 +198,9 @@ expression::
           > participation_weight * participation_grade) / 100.0; 
 
 
-Then you can display the grade as a percentage::
+Then you can display the grade as a percentage:
+
+..  code-block:: none
 
     csharp> Console.WriteLine("Your grade is {0}%", grade);
     Your grade is 70.5%
@@ -208,7 +232,7 @@ But we are using *logic* to determine the grade in the
 cold reality that we all know and love: the bottom-line
 grade.
 
-This assignment is listed in the data chapter, 
+This assignment can be started after the data chapter, 
 because you can do most all of it with tools
 learned so far.  Add the parts with ``if`` statements
 when you have been introduced to ``if`` statements.
@@ -217,45 +241,71 @@ weights actually add up to 100.)
 
 You should be able to write the program more concisely
 and readably if you use functions developed
-in class for the prompting and user input.
+in class for the prompting user input.
 
-Usage
------
+Grading Rubric
+--------------
 
-Here is sample output from two runs of the program. 
-The only data entered by the user are
-show in **boldface** for illustration here.
+.. warning::
 
-One successful run with the data used above:
+   As a general rule, we expect programs to be complete, 
+   compile correctly, run, and be
+   thoroughly tested. We are able to grade an incomplete program 
+   but will only give at most 10/25
+   for effort. Instead of submitting something incomplete,
+   you are encouraged to complete your program and 
+   submit it per the late policy.  Start early and get help!
 
-    | Enter weights for each part as an integer 
-    | percentage of the final grade:
-    | Exams: **40**
-    | Labs: **15**
-    | Homework: **15**
-    | Project: **20**
-    | Participation: **10**
-    |
-    | Enter decimal numbers for the averages in each part:
-    | Exams: **50**
-    | Labs: **100**
-    | Homework: **100**
-    | Project: **100**
-    | Participation: **5**
-    |
-    | Your grade is 70.5%
-    | Your letter grade is C-.
+25 point assignment broken down as follows:
 
-A run with bad weights:
+- Enter weights, with prompts **[3]**
 
-    | Enter weights for each part as an integer 
-    | percentage of the final grade:
-    | Exams: **30**
-    | Labs: **10**
-    | Homework: **10**
-    | Project: **10**
-    | Participation: **10**
-    |
-    | Your weights add to 70, not 100.
-    | This grading program is ending. 
+- End if the weights do not add to 100: **[5]**
+
+- Enter grades, with prompts: **[3]**
+
+- Calculate the numerical average and display with a label: **[5]**
+
+- Calculate the letter grade and display witha label: **[5]**
+
+- Use formatting standards for indentation: **[4]**
+  
+  * Sequential statements at the same level of indentation
+  * Blocks of statements inside of braces indented
+  * Closing brace for a statement block always lining up with the 
+    heading before the start of the block.
+
+
+Logs and Partners
+-------------------
+
+You may work with a partner, following good pair-programming practice,
+sharing responsibility for all parts.
+
+Only one of a pair needs to submit the actual programming assignment.
+However *both* students, *independently*, should write and
+include a log in their
+Homework submission.  Students working alone should also submit a log, 
+with fewer parts.
+
+Each individual's log should indicate each of the following clearly:
+
+- Your name and who your partner is (if you have one)
+- Your approximate total number of hours working on the homework
+- Some comment about how it went - what was hard ...
+- An assessment of your contribution (if you have a partner) 
+- An assessment of your partner's contribution (if you have a partner).  
+
+Just omit the parts about a partner if you do not have one.
+
+.. note::
+
+   Name the log file with the exact file name: 
+   "log.txt" and make it a plain text file.  
+   You can create it in a program editor or in a fancy document editor.
+   If you use a fancy document editor, be sure to a "Save As..." dialog,
+   and select the file format "plain text",
+   usually indicated by the ".txt" suffix.  
+   It does not work to save a file in the default word processor format, and
+   then later just change its name (but not its format) in the file system. 
 
