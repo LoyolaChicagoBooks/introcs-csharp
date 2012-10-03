@@ -149,10 +149,17 @@ It is true if the named files exists in the file system.
    double: example; copy file to upper case
    
 
-.. todo::
-   
-   Safe Sum File Exercise
-       
+Safe Sum File Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Copy :file:`sum_file.cs` to :file:`safe_sum_file.cs`.  Modify the program: Write
+a new function with the heading below.  Use it in ``Main``, in place of the ``if`` 
+statement that checks (only once) for a legal file::         
+
+    // Prompt the user to enter a file name to open for reading.
+    // Repeat until the name of an existing file is given.
+    // Open and return the file.
+    public static StreamReader PromptFile(string prompt)
 
 Example Copy to Upper Case
 --------------------------

@@ -31,7 +31,7 @@ Goals
 
 In this lab, we're going to practice:
 
-- creating arrays that hold numerical data.
+- creating arrays that hold numerical data
 
 - populating an array with data
 
@@ -43,7 +43,8 @@ In this lab, we're going to practice:
 Tasks
 -----
 
-Start from the stub in the examples, :file:`array_lab_stub.cs`.
+Copy the example file :file:`array_lab_stub.cs` to
+:file:`array_lab.cs`.
 Complete the body of a function
 for each main part, and call each function in ``Main`` several times with
 actual parameters chosen to test it well.  To label your illustrations, make
@@ -61,7 +62,7 @@ Recall that you can declare an array in two ways::
 The first declaration creates an array initialized to
 all zeroes. The second creates an
 array where the elements are taken from the bracketed list of
-values. We're going to use the second line for this lab.
+values. The second will be convenient to set up tests for this lab.
 
 #. Complete and test the function with documentation and heading:
 
@@ -93,7 +94,7 @@ values. We're going to use the second line for this lab.
    .. literalinclude:: ../examples/array_lab_stub.cs
       :start-after: CountEven chunk
       :end-before: PairwiseAdd chunk
-
+   
 #. Complete and test the function with documentation and heading:
 
    .. literalinclude:: ../examples/array_lab_stub.cs
@@ -105,6 +106,9 @@ values. We're going to use the second line for this lab.
    results. Make sure that the arrays all have the same
    dimensionality before proceeding.
    
+   This section is a warm-up for the next one.  It is not required
+   if you do the next one:
+
 #. Complete and test the function with documentation and heading:
 
    .. literalinclude:: ../examples/array_lab_stub.cs
@@ -124,20 +128,23 @@ values. We're going to use the second line for this lab.
    a "short-circuit" loop.  What do you need to find to be
    immediately sure you know the answer?
    
-#. Complete and test the function with documentation and heading:
+#. **20 % extra credit:** 
+   Complete and test the function with documentation and heading:
 
    .. literalinclude:: ../examples/array_lab_stub.cs
       :start-after: PrintAscendingValues chunk
       :end-before: PrintRuns chunk
 
 
-#. Complete and test the function with documentation and heading:
+#. **20 % extra credit:** 
+   Complete and test the function with documentation and heading:
 
    .. literalinclude:: ../examples/array_lab_stub.cs
       :start-after: PrintRuns chunk
       :end-before: PrintRuns chunk
 
-#. Given two arrays, ``a`` and ``b`` that represent vectors. Write a
+#. **20 % extra credit:** 
+   Given two arrays, ``a`` and ``b`` that represent vectors. Write a
    function that computes the vector dot product of these two
    floating point arrays. The vector dot product (in mathematics) is defined as the 
    sum of ``a[i] * b[i]`` (for all i). Here's an example of how it
@@ -153,7 +160,8 @@ values. We're going to use the second line for this lab.
       
    From here on, create your own headings.
       
-#. Suppose we have loaded an array with the digits of an integer,
+#. **20 % extra credit:** 
+   Suppose we have loaded an array with the digits of an integer,
    where the highest power is kept in position 0, next highest in
    position 1, and so on. The ones position is always at position
    array.Length - 1::
@@ -179,7 +187,8 @@ values. We're going to use the second line for this lab.
    numbers to be placed
    in the array, so negative numbers are not addressed.
 
-#. Suppose that we not only have the digits but also the *base* that
+#. **20 % extra credit:** 
+   Suppose that we not only have the digits but also the *base* that
    in which the number is represented. (The base can be at most
    10 if it uses only digits for place value.)
    Write a function (or revise the

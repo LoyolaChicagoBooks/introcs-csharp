@@ -37,6 +37,7 @@ loop, so there is no need to gather data before the loop::
         c = UI.PromptInt("Enter integer hypotenuse: ");
         if (a*a + b*b != c*c) {
             Console.WriteLine("Not a right triangle: Try again!");
+        }
     } while (a*a + b*b != c*c);
     
 The general form of a |do-while| statement is

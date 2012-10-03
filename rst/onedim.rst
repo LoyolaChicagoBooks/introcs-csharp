@@ -275,10 +275,10 @@ not the array data itself, so both end up pointing at the *same*  actual array:
 
 Hereafter, array assignments like::
 
-   a[2] = -10;
+   b[2] = -10;
    d[1] = 55;
    
-would both change the *same* array.  Now ``a`` and ``d`` are essentially
+would both change the *same* array.  Now ``b`` and ``d`` are essentially
 names for the same thing (the actual array).  The technical term matches English:
 The names are *aliases*.
 
@@ -333,12 +333,21 @@ do this without using a name::
 
     SomeFunc(new int[] {3, 1, 7});
 
-It is essential to include the ``new int[]``, not just the ``{3, 1, 7}``.
+Like with the use of ``var``, the compiler can infer the type of the array, and the
+last example could be shortened to  ::
+
+    SomeFunc(new[] {3, 1, 7});
+
+It is essential to include the ``new int[]`` or ``new[]``, not just the ``{3, 1, 7}``.
+
 
 Such an approach could also be used if you want to return a fixed
 length array, where you have values for each parts, as in::
-
-    return new int[] {minVal, maxVal};
+    
+    int minVal = ...
+    int maxVal = ...
+    
+    return new[] {minVal, maxVal};
     
     
 .. index::
