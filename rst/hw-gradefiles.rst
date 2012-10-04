@@ -234,6 +234,9 @@ Hints
 #. You cannot have one fixed formula to calculate the final weighted grade,
    because you do not know the number of categories when writing the code. 
    You will have to accumulate parts in a loop.
+
+#. There are run scripts in the folder.  They work just like the one
+   in the examples folder.  Test out your work every time you add a piece!
    
 Grading Rubric (25 points)
 ---------------------------
