@@ -6,7 +6,9 @@ Precedence of Operators
 ==========================
 
 Earlier lines have higher precedence.  
-Only operators used in these notes are included::
+Only operators used in these notes are included:
+
+..  code-block:: none
 
     obj.field  f(x)  a[i]  n++  n--  new
     +  -  ! (Type)x (Unary operators)   

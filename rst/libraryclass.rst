@@ -61,11 +61,23 @@ To reference the static functions in the different class ``UIF``, we put ``UIF.`
 (with the dot) at the start of each reference to a static function in 
 the class ``UIF``.
 
-If you run the generic nant build script from the examples directory,
-it is set up to automatically allow the use of 
-files in the directory :file:`examples/intro_cs_lib`, so our class ``UIF`` can
-be used freely.  We will use in future examples without special note, and
-you may use it too, for programs you add to the examples directory.  
+.. warning::
+
+   Do not use the command ``gmcs addition3.cs``.  You would need a lot of other
+   syntax to make sure the library is included.  We go a different route:
+   In this case you should run either Windows
+   
+       run.cmd addition3
+          
+   or Mac
+      
+      sh run.sh addition3
+      
+   and similarly for other programs that use our library classes like ``UIF``.
+    
+All the extra necessary syntax is included in the :ref:`nant` built file and
+in the :ref:`build-scripts` to compile a program using library classes, finding the 
+library files in the directory :file:`examples/intro_cs_lib`.  
 
 Though we have not discussed all the C# syntax needed yet, there is also an 
 improved class ``UI`` that may be used: It includes all the function

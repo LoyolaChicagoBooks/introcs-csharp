@@ -11,7 +11,7 @@ Sorting Algorithms
 
 Sorting algorithms represent foundational knowledge that every computer scientist and 
 IT professional should at least know at a basic level. And it turns out to be a great
-way of learning about why arrays are important well beyond mathematics. 
+way of learning about why arrays are important. 
 
 In this section, we're going to take a look at a number of well-known sorting algorithms
 with the hope of sensitizing you to the notion of *performance*--a topic that is covered
@@ -36,7 +36,8 @@ swap two data values at positions ``m`` and ``n`` in a given integer array:
    :end-before: chunk-exchange-end
    :linenos:
 
-In general, swapping two values in an array is no different than swapping any two integers.
+In general, swapping two values in an array is 
+no different than swapping any two integers.
 Suppose we have the following integers ``a`` and ``b``::
 
    int a, b;
@@ -48,7 +49,8 @@ Suppose we have the following integers ``a`` and ``b``::
    a = b;
    b = t;
 
-After this code does its job, the value of ``a`` would be 35 and the value of ``b`` would be 25.
+After this code does its job, the value of ``a`` would be 35 
+and the value of ``b`` would be 25.
 
 So in the ``exchange()`` function above, 
 if we have two different array elements at positions ``m`` and ``n``,
@@ -56,9 +58,10 @@ we are basically getting each value at these positions,
 e.g. ``data[m]`` and ``data[n]`` and treating them
 as if they were ``a`` and ``b`` in the above code.
 
-You might find it helpful at this time to verify that the above code does what we're saying it does, 
-and a
-good way is to type it directly into the C# interpreter (csharp) so you can see it for yourself.
+You might find it helpful at this time to verify that 
+the above code does what we're saying it does, and a
+good way is to type it directly into the C# interpreter (csharp) 
+so you can see it for yourself.
 
 The ``exchange()`` function is vital to all of the sorting algorithms in the following way. 
 It is used whenever two items are found to be out of order. 
@@ -300,8 +303,14 @@ there are limits on available memory (e.g. embedded systems).
 Quicksort a.k.a. Partition Sort
 ----------------------------------
 
-This sort is a more advanced example that uses *recursion*. We're going to explain it 
-elsewhere in our notes/book.
+This sort is a more advanced example that uses *recursion*. 
+
+.. later 
+   
+   We're going to explain it 
+   elsewhere in our notes/book.
+   
+   We'll have a bit more to say about this algorithm in our discussion of recursion.
 
 Quicksort is a rather interesting case. It is often perceived to be one of the
 best sorting algorithms but, in practice, has a worst case performance also on the
@@ -313,7 +322,6 @@ it does better at :math:`O(N  \log N)`.
    :end-before: chunk-quicksort-end
    :linenos:
 
-We'll have a bit more to say about this algorithm in our discussion of recursion.
 
 .. index::
    single: Random
@@ -357,7 +365,7 @@ There are a few things to note in this code:
 Timing
 -------
 
-In this code, we are actually beginning to make use of *classes* that are part of the
+In this code, we are using another class from the
 .Net framework/library. 
 
 We need the ability to time the various sorting algorithms. Luckily, .Net gives us a
@@ -436,9 +444,6 @@ of the sorting algorithms we want to benchmark:
 When you get ``watch.ElapsedMilliseconds``, this gives you an integer (long) number of
 milliseconds (thousandths of a second).
 
-Getting the Code
----------------------
-
 You can find this code in  :file:`examples/arrays/sorting.cs`. 
 
 Running the Code
@@ -487,4 +492,4 @@ as follows:
 .. [TCSortingJava] http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm
 
 .. out of date
-   .. [SortingFolder] https://bitbucket.org/gkthiruvathukal/introcs-csharp/src/d82c38851f6a/projects/Arrays/Sorting/main.cs
+   .. [SortingFolder] https://bitbucket.org/gkthiruvathukal/introcs-csharp/src/default/projects/Arrays/Sorting/main.cs
