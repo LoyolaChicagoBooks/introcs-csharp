@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-
+ 
 namespace IntroCS
 {
    public class Sorting
@@ -92,7 +92,7 @@ namespace IntroCS
             }
          }
       }
-      // chunk-shellsort-end
+      // chunk-shellsort-end 
 
 
       // chunk-shellsort-naive-begin
@@ -231,7 +231,7 @@ namespace IntroCS
          Console.WriteLine ("Insertion Sort: {0:F3}", elapsedTime);
 
          IntArrayGenerate (data, randomSeed);
-         watch.Reset ();
+         watch.Reset (); 
          watch.Start ();
          IntArraySelectionSort (data);
          watch.Stop ();

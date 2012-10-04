@@ -54,7 +54,7 @@ namespace IntroCS
 	     Console.WriteLine("| " + format, sum);
 	  }
                                          // end of print with siums chunk
-     /** Return s repeated n times. */
+     // Return s repeated n times. 
      static string StringOfReps(string s, int n)
      {
         string ret = "";
