@@ -38,9 +38,10 @@ people, by the people, for the people, shall not perish from the earth.";
          Dictionary<string, int> wc = GetCounts(Gettysburg, ignore);
          PrintCounts(wc, 3);
       }
+      
                                                   // start chunk
-      /** Return a Dictionary of word:count pairs from parsing s,
-       *  excluding all strings in ignore. */
+      // Return a Dictionary of word:count pairs from parsing s,
+      //  excluding all strings in ignore. 
       public static Dictionary<string, int> GetCounts(string s,
                                                       HashSet<string> ignore)
       {
@@ -61,7 +62,7 @@ people, by the people, for the people, shall not perish from the earth.";
          return wc;
       }
 
-      /** Print each word and its count, if the count is at least minCount. */
+      // Print each word and its count, if the count is at least minCount. 
       public static void PrintCounts(Dictionary<string, int> wc, int minCount)
       {
          List<string> words = new List<string>(wc.Keys);

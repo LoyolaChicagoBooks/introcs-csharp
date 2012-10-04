@@ -12,37 +12,40 @@ Goals for this lab:
 Overview
 ~~~~~~~~~~
 
+Copy folder :file:`examples/dict_lab_stub` to :file:`examples/dict_lab`.
+
 The idea of this lab is to replace project file 
-:file:`examples/dict_lab_stub/fake_help.cs` with an improved
+:file:`examples/dict_lab/fake_help.cs` with an improved
 project. 
 
-Open :file:`examples/fake_help_verbose.cs` and
+Before we get there, open the comparison program
+:file:`examples/fake_help_verbose.cs` and
 look at the methods ``GetParagraphs()`` and ``GetDictionary()``.
 All the strings for the responses are pre-coded for you there, but if
-you were writing your own it would be a pain. There is all the
+you were writing your own methods, it would be a pain. There is all the
 repetitious code to make multiline strings and then to add to the
 List and Dictionary. This lab will provide simple versatile methods to
-fill a ``List<string>`` or a ``Dictionary<string, string>`` which only need
+fill a ``List<string>`` or a ``Dictionary<string, string>``: You only need
 you to write the string data itself into a text file, with the only
 overhead being a few extra newlines. Minor further adaptations could
 save time later in your game project, too.
 
-Copy folder examples/dict_lab_stub to examples/dict_lab, and look in the new folder.
-
-In the lab project with Main class 
-:file:`examples/dict_lab/fake_help.cs`,
-you make the List and Dictionary filling code more general.  The stubs are moved
-to the class FileUtil for easy reuse.  The main program chooses the files to read.
+Look in your new :file:`lab_dict` folder at the file 
+:file:`fake_help.cs`.  It creates the ``List`` ``guessList`` and the
+``Dictionary`` ``responses`` using more general functions that you need to fill in. 
+The stubs for these new versions are put in 
+the class ``FileUtil`` for easy reuse.  ``Main`` calls these functions 
+and chooses the files to read.
 The results will look the same as the original program to the user, 
 but the second version will be easier 
-for a programmer to read and generalize to other situations 
+for a programmer to read and generalize:  It will be easier in other situations 
 where you want lots of canned data 
 in your program (like in a game you might write soon).
 
 You will need to complete very short versions of functions
 ``GetParagraphs`` and ``GetDictionary`` that have been moved to
 :file:`examples/dict_lab/file_util.cs` and now
-take a StreamReader as parameter.
+take a ``StreamReader`` as parameter.
 The files that they read will contain the basic data.  
 You can look in the lab project at the first data file:
 :file:`help_not_defaults.txt`, and the beginning is shown below:  
@@ -65,23 +68,23 @@ Steps
 All of the additions you need to make are in the class ``FileUtil``.
 
 The class already has one completed method, ``GetDataReader``, 
-that is a kludge to make opening files work either if the file is in the 
-main project folder or two folders below with the exe file 
-(so no need for special run configurations).  This function is used
-in the Main program to read the two data files.
+This function is used
+in ``Main`` to read the two data files.  It exits the program gracefully with
+an error message if the file is missing.
 
 ReadParagraph
 ~~~~~~~~~~~~~~
 
-The first method is useful by itself and later for use in the new
-``GetParagraphs`` and ``GetDictionary``.  A stub is in :file:`file_util.cs`:
+The first method to complete in :file:`file_util.cs`
+is useful by itself and later for use in the new
+``GetParagraphs`` and ``GetDictionary``.  See the stub:
 
 .. literalinclude:: ../examples/dict_lab_stub/file_util.cs
    :start-after: ReadParagraph chunk
    :end-before: chunk
 
 The first call to ``ReadParagraph``, using the file illustrated above, should
-return the following (showing and emphasizing the escape codes for the newlines)::
+return the following (showing the escape codes for the newlines)::
 
     "Welcome to We-Give-Answers!\nWhat do you have to say?\n"
 
@@ -90,10 +93,12 @@ and then the reader should be set to read the goodbye paragraph
 
 To code, you can read lines one at a time, and append them to the part of the
 paragraph read so far. There is one thing to watch out for: The
-ReadLine method *throws away* the following newline in the input. You
-need to preserve it, so be sure to explicitly add a newline, ``"\n"``, back onto
+``ReadLine`` function *throws away* the following newline ("\n") in the input. You
+need to preserve it, so be sure to explicitly add a newline, back onto
 your paragraph string after each nonempty line is added. The returned
-paragraph should end with a single newline. Throw away the empty line
+paragraph should end with a single newline. 
+
+Throw away the empty line
 in the input after the paragraph. Make sure you stop after reading
 the empty line.  Making sure you advance the reader
 to the right place is very important.  
@@ -110,7 +115,7 @@ can advance to the next two parts.
 GetParagraphs
 ~~~~~~~~~~~~~~~~
 
-Since you have ReadParagraph at your disposal, you now only need to
+Since you have ``ReadParagraph`` at your disposal, you now only need to
 insert a few remaining lines of code to complete the next method
 ``GetParagraphs``, that reads to the end of the file, and likely
 processes more than one paragraph.  
@@ -126,14 +131,14 @@ and instructions carefully (several times). A lot of ideas get packed
 into the few lines!
 
 As a test after writing ``GetParagraphs``, the random
-responses in the lab project program should work as enter lines in the program.
+responses in the lab project program should work as the user enters lines in the program.
 
 GetDictionary
 ~~~~~~~~~~~~~~~
 
-The last stub to complete in :file:`file_util.cs`` is GetDictionary.  Its
-stub is also modified to take a StreamReader as parameter.  In the
-Main program this function is called to read from
+The last stub to complete in :file:`file_util.cs`` is ``GetDictionary``.  Its
+stub is also modified to take a ``StreamReader`` as parameter.  In 
+``Main`` this function is called to read from
 :file:`help_not_responses.txt`.  Here are the first few lines:
 
 .. literalinclude:: ../examples/dict_lab_stub/help_not_responses.txt
@@ -150,7 +155,7 @@ When you complete this function, the program should behave like the earlier
 verbose version with the hard-coded data.
 
 Be careful to distinguish the data file :file:`help_not_responses.txt` from
-:file:`help_not_responses2.txt`, used in the extra credit.
+:file:`help_not_responses2.txt`, used in the extra credit option.
 
 This should also be an extremely short amount of coding!  
 Think of following through the data file, and get the corresponding 
@@ -173,7 +178,7 @@ like :file:`help_not_responses2.txt`.  Here are the first few lines:
 
 The line that used to have one key now may have several blank-separated keys.
 
-Here is how the documentation for GetDictionary should be changed:
+Here is how the documentation for ``GetDictionary`` should be changed:
 
 .. literalinclude:: ../examples/dict_lab_stub/file_util.cs
    :start-after: Extra credit documentation
@@ -181,7 +186,7 @@ Here is how the documentation for GetDictionary should be changed:
 
 Modify the lab project to use this file effectively:  Rename
 "help_not_responses.txt" to "one_key_responses.txt" and then rename
-"help_not_responses2.txt" to "help_not_responses.txt", so the Main program reads it.
+"help_not_responses2.txt" to "help_not_responses.txt", so ``Main`` reads it.
 
 In your test of the program, be sure to use several of the keys that apply to the
 same response, and show to your TA.
