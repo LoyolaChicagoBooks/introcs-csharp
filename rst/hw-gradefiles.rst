@@ -69,11 +69,11 @@ Requirements
    ``Main(string[] args)``.  If there is not command line argument,
    prompt the user for it.
    The abbreviation should not include spaces.
-   An example would be Comp170.  All data files will include the class
-   abbreviation as part of their name.  We will use Comp170 in the examples,
+   An example would be comp170.  All data files will include the class
+   abbreviation as part of their name.  We will use comp170 in the examples,
    but it could be something else.
 
-#. There are two master files. One is "Categories" + the course abbreviation
+#. There are two master files. One is "categories\_" + the course abbreviation
    + ".txt".  For example, categories_comp170.txt.
    
    It will contain three lines.
@@ -82,7 +82,7 @@ Requirements
        Exam,Lab,Homework,Project,Class participation
        
    There may be extra spaces after the commas.  
-   Categories will be chosen so that each one starts with a different letter.
+   Categories will be chosen so that *each one starts with a different letter*.
    
    The second line contains the integer weights for each category, like
    
@@ -97,7 +97,7 @@ Requirements
    
        2, 5, 3, 1, 2
        
-   The second master file will be "Students" + the course abbreviation + ".txt".
+   The second master file will be "students\_" + the course abbreviation + ".txt".
    For example :file:`students_comp170.txt`.
    It will contain a list of student information
    records. Each record (one per input line) will have the following
@@ -105,7 +105,9 @@ Requirements
 
       Student ID, Last Name, First Name
 
-   For example::
+   For example:
+   
+   .. code-block:: none
 
       P34323243,Thiruvathukal,George
       P87483743, Harrington, Andrew
@@ -115,8 +117,8 @@ Requirements
    named after the student id and the course abbreviation and ".data". 
    For example,
    George's scores will be kept in a file named
-   ``P34323243Comp170.data``. Andy's scores are in
-   ``P87483743Comp170.data``. Each record (one per file line will have the
+   ``P34323243comp170.data``. Andy's scores are in
+   ``P87483743comp170.data``. Each record (one per file line will have the
    following structure:
 
       Category letter, Item, Points Earned
@@ -129,14 +131,16 @@ Requirements
    - points earned is a real number
    - the lines are in no special order.
    
-   For example::
+   For example:
    
-     L,1,100
-     H,1,85.5
-     H,2,70
-     E,1,72.5
-     H,3,70
-     P,1,100
+   .. code-block:: none
+   
+      L,1,100
+      H,1,85.5
+      H,2,70
+      E,1,72.5
+      H,3,70
+      P,1,100
 
 #. The program will process the data from each student file and
    calculate the average within each category and weighted average 
@@ -145,31 +149,32 @@ Requirements
    assignment. 
 
 #. The final report file is named with the course abbreviation 
-   + "summary.txt".  Example: comp170_summary.txt.
+   + "_summary.txt".  Example: comp170_summary.txt.
    This file must have a line for each student showing the 
    student's last name, first name,
    weighted average rounded to one decimal place, and letter grade.  
-   For example::
+   For example:
+
+   .. code-block:: none   
+     
+      Thiruvathukal, George 99.5 A
+      Harrington, Andrew 91.2 A-
    
-     Thiruvathukal, George 99.5 A
-     Harrington, Andrew 91.2 A-
-   
-#. In the course repository, there is a stub for the
-   homework in subdirectory :file:`examples/grade_file_homework`.
-   Pull the latest version of the repository and copy the homework files to 
-   your solution area (hopefully in your own repository).  There is test data for
-   class abbreviations Comp170 and Comp150 in the project directory.   
+#. Copy examples sub-folder :file:`grade_file_homework_stub` to
+   :file:`grade_file_homework`. 
+   There is test data for
+   class abbreviations comp170 and comp150 in the project directory.   
    There are also solution files for the 
-   summaries.  Their names end in ``solution.txt`` to distinguish them from the
+   summaries.  Their names end in ``_solution.txt`` to distinguish them from the
    summary files you should generate in tests.
    
-   While your program should certainly work for course abbreviations Comp170 and Comp150,
+   While your program should certainly work for course abbreviations comp170 and comp150,
    it should also work in general for any data files your refer to
    in the defined formats.
    
    The stub of grade_files.cs has a Main function that just prints out the
    current working directory, to check if you will be in the same directory 
-   as the text files.
+   as the text files.  Remove that line after testing.
    
 Hints
 -----
@@ -180,7 +185,7 @@ Hints
    WriteLine() in this assignment, the only difference is that we'll
    be making use of File classes to get the input from a file instead
    of the Console. The parameter syntax will be the same.
-   There is also have a lab exercise for learning to
+   There is also a lab exercise for learning to
    work with file I/O. 
 
 #. For each file line you'll want to use the string ``Split`` method, 
@@ -211,24 +216,18 @@ Hints
 
 #. In order to deal with a varying number of categories and different 
    possible first letter codes, you will need to split the category
-   name line into an array, say 
+   name line into an array, say  ::
        
        string[] categories;
        
    To know where to store data for each category, you can use this
    function after you read in a code, to determine the proper index.
-   It is already in the stub code::
-   
-      static int codeIndex(string code, string[] categories)
-      {
-         for (int i = 0; i < categories.Length; i++) {
-            if (categories[i].StartsWith(code)) {
-               return i;
-            }
-         }
-         return -1;
-      }
-       
+   It is already in the stub code:
+
+   .. literalinclude:: ../examples/grade_file_homework_stub/grade_files.cs
+      :start-after: chunk
+      :end-before: chunk
+
    You may assume the data is good and the -1 is never returned, 
    but the compiler needs this line.
    
@@ -239,40 +238,42 @@ Hints
 Grading Rubric (25 points)
 ---------------------------
 
-#. Get the abbreviation from the command line if it is there. [2]
-#. Otherwise get the abbreviation from prompting the user. [1]
-#. Read the Categories file and parse lines. [2]
-#. Deal with each student. [3]
+#. Get the abbreviation from the command line if it is there. **[2]**
+#. Otherwise get the abbreviation from prompting the user. **[1]**
+#. Read the categories file and parse lines. **[2]**
+#. Deal with each student. **[3]**
 #. Calculate the cumulative grades in each category, reading
-   a student's file once, using arrays. [5]
-#. Calculate the overall grade and letter grade. [3]
-#. Generate summary entries. [3]
+   a student's file once, using arrays. **[5]**
+#. Calculate the overall grade and letter grade. **[3]**
+#. Generate summary entries. **[3]**
 #. Use functions where there would otherwise be two several-line blocks of code
    differing only in the name of the data evaluated and the name of the
-   result generated. [2]
+   result generated. **[2]**
 #. Use good style:  formatting, naming conventions, 
-   meaningful names other than for simple array indices, lack of redundant code. [4]
+   meaningful names other than for simple array indices, lack of redundant code. **[4]**
    
-Optional Extra Credit Opportunities!  You may choose to do 
+**Optional Extra Credit Opportunities!**  You may choose to do 
 any combination that does not include both of the last two options about missing work.
 
 #. Format the summary file in nice columns.  Include the grades for each category,
    rounded to one decimal place.  Include a heading line.    
    For example the summary for the repository example Comp150 could start:
    
-       | Name: Last, First           Avg Gr     E     H     P
-       | Hopper, Grace             100.0 A  100.0 100.0 100.0
+   ..  code-block:: none
+   
+       Name: Last, First           Avg Gr     E     H     P
+       Hopper, Grace             100.0 A  100.0 100.0 100.0
 
    You may assume the last-first name field fits in 25 columns.
    Copy the first three column headings from above.
    The column headings for the categories can just be their one letter code.
    Names and letter grades should be left-justified (padded on the right, by 
-   using a negative field width). [2]
+   using a negative field width). **[2]**
 #. Change the scheme for calculating letter grade to use a function that calculates
    the proper grade, where the only ``if`` statement is one simple one
    inside a loop.  The ``if`` statement will have a return statement in its body, 
    and no ``else``.  The loop will need to use
-   corresponding arrays of data for grade cutoffs and grade names. [3]
+   corresponding arrays of data for grade cutoffs and grade names. **[3]**
 #. For any student who has missed passing in all the required items, 
    generate extra data on missing work in the summary, at the right end of the
    line for the student.  Add this to 
@@ -283,12 +284,14 @@ any combination that does not include both of the last two options about missing
    one or more grades is missing, including a count of the number of grades missing followed
    by the category letter.  An example using the example categories is:
 
-      | Doe, John 68.5 D+ Missing: 2 L 1 H
-      | Smith, Chris 83.2 B Missing: 1 L
-      | Star, Anna 91.2 A-
+   .. code-block:: none
+   
+      Doe, John 68.5 D+ Missing: 2 L 1 H
+      Smith, Chris 83.2 B Missing: 1 L
+      Star, Anna 91.2 A-
       
    meaning Doe has 2 labs missing and 1 homework missing.  Smith is missing one lab.  Star
-   has done all assigned work, since nothing is added. [3]
+   has done all assigned work, since nothing is added. **[3]**
 #. This is a much harder alternate version for handling missing work:  
    Unlike the previous format, do not count and print the number of missing 
    entries in each category in a form like "2 L ".
@@ -298,11 +301,13 @@ any combination that does not include both of the last two options about missing
    run from 1 through the number of grades in the category.
    You may assume no item number for the same category appears twice.
    For example, with the sample data files given in the repository for
-   Comp170, the summary line for John Doe would be::
-       
+   comp170, the summary line for John Doe would be:
+
+   ..  code-block:: none
+          
        Doe, John 78.9 C+ Missing: L: 1, 4 H: 3
        
    The most straightforward way to do this requires something 
    like a 2-dimensional array. 
    We may get to 2-dimensional arrays in time for the due date, 
-   or you may need to read ahead if you want to use this approach. [5]
+   or you may need to read ahead if you want to use this approach. **[5]**

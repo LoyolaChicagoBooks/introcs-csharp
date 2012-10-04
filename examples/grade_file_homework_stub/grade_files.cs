@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace GradeFiles
+namespace IntroCS
 {
    class GradeFiles
    {
@@ -11,9 +11,9 @@ namespace GradeFiles
          //   sure you are starting off in the same folder as the data files!
          Console.WriteLine(Directory.GetCurrentDirectory());
       }
-
-      /** Use the code for the beginning of a catagory,
-        * and find and return the index of that category.*/
+                                                   // codeIndex chunk                                          
+      // Use the code for the beginning of a catagory,
+      // and find and return the index of that category.
       static int codeIndex(string code, string[] categories)
       {
          for (int i = 0; i < categories.Length; i++) {
@@ -23,5 +23,5 @@ namespace GradeFiles
          }
          return -1;
       }
-   }
+   }                      // end codeIndex chunk
 }

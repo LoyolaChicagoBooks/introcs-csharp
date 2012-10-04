@@ -4,7 +4,6 @@ namespace IntroCS
 {
    public class Searching
    {
-
       // chunk-linearsearch-begin
       public static int IntArrayLinearSearch(int[] data, int item) {
          int N=data.Length;
