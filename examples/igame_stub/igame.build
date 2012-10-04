@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project name="i_game" default="build" basedir=".">
 
-  <description>NAnt build file for Grade Calculation using File I/O example</description>
+  <description>NAnt build file for IGame example</description>
 
   <property name="debug" value="true" overwrite="false"/>
   <property name="build.dir" value="."/>
@@ -23,9 +23,7 @@
 
     <csc target="exe" output="${build.dir}/play_games.exe" debug="${debug}">
       <sources>
-        <include name="play_games.cs"/>
-        <include name="i_game.cs"/>
-        <include name="addition_game.cs"/>
+        <include name="**/*.cs"/>
         <include name="../intro_cs_lib/**/*.cs"/>
       </sources>
       <references>
