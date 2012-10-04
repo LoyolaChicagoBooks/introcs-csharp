@@ -11,7 +11,10 @@ Suppose we have the following array data, showing indices underneath::
    10   20   30   40   50   60   70   80   90   100  115  125  135  145  155  178  198
     0    1    2    3    4    5    6    7    8     9   10   11   12   13   14   15   16
 
-If we are looking for a number, say, 115, here is a visual on how we might go about it::
+If we are looking for a number, say, 115, here is a visual on how we might go about it.
+Here min and max are the smallest and largest index to still consider:
+
+..  code-block:: none
 
    10   20   30   40   50   60   70   80   90   100  115  125  135  146  155  178  198  
    min=0 max=16 mid=8: 90 < 115
@@ -65,7 +68,7 @@ Here's a quick explanation, because it largely follows from the above explanatio
   N-1 (data.Length - 1). This assumption is only valid if the data are sorted.
 
 - The loop to make repeated passes over the array begins on line 6. We use a bottom-tested
-  while loop, because we know that we need to enter this loop--no matter what--at least once
+  do-while loop, because we know that we need to enter this loop--no matter what--at least once
   to determine whether the item is in the middle or not. If you think about any given array
   there is always a chance you could "guess right" the first time, simply by having picked
   the median value.
@@ -84,11 +87,10 @@ Here's a quick explanation, because it largely follows from the above explanatio
   It makes particular sense, because -1 is not within the *index set* of the array (which starts
   at 0 in C# and ends at ``data.Length - 1``. 
 
-Similar to linear searching, we provide a main program that tests it out. Because the
-code is so similar, we will leave the study thereof to you, the reader.
+Similar to linear searching, we provide a main program that tests it out.  The whole code
+is in :file:`examples/arrays/binary_searching.cs`.
 
 .. literalinclude:: ../examples/arrays/binary_searching.cs
    :start-after: chunk-driver-begin
    :end-before: chunk-driver-end
    :linenos:
-

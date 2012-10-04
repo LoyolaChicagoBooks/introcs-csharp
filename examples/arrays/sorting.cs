@@ -25,8 +25,9 @@ namespace IntroCS
 
          for (j=N-1; j>0; j--) {
             for (i=0; i<j; i++) {
-               if (data [i] > data [i + 1])
+               if (data [i] > data [i + 1]) {
                   exchange (data, i, i + 1);
+               }
             }
          }
       }
@@ -51,8 +52,9 @@ namespace IntroCS
       {
          int minPos = start; 
          for (int pos=start+1; pos < data.Length; pos++)
-            if (data [pos] < data [minPos])
+         if (data [pos] < data [minPos]) {
                minPos = pos;
+         }
          return minPos; 
       }
 
@@ -63,8 +65,9 @@ namespace IntroCS
 
          for (i=0; i < N-1; i++) {
             int k = IntArrayMin (data, i);
-            if (i != k)
+            if (i != k) {
                exchange (data, i, k);
+            }
          }
       }
       // chunk-selectionsort-end
@@ -81,7 +84,8 @@ namespace IntroCS
             int interval = intervals [k];
             for (m=0; m<interval; m++) {
                for (j=m+interval; j<N; j+=interval) {
-                  for (i=j; i>=interval && data[i]<data[i-interval]; i-=interval) {
+                  for (i=j; i>=interval && data[i]<data[i-interval]; 
+                       i-=interval) {
                      exchange (data, i, i - interval);
                   }
                }
@@ -156,14 +160,7 @@ namespace IntroCS
          IntArrayQuickSort (data, 0, data.Length - 1);
       }
       // chunk-quicksort-end
-
-      /*
-       * This program is designed to run from the command line.
-       * args[0] array size, integer. If no argument is specified,
-       * user will be prompted.
-       */
-
-
+ 
       // chunk-random-begin
       public static void IntArrayGenerate (int[] data, int randomSeed)
       {
@@ -173,6 +170,10 @@ namespace IntroCS
       }
 
       // chunk-random-end
+
+      // This program is designed to run from the command line.
+      // with array size and seed as parameters.
+      // If the arguments are not specified, the user will be prompteds.
                                                  
       // chunk-driver-begin
       public static void Main (string[] args)
@@ -181,7 +182,7 @@ namespace IntroCS
          int arraySize;
          int randomSeed;
          Stopwatch watch = new Stopwatch ();
-         double elapsedTime;  // time in second, accurate to about millseconds
+         double elapsedTime; // time in second, accurate to about millseconds
          // chunk-drivervars-end
 
          // chunk-driverparameters-begin
@@ -240,8 +241,8 @@ namespace IntroCS
          // chunk-driverapparatus-begin
          IntArrayGenerate (data, randomSeed);
          watch.Reset ();
-         watch.Start ();
-         IntArrayBubbleSort (data);  // the other experiments call a different method
+         watch.Start (); 
+         IntArrayBubbleSort (data);  // this line varies with the experiment
          watch.Stop ();
          elapsedTime = watch.ElapsedMilliseconds/1000.0;
          Console.WriteLine ("Bubble Sort: {0:F3}", elapsedTime);

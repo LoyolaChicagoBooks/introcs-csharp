@@ -265,6 +265,8 @@ next line.  A program printing this table should include an extra
    double: format; table
    double: example; mod_mult_table.cs
 
+.. _modular_mult_table:
+
 Modular Multiplication Table
 ------------------------------
 
