@@ -20,7 +20,9 @@ words to be ignored.  We use a ``HashSet`` rather than a ``List`` because
 the ``Contains`` method for a ``List`` has linear order, while the ``Contains`` method for
 a ``HashSet`` uses the same trick as in a ``Dictionary`` to be of constant order on average.
 
-Here is a csharp session using the type ``HashSet`` of strings::
+Here is a csharp session using the type ``HashSet`` of strings. The ``Add`` method, like 
+the ``Remove`` method for Lists, returns true or false depending on whether the method 
+changes the set::
 
 	csharp> var set = new HashSet<string>();
 	csharp> set;
@@ -61,9 +63,8 @@ Word Count Example
 
 Counting the number of repetitions of words in a text provides a realistic
 example of using a ``Dictionary``.  With each word that you find, you want to associate
-a number of repetitions.  a complete program is in the  project file 
-:file:`Dictionaries/CountWords/count_words.cs`. 
-
+a number of repetitions.  a complete program is in the example file 
+:file:`count_words.cs`. 
 
 The central functions are excerpted below, and they also introduce some extra 
 features from the .Net libraries.
@@ -83,7 +84,7 @@ as well as a blank.
 
 We separate the processing into two functions, one calculating the dictionary, and one printing
 a table.  To reduce the amount of clutter in the ``Dictionary``, the function
-``GetCounts`` takes a set of words to ignore as a parameter.
+``GetCounts`` takes as a parameter a set of words to ignore.
 
 .. literalinclude:: ../examples/count_words.cs
    :start-after: chunk

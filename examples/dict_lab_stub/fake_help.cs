@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-namespace FakeAdviseLab
+namespace IntroCS
 {
-   class MainClass
+   class FakeHelp
    {
       static Random rand = new Random();
 
@@ -16,7 +16,7 @@ namespace FakeAdviseLab
          string welcome = FileUtil.ReadParagraph(reader);
          string goodbye = FileUtil.ReadParagraph(reader);
          List<string> guessList =
-                   FileUtil.GetParagraphs(reader); //rest is random list
+                   FileUtil.GetParagraphs(reader); //list of random responses
          reader.Close();
 
          reader = FileUtil.GetDataReader("help_not_responses.txt");
@@ -38,8 +38,8 @@ namespace FakeAdviseLab
          Console.Write("\n"+ goodbye);
       }
 
-      /** Take input fromUser and use guessList and responses to
-       *  determine and return a string response. */
+      // Take input fromUser and use guessList and responses to
+      //  determine and return a string response. 
       public static string Response(string fromUser, List<string> guessList,
                                     Dictionary<string, string> responses)
       {

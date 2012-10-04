@@ -54,15 +54,16 @@ referenced in :ref:`dictionary-efficiency`.
 .. index::
    double:  dictionary; [ ]
    
-Similar to an array or ``List``,  you can assign and reference elements of a ``Dictionary``, 
-using square bracket notation.  The difference is that the reference be through a key
+Similar to an array or ``List``,  
+you can assign and reference elements of a ``Dictionary``, 
+using square bracket notation.  The difference is that the reference is through a key
 value, not a sequential index, as in::
 
     e2sp["one"] = "uno";
     e2sp["two"] = "dos";
     
-Here is a longer csharp sequence.  Csharp displays dictionaries in its own special form, as a 
-sequence of pairs.  Again, this is special to csharp.  
+Here is a longer csharp sequence.  Csharp displays dictionaries in its own special form, 
+as a sequence of pairs.  Again, this is *special* to csharp.  
 Again, the sequence is broken up with our comments::
 
     csharp> Dictionary<string, string> e2sp = new Dictionary<string, string>();
@@ -75,7 +76,8 @@ Again, the sequence is broken up with our comments::
     3   
     csharp> e2sp;                
     {{ "one", "uno" }, { "two", "dos" }, { "three", "tres" }}
-    csharp> Console.WriteLine("{0}, {1}, {2}...", e2sp["one"], e2sp["two"], e2sp["three"]);
+    csharp> Console.WriteLine("{0}, {1}, {2}...", e2sp["one"], 
+          > e2sp["two"], e2sp["three"]);
     uno, dos, tres...
 
 .. index::

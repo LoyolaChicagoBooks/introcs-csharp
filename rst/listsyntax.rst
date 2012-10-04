@@ -144,10 +144,18 @@ Though more verbose than for an array, you can initialize a ``List``
 with another collection, including an anonymous array,
 specified with an explicit list in braces::
 
-	csharp> List<int> nums = new List<int>(new int[]{5, 3, 7, 4});
+	csharp> List<int> nums = new List<int>(new[]{5, 3, 7, 4});
 	csharp> nums;
 	{ 5, 3, 7, 4 }
 
+We have been using the explicit declaration syntax, but generic types tend to get long,
+so ``var`` is handy with them::
+
+   var stuff = new List<string>();
+
+When initializing a generic object, you still need to remember both the angle braces 
+around the type and the parentheses for the parameter list after that.    
+  
 .. index::
    double: example; ReadLines
    double: example; List
@@ -158,9 +166,9 @@ Interactive List Example
 Lists are handy when you do not know how much data there will be.  
 A simple example would be reading in lines from the user interactively::
 
-    /** Return a List of lines entered by the user in response
-      * to the prompt.  Lines in the List will be nonempty, since an
-      * empty line terminates the input. */
+    // Return a List of lines entered by the user in response
+    // to the prompt.  Lines in the List will be nonempty, since an
+    // empty line terminates the input. 
     List<string> ReadLines(string prompt) 
     {
        List<string> lines = new List<string>();

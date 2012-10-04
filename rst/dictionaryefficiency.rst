@@ -18,6 +18,7 @@ find the entry with a specified key with::
 Searching though a ``List``, however, take time proportional to the
 length of the ``List`` in general, *linear order*.  Through a clever implementation
 covered in data structures classes, a ``Dictionary`` uses a *hash table*
-to make the average lookup time of *constant order*.
+to make the average lookup time of *constant order*.  A hash table depends on the
+keys being immutable.
 
 
