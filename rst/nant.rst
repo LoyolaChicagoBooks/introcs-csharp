@@ -26,67 +26,96 @@ For more information about this
 language, see http://markuplanguages.courses.thiruvathukal.com.
 
 To get you started with one-file programs in your examples folder, 
-you do not need to know anything about NAnt at all.
+*you do not need to know anything about NAnt at all*.
 
 .. index:: build scripts
    run script
    
 .. _build-scripts:
 
-Convenience Build Scripts
+Convenience Scripts
 ----------------------------------
 
 We have separate Windows and OSX/Linux scripts to simplify common tasks for the
 single-file programs directly in the examples folder: our examples or ones you add.  
 Windows scripts end in ".cmd",
 and the Mac/Linux scripts end in ".sh".  The Mac/Linux scripts should be  
-called by starting the line with "sh ".  
+called by starting the line with "sh ".  You can also use a run script in other 
+places discussed below.  
 
-There are four scripts.  Example calls are given for Windows and then Mac/Linux.
+In all cases *the program(s) you are working on should be in the current directory*. 
+For the initial discussion, that mean the current directory 
+should be our examples directory, from the archive you should have downloaded.
 
-*Call them from a console window with current directory* :file:`examples`.
+Changing your current directory was introduced in the first :ref:`lab-edit-compile-run`,
+and discussed in greater depth in the appendix :ref:`commandline`. 
 
-- buildall (useful to initially build all the given single-file examples so you
-  can directly execute them). This takes a while!
+Example commands using the scripts are given for Windows and then Mac/Linux.
 
-    | buildall.cmd
-    | sh buildal.sh
+The main script to use is the run script:
 
-- build (a particular program).  This compiles, but does not run.
-  Do not include the ".cs" at the end of the program file name:
-
-    | build.cmd birthday1
-    | sh build.sh birthday1
-    
 - run (a particular program).  
   Do not include the ".cs" from the program file name.  
-  It builds, only if necessary, and runs in debug mode so
+  
+  It compiles, only if necessary.  If there are compile errors, it lists
+  them and stops.  If the code is legal, the .exe file is run in debug mode so
   runtime errors are better located.  Command line parameters for
-  your program may also be added at the end of the line.
+  your program may also be added at the end of the line, as in the
+  ``print_param`` examples below.
+  
+  .. code-block:: none
 
-    | run.cmd birthday1
-    | sh build.sh birthday1
+     run.cmd birthday1
+     sh run.sh birthday1
     
-    | run.cmd print_param first second third
-    | sh run.sh print_param first second third
+     run.cmd print_param first second third
+     sh run.sh print_param first second third
     
-  An advantage of the run scripts is that they automatically find and include
-  any code needed from our library classes, in particular UIF and UI.
-  Using gmcs and these libraries requires extra verbiage that we are avoiding
-  by using a run script.
+  The run scripts are set up to automatically find and include
+  any code needed from our :ref:`library-classes`, in particular ``UIF`` and ``UI``.
+  Using the gmcs command and these libraries requires extra verbiage that we are avoiding
+  by using a run script.  So once you start using the library classes, 
+  *do use the run script*.
+  
+  For a program that *you* are working on, the basic cycle should be to 
+  
+  * edit (for instance with :ref:`jedit`) and save a version
+  * switch to the console window and use the run script line to test
+  
+  and repeat, fixing errors until you have thoroughly tested your program.
+    
+THere are also other scripts that you might find useful at some point:
+
+- buildall (useful to initially build all the given single-file examples so you
+  can later execute them directly, without waiting to compile). The tradeoff is that
+  this initial step for *all* the files takes a while!
+
+  .. code-block:: none
+
+     buildall.cmd
+     sh buildal.sh
+
+- build (a particular program).  This compiles, if necessary, but does not run.
+  Do not include the ".cs" at the end of the program file name:
+
+  .. code-block:: none
+
+      build.cmd birthday1
+      sh build.sh birthday1
+    
+  This functionality is included the run scripts, so you only need to use this
+  script if there is some reason why you do *not* wan the program run at the time.
     
 - clean (remove all build products for a program):
 
-    | clean.cmd birthday1
-    | sh clean.sh birthday1
+  .. code-block:: none
 
-Hence you can repeat
-
-- save a program you are testing from an editor like :ref:`jedit` 
-- switch to the console window and use the run script line to test
-
-and continue until you have fixed and tested the program thoroughly.
-
+     clean.cmd birthday1
+     sh clean.sh birthday1
+  
+  The folder can get cluttered up with all the products of compiling.  This removes
+  all the results of compiling one program.
+  
 This is all you need for single-file programs.  
 
 .. index::  work folder
@@ -102,31 +131,45 @@ run script.  If you would like your work separate, here is a suggested setup:
 
 #. The :file:`examples` and :file:`include` folders 
    should be sitting in some parent folder, 
-   like :file:`comp170files`.  In the same parent folder create a new 
+   like :file:`comp170files`.  In this same parent folder create a new 
    sub-folder for your work.
    To be specific we will call it :file:`work`.
 
 #. Copy from folder :file:`examples` to :file:`work`:
    
    * :file:`Generic.build` 
-   * All the scripts for your operating system (ending in .cmd for Windows, 
-     and .sh for a Mac).  
+   * :file:`run.cmd` for Windows or :file:`run.cmd` for a Mac  
+   * Other scripts from the examples folder if you like
+   
 
 #. Then write a program in :file:`work`, and test it with your run script 
    (run.cmd or run.sh).  And so on as you write more programs....
-   As long as you use namespace IntroCS, you can freely use the library classes
+   As long as you use namespace IntroCS and have your work directory located
+   as instructed, you can freely use the library classes
    like ``UI`` and ``UIF``.
        
 Running Programs in Subdirectories of examples
 ----------------------------------------------
 
-.. todo::
+The examples folder contains only one-file, stand-alone programs (except that they can
+use library classes).  We have chosen to have an individual subdirectory 
+for each program that have more than one supporting file.  We are putting
+a special run script in these folders, with different contents, but the same
+effect for you:  If this directory is your current directory, you can use
+the run script in the same way as the run script in the examples folder.
+Do supply the base name (no .cs) of the program file containing ``Main``.  
 
-   gkt building subdirectory projects
-   
+The folders ending in "_stub" are the start of a project for you.  
+When you are asked to copy to a folder without the "_stub", you can put the copied folder 
+as a subfolder of the examples folder.  If you set up a work folder, as discussed
+in the last section, you can alternately put the copied folder as a subfolder of
+your work folder.  The copied run script should work in either place.
 
 An Really Simple Example NAnt Script
 ------------------------------------
+
+This part is only needed for the curious or if you are creating new multi-file projects
+of your own:
 
 Now we get into the internal details of NAnt scripts.  Some of this
 is important when you start doing multi-file projects with file names that
@@ -247,15 +290,16 @@ Here's our Generic.build file:
    :language: xml
    :linenos:
 
-
 How to build examples in the examples folder manually:
 
-nant -D:program=birthday1
+.. code-block:: none
+
+   nant -D:program=birthday1
 
 To clean any example you no longer want, do this:
 
-nant -D:program=birthday1 clean
+.. code-block:: none
+
+   nant -D:program=birthday1 clean
 
 Again, the convenience scripts simplify this.
-
-
