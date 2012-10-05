@@ -84,7 +84,7 @@ The main script to use is the run script:
   
   and repeat, fixing errors until you have thoroughly tested your program.
     
-THere are also other scripts that you might find useful at some point:
+There are also other scripts that you might find useful at some point:
 
 - buildall (useful to initially build all the given single-file examples so you
   can later execute them directly, without waiting to compile). The tradeoff is that
@@ -93,7 +93,7 @@ THere are also other scripts that you might find useful at some point:
   .. code-block:: none
 
      buildall.cmd
-     sh buildal.sh
+     sh buildall.sh
 
 - build (a particular program).  This compiles, if necessary, but does not run.
   Do not include the ".cs" at the end of the program file name:
@@ -126,7 +126,7 @@ A Folder For Your Work
 ----------------------
 
 If you want to add all your single-file programs to the examples folder,
-you can complue and run them just like the given examples, with the appropriate
+you can compile and run them just like the given examples, with the appropriate
 run script.  If you would like your work separate, here is a suggested setup:
 
 #. The :file:`examples` and :file:`include` folders 
@@ -138,7 +138,7 @@ run script.  If you would like your work separate, here is a suggested setup:
 #. Copy from folder :file:`examples` to :file:`work`:
    
    * :file:`Generic.build` 
-   * :file:`run.cmd` for Windows or :file:`run.cmd` for a Mac  
+   * :file:`run.cmd` for Windows or :file:`run.sh` for a Mac  
    * Other scripts from the examples folder if you like
    
 
@@ -153,27 +153,26 @@ Running Programs in Subdirectories of examples
 
 The examples folder contains only one-file, stand-alone programs (except that they can
 use library classes).  We have chosen to have an individual subdirectory 
-for each program that have more than one supporting file.  We are putting
+for each program that has more than one supporting file.  We are putting
 a special run script in these folders, with different contents, but the same
 effect for you:  If this directory is your current directory, you can use
 the run script in the same way as the run script in the examples folder.
 Do supply the base name (no .cs) of the program file containing ``Main``.  
 
-The folders ending in "_stub" are the start of a project for you.  
+The folders with names ending in "_stub" are the start of a project for you.  
 When you are asked to copy to a folder without the "_stub", you can put the copied folder 
-as a subfolder of the examples folder.  If you set up a work folder, as discussed
-in the last section, you can alternately put the copied folder as a subfolder of
+as another subfolder of the examples folder.  
+Alternately, if you set up a work folder, as discussed
+in the last section, you can put the copied folder as a subfolder of
 your work folder.  The copied run script should work in either place.
 
-An Really Simple Example NAnt Script
+A Really Simple Example NAnt Script
 ------------------------------------
 
-This part is only needed for the curious or if you are creating new multi-file projects
-of your own:
+The remaining NAnt sections are only needed for the curious, 
+or if you are creating new multi-file projects of your own:
 
-Now we get into the internal details of NAnt scripts.  Some of this
-is important when you start doing multi-file projects with file names that
-you choose.
+Now we get into the internal details of NAnt scripts.  
 
 Let's begin by taking a look at an example NAnt build script, which we'll use to 
 compile the Hello, World
@@ -213,7 +212,7 @@ Before we go into all of those details, let's take a look at how we can *use* th
 You are encouraged at this time to have downloaded all of the example programs. 
 There should be a folder named ``examples/hello+nant``.
 
-Building the example with NAnt
+Building the Example with NAnt
 ------------------------------
 
 The following transcript shows a user (gkt) running nant to compile the 
