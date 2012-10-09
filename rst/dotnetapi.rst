@@ -19,11 +19,11 @@ variations on these classes and methods are included for several Microsoft langu
 Under the Syntax heading, make sure the C# tab is selected.
 
 For example, you can click in the left column on System.Collections Namespaces, and then
-System.Collections.Generic, and then, say, List(T).  (In C# that is List<T>.)
+System.Collections.Generic, and then, for example, List(T).  (In C# that is ``List<T>``.)
 
 The summary section separates constructors, properties, and methods.  When you see one of these
 with promise, click on it to get the full details.  For example, click on the first method in the
-Methods section, Add, or something new, like IndexOf, or Reverse, or Sort....
+Methods section, ``Add``, or something new, like ``IndexOf``, or ``Reverse``, or ``Sort``....
 
 Classes also can be classified in several ways for browsing:
 
@@ -31,7 +31,7 @@ Classes also can be classified in several ways for browsing:
 - Those that might be useful, that you should be at least aware of.
 - Those that may be useful eventually, but are not worth your time now.
 
-You will find material in various categories as you browse:
+You will also find methods in various categories as you browse:
 
 - Methods that make sense and are useful right away
 - Methods that take a little reading to absorb

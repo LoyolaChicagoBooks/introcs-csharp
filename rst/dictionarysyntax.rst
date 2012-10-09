@@ -20,10 +20,10 @@ nontechnical use. In a regular dictionary, you start with a word,
 and look up the definition.  The generalization is to have some piece of
 data that leads you to (or *maps* to) another piece of data.  
 The computer science jargon is that a *key* leads you to a *value*.
-In a normal dictionary, these are likely to both be strings, but in the
+In a normal dictionary, these are both likely to be strings, but in the
 C# generalization, the possible types of key and value are much more extensive.
-Hence the generic ``Dictionary`` type must specify a type for the key and a type
-for the value.
+Hence the generic ``Dictionary`` type requires you to specify 
+both a type for the key and a type for the value.
     
 We can initialize an English-Spanish dictionary ``e2sp`` with ::
 
@@ -56,15 +56,17 @@ referenced in :ref:`dictionary-efficiency`.
    
 Similar to an array or ``List``,  
 you can assign and reference elements of a ``Dictionary``, 
-using square bracket notation.  The difference is that the reference is through a key
-value, not a sequential index, as in::
+using square bracket notation.  The difference is that the reference is through a key, 
+not a sequential index, as in::
 
     e2sp["one"] = "uno";
     e2sp["two"] = "dos";
     
-Here is a longer csharp sequence.  Csharp displays dictionaries in its own special form, 
-as a sequence of pairs.  Again, this is *special* to csharp.  
-Again, the sequence is broken up with our comments::
+Csharp displays dictionaries in its own special form, 
+as a sequence of pairs {key, value}.  Again, this is *special* to csharp.  
+Here is a longer csharp sequence, broken up with our comments:
+
+..  code-block:: none
 
     csharp> Dictionary<string, string> e2sp = new Dictionary<string, string>();
     csharp> e2sp;
@@ -84,7 +86,9 @@ Again, the sequence is broken up with our comments::
    double: dictionary; Keys
 
 If you want to iterate through a whole ``Dictionary``, you will want the syntax below,
-with ``foreach`` and the property ``Keys``::
+with ``foreach`` and the property ``Keys``:
+
+..  code-block:: none
 
     csharp> foreach (string s in e2sp.Keys) {
           >    Console.WriteLine(s);
@@ -103,17 +107,19 @@ implementation remembers the order in which keys were added.
 
 
 It is often useful to know if a key is already in a ``Dictionary``:
-Note the method ``ContainsKey``::
+Note the method ``ContainsKey``:
+
+..  code-block:: none
 
     csharp> e2sp.ContainsKey("seven");
     false
     csharp> e2sp.ContainsKey("three"); 
     true
 
-
-
 The method Remove takes a key as parameter.  Like a ``List`` and other
-collections, a ``Dictionary`` has a ``Clear`` method::
+collections, a ``Dictionary`` has a ``Clear`` method:
+
+..  code-block:: none
 
     csharp> e2sp.Count;
     3
@@ -124,4 +130,3 @@ collections, a ``Dictionary`` has a ``Clear`` method::
     csharp> e2sp.Clear();
     csharp> e2sp.Count;
     0
-

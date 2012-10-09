@@ -22,7 +22,9 @@ a ``HashSet`` uses the same trick as in a ``Dictionary`` to be of constant order
 
 Here is a csharp session using the type ``HashSet`` of strings. The ``Add`` method, like 
 the ``Remove`` method for Lists, returns true or false depending on whether the method 
-changes the set::
+changes the set:
+
+..  code-block:: none
 
 	csharp> var set = new HashSet<string>();
 	csharp> set;
@@ -50,7 +52,7 @@ changes the set::
 That lack of order for a ``HashSet`` means it cannot
 be indexed, but otherwise it has mostly the same methods and constructors 
 that have been discussed for a ``List``, including ``Add`` and ``Contains`` and 
-a constructor taking a collection as parameter.  
+a constructor that takes a collection as parameter.  
 
 
 .. index::
