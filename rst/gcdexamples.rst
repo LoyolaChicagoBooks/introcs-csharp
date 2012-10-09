@@ -220,6 +220,10 @@ As an exercise to the reader, you may want to consider adding some
 ``b`` within each loop, and after both loops have executed. It will
 allow you to see in visual terms how this method does its work.
 
+.. index::  greatest common divisor; iterative
+
+.. _gcd-remainder-loop:
+
 GCD Remainder Loop
 --------------------
 
@@ -237,6 +241,11 @@ This code is from :file:`g_c_d_remainder_loop.cs`:
 .. literalinclude:: ../examples/g_c_d_remainder_loop.cs
    :start-after: gcd chunk
    :end-before: gcd end chunk
+
+.. index::  
+   double:  recursion; greatest common divisor
+
+.. _gcd-recursive:
 
 
 Preview: Recursive GCD

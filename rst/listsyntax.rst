@@ -50,6 +50,7 @@ new generic classes ourselves.
    single: List; Add
    single: List; Remove
    single: List; RemoveAt
+   single: List; Contains
    
 List Constructors and Methods
 -------------------------------
@@ -62,7 +63,9 @@ C# would print out a string representation of a ``List`` with ``Console.WriteLin
 The blocks below are all from one csharp session, 
 with our comments breaking up the sequence.
 
-With the no-parameter constructor, the ``List`` is empty to start::
+With the no-parameter constructor, the ``List`` is empty to start:
+
+..  code-block:: none
 
 	csharp> List<string> words = new List<string>();
 	csharp> words;
@@ -71,7 +74,9 @@ With the no-parameter constructor, the ``List`` is empty to start::
 	0
 	
 You can add elements, and keep count with the ``Count`` property 
-as the size changes::
+as the size changes:
+
+..  code-block:: none
 
 	csharp> words.Add("up");
 	csharp> words;
@@ -85,7 +90,9 @@ as the size changes::
 	csharp> words.Count;
 	3
 
-You can reference and change elements by index, like with arrays::
+You can reference and change elements by index, like with arrays:
+
+..  code-block:: none
 
 	csharp> words[0];
 	"up"
@@ -95,7 +102,9 @@ You can reference and change elements by index, like with arrays::
 	csharp> words;
 	{ "up", "down", "in" }	
 	
-You can use ``foreach`` like with arrays or other sequences::
+You can use ``foreach`` like with arrays or other sequences:
+
+..  code-block:: none
 	
 	csharp> foreach (string s in words) {      
 		  >    Console.WriteLine(s.ToUpper()); 
@@ -106,7 +115,9 @@ You can use ``foreach`` like with arrays or other sequences::
 	
 Compare ``Remove``, which finds the first matching element and removes it,
 and ``RemoveAt``, which removes the element at a specified index.
-``Remove`` returns whether the List has been changed::
+``Remove`` returns whether the List has been changed:
+
+..  code-block:: none
 
 	csharp> words.Remove("down");  
 	true
@@ -123,14 +134,27 @@ and ``RemoveAt``, which removes the element at a specified index.
 	{ "up", "in", "on" }
 	
 Removing does not leave a "hole" in the ``List``:  The list closes up,
-so the index decreases for the elements after the removed one::
+so the index decreases for the elements after the removed one:
+
+..  code-block:: none
 
 	csharp> words[2];
 	"on"
 	csharp> words.Count;
 	3
 	
-You can also remove all elements at once::
+You can check for membership in a ``List`` with ``Contains``:
+
+..  code-block:: none
+
+	csharp> words.Contains(""in");
+	true
+	csharp> words.Contains(""into");
+	false
+
+You can also remove all elements at once:
+
+..  code-block:: none
 
 	csharp> words.Clear();
 	csharp> words.Count;
@@ -142,7 +166,9 @@ You can also remove all elements at once::
 Here is a List containing ``int`` elements.
 Though more verbose than for an array, you can initialize a ``List``
 with another collection, including an anonymous array,
-specified with an explicit list in braces::
+specified with an explicit list in braces:
+
+..  code-block:: none
 
 	csharp> List<int> nums = new List<int>(new[]{5, 3, 7, 4});
 	csharp> nums;

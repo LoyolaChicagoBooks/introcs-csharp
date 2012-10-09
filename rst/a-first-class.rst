@@ -20,12 +20,13 @@ of a (single) rational number.  It just happens
 to have parts.  There are lots of operations on rational
 numbers, and they are operations on the entire fraction, as a unit.
 
-The point is that is makes sense to think of a fraction or rational
-number as *one* entity.  A way to do that is to create a ``class``.
-We will call our class ``Rational``.
+It makes sense to think of a fraction or rational
+number as *one* entity.  A way to do that is to create a ``class``. 
+We will call our class ``Rational``.  This way we can have a single
+variable refer to a ``Rational`` object.
 
-An alternate way we consider later, that has most of the same properties, 
-is a ``struct`` defining a new kind of object.
+An note an alternate construction, that has most of the same properties, 
+in :ref:`structs-and-classes`.
 
 The idea of creating an object opens new ground for managing data.  
 Thus far we have stored data as local variables, and we have called functions,
@@ -42,7 +43,7 @@ Now we have the idea of an object that has *internal* state
 stored in local variables and does *not* need to be passed through parameters.
 
 This is quite a shift.
-Do not take it lightly.  
+*Do not take it lightly.*  
 
 An instance of a class, like a particular rational number, is a container for data,
 its internal state.  Pay careful attention to this new location for data and the new ways
@@ -57,25 +58,27 @@ most obviously, a numerator and denominator, so we can plan that ::
 
    Rational r = new Rational(2, 3);
 
-would create a new Rational number 2/3.
+would create a new Rational number for the mathematical expression, 2/3.
 
 Like with built-in types, we can have the natural operations on the
 type as *methods*.  For instance we can negate Rational number or 
 convert it to a double approximation, or print it, or do arithmetic.
 
 Thinking ahead to what we would like for our Rational numbers, here is
-some testing code with hopefully clear and reasonable method names:
+some testing code, with hopefully clear and reasonable method names:
 
 .. literalinclude:: ../examples/test_rational.cs
 
-Like other numerical types we would like to be about to parse strings.
-The helping function ShowParse makes the display neater.
+Like other numerical types we would like to be able to parse strings.
+The helping function, ``ShowParse``, in our testing code makes the display neater.
 
 One non-obvious method is CompareTo.  This one method allows
 all the usual comparison operators to be used with the result.  
 We will discuss it more later.
 
-The results we would like when running this testing code::
+The results we would like when running this testing code:
+
+..  code-block:: none
 
 	6/(-10) simplifies to -3/5
 	reciprocal of -3/5 is -5/3
@@ -122,7 +125,7 @@ Our code is nested inside ::
     
     }   
        
-This is the same sort of wrapper we have used for our Main programs!  Before everything 
+This is the same sort of wrapper we have used for our Main programs!  Before, everything 
 inside was
 labeled ``static``.  Now we see what happens with the ``static`` keyword omitted....
 
@@ -188,8 +191,8 @@ and it has *no return type* (and *no* ``static``).  Implicitly you
 are creating the kind of object named, a **Rational** in this case.
 The constructor can have parameters like a regular method.  We will certainly
 want to give a state to our new object.
-that means giving values to its numerator and denominator.  Recall we are want to
-store this state in instance variables ``num`` and ``denom``.  We could use just ::
+That means giving values to its numerator and denominator.  Recall we are want to
+store this state in instance variables ``num`` and ``denom``.  We could just use ::
 
       public Rational(int numerator, int denominator)
       {
@@ -202,17 +205,17 @@ we want the data to live on as the state of the object.
 In order to remember state after the constructor terminates, 
 we must *make sure the information gets into the instance variables* for the object.
 This is the basic operation of most constructors:  Copy desired
-parameters in to initialize the state in the fields.  
+parameters in to initialize the state in the fields.  That is all our simple
+code above does.
 
-Note that we are *not* using full object notation with an object reference and a
+Note that with ``num`` and ``denom``we are *not* using 
+full object notation with an object reference and a
 dot, as we have when referring to a field in a different (so far always built-in)
-class, like ``arrayObject.Length``.  
-
-C# allows a shorthand notation inside a constructor or instance method 
-(discussed below):
-The instance variable names used without an object reference and dot refer to the 
-*current* instance.  Remember there is *always* a current object.  In a constructor,
-it is the object being constructed.  
+class, like ``arrayObject.Length``.  The constructor is creating an object,
+and the notation for the instance variables is understood to be giving values to
+the Rational object being constructed.
+C# allows this shorthand notation inside a constructor and also inside an instance method 
+(discussed below).
 
 There is actually a bit more to do in the constructor than we showed:  
 Validate the data.  The actual constructor is 
@@ -224,9 +227,9 @@ Validate the data.  The actual constructor is
 The last line calls an instance method, ``normalize``, to make sure the denominator is not 0,
 and to reduce the fraction to lowest terms.
 
-Like with the instance variable there is not the full object notation: object.method().
+Like with the instance variables, there is not the full object notation: object.method().
 Again C# is allowing a shorthand:  With the explicit object reference missing, the 
-assumption is that the method be applied to the current object, in this case that is 
+assumption is that the method be applied to the current object: In this case that is 
 the one just being initialized in this constructor.
 
 .. index::
@@ -244,28 +247,34 @@ Look at the heading for ``normalize``:
 
 You see that there is *no* static in the method heading, so the method is 
 attached to the current instance implicitly.  
-It can only be called when there *is* a current instance.
+It can only be called when there *is* a current instance (discussed below).
 Since the method only deals with the instance variables, no further
 parameters need to be given explicitly.
 
-(It is also declared ``private`` - it is a helping method only used privately,
+(It is also declared ``private`` - It is a helping method only used privately,
 from *inside* the class.)
 
-The method uses the :ref:`gcd` function, discussed in the ``while`` loop section,
+The method uses the :ref:`gcd-remainder-loop` function
 to reduce the Rational to lowest terms.
 
-Summarizing where there is a current object that can access 
-its private instance variables:
+The instance variable names and method names 
+used without an object reference and dot refer to the 
+*current* instance.  Whenever a constructor or method in the class is called,
+there is *always* a current object:
 
 #.  In a constructor, referring to the object being created.
 #.  When some method ``methodName`` is called with explicit dot notation, 
     ``someObject.methodName()``, 
-    then it is acting on ``someObject`` and its instance variables.
-#.  When a constructor or instance method (no ``static``) is called for the class,
+    then it is acting on the current object ``someObject``.
+#.  When a constructor or instance method (no ``static``) inside the class is called,
     there must already be a current object.  
     If that constructor or instance method calls a
     further instance method inside the same class, without using dot notation, 
     then the further method has the *same* current object.
+
+Again:  When a constructor or method refers to or sets an instance variable, without
+starting with "object.", it is referring to the *current object*, also referred to as
+*this* object.
 
 .. warning::
    These are the only places where there is a current object. 
@@ -289,21 +298,22 @@ its private instance variables:
    an instance method calls a static method.  (The instance variables are just 
    inaccessible inside the static method.)
    
-The current object is *implicit* inside a constructor of instance method definition,
+The current object is *implicit* inside a constructor or instance method definition,
 but it can be referred to *explicitly*.  It is called ``this``.  
 We will see in later sections that there are places
 where there is reason for an object to refer to itself explicitly, 
-and use ``this`` as the object name.
+and use ``this`` as the object's name.
 
-In these places where instance variables are accessible, you have an extra way of getting 
-data in and out of a method:  Reading or setting instance variables.  
-The simplest methods do nothing but that....
-
+ 
 .. index::
    double: OOP; getter
 
 Getters
 --------
+
+In these places where instance variables are accessible, you have an extra way of getting 
+data in and out of a method:  Reading or setting instance variables.  
+The simplest methods do nothing but that....
 
 We have chosen to make our Rationals immutable.  The ``private`` in front
 of the field declarations was important to keep code outside the
@@ -349,12 +359,12 @@ to act on a string parameter and return a new Rational.
 
 The most obvious kind of string to parse would be one like "2/3" or "-10/77", which we can 
 split at the '/'.  Integers are also rational numbers, so we would like to parse "123".
-Finally non-repeating decimals are rational numbers, so we would like to parse "123.45".
-That last case is the trickiest.  See how our ``Parse`` method distinguishes and handles
+Finally decimal strings can be converted to rational numbers, 
+so we would like to parse "123.45".
+That last case is the trickiest.  See how our ``Parse`` method below distinguishes and handles
 all the cases.  It constructs integer strings for both the numerator and denominator,
 and then parses the integers.  Note that the method *is* ``static``.  There is no Rational
 being referred to when it starts, but in this case the method returns one:
-
 
 .. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: Parse chunk
@@ -364,8 +374,8 @@ Method Parameters of the Same Type
 -------------------------------------
 
 We can deal with the current object without using dot notation.  What if we are
-dealing with more than one Rational, the current one *and* another parameter, 
-as in Multiply:
+dealing with more than one Rational, the current one *and* another one, 
+like the parameter in Multiply:
 
 .. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: Multiply chunk
@@ -373,13 +383,18 @@ as in Multiply:
 
 We can mix the shorthand notation for the current object's fields 
 and dot notation for another
-named object:  ``num`` and ``denom`` refer to the fields in the *current* object, and
+*named* object:  ``num`` and ``denom`` refer to the fields in the *current* object, and
 ``f.num`` and ``f.denom`` refer to fields for the other ``Rational``, the parameter ``f``.
 
-Note that I did not refer to the fields of ``f``through the public methods 
+Note that we do not refer to the fields of ``f``through the public methods 
 ``GetNumerator`` and 
 ``GetDenominator``.  Though ``f`` is not the same *object*, it is the same *type*: 
-*Private members of another object of the same type are accessible.*  The full method is:
+
+.. note::
+   Private members of another object of the same type are accessible from method 
+   definitions in the class.  
+   
+The full ``Multiply`` method is:
 
 .. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: Multiply chunk
@@ -417,4 +432,100 @@ in meaning, the word ``override`` must be in the heading:
 A more complete discussion of ``override`` would lead us into class hierarchies and 
 inheritance, which we are not emphasizing in these notes.
 
-The whole code for Rational is in project :file:`Music/Rational`.
+The whole code for Rational is in :file:`intro_cs_lib/rational.cs`.
+
+Pictorial Playing Computer
+---------------------------
+
+Let us start pictorially playing computer on :file:`test_rational.cs`, 
+as a review of much of the previous sections  It will allow
+us to visualize the use of ``this`` referring to the current object.  
+The first line of ``main``, ::
+
+   Rational f = new Rational(6, -10);
+   
+creates a new Rational, so it calls the constructor.  At the very beginning of the
+constructor, a prototype ``Rational`` is already created as the current object.  
+We will always display the implicit local variable name ``this`` 
+to point to this current object.  
+The parameters 6, and -10 are passed, initializing the explicit local
+variables ``numerator`` and ``denominator``.  
+The figure illustrates the memory state at the beginning of the constructor call:
+
+.. image:: images/callConstructor.png
+
+The constructor finds the value of the local variable ``numerator``, and needs to 
+assign the value 6 to a variable ``num``.  The compiler has looked 
+first for a local variable ``num``; it 
+found none, and it looked *second* for an instance variable in the object pointed to
+by ``this``.  It found ``num`` there.  Now it copies the 6 into there.  Similarly for
+``denominator`` and ``denom``:
+
+.. image:: images/callConstructorCopied.png
+
+Then the constructor calls ``normalize``.  Since normalize is also an instance method,
+a reference to ``this`` is passed implicitly.  While illustrating the memory state 
+for more than one active method, we separate each one with a horizontal line.
+
+.. image:: images/callNormalize.png
+
+Later ``normalize`` calls ``gcd``.  Since ``gcd`` is static, note that the local 
+variables for ``gcd`` do *not* contain a reference to ``this``.
+
+.. image:: images/callGCD.png
+
+At the end of ``gcd`` 2 is returned and initializes ``n`` in the caller ``normalize``.
+Then normalize finishes, modifying the instance variable pointed to by ``this``.
+
+.. image:: images/finishNormalize.png
+
+which is the same object referred to by ``this`` in the constructor.  
+Just before the constructor completes we have:
+
+.. image:: images/finishConstructor.png
+
+Then the constructor's ``this`` is the reference to the new object initializing ``f`` in
+``Main``.
+
+.. image:: images/setF.png
+
+Consider the next line of ``Main``::
+
+   Console.WriteLine("6/(-10) simplifies to {0}", f);
+          
+We omit the internals of the WriteLine call, except to note that it must convert
+the reference ``f`` to a string.  It does this by calling ``ToString`` for ``f``,
+so the implicit ``this`` in the call to ``ToString`` refers to the same object as ``f``:
+
+.. image:: images/callToString.png
+
+``ToString`` returns "-3/5", and it gets printed as part of the line generated
+by ``WriteLine``....  
+
+We skip the similar details through the initialization of ``h``::
+
+    Rational h = new Rational(1,2);
+
+The ``WriteLine``
+statement after that needs to evaluate ``f.Add(h)``, generating a call to Add.
+The next figure shows the two local variableS in ``Main``, ``f`` and ``h``, each
+pointing to a ``Rational`` object.  The image shows the situation in the call to Add.  
+In the local variables for THE METHOD ``Add`` 
+see what the implicit ``this`` refers to, and what the 
+(local to ``Add``) variable f refer to.  As the figure shows, this use of a local variable
+``f`` is independent of the ``f`` in ``Main``:
+
+.. image:: images/callAdd.png
+
+Since the return statement in ``Add`` creates a new object, there is a call to the
+constructor in ``Add``.  We do not go through the details fo that call, but
+``this`` in The constructor ends up pointing to the Rational shown.
+
+The ``this`` of the constructor ends up as the reference returned by Add:
+
+.. image:: images/endAdd.png
+
+which gets sent to the WriteLine statement and printed as in the earlier code.
+
+Hopefully all these picture reinforce keeping track of the ``this`` with 
+constructors and instance methods (but not static methods).
