@@ -22,20 +22,20 @@ is an instance.
 While our last example, Rational, is in fact a very practical 
 use of object-oriented programming, this is somewhat more artificial,
 but hopefully informative, particularly with the transformation.
-Here is a procedural version, project file 
+Here is a procedural version, example file 
 :file:`static_version.cs`
 
 .. literalinclude:: ../examples/static_version.cs
    :start-after:  chunk
    :end-before: chunk
 
-The project also holds the class Input, with the functions we use for safe
-keyboard input.  It is all static methods.  is there any reason to make this
+The project also refers to the library class UI, with the functions we use for safe
+keyboard input.  It is all static methods.  Is there any reason to make this
 class have its own own instances?
 
-No.  There is no state to remember between Input method calls.  What comes in through
+**No**.  There is no state to remember between UI method calls.  What comes in through
 the keyboard goes out through a return value, and you are done with it.  
-A simple function works fine each time.  Do not get fancy for nothing.
+A simple static function works fine each time.  *Do not get fancy for nothing*.
 
 What state would a game hold?  We might set it up so the user
 chooses the size of the range of choices just once, and remember it 
@@ -45,7 +45,7 @@ If we are going to remember it inside our Game instance,
 then ``big`` needs to become an instance variable, and it will be something
 we can set in a constructor.
 
-What action/methods will this object have?  Only one - playing a Game.
+What actions/methods will this object have?  Only one - playing a Game.
 The Game could be played multiple times, and that action, play, 
 makes sense as a method, Play, which will look a lot like the current 
 static function. 
@@ -66,14 +66,14 @@ In the procedural version there are several other important variables:
 A common newbie error is to make things
 into instance variables, just because you can, when an old-fashioned
 local variable is all that you need.  It is good to have variables leave the
-programmer's consciousness when they are no longer needed, as a local variable should.  
-An instance variable lingers on.
+programmer's consciousness when they are no longer needed, as a local variable does.  
+An instance variable lingers on, leaving extra places to make errors.
   
 Go ahead and make the changes: create project Game inside the current solution.
 Have a class Game for the Game instance, with instance variable ``big`` and method
 ``Play``.
 
-You still need a static main method to first create the Game object.  You could prompt
+You still need a static ``Main`` method to first create the Game object.  You could prompt
 the user for the value for ``big`` to send to the constructor.  Once you have an object, 
 you can call *instance method* ``Play``.  What about parameters? What needs to change?
 
@@ -83,40 +83,47 @@ Animal Class Lab
 ------------------
 
 **Objectives**:
-Write from scratch a simple (silly) class, with constructor and methods,
-including a ToString Method, and a separate testing class.
+Complete a simple (silly) class, with constructor and methods,
+including a ``ToString`` method, and a separate testing class.
 
-Add the two files to the :file:`animal_lab` folder.  Use the file names specified
-below, and then the nant build script in that folder will work!
+Copy the folder :file:`examples/animal_lab_stub` to a folder :file:`animal_lab`.
 
+#. Complete the simple class Animal in the file `animal.cs`.  The bullets below
+   name and describe the methods you need to write, after the constructor:
 
-#. Create a simple class Animal in a file `animal.cs`:
-
-	- An Animal has a name and a gut.  In our version the gut is a List of strings 
+	- An Animal has a ``name`` and a ``gut``.  
+	  In our version the ``gut`` is a List of strings 
 	  describing the contents, in the order eaten.  
-	  A newly created Animal gets a name
-	  passed as a parameter to the constructor, while the gut starts off *empty*.
+	  A newly created Animal gets a ``name`` from a parameter
+	  passed to the constructor, while the ``gut`` starts off *empty*.
 	
-	- An Animal has a Greet method, so an animal "Froggy" would say (that is, print) 
+	- An Animal has a ``Greet`` method, so an animal "Froggy" would say (that is, print) 
 		
 		 Hello, my name is Froggy.
 	
-	- An Animal can Eat a string naming the food, adding the food to the gut.
+	- An Animal can ``Eat`` a string naming the food, adding the food to the ``gut``.
+	  If Froggy eats "worm" and then "fly", its ``gut`` list contains
+	  "worm" and "fly".
 	
-	- An Animal can Excrete (removing and printing what was *first* in the gut List). 
-	  Recall the method ``RemoveAt``.
+	- An Animal can ``Excrete`` (removing and printing what was *first* in the gut List). 
+	  Recall the method ``RemoveAt`` in :ref:`listsyntax`.  Print "" if the ``gut``
+	  was already empty.  Following the
+	  Froggy example above, Froggy could ``Excrete``, and "worm" would be printed.
+	  Then its ``gut`` would contain only "fly". 
 	  
-	- A ToString method (remember the override keyword).  For example, it would return the
+	- A ``ToString`` method: 
+	  Remember the ``override`` keyword.  For example, it would return the
 	  string for Froggy: 
 	  
 		 "Animal: Froggy"
 		 
 	- All the methods that print should be void.  Which need a parameter, of what type?
 
-#. Write a file :file:`test_animal.cs` with a class with a Main method, testing Animal: 
-   create a couple of Animals and visibly test all the code, 
+#. Complete the file :file:`test_animal.cs` with its class ``TestAnimal`` containing the 
+   ``Main`` method, testing the class Animal: 
+   Create a couple of Animals and visibly test all the methods, 
    with enough explanation that someone running the test program, 
-   but *not* looking at the code, can see that everything works.
+   but *not* looking at the code of either file, can see that everything works.
 
 
 Planning A Class Structure
@@ -124,9 +131,10 @@ Planning A Class Structure
 
 We are going to build up to a game for you to write.  Here is 
 an idea for a skeleton of a text (adventure?) game.  It does not
-have much in it yet, but it can be considered in terms of classes.
+have much in it yet, but it can be planned in terms of classes.
 Classes with instances correspond to nouns you would be using, 
-particularly nouns used in more than one place with different data being remembered.
+particularly nouns used in more than one place with different 
+state data being remembered.
 Verbs associated with nouns you use tend to be methods.  Think how you might break 
 this down.  The parts appearing after the '>' prompt are entries by the user.
 Other lines are computer responses::
@@ -172,7 +180,7 @@ Other lines are computer responses::
 	Do you really want to quit? yes
 	Thank you for playing.  Good bye.
 
-Think and discuss how to organize things first.
+Think and discuss how to organize things first....
 
 The different parts of a multi-class project interact through their public methods.
 Remember the two roles of writer and consumer.  The consumer needs good documentation
@@ -188,5 +196,6 @@ project folder :file:`csproject1`.
 
 The code uses many of the topics discussed so far in these notes.
 
-We will add some features from interfaces and discuss the revision in 
+We will add some features from another meaning of :ref:`Interface`,
+and discuss the revision in 
 :file:`csproject_stub` (no 1).  You *might* use this as a basis of a project....

@@ -18,9 +18,12 @@ Book List Assignment
    methods clearly and completely for a user looking at the output
    of the program and *not* the source code..
 
+Copy the folder :file:`books_homework_stub` to folder :file:`books_homework`.
 Stubs for the assignment files are :file:`book.cs`, :file:`book_list.cs` and 
-:file:`test_book_list.cs` in the
-project :file:`HW/Books`. 
+:file:`test_book_list.cs`.  
+
+To encourage incremental testing, there is also 
+a stub file :file:`test_book.cs`.  Do not turn it in.
 
 Some of the method stubs included are only to be fleshed out if you are doing
 the corresponding extra credit option.  They include a comment,
@@ -32,14 +35,16 @@ in the Extra Credit section at the end of the assignment.
 Complete the first line in each file to show your names. At the top of
 the Book class include any comments about help in *all* of the classes.
 
-Create these classes one at a time and test as you finish
-each class or even as you finish each method.  Though you are only required to have
-a class to test the final result, you are strongly encouraged to write a simple
-testing class for Book, that does not depend on BookList, so when you get to 
+Create methods one at a time, and test them.  Complete :file:`book.cs` first,
+preferably testing along the way with :file:`test_book.cs`.  Then add methods to
+:file:`book_list.cs`, and concurrently add and run tests in :file:`test_book_list.cs`.
+Though you are only required to have
+a class to test the final result, you are strongly encouraged to flesh out
+:file:`test_book.cs`, so it does not depend on BookList.  Then when you get to 
 BookList you can have more confidence that any problems you have are from the latest
-part you wrote, not earlier parts that you refer to.
+part you wrote, not parts written earlier in the class Book.
 
-Remember to have each team member submit a log also, 
+Remember to have each individual submit a **log**, :file:`log.txt`, 
 in the same format as the last assignment. 
 
 Book class
@@ -64,23 +69,27 @@ It should have three standard (one line) getter methods::
     
     public int GetYear()
     
-and one method to format all the information as a string::
-    
+and ::
+
     public override string ToString()
 
-``ToString`` should return a single string spread across three lines,
+``ToString`` should return a *single* string spread across three lines,
 with no newline at the end.
 For example if the ``Book`` fields were
 "C# Yellow Book", "Rob Miles", and 2011, the string should appear,
 when printed, as
 
-     | Title: C# Yellow Book
-     | Author: Rob Miles
-     | Year: 2011
+.. code-block:: none
+
+   Title: C# Yellow Book
+   Author: Rob Miles
+   Year: 2011
 
 The ``override`` in the heading is important so the compiler knows that this 
 is the official method for the system to used implicitly to convert the object 
 to a string.
+
+Remember the use of @ with multi-line string literals.
 
 BookList class
 ------------------
@@ -93,29 +102,28 @@ It has a constructor (already written - creating an empty List)::
 
     public BookList() 
 
-It should have public methods::
+It should have public methods:
 
-   /** Add a book to the list. 
-     * The regular assignment version always returns true. */
-   public bool AddBook(Book book)
-   
+.. literalinclude:: ../examples/books_homework_stub/book_list.cs
+   :start-after:  AddBook chunk
+   :end-before: {
+       
 The regular version should just leave the final ``return true;``
 The extra credit version is more elaborate. 
 
-Further methods::
+Further methods:
 
-   /** List the full descriptions of each book, 
-     * with each book separated by a blank line. */
-   public void PrintList()
+.. literalinclude:: ../examples/books_homework_stub/book_list.cs
+   :start-after:  PrintList chunk
+   :end-before: {
 
-   /** List the titles (only!) of each book in the list
-     * by the specified author, one per line. */
-   public void PrintTitlesByAuthor(string author)
+.. literalinclude:: ../examples/books_homework_stub/book_list.cs
+   :start-after:  PrintTitlesByAuthor chunk
+   :end-before: {
 
-   /** List the full descriptions of each book printed 
-     * in the range of years specified,
-     * with descriptions separated by a blank line. */
-   public void PrintBooksInYears(int firstYear, int lastYear)
+.. literalinclude:: ../examples/books_homework_stub/book_list.cs
+   :start-after:  PrintBooksInYears chunk
+   :end-before: {
 
 For instance if the list included books published in 1807, 1983, 2004,
 1948, 1990, and 2001, the statement ::
@@ -134,7 +142,7 @@ Check for one-off errors in PrintBookYears. With all the methods that
 print something, the results are easy to see. Do print a label, as in
 the skeleton, before printing output from each method test, so that the
 user of the program can see the correctness of the test 
-without any knowledge of the source code!
+*without any knowledge of the source code*!
 
 Grading Rubric
 --------------------
@@ -156,10 +164,10 @@ BookList class
 
 TestBookList
 
-- [2] supply data to screen indicating what test is being done with what
+- [2] Supply data to screen indicating what test is being done with what
   data and what results, so it is clear that each test works without
-  looking at the source code
-- [5] convincingly display tests of each of BookList's methods that
+  looking at the source code.
+- [5] Convincingly display tests of each of BookList's methods that
   exercise all paths through your code. 
 
 Overall:
@@ -178,102 +186,88 @@ requires you to do the previous one first.
 To get full credit for any particular option, tests for it must be 
 *fully integrated* into TestBookList!
 
-#.  [2 points] Complete the ToString method for the BookList class that returns (not prints)
-    the content described by the PrintList method above as a single string
-    (including a final newline). Also *change* the PrintList method body to
-    the one line::
+#.  [2 points] Complete 
+
+    .. literalinclude:: ../examples/books_homework_stub/book_list.cs
+       :start-after:  ToString chunk
+       :end-before: {
+
+    Also *change* the ``PrintList`` method body to the one line::
     
         Console.Write(this);
     
-    (The Write and WriteLine methods print objects by using their ToString
-    methods.)
+    (The ``Write`` and ``WriteLine`` methods print objects by using their `
+    `ToString`` methods.)
     
-    In your testing class, test the ToString method by converting the
+    Be sure to make this addition to TestBookList: 
+    Test the ``ToString`` method by converting the
     resulting BookList description string to upper case before printing it
     (which should produce a different result than the regular mixed case of
-    the PrintList method test).
+    the ``PrintList`` method test).
 
-#.  [4 points]
+#.  [4 points] 
 
-    In the Book class, a new constructor::
+    In the Book class, a new constructor:
 
-        /** Construct a Book, taking data from reader.
-          * Read through three lines that contain the
-          * title, author, and year of publication, respectively.
-          * There may be an extra blank line at the beginning. 
-          * If so ignore it. 
-          * Nothing beyond the line with the year is read. */
-        public Book(StreamReader reader)
-
-    We made it easy to open a data file with ``FileUtil.GetDataReader``, copied from
-    your recent lab, as in::
+    .. literalinclude:: ../examples/books_homework_stub/book.cs
+       :start-after:  Book chunk
+       :end-before: {
     
-        StreamReader reader = FileUtil.GetDataReader("books.txt");
+    In class BookList, a new constructor:
     
-    This way you do not need a special run option in MonoDevelop.
+    .. literalinclude:: ../examples/books_homework_stub/book_list.cs
+       :start-after:  BookList chunk
+       :end-before: {
     
-    In class BookList, a new constructor::
-    
-        /** Construct a new BookList using Book data read from
-          * reader.  The data coming from reader will contain groups
-          * of three line descriptions useful for the Book constructor
-          * that reads from stream.  Each three-line book description
-          * may or may not be preceded by an empty line. */
-        public BookList(StreamReader reader)
-    
-    We also included files in the right format for testing:
+    For testing we included special files in the right format:
     :file:`books.txt` and :file:`morebooks.txt`.
 
 #.  [4 points] 
 
-    In class Book::
+    In class Book:
 
-        /** Return true if all the corresponding fields in this Book
-          * and in aBook are equal.  Return false otherwise.  */          
-        public bool Equals(Book aBook)
-    
-    It is essential to have the Equals method working in Book before any of
-    the new code in BookList, which all depends on the definition of Equals
+    .. literalinclude:: ../examples/books_homework_stub/book.cs
+       :start-after:  IsEqual chunk
+
+    It is essential to have the ``IsEqual`` method working in Book before any of
+    the new code in BookList, which all depends on the definition of ``IsEqual``
     for a Book.
     
-    NOTE: This is *not* the most general version of Equals you could write.
-    The more general one allows for a parameter of any object type. With
-    skills from Comp 271 you you be able to write the more general version.
+    NOTE: We chose the name ``IsEqual`` to distinguish it from the
+    more general ``Equals`` override that you could write.
+    The ``Equals`` override allows for a parameter of any object type. With
+    skills from Comp 271 you you be able to write the ``Equals`` override.
     
-    In class BookList::
+    In class BookList:
     
-        /** Test if aBook is contained in this BookList.
-          * Return true if book is equal to a Book in the list, 
-          * false otherwise. */
-        public bool Contains(Book book)
+    .. literalinclude:: ../examples/books_homework_stub/book_list.cs
+       :start-after:  Contains chunk
+       :end-before: {
 
     Caution: Do NOT try to use the ``List`` method ``Contains``: Because we
-    only defined a specialized version of Equals for Books, the ``List``
-    method ``Contains`` will *fail*. You need to write your own version with a
-    loop.
+    did *not* override the ``Equals`` method to specialize it for Books, the ``List``
+    method ``Contains`` will *fail*. You need to do a litle bit more
+    work and write your own version with a loop.
     
-    Change the AddBook method from the regular assignment, so it 
-    satisfies this documentation::
+    Change the ``AddBook`` method from the regular assignment, so it 
+    satisfies this documentation:
     
-        /** Adds aBook to the list if aBook is 
-          * not already in the list.
-          * Return true if aBook is added, 
-          * and false if it was already in the list. */
-        public bool AddBook(Book aBook) 
-        
+    .. literalinclude:: ../examples/books_homework_stub/book_list.cs
+       :start-after:  Revised AddBook
+       :end-before: }
+
     In TestBookList you need to react to the return value, too.
         
-#.  [2 points] This one requires the previous elaboration of AddBook. 
-    In BookList::    
+#.  [2 points] This one requires the previous elaboration of ``AddBook``. 
+    In BookList:    
         
-         /** Add all the Books in books to this BookList.
-           * Return true if the current list was changed. 
-           * Return false if each Book in books is a 
-           * duplicate of a Book in the current list. */
-         public bool AddAll(BookList books)
-     
+    .. literalinclude:: ../examples/books_homework_stub/book_list.cs
+       :start-after:  AddAll chunk
+       :end-before: {
+
     You might want to code it first without worrying about the correct
-    return value; then do the complete version. There is more than one
-    approach to determining the return value!
+    return value; then do the complete version. There are multiple
+    approach to determining the return value, some much easier than
+    others!
     
-    In TestBookList you need to react to the return value, too.
+    To fully test in TestBookList, you need to react to the return value, too.

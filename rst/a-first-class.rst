@@ -274,7 +274,7 @@ there is *always* a current object:
 
 Again:  When a constructor or method refers to or sets an instance variable, without
 starting with "object.", it is referring to the *current object*, also referred to as
-*this* object.
+*this* object.  
 
 .. warning::
    These are the only places where there is a current object. 
@@ -298,8 +298,17 @@ starting with "object.", it is referring to the *current object*, also referred 
    an instance method calls a static method.  (The instance variables are just 
    inaccessible inside the static method.)
    
+.. index::
+   double: this; instance method
+   double this; OOP
+
 The current object is *implicit* inside a constructor or instance method definition,
 but it can be referred to *explicitly*.  It is called ``this``.  
+In a constructor or instance method, ``this`` is automatically a legal
+local variable to reference.  
+You usually do not need to 
+use it explicitly, but you could.   For example the current ``Rational`` object's
+``num`` field could be referred to as either ``this.num`` or the shorter plain ``num``.
 We will see in later sections that there are places
 where there is reason for an object to refer to itself explicitly, 
 and use ``this`` as the object's name.
@@ -311,8 +320,9 @@ and use ``this`` as the object's name.
 Getters
 --------
 
-In these places where instance variables are accessible, you have an extra way of getting 
-data in and out of a method:  Reading or setting instance variables.  
+In instance methods, where instance variables are accessible, 
+you have an extra way of getting 
+data in and out of the method:  Reading or setting instance variables.  
 The simplest methods do nothing but that....
 
 We have chosen to make our Rationals immutable.  The ``private`` in front
@@ -323,8 +333,8 @@ so how do we do that?
 
 Use **public methods**. 
 
-Since the fields are accessible anywhere *inside* the class, and public methods
-can be used from outside the class, we can simply code
+Since the fields are accessible anywhere *inside* the class's instance methods, 
+and public methods can be used from outside the class, we can simply code
 
 .. literalinclude:: ../examples/intro_cs_lib/rational.cs
    :start-after: numerator chunk
@@ -332,8 +342,8 @@ can be used from outside the class, we can simply code
 
 These methods allow one-way communication of the numerator value out of the class.  
 
-Note again that there is no ``static``.  The field value for the *current*
-Rational is returned.
+Note again that there is no ``static`` in the method heading.  
+The field value for the *current* Rational is returned.
 
 Another simple method returns a ``double`` approximation:
 
@@ -438,16 +448,16 @@ Pictorial Playing Computer
 ---------------------------
 
 Let us start pictorially playing computer on :file:`test_rational.cs`, 
-as a review of much of the previous sections  It will allow
-us to visualize the use of ``this`` referring to the current object.  
-The first line of ``main``, ::
+as a review of much of the previous sections  We explicitly show a local variable
+``this`` to identify the current object in an instance method or constructor.  
+
+The first line of ``Main``, ::
 
    Rational f = new Rational(6, -10);
    
 creates a new Rational, so it calls the constructor.  At the very beginning of the
-constructor, a prototype ``Rational`` is already created as the current object.  
-We will always display the implicit local variable name ``this`` 
-to point to this current object.  
+constructor, a prototype ``Rational`` is already created as the current object,
+so immediately, there is a ``this``.  
 The parameters 6, and -10 are passed, initializing the explicit local
 variables ``numerator`` and ``denominator``.  
 The figure illustrates the memory state at the beginning of the constructor call:
@@ -456,8 +466,8 @@ The figure illustrates the memory state at the beginning of the constructor call
 
 The constructor finds the value of the local variable ``numerator``, and needs to 
 assign the value 6 to a variable ``num``.  The compiler has looked 
-first for a local variable ``num``; it 
-found none, and it looked *second* for an instance variable in the object pointed to
+first for a local variable ``num``, and found none. 
+Then it looked *second* for an instance variable in the object pointed to
 by ``this``.  It found ``num`` there.  Now it copies the 6 into there.  Similarly for
 ``denominator`` and ``denom``:
 
@@ -465,7 +475,7 @@ by ``this``.  It found ``num`` there.  Now it copies the 6 into there.  Similarl
 
 Then the constructor calls ``normalize``.  Since normalize is also an instance method,
 a reference to ``this`` is passed implicitly.  While illustrating the memory state 
-for more than one active method, we separate each one with a horizontal line.
+for more than one active method, we separate each one with a horizontal segment.
 
 .. image:: images/callNormalize.png
 
@@ -474,18 +484,19 @@ variables for ``gcd`` do *not* contain a reference to ``this``.
 
 .. image:: images/callGCD.png
 
-At the end of ``gcd`` 2 is returned and initializes ``n`` in the caller ``normalize``.
-Then normalize finishes, modifying the instance variable pointed to by ``this``.
+At the end of ``gcd`` the ``int`` 2 is returned and initializes 
+``n`` in the calling method ``normalize``.
+Then normalize modifies the instance variable pointed to by ``this``, and finishes.
 
 .. image:: images/finishNormalize.png
 
-which is the same object referred to by ``this`` in the constructor.  
+That is the ame object ``this`` in the constructor.  
 Just before the constructor completes we have:
 
 .. image:: images/finishConstructor.png
 
-Then the constructor's ``this`` is the reference to the new object initializing ``f`` in
-``Main``.
+Then in ``Main`` the constructor's ``this`` is the reference to the new object 
+initializing ``f``.
 
 .. image:: images/setF.png
 
@@ -494,7 +505,8 @@ Consider the next line of ``Main``::
    Console.WriteLine("6/(-10) simplifies to {0}", f);
           
 We omit the internals of the WriteLine call, except to note that it must convert
-the reference ``f`` to a string.  It does this by calling ``ToString`` for ``f``,
+the reference ``f`` to a string.  As with any object,
+it does this by calling the ``ToString`` method for ``f``,
 so the implicit ``this`` in the call to ``ToString`` refers to the same object as ``f``:
 
 .. image:: images/callToString.png
@@ -502,30 +514,71 @@ so the implicit ``this`` in the call to ``ToString`` refers to the same object a
 ``ToString`` returns "-3/5", and it gets printed as part of the line generated
 by ``WriteLine``....  
 
-We skip the similar details through the initialization of ``h``::
+We skip the similar details through two more ``WriteLine`` statements and the 
+initialization of ``h``::
 
     Rational h = new Rational(1,2);
 
 The ``WriteLine``
 statement after that needs to evaluate ``f.Add(h)``, generating a call to Add.
-The next figure shows the two local variableS in ``Main``, ``f`` and ``h``, each
+The next figure shows the two local variables in ``Main``, ``f`` and ``h``, each
 pointing to a ``Rational`` object.  The image shows the situation in the call to Add.  
-In the local variables for THE METHOD ``Add`` 
+In the local variables for the method ``Add`` 
 see what the implicit ``this`` refers to, and what the 
-(local to ``Add``) variable f refer to.  As the figure shows, this use of a local variable
+(local to ``Add``) variable ``f`` refer to.  As the figure shows, 
+this use of a local variable
 ``f`` is independent of the ``f`` in ``Main``:
 
 .. image:: images/callAdd.png
 
-Since the return statement in ``Add`` creates a new object, there is a call to the
-constructor in ``Add``.  We do not go through the details fo that call, but
+Since the return statement in ``Add`` creates a new object, 
+the figure shows  a call to the
+constructor from inside ``Add``.  We do not go through the details of another
+constructor call, but
 ``this`` in The constructor ends up pointing to the Rational shown.
 
 The ``this`` of the constructor ends up as the reference returned by Add:
 
 .. image:: images/endAdd.png
 
-which gets sent to the WriteLine statement and printed as in the earlier code.
+which gets sent to the WriteLine statement and gets printed as in the earlier code.
 
-Hopefully all these picture reinforce keeping track of the ``this`` with 
-constructors and instance methods (but not static methods).
+Make sure you see how the pictures reinforce these important ideas:
+
+*  Keeping track of the ``this`` with 
+   constructors and instance methods (but not static methods).
+*  The aliasing of ``Rational`` objects used as parameters explicitly or 
+   implicitly (``this``).
+   
+We have played computer before in procedural programming, 
+following individually explicitly named
+variables.  This has allowed us to follow loops clearly after the code is
+written.  The pictorial version with multiple object references and method calls
+is also useful for checking on code that is written.  
+
+When first *writing* code, a picture of the setup
+of the references in your data is also helpful.  
+New object-oriented programmers often have a hard time referring to the
+data they want to work with. 
+If you have a picture of the data relationships
+you can point with a finger to a part that you want to use.
+For example 
+in the call to ``Add``, one piece of data you need for your arithmetic is
+the ``num`` field`` in ``f``.  Then you must be carful to note
+that *only local variables can be referenced directly*
+(including the implicit ``this``).   If you want to refer to data that is not a local
+variable, you must follow the reference path arrow that leads *from a local variable* to
+an instance field that you want to reference. 
+
+.. image:: images/pathToNum.png
+
+Then use the proper object-oriented notation to refer to the path.  
+In the example, it takes one step,
+from local variable ``f`` to its field ``num``, referred to as ``f.num``.
+Similarly the current object's ``num`` is connected through ``this``, but C# shorthand
+allows ``this.`` to be omitted.  And so on, for ``f.denom`` and ``denom``.
+
+Visually following such paths will be even more important later, when we construct
+more complex types of objects, and you need to follow
+a path through *several* references in sequence.
+

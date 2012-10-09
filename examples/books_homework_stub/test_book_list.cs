@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace IntroCS
 {
-   /** A main program to test the class BookList. */
+   // A main program to test the class BookList. 
    class TestBookList
    {
-       /** Test BookList. */
+       // Test BookList.
        public static void Main()
        {
            BookList books = new BookList();
