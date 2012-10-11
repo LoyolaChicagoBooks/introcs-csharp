@@ -70,9 +70,14 @@ Put a blank line after a paragraph to mark its end.  As you can see, that is how
 Steps
 -----------------
 
-All of the additions you need to make are in the class ``FileUtil``.
+All of the additions you need to make are in bodies of function 
+definitions in the class ``FileUtil``.  Look back to ``Main`` in ``FakeAdvise`` to
+see how the functions from ``FileUtil`` are actually used:  The 
+``StreamReader`` is set up to read from the right file.  The the ``FileUtil`` functions
+``ReadParagraph``, ``GetParagraphs``, and ``GetDictionary`` are used to provide
+the text data needed. 
 
-The class already has one completed method, ``GetDataReader``, 
+The ``FileUtil`` class already has one completed method, ``GetDataReader``, 
 This function is used
 in ``Main`` to read the two data files.  It exits the program gracefully with
 an error message if the file is missing.
@@ -81,8 +86,8 @@ ReadParagraph
 ~~~~~~~~~~~~~~
 
 The first method to complete in :file:`file_util.cs`
-is useful by itself and later for use in the new
-``GetParagraphs`` and ``GetDictionary``.  See the stub:
+is useful by itself and later for use in the 
+``GetParagraphs`` and ``GetDictionary`` that you will complete.  See the stub:
 
 .. literalinclude:: ../examples/dict_lab_stub/file_util.cs
    :start-after: ReadParagraph chunk
@@ -98,20 +103,20 @@ and then the reader should be set to read the goodbye paragraph
 
 To code, you can read lines one at a time, and append them to the part of the
 paragraph read so far. There is one thing to watch out for: The
-``ReadLine`` function *throws away* the following newline ("\n") in the input. You
+``ReadLine`` function *throws away* the following newline (``"\n"``) in the input. You
 need to preserve it, so be sure to explicitly add a newline, back onto
 your paragraph string after each nonempty line is added. The returned
 paragraph should end with a single newline. 
 
 Throw away the empty line
 in the input after the paragraph. Make sure you stop after reading
-the empty line.  Making sure you advance the reader
-to the right place is very important.  
+the empty line.  It is very important that you advance the reader
+to the right place, to be ready to read the next paragraph. 
 
 Be careful of a pitfall with files:  You can only read a given chunk once:  
 If you read again you get the *next* part.
 
-Fill in ``ReadParagraph`` first - this short function should actually be most of 
+This first short ``ReadParagraph`` function should actually be most of 
 the code that you write for the lab!  The program is set up so you can immediately
 run the program and test ``ReadParagraph``:  It is called to read in the welcome string
 and the goodbye string for the program, so if those come correctly to the screen, you
@@ -121,7 +126,7 @@ GetParagraphs
 ~~~~~~~~~~~~~~~~
 
 Since you have ``ReadParagraph`` at your disposal, you now only need to
-insert a few remaining lines of code to complete the next method
+insert a *few remaining lines of code* to complete the next method
 ``GetParagraphs``, that reads to the end of the file, and likely
 processes more than one paragraph.  
 
@@ -142,7 +147,7 @@ GetDictionary
 ~~~~~~~~~~~~~~~
 
 The last stub to complete in :file:`file_util.cs`` is ``GetDictionary``.  Its
-stub is also modified to take a ``StreamReader`` as parameter.  In 
+stub also takes a ``StreamReader`` as parameter.  In 
 ``Main`` this function is called to read from
 :file:`help_not_responses.txt`.  Here are the first few lines:
 
@@ -189,9 +194,9 @@ Here is how the documentation for ``GetDictionary`` should be changed:
    :start-after: Extra credit documentation
    :end-before: }
 
-Modify the lab project to use this file effectively:  Rename
-"help_not_responses.txt" to "one_key_responses.txt" and then rename
-"help_not_responses2.txt" to "help_not_responses.txt", so ``Main`` reads it.
+Modify the lab project to use this file effectively:  Find
+"help_not_responses.txt" on line 22 in ``Main``.  Change it to
+"help_not_responses2.txt" (inserting '2'), so ``Main`` reads it.
 
 In your test of the program, be sure to use several of the keys that apply to the
 same response, and show to your TA.
