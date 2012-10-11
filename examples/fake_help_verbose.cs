@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-namespace FakeConversationVerbose
+namespace IntroCS
 {
-   class MainClass
+   class FakeHelpVerbose
    {
       static Random rand = new Random();
 
@@ -16,16 +16,17 @@ namespace FakeConversationVerbose
          string prompt = "\n> ";
          Console.WriteLine(@"Welcome to We-Give-Answers!
 What do you have to say?");
-         Console.Write("\nEnter 'bye' to end our session." + prompt);
+         Console.Write("\nEnter 'bye' to end our session.");
          string fromUser;
          do {
-            fromUser = Console.ReadLine().ToLower().Trim();
+            fromUser = UI.PromptLine(prompt).ToLower().Trim();
             if (fromUser != "bye") {
                string answer = Response(fromUser, guessList, responses);
-               Console.Write(answer + "\n" + prompt);
+               Console.WriteLine('\n' + answer);
             }
          } while (fromUser != "bye");
-         Console.WriteLine(@"We-Give-Answers
+         Console.WriteLine(@"
+We-Give-Answers
 thanks you for your patronage.
 Call again if we can help you
 with any other problem!");

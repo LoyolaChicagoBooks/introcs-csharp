@@ -12,11 +12,11 @@ namespace IntroCS
       {
          // set up data reading with utilities in class FileUtil
          StreamReader reader = FileUtil.GetDataReader("help_not_defaults.txt");
-         // special data in first two paragraphs
+         // special data is in the first two paragraphs
          string welcome = FileUtil.ReadParagraph(reader);
          string goodbye = FileUtil.ReadParagraph(reader);
-         List<string> guessList =
-                   FileUtil.GetParagraphs(reader); //list of random responses
+         List<string> guessList =                  // rest of the file gives a
+                   FileUtil.GetParagraphs(reader); //  list of random responses
          reader.Close();
 
          reader = FileUtil.GetDataReader("help_not_responses.txt");
@@ -26,13 +26,13 @@ namespace IntroCS
 
          Console.Write(welcome);
          string prompt = "\n> ";
-         Console.Write("Enter 'bye' to end our session.\n" + prompt);
+         Console.WriteLine("Enter 'bye' to end our session.");
          string fromUser;
          do {
-            fromUser = Console.ReadLine().ToLower().Trim();
+            fromUser = UI.PromptLine(prompt).ToLower().Trim();
             if (fromUser != "bye") {
                string answer = Response(fromUser, guessList, responses);
-               Console.Write("\n" + answer + prompt);
+               Console.Write("\n" + answer);
             }
          } while (fromUser != "bye");
          Console.Write("\n"+ goodbye);
