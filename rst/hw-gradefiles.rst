@@ -58,11 +58,16 @@ this homework:
 Requirements
 ------------
 
+
 #. Unlike in previous assignments, this program must accept data from
    a collection of input files (that is, it will not be reading most of the 
    data from
    the Console.  
 
+#. Copy examples sub-folder :file:`grade_file_homework_stub` to
+   :file:`grade_file_homework`.  You can examine the sample data files
+   as they are discussed below.
+   
 #. The program needs a class abbreviation from the user.  If there
    is a command line argument, use it.  Make sure your code can 
    read a command-line argument using the special form of
@@ -143,12 +148,13 @@ Requirements
       P,1,100
 
 #. The program will process the data from each student file and
-   calculate the average within each category and weighted average 
-   and letter grade for
+   calculate the average within each category and weighted overall average. 
+   Also display the letter grade for
    each student, using code derived from the previous
    assignment. 
 
-#. The final report file is named with the course abbreviation 
+#. Your program writes the final report file.  
+   It is named with the course abbreviation 
    + "_summary.txt".  Example: comp170_summary.txt.
    This file must have a line for each student showing the 
    student's last name, first name,
@@ -160,22 +166,16 @@ Requirements
       Thiruvathukal, George 99.5 A
       Harrington, Andrew 91.2 A-
    
-#. Copy examples sub-folder :file:`grade_file_homework_stub` to
-   :file:`grade_file_homework`. 
-   There is test data for
-   class abbreviations comp170 and comp150 in the project directory.   
+#. There is test data for
+   class abbreviations comp170 and comp150 in the homework directory.   
    There are also solution files for the 
    summaries.  Their names end in ``_solution.txt`` to distinguish them from the
-   summary files you should generate in tests.
+   summary files *you* should generate in tests.
    
    While your program should certainly work for course abbreviations comp170 and comp150,
    it should also work in general for any data files your refer to
-   in the defined formats.
-   
-   The stub of grade_files.cs has a Main function that just prints out the
-   current working directory, to check if you will be in the same directory 
-   as the text files.  Remove that line after testing.
-   
+   in the defined formats and place in the same folder.
+      
 Hints
 -----
 
@@ -184,9 +184,7 @@ Hints
    You're still going to need ReadLine() and
    WriteLine() in this assignment, the only difference is that we'll
    be making use of File classes to get the input from a file instead
-   of the Console. The parameter syntax will be the same.
-   There is also a lab exercise for learning to
-   work with file I/O. 
+   of the Console. The parameter syntax will be the same. 
 
 #. For each file line you'll want to use the string ``Split`` method, 
    and then the ``Trim`` 
@@ -271,10 +269,11 @@ any combination that does not include both of the last two options about missing
    Copy the first three column headings from above.
    The column headings for the categories can just be their one letter code.
    Names and letter grades should be left-justified (padded on the right, by 
-   using a negative field width). **[2]**
-#. Change the scheme for calculating letter grade to use a function that calculates
+   using a *negative* field width).  The negative sign signals left justification 
+   rather than right justification. **[2]**
+#. Change the scheme for calculating letter grades to use a function that calculates
    the proper grade, where the only ``if`` statement is one simple one
-   inside a loop.  The ``if`` statement will have a return statement in its body, 
+   inside a *loop*.  The ``if`` statement will have a return statement in its body, 
    and no ``else``.  The loop will need to use
    corresponding arrays of data for grade cutoffs and grade names. **[3]**
 #. For any student who has missed passing in all the required items, 
