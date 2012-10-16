@@ -578,7 +578,7 @@ If you have a picture of the data relationships
 you can point with a finger to a part that you want to use.
 For example 
 in the call to ``Add``, one piece of data you need for your arithmetic is
-the ``num`` field`` in ``f``.  Then you must be carful to note
+the ``num`` field in ``f``.  Then you must be carful to note
 that *only local variables can be referenced directly*
 (including the implicit ``this``).   If you want to refer to data that is not a local
 variable, you must follow the reference path arrow that leads *from a local variable* to
