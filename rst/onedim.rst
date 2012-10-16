@@ -349,7 +349,40 @@ length array, where you have values for each parts, as in::
     
     return new[] {minVal, maxVal};
     
+.. index::
+   double: OOP; default value
+
+.. _default-fields:
+   
+Default Initializations
+-------------------------
+
+You should have notice that when the first example array of integers was created,   
+it was filled with zeros.  It is a safety feature of C# that the internal fields 
+of objects always get a specific value, not random data.  Here are the defaults:
+
+   | primitive numeric types: zero
+   | boolean: false
+   | all object types:  null
+
+.. warning::
+
+   An array with elements of object type, like ``string[]``,  
+   without a specific initializer, 
+   gets initialized to  all ``null`` values.  The creation is totally
+   legal, but if you try to use the created value, like  ::
+   
+       string[] words = new string[10];
+       Console.WriteLine(words[0].Length);  // run time error here 
     
+    The error is because `` null`` is not an object - it does not have a ``Length``
+    property.  If, for example, 
+    you want an array of empty strings you would need a loop::
+    
+       for (int i = 0; i < words.length; i++) {
+          words[i] = "";
+       }
+        
 .. index::
    double: example; command line adder
    double: Main; parameters
