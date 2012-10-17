@@ -83,7 +83,9 @@ function.  The formula is consistent, so we can loop easily::
        Console.WriteLine("{0} {1} {2} {3}", n, n*n, n*n*n, Math.Sqrt(n));
    }
 
-The numbers will be there, but it is not pretty::
+The numbers will be there, but it is not pretty:
+
+.. code-block:: none
 
     1 1 1 1
     2 4 8 1.4142135623731
@@ -110,7 +112,9 @@ Change the format string::
                           n, n*n, n*n*n, Math.Sqrt(n));
    }
 
-and we generate the neater::
+and we generate the neater:
+
+.. code-block:: none
 
      1   1    1 1.0000
      2   4    8 1.4142
@@ -154,7 +158,9 @@ then the *whole* string is inserted, *ignoring* the fieldWidth.  Example::
     Console.WriteLine("123456789");
     Console.WriteLine("{0,9}\n{0,7}\n{0,5}\n{0,3}", s);
     
-generates::
+generates:
+
+.. code-block:: none
 
     123456789
         stuff
@@ -165,7 +171,9 @@ generates::
 filling 9, 7, and then 5 columns, by padding with 4, 2, and 0 blanks.  
 *The last line sticks out past the proposed 3-column fieldWidth.*
 
-One more thing to add to our power table is a heading.  We might want::
+One more thing to add to our power table is a heading.  We might want:
+
+.. code-block:: none
 
     n   square    cube    root
     
@@ -177,7 +185,9 @@ we can expand the columns, with code in example
    :start-after: chunk
    :end-before: chunk
 
-generating::
+generating:
+
+.. code-block:: none
 
      n  square    cube    root
      1       1       1  1.0000
@@ -198,6 +208,32 @@ of the format string by putting all the substitution expressions in braces
 right beside each other, and generate the space between columns with a 
 larger field width.
 
+.. index:: 
+   double: left justification; format
+   
+.. _left-justification:
+   
+**Left Justification:**  Though our examples have always right justified in
+a field (padding on the left), for completeness we note this alternative:
+A minus sign in front of the fieldWidth
+places the result left justified (padded on the right).
+For example::
+
+    string s = "stuff";
+    Console.WriteLine("1234567890");
+    Console.WriteLine("{0,-9}|\n{0,-7}|\n{0,-5}|\n{0,-3}|", s);
+
+prints:
+
+.. code-block:: none
+
+    1234567890
+    stuff    |
+    stuff  |
+    stuff|
+    stuff|
+
+where the '|' appears after any blank padding in each line.
 
 .. index:: 
    double: ASCII; example
