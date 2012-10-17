@@ -6,6 +6,15 @@
 Homework: Grade File 
 ===================== 
 
+Copy examples sub-folder :file:`grade_file_homework_stub` to
+:file:`grade_file_homework`, with the new folder staying under examples folder 
+or as described in :ref:`work-folder`.  Then in the :file:`grade_file_homework` folder 
+you should find the
+source file :file:`grade_files.cs` for you to *complete* for this homework.  
+*Do use this stub*, since it contains the namespace and class name expected 
+by the accompanying run scripts.  The folder also contains sample data files
+in the formats discussed below.
+   
 In this assignment, we're going to begin taking steps to help you
 achieve greater *independence* when it comes to programming. This
 means (among other things) that you will be given what is commonly
@@ -36,7 +45,7 @@ summary reports could be generated.
 
 In this assignment, the problem we are trying to solve is to take all
 of the *raw* grade data from one or more student files and prepare a
-*summary report* with a line for each student.
+*summary report* file with a line for each student.
 
 Although we could do all of what we're describing here with a
 *spreadsheet*, the point is to show how we can use C# to read in a
@@ -50,7 +59,6 @@ We'll be making use of a number of C# features (some old, some new) in
 this homework:
 
 - decisions, loops, strings, and functions 
-  (basically all of our notes, chapters 1-5)
 - files
 - arrays
 
@@ -61,24 +69,23 @@ Requirements
 
 #. Unlike in previous assignments, this program must accept data from
    a collection of input files (that is, it will not be reading most of the 
-   data from
-   the Console.  
+   data from the class ``Console``).  
 
-#. Copy examples sub-folder :file:`grade_file_homework_stub` to
-   :file:`grade_file_homework`.  You can examine the sample data files
-   as they are discussed below.
-   
-#. The program needs a class abbreviation from the user.  If there
-   is a command line argument, use it.  Make sure your code can 
+#. The program needs a course abbreviation from the user.  If there
+   is a command line argument, use it as the course abbreviation.  
+   Make sure your code can 
    read a command-line argument using the special form of
-   ``Main(string[] args)``.  If there is not command line argument,
-   prompt the user for it.
+   ``Main(string[] args)`` already in the stub :file:`grade_files.cs`.  
+   If the user does not provide at command line argument,
+   prompt the user for it once the program starts.
    The abbreviation should not include spaces.
-   An example would be comp170.  All data files will include the class
-   abbreviation as part of their name.  We will use comp170 in the examples,
-   but it could be something else.
+   An example would be comp170.  All data files will include the course
+   abbreviation as part of their name.  We will use comp170 in the examples below,
+   but it could be something else.  The folder also contains sample data files
+   for a course abbreviation comp150.
 
-#. There are two master files. One is "categories\_" + the course abbreviation
+#. There are two master files for any course. 
+   One is "categories\_" + the course abbreviation
    + ".txt".  For example, categories_comp170.txt.
    
    It will contain three lines.
@@ -110,7 +117,7 @@ Requirements
 
       Student ID, Last Name, First Name
 
-   For example:
+   For example, the file could start:
    
    .. code-block:: none
 
@@ -121,8 +128,8 @@ Requirements
 #. There will be a secondary file for each student, 
    named after the student id and the course abbreviation and ".data". 
    For example,
-   George's scores will be kept in a file named
-   ``P34323243comp170.data``. Andy's scores are in
+   George's scores would be kept in a file named
+   ``P34323243comp170.data``. Andy's scores would be in
    ``P87483743comp170.data``. Each record (one per file line will have the
    following structure:
 
@@ -148,7 +155,7 @@ Requirements
       P,1,100
 
 #. The program will process the data from each student file and
-   calculate the average within each category and weighted overall average. 
+   calculate the average within each category, and then the weighted overall average. 
    Also display the letter grade for
    each student, using code derived from the previous
    assignment. 
@@ -167,7 +174,7 @@ Requirements
       Harrington, Andrew 91.2 A-
    
 #. There is test data for
-   class abbreviations comp170 and comp150 in the homework directory.   
+   course abbreviations comp170 and comp150 in the homework directory.   
    There are also solution files for the 
    summaries.  Their names end in ``_solution.txt`` to distinguish them from the
    summary files *you* should generate in tests.
@@ -183,12 +190,12 @@ Hints
    :ref:`files`.
    You're still going to need ReadLine() and
    WriteLine() in this assignment, the only difference is that we'll
-   be making use of File classes to get the input from a file instead
+   get the input from a file instead
    of the Console. The parameter syntax will be the same. 
 
-#. For each file line you'll want to use the string ``Split`` method, 
+#. For each file line you'll want to use the :ref:`Split`, 
    and then the ``Trim`` 
-   method on each part to
+   method from :ref:`more-string-methods` on each part to
    remove surrounding spaces. Then 
    use indexing to get the field of interest. (More below.)
 
@@ -201,7 +208,7 @@ Hints
    particular order. 
 
    This means, specifically, that your program simply reads a record,
-   decides what category it is in, and updates the running total for
+   decides what category it is in, and updates the *running total* for
    that category. Once the entire file has been read, you can compute
    the average for each category based on the *number of items* that
    *should* be in that category, which may be more than the number
@@ -218,9 +225,9 @@ Hints
        
        string[] categories;
        
-   To know where to store data for each category, you can use this
+   To know where to update data for each category, you can use this
    function after you read in a code, to determine the proper index.
-   It is already in the stub code:
+   It is already in the stub of the solution file :file:`grade_files.cs`:
 
    .. literalinclude:: ../examples/grade_file_homework_stub/grade_files.cs
       :start-after: chunk
@@ -269,8 +276,8 @@ any combination that does not include both of the last two options about missing
    Copy the first three column headings from above.
    The column headings for the categories can just be their one letter code.
    Names and letter grades should be left-justified (padded on the right, by 
-   using a *negative* field width).  The negative sign signals left justification 
-   rather than right justification. **[2]**
+   using a *negative* field width).  
+   See :ref:`Left Justification <left-justification>`. **[2]**
 #. Change the scheme for calculating letter grades to use a function that calculates
    the proper grade, where the only ``if`` statement is one simple one
    inside a *loop*.  The ``if`` statement will have a return statement in its body, 
