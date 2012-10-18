@@ -23,7 +23,7 @@ Look at the code.  Note the extra namespace being used at the top.  You will
 always need to be using ``System.IO`` when working with files.
  
 The first line of ``Main`` creates a ``StreamWriter`` object assigned to the
-variable  ``reader``.  A ``StreamWriter`` 
+variable  ``writer``.  A ``StreamWriter`` 
 links C# to your
 computer's file system for writing, not reading. 
 Files are objects, like a Random, and use the ``new`` syntax to create a new one. 
@@ -41,7 +41,7 @@ current directory. :ref:`file-and-directory-paths` discusses
 the use of directory separators.
 
 The second and third lines of ``Main`` write the specified strings to lines in the file.
-Note that the ``StreamWriter`` object ``reader``, not ``Console``, 
+Note that the ``StreamWriter`` object ``writer``, not ``Console``, 
 comes before the dot and method.
 
 The last line of ``Main`` is important for cleaning up. Until this line, this
