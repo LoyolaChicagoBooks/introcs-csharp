@@ -65,6 +65,7 @@ is the same as  ::
     
 .. index::
    double: format; field width
+   double: format; precision
    double: format; table
    double: example; power_table.cs
 
