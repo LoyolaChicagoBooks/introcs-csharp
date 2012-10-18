@@ -22,10 +22,10 @@ with a string, which is a sequence of characters.
 We have already processed strings a character at a time, with ``while`` loops.
 We took advantage of the fact that strings could be indexed, and our ``while``
 loops directly controlled the sequence of indices, and then we could
-look up the character at each index::
+look up the character at each index of a given string ``s``::
 
 	int i = 0;
-	while (i < s.length) {
+	while (i < s.Length) {
 	   use value of s[i]...
 	   i++;
 	}
@@ -57,7 +57,7 @@ loop::
        }
     }
 
-That is all you need!   The ``foreach`` heading feeds us one
+That is all you need! The ``foreach`` heading feeds us one
 character from ``s`` each time through, using the name ``ch`` 
 to refer to it.  
 Of course any new variable name must be declared in C#, so ``ch``
