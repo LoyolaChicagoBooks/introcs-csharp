@@ -214,18 +214,40 @@ into an actual (reduced) rational number. We test three general cases:
 Running the Tests
 ---------------------------
 
-To run the unit tests in your program (or library), use the **nunit-console** program that
-ships with Mono on the generated executable (.exe) or (.dll). You can pass any .dll or .exe 
-file to nunit-console, and nunit-console will examine it for the presents of unit tests
-and attempt to run all of them.
+To run the tests yourself, set your mono console/terminal with current directory
+:file:`examples/intro_cs_lib`.
+This is our library folder.  In the past we have incorporated the needed parts 
+in other regular programs.  To just build the library file by itself, run
 
-.. literalinclude:: ../examples/music/output/Rational.nunit.out
+.. code-block:: none
+
+    nant
+
+If you look in the folder now, you will see :file:`introcs.dll`, 
+the compiled library file.  
+
+The **nunit-console** program 
+ships with Mono.  To run the unit tests on :file:`introcs.dll`, 
+labeling the tests run, enter the command:
+
+.. code-block:: none
+
+    nunit-console introcs.dll -labels
+
+You should see something like this output:
+
+.. literalinclude:: ../examples/intro_cs_lib/output/Rational.nunit.out
    :language: text
 
-
 As you can see in the above output, all of the RationalTests examples are being executed.
-We used the ``-labels`` option to give more verbose output, which has the effect of printing
-the names of the tests that were completed.
+We used the -labels option to give more verbose output, 
+which has the effect of printing the names of the tests that were completed.
 
 You can also observe that all of the tests have passed!
 
+This works in general: You can pass any .dll or .exe 
+file to nunit-console, and nunit-console will examine it for the presence of unit tests
+and attempt to run all of them.  
+
+We waited until now to discuss unit testing, because it only acts on *instance* methods,
+unlike the static methods that we started out with.
