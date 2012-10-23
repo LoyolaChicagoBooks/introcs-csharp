@@ -140,6 +140,8 @@ run script.  If you would like your work separate, here is a suggested setup:
    * :file:`Generic.build` 
    * :file:`run.cmd` for Windows or :file:`run.sh` for a Mac  
    * Other scripts from the examples folder if you like
+   * Copy the whole library folder :file:`intro_cs_lib` to be a subdirectory
+     of :file:`work`.
    
 
 #. Then write a program in :file:`work`, and test it with your run script 

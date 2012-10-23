@@ -13,7 +13,7 @@ namespace IntroCS
          while (i <= n) {
             if (a % i == 0 && b % i == 0)
                gcd = i;
-            i = i++;
+            i++;
          }
          return gcd;
       }
