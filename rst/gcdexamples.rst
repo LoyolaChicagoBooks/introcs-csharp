@@ -134,7 +134,7 @@ This code works as follows:
   operator ``%`` is our way of determining whether there is a 
   remainder from the
   division operation ``a / i`` or ``b / i``. 
-- The line ``i = i + 1`` is our way of going to the next value of ``i`` 
+- The line ``i++`` is our way of going to the next value of ``i`` 
   to be tested as the new GCD.
 - When this loop terminates, the greatest common divisor has been found. 
 
