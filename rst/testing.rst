@@ -249,5 +249,6 @@ This works in general: You can pass any .dll or .exe
 file to nunit-console, and nunit-console will examine it for the presence of unit tests
 and attempt to run all of them.  
 
-We waited until now to discuss unit testing, because it only acts on *instance* methods,
+We waited until now to discuss unit testing, because the test classes are coded with
+*instance* methods,
 unlike the static methods that we started out with.
