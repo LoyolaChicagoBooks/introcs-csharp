@@ -25,28 +25,28 @@ namespace IntroCS
 
       // Return the title. 
       public String GetTitle()
-      {  // code
+      {  
    
          return "Not coded"; //just so skeleton compiles
       }
 
       // Return the author. 
       public String GetAuthor()
-      {
+      {  
 
          return "Not coded"; //just so skeleton compiles
       }
 
       // Return the year of publication. 
-      public int Getyear()
-      {  // copy code from before!
+      public int GetYear()
+      {  // code!
 
          return 0; //just so skeleton compiles
       }
                                                         
       // Return a multi-line String labeling all Book information. 
       public override string ToString()
-      {  // code
+      {  
 
          return "Not coded"; //just so skeleton compiles
       }
