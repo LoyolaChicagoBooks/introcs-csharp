@@ -76,18 +76,20 @@ the objects helper, goer, and quitter::
 
     Response[] resp = {helper, goer, quitter};
     
-See how we use Response as a declaration type!  Each of the objects in the declaration list *is*
+See how we use Response as a declaration type!  
+Each of the objects in the declaration list *is*
 in fact a Response.  
 
 Now that we can process
-with this collection and foreach loops, we do not need the object names we gave at all:
+with this collection and ``foreach`` loops, 
+we do not need the object names we gave at all:
 We can just put new objects in the initialization sequence!
 
 Now that we can think of these different objects as being of the same type, we can see 
 the processCommand logic, with its repetitive ``if`` statement syntax is just trying
 to match a command word with the proper Response, so a Dictionary is what makes sense!
 
-In fact all the logic for combining the various Responses in now moved into
+In fact all the logic for combining the various Responses is now moved into
 CommandMapper, and the the CommandMapper constructor creates the Dictionary
 used to look up the Response that goes with each command word.  Here is the whole code for 
 ResponseMapper, taking advantage of the Dictionary in other methods, too.

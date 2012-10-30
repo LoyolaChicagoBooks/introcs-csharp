@@ -149,6 +149,7 @@ run script.  If you would like your work separate, here is a suggested setup:
    As long as you use namespace IntroCS and have your work directory located
    as instructed, you can freely use the library classes
    like ``UI`` and ``UIF``.
+   
        
 Running Programs in Subdirectories of examples
 ----------------------------------------------
@@ -166,7 +167,7 @@ When you are asked to copy to a folder without the "_stub", you can put the copi
 as another subfolder of the examples folder.  
 Alternately, if you set up a work folder, as discussed
 in the last section, you can put the copied folder as a subfolder of
-your work folder.  The copied run script should work in either place.
+your work folder.  The copied run script in the sub-folder should work in either place.
 
 A Really Simple Example NAnt Script
 ------------------------------------
