@@ -67,10 +67,12 @@ religiously at least once to ensure you were successful.)
 
 #.  Open the text editor. This can usually be done from your
     GUI's start menu.  For example :ref:`jEdit` is available in the labs
-    and free for `download.
+    and free for download.
     For this lab you only need to use generic editor features, but
     a further introduction and download instructions are
-    in the :ref:`jedit` appendix.
+    in the 
+    :ref:`jEdit`
+    appendix.
 
 #.  Create a folder anywhere you like (e.g. in Documents) and name it
     ``hello``. (This can be done through the desktop shell
