@@ -1,0 +1,41 @@
+
+.. index::  program structure
+
+.. _program-structure:
+
+C# Program Structure
+=====================
+
+We discuss the most basic syntax satisfied by all C# programs, which are plain text files,
+with names ending in ``.cs``.  There will be additions
+later but any program you can run will include:
+
+    | ``using System;`` 
+    |
+    | ``class`` **className** 
+    | ``{``
+    |    ``static void Main()``
+    |    ``{``
+    |          program statements go here....
+    |
+    |    ``}``
+    | ``}``
+
+You can see that both the example program :file:`painting.cs` and the lab program
+:file:`hello_world.cs` follow this pattern.  The discussion of these parts through 
+line 6 in
+:ref:`sample-program` are about all we have to say at this point.  For now this
+is the boilerplate code.  We will make additions as necessary.
+
+Here is a silly little test illustrating the difference between ``Console.WriteLine``
+and ``Console.Write``, in example :file:`write_test.cs`:
+
+.. literalinclude:: ../examples/write_test.cs
+
+When run, the program prints:
+
+.. code-block:: none
+
+    hellotherehello
+    Another line
+    Starting yet another line

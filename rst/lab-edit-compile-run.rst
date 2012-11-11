@@ -23,7 +23,7 @@ defined as follows:
 
 #. Link your object code to create an executable. (There are other
    kinds of results to produce, but we will start with the idea of an
-   executable program to keep things simple.)  The default is to nave
+   executable program to keep things simple.)  The default is to have
    an executable program created with compilation, automatically.
 
 #. Run your program. Even for the most seasoned developers, your
@@ -65,20 +65,19 @@ to create, edit, and save a program. Perform the following steps. (You
 are free to deviate but may want to consider following the steps
 religiously at least once to ensure you were successful.)
 
-#.  Open the text editor. This can usually be done from your
-    GUI's start menu.  For example :ref:`jEdit` is available in the labs
+#.  Open a text editor. This can usually be done from your
+    operating system's start menu.  
+    For example :ref:`jEdit` is available in the labs
     and free for download.
     For this lab you only need to use generic editor features, but
     a further introduction and download instructions are
-    in the 
-    :ref:`jEdit`
-    appendix.
+    in the :ref:`jEdit` appendix.
 
 #.  Create a folder anywhere you like (e.g. in Documents) and name it
     ``hello``. (This can be done through the desktop shell
     (e.g. Windows Explorer or Apple Finder.) As a general rule, we
-    recommend that you start any new programming project in its own
-    folder that is free of other folders/files. Clutter is a great
+    recommend that you keep your programming projects in a
+    folder dedicated to programming. Clutter is a great
     enemy of those who aspire to become good programmers.
 
 #.  Enter in the text of the program above, either typing or cutting and pasting.
@@ -106,8 +105,8 @@ religiously at least once to ensure you were successful.)
 
 #.  Now we are going to learn how to compile this program. For this,
     you will need to open a shell. On Linux and OS X, the shell is
-    opened by launching Terminal. On Windows, open a Mono Command
-    Prompt, as discussed above (or use one you left open).  Again to
+    opened by launching Terminal. On Windows, open a :ref:`mono-command-prompt`, 
+    following the instructions at that link (or use one you left open).  Again to
     find it:
 
     -  OS X: Applications -> Terminal (double click it)
@@ -170,7 +169,7 @@ religiously at least once to ensure you were successful.)
     when we are about to learn something that we need to know how to
     do *for life*. We're going to compile the ``hello.cs`` program
     into ``hello.exe`` so we can run it. FYI, you should still be in
-    the Terminal/DOS window where we just listed the directory (this
+    the Terminal/console window where we just listed the directory (this
     works regardless of what OS you are using). Enter::
 
         gmcs hello.cs
@@ -206,7 +205,8 @@ religiously at least once to ensure you were successful.)
     compile it and run it.
 
     Now grab the instructor or teaching assistant so
-    they can perform a quick inspection of your work and check it off.
+    they can perform a quick inspection of your work and check it off
+    (including the varied message printed).
     Labs need to be completed to receive
     credit. If you are unable to make class on a lab day, please make sure
     that you complete the work and demonstrate it by the beginning of the
@@ -218,7 +218,7 @@ For further reinforcement
 #. Download and install Mono Software Development Kit on
    your home computer or laptop.  :ref:`jedit`, which knows about C#
    conventions automatically, is a handy editor, with instructions
-   for download in the appendix.
+   for download in the appendix, :ref:`jedit`.
 
 #. Make sure you can do everything that you just completed in the lab.
 
@@ -228,19 +228,3 @@ For further reinforcement
    :ref:`commandline` and :ref:`jedit`.
 
 #. See whether you can get a head start on :ref:`lab-division`.
-
-
-..  comment  now written, so can look there!
-
-    What's in the next lab?
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    
-    In :ref:`lab-division`
-    we'll continue learning more about C#. The next lab will give you
-    exposure to the C# interactive mode (in Mono, the ``csharp`` command),
-    where we will learn to work with arithmetic and basic primitive types.
-    The ``csharp`` command allows you to use C# as a sort of "toy
-    calculator" language. It also allows you to test capabilities of the C#
-    *programming library*. For example, we will learn some other things you
-    can do with the ``Console`` interfaces, including how to prompt a user
-    for input.

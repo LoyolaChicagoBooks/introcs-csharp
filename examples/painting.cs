@@ -1,12 +1,12 @@
 using System; 
 
-class Painting  // A simple first example
+class Painting 
 {
    static void Main()
    {
-      double HEIGHT = 8;
       double width, length, wallArea, ceilingArea;
       string widthString, lengthString;
+      double HEIGHT = 8;
       
       Console.WriteLine ( "Calculation of Room Paint Requirements");
       Console.Write ( "Enter room length: ");
@@ -19,9 +19,9 @@ class Painting  // A simple first example
       wallArea = 2 * (length + width) * HEIGHT;
       ceilingArea = length * width;
       
-      Console.WriteLine("The wall area is " +
-                          wallArea + " square feet.") ;
-      Console.WriteLine("The ceiling area is " +
-                          ceilingArea + " square feet.") ;
+      Console.WriteLine("The wall area is " + wallArea 
+                          + " square feet.");
+      Console.WriteLine("The ceiling area is " + ceilingArea 
+                          + " square feet.");
    }
 }

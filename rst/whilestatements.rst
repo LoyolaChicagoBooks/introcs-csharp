@@ -516,7 +516,7 @@ that work::
     long nLong = n;
     return nLong*(nLong+1)/2;
     
-or we can avoid a new variable name by doing a cast to ``long``, converting
+or we can avoid a new variable name by :ref:`cast` to ``long``, converting
 the first (left) operand to ``long``, so all the later left-to-right
 operations are forced to be ``long``::
 

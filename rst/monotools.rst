@@ -88,6 +88,8 @@ elegant way of saying SDK--we'll issue updates to these notes.
 .. index::
    double: mono; installation
 
+.. _install-mono:
+
 Installing Mono
 ---------------
 
@@ -180,7 +182,7 @@ Here is how to do a quick sanity check of your Mono setup:
 Mono Command Prompt
 ~~~~~~~~~~~~~~~~~~~~
 
-#. Open the Start Menu and type "mono" in the text field at the bottom.  
+#. Open the Windows Start Menu and type "mono" in the text field at the bottom.  
    You should see a short list of places "mono" appears.
    
 #. Click on the choice that says "Mono 2.10... Command prompt".  

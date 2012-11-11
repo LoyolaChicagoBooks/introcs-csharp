@@ -8,20 +8,21 @@ Learning to Solve Problems
 
 This section might have been placed earlier, 
 but by placing it here, 
-you should realize that you will have a *lot* of data to deal with.
+you should realize that you will have a *lot* of data and concepts to deal with.
 
-The manner in which you deal with all the data and ideas is very important for effective learning.
+The manner in which you deal with all the data and ideas is very important 
+for effective learning.
 It might be rather different than what you needed if you were in a situation 
 where *rote* recall is the main important thing.
 
 Different learning styles mean different things are useful to different people.
 Consider what is mentioned here and try out some approaches.
 
-The idea of this course is not to regurgitate the notes, but to learn to solve problems
+The idea of this course is *not* to regurgitate the book, but to learn to solve problems
 (generally involving producing a computer program).  
 In this highly connected and wired world
 you have access to all sorts of data.  The data is not an end in itself, the question is
-*doing* the right things with the tools out there.
+*doing* the right things with the tools out there to solve a new creative problem.
 
 In this course there is a lot of data tied into syntax and library function names and ....  
 It can seem overwhelming.  It need not be. Take a breath.  
@@ -31,8 +32,10 @@ We introduce C# in chunks.  For a while there will always be the new current top
 You do NOT need to memorize *everything* immediately!  
 
 - Some things that you use rarely, you may never memorize, like,
-  "What is the exact maximum magnitude of a ``double``?"  At *some* point that might be useful.
-  Can you find it?  It happens to be in a table in Miles.  It is also in online .Net documentation
+  "What is the exact maximum magnitude of a ``double``?"  
+  At *some* point that might be useful.
+  Can you find it?  It happens to be in :ref:`numeric-type-limits`.  
+  It is also in online .Net documentation
   that you can Google or bookmark.
   
 - Some things you will use all the time, but of course they start off as new and maybe strange.
@@ -41,25 +44,26 @@ You do NOT need to memorize *everything* immediately!
   consider writing down a summary of the current topic.  
   Both thinking of a summary and writing help reinforce things and get you to remember faster.  
   Also, if you have the current things of interest summarized in one place, they are easy to look
-  up!  
+  up! 
 - If you need some syntax to solve a simple early problem, 
   first try to remember the syntax, then check.  With frequently
-  used material with this sort of repetition, 
+  used material and with this sort of repetition, 
   most everyone will remember most everything shortly.  If there are a few things
   that just do not stick, keep them in your list.  Then go on to new material.  The list of
   what you need to check on will keep changing as you get more experience and get to more topics.
   If you keep some of the old lists, you will be amazed how much stuff that you sweated over,
   is later ho-hum or automatic.
   
-- Earliest exercises
-  should have the general steps needed pretty apparent, and you can just concentrate on
+- In the earliest exercises
+  the general steps that you need should be pretty apparent, 
+  and you can just concentrate on
   translating simple ideas into C# syntax
   (mostly from the material most recently introduced).
   In this case the focus is mostly on syntax.
 
 Memorizing syntax is not going to directly get you to solve real problems.  In any domain:
 programming, construction, organizing political action, ..., you need to analyze the problem
-and figure out a sequence of steps, knowing what powers and resources you have.  
+and figure out a sequence of steps, knowing what *powers and resources you have*.  
   
 For example with political action:
 if you know demonstrations are possible in front of City Hall, you can make a high-level
@@ -70,13 +74,13 @@ to follow through to make it happen.
 
 With programming, syntax details are like the details above: not the first thing to think of,
 and maybe not things that you have memorized.  What *is* important to break down a problem
-and plan a solution, is to know the basic capacities you have in programming.  As you get 
+and plan a solution, is to know the basic *capacities* you have in programming.  As you get 
 into larger projects and have more experience, "basic capacities" will be bigger and bigger ideas.  
 For now, as beginners, it is important to know:
 
 - You can get information from a user and return information via keyboard and screen.
 - You can remember and recall and use information using variables.
-- You can deal directly with various kinds of data: numbers and Strings at this point.
+- You can deal directly with various kinds of data: numbers and strings at this point.
 - There are basic operations you can do with the data (arithmetic, concatenating string,
   converting between data types).
 - At a slightly higher level, you might already have the idea of basic recurring patterns,
@@ -126,7 +130,7 @@ so you will make scans checking for the specific things that you frequently slip
 This things-to-check-separately list, too, will evolve.  Revise it occasionally.  
 If Dr. Harrington does enough
 concentrated C#, *maybe* he will find that entering semicolons becomes automatic, 
-and he can take the separate round of semicolon checking off his list.
+and he can take the separate round of semicolon checking off his list....
 
 What to do *after* you finish an exercise is important, too.  The natural thing psychologically,
 particularly if you had a struggle, is to think, "Whew, outta here!!!!"
@@ -136,12 +140,15 @@ you will probably get it just as fast the next time. If you had a hard time and 
 got to success, you may be doing yourself a disservice with "Whew, outta here!!!"
 
 We have already mentioned how not everything is equally important, and some things are more
-important to keep in your head than others.  The same applies to all the steps in solving
+important to keep in your head than others.  The same idea applies to all the steps in solving
 a possibly long problem.  Some parts were easy; some were hard; there may have been many steps.
 If all of that goes into your brain in one continuous stream of stuff that you 
-remember at the same level, then you are going to leave an awful lot as just unimportant 
-and basically useless (so why do the problem anyway?), *or* have a
-brain *very* stuffed with things you want to recall.
+remember at the same level, then you are going to leave important nuggets mixed in
+with an awful lot of unimportant 
+and basically useless information, and have it all fade into oblivion, or be next to 
+impossible to cycle through looking for the nuggets.  
+Why do the problem anyway if you are just going to bury important information further
+down in your brain?
 
 What is important?  The most obvious thing you will need at a higher level of recall is what
 *just messed you up*, what you missed until doing this problem:  After finishing the
@@ -154,9 +161,12 @@ actual problem, *actively* follow up and ask yourself:
   in a similar (or maybe only partly similar) problem?
 - Is there a kernel here that I can think of as a new tool in my bag of tricks?
   
-Your answers are the most important things to take away.  
+Your answers to these questions are the most important things to take away from your
+recent hard work.  
 The extra consideration puts them more in
 the "priority" part of your brain, so you can really learn from your effort.  When you need 
 the important ideas 
 next, you do not need to play through all the details of 
 the stuff you did to solve the exact earlier problem.
+
+Keep coming back to this section and check up on your process:  It is really important.
