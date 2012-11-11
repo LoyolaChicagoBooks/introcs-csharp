@@ -135,9 +135,9 @@ Once a result turns into ``NaN``, no arithmetic operations change
 further results away from ``NaN``, 
 so there is a lasting record of a big error.
 
-There is no such neat system for showing off small errors in ``double``
+There is no such neat system for showing off small inaccuracies in ``double``
 arithmetic accumulating 
-due to limited precision.  These errors *still* happen silently.
+due to limited precision.  These inaccuracies *still* happen silently.
 
 .. index::
    double:  numeric type; range
