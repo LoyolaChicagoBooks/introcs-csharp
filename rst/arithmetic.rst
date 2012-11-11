@@ -183,7 +183,7 @@ of the operands to ``/`` is a ``double``, the result is a ``double``,
 close to the actual quotient.  
 We say close,
 because C# stores 
-s with only a limited precision, so in fact results are
+values with only a limited precision, so in fact results are
 only approximate in general.  For example:
 
 .. code-block:: none
