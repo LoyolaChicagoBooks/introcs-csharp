@@ -60,7 +60,8 @@ Example:
 .. index::
    double string; @
 
-Literal strings simply delimited by quotes must start and end on the same line. 
+Literal strings that are simply delimited by quotes ``"`` 
+must start and end on the same line. 
 There is also a notation for *\ @-quoting*, with an at-sign ``@`` before the first
 quote.  In an @-quoted string, all characters are treated literally, including
 all backslashes.  Also the string may go on for several lines, and all newlines

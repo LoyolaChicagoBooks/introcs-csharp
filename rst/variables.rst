@@ -40,7 +40,7 @@ For example::
  
     width = 5;
 
-A simple schematic diagram with a name a location (the box):
+A simple schematic diagram with a name for a location in memory (the box):
 
 .. image:: images/variableDeclaration.png
 
@@ -169,7 +169,7 @@ showing we can change the value of a variable.  The most *recent* assignment is 
 
 .. image:: images/variableChange.png
 
-We can carry this session one step further,
+We can carry this csharp session one step further,
 illustrating a difference between C# and math:
 
 .. code-block:: none
@@ -178,7 +178,8 @@ illustrating a difference between C# and math:
     csharp> n;
     8
 
-Clearly ``n = n + 1`` is not a true mathematical equation:  It is a C# assignment, with a 
+Clearly ``n = n + 1`` is not a true mathematical equation:  It *is* a C# assignment, 
+executing with a 
 specific sequence of steps.  
 
 #.  First the right hand side expression

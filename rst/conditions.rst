@@ -30,5 +30,5 @@ results of true-false conditions or tests.
 The simplest place to use conditions in a decision made with an 
 ``if`` statement. 
 
-We will consider more complicated conditions later, but this is a 
-quick start.
+We will consider :ref:`More-Conditional-Expressions` later, but this is a 
+quick start with the easiest ones.

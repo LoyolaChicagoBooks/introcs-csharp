@@ -73,7 +73,7 @@ describe new kinds of objects.
 This is useful in complicated situations, 
 but we start more simply with the older *procedural* programming.  
 Unfortunately for now,
-the more common situation is with objects, and a function that does *not*
+the more common situation is with objects, so a function that does *not*
 involve such new objects must be marked specially as ``static``.
 
 Functions can be like in math, where they produce a function value
