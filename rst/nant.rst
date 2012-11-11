@@ -2,7 +2,7 @@
 
 .. _nant:
 
-NAnt and Automatic Compilation 
+NAnt 
 ==============================
 
 In a previous lab, we covered the basics of compiling and running programs 
@@ -26,7 +26,8 @@ For more information about this
 language, see http://markuplanguages.courses.thiruvathukal.com.
 
 To get you started with one-file programs in your examples folder, 
-*you do not need to know anything about NAnt at all*.
+*you do not need to know anything about NAnt at all*, as long as you use
+a run script from the next section.
 
 .. index:: build scripts
    run script
@@ -57,7 +58,7 @@ The main script to use is the run script:
 - run (a particular program).  
   Do not include the ".cs" from the program file name.  
   
-  It compiles, only if necessary.  If there are compile errors, it lists
+  It compiles, *only if necessary*.  If there are compile errors, it lists
   them and stops.  If the code is legal, the .exe file is run in debug mode so
   runtime errors are better located.  Command line parameters for
   your program may also be added at the end of the line, as in the
@@ -172,7 +173,7 @@ your work folder.  The copied run script in the sub-folder should work in either
 A Really Simple Example NAnt Script
 ------------------------------------
 
-The remaining NAnt sections are only needed for the curious, 
+The remaining NAnt sections are *only here for the curious*, 
 or if you are creating new multi-file projects of your own:
 
 Now we get into the internal details of NAnt scripts.  

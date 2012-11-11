@@ -38,9 +38,11 @@ editor be knowledgeable about C# syntax and formatting conventions.
 If you are using jEdit, see the :ref:`jedit` appendix for an overview and
 particularly to set it up neatly for C#.
 
-Also look at the appendix :ref:`nant`, through the section on Convenience Scripts.
-When you go to the command line, this should save you some typing 
-for compiling and running.
+Also look at the NAnt appendix section :ref:`build-scripts`, through the part about
+run scripts.
+When you go to the command line, a run script should save you some typing 
+for compiling and running.  You could also consider the next section,
+:ref:`a-folder-for-your-work`.
 
 Requirements
 ------------

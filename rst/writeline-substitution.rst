@@ -46,11 +46,15 @@ Both programs
 look exactly the same to the user:
 
 .. literalinclude:: ../examples/hello_you2.cs
-   
+
+All the new syntax is in the line::
+
+   Console.WriteLine ("Hello, {0}!", name);
+
 ``Console.WriteLine`` actually can take parameters *after* an initial string,
 but only when  the string is in the form of a *format string*,
 with expression(s) in braces where substitutions are to be made,
-(like in fill-in-the-blanks).  
+(like in fill-in-the-blanks). Here the format string is ``"Hello, {0}!"``. 
 
 The remaining parameters, after the initial string, 
 give the values to be substituted.  To
@@ -58,14 +62,14 @@ know *which* further parameter to substitute, the parameters after the
 initial string are implicitly numbered,
 *starting from 0*.  
 Starting with 0 is consistent with other numbering sequences in C#.
-So here, where there is just one value to substitute, it gets the index 0,
+So here, where there is just one value to substitute (``name``), it gets the index 0,
 and where it is substituted, the braces get 0 inside, to indicate
 that parameter with index 0 is to be substituted.
 
 Everything in the initial string that is *outside* the braces is just
-repeated verbatim.  In particular, if the only parameter is a string 
+*repeated verbatim*.  In particular, if the only parameter is a string 
 with no braces, it is printed completely
-verbatim (as we have used ``Console.WriteLine`` before).
+verbatim (reducing to the situations where we have used ``Console.WriteLine`` before).
 
 A more elaborate silly examples that you could test in csharp would be::
 
@@ -91,6 +95,8 @@ Or try in csharp::
     Console.WriteLine("{0} plus {1} is {2}; {0} times {1} is {3}.", x, y, x+y, x*y);
     
 and see it print:
+
+.. code-block:: none
 
     7 plus 5 is 12; 7 times 5 is 35.
     
@@ -120,6 +126,8 @@ the braces: ``'{{'`` and ``'}}'``. The fragment ::
     Console.WriteLine("The set is {{{0}, {1}}}.", a, b);
 
 produces
+
+.. code-block:: none
 
     The set is {2, 3}.
 

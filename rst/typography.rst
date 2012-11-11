@@ -32,7 +32,8 @@ As a start we can give some general syntax for declarations and assignment state
 
 .. index:: declaration statement
 
-Declaration syntax Options:
+Declaration Syntax Options
+---------------------------
 
     **type** **variableName** ``;``
 
@@ -48,7 +49,8 @@ of three variables:
 
 .. index:: assignment statement
 
-Assignment syntax:
+Assignment Syntax
+------------------
 
 **variableName** ``=`` *expression* ``;``
 
