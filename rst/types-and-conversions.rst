@@ -179,7 +179,8 @@ The type for an individual character is ``char``.  A ``char`` literal value is
 a *single* character enclosed in *single* quotes, like ``'a'`` or ``'$'``.  
 The literal for a
 single quote character itself and the literal for a newline use 
-*escape codes*, like in :ref:`Strings2`:   ``'\''`` and ``'\n'`` respectively.
+*escape codes*, like in :ref:`Strings2`:  
+The literals are ``'\''`` and ``'\n'`` respectively.
 
 Be careful to distinguish a ``char`` like ``'A'`` from a string ``"A"``.
 
