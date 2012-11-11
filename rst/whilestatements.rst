@@ -37,7 +37,7 @@ after the condition, so the syntax will actually be:
 
 Setting up the English example in a similar format would be:
 
-    | while  ( *your tea is too hot* ) { 
+    | while ( *your tea is too hot* ) { 
     |     add a chip of ice 
     | }
 
@@ -174,6 +174,12 @@ Line   i  Comment
 4         print 10 
 2         10 < 9 is false, skip loop
 ====  ==  ======= 
+
+You should be able to generate a table like the one above, following 
+the execution of one statement at a time.  You are playing through the role
+of the computer in detail.  We will refer to this later as *playing computer*.
+As code gets more complicated, particularly with loops, this is an
+important skill.
 
 **Problem**:  Write a program with a ``while`` loop to print:
 
@@ -363,14 +369,14 @@ was to *return* the sum, which is the final value of the
 variable ``sum``, so the whole function is::
 
   /** Return the sum of the numbers from 1 through n. */
-  static int SumToN(int n) 
+  static int SumToN(int n)     // line 1
   {
-     int sum = 1, i = 2;
-     while (i <= n) {
-        sum = sum + i;
-        i = i + 1;
+     int sum = 1, i = 2;       // 2
+     while (i <= n) {          // 3
+        sum = sum + i;         // 4
+        i = i + 1;             // 5
      }
-     return sum;
+     return sum;               // 6
   }
 
 .. index::
@@ -389,6 +395,30 @@ and the body of the loop *never* runs (2 <= 1 is false).  The function
 execution jumps right to the return statement, and
 does return 1, and everything is fine.
 
+Also you should check the program in a more general situation, say with ``n`` 
+being 4.  You should be able to play computer and generate this table,
+using the line numbers shown in comments at the end of lines, 
+and following one statement of execution at a time.  We only
+make entries where variables change value.
+      
+====  ==  ====  ======================== 
+Line   i   sum  Comment   
+====  ==  ====  ======================== 
+1               assume 4 is passed for n        
+2      2     1  
+3               2<=4: true, enter loop
+4            3  1+2=3
+5      3        2+1=3, bottom of loop
+3               3<=4: true
+4            6  3+3=6
+5      4        3+1=4, bottom of loop
+3               4<=4: true
+4           10  6+4=10
+5      5        4+1=5, bottom of loop
+3               5<=4: false, skip loop
+6               return 10
+====  ==  ====  ======================== 
+      
 Now about large n....
 
 .. index::

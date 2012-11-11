@@ -1,8 +1,8 @@
 
 
-.. index:: 
+.. index:: assignment statement
    double: variable; assignment; 
-   double: assignment; statement 
+   statement; assignment
 
 .. _Variables-and-Assignment:
 

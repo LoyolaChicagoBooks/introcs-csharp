@@ -30,7 +30,8 @@ descriptive of the use expected.
 As a start we can give some general syntax for declarations and assignment statements:
 
 
-.. index:: declaration statement
+.. index:: statement; declaration
+   declaration statement
 
 Declaration Syntax Options
 ---------------------------
@@ -46,11 +47,16 @@ of three variables:
 
     **type** **variableName1** ``,`` **variableName2** ``,`` **variableName3** ``;``
 
+Space is allocated for each variable named, according to its type.  Where there is
+an initializer, an initial value is set for the variable.
+
 
 .. index:: assignment statement
+   statement; assignment
 
 Assignment Syntax
 ------------------
 
-**variableName** ``=`` *expression* ``;``
+    **variableName** ``=`` *expression* ``;``
 
+The *expression* is evaluated before its value is assigned to **variableName**.

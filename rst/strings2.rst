@@ -58,7 +58,7 @@ Example:
     def
     
 .. index::
-   double string; @
+   double: string; @
 
 Literal strings that are simply delimited by quotes ``"`` 
 must start and end on the same line. 
