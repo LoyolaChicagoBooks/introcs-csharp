@@ -42,7 +42,7 @@ Also look at the NAnt appendix section :ref:`build-scripts`, through the part ab
 run scripts.
 When you go to the command line, a run script should save you some typing 
 for compiling and running.  You could also consider the next section,
-:ref:`a-folder-for-your-work`.
+:ref:`work-folder`.
 
 Requirements
 ------------
