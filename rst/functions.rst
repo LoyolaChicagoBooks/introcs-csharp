@@ -7,7 +7,6 @@ Defining Functions of your Own
 .. toctree::
    :maxdepth: 3
 
-   typography
    firstfunc
    multfunc
    funcparam

@@ -27,6 +27,28 @@ Normal text          A description of what goes in that position,
 An attempt is made with the parts that are not verbatim to be
 descriptive of the use expected.
 
-We will use these conventions shortly in the discussion of function
-syntax, and will continue to use the conventions throughout the
-notes.
+As a start we can give some general syntax for declarations and assignment statements:
+
+
+.. index:: declaration statement
+
+Declaration syntax Options:
+
+    **type** **variableName** ``;``
+
+or with initialization:
+
+    **type** **variableName** ``=`` *initialValue* ``;``
+
+or both forms can be included in a list for the same type, for instance a list
+of three variables:
+
+    **type** **variableName1** ``,`` **variableName2** ``,`` **variableName3** ``;``
+
+
+.. index:: assignment statement
+
+Assignment syntax:
+
+**variableName** ``=`` *expression* ``;``
+

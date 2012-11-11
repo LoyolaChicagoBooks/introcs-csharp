@@ -29,19 +29,6 @@ and the parentheses after the method name are empty.  The general method syntax 
 
 More string methods are listed below, some with further parameters.
 
-.. skip?  
-   
-   We will see many types of objects that are *mutable*: the data inside the
-   object can be changed.  This brings up many issues that will not arise with strings,
-   because strings are "immutable." Once a string object is
-   assigned a value, that particular object cannot be changed in any
-   way, though many of the methods we look at will create *new* related strings.
-
-   Although string assignment technically behaves differently than
-   assigning to an ``int`` or a ``char``, We assign strings like we would data of a primitive type, like 
-   an ``int`` or ``char``.
-
-
 Data can also be associated with object *properties*.  
 A property of a string is its Length (an int).  References to property values
 use dot notation but do not have a parameter list at the end::
@@ -69,28 +56,6 @@ in your programs they must be
 preceded by a reference to a string, followed by a dot, as shown in 
 all the  examples.  The reference to *this* string can be
 a variable name, a literal, or any expression evaluating to a string.
-
-.. ugly!
-
-   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | **String METHOD or PROPERTY**            | **DESCRIPTION**                                                                                                                                  | **EXAMPLE**                                                |
-   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``int IndexOf(string string2)``          | returns the index of the beginning of the first occurrence of the string ``string2`` in this string object. Returns -1 if ``string2`` not found. | ``string greeting = "Bonjour", word = "jou";``             |
-   |                                          |                                                                                                                                                  |  ``greeting.IndexOf(word)`` returns 3.                     |
-   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``string substring(int start)``          | returns the substring of this string object starting from index ``start`` through to the end of the string object.                               | ``string name = "Sheryl Crow";``                           |
-   |                                          |                                                                                                                                                  |  ``name.Substring(7)`` returns the string ``"Crow"``       |
-   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``string substring(int start, int len)`` | returns the substring of this string object starting from index ``start``, including a total of ``len`` characters                               | ``string name = "Sheryl Crow";``                           |
-   |                                          |                                                                                                                                                  |  ``name.Substring(3,5)`` returns the string ``"ryl C"``    |
-   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``string ToUpper()``                     | return this string converted to upper case.                                                                                                      | ``"Hi Jane!".ToUpper()`` returns the string ``"HI JANE!"`` |
-   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``string ToLower()``                     | return this string converted to lower case.                                                                                                      | ``"Hi Jane!".ToLower()`` returns the string ``"hi jane!"`` |
-   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-   | ``int length``                           | refers to the length of this string object                                                                                                       | ``string greeting = "Bonjour";``                           |
-   | (property)                               |                                                                                                                                                  |  ``greeting.Length( )`` returns the value 7.               |
-   +------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
 
 .. _string-methods-length:
 

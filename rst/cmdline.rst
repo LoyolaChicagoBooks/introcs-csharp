@@ -245,7 +245,7 @@ nant
   
 Other useful commands window commands with different names for Windows and Mac,
 listed by generic function, with general Windows syntax first and Mac second, and then
-often examples int he same order:
+often examples in the same order:
 
 .. index:
    double: command line; display text file
@@ -358,10 +358,10 @@ Command Line Shortcuts
 -----------------------
 
 Both Windows and Mac (with the right options selected, 
-like he Windows check boxes in the last section), allow you to reduce typing:
+like the Windows check boxes in the last section), allow you to reduce typing:
 
 You can bring back a previous command for the history of commands that are automatically
-remembered. Use the up and down arrows.  This makes it very easy to run the same command
+remembered: Use the up and down arrows.  This makes it very easy to run the same command
 again, or to make slight edits.
 
 Both Windows and OS-X can see what files are in any directory being referred to.

@@ -127,22 +127,25 @@ produces
 .. index:: 
    double: method; overloading
 
+.. _overloading:
+
 Overloading
-    The ``WriteLine`` function can take parameters in different ways:
-    
-    - It can take a single parameter of an type (and print its string representation).
-    - It can take a string parameter followed by any number of parameters used to 
-      substitute into the initial format string.
-    - It can take no parameters, and just advance to the next line (not used yet in
-      these notes).
-      
-    Though each of these uses has the same name, ``Console.WriteLine``, 
-    they are technically all different functions:  A function is not just recognized
-    by its name, but by its *signature*, 
-    which includes the name **and** the number and types of parameters.
-    The technical term for using the same name with different signatures for different
-    functions is *overloading* the function (or method).
-    
-    This only makes practical sense for a group of closely related functions, where the
-    use of the same name is more helpful than confusing.
-    
+-------------
+
+The ``WriteLine`` function can take parameters in different ways:
+
+- It can take a single parameter of an type (and print its string representation).
+- It can take a string parameter followed by any number of parameters used to 
+  substitute into the initial format string.
+- It can take no parameters, and just advance to the next line (not used yet in
+  these notes).
+  
+Though each of these uses has the same name, ``Console.WriteLine``, 
+they are technically all different functions:  A function is not just recognized
+by its name, but by its *signature*, 
+which includes the name **and** the number and types of parameters.
+The technical term for using the same name with different signatures for different
+functions is *overloading* the function (or method).
+
+This only makes practical sense for a group of closely related functions, where the
+use of the same name is more helpful than confusing.

@@ -57,13 +57,13 @@ We want to develop a program that can do the following:
 - Calculate the quotient and the remainder (e.g. 10/4 = 2 with a
   remainder of 2 = 2 2/4).
 
-.. highlight:: text
+Your final program should work as in this sample run, and use the same format:
 
-As an example of how this program will ultimately work::
+.. code-block:: none
 
    Please enter the numerator? 14
    Please enter the denominator? 4
-   Integer division result = 3 remainder 2
+   Integer division result = 3 with a remainder 2
    Floating point division result = 3.5
    Result as a mixed fraction = 3 2/4
 
@@ -71,31 +71,13 @@ For this lab the example format ``3 2/4`` is sufficient.
 It would look better as ``3 1/2``, but a general 
 efficient way to reduce fractions to
 lowest terms is not covered until the section on the algorithm :ref:`gcd`.  
-This algorithm has a very simple
-formulation that is credited to Euclid, one of the great early
-mathematicians (among other accomplishments).
-
-.. index:: csharp
-
-csharp
-------
 
 So let's get this party started by firing up the **csharp**
-command. Open a terminal (Linux or OS X) or :ref:`mono-command-prompt`
-window in Windows, and enter the command ``csharp``.  You should see  ::
+command, as introduced in :ref:`csharp` and continued later with
+:ref:`more csharp <more-csharp>`.  We can illustrate some of the ideas
+for this lab:
 
-    Mono C# Shell, type "help;" for help
-
-    Enter statements below.
-    csharp>  
-
-The ``csharp>`` prompt tells you that the C# interpreter has started
-and is awaiting input. This allows you to create C# variables and
-execute C# statements without having to write a full program. 
-
-You can also use features of the C# programming
-library (e.g. the ``Console.WriteLine``  that we practiced with in the
-previous lab)::
+.. code-block:: none
 
     csharp> Console.WriteLine("Please enter the numerator?");
     Please enter the numerator?
@@ -105,48 +87,6 @@ previous lab)::
     csharp> Console.WriteLine(numerator);
     25
 
-Before we continue with this session, please note that it is ok to
-make mistakes. The C# interpreter tends to be forgiving, although
-there are some cases where you might find yourself a bit
-confused. Here's an example of something that could happen to you in
-the course of typing a statement::
-
-    csharp> int denominator = int.Parse(input)
-          >
-
-In this example, we accidentally hit the return/enter key before entering the
-required semicolon.  The secondary prompt '>' means that you have an incomplete
-statement: complete it.
-
-So we can either continue entering the input::
-    
-    csharp> int denominator = int.Parse(input)
-          > ;       
-
-
-You might get to the semicolon, but make a syntax error, like::
-
-    csharp> int denominator = int.Parse(;
-    {interactive}(2,0): error CS1525: Unexpected symbol `;'
-
-This reminds you that there is an error.  What you typed is ignored, and 
-you can then *try again* if you like!
-
-A particularly useful feature of the C# interpreter is the
-``ShowVars()`` function.  ``ShowVars()`` prints the
-list of variables and their values that have been defined in a given
-session::
-
-    csharp> ShowVars();
-    int denominator = 4
-    int numerator = 14
-    string input = "14"
-    string input2 = "4"
-
-This just happens to be the list of variables/values that are defined
-in my session. Yours may vary depending on what variables you typed,
-etc.
-
 Now let's practice using the C# operators of :ref:`Division-and-Remainders`::
 
     csharp> int quotient = numerator / denominator;
@@ -155,36 +95,34 @@ Now let's practice using the C# operators of :ref:`Division-and-Remainders`::
     csharp> int remainder = numerator % denominator;
     csharp> Console.WriteLine(remainder);
     2
-    csharp> Console.WriteLine("{0} / {1} = {2} remainder {3}", 
+    csharp> Console.WriteLine("{0} / {1} = {2} with a remainder {3}", 
           > numerator, denominator, quotient, remainder);
-    14 / 4 = 3 remainder 2
+    14 / 4 = 3 with a remainder 2
 
 
 In the above, we are also practicing using a :ref:`Format-Strings` 
 with ``Console.WriteLine``. 
 
 You may find this example to be helpful to print the output according
-to the requirements::
+to the final lab requirements::
 
     14 / 4 = 3 2/4
 
-Now let's take a look at how we can get the results as a floating
-point result. To do this, we must declare a couple of float (C#'s
-basic real number type) variables to hold each of the numerator and
+Now let's take a look at how we can get the results as a real number, not
+necessarily an integer. Here is a variation on the approach in :ref:`cast`.
+We do this by declaring a couple of ``double``  
+variables to hold each of the numerator and
 denominator integers. Then we will declare a variable to capture the
-result of the floating point division operation. Because division is
-meaningful for all numeric data types, it is exactly the same
-operator. C# knows that the operator is being applied to floating
-point data in this case, because we declared floating point
-variables. (We will show how you can avoid declaring some of these
-variables but are erring on the side of clarity.) We named each of the
+result of the floating point division operation.  We named each of the
 floating-point variables with the number 2 in the name as C# permits
 variable names that have numbers and underscores after the first
-character (which must be a *letter* or an *underscore*)::
+character (which must be a *letter* or an *underscore*):
 
-    csharp> float numerator2 = numerator;
-    csharp> float denominator2 = denominator;
-    csharp> float quotient2 = numerator2/denominator2;
+.. code-block:: none
+
+    csharp> double numerator2 = numerator;
+    csharp> double denominator2 = denominator;
+    csharp> double quotient2 = numerator2/denominator2;
     csharp> Console.WriteLine(quotient2);              
     3.5
     csharp> Console.WriteLine("{0} / {1} = {2} remainder {3}", 
@@ -194,46 +132,23 @@ character (which must be a *letter* or an *underscore*)::
           >                   numerator2, denominator2, quotient2);
     14 / 4 = 3.5 approximately
 
-.. highlight:: csharp
-
 We have shown everything you need to understand to
-complete this lab. Your job in the remaining time is to see whether
-you can use a text editor to create a program, which you can name
-anything you like. We suggest calling it ``do_the_math.cs``. To help you
-get started, we provided this simple *template*. You'll probably find
-it convenient to cut and paste code that you've already "tried out" (in
-the C# interpreter) into your text editor::
+complete this lab. To help you
+get started, we provided this simple *stub* in the example file
+:file:`do_the_math_stub.cs`.  Save the stub as 
+:file:`do_the_math.cs` and complete it:
 
-    using System;
+.. literalinclude:: ../examples/do_the_math_stub.cs
 
-    namespace IntroCS {
-       class DoTheMath {
-          public static void Main() {
-            // Prompt the user for the numerator using
-             //   Console.WriteLine().
-       
-            // Convert this text into int numerator using
-            // int.Parse().
-
-            // Do the same for the denominator.
-
-            // Calculate quotient and remainder (as integers)
-            // Use Console.WriteLine() to make the results pretty as
-            // above.
-
-            // Do the same but using floating point division and not
-            // doing the remainder calculation.
-          }
-       }
-    }
-
-When you are done editing and saving ``do_the_math.cs``, 
-go to the command line and try the
-script (Windows)
+When you are done editing and saving :file:`do_the_math.cs`, 
+in :ref:`work-folder` or in the examples folder we provided,
+you need to test it.
+In Windows start with the Mono command line, go to the program's folder, and try the
+script 
 
    run.cmd do_the_math
 
-or Mac:
+or go to the program's folder in a Mac terminal and run:
 
    sh run.sh do_the_math
    
