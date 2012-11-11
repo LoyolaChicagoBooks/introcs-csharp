@@ -1,7 +1,3 @@
-.. todo::
-   This is completely in draft mode now and is at best in placeholder status.
-   No revisions please.
-
 Musical Scales and Arrays
 ===========================
 
@@ -110,9 +106,12 @@ array to be used repeatedly for calculating other scales.
    number of steps + 1 is the length of the scale--and the length
    of the scale is 8. (We technically don't have to limit the scale
    to 8, because scales can keep going until you run out of playable
-   notes on the instrument, but we're going to expand this example
-   when we cover object-oriented programming. So stay *tuned*...pun
-   intended.)
+   notes on the instrument.)
+   
+   .. later?
+       , but we're going to expand this example
+       when we cover object-oriented programming. So stay *tuned*...pun
+       intended.)
 
 #. We'll now start at the initial position (where we found the base
    note of the key) and enter a for loop to compute all of the notes
@@ -145,8 +144,11 @@ that a scale should be printed in a normalized way. For example, the F-major
 scale (shown above in our earlier explanation) is never written with A# as
 one of its notes. It is written as B-flat. It's easy to manage the various
 cases by consulting the circle of fifths, which gives us guidance on the
-number of flats/sharps each scale has. We'll revisit this topic again later
-during our discussion of the OOP version.
+number of flats/sharps each scale has. 
+
+.. later?
+    We'll revisit this topic again later
+    during our discussion of the OOP version.
 
 Lastly, we put this all together.
 
@@ -160,10 +162,14 @@ and minor scales. We've already explained how to express the steps of
 a major scale. The minor scale basically drops the 3rd and 7th by a
 semitone (a single step), which gives us a different pattern. 
 
-You can run this program to see the major and minor scales. We plan on
-doing a bit more with this example later when we have the power of
-classes and objects, which can be greatly helpful for organizing the
-other major ideas of music besides scales. For example, we may wish
-to express a song using tablature and perform a transposition to a different
-scale. For this and many other more advanced ideas, having classes and
-objects is a must.
+You can run this program to see the major and minor scales. 
+
+.. later?
+
+    We plan on
+    doing a bit more with this example later when we have the power of
+    classes and objects, which can be greatly helpful for organizing the
+    other major ideas of music besides scales. For example, we may wish
+    to express a song using tablature and perform a transposition to a different
+    scale. For this and many other more advanced ideas, having classes and
+    objects is a must.

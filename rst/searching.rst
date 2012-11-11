@@ -1,6 +1,3 @@
-.. todo::
-   This is completely in draft mode now and is at best in placeholder status.
-   No revisions please.
 
 .. _searching:
 
@@ -12,9 +9,7 @@ array.  Although a fairly straightforward topic, it is one that comes
 up repeatedly in programming.
 
 These examples make use of arrays and loops, not to mention functions
-(for putting it all together). You'll also begin to see greater use of
-the ``return`` statement and *return values* (the results of
-functions).
+(for putting it all together). 
 
 .. index::
    double: search; linear
@@ -88,4 +83,4 @@ The rest is mostly self-explanatory.
 
 You can build the searching program, and all the others programs in the ``arrays`` 
 folder by geting your console/terminal to the arrays folder,
-and then using the command ``nant``.  Finally execute ``mono  searching.exe``.
+and then using the run command for the program ``searching``.
