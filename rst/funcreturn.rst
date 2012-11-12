@@ -143,10 +143,8 @@ printing is one possibility, done in
 
 .. literalinclude:: ../examples/addition2.cs
 
-**In class recommendation**:  Improve Miles' original example
-with functions.  What operations get repeated (and are likely to appear in other
-programs, too)? The original example is saved
-as :file:`glazer_calc.cs`.  Copy it to :file:`glazer_input.cs` and modify it.
+**In class recommendation**:  Improve example :file:`painting.cs`
+with functions.  Copy it to :file:`painting_input.cs` and modify it.
 	
 .. _QuotientStringEx:
 	

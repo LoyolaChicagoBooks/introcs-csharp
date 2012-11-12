@@ -1,9 +1,9 @@
-.. _string-char:
-
 .. index::
    double: function; scope
    double: function; not use return value
    
+.. _not-using-ret-val:
+
 Not using Return Values
 ==================================
 

@@ -25,7 +25,8 @@ You can see that both the example program :file:`painting.cs` and the lab progra
 :file:`hello_world.cs` follow this pattern.  The discussion of these parts through 
 line 6 in
 :ref:`sample-program` are about all we have to say at this point.  For now this
-is the boilerplate code.  We will make additions as necessary.
+is the boilerplate code.  We will make additions as necessary.  We choose not to
+clutter up the basic setup with features that we are not about to use and discuss. 
 
 Here is a silly little test illustrating the difference between ``Console.WriteLine``
 and ``Console.Write``, in example :file:`write_test.cs`:
@@ -39,3 +40,8 @@ When run, the program prints:
     hellotherehello
     Another line
     Starting yet another line
+    
+Do you see how the output shows the differences between ``WriteLine`` and ``Write``?
+If we added another printing statement, where would the beginning of 
+the output appear:
+after the final ``e`` or under the ``S`` of Starting?

@@ -243,6 +243,8 @@ the one just being initialized in this constructor.
    double: OOP; instance method
    double: OOP; private helping function
 
+.. _instance-methods:
+
 Instance Methods
 --------------------
 
