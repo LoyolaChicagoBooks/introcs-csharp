@@ -57,6 +57,7 @@ Function Calls
     
 #.  The actual parameter list is a comma separated list of the *same*
     length as the formal parameter list.  Each entry is an expression.
+    The entries in an actual parameter list do *not* include type declarations.
     
     Effectively, the function execution starts by assigning to each
     formal parameter variable the corresponding value from 
