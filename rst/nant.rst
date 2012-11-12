@@ -2,8 +2,8 @@
 
 .. _nant:
 
-NAnt 
-==============================
+NAnt and Run Scripts
+=======================
 
 In a previous lab, we covered the basics of compiling and running programs 
 using the Mono Compiler. For the most part, the programs we do in an introductory 
