@@ -17,4 +17,5 @@ Defining Functions of your Own
    staticvariables
    notusereturn
    libraryclass
+   funcsummary
    

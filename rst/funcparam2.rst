@@ -1,6 +1,8 @@
 .. index::
    double: function; parameter
 
+.. _more-func-param:
+
 Multiple Function Parameters
 ================================
 

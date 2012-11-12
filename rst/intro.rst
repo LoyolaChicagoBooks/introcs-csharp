@@ -3,22 +3,27 @@ Introduction to the Notes
 
 These notes are designed for Comp 170.  In some places they refer to the initial parts of
 Rob Miles' free online 
-C# Yellow Book.  There are some issues with it:
+C# Yellow Book.  To download it, go to 
+http://www.csharpcourse.com/
+and click on the link for
+Rob Miles CSharp Yellow Book 2012.pdf (or the latest year).
 
-- In the content we want to look at, here does not seem to be any difference between the
-  2011 and 2012 version, *but* you need care in downloading and choosing the right one,
-  apparently depending on your operating system.
 
-- In some browsers in some circumstances, it seems you *cannot* open either version
-  by just a regular click on the link.  
-  But if you right click and select Save File As...., 
-  you can download the appropriate version.
-
-- `Miles' 2012 version <http://www.robmiles.com/c-yellow-book/Rob%20Miles%20CSharp%20Yellow%20Book%202012.pdf>`_
-  seems to work on a Mac, but *not Windows*.
-
-- Windows users should download 
-  `Miles' 2011 version <http://www.robmiles.com/c-yellow-book/Rob%20Miles%20CSharp%20Yellow%20Book%202011.pdf>`_.
+.. ignore
+    - In the content we want to look at, here does not seem to be any difference between the
+      2011 and 2012 version, *but* you need care in downloading and choosing the right one,
+      apparently depending on your operating system.
+    
+    - In some browsers in some circumstances, it seems you *cannot* open either version
+      by just a regular click on the link.  
+      But if you right click and select Save File As...., 
+      you can download the appropriate version.
+    
+    - `Miles' 2012 version <http://www.robmiles.com/c-yellow-book/Rob%20Miles%20CSharp%20Yellow%20Book%202012.pdf>`_
+      seems to work on a Mac, but *not Windows*.
+    
+    - Windows users should download 
+      `Miles' 2011 version <http://www.robmiles.com/c-yellow-book/Rob%20Miles%20CSharp%20Yellow%20Book%202011.pdf>`_.
  
 
 To get an idea of what updates have been made recently to the notes or the examples go to:
@@ -57,11 +62,10 @@ You may use any of the C# Notes formats:
   Or if you prefer, download
   `the version with a responsive theme <http://introcs.cs.luc.edu/book/download/bootstrap/comp170html.zip>`_.
   Unzip, open the index file, and all the pages are perfectly set up and linked.  
-  However the *search capacity does not work*.  
-  We have a workaround in that we will publish.  
-  It requires having a server going on your local machine....   
-  The index links will work in any case.
-
+  However the *search capacity does not work* on a local copy, unless you have 
+  a server going on your local machine....   
+  In any case, you can still find things through the table of contents and the index links.
+  
 - `PDF file <http://introcs.cs.luc.edu/book/download/comp170.pdf>`_ in fixed paged format for printing
   and for somewhat prettier computer viewing if your screen is wide enough.
 

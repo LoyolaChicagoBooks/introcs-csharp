@@ -59,11 +59,16 @@ There are several parts of the syntax for a function definition to
 notice:
 
 Line 5: The *heading* starts with ``static void``, the name of the function,
-and then parentheses.  A more general syntax for functions that just *do*
+and then parentheses.  
+
+A more general syntax for functions that just *do*
 something is
 
-    ``static void`` **function_name**\ ``()``
-
+    | ``static void`` **function_name**\ ``()``
+    | ``{``
+    |    statements in the function body...
+    | ``}``
+       
 Recall the conventions in :ref:`Syntax-Template-Typography`.
 
 Lines 6-11: The remaining lines form the function *body*.  They are enclosed
