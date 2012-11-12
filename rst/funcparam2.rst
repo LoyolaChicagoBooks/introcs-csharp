@@ -46,6 +46,14 @@ which *substitute* for the formal parameters when the function is
 actually executed. ``Main`` uses three different sets
 of actual parameters in the three calls to SumProblem.
 
+.. warning::
+
+   It is easy to confuse the heading in a function *definition* and a *call*
+   to actually execute that function.  Be careful.  In particular,
+   do *not* list the types of parameters
+   in a call's *actual* parameter list.  The actual parameters are expressions 
+   involving terms that are *already defined*, not just being declared. 
+
 .. _QuotientFunctionEx:
 
 Quotient Function Exercise
