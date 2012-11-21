@@ -2,7 +2,7 @@ syntax: glob
 
 Thumbs.db
 .DS_Store
-bin/
+obj/
 build/
 *.pyc
 *.exe
