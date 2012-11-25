@@ -1,3 +1,7 @@
+.. index:: testing
+
+.. _testing:
+
 Testing
 ============
 
@@ -12,6 +16,8 @@ Each language has its own definition of what units are but most modern programmi
 languages view the *class* concept as the core unit of testing. Once we have a class,
 we can test it and all of the parts associated with it, especially its methods.
 
+.. index::
+   double: testing; assertion 
 
 Assertions
 -------------
@@ -47,6 +53,9 @@ which works for everything we want to test. Other assertion methods do their mag
 rather similarly, because every assertion method ultimately must determine whether
 what is being tested is true or false. 
 
+.. index::
+   double: attribute; [ ]
+   
 Attributes
 -------------
 
@@ -225,7 +234,7 @@ in other regular programs.  To just build the library file by itself, run
 
 If you look in the folder now, you will see :file:`introcs.dll`, 
 the compiled library file.  
-
+    
 The **nunit-console** program 
 ships with Mono.  To run the unit tests on :file:`introcs.dll`, 
 labeling the tests run, enter the command:

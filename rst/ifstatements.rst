@@ -25,18 +25,22 @@ anything or not), go on to the next statement.
 In this case that is the statement
 printing "Thank you".
 An ``if`` statement only breaks the  normal sequential order
-*inside* the `if`` statement itself. 
+*inside* the ``if`` statement itself. 
 
 The general C# syntax for a simple ``if`` statement is
 
     | ``if (`` *condition* ``)`` 
     |     statement  
 
+.. index::
+   double: compound statement; { }
+   statement; compound
+   
 Often you want multiple statements executed when the condition
 is true.  We have used braces before.  We have not said
 what they do technically, syntactically:  braces around
-a group of statements technically makes a *single* 
-compound statement.  So the pattern commonly written is:
+a group of statements technically makes a single 
+*compound statement*.  So the pattern commonly written is:
 
     | ``if (`` *condition* ``) {`` 
     |       one or more statements  

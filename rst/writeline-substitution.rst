@@ -20,7 +20,8 @@ A solution is in the next section.
 
 
 .. index::
-   double: WriteLine; {} for format
+   WriteLine; { }
+   double: Format; { } 
 
 .. _Format-Strings:
 

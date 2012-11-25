@@ -1,5 +1,6 @@
 .. index::
-   double: operator; + (with numbers)
+   single: operator; + (with numbers)
+   single: +; arithmetic
    double: operator; -
    double: operator; *
    double:  ( ); grouping
@@ -127,7 +128,7 @@ A sequence of operations with equal precedence also work like in math: left to r
 
 .. index:: 
    double: division; remainder 
-   double: operator; /
+   single: operator; /
    double: operator; %
    double: %; remainder 
    double: division; /

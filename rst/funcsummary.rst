@@ -12,6 +12,10 @@ This chapter has introduced static functions:  those used in procedural programm
 as opposed to :ref:`instance-methods` used to 
 implement object-oriented programming. 
 
+.. index::  function syntax
+   ( ); function definition
+
+
 Function definition
 -------------------
 
@@ -45,6 +49,9 @@ Function definition
    of the definition
    of ``Main``, and we defer discussion of :ref:`command-line-param` until
    we have introduced :ref:`one-dim-arrays`. 
+
+
+.. index::  ( ); function call
    
 Function Calls
 ---------------
