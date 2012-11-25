@@ -8,7 +8,7 @@ Value Types and Conversions
 ===========================
 
 .. index::
-   double; int; value range
+   double: int; value range
 
 
 Type int
