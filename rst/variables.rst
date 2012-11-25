@@ -1,7 +1,8 @@
 
 
-.. index:: assignment statement
-   double: variable; assignment; 
+.. index:: 
+   single: variable; assignment, =
+   double: assignment statement; =
    statement; assignment
 
 .. _Variables-and-Assignment:
@@ -52,6 +53,9 @@ side of the equal sign, either giving an initial value or
 
 .. image:: images/variableAssignment.png
 
+.. index:: 
+   double: initializer; =
+   
 Variables can also be initialized as they are declared::
 
    int width = 5;
@@ -63,7 +67,8 @@ or initializations and plain declarations can be mixed::
    height = 7;
 
 Stylistically the example above is inconsistent, but it illustrates what is 
-possible.
+possible.  Technically an initialization is not an assignment.  We will see
+some syntax that is legal in initializers, but not declarations.
 
 We could continue with a further assignment statement::
 

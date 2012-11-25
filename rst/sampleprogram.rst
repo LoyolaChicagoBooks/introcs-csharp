@@ -134,7 +134,7 @@ strictly necessary, but it makes the program easier to read.
 ``Console`` refers to the terminal or console window where text output 
 appears for the program.  One of the things you can do with the Console
 is ``WriteLine``, to write a line.  The period between ``Console`` and
-``WriteLine`` associates the action ``WriteLine`` with the ``Console``.
+``WriteLine`` indicates ``WriteLine`` is a named part of the ``Console``.
 This ``WriteLine`` is a function.  Like in math, it can have
 a parameter in parentheses.  While you are used to a parameter for a
 function in math being a number, functions in C# are much more general.
@@ -150,7 +150,7 @@ displayed for this program.  The program did **write** this **line**.
 
 This statement is similar to the last one, except that it uses ``Write``
 rather than ``WriteLine``.  The ``WriteLine`` function wrote a whole line -
-see that the output next after the ``WriteLine`` statement
+see that the output next *after* the ``WriteLine`` statement
 started on the next line.
 Here ``Write`` does not advance the printing position to the next line
 after it:  The 20.5 of the sample out follows the string on the same line.
