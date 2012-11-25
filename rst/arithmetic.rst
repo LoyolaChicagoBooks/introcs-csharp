@@ -132,6 +132,11 @@ A sequence of operations with equal precedence also work like in math: left to r
    double: operator; %
    double: %; remainder 
    double: division; /
+   single: . ; double literal
+   double
+   int
+   type; int
+   type; double
 
 .. _Division-and-Remainders:
    

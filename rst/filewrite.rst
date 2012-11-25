@@ -19,8 +19,11 @@ Then compile and run the example program ``first_file.cs``, shown below:
 Nothing shows on the screen when you run the program:
 it is just writing to a file.
 
+.. index:: . ; part of namespace
+
 Look at the code.  Note the extra namespace being used at the top.  You will
-always need to be using ``System.IO`` when working with files.
+always need to be using ``System.IO`` when working with files.  Here is a slightly
+different use of a dot, ``.``, to indicate a subsidiary namespace.
  
 The first line of ``Main`` creates a ``StreamWriter`` object assigned to the
 variable  ``writer``.  A ``StreamWriter`` 
@@ -40,9 +43,16 @@ depending on your operating system), then the file will lie in the
 current directory. :ref:`file-and-directory-paths` discusses 
 the use of directory separators.
 
+.. index:: . ; object's method
+
 The second and third lines of ``Main`` write the specified strings to lines in the file.
 Note that the ``StreamWriter`` object ``writer``, not ``Console``, 
-comes before the dot and method.
+comes before the dot and ``WriteLine``.  
+This is yet another variation on the use of a dot, ``.``:  between an object and
+a function tied to this object.  In this situation the function tied to an object
+is more specifically called a *method*, in object-oriented terminology.  All the
+uses of a dot (except for a numerical literal value) share a common idea, indicating
+a named part or attribute of a larger thing.
 
 The last line of ``Main`` is important for cleaning up. Until this line, this
 C# program controls the file, and nothing may be actually

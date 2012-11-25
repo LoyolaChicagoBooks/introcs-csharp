@@ -25,6 +25,8 @@ way to use the ``Console.WriteLine`` function is to give it a string.
 We can demonstrate in csharp.  The response is just the line that would
 be printed in a regular program:
 
+.. index:: . ; class static member
+
 .. code-block:: none
 
     csharp> Console.WriteLine("Hello, world!");

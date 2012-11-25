@@ -19,6 +19,7 @@ situations where you might want a general idea to have a version for each of
 many kinds of objects.  There is *not* a new syntax for *each* one.
 
 .. index:: generics
+   < > for generics
 
 Generics
 -----------
