@@ -90,10 +90,16 @@ Scope
     
 #.  A local variable comes into existence after the function is called, and ceases
     to exist after that function call terminates.  A local variable is invisible
-    to the rest of the program.  Its *scope* is just within a single
-    function call.  Its value may be transferred to the caller
-    if it is the expression in a return statement.  It can be passed as an
-    actual parameter to a further function called within its scope.
+    to the rest of the program.  Its *scope* is just within that function.  Its
+    lifetime is just through a single
+    function call.  Its *value* may be transferred outside of the function scope
+    by standard means, principally:  
+    
+    - If it is the expression in a return statement, its value is
+      sent back to the caller.
+    - It can be passed as an
+      actual parameter to a further function called within its scope.
+      
     [:ref:`Local-Scope`]
     
 Static Variables

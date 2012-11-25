@@ -27,7 +27,6 @@ Here is the text of the program:
 .. literalinclude:: ../examples/painting.cs
    :linenos:
 
-    
 This section gives an overview of a working
 program, even if all the explanations do not make total sense yet.  
 This is a first introduction of concepts and syntax that gets fully explained
@@ -36,6 +35,9 @@ in further sections.
 Do not worry if you not totally understand the
 explanations! Try to get the gist now and the details later. 
 
+The different colors are used in modern program editors to
+emphasize the different uses of the parts of the program.
+    
 We give a line by line explanation:
 
 .. literalinclude:: ../examples/painting.cs
@@ -148,7 +150,7 @@ displayed for this program.  The program did **write** this **line**.
 
 This statement is similar to the last one, except that it uses ``Write``
 rather than ``WriteLine``.  The ``WriteLine`` function wrote a whole line -
-see that the output next after the ``Writeline`` statement
+see that the output next after the ``WriteLine`` statement
 started on the next line.
 Here ``Write`` does not advance the printing position to the next line
 after it:  The 20.5 of the sample out follows the string on the same line.
@@ -279,6 +281,34 @@ Here is what is displayed when the user enters length 15 and width 6.5:
     The wall area is 344 square feet.
     The ceiling area is 97.5 square feet.
 
+.. index:: whitespace
+
+The blank space in the program was there to aid human understanding.  
+In a C# program *whitespace* is any consecutive combination of spaces, 
+newlines, and tabs.  C# treats any amount of whitespace
+just the same as a single space, except inside quoted strings,
+where every character is important.  
+
+Also the compiler does not require whitespace around special symbols
+like ``{};().=*+,``.  Hence  
+the :file:`painting.cs` program above would be just as well translated 
+by the compiler if it were written as::
+
+    using System;class Painting{static void Main(){double width,length
+    ,wallArea,ceilingArea;string widthString,lengthString;double HEIGHT 
+    =8;Console.WriteLine("Calculation of Room Paint Requirements");Console.
+    Write("Enter room length: ");lengthString=Console.ReadLine();length= 
+    double.Parse(lengthString);Console.Write("Enter room width: ");
+    widthString=Console.ReadLine();width=double.Parse(widthString);wallArea 
+    =2*(length+width)*HEIGHT;ceilingArea=length*width;Console.WriteLine(
+            "The wall area is "                  +                 wallArea
+    +" square feet.");Console.WriteLine
+          ("The ceiling area is "
+                   +ceilingArea+
+    " square feet.");}}
+
+Since human understanding is very important, we will emphasize good 
+whitespace conventions, and expect you to use them.
+
 Next we give you an even simpler program to run in the lab.  After
 that we return to how you can get the painting program to run on your computer.
-
