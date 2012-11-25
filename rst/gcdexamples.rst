@@ -2,9 +2,6 @@ Algorithms using While
 ======================
 
 .. index::
-   double:  %; binary operation
-   double:  %; remainder
-   double:  remainder; binary operation
    double:  PF4; recursion
    double:  SP1; history
    double:  history; Euclid
