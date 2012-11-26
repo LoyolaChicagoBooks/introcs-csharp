@@ -8,6 +8,11 @@
 
 Writing Files
 ==============
+
+.. spr13
+
+   redo with file ref in debug, and files needs to be copied to new project -
+   not all together anymore.
    
 *Open a console window for our examples folder.*
 First note that there is no file named sample.txt. 

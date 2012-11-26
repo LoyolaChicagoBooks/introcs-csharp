@@ -271,7 +271,7 @@ an identifier:
 
 -  There are some words that are *keywords* for special use in
    C#. You may not use these words as your own identifiers. They
-   are easy to recognize in editors like :ref:`jedit`, 
+   are easy to recognize in editors like in :ref:`MonoDevelop <lab-monodevelop>`, 
    that know about C# syntax:  They are colored differently.
 
 We will only discuss a small fraction of the keywords in this course, but the curious
