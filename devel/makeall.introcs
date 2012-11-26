@@ -38,6 +38,8 @@ rsync -av $(pwd)/html/ $HTML
 cd ..
 tar czf $DOWNLOAD/comp170code.tar.gz examples include/*
 zip -r $DOWNLOAD/comp170code.zip examples include/*
+tar czf $DOWNLOAD/comp170code-md.tar.gz source
+zip -r $DOWNLOAD/comp170code-md.zip source
 
 # echo "Removing generated directories at introcs"
 # rm -r /var/www/book/html/*/
