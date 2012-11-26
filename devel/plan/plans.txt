@@ -4,6 +4,12 @@ Remove todos; add exercises.
 
 ?? MonoDevelop?   set for all in one folder  or not ignore .exe folder?
 
+jedit/mono changes:
+2.2 lab
+2.9.3 intro to process ? need?
+2.14 lab
+
+
 Additions:
         summary at the end of each chapter
         more exercises

@@ -132,7 +132,7 @@ Here is how to do a quick sanity check of your Mono setup:
    ``/usr/bin/gmcs`` as output.  ``gmcs`` is one of the interfaces to
    the C# compiler.
 
-Optional Mono-develop Installation
+Mono-develop Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Make sure Mono is installed first. 
@@ -196,7 +196,7 @@ own programs.  When working, you can just leave this window open,
 saving it for later use, 
 (or close and reopen later....)  
 
-Optional Mono-develop Installation
+Mono-develop Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Make sure Mono is installed first. 
@@ -204,7 +204,7 @@ Optional Mono-develop Installation
 #. Now go to <http://mono-develop.com>.
 
 #. As with Mono, we need to look for the downloads link. You should
-   download the *stable* version.
+   download the *stable* version. That should be at least numbered 3.0.
 
 #. As with Mono, you will see a self-extracting installer, 
    which you should run as before.
@@ -212,8 +212,7 @@ Optional Mono-develop Installation
 #. If the preceding steps were successful, you can launch
    MonoDevelop by double-clicking the icon in your Applications
    folder. (You won't know what to do with it yet, but at least you can
-   verify that it launches correctly and then close the window.
-   Ctrl-Q is a shortcut.)
+   verify that it launches correctly and then close the window.)
 
 
 Linux
