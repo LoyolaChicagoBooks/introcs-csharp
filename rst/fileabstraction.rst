@@ -28,3 +28,13 @@ used them for the ``Console``.
 Files can be handled very differently by different operating systems, but
 C# abstracts away the differences and and provides stream interfaces between
 a C# program and files.
+
+The Path Abstraction
+==============================
+
+George is working on this now.
+
+The Folder Abstraction
+==============================
+
+George is working on this now.

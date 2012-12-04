@@ -2,8 +2,8 @@
 
 .. _files:
 
-Files
-######################
+Files, Paths, and Directories
+###############################
 
 .. toctree::
    :maxdepth: 3
@@ -11,5 +11,8 @@ Files
    fileabstraction
    filewrite
    fileread
+   paths
+   directories
+   fio
    
 
