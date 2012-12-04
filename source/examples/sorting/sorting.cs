@@ -135,7 +135,7 @@ namespace IntroCS
          i = l;
          j = r;
 
-         x = data [(l + r) / 2]; /* find pivot item */
+         x = data [(l + r) / 2]; // find pivot item 
          while (true) {
             while (data[i] < x)
                i++;

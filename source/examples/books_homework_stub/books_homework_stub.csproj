@@ -37,7 +37,6 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="book_list.cs" />
     <Compile Include="book.cs" />
-    <Compile Include="file_util.cs" />
     <Compile Include="test_book_list.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -5,25 +5,33 @@ using System.Collections.Generic;
 namespace IntroCS
 {
    
+  
    // A "Place" represents one location in the scenery of the game.  It is 
    // connected to other places via exits.  For each existing exit, the place 
    // stores a reference to the neighboring place.
+   // 
    // Derived from work of  Michael Kolling and David J. Barnes
+    
    public class Place
    {
-      public string Description { get; private set; }
+      private string description;
 
       private Dictionary<string, Place> exits; // stores exits of this place.
-   
+
+      public string GetDescription()
+      {
+         return description;
+      }
+        
       // Create a place described by description. Initially, it has
       // no exits.  The description is something like "in a kitchen" or
       // "in an open court yard".
       public Place (string description)
       {
-         Description = description;
+         this.description = description;
          exits = new Dictionary<string, Place> ();
       }
-       
+            
       // Create places and their interconnections by taking place names, exit 
       // data and descriptions from a text file.  
       // Return a map of place names to places.  File format for each place: 
@@ -62,7 +70,7 @@ namespace IntroCS
          }
          return places;
       }
-   
+     
       // Define an exit from this place.
       //  Going to the exit in this direction 
       //  leads to neighbor place.
@@ -70,15 +78,16 @@ namespace IntroCS
       {
          exits [direction] = neighbor;
       }
-      
+     
       // Return a description of the place in the form:
       //     You are in the kitchen.
       //     Exits: north west
       public string getLongDescription ()
       {
-         return "You are " + Description + ".\n" + getExitstring ();
+         return "You are " + description + ".\n" + getExitstring ();
       }
    
+     
       // Return a string describing the place's exits, for example
       // "Exits: north west".
       private string getExitstring ()

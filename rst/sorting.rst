@@ -452,8 +452,43 @@ Running the Code
 Here's the output of a trial run on one of our computers. The results will vary
 depending on your computer's CPU, among other factors.
 
-.. literalinclude:: ../examples/arrays/output/results.txt
-   :language: text
+..  code-block:: none
+
+    bin/Debug$ mono Sorting.exe 1000 12
+    Quick Sort: 0.000
+    Naive Shell Sort: 0.000
+    Better Shell Sort: 0.000
+    Insertion Sort: 0.001
+    Selection Sort: 0.002
+    Bubble Sort: 0.003
+    bin/Debug$ mono Sorting.exe 1000 55
+    Quick Sort: 0.000
+    Naive Shell Sort: 0.000
+    Better Shell Sort: 0.000
+    Insertion Sort: 0.001
+    Selection Sort: 0.002
+    Bubble Sort: 0.003
+    bin/Debug$ mono Sorting.exe 10000 2
+    Quick Sort: 0.001
+    Naive Shell Sort: 0.019
+    Better Shell Sort: 0.002
+    Insertion Sort: 0.134
+    Selection Sort: 0.174
+    Bubble Sort: 0.321
+    bin/Debug$ mono Sorting.exe 50000 2
+    Quick Sort: 0.006
+    Naive Shell Sort: 0.441
+    Better Shell Sort: 0.015
+    Insertion Sort: 3.239
+    Selection Sort: 4.172
+    Bubble Sort: 8.028
+    bin/Debug$ mono Sorting.exe 100000 2
+    Quick Sort: 0.014
+    Naive Shell Sort: 1.794
+    Better Shell Sort: 0.034
+    Insertion Sort: 13.158
+    Selection Sort: 16.736
+    Bubble Sort: 31.334
 
 At least based on randomly-generated arrays, the performance can be summarized 
 as follows:

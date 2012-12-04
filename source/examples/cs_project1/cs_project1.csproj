@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F83AE46B-3145-45C6-A565-2580AEA4353F}</ProjectGuid>
+    <ProjectGuid>{3AB6647B-77BB-4662-96A8-906FCF233D78}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>csproject_stub</RootNamespace>
-    <AssemblyName>csproject_stub</AssemblyName>
+    <RootNamespace>cs_project1</RootNamespace>
+    <AssemblyName>cs_project1</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>True</DebugSymbols>
@@ -42,7 +42,6 @@
     <Compile Include="helper.cs" />
     <Compile Include="place.cs" />
     <Compile Include="quitter.cs" />
-    <Compile Include="response.cs" />
     <Compile Include="text_util.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

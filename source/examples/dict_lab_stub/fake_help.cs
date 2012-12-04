@@ -10,8 +10,7 @@ namespace IntroCS
 
       public static void Main()
       {
-         // set up data reading with utilities in class FileUtil
-         StreamReader reader = FileUtil.GetDataReader("help_not_defaults.txt");
+         StreamReader reader = FIO.OpenReader("help_not_defaults.txt");
          // special data is in the first two paragraphs
          string welcome = FileUtil.ReadParagraph(reader);
          string goodbye = FileUtil.ReadParagraph(reader);
@@ -19,7 +18,7 @@ namespace IntroCS
                    FileUtil.GetParagraphs(reader); //  list of random responses
          reader.Close();
 
-         reader = FileUtil.GetDataReader("help_not_responses.txt");
+         reader = FIO.OpenReader("help_not_responses.txt");
          Dictionary<string, string> responses =
                                         FileUtil.GetDictionary(reader);
          reader.Close();

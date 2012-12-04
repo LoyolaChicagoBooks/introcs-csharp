@@ -2,7 +2,7 @@ using System;
 
 class Grade
 {                        // function chunk
-   /** Return letter grade for score. */
+   // Return letter grade for score. 
    static char letterGrade(double score)
    {
       char letter;
@@ -30,14 +30,14 @@ class Grade
       Console.WriteLine("Your letter grade is {0}.", letterGrade(g));
    }
 
-   /** Prompt user and return a line read from the keyboard.*/
+   // Prompt user and return a line read from the keyboard.
    static string promptLine(string prompt)
    {
       Console.Write(prompt);
       return Console.ReadLine();
    }
 
-   /** Prompt user and return a double read from the keyboard.*/
+   // Prompt user and return a double read from the keyboard.
    static double promptDouble(string prompt)
    {
       return double.Parse(promptLine(prompt)); //assumes legal format for now

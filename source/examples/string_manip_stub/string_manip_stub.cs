@@ -1,6 +1,6 @@
 using System;
 
-/** problem stub for class -- significant logical sequence */
+// problem stub for class -- significant logical sequence 
 class StringManip
 {
     static void Main ()
@@ -20,20 +20,18 @@ class StringManip
         Console.WriteLine("str3 with worst => best: " + str5);
     }
     
-    /** Return s with the first occurence of target
-     *  replaced by replacement.
-     */
+    // Return s with the first occurence of target
+    // replaced by replacement.
     static string replaceFirst(string s, string target,
                                string replacement)
     {
         return "Not implemented"; // so it compiles
     }
     
-    /** Most concrete version:
-     * Assume s is "It was the best of times"
-     * target is "best"
-     * replacement is "worst"
-     */
+    // Most concrete version:
+    // Assume s is "It was the best of times"
+    // target is "best"
+    // replacement is "worst"
     static string replaceFirst1(string s, string target,
                                 string replacement)
     {   
@@ -44,13 +42,12 @@ class StringManip
         return "It was the worst of times";
     }
     
-    /** Rather than jump to the most general s, which varies in
-     * content, length, and placement of the target,
-     * assume the target is best, and in the same place, but you do not
-     * know what the other characters are ahead of time:
-     * s is "???????????best??????????"
-     *       0123456789012345678901234
-     */
+    // Rather than jump to the most general s, which varies in
+    // content, length, and placement of the target,
+    // assume the target is best, and in the same place, but you do not
+    // know what the other characters are ahead of time:
+    // s is "???????????best??????????"
+    //       0123456789012345678901234
     static string replaceFirst2(string s, string target,
                                 string replacement)
     {   /* plan:
@@ -66,10 +63,9 @@ class StringManip
     could be anything, with any length, and get the next version.
     */
 
-    /** Return s with the first occurence of target
-     *  replaced by replacement.  As far as we got,
-     *  the target is ASSUMED to be in s.
-     */
+    // Return s with the first occurence of target
+    //  replaced by replacement.  As far as we got,
+    //  the target is ASSUMED to be in s.
     static string replaceFirst3(string s, string target,
                                 string replacement)
     {   // code in class! ASSUME target appears in s

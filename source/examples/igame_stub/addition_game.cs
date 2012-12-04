@@ -7,15 +7,14 @@ namespace IntroCS
        private Random rand;
        private int n;
    
-       /**
-        * Constructor for objects of class AdditionGame
-        */
+       // Constructor for objects of class AdditionGame
        public AdditionGame(Random r, int big)
        {
            rand = r;
            n = big;
        }
-   
+       
+       // Play all games and keep score.
        public int Play()  // exactly matches heading in Game interface
        {
            int score = 0;

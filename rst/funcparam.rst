@@ -174,12 +174,6 @@ This last version illustrates several important ideas:
 	something close to:
 	
 	  | Traceback (most recent call last):
-	  |   File "/hands-on/examples/birthday_bad.cs", line 15, in <module>
-	  |     Main()
-	  |   File "/hands-on/examples/birthday_bad.cs", line 13, in main
-	  |     HappyBirthday(2)
-	  |   File "/hands-on/examples/birthday_bad.cs", line 6, in HappyBirthday
-	  |     print("Happy Birthday, dear " + person + ".")
 	  | TypeError: Can't convert 'int' object to str implicitly
 	
 	Your file folder is probably different than /hands-on/examples.

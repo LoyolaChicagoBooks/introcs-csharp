@@ -5,19 +5,7 @@ using System.Collections.Generic;
 namespace IntroCS
 {
    public class FileUtil
-   {
-      // Open fileName and return the stream.
-      // Provides a message if cannot find fileName, and exits program.
-      public static StreamReader GetDataReader(string fileName)
-      {
-         if (!File.Exists(fileName)) {
-            Console.WriteLine("Cannot find file: {0}", fileName);
-            Environment.Exit(1);
-         }
-         return new StreamReader(fileName);
-      }
-
-                                          // start ReadParagraph chunk
+   {                                          // start ReadParagraph chunk
       // Return a string consisting of a sequence of nonempty lines read
       // from reader. All the newlines at the ends of these lines are included.
       // The function ends after reading (but not including) an empty line.
@@ -27,7 +15,6 @@ namespace IntroCS
          // REPLACE the next line with your lines of code
          return "You have not coded ReadParagraph yet!\n";
       }
-
                                          // start GetParagraphs chunk
       // Read the remaining empty-line terminated paragraphs
       // from reader into a new list of paragraph strings,
