@@ -140,7 +140,7 @@ get started, we provided this simple *stub* in the example file
 :file:`do_the_math_stub.cs`.  Save the stub as 
 :file:`do_the_math.cs` and complete it:
 
-.. literalinclude:: ../examples/do_the_math_stub.cs
+.. literalinclude:: ../source/examples/do_the_math_stub/do_the_math_stub.cs
 
 When you are done editing and saving :file:`do_the_math.cs`, 
 in :ref:`work-folder` or in the examples folder we provided,

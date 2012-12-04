@@ -48,7 +48,7 @@ time. You test the temperature each time, and also print out the
 temperature before reducing the temperature. In C# you could
 write and run the code below, saved in example program cool.cs:
 
-.. literalinclude:: ../examples/cool.cs
+.. literalinclude:: ../source/examples/cool/cool.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
@@ -127,7 +127,7 @@ the term *successive modification loop* for loops following this pattern.
 Test yourself: Follow the code.  Figure out what is printed.
 If it helps, get detailed and play computer:
 
-.. literalinclude:: ../examples/test_while1.cs
+.. literalinclude:: ../source/examples/test_while1/test_while1.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
@@ -145,7 +145,7 @@ Check yourself by running the example program ``test_while1.cs``.
 previous example, switching the order in the loop body. Follow it
 carefully, one step at a time.
 
-.. literalinclude:: ../examples/test_while2.cs
+.. literalinclude:: ../source/examples/test_while2/test_while2.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
@@ -225,7 +225,7 @@ Putting that all together, and remembering the one thing we noted
 to do after the loop,
 we get ``blastoff.cs``:
 
-.. literalinclude:: ../examples/blastoff.cs
+.. literalinclude:: ../source/examples/blastoff/blastoff.cs
 
 Look back and see how we fit the general rubric.  
 There are a bunch of things to think about with a while loop, so
@@ -489,7 +489,7 @@ We can write a ridiculously short
 function following Gauss's model.  Here we introduce the variable average,
 as in the motivation for Gauss's answer:
 
-.. literalinclude:: ../examples/sum_to_n_long_bad.cs
+.. literalinclude:: ../source/examples/sum_to_n_long_bad/sum_to_n_long_bad.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -516,7 +516,7 @@ last, when we know the answer will be an integer, things should be better::
    
 Here is a shot at the whole function:
 
-.. literalinclude:: ../examples/sum_to_n_long_bad2.cs
+.. literalinclude:: ../source/examples/sum_to_n_long_bad2/sum_to_n_long_bad2.cs
    :start-after: chunk
    :end-before: chunk
 

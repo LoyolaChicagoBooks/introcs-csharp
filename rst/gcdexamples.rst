@@ -103,7 +103,7 @@ number would be the (non-zero) remainder.
 
 Now take a look at a basic version of GCD:
 
-.. literalinclude:: ../examples/g_c_d_basic.cs
+.. literalinclude:: ../source/examples/g_c_d_basic/g_c_d_basic.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:
@@ -182,7 +182,7 @@ Greatest Common Divisor works as follows:
   if ``a`` and ``b`` bump into one another, thereby meaning that we
   have computed the GCD.
 
-.. literalinclude:: ../examples/g_c_d_subtraction_method.cs
+.. literalinclude:: ../source/examples/g_c_d_subtraction_method/g_c_d_subtraction_method.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:
@@ -235,7 +235,7 @@ is to introduce a variable ``r`` for the remainder.  Check and see for yourself 
 need an extra variable like ``r``.
 This code is from :file:`g_c_d_remainder_loop.cs`:
 
-.. literalinclude:: ../examples/g_c_d_remainder_loop.cs
+.. literalinclude:: ../source/examples/g_c_d_remainder_loop/g_c_d_remainder_loop.cs
    :start-after: gcd chunk
    :end-before: gcd end chunk
 
@@ -261,7 +261,7 @@ We don't expect you to master this
 technique immediately but do feel that it is important you at least
 *hear* about it and see its tremendous power:
 
-.. literalinclude:: ../examples/g_c_d_euclid_recursive.cs
+.. literalinclude:: ../source/examples/g_c_d_euclid_recursive/g_c_d_euclid_recursive.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:

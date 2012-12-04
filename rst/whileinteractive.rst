@@ -43,7 +43,7 @@ and the value 100 would be accepted.
 This is a well-defined idea.  A function makes sense.  Its heading
 includes a prompt and low and high limits of the allowed range:
 
-.. literalinclude:: ../examples/input_in_range1.cs
+.. literalinclude:: ../source/examples/input_in_range1/input_in_range1.cs
    :start-after: chunk
    :end-before: {
 
@@ -191,7 +191,7 @@ When the loop condition becomes false, and you get past the loop,
 you have a correct value in ``number``.  You have done all the hard work.  
 Do not forget to return it at the end.  
 
-.. literalinclude:: ../examples/input_in_range1.cs
+.. literalinclude:: ../source/examples/input_in_range1/input_in_range1.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -229,7 +229,7 @@ have the same form as for ``Console.Write``, but the formatted string is
 Here is a revised version, in example ``input_in_range2.cs``, 
 without redundancy in the prompts in ``Main``:
 
-.. literalinclude:: ../examples/input_in_range2.cs
+.. literalinclude:: ../source/examples/input_in_range2/input_in_range2.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -264,7 +264,7 @@ end of the loop.  The condition uses the bad
 original choice forever.  Here is the loop in the mistaken version, 
 from example  ``input_in_range2_bad.cs``:
 
-.. literalinclude:: ../examples/input_in_range2_bad.cs
+.. literalinclude:: ../source/examples/input_in_range2_bad/input_in_range2_bad.cs
    :start-after: chunk
    :end-before: chunk
 

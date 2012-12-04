@@ -40,13 +40,13 @@ that can be used with ``Console.WriteLine``.
 Instead of inserting user input with the ``+`` operation as in 
 ``hello_you1.cs``:
 
-.. literalinclude:: ../examples/hello_you1.cs
+.. literalinclude:: ../source/examples/hello_you1/hello_you1.cs
 
 look at a variation, ``hello_you2.cs``, shown below.
 Both programs  
 look exactly the same to the user:
 
-.. literalinclude:: ../examples/hello_you2.cs
+.. literalinclude:: ../source/examples/hello_you2/hello_you2.cs
 
 All the new syntax is in the line::
 

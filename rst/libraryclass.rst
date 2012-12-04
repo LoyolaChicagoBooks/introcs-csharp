@@ -54,7 +54,7 @@ are all marked ``public``, so that any class can use them.
 We can write a modified example addition program, :file:`addition3.cs`,
 as an example of using ``UIF``:
 
-.. literalinclude:: ../examples/addition3.cs
+.. literalinclude:: ../source/examples/addition3/addition3.cs
 
 To allow access to UIF, we have added the IntroCS namespace for the class.
 To reference the static functions in the different class ``UIF``, we put ``UIF.``

@@ -72,7 +72,7 @@ convert it to a double approximation, or print it, or do arithmetic.
 Thinking ahead to what we would like for our Rational numbers, here is
 some testing code, with hopefully clear and reasonable method names:
 
-.. literalinclude:: ../examples/test_rational.cs
+.. literalinclude:: ../source/examples/test_rational/test_rational.cs
 
 Like other numerical types we would like to be able to parse strings.
 The helping function, ``ShowParse``, in our testing code makes the display neater.

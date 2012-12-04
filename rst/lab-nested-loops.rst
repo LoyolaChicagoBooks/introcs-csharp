@@ -22,7 +22,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
 
 #.  Complete  
 
-    .. literalinclude:: ../examples/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
        :start-after: PrintReps chunk
        :end-before: body
 
@@ -41,7 +41,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     
 #.  Complete  
 
-    .. literalinclude:: ../examples/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
        :start-after: StringOfReps chunk
        :end-before: body
 
@@ -53,7 +53,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     
 #.  Complete ``Factorial``, in a format much like SumToN in example ``sum_to_n.cs``:  
     
-    .. literalinclude:: ../examples/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
        :start-after: Factorial chunk
        :end-before: body
     
@@ -84,7 +84,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
       
 #.  Complete the method
 
-    .. literalinclude:: ../examples/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
        :start-after: PrintRectangle chunk
        :end-before: body
     
@@ -113,7 +113,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     source code, because Sphinx turns comments to italics, so the vertical bars
     do not appear vertical below!
 
-    .. literalinclude:: ../examples/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
        :start-after: PrintTableBorders chunk
        :end-before: body
     

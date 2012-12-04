@@ -66,7 +66,7 @@ values. The second will be convenient to set up tests for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: PrintInts chunk
       :end-before: ReadInts chunk
 
@@ -76,7 +76,7 @@ values. The second will be convenient to set up tests for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: ReadInts chunk
       :end-before: Minimum chunk
 
@@ -85,19 +85,19 @@ values. The second will be convenient to set up tests for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: Minimum chunk
       :end-before: CountEven chunk
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: CountEven chunk
       :end-before: PairwiseAdd chunk
    
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: PairwiseAdd chunk
       :end-before: NewPairwiseAdd chunk
 
@@ -111,7 +111,7 @@ values. The second will be convenient to set up tests for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: NewPairwiseAdd chunk
       :end-before: IsAscending chunk
       
@@ -119,7 +119,7 @@ values. The second will be convenient to set up tests for this lab.
 
 #. Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: IsAscending chunk
       :end-before: PrintAscendingValues chunk
 
@@ -131,7 +131,7 @@ values. The second will be convenient to set up tests for this lab.
 #. **20 % extra credit:** 
    Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: PrintAscendingValues chunk
       :end-before: PrintRuns chunk
 
@@ -139,7 +139,7 @@ values. The second will be convenient to set up tests for this lab.
 #. **20 % extra credit:** 
    Complete and test the function with documentation and heading:
 
-   .. literalinclude:: ../examples/array_lab_stub.cs
+   .. literalinclude:: ../source/examples/array_lab_stub/array_lab_stub.cs
       :start-after: PrintRuns chunk
       :end-before: PrintRuns chunk
 
