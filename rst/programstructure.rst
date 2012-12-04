@@ -31,7 +31,7 @@ clutter up the basic setup with features that we are not about to use and discus
 Here is a silly little test illustrating the difference between ``Console.WriteLine``
 and ``Console.Write``, in example :file:`write_test.cs`:
 
-.. literalinclude:: ../examples/write_test.cs
+.. literalinclude:: ../source/examples/write_test/write_test.cs
 
 When run, the program prints:
 

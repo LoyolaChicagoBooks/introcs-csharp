@@ -12,7 +12,7 @@ Reading Files
 Run the example program
 ``print_first_file.cs``, shown below:
 
-.. literalinclude:: ../examples/print_first_file.cs
+.. literalinclude:: ../source/examples/print_first_file/print_first_file.cs
 
 Now you have come full circle: what one C# program has written
 into the file ``sample.txt``, another has read and displayed.
@@ -50,7 +50,7 @@ testing for ``!reader.EndOfStream`` in the example program ``print_file_lines.cs
 This little program reads and prints the contents of a file specified by the 
 user, one line at a time:
 
-.. literalinclude:: ../examples/print_file_lines.cs
+.. literalinclude:: ../source/examples/print_file_lines/print_file_lines.cs
     
 .. index:: 
    double: var; type

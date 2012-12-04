@@ -39,7 +39,7 @@ of the function, person is used in place of the real data for any
 specific person's name. Read and then run example program
 ``birthday4.cs``:
 
-.. literalinclude:: ../examples/birthday4.cs
+.. literalinclude:: ../source/examples/birthday4/birthday4.cs
    :linenos:
 
 In the definition heading for ``HappyBirthday``, ``person`` is
@@ -132,7 +132,7 @@ We can combine function parameters with user input, and have the
 program be able to print Happy Birthday for anyone. Check out the
 ``Main`` method and run ``birthday_who.cs``:
 
-.. literalinclude:: ../examples/birthday_who.cs
+.. literalinclude:: ../source/examples/birthday_who/birthday_who.cs
    :linenos:
 
 This last version illustrates several important ideas:

@@ -10,7 +10,7 @@ Run the example program, ``clothes.cs``. Try it at least twice, with
 inputs 50 and then 80. As you can see, you get different results,
 depending on the input. The main code of ``clothes.cs`` is:
 
-.. literalinclude:: ../examples/clothes.cs
+.. literalinclude:: ../source/examples/clothes/clothes.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:

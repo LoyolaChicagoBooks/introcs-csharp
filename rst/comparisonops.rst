@@ -79,7 +79,7 @@ place for a function enclosing the calculation.
 
 *Read* the setup for the function:
 
-.. literalinclude:: ../examples/wages1.cs
+.. literalinclude:: ../source/examples/wages1/wages1.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -92,12 +92,12 @@ solution before going on and examining mine.
 You can try running my complete example program, :file:`wages1.cs`, 
 also shown below.  
 
-.. literalinclude:: ../examples/wages1.cs
+.. literalinclude:: ../source/examples/wages1/wages1.cs
    
 This program also introduces new notation for 
 displaying decimal numbers:  
 
-.. literalinclude:: ../examples/wages1.cs
+.. literalinclude:: ../source/examples/wages1/wages1.cs
    :start-after: chunk2
    :end-before: chunk2
 
@@ -119,7 +119,7 @@ general calculation formula and sets the parameters for the formula
 in the ``if`` statement. There are generally a number of ways you might
 solve the same problem!
 
-.. literalinclude:: ../examples/wages2.cs
+.. literalinclude:: ../source/examples/wages2/wages2.cs
    :start-after: chunk
    :end-before: chunk
 

@@ -20,7 +20,7 @@ characters that we can index.
    
 Consider the following silly function description and heading as a start:
 
-.. literalinclude:: ../examples/char_loop1.cs
+.. literalinclude:: ../source/examples/char_loop1/char_loop1.cs
    :start-after: chunk
    :end-before: {
  
@@ -70,7 +70,7 @@ This increases the value of the numeric variable i by 1.
 
 So all together:
 
-.. literalinclude:: ../examples/char_loop1.cs
+.. literalinclude:: ../source/examples/char_loop1/char_loop1.cs
    :start-after: chunk
    :end-before: chunk
  
@@ -100,7 +100,7 @@ not just print it.
 
 Let us get more complicated.  Consider the function described:
 
-.. literalinclude:: ../examples/vowels.cs
+.. literalinclude:: ../source/examples/vowels/vowels.cs
    :start-after: chunk
    :end-before: {
 
@@ -142,7 +142,7 @@ nose is just to consider all the cases where it is true::
 How do you combine them into a condition?  
 The letter can be a *or* e *or* i *or* o *or* u.  We get the code:
 
-.. literalinclude:: ../examples/vowels.cs
+.. literalinclude:: ../source/examples/vowels/vowels.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -172,7 +172,7 @@ Only lowercase vowels are listed.  We could do something with
 
 This variation is in example ``vowels2.cs``.
 
-.. literalinclude:: ../examples/vowels2.cs
+.. literalinclude:: ../source/examples/vowels2/vowels2.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -293,7 +293,7 @@ and below.
 
 The whole function would be:
 
-.. literalinclude:: ../examples/check_digits1.cs
+.. literalinclude:: ../source/examples/check_digits1/check_digits1.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -330,7 +330,7 @@ they are all digits. There are
 Again we do not need an ``if`` statement for a check.  Look in the full
 code for the function:
 
-.. literalinclude:: ../examples/check_digits2.cs
+.. literalinclude:: ../source/examples/check_digits2/check_digits2.cs
    :start-after: chunk
    :end-before: chunk
 

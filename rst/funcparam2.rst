@@ -14,7 +14,7 @@ uses
 a function, ``SumProblem``,  to make it easy to display many sum problems. Read and
 follow the code, and then run:
 
-.. literalinclude:: ../examples/addition1.cs
+.. literalinclude:: ../source/examples/addition1/addition1.cs
 
 .. index::
    double: parameter; actual

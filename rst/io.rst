@@ -62,7 +62,7 @@ You may well want to have the user supply you with numbers.
 There is a complication.  Suppose you want to get numbers and add them.
 What happens with this code, in :file:`bad_sum.cs`?
 
-.. literalinclude:: ../examples/bad_sum.cs
+.. literalinclude:: ../source/examples/bad_sum/bad_sum.cs
 
 Here is a sample run:
 
@@ -83,7 +83,7 @@ produces the corresponding ``int`` value, like 123 or -25.
 In :file:`good_sum.cs`, we changed the names to emphasize the type
 conversions:
 
-.. literalinclude:: ../examples/good_sum.cs
+.. literalinclude:: ../source/examples/good_sum/good_sum.cs
 
 Notice that the values calculated by ``int.Parse`` for the strings
 ``xString`` and ``yString`` are immediately remembered in 

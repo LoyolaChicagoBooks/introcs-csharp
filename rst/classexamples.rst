@@ -8,7 +8,7 @@ The example :file:`example_class.cs` has none of the
 functionality of of our :file:`rational.cs`, but it is very simple,
 just illustrating several getters and setters:
 
-.. literalinclude:: ../examples/example_class.cs
+.. literalinclude:: ../source/examples/example_class/example_class.cs
 
 Make sure the code and the output from running make sense.
 
@@ -25,7 +25,7 @@ but hopefully informative, particularly with the transformation.
 Here is a procedural version, example file 
 :file:`static_version.cs`
 
-.. literalinclude:: ../examples/static_version.cs
+.. literalinclude:: ../source/examples/static_version/static_version.cs
    :start-after:  chunk
    :end-before: chunk
 

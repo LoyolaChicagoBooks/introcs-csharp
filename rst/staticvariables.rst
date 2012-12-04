@@ -21,7 +21,7 @@ You can then use the name of the fixed data value in
 expressions anywhere in the class. 
 A simple example program is ``constant.cs``:
 
-.. literalinclude:: ../examples/constant.cs
+.. literalinclude:: ../source/examples/constant/constant.cs
 
 See that ``PI`` is used in two functions without being declared locally.
 

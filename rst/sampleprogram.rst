@@ -24,7 +24,7 @@ basic program features.  We will refer back to this sample run while
 discussing the program.
 Here is the text of the program:
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :linenos:
 
 This section gives an overview of a working
@@ -40,7 +40,7 @@ emphasize the different uses of the parts of the program.
     
 We give a line by line explanation:
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 1
 
 The C# environment supplies an enormous number of parts that you can
@@ -56,7 +56,7 @@ Lines 2, 10, 18, and 21 are blank.
 This is merely for the human reader to separate sections visually.  The computer
 ignores them.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 3-4
 
 A basic unit in C# is a *class*.  Our code sits inside a class.  Each class
@@ -65,7 +65,7 @@ This class is ``Painting``.  After the heading comes
 a *body* delimited by braces.  The opening brace ``{`` in line 4, is matched
 by the closing brace ``}`` on the last line of the program.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 5-6
 
 A class is broken up with chunks called *functions* or *methods*.  Each has
@@ -96,7 +96,7 @@ After the function heading comes a *body*.  Like with a class, a function body
 is delimited by braces.  The opening brace here is matched by the closing 
 brace on the second to last line of the program.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 7
    
 A program works with data of many different possible types.  One type
@@ -111,14 +111,14 @@ values to these variables later.
 This line is a *declaration* statement.
 Most statements in C#, like this one, end with ``;`` - a semicolon.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 8
 
 This is another declaration.  This time the type of the variables is
 ``string``, which means a sequence of characters, like a line you
 might type at the keyboard.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 9
 
 Here is another declaration for a ``double``, looking slightly different.
@@ -128,7 +128,7 @@ and we assign its value at the same time with ``= 8``.  This naming of
 constants is not
 strictly necessary, but it makes the program easier to read.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 11
 
 ``Console`` refers to the terminal or console window where text output 
@@ -145,7 +145,7 @@ delimited by the quotes at either end.  Notice that the contents
 of this string appear at the start of the screen output 
 displayed for this program.  The program did **write** this **line**.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 12
 
 This statement is similar to the last one, except that it uses ``Write``
@@ -158,7 +158,7 @@ after it:  The 20.5 of the sample out follows the string on the same line.
 This statement serves as a *prompt*: letting the user know that information is being 
 requested (a room length).
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 13
 
 Here is where the program takes in the information requested from the user.
@@ -184,7 +184,7 @@ any sequence of characters can be typed.
 The ``Console.ReadLine()`` function produces this sequence of characters
 as a *string* type.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 14
 
 Of course we want to interpret the user's input as a number in order to do
@@ -199,7 +199,7 @@ The function ``double.Parse``, is just the one we want, it takes a string parame
 and the value produced is the corresponding ``double`` number.  In
 the sample run that assigns to ``length`` the value 20.5.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 15-17
 
 These lines are analogous to the previous three lines:  
@@ -211,7 +211,7 @@ the value 10.
 At this point we have all the data we need from the user.  The next part is
 the brief calculations of results:
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 19-20
 
 We have two assignment statements.  The values to assign are given by arithmetic
@@ -231,7 +231,7 @@ which simplifies to 488.
 
 With the sample run, ``ceilingArea`` would get the value 20.5 * 10, or 205.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 22-23
 
 This is a single statement.  Line endings act just like a space in C#.
@@ -258,13 +258,13 @@ you see what is printed:
 sandwiching the value taken from the variable ``wallArea`` between
 two literal string, given in quotes.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 24-25
  
 This statement behave like the previous one, except with different
 quoted strings and the value of a different variable.  See the sample output.
 
-.. literalinclude:: ../examples/painting.cs
+.. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 26-27
  
 Finally we have the matching closing braces marking the end of the body of the

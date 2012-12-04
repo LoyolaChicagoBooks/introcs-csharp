@@ -8,7 +8,7 @@ Try it at least twice, with
 inputs: 30 and then 55. As you an see, you get an extra result,
 depending on the input. The main code is:
 
-.. literalinclude:: ../examples/suitcase.cs
+.. literalinclude:: ../source/examples/suitcase/suitcase.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:

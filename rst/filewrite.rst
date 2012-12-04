@@ -19,7 +19,7 @@ First note that there is no file named sample.txt.
 
 Then compile and run the example program ``first_file.cs``, shown below:
 
-.. literalinclude:: ../examples/first_file.cs
+.. literalinclude:: ../source/examples/first_file/first_file.cs
 
 Nothing shows on the screen when you run the program:
 it is just writing to a file.

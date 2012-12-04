@@ -182,7 +182,7 @@ To make the data line up with the heading titles,
 we can expand the columns, with code in example
 ``power_table.cs``:
 
-.. literalinclude:: ../examples/power_table.cs
+.. literalinclude:: ../source/examples/power_table/power_table.cs
    :start-after: chunk
    :end-before: chunk
 
@@ -497,7 +497,7 @@ have a bit of printing for the initial row label before the column loop.  The ro
 label is r.  The whole code is in example ``mod7_table.cs`` and below:
 
 
-..  literalinclude:: ../examples/mod7_table.cs
+..  literalinclude:: ../source/examples/mod7_table/mod7_table.cs
     :start-after: chunk
     :end-before: chunk
       
@@ -543,7 +543,7 @@ create our main format string with::
 
 The whole function code is below and in example :file:`mod_mult_table.cs`.
 
-..  literalinclude:: ../examples/mod_mult_table.cs
+..  literalinclude:: ../source/examples/mod_mult_table/mod_mult_table.cs
     :start-after: chunk
     :end-before: chunk
 

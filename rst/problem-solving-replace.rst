@@ -45,7 +45,7 @@ the first occurrence, and for now we will assume the
 replacement makes sense.  The following heading 
 (with documentation) should work:
 
-.. literalinclude:: ../examples/string_manip_stub.cs
+.. literalinclude:: ../source/examples/string_manip_stub/string_manip_stub.cs
    :start-after: }
    :end-before: {
 
@@ -54,7 +54,7 @@ As soon as we have the calling interface, it is good to be thinking
 of the tests it should pass.  Here is a Main program written 
 to test the function in different ways and display the results:
 
-.. literalinclude:: ../examples/string_manip_stub.cs
+.. literalinclude:: ../source/examples/string_manip_stub/string_manip_stub.cs
    :start-after: {
    :end-before: /**
 

@@ -30,7 +30,7 @@ The corresponding definition and examples in C# would be the
 following, taken from example program :file:`return1.cs`. *Read*
 *and run*:
 
-.. literalinclude:: ../examples/return1.cs
+.. literalinclude:: ../source/examples/return1/return1.cs
 
 The new C# syntax is the *return statement*, with the word
 ``return`` followed by an expression. Functions that return values
@@ -80,7 +80,7 @@ there can be any number of statements executed before the return
 statement. Read, follow, and run the example program
 :file:`return2.cs`:
 
-.. literalinclude:: ../examples/return2.cs
+.. literalinclude:: ../source/examples/return2/return2.cs
    :linenos:
 
 Many have a hard time following the flow of execution with functions.
@@ -141,7 +141,7 @@ whatever further use you want.  After returning that value,
 printing is one possibility, done in
 :file:`addition2.cs`:
 
-.. literalinclude:: ../examples/addition2.cs
+.. literalinclude:: ../source/examples/addition2/addition2.cs
 
 **In class recommendation**:  Improve example :file:`painting.cs`
 with functions.  Copy it to :file:`painting_input.cs` and modify it.
