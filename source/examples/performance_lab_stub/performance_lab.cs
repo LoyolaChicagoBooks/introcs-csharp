@@ -29,7 +29,7 @@ namespace IntroCS
          Stopwatch watch = new Stopwatch ();
          int[] data = new int[n];
          Sorting.IntArrayGenerate (data, seed);
-         /* Use our existing work on sorting to generate sorted array for testing */
+         // Use our existing work on sorting to generate sorted array for testing 
          Sorting.IntArrayQuickSort (data);
          watch.Reset ();       
          watch.Start ();

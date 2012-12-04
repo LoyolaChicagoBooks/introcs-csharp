@@ -1,4 +1,5 @@
-# This indicates that we are using shell-like matching logic instead of regular expressions.
+# This indicates that we are using shell-like matching logic 
+#    instead of regular expressions.
 syntax: glob
 # For Mac users
 Thumbs.db

@@ -4,7 +4,6 @@ namespace IntroCS
 {
    class WordSearchPuzzle
    {
-
       public static string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
       public static void GenerateWordSearch(char[,] puzzle, string[] words) {
@@ -112,9 +111,9 @@ namespace IntroCS
          return true;
       }
 
-      /** Insert word if possible starting at
-       * (x, y),  moving in dirrction (dx, dy).
-       * Return true if the change succeeds. */
+      // Insert word if possible starting at
+      // (x, y),  moving in dirrction (dx, dy).
+      // Return true if the change succeeds. 
       public static bool Insert(char[,] puzzle, int x, int y,
                                 int dx, int dy, string word) {
          // check whether all of the positions are '.' or match the letter at the position

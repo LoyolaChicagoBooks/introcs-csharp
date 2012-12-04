@@ -245,8 +245,25 @@ labeling the tests run, enter the command:
 
 You should see something like this output:
 
-.. literalinclude:: ../examples/intro_cs_lib/output/Rational.nunit.out
-   :language: text
+..  code-block:: none
+    
+    NUnit version 2.4.8
+    Copyright (C) 2002-2007 Charlie Poole.
+    Copyright (C) 2002-2004 James W. Newkirk, Michael C. Two, Alexei A. Vorontsov.
+    Copyright (C) 2000-2002 Philip Craig.
+    All Rights Reserved.
+    
+    Runtime Environment - 
+       OS Version: Unix 11.4.2.0
+      CLR Version: 2.0.50727.1433 ( 2.10.9 (tarball Mon May  7 20:25:51 EDT 2012) )
+    
+    ***** IntroCS.RationalTests.BasicArithmeticTests
+    ***** IntroCS.RationalTests.BasicComparisonTests
+    ***** IntroCS.RationalTests.ConstructorTest
+    ***** IntroCS.RationalTests.ConversionTests
+    ***** IntroCS.RationalTests.ParseTest
+    
+    Tests run: 5, Failures: 0, Not run: 0, Time: 0.065 seconds
 
 As you can see in the above output, all of the RationalTests examples are being executed.
 We used the -labels option to give more verbose output, 

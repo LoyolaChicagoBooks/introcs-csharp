@@ -9,6 +9,9 @@ jedit/mono changes:
 2.9.3 intro to process ? need?
 2.14 lab
 
+monodevelop 
+  1st lab
+  
 
 Additions:
         summary at the end of each chapter
