@@ -64,7 +64,7 @@ The folder :file:`examples/interfaces`
 has the modified :file:`rational.cs` and a :file:`test_rational_sort.cs`
 to test this with a list of Rationals:
    
-.. literalinclude:: ../examples/interfaces/test_rational_sort.cs
+.. literalinclude:: ../source/examples/interfaces/test_rational_sort.cs
 
 which prints:
 

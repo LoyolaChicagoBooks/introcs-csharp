@@ -26,7 +26,7 @@ Here is the code from example :file:`arrays/searching.cs`
 to perform a linear search for an integer in an 
 array:
 
-.. literalinclude:: ../examples/arrays/searching.cs
+.. literalinclude:: ../source/examples/searching/searching.cs
    :start-after: chunk-linearsearch-begin
    :end-before: chunk-linearsearch-end
    :linenos:
@@ -50,14 +50,14 @@ Here's what it does:
   to continue searching from where we left off. It might look
   something like the following:
 
-.. literalinclude:: ../examples/arrays/searching.cs
+.. literalinclude:: ../source/examples/searching/searching.cs
    :start-after: chunk-linearsearchfrom-begin
    :end-before: chunk-linearsearchfrom-end
    :linenos:
 
 The following code shows how to use the linear search: 
 
-.. literalinclude:: ../examples/arrays/searching.cs
+.. literalinclude:: ../source/examples/searching/searching.cs
    :start-after: chunk-driver-begin
    :end-before: chunk-driver-end
    :linenos:

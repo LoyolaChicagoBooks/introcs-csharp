@@ -55,7 +55,7 @@ The files that they read will contain the basic data.
 You can look in the lab project at the first data file:
 :file:`help_not_defaults.txt`, and the beginning is shown below:  
 
-.. literalinclude:: ../examples/dict_lab_stub/help_not_defaults.txt
+.. literalinclude:: ../source/examples/dict_lab_stub/help_not_defaults.txt
    :language: none
    :lines: 1-15
 
@@ -89,7 +89,7 @@ The first method to complete in :file:`file_util.cs`
 is useful by itself and later for use in the 
 ``GetParagraphs`` and ``GetDictionary`` that you will complete.  See the stub:
 
-.. literalinclude:: ../examples/dict_lab_stub/file_util.cs
+.. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
    :start-after: ReadParagraph chunk
    :end-before: chunk
 
@@ -130,7 +130,7 @@ insert a *few remaining lines of code* to complete the next method
 ``GetParagraphs``, that reads to the end of the file, and likely
 processes more than one paragraph.  
 
-.. literalinclude:: ../examples/dict_lab_stub/file_util.cs
+.. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
    :start-after: GetParagraphs chunk
    :end-before: chunk
 
@@ -151,13 +151,13 @@ stub also takes a ``StreamReader`` as parameter.  In
 ``Main`` this function is called to read from
 :file:`help_not_responses.txt`.  Here are the first few lines:
 
-.. literalinclude:: ../examples/dict_lab_stub/help_not_responses.txt
+.. literalinclude:: ../source/examples/dict_lab_stub/help_not_responses.txt
    :language: none
    :lines: 1-15
 
 Here is the stub of the function to complete, reading such data:
 
-.. literalinclude:: ../examples/dict_lab_stub/file_util.cs
+.. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
    :start-after: GetDictionary chunk
    :end-before: chunk
 
@@ -182,7 +182,7 @@ for each key variation, repeating the value paragraph.
 A concise approach is to use a data file
 like :file:`help_not_responses2.txt`.  Here are the first few lines:
 
-.. literalinclude:: ../examples/dict_lab_stub/help_not_responses2.txt
+.. literalinclude:: ../source/examples/dict_lab_stub/help_not_responses2.txt
    :language: none
    :lines: 1-15
 
@@ -190,7 +190,7 @@ The line that used to have one key now may have several blank-separated keys.
 
 Here is how the documentation for ``GetDictionary`` should be changed:
 
-.. literalinclude:: ../examples/dict_lab_stub/file_util.cs
+.. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
    :start-after: Extra credit documentation
    :end-before: }
 

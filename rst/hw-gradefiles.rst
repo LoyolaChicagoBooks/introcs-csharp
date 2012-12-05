@@ -229,7 +229,7 @@ Hints
    function after you read in a code, to determine the proper index.
    It is already in the stub of the solution file :file:`grade_files.cs`:
 
-   .. literalinclude:: ../examples/grade_file_homework_stub/grade_files.cs
+   .. literalinclude:: ../source/examples/grade_file_homework_stub/grade_files.cs
       :start-after: chunk
       :end-before: chunk
 

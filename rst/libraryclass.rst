@@ -21,7 +21,7 @@ that can be used directly for multiple programs.  We can create functions ``Prom
 ``PromptInt``, and  ``PromptDouble``, and put them in their own class, ``UIF`` 
 in file :file:`uif.cs`.  We explain the namespace line after the code:
 
-.. literalinclude:: ../examples/intro_cs_lib/uif.cs
+.. literalinclude:: ../source/examples/ui/uif.cs
 
 .. index:: 
    double: namespace; IntroCS
