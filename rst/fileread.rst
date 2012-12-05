@@ -136,7 +136,7 @@ from a file containing one number per line (plus possible white space)::
 Below and in project ``files/sum_file.cs`` is a more elaborate, complete example,
 that also skips lines that contain only whitespace.  
 
-.. literalinclude:: ../examples/files/sum_file.cs
+.. literalinclude:: ../source/examples/files/sum_file.cs
 
 A useful function used in ``Main`` for avoiding filename typo errors 
 is in the ``System.IO`` namespace is :: 
