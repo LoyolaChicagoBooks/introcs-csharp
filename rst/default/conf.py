@@ -25,9 +25,13 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax' ]
+extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax', 'sphinx.ext.extlinks' ]
 
 todo_include_todos = True
+
+extlinks = {'repsrc': 
+              ('https://bitbucket.org/gkthiruvathukal/introcs-csharp/src/default/source/examples/%s','')
+           }
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -97,6 +101,8 @@ rst_epilog = """
 .. |if-else-if| replace:: ``if``\ -``else``\ -``if``
 
 .. |do-while| replace:: ``do``\ -``while``
+
+.. |repsrc| replace:: https://bitbucket.org/gkthiruvathukal/introcs-csharp/src/default
 
 """
 

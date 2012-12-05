@@ -5,6 +5,10 @@
 NAnt and Run Scripts
 =======================
 
+..  test 
+	test links: example :repsrc:`addition3/addition3.cs`.
+	project link: :repsrc:`project <addition3>`
+
 In a previous lab, we covered the basics of compiling and running programs 
 using the Mono Compiler. For the most part, the programs we do in an introductory 
 computer science class are simple. 
