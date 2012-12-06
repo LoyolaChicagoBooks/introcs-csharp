@@ -13,7 +13,7 @@ you should find the
 source file :file:`grade_files.cs` for you to *complete* for this homework.  
 *Do use this stub*, since it contains the namespace and class name expected 
 by the accompanying run scripts.  The folder also contains sample data files
-in the formats discussed below.
+including the examples discussed below.
    
 In this assignment, we're going to begin taking steps to help you
 achieve greater *independence* when it comes to programming. This
@@ -86,19 +86,24 @@ Requirements
 
 #. There are two master files for any course. 
    One is "categories\_" + the course abbreviation
-   + ".txt".  For example, categories_comp170.txt.
+   + ".txt".  For example, ``categories_comp170.txt`` is a sample data file
+   provided and used below.
    
    It will contain three lines.
    The first line is a comma separated list of category names like
-   
-       Exam,Lab,Homework,Project,Class participation
+
+   .. literalinclude:: ../source/examples/grade_file_homework_stub/categories_comp170.txt
+      :language: text
+      :lines: 1
        
    There may be extra spaces after the commas.  
    Categories will be chosen so that *each one starts with a different letter*.
    
    The second line contains the integer weights for each category, like
    
-       40, 15, 15, 20, 10
+   .. literalinclude:: ../source/examples/grade_file_homework_stub/categories_comp170.txt
+      :language: text
+      :lines: 2
        
    They do *not* need to add to 100.  If the sum is called totWeights,
    get the final grade by summing for each category::
@@ -107,7 +112,9 @@ Requirements
    
    The third line will contain the number of grades in each category, like
    
-       2, 5, 3, 1, 2
+   .. literalinclude:: ../source/examples/grade_file_homework_stub/categories_comp170.txt
+      :language: text
+      :lines: 3
        
    The second master file will be "students\_" + the course abbreviation + ".txt".
    For example :file:`students_comp170.txt`.
@@ -117,20 +124,19 @@ Requirements
 
       Student ID, Last Name, First Name
 
-   For example, the file could start:
+   For example, the sample data file :file:`students_comp170.txt` starts:
    
-   .. code-block:: none
-
-      P34323243,Thiruvathukal,George
-      P87483743, Harrington, Andrew
+   .. literalinclude:: ../source/examples/grade_file_homework_stub/students_comp170.txt
+      :language: text
+      :lines: 1-2
 
  
 #. There will be a secondary file for each student, 
    named after the student id and the course abbreviation and ".data". 
    For example,
-   George's scores would be kept in a file named
-   ``P34323243comp170.data``. Andy's scores would be in
-   ``P87483743comp170.data``. Each record (one per file line will have the
+   John's scores would be kept in a file named
+   ``P12345678comp170.data``. Maria's scores would be in
+   ``P00000001comp170.data``. Each record (one per file line will have the
    following structure:
 
       Category letter, Item, Points Earned
@@ -143,16 +149,11 @@ Requirements
    - points earned is a real number
    - the lines are in no special order.
    
-   For example:
+   Sample data file ``P12345678comp170.data`` starts:
    
-   .. code-block:: none
-   
-      L,1,100
-      H,1,85.5
-      H,2,70
-      E,1,72.5
-      H,3,70
-      P,1,100
+   .. literalinclude:: ../source/examples/grade_file_homework_stub/P12345678comp170.data
+      :language: text
+      :lines: 1-6
 
 #. The program will process the data from each student file and
    calculate the average within each category, and then the weighted overall average. 
@@ -162,21 +163,22 @@ Requirements
 
 #. Your program writes the final report file.  
    It is named with the course abbreviation 
-   + "_summary.txt".  Example: comp170_summary.txt.
+   + "_summary.txt".  Example: "comp170_summary.txt".
    This file must have a line for each student showing the 
    student's last name, first name,
    weighted average rounded to one decimal place, and letter grade.  
-   For example:
+   File ``comp170_summary.txt`` would start with lines:
 
-   .. code-block:: none   
-     
-      Thiruvathukal, George 99.5 A
-      Harrington, Andrew 91.2 A-
+   .. code-block:: none
    
-#. There is test data for
-   course abbreviations comp170 and comp150 in the homework directory.   
-   There are also solution files for the 
-   summaries.  Their names end in ``_solution.txt`` to distinguish them from the
+        Doe, John 78.9 C+
+        Hernandez, Maria 88.2 B+
+   
+#. The rest of the test data for 
+   course abbreviations comp170 and all the data for comp150 in the homework directory.   
+   There are also sample solution files for the 
+   summaries (including some extra credit additions at the ends of lines).  
+   Their names end in ``_solution.txt`` to distinguish them from the
    summary files *you* should generate in tests.
    
    While your program should certainly work for course abbreviations comp170 and comp150,
@@ -300,7 +302,8 @@ any combination that does not include both of the last two options about missing
       Star, Anna 91.2 A-
       
    meaning Doe has 2 labs missing and 1 homework missing.  Smith is missing one lab.  Star
-   has done all assigned work, since nothing is added. **[3]**
+   has done all assigned work, since nothing is added. The solution files display this
+   extra credit addition on the ends of lines.  **[3]**
 #. This is a much harder alternate version for handling missing work:  
    Unlike the previous format, do not count and print the number of missing 
    entries in each category in a form like "2 L ".
