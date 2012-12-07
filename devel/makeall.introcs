@@ -4,7 +4,11 @@
 #  arg1 = prefix = /var/www/book  /var/www/book-devel
 #  arg2 = git-pull flag? = true|false
 
-PREFIX=/var/www/book
+TODAY=$(date '+%Y.%m.%d')
+BASE=/var/www/book
+PREFIX=$BASE/$TODAY
+mkdir -p $PREFIX
+ln -sf $BASE/$TODAY $BASE/latest
 
 # No error checking. This must be set to "default" or "bootstrap" (the only
 # two themes I set up in rst (e.g. rst/default and rst/bootstrap).
