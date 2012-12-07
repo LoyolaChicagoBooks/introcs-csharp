@@ -34,17 +34,13 @@ make epub
 
 cd ../build
 
-tar czf $DOWNLOAD/comp170html.tar.gz html
-zip -r $DOWNLOAD/comp170html.zip html
+zip -r $DOWNLOAD/html.zip html
 cp latex/*.pdf $DOWNLOAD
 cp epub/*.epub $DOWNLOAD
 rsync -av $(pwd)/html/ $HTML
 
 cd ..
-tar czf $DOWNLOAD/comp170code.tar.gz examples include/*
-zip -r $DOWNLOAD/comp170code.zip examples include/*
-tar czf $DOWNLOAD/comp170code-md.tar.gz source
-zip -r $DOWNLOAD/comp170code-md.zip source
+zip -r $DOWNLOAD/source.zip source
 
 # echo "Removing generated directories at introcs"
 # rm -r /var/www/book/html/*/
