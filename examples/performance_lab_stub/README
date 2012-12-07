@@ -1,0 +1,1 @@
+Copy the folder examples/performance_lab_stub  to examples/performance_lab to avoid collisions with later versions of the examples.  Put the new folder also in examples, so the build script finds the files in to the adjacent folder examples/arrays.

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods", "NumericalMethods\NumericalMethods.csproj", "{6CF171CB-A944-4170-BF59-15960A78C115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BisectionRootFinding", "BisectionRootFinding\BisectionRootFinding.csproj", "{7D0C01B0-9E6E-481F-BC9F-6CD893785F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrapezoidalIntegration", "TrapezoidalIntegration\TrapezoidalIntegration.csproj", "{334DCF68-BC49-474D-AF30-D8EB9FD75F5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{334DCF68-BC49-474D-AF30-D8EB9FD75F5A}.Debug|x86.ActiveCfg = Debug|x86
+		{334DCF68-BC49-474D-AF30-D8EB9FD75F5A}.Debug|x86.Build.0 = Debug|x86
+		{334DCF68-BC49-474D-AF30-D8EB9FD75F5A}.Release|x86.ActiveCfg = Release|x86
+		{334DCF68-BC49-474D-AF30-D8EB9FD75F5A}.Release|x86.Build.0 = Release|x86
+		{6CF171CB-A944-4170-BF59-15960A78C115}.Debug|x86.ActiveCfg = Debug|x86
+		{6CF171CB-A944-4170-BF59-15960A78C115}.Debug|x86.Build.0 = Debug|x86
+		{6CF171CB-A944-4170-BF59-15960A78C115}.Release|x86.ActiveCfg = Release|x86
+		{6CF171CB-A944-4170-BF59-15960A78C115}.Release|x86.Build.0 = Release|x86
+		{7D0C01B0-9E6E-481F-BC9F-6CD893785F09}.Debug|x86.ActiveCfg = Debug|x86
+		{7D0C01B0-9E6E-481F-BC9F-6CD893785F09}.Debug|x86.Build.0 = Debug|x86
+		{7D0C01B0-9E6E-481F-BC9F-6CD893785F09}.Release|x86.ActiveCfg = Release|x86
+		{7D0C01B0-9E6E-481F-BC9F-6CD893785F09}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = NumericalMethods\NumericalMethods.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDSubtractionMethod/bin/Debug/GCDSubtractionMethod.exe.mdb
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDSubtractionMethod/bin/Debug/GCDSubtractionMethod.exe
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDSubtractionMethod/obj/x86/Debug/GCDSubtractionMethod.exe
+/Users/gkt/Work/introcs-lecture-notes/devel/rst/projects/GCD/GCDSubtractionMethod/obj/x86/Debug/GCDSubtractionMethod.exe.mdb

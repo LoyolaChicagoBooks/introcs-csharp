@@ -1,0 +1,16 @@
+<project>
+  <property name="linux.gac.dir" value="/usr/lib/mono/gac"/>
+  <property name="nunit.dll" value="nunit.framework.dll" overwrite="false"/>
+  <property name="dotnet.framework" value="${framework::get-runtime-framework()}"/>
+  <property name="dotnet.framework.dir"
+            value="${framework::get-assembly-directory(dotnet.framework)}"/>
+
+  <!-- Assume NUnit is in the Mono Framework (true on OS X and Windows -->
+  <property name="nunit.dir" value="${dotnet.framework.dir}"/>
+
+  <!-- If we are on Linux (only testable by looking for this dir),
+       override our assumption -->
+  <property name="nunit.dir" value="${linux.gac.dir}"
+            if="${directory::exists(linux.gac.dir)}"/>
+
+</project>

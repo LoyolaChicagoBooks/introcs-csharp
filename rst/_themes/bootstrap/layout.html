@@ -1,0 +1,177 @@
+{% extends "basic/layout.html" %}
+{% set script_files = script_files + ['_static/bootstrap.js'] %}
+{% set css_files = ['_static/bootstrap.css', '_static/bootstrap-sphinx.css', 
+                    '_/static/bootstrap-responsive.css'] + css_files %}
+{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and
+                         (sidebars != []) and (pagename != "index") %}
+{# Build Top Navbar #}
+{% macro navBar() %}
+  <div class="navbar navbar-fixed-top" >
+    <div class="navbar-inner">
+      <div class="container">
+        
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        
+        <a class="brand" href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>
+        <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="{{pathto(master_doc)}}">Home</a></li>
+          <li class="divider-vertical"></li>
+          {% block sidebarsourcelink %}
+            {% include "sourcelink.html" %}
+          {% endblock %}
+        </ul>
+          {% block sidebarsearch %}
+            {% include "searchbox.html" %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{# Override sidebar() macro inherited from basic/layout.html #}
+{%- macro bootstraop_sidebar() %}
+      {%- if render_sidebar %}
+      <div class="well bootstrapsidebar">
+          {%- block sidebartoc %}
+          <ul class="nav nav-list">
+            <li class="nav-header">
+              <a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></li>
+          <li>{{ toc }}</li>
+          {%- endblock %}
+          {%- block sidebarrel %}
+          {%- if prev %}
+            <li class="nav-header">{{ _('Previous topic') }}</li>
+            <li><a href="{{ prev.link|e }}"
+                                  title="{{ _('previous chapter') }}">{{ prev.title }}</a></li>
+          {%- endif %}
+          {%- if next %}
+            <li class="nav-header">{{ _('Next topic') }}</li>
+            <li><a href="{{ next.link|e }}"
+                                  title="{{ _('next chapter') }}">{{ next.title }}</a></li>
+          {%- endif %}
+          {%- endblock %}
+          </ul>
+      </div>
+      {%- endif %}
+{%- endmacro %}
+
+{#
+{% block extrahead %}
+<script type="text/javascript">
+(function () {
+  /**
+   * Patch TOC list.
+   *
+   * Will mutate the underlying span to have a correct ul for nav.
+   *
+   * @param $span: Span containing nested UL's to mutate.
+   * @param minLevel: Starting level for nested lists. (1: global, 2: local).
+   */
+  var patchToc = function ($span, minLevel) {
+    var $tocList = $("<ul/>").attr('class', "dropdown-menu"),
+      findA;
+
+    // Find all a "internal" tags, traversing recursively.
+    findA = function ($elem, level) {
+      var level = level || 0,
+        $items = $elem.find("> li > a.internal, > ul, > li > ul");
+
+      // Iterate everything in order.
+      $items.each(function (index, item) {
+        var $item = $(item),
+          tag = item.tagName.toLowerCase(),
+          pad = 10 + ((level - minLevel) * 10);
+
+        if (tag === 'a' && level >= minLevel) {
+          // Add to existing padding.
+          $item.css('padding-left', pad + "px");
+          // Add list element.
+          $tocList.append($("<li/>").append($item));
+        } else if (tag === 'ul') {
+          // Recurse.
+          findA($item, level + 1);
+        }
+      });
+    };
+
+    // Start construction and return.
+    findA($span);
+
+    // Wipe out old list and patch in new one.
+    return $span.empty("ul").append($tocList);
+  };
+
+  $(document).ready(function () {
+    // Patch the global and local TOC's to be bootstrap-compliant.
+    patchToc($("span.globaltoc"), 1);
+    patchToc($("span.localtoc"), 2);
+
+    // Activate.
+    $('#topbar').dropdown();
+  });
+}());
+</script>
+{% endblock %}
+#}
+
+{% block header %}{{ navBar() }}{% endblock %}
+
+{# Silence the sidebars, relbars #}
+
+{% block sidebar2 %}{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+ 
+
+{%- block content %}
+  <div class="wrapper">
+    <div class="container">
+      <div class="row">
+
+        <div class="span3">
+          {% block sidebar1 %}{{bootstraop_sidebar()}}{% endblock %}
+        </div>
+
+        <div class="span8 offset3">
+          {% block body %} {% endblock %}
+        </div>
+        
+
+        
+      </div>
+    </div>
+    <div class="push"></div>
+  </div>
+  {%- endblock %}
+
+  {%- block footer %}
+  <footer class="footer">
+    <div class="container">
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>
+      {%- if show_copyright %}
+        {%- if hasdoc('copyright') %}
+          {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}<br/>
+        {%- else %}
+          {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}<br/>
+        {%- endif %}
+      {%- endif %}
+      {%- if last_updated %}
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
+      {%- endif %}
+      {%- if show_sphinx %}
+        {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}<br/>
+      {%- endif %}
+      </p>
+    </div>
+  </footer>
+
+{%- endblock %}
+

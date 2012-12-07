@@ -1,0 +1,45 @@
+#! /bin/bash
+
+# Make this a bit more parameterized:
+#  arg1 = prefix = /var/www/book  /var/www/book-devel
+#  arg2 = git-pull flag? = true|false
+
+PREFIX=/var/www/book
+
+# No error checking. This must be set to "default" or "bootstrap" (the only
+# two themes I set up in rst (e.g. rst/default and rst/bootstrap).
+
+export CONFIG=$1
+export FORCRON=-N
+if [ $2 == "nocron" ]; then
+    export FORCRON=
+fi
+
+HTML=$PREFIX/html/$CONFIG
+DOWNLOAD=$PREFIX/download/$CONFIG
+mkdir -p $HTML
+mkdir -p $DOWNLOAD
+
+# assume start in devel dir
+cd ../rst
+make clean
+make html
+make latexpdf
+make epub
+
+cd ../build
+
+tar czf $DOWNLOAD/comp170html.tar.gz html
+zip -r $DOWNLOAD/comp170html.zip html
+cp latex/*.pdf $DOWNLOAD
+cp epub/*.epub $DOWNLOAD
+rsync -av $(pwd)/html/ $HTML
+
+cd ..
+tar czf $DOWNLOAD/comp170code.tar.gz examples include/*
+zip -r $DOWNLOAD/comp170code.zip examples include/*
+tar czf $DOWNLOAD/comp170code-md.tar.gz source
+zip -r $DOWNLOAD/comp170code-md.zip source
+
+# echo "Removing generated directories at introcs"
+# rm -r /var/www/book/html/*/

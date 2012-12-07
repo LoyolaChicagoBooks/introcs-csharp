@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scales", "Scales\Scales.csproj", "{9B0B03EE-CF75-4471-936A-5F170E8DF895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rational", "Rational\Rational.csproj", "{4AC282CB-C96E-4C6F-84D4-0C735112269C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notation", "Notation\Notation.csproj", "{0E651548-0C77-4E0B-9843-19E34AB2F30A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E651548-0C77-4E0B-9843-19E34AB2F30A}.Debug|x86.ActiveCfg = Debug|x86
+		{0E651548-0C77-4E0B-9843-19E34AB2F30A}.Debug|x86.Build.0 = Debug|x86
+		{0E651548-0C77-4E0B-9843-19E34AB2F30A}.Release|x86.ActiveCfg = Release|x86
+		{0E651548-0C77-4E0B-9843-19E34AB2F30A}.Release|x86.Build.0 = Release|x86
+		{4AC282CB-C96E-4C6F-84D4-0C735112269C}.Debug|x86.ActiveCfg = Debug|x86
+		{4AC282CB-C96E-4C6F-84D4-0C735112269C}.Debug|x86.Build.0 = Debug|x86
+		{4AC282CB-C96E-4C6F-84D4-0C735112269C}.Release|x86.ActiveCfg = Release|x86
+		{4AC282CB-C96E-4C6F-84D4-0C735112269C}.Release|x86.Build.0 = Release|x86
+		{9B0B03EE-CF75-4471-936A-5F170E8DF895}.Debug|x86.ActiveCfg = Debug|x86
+		{9B0B03EE-CF75-4471-936A-5F170E8DF895}.Debug|x86.Build.0 = Debug|x86
+		{9B0B03EE-CF75-4471-936A-5F170E8DF895}.Release|x86.ActiveCfg = Release|x86
+		{9B0B03EE-CF75-4471-936A-5F170E8DF895}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Scales\Scales.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.TabWidth = 3
+		$1.NoTabsAfterNonTabs = True
+		$1.RemoveTrailingWhitespace = True
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.AlignEmbeddedUsingStatements = False
+		$2.AlignEmbeddedIfStatements = False
+		$2.BeforeMethodDeclarationParentheses = False
+		$2.BeforeMethodCallParentheses = False
+		$2.BeforeConstructorDeclarationParentheses = False
+		$2.BeforeIndexerDeclarationBracket = False
+		$2.BeforeDelegateDeclarationParentheses = False
+		$2.NewParentheses = False
+		$2.SpacesBeforeBrackets = False
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal
