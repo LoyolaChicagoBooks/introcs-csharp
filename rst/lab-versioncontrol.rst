@@ -607,21 +607,16 @@ a team on developing the course notes and examples.
    ``projects``, where we keep our basic examples and MonoDevelop projects, respectively.
 
 #. For example, if you performed a clone to introcs-csharp, you should be able to change
-   directory to introcs-csharp/examples to see all of our code examples::
+   directory to introcs-csharp/source/examples to see all of our code examples::
 
-        gkt@gkt-mini:~/introcs-csharp/examples$ ls
-        addition1.cs       glazer_calc1.cs          return2.cs
-        addition2.cs       goodscope.cs            safe_number_input_stub.cs
-        badscope.cs        grade1.cs               strange_seq_stub.cs
+        gkt@gkt-mini:~/introcs-csharp/source/examples$ ls
+        addition1
         ...
-        cool.cs            promptuser.cs           vowels2.cs
-        gcdbruteforce.cs   prompt_user_loop1.cs      vowels.cs
-        gcd.cs             prompt_user_loop2_bad.cs   wages1.cs
-        ...
+        write_test
+        
+   (Most output has been eliminated for conciseness.)
 
-   (Some output has been eliminated for conciseness.)
-
-#. You can explore introcs-csharp/examples to see our programs. 
+#. You can explore introcs-csharp/source/examples to see our programs. 
 
 #. There are other folders, too. The ``rst`` folder contains the "source code" for the
    notes themselves. The ``devel`` folder contains scripts to build the HTML, PDF, and ePub
@@ -630,11 +625,3 @@ a team on developing the course notes and examples.
    suffice it to say, we use version control to coordinate our work to create these 
    course notes and will continue to do so when it comes to making improvements in this
    and future courses.
-
-
-..  comment
-    ? no need for repository for this? 
-	So feel free to explore and use anything that we provide in our notes. 
-	It is entirely
-	possible that you will find material and examples in these notes that we're unable to 
-	cover during the regular course term.

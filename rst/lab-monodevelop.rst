@@ -108,8 +108,8 @@ We start by creating a *solution* with a project in it.
    Also rename the class to match in the edit pod.  
    Classes get capitalized:  make ``Hello`` replace ``MainClass``.
    
-   This program still has features that were not in :file:`painting.cs`.
-   MonoDevelop generates something more general that we need.
+   This program still has features that were not in :repsrc:`painting/painting.cs`.
+   MonoDevelop generates something more general than we need.
    You should see the parameter for the Main function:
    ``string[] args``.  We do not need it 
    (and will not explain the meaning yet for many chapters) so you

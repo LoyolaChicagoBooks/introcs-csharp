@@ -130,8 +130,8 @@ Our code is nested inside ::
     
     }   
        
-This is the same sort of wrapper we have used for our Main programs!  Before, everything 
-inside was
+This is the same sort of wrapper we have used for our Main programs!  
+*Before*, everything inside was
 labeled ``static``.  Now we see what happens with the ``static`` keyword omitted....
 
 .. index::
@@ -455,7 +455,7 @@ as the ``ToString`` for a Rational.
 A more complete discussion of ``override`` would lead us into class hierarchies and 
 inheritance, which we are not emphasizing in these notes.
 
-The whole code for Rational is in :file:`intro_cs_lib/rational.cs`.
+The whole code for Rational is in :repsrc:`rational_nunit/rational.cs`.
 
 Pictorial Playing Computer
 ---------------------------

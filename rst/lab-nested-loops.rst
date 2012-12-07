@@ -10,19 +10,14 @@ Goals for this lab:
 - Practice with loops.  You are encouraged to use a ``for`` loop where appropriate.
 - Use nested loops where appropriate.
 
-The lab stub was added to the examples on 9/21/12.  You can download and unzip 
-a *new* copy of the 
-`course example file <http://introcs.cs.luc.edu/book/download/comp170code.zip>`_.
-Alternately, you can directly download the example
-`loop_lab_stub.cs <https://bitbucket.org/gkthiruvathukal/introcs-csharp/raw/default/examples/loop_lab_stub.cs>`_.
-Then copy example :file:`loop_lab_stub.cs` to :file:`loop_lab.cs`, 
-and fill in function bodies in :file:`loop_lab.cs` for each part below: 
+Copy example :repsrc:`loop_lab_stub/loop_lab.cs` to a new project of yours, 
+and fill in function bodies for each part below: 
 
 .. index:: PrintReps
 
 #.  Complete  
 
-    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: PrintReps chunk
        :end-before: body
 
@@ -41,7 +36,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     
 #.  Complete  
 
-    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: StringOfReps chunk
        :end-before: body
 
@@ -51,9 +46,10 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     
     .. index:: Factorial
     
-#.  Complete ``Factorial``, in a format much like SumToN in example ``sum_to_n.cs``:  
+#.  Complete ``Factorial``, in a format much like SumToN in example 
+    :repsrc:`sum_to_n_test/sum_to_n_test.cs`:  
     
-    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: Factorial chunk
        :end-before: body
     
@@ -84,7 +80,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
       
 #.  Complete the method
 
-    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: PrintRectangle chunk
        :end-before: body
     
@@ -113,7 +109,7 @@ and fill in function bodies in :file:`loop_lab.cs` for each part below:
     source code, because Sphinx turns comments to italics, so the vertical bars
     do not appear vertical below!
 
-    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab_stub.cs
+    .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: PrintTableBorders chunk
        :end-before: body
     

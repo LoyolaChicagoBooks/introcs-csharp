@@ -1,7 +1,7 @@
 csproject Revisited
 =====================
 
-The csproject1 skeleton was set up with the different commands
+The :repsrc:`csproject1` project skeleton was set up with the different commands
 in different classes, keeping related things together.
 
 On the other hand they had high level structure in common.  
@@ -103,7 +103,7 @@ Now after writing the new class to respond to a new command,  the *only* thing y
 need to do is add a new instance of that class to the array initializer in the
 CommandMapper constructor!
 
-The revised MonoDevelop project is :file:`csproject_stub` (no 1 this time).
+The revised MonoDevelop project is :repsrc:`csproject_stub` (no 1 this time).
 
 See how the Game class is simplified, too.
 
@@ -153,9 +153,11 @@ On a much smaller scale than the project, this exercise offers you
 experience 
 writing classes implementing and using an interface
 
-1. Copy example folder :file:`igame_stub` to :file:`igame`.
+1. Copy project stub :repsrc:`igame_stub` to your own project, and note the additions
+   discussed below.
 
-2. Look at the IGame interface in :file:`i_game.cs`. Then look at :file:`addition_game.cs`, 
+2. Look at the IGame interface in :repsrc:`i_game.cs <igame_stub/i_game.cs>`. 
+   Then look at :repsrc:`addition_game.cs <igame_stub/addition_game.cs>`, 
    that implements the interface. See how a new ``AdditionGame`` can be added to list of
    ``IGame``\ 's. Run :file:`play_games.cs`. Randomly choosing a game when there is
    only one to choose from is pretty silly, but it gives you a start on a
@@ -163,7 +165,8 @@ writing classes implementing and using an interface
    model for choosing, removing, and returning a random element.
 
 3. Write several very simple classes implementing the IGame interface,
-   and modify Main in play_games.cs to create and add a new game of each
+   and modify Main in :repsrc:`play_games.cs <igame_stub/play_games.cs>` 
+   to create and add a new game of each
    type. (Test adding one at a time.)
    
    One such game to create with little more work would be a variation on

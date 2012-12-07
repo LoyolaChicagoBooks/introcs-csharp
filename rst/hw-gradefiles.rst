@@ -6,11 +6,10 @@
 Homework: Grade File 
 ===================== 
 
-Copy examples sub-folder :file:`grade_file_homework_stub` to
-:file:`grade_file_homework`, with the new folder staying under examples folder 
-or as described in :ref:`work-folder`.  Then in the :file:`grade_file_homework` folder 
-you should find the
-source file :file:`grade_files.cs` for you to *complete* for this homework.  
+Copy project files in :repsrc:`grade_file_homework_stub` to
+your own project.  Then you should have copies of the 
+source file :repsrc:`grade_files.cs <grade_file_homework_stub/grade_files.cs>` 
+for you to *complete* for this homework.  
 *Do use this stub*, since it contains the namespace and class name expected 
 by the accompanying run scripts.  The folder also contains sample data files
 including the examples discussed below.
@@ -75,7 +74,8 @@ Requirements
    is a command line argument, use it as the course abbreviation.  
    Make sure your code can 
    read a command-line argument using the special form of
-   ``Main(string[] args)`` already in the stub :file:`grade_files.cs`.  
+   ``Main(string[] args)`` already in the stub 
+   :repsrc:`grade_files.cs <grade_file_homework_stub/grade_files.cs>`.  
    If the user does not provide at command line argument,
    prompt the user for it once the program starts.
    The abbreviation should not include spaces.
@@ -229,7 +229,8 @@ Hints
        
    To know where to update data for each category, you can use this
    function after you read in a code, to determine the proper index.
-   It is already in the stub of the solution file :file:`grade_files.cs`:
+   It is already in the stub of the solution file 
+   :repsrc:`grade_files.cs <grade_file_homework_stub/grade_files.cs>`:
 
    .. literalinclude:: ../source/examples/grade_file_homework_stub/grade_files.cs
       :start-after: chunk

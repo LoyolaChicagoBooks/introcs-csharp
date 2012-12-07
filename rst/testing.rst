@@ -16,6 +16,8 @@ Each language has its own definition of what units are but most modern programmi
 languages view the *class* concept as the core unit of testing. Once we have a class,
 we can test it and all of the parts associated with it, especially its methods.
 
+We will be introducing parts of file :repsrc:`rational_nunit/rational_unit_tests.cs`.
+
 .. index::
    double: testing; assertion 
 
@@ -223,57 +225,13 @@ into an actual (reduced) rational number. We test three general cases:
 Running the Tests
 ---------------------------
 
-To run the tests yourself, set your mono console/terminal with current directory
-:file:`examples/intro_cs_lib`.
-This is our library folder.  In the past we have incorporated the needed parts 
-in other regular programs.  To just build the library file by itself, run
+In MonoDevelop, run the Run rational_nunit project.  
+A test pod should appear and show something like
 
-.. code-block:: none
+.. image:: images/NUnitTestMonoDevelop.png
 
-    nant
-
-If you look in the folder now, you will see :file:`introcs.dll`, 
-the compiled library file.  
-    
-The **nunit-console** program 
-ships with Mono.  To run the unit tests on :file:`introcs.dll`, 
-labeling the tests run, enter the command:
-
-.. code-block:: none
-
-    nunit-console introcs.dll -labels
-
-You should see something like this output:
-
-..  code-block:: none
-    
-    NUnit version 2.4.8
-    Copyright (C) 2002-2007 Charlie Poole.
-    Copyright (C) 2002-2004 James W. Newkirk, Michael C. Two, Alexei A. Vorontsov.
-    Copyright (C) 2000-2002 Philip Craig.
-    All Rights Reserved.
-    
-    Runtime Environment - 
-       OS Version: Unix 11.4.2.0
-      CLR Version: 2.0.50727.1433 ( 2.10.9 (tarball Mon May  7 20:25:51 EDT 2012) )
-    
-    ***** IntroCS.RationalTests.BasicArithmeticTests
-    ***** IntroCS.RationalTests.BasicComparisonTests
-    ***** IntroCS.RationalTests.ConstructorTest
-    ***** IntroCS.RationalTests.ConversionTests
-    ***** IntroCS.RationalTests.ParseTest
-    
-    Tests run: 5, Failures: 0, Not run: 0, Time: 0.065 seconds
-
-As you can see in the above output, all of the RationalTests examples are being executed.
-We used the -labels option to give more verbose output, 
-which has the effect of printing the names of the tests that were completed.
-
-You can also observe that all of the tests have passed!
-
-This works in general: You can pass any .dll or .exe 
-file to nunit-console, and nunit-console will examine it for the presence of unit tests
-and attempt to run all of them.  
+As you can see in the above display, all of the tests in ``RationalTests``  
+get executed, and they all pass.
 
 We waited until now to discuss unit testing, because the test classes are coded with
 *instance* methods,

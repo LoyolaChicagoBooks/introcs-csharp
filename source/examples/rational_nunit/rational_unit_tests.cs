@@ -87,15 +87,17 @@ namespace IntroCS
       public void ConversionTests() {
          Rational r1 = new Rational(3, 6);
          Rational r2 = new Rational(-3, 6);
+         Rational r3 = new Rational(10, -2);
 
          Assert.IsTrue(r1.ToDecimal() == 0.5m);
          Assert.IsTrue(r2.ToDecimal() == -0.5m);
-         Assert.IsTrue(r1.ToDouble() == 0.5);
+         Assert.IsTrue(r1.ToDouble() == 0.5); //.5 is stored exactly
          Assert.IsTrue(r2.ToDouble() == -0.5);
+         Assert.IsTrue(r2.ToString() == "-1/2");
+         Assert.IsTrue("" + r3 == "-5");  //implicit use of ToString
 
       }
       // snip-BasicConversionTests-end
-
    }
 }
 

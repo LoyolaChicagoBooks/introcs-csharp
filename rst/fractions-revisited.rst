@@ -60,8 +60,9 @@ In general one or more interface names can be listed after the class name and a 
 and before the opening brace of the class body.  This particular interface is defined in
 System.Collections.Generic, so we need to be using that namespace.
 
-The folder :file:`examples/interfaces` 
-has the modified :file:`rational.cs` and a :file:`test_rational_sort.cs`
+The project :repsrc:`interfaces` 
+has the modified :repsrc:`rational.cs <interfaces/rational.cs>` 
+and :repsrc:`test_rational_sort.cs <interfaces/test_rational_sort.cs>`
 to test this with a list of Rationals:
    
 .. literalinclude:: ../source/examples/interfaces/test_rational_sort.cs

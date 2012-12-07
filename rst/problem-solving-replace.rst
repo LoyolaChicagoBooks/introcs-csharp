@@ -45,7 +45,7 @@ the first occurrence, and for now we will assume the
 replacement makes sense.  The following heading 
 (with documentation) should work:
 
-.. literalinclude:: ../source/examples/string_manip_stub/string_manip_stub.cs
+.. literalinclude:: ../source/examples/string_manip_stub/string_manip.cs
    :start-after: }
    :end-before: {
 
@@ -54,7 +54,7 @@ As soon as we have the calling interface, it is good to be thinking
 of the tests it should pass.  Here is a Main program written 
 to test the function in different ways and display the results:
 
-.. literalinclude:: ../source/examples/string_manip_stub/string_manip_stub.cs
+.. literalinclude:: ../source/examples/string_manip_stub/string_manip.cs
    :start-after: {
    :end-before: /**
 
@@ -123,9 +123,13 @@ involve indices, so let us add to our visual model::
         s: ???????????best??????????
 
 Continue in class....  The example program stub is 
-:file:`string_manip_stub.cs`.  In general, when given a
-program with "Stub" in it, save it under a name without the "Stub",
-and develop that version further.  In stubs where you need to
+:repsrc:`string_manip_stub/string_manip.cs`.  
+
+In general, when given a
+project with "stub" in it, you should copy the files into a project 
+of your own and make modifications.  Though the original version 
+should compile and run, it does not do much without your additions.  
+In stubs where you need to
 complete a function with a return value, you will often see
 a dummy choice for the return statement, just so the stub compiles.
 Where the return type is string ``"Not implemented"`` is a handy

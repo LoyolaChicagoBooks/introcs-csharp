@@ -133,7 +133,8 @@ used in the match of the first two e's.
 Safe PromptInt and PromptDouble Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save the example ``safe_number_input_stub.cs`` as ``safe_number_input.cs``.
+Save the example :repsrc:`safe_number_input_stub/safe_number_input.cs` 
+in a project of your own.
 
 The idea is to write safe versions of the utility functions
 PromptInt and PromptDouble (which can then be used in further

@@ -140,7 +140,7 @@ A more elaborate table might include row and column sums::
 
 
 For example, the following function from example file 
-:file:`print_table.cs`,
+:repsrc:`print_table/print_table.cs`,
 prints out a table of integers 
 neatly, including row and column sums.  It illustrates
 a number of things.  It shows the interplay between
@@ -199,8 +199,9 @@ column numbers neatly for the normal human counting system, starting from 1.
 Varying Column Width Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Copy the project file :file:`print_table.cs` to 
-:file:`print_varying_width_table.cs`. Edit it so that *each* column
+Copy the project file :repsrc:`print_table/print_table.cs` to a file
+:file:`print_varying_width_table.cs` in a projet of yours. 
+Edit it so that *each* column
 is only as wide as it needs to be: the width for the widest entry in
 that column.  The earlier data would now print as::
 

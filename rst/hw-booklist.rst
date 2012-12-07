@@ -18,12 +18,12 @@ Book List Assignment
    methods clearly and completely for a user looking at the output
    of the program and *not* the source code..
 
-Copy the folder :file:`books_homework_stub` to folder :file:`books_homework`.
-Stubs for the assignment files are :file:`book.cs`, :file:`book_list.cs` and 
-:file:`test_book_list.cs`.  
-
-To encourage incremental testing, there is also 
-a stub file :file:`test_book.cs`.  Do not turn it in.
+Copy stub files from the project :repsrc:`books_homework_stub` to your own
+project.  
+Stubs for the assignment files are 
+:repsrc:`book.cs <books_homework_stub/book.cs>`, 
+:repsrc:`book_list.cs <books_homework_stub/book_list.cs>`, and
+:repsrc:`test_book_list.cs <books_homework_stub/test_book_list.cs>`, 
 
 Some of the method stubs included are only to be fleshed out if you are doing
 the corresponding extra credit option.  They include a comment,
@@ -36,7 +36,7 @@ Complete the first line in each file to show your names. At the top of
 the Book class include any comments about help in *all* of the classes.
 
 Create methods one at a time, and test them.  Complete :file:`book.cs` first,
-preferably testing along the way with :file:`test_book.cs`.  Then add methods to
+preferably testing along the way.  Then add methods to
 :file:`book_list.cs`, and concurrently add and run tests in :file:`test_book_list.cs`.
 Though you are only required to have
 a class to test the final result, you are strongly encouraged to flesh out
@@ -220,7 +220,10 @@ To get full credit for any particular option, tests for it must be
        :end-before: {
     
     For testing we included special files in the right format:
-    :file:`books.txt` and :file:`morebooks.txt`.
+    :repsrc:`books_homework_stub/books.txt` and :repsrc:`books_homework_stub/morebooks.txt`.
+    
+    You will also want to include a reference to :repsrc:`fio/fio.cs`, so the text files are
+    easy to find.
 
 #.  [4 points] 
 

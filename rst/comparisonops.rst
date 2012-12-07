@@ -89,7 +89,7 @@ more than 40 hours are worked, it is convenient to introduce a
 variable overtimeHours. You are encouraged to think about a
 solution before going on and examining mine.
 
-You can try running my complete example program, :file:`wages1.cs`, 
+You can try running my complete example program, :repsrc:`wages1/wages1.cs`, 
 also shown below.  
 
 .. literalinclude:: ../source/examples/wages1/wages1.cs
@@ -114,7 +114,7 @@ a different number of digits after the decimal point.
 More formatting instructions will be discussed later. 
 
 Below is an equivalent alternative version of the body of
-``CalcWeeklyWages``, used in ``wages2.cs``. It uses just one
+``CalcWeeklyWages``, used in :repsrc:`wages2/wages2.cs`. It uses just one
 general calculation formula and sets the parameters for the formula
 in the ``if`` statement. There are generally a number of ways you might
 solve the same problem!

@@ -65,8 +65,8 @@ Word Count Example
 
 Counting the number of repetitions of words in a text provides a realistic
 example of using a ``Dictionary``.  With each word that you find, you want to associate
-a number of repetitions.  a complete program is in the example file 
-:file:`count_words.cs`. 
+a number of repetitions.  A complete program is in the example file 
+:repsrc:`count_words/count_words.cs`. 
 
 The central functions are excerpted below, and they also introduce some extra 
 features from the .Net libraries.

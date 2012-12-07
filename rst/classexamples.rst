@@ -5,7 +5,8 @@ Getters and Setters
 --------------------
 
 The example :file:`example_class.cs` has none of the
-functionality of of our :file:`rational.cs`, but it is very simple,
+functionality of of our :repsrc:`rational.cs <rational_nunit/rational.cs>`,
+but it is very simple,
 just illustrating several getters and setters:
 
 .. literalinclude:: ../source/examples/example_class/example_class.cs
@@ -86,9 +87,12 @@ Animal Class Lab
 Complete a simple (silly) class, with constructor and methods,
 including a ``ToString`` method, and a separate testing class.
 
-Copy the folder :file:`examples/animal_lab_stub` to a folder :file:`animal_lab`.
+Copy the folder :repsrc:`animal_lab_stub` to a folder of yours, and modify the
+files as discussed below.
 
-#. Complete the simple class Animal in the file `animal.cs`.  The bullets below
+#. Complete the simple class Animal in your copy of the file 
+   :repsrc:`animal.cs <animal_lab_stub/animal.cs>`.  
+   The bullets below
    name and describe the methods you need to write, after the constructor:
 
 	- An Animal has a ``name`` and a ``gut``.  
@@ -119,7 +123,8 @@ Copy the folder :file:`examples/animal_lab_stub` to a folder :file:`animal_lab`.
 		 
 	- All the methods that print should be void.  Which need a parameter, of what type?
 
-#. Complete the file :file:`test_animal.cs` with its class ``TestAnimal`` containing the 
+#. Complete the file :repsrc:`test_animal.cs <animal_lab_stub/test_animal.cs>` 
+   with its class ``TestAnimal`` containing the 
    ``Main`` method, testing the class Animal: 
    Create a couple of Animals and visibly test all the methods, 
    with enough explanation that someone running the test program, 
@@ -192,10 +197,10 @@ for different parts to interact.
 As you think how to break this game into parts, also think how the parts interact.
 
 The code that generated the exchange above is the 
-project folder :file:`csproject1`.
+project folder :repsrc:`csproject1`.
 
 The code uses many of the topics discussed so far in these notes.
 
 We will add some features from another meaning of :ref:`Interface`,
-and discuss the revision in 
-:file:`csproject_stub` (no 1).  You *might* use this as a basis of a project....
+and discuss the revision in project
+:repsrc:`csproject_stub` (no 1).  You *might* use this as a basis of a project....

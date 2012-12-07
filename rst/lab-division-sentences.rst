@@ -137,21 +137,9 @@ character (which must be a *letter* or an *underscore*):
 We have shown everything you need to understand to
 complete this lab. To help you
 get started, we provided this simple *stub* in the example file
-:file:`do_the_math_stub.cs`.  Save the stub as 
-:file:`do_the_math.cs` and complete it:
+:repsrc:`do_the_math_stub/do_the_math.cs`.  Save the stub in a project of
+your own and complete it:
 
-.. literalinclude:: ../source/examples/do_the_math_stub/do_the_math_stub.cs
+.. literalinclude:: ../source/examples/do_the_math_stub/do_the_math.cs
 
-When you are done editing and saving :file:`do_the_math.cs`, 
-in :ref:`work-folder` or in the examples folder we provided,
-you need to test it.
-In Windows start with the Mono command line, go to the program's folder, and try the
-script 
-
-   run.cmd do_the_math
-
-or go to the program's folder in a Mac terminal and run:
-
-   sh run.sh do_the_math
-   
-If you have errors cycle through editing, saving, and running the script some more. 
+Be sure to run it and test it thoroughly. 

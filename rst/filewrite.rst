@@ -9,20 +9,35 @@
 Writing Files
 ==============
 
-.. spr13
+Try the following:
 
-   redo with file ref in debug, and files needs to be copied to new project -
-   not all together anymore.
-   
-*Open a console window for our examples folder.*
-First note that there is no file named sample.txt. 
+#.  In monoDevelop build, *not* run, the project :repsrc:`first_file`.  Build is
+    the first selection in the local popup menu for first_file in the Solution pod. 
+    Recall to get the local popup menu
+    * go to the Solution pod
+    * right click on the project (Mac control-click)
 
-Then compile and run the example program ``first_file.cs``, shown below:
+#.  Next open an operating system directory window for the project.
+    With MonoDevelop open, a quick way to do that is to go to the same popup window,
+    and this time select "Open Containing Folder".
+
+#.  Besides the project files from the Solutions pod, in the directory window
+    you should also see a folder
+    :file:`bin`.  Change to that folder and then to its sub-folder :file:`Debug`.
+    This is where the build step put its result :file:`first_file.exe` and debug
+    information :file:`first_file.exe.mdb`.  You should see no other file.
+    Leave this window open.
+
+#.  Now, back in MonoDevelop, run the project.  Depending on your operating system,
+    you may or may not see a Console Window pop up.  If you do see one, you
+    should not see any evidence of program results.  If you got a window, close it.
+
+#.  Look at the directory window again.  You should see a file :file:`sample.txt`.
+    This is a file created by the program you ran.
+
+Here is the program:
 
 .. literalinclude:: ../source/examples/first_file/first_file.cs
-
-Nothing shows on the screen when you run the program:
-it is just writing to a file.
 
 .. index:: . ; part of namespace
 
@@ -45,8 +60,10 @@ gives the name of the file to connect to the program, ``sample.txt``.
 If you do not use
 any operating system directory separators in the name (``'\'`` or ``'/'``,
 depending on your operating system), then the file will lie in the
-current directory. :ref:`file-and-directory-paths` discusses 
-the use of directory separators.
+*current directory*, discussed more shortly.  The MonoDevelop default is for this
+current directory to be this Debug directory.  This will be inconvenient
+in many circumstances, and later in the chapter we will see how to minimize the
+issue.
 
 .. index:: . ; object's method
 
@@ -77,10 +94,8 @@ to write a program where you have the code to add all the data you
 want to a file, but the program does not end up creating a file.
 Usually this means you forgot to close the file!
 
-Switch focus and look at the examples
-directory. You should now see a file ``sample.txt``. You can open
-it in :ref:`jEdit` (or your favorite text processor) and see its contents, or
-jut print it to your console window.
+You can open (From the File menu) the file sample.txt, drilling down through the
+:file:`bin` folder.  It should contain just what was written!
 
 As you can use a :ref:`Format-Strings` with 
 ``Console`` methods ``Write`` and ``WriteLine``, 

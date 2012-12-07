@@ -88,7 +88,7 @@ Here's a quick explanation, because it largely follows from the above explanatio
   at 0 in C# and ends at ``data.Length - 1``. 
 
 Similar to linear searching, we provide a main program that tests it out.  The whole code
-is in :file:`examples/arrays/binary_searching.cs`.
+is in :repsrc:`binary_searching/binary_searching.cs`.
 
 .. literalinclude:: ../source/examples/binary_searching/binary_searching.cs
    :start-after: chunk-driver-begin

@@ -37,7 +37,8 @@ a target of $550, the program prints::
 Strange Sequence Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save the example program ``strange_seq_stub.cs`` as ``strange_seq.cs``,
+Save the example program :repsrc:`strange_seq_stub/strange_seq.cs` 
+in a project of your own.
 
 There are three functions to complete.  Do one at a time and test.
 

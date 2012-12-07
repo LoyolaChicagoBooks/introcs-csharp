@@ -8,14 +8,18 @@
 
 Reading Files
 =============
+
+In MonoDevelop, go to project :repsrc:`print_first_file`.
+If you open a directory window and drill down two folders to :file:`bin/Debug`,
+you should find a copy of the sample.txt that we stored there.  You can open it and
+look at it if you like.
    
 Run the example program
-``print_first_file.cs``, shown below:
+:repsrc:`print_first_file/print_first_file.cs`, shown below:
 
 .. literalinclude:: ../source/examples/print_first_file/print_first_file.cs
 
-Now you have come full circle: what one C# program has written
-into the file ``sample.txt``, another has read and displayed.
+Now you have read a file and used it in a program.
 
 In the first line the operating system file (``sample.txt``) is
 associated again with a C# variable name (``reader``),
@@ -134,7 +138,8 @@ from a file containing one number per line (plus possible white space)::
       }
 
 Below and in project ``files/sum_file.cs`` is a more elaborate, complete example,
-that also skips lines that contain only whitespace.  
+that also exits gracefully if you give a bad file name.
+If you give a good file name, it skips lines that contain only whitespace.  
 
 .. literalinclude:: ../source/examples/files/sum_file.cs
 
@@ -143,7 +148,32 @@ is in the ``System.IO`` namespace is ::
 
     bool File.Exists(string filenamePath) 
 
-It is true if the named files exists in the file system.
+It is true if the named files exists in the file system.  More on the File class
+shortly.
+
+You should see the file :repsrc:`files/numbers.txt` in the MonoDevelop project.
+It is in the right form for the program.  If you run the program and enter the
+response:
+
+.. code-block:: none
+
+   numbers.txt
+
+you should be told that the file does not exist.  If you think about what has been
+siad earlier about the current directory, this makes sense:  Unfortunately,
+the current directory in two levels down in :file:`bin/Debug`.  You can refer to
+a file that is not in the current directory.  More in the section on paths, but a
+brief description of what we need now:
+The symbol for the parent directory is ``..``.  Folders and files are separated by
+``\`` in Windows and ``/`` on a Mac,  so you can test the program successfully
+if you use the file name:
+``..\..\numbers.txt`` in Windows and ``../../numbers.txt`` on a Mac.  On a Mac, running 
+the program looks like:
+
+.. code-block:: none
+
+	Enter the name of a file of integers: ../../numbers.txt
+	The sum is 16
 
 .. index::
    double: example; copy file to upper case
@@ -152,15 +182,21 @@ It is true if the named files exists in the file system.
 Safe Sum File Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Copy :file:`sum_file.cs` to :file:`safe_sum_file.cs`.  Modify the program: Write
-a new function with the heading below.  Use it in ``Main``, in place of the ``if`` 
-statement that checks (only once) for a legal file::         
+a.  Copy :file:`sum_file.cs` to a file :file:`safe_sum_file.cs` in a new project of yours.  
+	Modify the program: Write
+	a new function with the heading below.  Use it in ``Main``, in place of the ``if`` 
+	statement that checks (only once) for a legal file::         
+	
+		// Prompt the user to enter a file name to open for reading.
+		// Repeat until the name of an existing file is given.
+		// Open and return the file.
+		public static StreamReader PromptFile(string prompt)
 
-    // Prompt the user to enter a file name to open for reading.
-    // Repeat until the name of an existing file is given.
-    // Open and return the file.
-    public static StreamReader PromptFile(string prompt)
-
+b.  A user who forgot the file name woud be stuck!
+    Elaborate the function and program, so that an empty line entered means
+    "give up", and ``null`` (no object) should be returned.  The main program needs to
+    test for this and quit gracefully in that case.
+    
 Example Copy to Upper Case
 --------------------------
 

@@ -195,7 +195,7 @@ Do not forget to return it at the end.
    :start-after: chunk
    :end-before: chunk
 
-You can try this full example, ``input_in_range1.cs``.  Look at it
+You can try this full example, :repsrc:`input_in_range1/input_in_range1.cs`.  Look at it
 and then try compiling and running.  Look at the Main code.
 It is redundant - the limits are written both in the prompt and in the
 parameters.  We can do better.  In general we endeavor to supply data only
@@ -226,7 +226,7 @@ The parameters
 have the same form as for ``Console.Write``, but the formatted string is
 *returned*.
 
-Here is a revised version, in example ``input_in_range2.cs``, 
+Here is a revised version, in example :repsrc:`input_in_range2/input_in_range2.cs`, 
 without redundancy in the prompts in ``Main``:
 
 .. literalinclude:: ../source/examples/input_in_range2/input_in_range2.cs
@@ -262,7 +262,7 @@ In particular you get an infinite loop
 if you fail to get new input from the user at the
 end of the loop.  The condition uses the bad
 original choice forever.  Here is the loop in the mistaken version, 
-from example  ``input_in_range2_bad.cs``:
+from example  :repsrc:`input_in_range2_bad/input_in_range2_bad.cs`:
 
 .. literalinclude:: ../source/examples/input_in_range2_bad/input_in_range2_bad.cs
    :start-after: chunk
@@ -286,7 +286,8 @@ running the program.
 Agree Function Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save example ``test_agree_stub.cs`` as ``test_agree.cs``.
+Save example :repsrc:`test_agree_stub/test_agree.cs` 
+in a project of your own.
 
 Yes-no (true/false) questions are common.
 How might you write an input utility function ``Agree``? 
@@ -319,8 +320,8 @@ numbers are entered (at least in your *final* version).
 Safe Whole Number Input Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Save example :file:`test_input_whole_stub.cs` as
-``test_input_whole.cs``.  The code should test
+Save example :repsrc:`test_input_whole_stub/test_input_whole.cs` as
+a project of your own.  The code should test
 a function ``PromptWhole``, as described below.
 
 There is an issue with reading in numbers with the PromptInt function.
@@ -337,127 +338,4 @@ the user enters something that is legal: in this case, all digits.
 
 The stub code already includes the earlier function ``IsDigits``.
 
-	
-.. later  some after arrays, some just more work for exercises (strange func)
-
-	Now that we have you cautious, let us try the program
-	but be careful:  though we want a new *value* for ``number``,
-	it can only geteasiest to think We keep on
-	going if the most recent input is bad.  We print the error message only
-	if the input is bad.  
-	
-	
-	out iThe earlier examples of while loops were chosen for their
-	simplicity. Obviously they could have been rewritten with range
-	function calls. Now lets try a more interesting example. Suppose
-	you want to let a user enter a sequence of lines of text, and want
-	to remember each line in a list. This could easily be done with a
-	simple repeat loop if you knew the number of lines to enter. For
-	example, in ``read_lines0.cs``, the user is prompted for the exact
-	number of lines to be entered:
-	
-	.. literalinclude:: ../examples/read_lines0.cs
-	   :lines: 3-
-	
-	The user may want to enter a bunch of lines and not count them all
-	ahead of time. This means the number of repetitions would not be
-	known ahead of time. A ``while`` loop is appropriate here. There is
-	still the question of how to test whether the user wants to
-	continue. An obvious but verbose way to do this is to ask before
-	every line if the user wants to continue, as shown below and in the
-	example file ``read_lines1.cs``. Read it and then run it:
-	
-	.. literalinclude:: ../examples/read_lines1.cs
-	   :lines: 3-
-	
-	See the *two* statements setting ``testAnswer``:  
-	one before the ``while`` loop and one at the bottom of the loop body.
-	
-	.. note::
-	   The data must be initialized *before* the loop, in order for the
-	   first test of the while condition to work. Also the test must work
-	   when you loop back from the end of the loop body. This means the
-	   data for the test must also be set up a second time, *in* the loop
-	   body.  It is easy to forget the second time!
-	
-	The ``read_lines1.cs`` code works, but it may be more annoying than
-	counting ahead! Two lines must be entered for every one you
-	actually want! A practical alternative is to use a *sentinel*: a
-	piece of data that would *not* make sense in the regular sequence,
-	and which is used to indicate the *end* of the input. You could
-	agree to use the line ``DONE!`` Even simpler: if you assume all the
-	real lines of data will actually have some text on them, use an
-	*empty* line as a sentinel. (If you think about it, the C#
-	Shell uses this approach when you enter a statement with an
-	indented body.) This way you only need to enter one extra (very
-	simple) line, no matter how many lines of real data you have.
-	
-	What should the while condition be now? Since the sentinel is an
-	empty line, you might think ``line == ''``, but that is the
-	*termination* condition, not the *continuation* condition: You need
-	the *opposite* condition. To negate a condition in C#, you may
-	use ``not``, like in English,  ::
-	
-		not line == ''
-	
-	Of course in this situation there is a shorter way, ::
-	
-		line != ''
-		
-	Run the example program ``read_lines2.cs``, shown below:
-	
-	.. literalinclude:: ../examples/read_lines2.cs
-	   :lines: 3-
-	
-	Again the data for the test in the while loop heading must be
-	initialized before the first time the ``while`` statement is
-	executed and the test data must *also* be made ready inside the
-	loop for the test after the body has executed. Hence you see the
-	statements setting the variable ``line`` both before the loop and
-	at the end of the loop body. It is easy to forget the second place
-	inside the loop!
-	
-	*After* reading the rest of this paragraph,
-	comment the last line of the loop out, and run it again:
-	It will never stop! The
-	variable ``line`` will forever have the initial value you gave it!
-	You actually can stop the program by entering :kbd:`Ctrl-C`. That means
-	hold the :kbd:`Ctrl` key and press :kbd:`c`.
-	
-	.. note::
-	   As you finish coding a ``while`` loop, it is good practice to
-	   always double-check: Did I make a change to the variables, *inside*
-	   the loop, that will eventually make the loop condition ``False``?
-	
-	The earliest ``while`` loop examples had numerical tests and the code
-	to get ready for the next loop just incremented a numerical variable
-	by a fixed amount.  Those were simple examples but ``while`` loops
-	are much more general!  In the interactive loop we have seen a continuation
-	condition with a string test, and getting ready for the next time through
-	the loop involves input from the user.
-	
-	Some of the exercises that follow involve interactive while loops.
-	Others were delayed until here just because they have a wider variety of
-	continuation condition tests and ways to prepare for the next time through
-	the loop.  What is *consistent* is the general steps to think of and
-	questions to ask yourself.  They keep on applying!  Keep these in mind!
-	
-	  * the need to see whether there *is* a kind of
-		repetition, even without a fixed collection of values to work through
-	
-	  * to think from the specific situation and figure out the
-		continuation condition that makes sense for your loop
-	
-	  * to think what specific processing or results you want each time through
-		the loop, using the *same* code
-	
-	  * to figure out what supporting code you need to make you ready for the
-		next time through the loop:  how to make the *same* results code
-		have *new* data values to process each time through, and eventually reach
-		a stopping point.
-		
-	
-	
-	
-	
 	

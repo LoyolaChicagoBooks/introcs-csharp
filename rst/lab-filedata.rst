@@ -12,14 +12,14 @@ Goals for this lab:
 Overview
 ~~~~~~~~~~
 
-Copy folder :file:`examples/dict_lab_stub` to :file:`examples/dict_lab`.
+Copy project :repsrc:`dict_lab_stub` to your own project.
 
-The idea of this lab is to replace project file 
-:file:`examples/dict_lab/fake_help.cs` with an improved
-project. 
+This lab provides a replacement file 
+:repsrc:`fake_help.cs <dict_lab_stub/fake_help.cs>` for an improved
+project.  The project still needs some additions in a helper class.
 
 Before we get there, open the comparison program
-:file:`examples/fake_help_verbose.cs` and
+:repsrc:`fake_help_verbose/fake_help_verbose.cs` and
 look at the methods ``GetParagraphs()`` and ``GetDictionary()``.
 All the strings for the responses are pre-coded for you there, but if
 you were writing your own methods, it would be a pain. There is all the
@@ -30,8 +30,9 @@ you to write the string data itself into a text file, with the only
 overhead being a few extra newlines. Minor further adaptations could
 save time later in your game project, too.
 
-Look in your new :file:`lab_dict` folder at the file 
-:file:`fake_help.cs`.  It creates the ``List`` ``guessList`` and the
+Look in your copy of 
+:repsrc:`fake_help.cs <dict_lab_stub/fake_help.cs>`.  
+It creates the ``List`` ``guessList`` and the
 ``Dictionary`` ``responses`` using more general functions that you need to fill in. 
 The stubs for these new versions are put in 
 the class ``FileUtil`` for easy reuse.  ``Main`` calls these functions 
@@ -49,11 +50,13 @@ Test out your work at every stage!
 
 You will need to complete very short versions of functions
 ``GetParagraphs`` and ``GetDictionary`` that have been moved to
-:file:`examples/dict_lab/file_util.cs` and now
+:repsrc:`file_util.cs <dict_lab_stub/file_util.cs>`
+and now
 take a ``StreamReader`` as parameter.
 The files that they read will contain the basic data.  
 You can look in the lab project at the first data file:
-:file:`help_not_defaults.txt`, and the beginning is shown below:  
+:repsrc:`help_not_defaults.txt <dict_lab_stub/help_not_defaults.txt>`, 
+and the beginning is shown below:  
 
 .. literalinclude:: ../source/examples/dict_lab_stub/help_not_defaults.txt
    :language: none
@@ -63,9 +66,9 @@ You can see that it includes the data for the welcome
 and goodbye strings followed by all the data to go in the ``List`` of random answers.
 
 One complication is that many of these strings take up several lines, in what we call
-a paragraph.  We follow a standard convention for putting paragraphs into plain text: 
+a *paragraph*.  We follow a standard convention for putting paragraphs into plain text: 
 Put a blank line after a paragraph to mark its end.  As you can see, that is how 
-:file:`help_not_defaults.txt` is set up. 
+:repsrc:`help_not_defaults.txt <dict_lab_stub/help_not_defaults.txt>` is set up. 
 
 Steps
 -----------------
@@ -85,7 +88,8 @@ an error message if the file is missing.
 ReadParagraph
 ~~~~~~~~~~~~~~
 
-The first method to complete in :file:`file_util.cs`
+The first method to complete in 
+:repsrc:`file_util.cs <dict_lab_stub/file_util.cs>`
 is useful by itself and later for use in the 
 ``GetParagraphs`` and ``GetDictionary`` that you will complete.  See the stub:
 
@@ -134,7 +138,9 @@ processes more than one paragraph.
    :start-after: GetParagraphs chunk
    :end-before: chunk
 
-Look again at :file:`help_not_defaults.txt` to see how the data is set up.
+Look again at 
+:repsrc:`help_not_defaults.txt <dict_lab_stub/help_not_defaults.txt>`, 
+to see how the data is set up.
 
 This lab requires very few lines of code. Be sure to read the examples
 and instructions carefully (several times). A lot of ideas get packed
@@ -146,10 +152,12 @@ responses in the lab project program should work as the user enters lines in the
 GetDictionary
 ~~~~~~~~~~~~~~~
 
-The last stub to complete in :file:`file_util.cs`` is ``GetDictionary``.  Its
+The last stub to complete in :repsrc:`file_util.cs <dict_lab_stub/file_util.cs>` 
+is ``GetDictionary``.  Its
 stub also takes a ``StreamReader`` as parameter.  In 
 ``Main`` this function is called to read from
-:file:`help_not_responses.txt`.  Here are the first few lines:
+:repsrc:`help_not_responses.txt <dict_lab_stub/help_not_responses.txt>`.  
+Here are the first few lines:
 
 .. literalinclude:: ../source/examples/dict_lab_stub/help_not_responses.txt
    :language: none
@@ -164,8 +172,11 @@ Here is the stub of the function to complete, reading such data:
 When you complete this function, the program should behave like the earlier
 verbose version with the hard-coded data.
 
-Be careful to distinguish the data file :file:`help_not_responses.txt` from
-:file:`help_not_responses2.txt`, used in the extra credit option.
+Be careful to distinguish the data file 
+:repsrc:`help_not_responses.txt <dict_lab_stub/help_not_responses.txt>` 
+from
+:repsrc:`help_not_responses2.txt <dict_lab_stub/help_not_responses2.txt>`, 
+used in the extra credit option.
 
 This should also be an extremely short amount of coding!  
 Think of following through the data file, and get the corresponding 
@@ -180,7 +191,8 @@ The crude word classification scheme would recognize "crash", but not
 "crashed" or "crashes".  You could make whole file entries
 for each key variation, repeating the value paragraph.  
 A concise approach is to use a data file
-like :file:`help_not_responses2.txt`.  Here are the first few lines:
+like :repsrc:`help_not_responses2.txt <dict_lab_stub/help_not_responses2.txt>`.  
+Here are the first few lines:
 
 .. literalinclude:: ../source/examples/dict_lab_stub/help_not_responses2.txt
    :language: none
