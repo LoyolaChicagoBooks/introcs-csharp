@@ -109,8 +109,6 @@ We omitted the long tail of the error message.
 There is no decimal point in an ``int``.
 You see the fix with the corresponding function returning a double.
 
-.. index:: run scripts
-
 Writing and Running Programs
 -----------------------------
 

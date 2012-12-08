@@ -43,8 +43,7 @@ for a programmer to read and generalize:  It will be easier in other situations
 where you want lots of canned data 
 in your program (like in a game you might write soon).
 
-There are run scripts in the folder.  They work just like the one
-in the examples folder.  The stub should run
+The stub should run as is
 (mostly saying things are not implemented).
 Test out your work at every stage!
 

@@ -30,15 +30,6 @@ defined as follows:
    program may not work entirely right the first time, so you may end
    up repeating these steps (debugging).
 
-Later in the course we will use some scripts 
-(prewritten collections of commands)
-to reduce repetitive typing.
-These basically shield you from the
-details of understanding the workflow in detail. We think it is
-important that you *learn* this workflow from day one, because many types
-of software development don't always have the easiest software
-development tools.  You will be able to use fancy tools later.
-
 Other tools are available, like
 the development environments 
 Visual Studio (from Microsoft) and MonoDevelop (an open source

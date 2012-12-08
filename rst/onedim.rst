@@ -182,19 +182,6 @@ This should print for you:
     there
     123
 
-Our run scripts also allow command line parameters.  You can compile and run all at
-once to get the same result with Windows:
-
-..   code-block:: none
-
-     run.cmd print_param hi there 123
-
-or OS-X:
- 
-..   code-block:: none
-
-     sh run.sh print_param hi there 123
-
 See what quoted strings do.  Use command line parameters (with the quotes)  
 ``"hi there" 123``.
 This should print for you::
@@ -202,7 +189,27 @@ This should print for you::
     There are 2 command line parameters.
     hi there
     123
-    
+
+.. index::
+   MonoDevelop; command line parameters
+   command line; parameters in MonoDevelop
+
+You can simulate command line parameters inside MonoDevelop:
+
+#.  Open the local popup menu for the project you are using.
+#.  Select Run With > 
+#.  In the submenu select Custom Parameters.
+#.  That brings up a dialog where you can enter the
+    desired command line parameters.
+#.  Optionally you can remember this setup by clicking on
+    box in front of "Save this configuration as a custom execution mode".
+    If you check it, you get a place to enter a Custom Mode Name.
+#.  End up clicking the Execute button.
+#.  If you set a Custom Mode, later when you get to the submenu after
+    "Run With >", you will see your custom mode name to select!
+
+Try it!
+        
 .. index::
    double: string; Split
    
@@ -393,14 +400,30 @@ Command Line Adder Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program ``adder.cs`` that calculates and prints the sum of 
-command line parameters, so in Windows:
+command line parameters, so if you make the command line parameters
+in MonoDevelop be 
 
 ..  code-block:: none
 
-    run.cmd adder 2 5 22
-    
-would print 29.
+    2 5 22
 
+then the program prints 29.
+
+Do try running from the command line:  If you compiled with
+MonoDevelop, that means going down to the bin/Debug directory.
+Recall MonoDevelop for Windows produces a Windows executable,
+not a Mono file, so you can run
+    
+..  code-block:: none
+
+    adder 2 5 22
+    
+while on a Mac you need to run with mono:
+
+..  code-block:: none
+
+    mono adder.exe 2 5 22
+    
 .. index::
    double: example; TrimAll
    double: array; TrimAll
