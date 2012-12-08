@@ -20,7 +20,7 @@ of data.
 The ``int`` and ``double`` types are examples of *value types*, 
 which means that this memory space holds an encoding of the complete data for the
 value of the variable.  The fixed space means that an ``int`` cannot be a totally 
-arbitrary integer of an enormous size.  In fact an `int`` variable can only hold
+arbitrary integer of an enormous size.  In fact an ``int`` variable can only hold
 an integer in a specific range.  
 
 
@@ -232,7 +232,7 @@ The other direction for conversion is more problematic:
     csharp> double d= 2.7;
     csharp> int i;
     csharp> i = d;
-    {interactive}(1,4): error CS0266: Cannot implicitly convert type `double' to `int'. 
+    {interactive}(1,4): error CS0266: Cannot implicitly convert type 'double' to 'int'. 
     An explicit conversion exists (are you missing a cast?)
 
 The ``int`` ``i`` cannot accurately hold the value 2.7.  
@@ -243,7 +243,7 @@ fails if the the ``double`` happens to have an integer value:
 
     csharp> double d = 2.0;
     csharp> int i = d;
-    {interactive}(1,4): error CS0266: Cannot implicitly convert type `double' to `int'. 
+    {interactive}(1,4): error CS0266: Cannot implicitly convert type 'double' to 'int'. 
     An explicit conversion exists (are you missing a cast?)
     
 If you really want to possibly lose precision and use a ``double`` to produce

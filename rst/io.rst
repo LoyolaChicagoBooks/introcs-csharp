@@ -120,7 +120,8 @@ Example Projects and the Source Repository
 --------------------------------------------
 
 TODO:  relate the zip file, MD projects, folder conventions, _stub, 
-source references in the book, indicating project and linking to the repository.
+source references in the book, indicating project and linking to the repository,
+colored versions vs raw for selecting the whole file....
 ....
 
 .. _AdditionProblem:

@@ -183,7 +183,7 @@ part as well as the assignment part, and mono sees the declaration of
 ``number`` already there 
 from the scope outside the while block, and complains.
 
-Hence copy the line, *without* the `` int`` declaration::
+Hence copy the line, *without* the ``int`` declaration::
 
    number = PromptInt(prompt);
 

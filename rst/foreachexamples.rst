@@ -10,7 +10,7 @@ of the characters in comparisons.
 When printing, you cannot see this code directly,
 since the ``char`` type prints as *characters*!
 To see the underlying code value for a character, ch,
-it can be cast to an int:  `(int)ch``
+it can be cast to an int:  ``(int)ch``
 
 We can easily write a loop to print the unicode value of each character in a
 string, ``s``.  We do not need indices here, so a ``foreach`` loop is

@@ -238,7 +238,7 @@ try putting parentheses around the expression:
     csharp> int width = 3;
     csharp> int height = 5;
     csharp> width * height;
-    {interactive}(1,2): error CS0246: The type or namespace name `width' could 
+    {interactive}(1,2): error CS0246: The type or namespace name 'width' could 
     not be found. Are you missing a using directive or an assembly reference?
     csharp> (width * height);
     15

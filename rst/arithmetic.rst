@@ -61,7 +61,7 @@ The csharp program just has a read, evaluate, and print loop: the acronym is
 
 The csharp program is not line-oriented.  The semicolon indicates that
 you are finished with an entry.  You can easily forget it.  
-If your statement is incomplete you get another ``> `` prompt (with no
+If your statement is incomplete you get another ``>`` prompt (with no
 "csharp"), until you complete your entry with a ``;`` (semicolon).
 
 .. code-block:: none
@@ -87,8 +87,8 @@ In math class you could enter something like 4(10) for multiplication:
 .. code-block:: none
  
     csharp> 4(10);
-    {interactive}(1,2): error CS0119: Expression denotes a `value', 
-    where a `method group' was expected
+    {interactive}(1,2): error CS0119: Expression denotes a 'value', 
+    where a 'method group' was expected
 
 Unfortunately the error messages are not always easy to follow:  it is hard to guess the
 intention of the user making a mistake.

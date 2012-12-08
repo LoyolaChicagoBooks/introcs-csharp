@@ -59,7 +59,7 @@ of actual parameters in the three calls to SumProblem.
 Quotient Function Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Modify :file:`quotient.cs`from
+Modify :file:`quotient.cs` from
 :ref:`QuotientProblem` and save it
 as ``quotient_prob.cs``.
 You should create a function ``QuotientProblem`` with int

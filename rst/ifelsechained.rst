@@ -105,7 +105,7 @@ This statement only prints one of two lines if there is a
 problem with the weight of the suitcase.  Nothing is printed if 
 there is not a problem.
 
-If the final ``else`` clause is omitted from the general ``if` ... ``else if`` ...
+If the final ``else`` clause is omitted from the general ``if`` ... ``else if`` ...
 pattern above, at most one block after a condition
 is executed:  That is the block after the first true condition.  
 If all the conditions are false, none of the statement blocks 

@@ -232,7 +232,7 @@ Somewhere on this screen, you should see this text::
     Clone this repository (size: 546 bytes): HTTPS / SSH
     hg clone https://yourusername@bitbucket.org/yourusername/yourrepository
 
-Copy the command you see in the browser starting ```hg clone``, and paste it in
+Copy the command you see in the browser starting ``hg clone``, and paste it in
 as a command in your terminal/DOS-shell window. ::
 
     hg clone https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
@@ -271,7 +271,7 @@ Add an .hgignore and Hello World file to your project
 -----------------------------------------------------
 
 Change directory into the top-level directory of your local repository.
-That should mean `cd`` to the directory whose name matches the
+That should mean ``cd`` to the directory whose name matches the
 bitbucket repository name.
 
 The following is an example of a "dot hgignore" file.  Mercurial will neither

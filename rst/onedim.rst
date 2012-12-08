@@ -375,7 +375,7 @@ of objects always get a specific value, not random data.  Here are the defaults:
        string[] words = new string[10];
        Console.WriteLine(words[0].Length);  // run time error here 
     
-   The error is because `` null`` is not an object - it does not have a ``Length``
+   The error is because ``null`` is not an object - it does not have a ``Length``
    property.  If, for example, 
    you want an array of empty strings you would need a loop::
     

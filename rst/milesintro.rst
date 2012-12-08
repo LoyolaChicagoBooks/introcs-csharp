@@ -1,8 +1,15 @@
-Comments on Miles Chapter 1
-============================ 
+Introduction in Miles Chapter 1
+================================= 
 
-Miles Chapter 1 on Computers and Programs makes a good introduction and gives context.  
-*Read* for the grounding it gives.
+For a general introduction to programming and the context of C# in particular,
+there is already a good free online source, 
+Rob Miles'  
+C# Yellow Book.  To download it, go to 
+http://www.csharpcourse.com/
+and click on the link for
+Rob Miles CSharp Yellow Book 2012.pdf (or the latest year).
+
+*Read* Miles Chapter 1, being aware of the comment below:
 
 The chapter makes some reference to Microsoft,
 the original creator of C#, and its
@@ -11,4 +18,5 @@ and costs a lot if you are not a student.
 The :ref:`lab-edit-compile-run` will introduce an alternative to the 
 Microsoft environment: Mono, which is free, 
 open-source software that makes C# available for multiple platforms:  
-Windows, Mac, or Linux machines.  
+Windows, Mac, or Linux machines.  With a substantial fraction of students having their own
+machine that does  *not* run Windows, this flexibility is important.

@@ -21,7 +21,7 @@ Function definition
 
 #. The general syntax for defining a static function is
 
-    | ``static`` **returnTypeOrVoid** `` **function_name** ``(``  formal parameter list ``)``
+    | ``static`` **returnTypeOrVoid** **function_name** ``(``  formal parameter list ``)``
     | ``{``
     |    statements in the function body...
     | ``}``
