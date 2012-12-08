@@ -81,6 +81,3 @@ string as the response, and we test for that to terminate the loop.
 
 The rest is mostly self-explanatory.
 
-You can build the searching program, and all the others programs in the ``arrays`` 
-folder by geting your console/terminal to the arrays folder,
-and then using the run command for the program ``searching``.

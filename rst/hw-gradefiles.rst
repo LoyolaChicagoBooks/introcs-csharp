@@ -10,8 +10,7 @@ Copy project files in :repsrc:`grade_file_homework_stub` to
 your own project.  Then you should have copies of the 
 source file :repsrc:`grade_files.cs <grade_file_homework_stub/grade_files.cs>` 
 for you to *complete* for this homework.  
-*Do use this stub*, since it contains the namespace and class name expected 
-by the accompanying run scripts.  The folder also contains sample data files
+The folder also contains sample data files
 including the examples discussed below.
    
 In this assignment, we're going to begin taking steps to help you
@@ -242,10 +241,10 @@ Hints
 #. You cannot have one fixed formula to calculate the final weighted grade,
    because you do not know the number of categories when writing the code. 
    You will have to accumulate parts in a loop.
-
-#. There are run scripts in the folder.  They work just like the one
-   in the examples folder.  Test out your work every time you add a piece!
    
+#. Test thoroughly!  Be sure to test with and without command line parameter and
+   with multiple data sets.
+
 Grading Rubric (25 points)
 ---------------------------
 
