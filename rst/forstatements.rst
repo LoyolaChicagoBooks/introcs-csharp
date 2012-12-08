@@ -129,7 +129,8 @@ a break statement:
 
   ``break;`` 
   
-in place of return.  Execution continues after the end of the whole loop statement.  
+in place of return.  Execution continues after the end of the whole innermost
+currently running loop statement.  
 The ``break`` and ``continue`` statements only 
 make practical sense inside of an ``if`` statement that is inside the loop.
 
@@ -190,12 +191,31 @@ using a break statement makes the code much less verbose, and hence easier to fo
 If you *are* reading through the loop, it may be clearer to have an immediate action
 where it is certain that the loop should terminate. 
 
-for completeness we mention the much less used ``continue`` statement:
+All the modifiers about innermost loop are important in a situation like the following::
+
+    for (....) {
+       for (....) {
+          ...
+          if (...) {
+            ...
+            break;
+          }
+          ...
+       }
+    } 
+
+The break statement is in the inner loop.  If it is reached, the inner loop ends,
+but the inner loop is just a single statement inside the outer loop, 
+and the outer loop continues.  If the outer loop continuation condition is still true,
+the inner loop will be executed again, 
+and the break may or may not be reached that time....
+
+For completeness we mention the much less used ``continue`` statement:
 
   ``continue;``  
 
-It does not break out of the whole loop, 
-it just 
+It does not break out of the whole loop: 
+It just 
 skips the rest of the *body* of the innermost current loop, *this time* through the loop.  
 In the simplest situations a ``continue`` statement just avoids an extra ``else`` clause. 
 It can considerable shorten code if the test is inside complicated, deeply nested 
