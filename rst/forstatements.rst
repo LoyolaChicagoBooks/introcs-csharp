@@ -206,9 +206,11 @@ All the modifiers about innermost loop are important in a situation like the fol
 
 The break statement is in the inner loop.  If it is reached, the inner loop ends,
 but the inner loop is just a single statement inside the outer loop, 
-and the outer loop continues.  If the outer loop continuation condition is still true,
+and the outer loop continues.  
+If the outer loop continuation condition remains true,
 the inner loop will be executed again, 
-and the break may or may not be reached that time....
+and the break may or may not be reached that time, so the inner loop may or may
+not terminate normally....
 
 For completeness we mention the much less used ``continue`` statement:
 
