@@ -22,6 +22,7 @@ projects.zip
 java/
 projSol/
 work/
+examples-deprecated/
 test-results/
 TestResult.xml
 projects2/

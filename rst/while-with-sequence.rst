@@ -74,7 +74,7 @@ So all together:
    :start-after: chunk
    :end-before: chunk
  
-You can test this with example :file:`char_loop1.cs`.
+You can test this with example :repsrc:`char_loop1/char_loop1.cs`.
 
 This is a very common pattern.  
 We could do anything we want with each individual character, 
@@ -170,7 +170,7 @@ The function is still not as general as it might be:
 Only lowercase vowels are listed.  We could do something with
 ``ToLower``, or just use the condition: ``"aeiouAEIOU".Contains(""+s[i])``
 
-This variation is in example ``vowels2.cs``.
+This variation is in example :repsrc:`vowels2/vowels2.cs`.
 
 .. literalinclude:: ../source/examples/vowels2/vowels2.cs
    :start-after: chunk
@@ -297,7 +297,7 @@ The whole function would be:
    :start-after: chunk
    :end-before: chunk
 
-You can try this code in example :file:`check_digits1.cs`.
+You can try this code in example :repsrc:`check_digits1/check_digits1.cs`.
 
 .. index::  return; from inside loop
    
@@ -335,7 +335,7 @@ code for the function:
    :end-before: chunk
 
 The full code with a ``Main`` testing program is in 
-example :file:`check_digits2.cs`.
+example :repsrc:`check_digits2/check_digits2.cs`.
 
 Returning out of a loop 
 is a good pattern to remember when you are searching for something, 

@@ -233,7 +233,7 @@ The parameters ``a`` and ``b`` need to be replaced by ``b`` and ``a % b``.
 One extra variable needs to be introduced to make this double change work.  The simplest
 is to introduce a variable ``r`` for the remainder.  Check and see for yourself that you
 need an extra variable like ``r``.
-This code is from :file:`g_c_d_remainder_loop.cs`:
+This code is from :repsrc:`g_c_d_remainder_loop/g_c_d_remainder_loop.cs`:
 
 .. literalinclude:: ../source/examples/g_c_d_remainder_loop/g_c_d_remainder_loop.cs
    :start-after: gcd chunk

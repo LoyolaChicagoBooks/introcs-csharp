@@ -79,7 +79,8 @@ the csharp example above::
 The only thing this example does not show off well is the amount of
 left margin indentation.
 That is significant in a multiline @-quoted string.  
-A whole simple program with this code is in example :file:`at_sign_strings.cs`.
+A whole simple program with this code is in example 
+:repsrc:`at_sign_strings/at_sign_strings.cs`.
    
 
 

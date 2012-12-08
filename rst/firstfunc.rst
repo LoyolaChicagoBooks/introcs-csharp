@@ -12,7 +12,7 @@ If you know it is the birthday of a friend, Emily, you might tell
 those gathered with you to sing "Happy Birthday to Emily".
 
 We can make C# display the song. *Read*, and run if you like,
-the example program ``birthday1.cs``:
+the example program :repsrc:`birthday1/birthday1.cs`:
 
 .. literalinclude:: ../source/examples/birthday1/birthday1.cs
 
@@ -99,7 +99,7 @@ or function *invocation*.  In this simple situation the format is
     *function_name*\ ``()``
 
 Can you predict what the program will do?  Note the two function calls
-to ``happyBirthdayEmily``.  To see, load and run ``birthday2.cs``. 
+to ``happyBirthdayEmily``.  To see, load and run :repsrc:`birthday2/birthday2.cs`. 
 
 .. index::
    double: function; execution sequence

@@ -37,7 +37,7 @@ name ``person``, preceded  by its type, ``string``.
 Then in the body of the definition
 of the function, person is used in place of the real data for any
 specific person's name. Read and then run example program
-``birthday4.cs``:
+:repsrc:`birthday4/birthday4.cs`:
 
 .. literalinclude:: ../source/examples/birthday4/birthday4.cs
    :linenos:
@@ -110,7 +110,7 @@ parameter values.
 
 .. note::
 
-    Be sure you completely understand ``birthday4.cs``
+    Be sure you completely understand :repsrc:`birthday4/birthday4.cs`
     and the sequence of execution!  It illustrates extremely
     important ideas that many people miss the first time!  It is
     essential to understand the difference between
@@ -130,7 +130,7 @@ parameter values.
 
 We can combine function parameters with user input, and have the
 program be able to print Happy Birthday for anyone. Check out the
-``Main`` method and run ``birthday_who.cs``:
+``Main`` method and run :repsrc:`birthday_who/birthday_who.cs`:
 
 .. literalinclude:: ../source/examples/birthday_who/birthday_who.cs
    :linenos:
@@ -166,11 +166,11 @@ This last version illustrates several important ideas:
 	
 	Now that we have nested function calls, it is worth looking further
 	at tracebacks from execution errors.  If we add a line to ``Main`` in
-	``birthday4.cs``::
+	:repsrc:`birthday4/birthday4.cs`::
 		
 		HappyBirthday(2)
 	
-	as in example file ``birthday_bad.cs``, and then run it, you get
+	as in example file :repsrc:`birthday_bad/birthday_bad.cs`, and then run it, you get
 	something close to:
 	
 	  | Traceback (most recent call last):
@@ -193,7 +193,8 @@ This last version illustrates several important ideas:
 Birthday Function Exercise
 ---------------------------
 
-Make your own further change to ``birthday4.cs`` and save it as
+Make your own further change to :repsrc:`birthday4/birthday4.cs` and save it in your
+own project as 
 ``birthday_many.cs``: Add a function call
 (but *not* another function *definition*), so Maria gets a verse, in
 addition to Emily and Andre. Also print a blank line between

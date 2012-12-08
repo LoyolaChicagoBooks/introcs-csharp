@@ -444,7 +444,7 @@ of the sorting algorithms we want to benchmark:
 When you get ``watch.ElapsedMilliseconds``, this gives you an integer (long) number of
 milliseconds (thousandths of a second).
 
-You can find this code in  :file:`examples/arrays/sorting.cs`. 
+You can find this code in  :repsrc:`sorting/sorting.cs`. 
 
 Running the Code
 ----------------------

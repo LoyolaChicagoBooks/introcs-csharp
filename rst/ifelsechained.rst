@@ -65,7 +65,7 @@ some of the braces:
    :end-before: chunk
 
 A program testing the letterGrade function is in
-example program ``grade1.cs``.
+example program :repsrc:`grade1/grade1.cs`.
 
 See :ref:`gradeEx`.
 
@@ -127,7 +127,8 @@ which category the number is in: ``"positive'``, ``"negative"``, or
 Grade Exercise
 ~~~~~~~~~~~~~~              
 
-Copy ``grade1.cs`` to ``grade2.cs`` Modify
+Copy :repsrc:`grade1/grade1.cs` to ``grade2.cs`` in your own project.
+Modify
 ``grade2.cs`` so it has an equivalent version of the letterGrade
 function that tests in the opposite order, first for F, then D, C,
 .... Hint: How many tests do you need to do? [#grade]_
@@ -141,7 +142,8 @@ change in the result.
 Wages Exercise
 ~~~~~~~~~~~~~~              
    
-Modify the ``wages1.cs`` or the ``wages2.cs`` example to create a
+Modify the :repsrc:`wages1/wages1.cs` or the :repsrc:`wages2/wages2.cs` 
+example to create a
 program ``wages3.cs`` that assumes people are paid double time for
 hours over 60. Hence they get paid for at most 20 hours overtime at
 1.5 times the normal rate. For example, a person working 65 hours
@@ -151,7 +153,7 @@ with a regular wage of $10 per hour would work at $10 per hour for
 
     10*40 + 1.5*10*20 + 2*10*5 = $800.
 
-You may find ``wages2.cs`` easier to adapt than ``wages1.cs``.
+You may find :repsrc:`wages2/wages2.cs` easier to adapt than :repsrc:`wages1/wages1.cs`.
 
 
 .. [#grade]

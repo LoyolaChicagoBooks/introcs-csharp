@@ -157,7 +157,7 @@ Parameters to Main
 ---------------------
 
 The Main function may take an array of strings as parameter, as in example 
-:file:`print_param.cs`:
+:repsrc:`print_param/print_param.cs`:
 
 .. literalinclude:: ../source/examples/print_param/print_param.cs
    :start-after: chunk

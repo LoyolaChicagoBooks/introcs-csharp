@@ -60,7 +60,7 @@ Numbers and Strings of Digits
 
 You may well want to have the user supply you with numbers.
 There is a complication.  Suppose you want to get numbers and add them.
-What happens with this code, in :file:`bad_sum.cs`?
+What happens with this code, in :repsrc:`bad_sum/bad_sum.cs`?
 
 .. literalinclude:: ../source/examples/bad_sum/bad_sum.cs
 
@@ -80,7 +80,7 @@ We must explicitly convert the strings to the proper kind of number.
 There are functions to do that:  ``int.Parse`` takes a string parameter
 that should be the characters in an ``int``, like "123" or "-25", and 
 produces the corresponding ``int`` value, like 123 or -25.
-In :file:`good_sum.cs`, we changed the names to emphasize the type
+In :repsrc:`good_sum/good_sum.cs`, we changed the names to emphasize the type
 conversions:
 
 .. literalinclude:: ../source/examples/good_sum/good_sum.cs
@@ -114,37 +114,14 @@ You see the fix with the corresponding function returning a double.
 Writing and Running Programs
 -----------------------------
 
-The language discussions apply no matter what environment you work in.
-If you want to go through the learning curve, you could use Visual C# in Windows or 
-MonoDevelop on multiple platforms.  Our suggested initial approach is detailed in 
-appendices.
+MORE MONODEVELOP!  FIll it in!
 
-Here is an overview of where to look:
+Example Projects and the Source Repository 
+--------------------------------------------
 
-- For writing or modifying your own plain text program files we have an appendix
-  on one good option, :ref:`jedit`.
-
-- Once you have a program saved, you need to compile and run it.  
-  We discuss methods using a terminal or console window.  The basics of getting
-  to the right directory were discussed in the first lab, and are elaborated 
-  in the appendix with a :ref:`commandline`.
-  
-- To compile and run, particularly on simple
-  single-file programs, you could follow the underlying procedure of the first lab,
-  though that is a bit tedious and fails without more explanation in more complicated
-  cases.  Instead we suggest seeing the appendix section on :ref:`build-scripts`, in 
-  particular going over the use of the **run** scripts.  They make compiling and running
-  our example programs a simple 1-step process.  Our organization is to put all the
-  single file programs directly in the examples folder, and put each project
-  that needs several special files in its own sub-folder.  There are run scripts
-  for all these places.
-  
-- You can store your own work mixed in with ours, as long as you use different names for
-  your versions of files, as explained further in the section on run scripts.  
-  Many students prefer to have their own work separate, 
-  and the appendix section  :ref:`work-folder` shows how to set up your work so you 
-  have access to files of ours that you will use, and still be able to still use 
-  the convenient run scripts.
+TODO:  relate the zip file, MD projects, folder conventions, _stub, 
+source references in the book, indicating project and linking to the repository.
+....
 
 .. _AdditionProblem:
 
@@ -154,7 +131,7 @@ Exercise for Addition
 Write a version, :file:`add3.cs`, that
 prompts the user for three numbers, *not necessarily integers*, 
 and lists all three, and their sum, in
-similar format to :file:`good_sum.cs`.
+similar format to :repsrc:`good_sum/good_sum.cs`.
 
 .. _QuotientProblem:
 
@@ -169,4 +146,3 @@ sentence with an integer division problem like ::
 
 Review :ref:`Division-and-Remainders` if you forget the integer
 division or remainder operator.
-
