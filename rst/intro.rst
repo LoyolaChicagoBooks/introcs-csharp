@@ -5,7 +5,7 @@ These notes are designed for Comp 170 at Loyola University, Chicago.
 The materials are available to all on the web.
 Here are some important web links:
 
-*   http://introcs.cs.luc.edu is online home for the production versions.
+*   http://introcs.cs.luc.edu is online version for your web browser.
 
 *   The multiple production versions are generated largely by 
     `Sphinx <http://sphinx.pocoo.org/>`_ software from a common
@@ -16,12 +16,12 @@ Here are some important web links:
     
     To read this book, you do not need to go to that URL, but if you do, the home page
     gives you an idea of what *updates have been made recently* to the book or 
-    accompanying examples. Since improvements are made on an ongoing basis, the notes about
-    recent changes may be useful to you.
+    accompanying examples. Since improvements are made on an ongoing basis, 
+    the notes about recent changes may be useful to you.
     
 *   Computer programs are designed to run on a computer and solve problems.  
-    Though the initial problems will be tiny and often silly, they will serve as learning tools
-    to prepare for substantive problems.
+    Though the initial problems will be tiny and often silly, 
+    they will serve as learning tools to prepare for substantive problems.
     
     The *essential resource* to download and unzip onto your machine is the 
     
@@ -31,8 +31,8 @@ Here are some important web links:
        
        http://bitbucket.org/gkthiruvathukal/introcs-csharp/src.
     
-    Example file links throughout this text refer to the repository copy 
-    of particular files that you should
+    Example file links throughout this text refer to the repository's latest
+    versions of particular files that you should
     also have in your downloaded examples.
  
 Alternate Notes Formats
