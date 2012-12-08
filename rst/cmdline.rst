@@ -130,7 +130,7 @@ With relative paths, you sometimes want to move up the directory hierarchy:  ..
 (two periods) refers to the directory one level up the chain.  
 
 For example, if the examples directory has subdirectories hello and arrays, 
-and the current directory is hello`, then  .. refers to examples and 
+and the current directory is hello, then  .. refers to examples and 
 ..\\arrays or ../arrays on a Mac refers to the arrays directory.
 
 Occasionally you need to

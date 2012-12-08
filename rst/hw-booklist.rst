@@ -196,8 +196,8 @@ To get full credit for any particular option, tests for it must be
     
         Console.Write(this);
     
-    (The ``Write`` and ``WriteLine`` methods print objects by using their `
-    `ToString`` methods.)
+    (The ``Write`` and ``WriteLine`` methods print objects by using their
+    ``ToString`` methods.)
     
     Be sure to make this addition to TestBookList: 
     Test the ``ToString`` method by converting the

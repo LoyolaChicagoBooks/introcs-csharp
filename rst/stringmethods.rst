@@ -89,7 +89,7 @@ Summary of String Length and Some Instance Methods
     
     ::   
     
-        csharp> string name = "Sheryl Crow";``                         
+        csharp> string name = "Sheryl Crow";                         
         csharp> name.Substring(3,5);
         "ryl C"   
 
@@ -120,7 +120,7 @@ Testing Strings For Equality
 
 Strings can be tested for equality like numbers,
 with ``==``: *two* equal signs, not the *one* equal sign used for *assignment*.
-The result of an equality test operation is of type``Boolean`` 
+The result of an equality test operation is of type ``Boolean`` 
 (or use the abbreviation ``bool``). The allowed bool values are 
 ``true`` or ``false``.  
 We will see shortly that
