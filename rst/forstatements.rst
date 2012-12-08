@@ -85,8 +85,7 @@ The two semicolons are always needed in the ``for`` heading, but any of the
 parts they normally separate may be omitted.  
 If the condition part is omitted, the condition is 
 interpreted as always true, leading to an infinite loop, that can only
-terminate due to a ``return`` or ``break`` statement in the body.
-If you are interested in exploring ``break`` statements, see Miles, about page 46.
+terminate due to a ``return`` or :ref:`break statement <break-continue>` in the body.  
 
 **Other variations**
 
@@ -105,4 +104,99 @@ The comma separated lists in a ``for`` statement heading
 are mentioned here for completeness.  Later we will find a situation
 where this is actually useful.
 
+.. index::
+   statement; break
+   statement; continue
+   break statement
+   continue statement
+   
+.. _break-continue:
 
+Break and Continue
+------------------------------------------
+
+This section concerns special *break* and *continue* statements 
+that can *only* occur inside a loop (any kind:  
+``while``, ``for`` or ``foreach``).  
+The syntax is convenient in various circumstances, but not necessary.  You are free
+to use it, but for this course it is an *optional extra*:
+
+You can already stop a loop in the middle with an ``if`` statement 
+that leads to a choice with a ``return`` statement.
+Of course that forces you to completely leave the current function.  If you only want to
+break out of the *innermost current loop*, but *not* out of the whole function, use
+a break statement:
+
+  ``break;`` 
+  
+in place of return.  Execution continues after the end of the whole loop statement.  
+The ``break`` and ``continue`` statements only 
+make practical sense inside of an ``if`` statement that is inside the loop.
+
+Examples, assuming  ``target`` already has a string value and ``a`` is an array of
+strings::
+
+    bool found = false;
+    for (int i = 0; i < a.Length; i++) {
+       if (a[i] == target) {
+          found = true;
+          break;
+       }
+    }
+    if (found) {
+       Console.WriteLine("Target found at index " + i);
+    } else {
+       Console.WriteLine("Target not found");
+    } 
+
+When an element is reached that matches ``target``, 
+execution goes on *past the loop* with ``if (found)`` ....
+
+An alternate implementation with a compound condition in the heading and no ``break`` is::
+
+    bool found = false;
+    for (int i = 0; i < a.Length && !found; i++) {
+       if (a[i] == target) {
+          found = true;
+       }
+    }
+    if (found) {
+       Console.WriteLine("Target found at index " + i);
+    } else {
+       Console.WriteLine("Target not found");
+    } 
+
+With a ``foreach`` loop, which has no explicit continuation condition, 
+the ``break`` would be more clearly useful.
+Here is a variant if you do not care about the specific location of the target::
+
+    bool found = false;
+    foreach (string s in a) {
+       if (s == target) {
+          found = true;
+          break;
+       }
+    }
+    if (found) {
+       Console.WriteLine("Target found");
+    } else {
+       Console.WriteLine("Target not found");
+    } 
+
+Using ``break`` statements is a matter of taste.  There is some advantage in reading
+and following a loop that has only one exit criteria, 
+which is easily visible in the heading.  One the other hand, in many situations,
+using a break statement makes the code much less verbose, and hence easier to follow.
+If you *are* reading through the loop, it may be clearer to have an immediate action
+where it is certain that the loop should terminate. 
+
+for completeness we mention the much less used ``continue`` statement:
+
+  ``continue;``  
+
+It does not break out of the whole loop, 
+it just 
+skips the rest of the *body* of the innermost current loop, *this time* through the loop.  
+In the simplest situations a ``continue`` statement just avoids an extra ``else`` clause. 
+It can considerable shorten code if the test is inside complicated, deeply nested 
+``if`` statements.
