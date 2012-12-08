@@ -562,4 +562,5 @@ Important lessons from this humble summation problem:
 - *Math* operations and C# operations are not always the same. 
   Knowing this in theory is not the same as remembering it in practice!
 
-
+Further special syntax that only makes sense in any kind of loop is discussed in 
+:ref:`break-continue`, after we introduce the last kind of loop.
