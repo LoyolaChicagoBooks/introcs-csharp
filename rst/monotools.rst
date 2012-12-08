@@ -39,8 +39,7 @@ are a variety of building tools that can be used with, or built into
 an SDK:  make, ant, and now NAnt for .net.
 
 Many developers use an a la carte approach, using their favorite editor along
-with their favorite building tool.  In these notes we will discuss
-the editor :ref`jEdit`, and the build tool *NAnt*.
+with their favorite building tool.  
  
 About Integrated Development Environments (IDE)
 -----------------------------------------------
@@ -66,20 +65,18 @@ would prefer a more free/open source "friendly" version.
 Our Approach
 ------------
 
-In the interest of providing a consistent experience for our students,
-we will be using the multi-platform Mono (the SDK), which comes with the build tool NAnt.
-You can use a variety of editors, but we will introduce :ref:`jEdit` as a
-free, convenient, multi-platform alternative.
+In the interest of providing a consistent experience for our students who use
+various operating systems on their on=wn machines,
+we will be using the multi-platform Mono (the SDK).
 
-MonoDevelop could be used, but while its defaults may be OK for very complex projects, 
-they are highly constraining for projects at this level.
+We find the IDE MonoDevelop convenient to integrate everything for a beginner,
+and it is a powerful tool at a more advanced level.  Hence we start off
+introducing and using MonoDevelop.  Later we will look at some of the
+underlying tools that are obscured by the use of MonoDevelop.
 
-Our notes assume for the most part that you are working with Mono and NAnt.  The
-editor is less critical, though we will discuss jEdit.
-
-Mono has an extra advantage in the tool csharp, which has a rough analog 
-in Microsoft's tools but in a somewhat
-limited form. 
+Mono has an extra advantage in the tool csharp, for immediate testing of
+small snippets of code.  We will ude it extensively as we introduce bits of
+syntax. 
 
 As there is significant evolution of both the Microsoft
 and Mono *toolchains*--a fancy word we want you to know and a more
@@ -166,7 +163,7 @@ Windows
 
 #. For Windows, there is only one option to download the SDK. It is a
    self-extracting executable, so you will need to double click it to
-   install. For Vista and 7 users, you may need to check your taskbar to
+   install. For Windows 7 users, you may need to check your taskbar to
    see whether the installer is being held up by Microsoft's enhanced
    security, UAM, that makes sure you really want to install something
    you downloaded from the internet.
@@ -185,7 +182,7 @@ Mono Command Prompt
 #. Open the Windows Start Menu and type "mono" in the text field at the bottom.  
    You should see a short list of places "mono" appears.
    
-#. Click on the choice that says "Mono 2.10... Command prompt".  
+#. Click on the choice that says "Mono ... Command prompt".  
    (This is probably faster than going to the Start Menu,
    finding the Mono folder, expanding it, and clicking on
    the Mono Command Prompt.)
@@ -199,7 +196,7 @@ saving it for later use,
 Mono-develop Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Make sure Mono is installed first. 
+#. Have Mono installed first. 
 
 #. Now go to <http://mono-develop.com>.
 
@@ -223,9 +220,7 @@ as Ubuntu.
 
 #. Using the command-line ``apt-get`` tool, you can install everything
    that you need using ``apt-get install monodevelop``. This should be
-   run as the **root** user (using the ``sudo`` command).  If you
-   do not want monodevelop, it is enough to use
-   ``apt-get install mono``.
+   run as the **root** user (using the ``sudo`` command).  
 
 #. You can test the sanity of your setup by following the instructions
    under OS X.

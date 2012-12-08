@@ -21,15 +21,15 @@ later but any program you can run will include:
     |    ``}``
     | ``}``
 
-You can see that both the example program :file:`painting.cs` and the lab program
-:file:`hello_world.cs` follow this pattern.  The discussion of these parts through 
+You can see that both the example program :repsrc:`painting/painting.cs` and the lab program
+:repsrc:`hello_world/hello_world.cs` follow this pattern.  The discussion of these parts through 
 line 6 in
 :ref:`sample-program` are about all we have to say at this point.  For now this
 is the boilerplate code.  We will make additions as necessary.  We choose not to
 clutter up the basic setup with features that we are not about to use and discuss. 
 
 Here is a silly little test illustrating the difference between ``Console.WriteLine``
-and ``Console.Write``, in example :file:`write_test.cs`:
+and ``Console.Write``, in example :repsrc:`write_test/write_test.cs`:
 
 .. literalinclude:: ../source/examples/write_test/write_test.cs
 

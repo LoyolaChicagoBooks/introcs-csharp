@@ -16,15 +16,15 @@ are calling. C# enforces this idea with *local scope* rules:
 Variable names initialized and used inside one function are
 *invisible* to other functions. Such variables are called *local*
 variables. For example, an elaboration of the earlier program
-``return2.cs`` might have its ``lastFirst`` function with its local
+:repsrc:`return2/return2.cs` might have its ``lastFirst`` function with its local
 variable ``separator``, but it might also have another function
 that defines a ``separator`` variable, maybe with a different value
 like ``"\n"``. They would not conflict. They would be 
 independent. This avoids lots of errors!
 
 For example, the following code in the example program
-``bad_scope.cs`` causes a compilation error. Read it and try to run it, and
-see:
+:repsrc:`bad_scope/bad_scope.cs` causes a compilation error. 
+Read it and try to run it, and see:
 
 .. literalinclude:: ../source/examples/bad_scope/bad_scope.cs
 
@@ -37,7 +37,7 @@ We will fix this error below.
 
 If you do want local data from one function to go to another,
 define the called function so it includes parameters! Read and
-compare and try the program ``good_scope.cs``:
+compare and try the program :repsrc:`good_scope/good_scope.cs`:
 
 .. literalinclude:: ../source/examples/good_scope/good_scope.cs
 

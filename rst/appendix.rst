@@ -7,9 +7,7 @@ Appendix
    :maxdepth: 3
    
    monotools
-   jedit
    cmdline
-   nant
    precedence
    homework-gradecalculation
    homework-gradecalculation2

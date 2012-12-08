@@ -19,7 +19,7 @@ good reason for static variables is constants:
 A *constant* is a name that you give a fixed data value to. 
 You can then use the name of the fixed data value in
 expressions anywhere in the class. 
-A simple example program is ``constant.cs``:
+A simple example program is :repsrc:`constant/constant.cs`:
 
 .. literalinclude:: ../source/examples/constant/constant.cs
 

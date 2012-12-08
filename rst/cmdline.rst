@@ -159,7 +159,7 @@ On a Mac there is an easier shortcut:
   
 - Type *cd* and a space to start the command in the terminal
 - Locate the directory you want in the Finder (not opening the directory).
-- Drag the directory icon to the terminal.  The path gets pasted! 
+- Drag the directory icon to the terminal.  The path gets pasted! Press return.
 
 Common Commands
 ----------------
@@ -234,14 +234,10 @@ Then, with Mono installed (and for Windows, with a Mono command window), the
 programs associated with Mono can be used:
 
 gmcs
-  compiles one or more listed C# source files.
+  compiles one or more listed C# source files without using MonoDevelop.
 
 csharp
   is the interactive C# statement testing program.
-  
-nant
-  is used to build (particularly more complicated) projects, assuming
-  you have created a .build file.
   
 Other useful commands window commands with different names for Windows and Mac,
 listed by generic function, with general Windows syntax first and Mac second, and then
@@ -313,12 +309,7 @@ Scripts
 -------
 
 This is not a subject of this course, but commands can be combined into
-script files.  We have several for you to use in the examples directory, 
-to build programs, run and test them, and clean up.
-Windows script end in .cmd.  One can be executed just by giving its name 
-as a command.  Our Mac scripts end in .sh by convention, and are executed
-by the *sh* command.  Both Windows and mac scripts can have further
-parameters on the command line.
+script files.  
 
 Scripting languages are in fact whole new specialized programming languages, 
 that include many of the types of

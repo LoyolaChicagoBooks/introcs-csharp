@@ -22,7 +22,7 @@ By far, one of the most common searches you will see in typical
 programs. It also happens to be one of the more *misused* searches,
 which is another reason we want you to know about it.
 
-Here is the code from example :file:`arrays/searching.cs` 
+Here is the code from example :repsrc:`searching/searching.cs` 
 to perform a linear search for an integer in an 
 array:
 

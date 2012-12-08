@@ -118,7 +118,8 @@ Make sure you completely follow the details of the execution:
 #. Line 15: Use the value returned by the function and print
    ``"Harrington, Andrew"``
 
-Compare :file:`return2.cs` and :file:`addition1.cs`, from the previous
+Compare :repsrc:`return2/return2.cs` and :repsrc:`addition1/addition1.cs`, 
+from the previous
 section. Both use functions. Both print, but where the printing *is
 done* differs. The function ``SumProblem`` prints directly inside
 the function and returns nothing explicitly. On the other hand
@@ -133,18 +134,19 @@ In general functions should do a single thing.
 You can easily combine a sequence of functions, and you have more
 flexibility in the combinations
 if each does just one unified thing.  The function
-SumProblem in :file:`addition1.cs` does two thing:  It creates a sentence,
+SumProblem in :repsrc:`addition1/addition1.cs` does two thing:  It creates a sentence,
 and prints it.  If that is all you have, you are out of luck if you want
 to do something different with the sentence string.  A better way is
 to have a function that just creates the sentence, and returns it for
 whatever further use you want.  After returning that value,
 printing is one possibility, done in
-:file:`addition2.cs`:
+:repsrc:`addition2/addition2.cs`:
 
 .. literalinclude:: ../source/examples/addition2/addition2.cs
 
-**In class recommendation**:  Improve example :file:`painting.cs`
-with functions.  Copy it to :file:`painting_input.cs` and modify it.
+**In class recommendation**:  Improve example :repsrc:`painting.cs/painting.cs`
+with functions.  Copy it to a file :file:`painting_input.cs` in your
+own project and modify it.
 	
 .. _QuotientStringEx:
 	
@@ -153,7 +155,10 @@ Quotient String Return Exercise
 
 Create :file:`quotient_return.cs` by modifying :file:`quotient_prob.cs` in
 :ref:`QuotientFunctionEx` so that the program accomplishes the same
-thing, but everywhere change the QuotientProblem function into one
-called ``QuotientString`` that merely *returns* the string rather
-than printing the string directly. Have ``Main`` print
-the result of each call to the ``QuotientString`` function.
+thing, but everywhere: 
+
+* Change the QuotientProblem function into one
+  called ``QuotientString`` that merely *returns* the string rather
+  than printing the string directly. 
+* Have ``Main`` print
+  the result of each call to the ``QuotientString`` function.

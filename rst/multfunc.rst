@@ -3,7 +3,7 @@
 Multiple Function Definitions
 ==============================
 
-Here is example program ``birthday3.cs`` where we add a function
+Here is example program :repsrc:`birthday3/birthday3.cs` where we add a function
 ``happyBirthdayAndre``, and call them both. Guess what happens, and
 then load and try it:
 

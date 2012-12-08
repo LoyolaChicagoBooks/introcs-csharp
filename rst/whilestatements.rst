@@ -132,7 +132,7 @@ If it helps, get detailed and play computer:
    :end-before: chunk
    :linenos:
 
-Check yourself by running the example program ``test_while1.cs``.
+Check yourself by running the example program :repsrc:`test_while1/test_while1.cs`.
 
 .. note::
    In C#, ``while`` is not used *quite* like in English. In
@@ -150,7 +150,7 @@ carefully, one step at a time.
    :end-before: chunk
    :linenos:
 
-Check yourself by running the example program ``test_while2.cs``.
+Check yourself by running the example program :repsrc:`test_while2/test_while2.cs`.
 
 The sequence order is important. The variable ``i`` is increased before
 it is printed, so the first number printed is 6. Another common
@@ -223,7 +223,7 @@ preparation for the next value of time is:  ``time = time - 1``.
 
 Putting that all together, and remembering the one thing we noted 
 to do after the loop,
-we get ``blastoff.cs``:
+we get :repsrc:`blastoff/blastoff.cs`:
 
 .. literalinclude:: ../source/examples/blastoff/blastoff.cs
 
@@ -434,7 +434,7 @@ We write that the time is O(n), spoken "oh of n", or "big oh of n" or
    double: pitfall; limit on number size
    
 Computers are pretty fast, so you can try the testing program 
-``sum_to_n_test.cs``
+:repsrc:`sum_to_n_test/sum_to_n_test.cs`
 and it will go by so fast, that you will hardly notice.  Try these specific
 numbers in tests: 5, 6, 1000, 10000, 98765.  All look OK?  Now try 66000.
 On many systems you will get quite a surprise!  
@@ -451,7 +451,7 @@ for 66000 pops out at you.  Did you guess before you saw the answer for
 calculated!  It is a big deal that the system fails *silently* 
 in such situations.  *Think* how large the data may be that you deal with!
 
-Now look at, compile, and run ``sum_to_n_long.cs``.  The sum is
+Now look at and run :repsrc:`sum_to_n_long/sum_to_n_long.cs`.  The sum is
 a ``long`` integer here. Check out in csharp how big
 a ``long`` can be (``long.MaxValue``).  This version of the program
 works for 100000 and for 98765.  We can get correct
@@ -493,7 +493,7 @@ as in the motivation for Gauss's answer:
    :start-after: chunk
    :end-before: chunk
 
-Compile and test the example program containing it: ``sum_to_n_long_bad.cs``.
+Run the example program containing it: :repsrc:`sum_to_n_long_bad/sum_to_n_long_bad.cs`.
 
 Test it with 5, and then try 6. ???
 
@@ -520,7 +520,7 @@ Here is a shot at the whole function:
    :start-after: chunk
    :end-before: chunk
 
-Compile and test the example program containing it: ``sum_to_n_long_bad2.cs``.
+Run the example program containing it: :repsrc:`sum_to_n_long_bad2/sum_to_n_long_bad2.cs`.
 
 Test it with 5, and then try 6. Ok so far, but go on to long integer range:
 try 66000 that messed us up before.  ??? You get an answer that is not
@@ -552,14 +552,14 @@ operations are forced to be ``long``::
 
     return (long)n*(n+1)/2;
     
-You can try example ``sum_to_n_long_quick.cs`` to finally get a result that
-is dependably fast and correct.
+You can try example :repsrc:`sum_to_n_long_quick/sum_to_n_long_quick.cs` 
+to finally get a result that is dependably fast and correct.
 
 Important lessons from this humble summation problem:
 
 - *Working* and being *efficient* are two different things in general.  
 
 - *Math* operations and C# operations are not always the same. 
-  Knowing this in theory is not the same as remembering it in practice.
+  Knowing this in theory is not the same as remembering it in practice!
 
 

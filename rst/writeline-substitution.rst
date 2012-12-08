@@ -38,11 +38,11 @@ construction, better called fill-in-the-braces,
 that can be used with ``Console.WriteLine``.
 
 Instead of inserting user input with the ``+`` operation as in 
-``hello_you1.cs``:
+:repsrc:`hello_you1/hello_you1.cs`:
 
 .. literalinclude:: ../source/examples/hello_you1/hello_you1.cs
 
-look at a variation, ``hello_you2.cs``, shown below.
+look at a variation, :repsrc:`hello_you2/hello_you2.cs`, shown below.
 Both programs  
 look exactly the same to the user:
 

@@ -9,7 +9,7 @@ Multiple Function Parameters
 A function can have more than one parameter in a parameter list.  The 
 list entries are
 separated by commas. Each formal parameter name is preceded by its type.
-For example the example program :file:`addition1.cs` 
+For example the example program :repsrc:`addition1/addition1.cs` 
 uses 
 a function, ``SumProblem``,  to make it easy to display many sum problems. Read and
 follow the code, and then run:

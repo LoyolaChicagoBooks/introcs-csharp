@@ -180,7 +180,7 @@ One more thing to add to our power table is a heading.  We might want:
     
 To make the data line up with the heading titles,
 we can expand the columns, with code in example
-``power_table.cs``:
+:repsrc:`power_table/power_table.cs`:
 
 .. literalinclude:: ../source/examples/power_table/power_table.cs
    :start-after: chunk
@@ -494,7 +494,7 @@ Thinking ahead, we will leave that expression unsimplified.
 We have done most of the work for the rows of the body of the table in the simpler
 version.  We just 
 have a bit of printing for the initial row label before the column loop.  The row
-label is r.  The whole code is in example ``mod7_table.cs`` and below:
+label is r.  The whole code is in example :repsrc:`mod7_table/mod7_table.cs` and below:
 
 
 ..  literalinclude:: ../source/examples/mod7_table/mod7_table.cs
@@ -541,7 +541,7 @@ create our main format string with::
     int numberWidth = ("" + n).Length;
     string colFormat = string.Format("{{0,{0}}} ", numberWidth);
 
-The whole function code is below and in example :file:`mod_mult_table.cs`.
+The whole function code is below and in example :repsrc:`mod_mult_table/mod_mult_table.cs`.
 
 ..  literalinclude:: ../source/examples/mod_mult_table/mod_mult_table.cs
     :start-after: chunk

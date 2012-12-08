@@ -17,7 +17,7 @@ Henceforth we will be using ``UI`` in place of ``UIF``.  In fact all the places 
 was used before could be replaced by ``UI``:  
 It includes all the functionality of ``UIF``.
 
-You can look at the code all together in :file:`examples/intro_cs_lib/ui.cs`.
+You can look at the code all together in :repsrc:`ui/ui.cs`.
 
 The functions are still not perfect:  
 It is possible to blow things up by entering too long an integer.

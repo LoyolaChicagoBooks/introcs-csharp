@@ -7,7 +7,7 @@ A Sample C# Program
 ======================================
 
 In the examples that you should have downloaded is a first simple program,
-:file:`painting.cs`.
+:repsrc:`painting/painting.cs`.
 
 Here is what it looks like when it runs, with the user typing the 20.5 and the 10:
 
@@ -291,7 +291,7 @@ where every character is important.
 
 Also the compiler does not require whitespace around special symbols
 like ``{};().=*+,``.  Hence  
-the :file:`painting.cs` program above would be just as well translated 
+the :repsrc:`painting/painting.cs` program above would be just as well translated 
 by the compiler if it were written as::
 
     using System;class Painting{static void Main(){double width,length

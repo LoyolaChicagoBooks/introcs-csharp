@@ -33,17 +33,6 @@ as opposed to the compiler (**gmcs** that we used in the first
 lab). Then we will take what we've learned in this session and use it
 to write a full program.
 
-This is a large enough program that it may be useful to have the
-editor be knowledgeable about C# syntax and formatting conventions.
-If you are using jEdit, see the :ref:`jedit` appendix for an overview and
-particularly to set it up neatly for C#.
-
-Also look at the NAnt appendix section :ref:`build-scripts`, through the part about
-run scripts.
-When you go to the command line, a run script should save you some typing 
-for compiling and running.  You could also consider the next section,
-:ref:`work-folder`.
-
 Requirements
 ------------
 
