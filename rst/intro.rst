@@ -1,4 +1,4 @@
-Introduction to the Notes
+Resources Online
 ============================
 
 These notes are designed for Comp 170 at Loyola University, Chicago.  
