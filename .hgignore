@@ -31,3 +31,5 @@ devel/makehtmlsepoffer
 all/
 maybe/
 newch2/
+rst/*.zip
+test/
