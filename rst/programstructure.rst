@@ -8,7 +8,7 @@ C# Program Structure
 
 We discuss the most basic syntax satisfied by all C# programs, which are plain text files,
 with names ending in ``.cs``.  There will be additions
-later but any program you can run will include:
+later, but any program you can run will include:
 
     | ``using System;`` 
     |
