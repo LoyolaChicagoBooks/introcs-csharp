@@ -42,10 +42,12 @@ or with initialization:
 
     **type** **variableName** ``=`` *initialValue* ``;``
 
-or both forms can be included in a list for the same type, for instance a list
+or there can be a list of variables of the same type, for instance a list
 of three variables:
 
     **type** **variableName1** ``,`` **variableName2** ``,`` **variableName3** ``;``
+
+Some or all of the variables in the list could also have initializers.
 
 Space is allocated for each variable named, according to its type.  Where there is
 an initializer, an initial value is set for the variable.
