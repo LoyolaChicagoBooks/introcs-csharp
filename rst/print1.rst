@@ -15,7 +15,7 @@ calculations. In a regular C# program run from a file like in
 :ref:`sample-program`, 
 you must explicitly give instructions to print to a 
 console or terminal window.  This will be a window like you see
-when running csharp.  It is the place where you started your program running.
+when running csharp.  
 
 This printing is accomplished through a function with a long name: ``Console.WriteLine``.
 Like with math, you can pass a function a value to work on, by placing it in
