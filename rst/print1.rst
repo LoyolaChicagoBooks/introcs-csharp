@@ -37,8 +37,8 @@ define the literal string inside the program.
 
 ``Console`` is a C# class maintained by the system, that
 interacts with the terminal or console window where text output 
-appears for the program.  A function defined in that class is WriteLine.
-To refer to a function like ``WriteLine`` in another class, you must indicate
+appears for the program.  A function defined in that class is ``WriteLine``.
+To refer to a function like ``WriteLine`` in a different class, you must indicate
 the location of the function with the "dot" notation shown:
 class name, then ``.``, then the function.  This  
 gives the more elaborate name needed in the program.
