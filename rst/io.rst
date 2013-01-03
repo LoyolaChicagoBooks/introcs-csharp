@@ -24,14 +24,16 @@ Here the data for the function comes from a line typed at the keyboard by the us
 so there is no need for a parameter between
 the parentheses: ``Console.ReadLine()``.  
 The resulting sequence of characters,
-typed before the user presses the Enter (Return) key
+typed before the user presses the Enter (Return) key,
 form the string *value* of the function.
 Syntactically in C#, 
 when a function with a value is used, it is an *expression* in the
 program, and the 
-expression evaluation is the value produced by the function.  
-An with any function producing a value,
-the value is *lost* unless it is immediately used.  
+expression evaluation is the value produced by the function. 
+This is the same as in normal use of functions in math.
+
+With any function producing a value,
+the value is *lost* unless it is *immediately* used.  
 Often this is done by immediately assigning the value to a variable like in ::
 
     string name;
@@ -41,9 +43,10 @@ or in the shorter ::
 
     string name = Console.ReadLine();
 
-Fine points:  Notice that in most operating systems you can edit and correct your line
+Fine point:  Notice that in most operating systems you can edit and correct your line
 before pressing the Return key.  This is handy, 
-but it means that the Return key *must* always be pressed to signal the end.  
+but it means that the Return key *must* always be pressed to signal the end
+of the response.  
 Hence a whole line must be read, and there is *no* function ``Console.Read()``.  
      
 
@@ -107,7 +110,7 @@ but there is an alternative:
 
 We omitted the long tail of the error message.  
 There is no decimal point in an ``int``.
-You see the fix with the corresponding function returning a double.
+You see the fix with the corresponding function that returns a double.
 
 Writing and Running Programs
 -----------------------------
