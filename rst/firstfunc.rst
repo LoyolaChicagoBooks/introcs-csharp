@@ -32,7 +32,7 @@ You would probably not repeat the whole song to let others know
 what to sing. You would give a request to sing via a descriptive
 name like "Happy Birthday to Emily".
 
-In C# we can also give a name like ``happyBirthdayEmily``, and
+In C# we can also give a name like ``HappyBirthdayEmily``, and
 associate the name with whole song by using a new
 *function definition*, also called a *method*. We will see many variations 
 on method definitions.  Later we will see definitions that are
@@ -76,7 +76,7 @@ in braces.  By convention the lines inside the braces are indented by a
 consistent amount. Three spaces is a common indentation.
 
 The whole definition does just that: *defines* the meaning of the
-name ``happyBirthdayEmily``, but it does not do anything else yet -
+name ``HappyBirthdayEmily``, but it does not do anything else yet -
 for example, the definition itself does not make anything be
 printed yet. This is our first example of altering the order of
 execution of statements from the normal sequential order. This is
@@ -87,7 +87,7 @@ Hence ``Main`` better refer to the newly defined function....
 
 Look at the first statement inside Main, line 15::
 
-    happyBirthdayEmily();
+    HappyBirthdayEmily();
 
 Note that the ``static void`` of the function definition is missing,
 but we still have the function name and parentheses. 
@@ -98,8 +98,12 @@ or function *invocation*.  In this simple situation the format is
 
     *function_name*\ ``()``
 
+While the convention for variable identifiers is to start with a lowercase
+letter, the convention for function names is to start with a capital letter.
+Hence ``HappyBirthdayEmily``, not ``happyBirthdayEmily``.
+
 Can you predict what the program will do?  Note the two function calls
-to ``happyBirthdayEmily``.  To see, load and run :repsrc:`birthday2/birthday2.cs`. 
+to ``HappyBirthdayEmily``.  To see, load and run :repsrc:`birthday2/birthday2.cs`. 
 
 .. index::
    double: function; execution sequence
@@ -139,5 +143,5 @@ crucial.  Be sure you follow the sequence detailed above.  In particular,
 be sure to distinguish function **definition** from function **call**.
 
 If it also happens to be Andre's birthday, we might define a
-function ``happyBirthdayAndre``, too. Think how to do that before
+function ``HappyBirthdayAndre``, too. Think how to do that before
 going on ....
