@@ -95,11 +95,12 @@ trailing 0's, a big double is expressed using a variant of scientific notation:
 C# does not have the typography for raised exponents.  Instead 
 literal values can use the E to mean
 "times 10 to the power", and the E is followed by and exponent integer
-that can be positive or negative.
+that can be positive or negative.  
+The whole double literal may not contain any embedded blanks.
 
-We give a comparison to the silent error handling with type ``int``, 
-and show off behavior that could be important if you do scientific computing
-with enormous numbers.  Note these special features of the ``double`` type:
+The lack of error handling with type ``int`` is not repeated with doubles. 
+We show behavior that could be important if you do scientific computing
+with enormous numbers:
 Arithmetic with the ``double`` type does not overflow silently as with 
 the integral types.  There are values for infinity and minus infinity and
 Not a Number (NaN): 
@@ -133,7 +134,7 @@ there is some arithmetic allowed with a finite number and infinity!
 Still some operations are not legal.
 Once a result turns into ``NaN``, no arithmetic operations change
 further results away from ``NaN``, 
-so there is a lasting record of a big error.
+so there is a lasting record of a big error!
 
 There is no such neat system for showing off small inaccuracies in ``double``
 arithmetic accumulating 
@@ -362,4 +363,5 @@ in sequence (or simple classical cryptographic codes):
     csharp> ch;
     'B'
 
+The capital letter one place after A is B.
 
