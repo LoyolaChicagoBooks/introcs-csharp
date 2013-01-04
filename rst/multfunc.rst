@@ -4,7 +4,7 @@ Multiple Function Definitions
 ==============================
 
 Here is example program :repsrc:`birthday3/birthday3.cs` where we add a function
-``happyBirthdayAndre``, and call them both. Guess what happens, and
+``HappyBirthdayAndre``, and call them both. Guess what happens, and
 then load and try it:
 
 .. literalinclude:: ../source/examples/birthday3/birthday3.cs
@@ -21,19 +21,19 @@ Detailed order of execution:
 #. Line 5: Start on ``Main``
 
 #. Line 7. This location is remembered as execution jumps to
-   ``happyBirthdayEmily``
+   ``HappyBirthdayEmily``
 
 #. Lines 11-17 are executed and Emily is sung to.
 
-#. Return to the end of Line 7: Back from ``happyBirthdayEmily``
+#. Return to the end of Line 7: Back from ``HappyBirthdayEmily``
    function call
 
-#. Line 8: Now ``happyBirthdayAndre`` is called as this location is
+#. Line 8: Now ``HappyBirthdayAndre`` is called as this location is
    remembered.
 
 #. Lines 19-25: Sing to Andre
 
-#. Return to the end of line 8: Back from ``happyBirthdayAndre``
+#. Return to the end of line 8: Back from ``HappyBirthdayAndre``
    function call, done with ``Main``; 
    at the end of the program
 

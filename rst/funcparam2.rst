@@ -24,13 +24,13 @@ The actual parameters in the function call are evaluated left to
 right, and then these values are associated with the formal
 parameter names in the function definition, also left to right. For
 example a function call with actual parameters,
-``f(actual1, actual2, actual3)``, calling a function ``f`` with
+``F(actual1, actual2, actual3)``, calling a function ``F`` with
 definition heading::
 
-	static void f(int formal1, int formal2, int formal3)
+	static void F(int formal1, int formal2, int formal3)
 
 acts approximately as if the first lines executed inside the called
-function ``f`` were ::
+function ``F`` were ::
 
 	formal1 = actual1; 
 	formal2 = actual2; 
