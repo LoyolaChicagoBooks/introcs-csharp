@@ -64,7 +64,7 @@ and then parentheses.
 A more general syntax for functions that just *do*
 something is
 
-    | ``static void`` **function_name**\ ``()``
+    | ``static void`` **FunctionName**\ ``()``
     | ``{``
     |    statements in the function body...
     | ``}``
@@ -96,7 +96,7 @@ the definition, and only then, executes the code inside the
 function definition. The term for this action is a *function call*
 or function *invocation*.  In this simple situation the format is
 
-    *function_name*\ ``()``
+    *FunctionName*\ ``()``
 
 While the convention for variable identifiers is to start with a lowercase
 letter, the convention for function names is to start with a capital letter.

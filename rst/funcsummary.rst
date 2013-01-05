@@ -21,7 +21,7 @@ Function definition
 
 #. The general syntax for defining a static function is
 
-    | ``static`` **returnTypeOrVoid** **function_name** ``(``  formal parameter list ``)``
+    | ``static`` **returnTypeOrVoid** **FunctionName** ``(``  formal parameter list ``)``
     | ``{``
     |    statements in the function body...
     | ``}``
@@ -58,7 +58,7 @@ Function Calls
 
 #.  A function call takes the form
 
-    **function_name** ``(``  actual parameter list ``)``
+    **FunctionName** ``(``  actual parameter list ``)``
     
     A function call makes the function definition be *executed*.
     
