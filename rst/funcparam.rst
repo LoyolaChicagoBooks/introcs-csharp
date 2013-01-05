@@ -35,7 +35,7 @@ so the type of ``person`` is ``string``.
 In between the parentheses of the function definition heading, we insert the variable
 name ``person``, preceded  by its type, ``string``.
 Then in the body of the definition
-of the function, person is used in place of the real data for any
+of the function, ``person`` is used in place of the real data for any
 specific person's name. Read and then run example program
 :repsrc:`birthday4/birthday4.cs`:
 
@@ -48,7 +48,7 @@ variable name is a *placeholder* for the real name of the person
 being sung to.  In the definition we give instructions for singing
 Happy Birthday *without* knowing the exact name of the person who might be sung to.
 
-Main now has two calls to the same function, 
+``Main`` now has two calls to the same function, 
 but between the parentheses, where there was the **placeholder** ``person`` 
 in the definition, now we have the **actual people** being sung to.
 The value between the parentheses here in the function call
@@ -58,7 +58,7 @@ the function execution. When the call is made, C# does this by
 associating the **formal** parameter name ``person`` with the **actual**
 parameter data, as in an assignment statement. In the first call,
 this actual data is ``'Emily'``. We say the actual parameter value
-is *passed* to the function foe execution.
+is *passed* to the function for execution.
 
 The execution in greater detail:
 
