@@ -2,7 +2,7 @@ using System;
 
 class Birthday4
 {
-    static void HappyBirthday(string person)
+   static void HappyBirthday(string person)
     {   
         Console.WriteLine ("Happy Birthday to you!");
         Console.WriteLine ("Happy Birthday to you!");
