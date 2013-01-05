@@ -12,7 +12,7 @@ later, but any program you can run will include:
 
     | ``using System;`` 
     |
-    | ``class`` **className** 
+    | ``class`` **ClassName** 
     | ``{``
     |    ``static void Main()``
     |    ``{``
@@ -20,6 +20,8 @@ later, but any program you can run will include:
     |
     |    ``}``
     | ``}``
+
+By convention class names are capitalized.
 
 You can see that both the example program :repsrc:`painting/painting.cs` and the lab program
 :repsrc:`hello_world/hello_world.cs` follow this pattern.  The discussion of these parts through 
