@@ -12,6 +12,8 @@ This chapter has introduced static functions:  those used in procedural programm
 as opposed to :ref:`instance-methods` used to 
 implement object-oriented programming. 
 
+References in square brackets link to fully discussions of summary items below.
+
 .. index::  function syntax
    ( ); function definition
 
