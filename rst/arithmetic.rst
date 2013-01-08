@@ -41,13 +41,8 @@ window in Windows, and enter the command ``csharp``.  You should see  :
     csharp>  
 
 The ``csharp>`` prompt tells you that the C# interpreter has started
-and is awaiting input. This allows you to create C# variables and
-execute C# statements without having to write a full program! 
-
-You can enter whole statements, ending with a semicolon.  Unlike 
-with a program you can just enter an expression (but followed by a semicolon)
-and the expression gets evaluated and printed on a line of its own.  
-We can test out arithmetic, for example.
+and is awaiting input. This allows you to create small bits of C# 
+and test them, interactively, without having to write a full program! 
 
 Play along with the examples here, entering what comes after the prompt:
 
@@ -56,8 +51,10 @@ Play along with the examples here, entering what comes after the prompt:
     csharp> 2 + 3;
     5
 
-The csharp program just has a read, evaluate, and print loop: the acronym is 
-*repl*.
+The csharp program just has a *read, evaluate, and print loop*: the acronym is 
+*repl*.  It evaluated the expression ``2 + 3`` and printed the result, on a line
+without a prompt.  Csharp can evaluate arbitrary C# expressions.  It is very handy for
+testing as you get used to new syntax.
 
 The csharp program is not line-oriented.  The semicolon indicates that
 you are finished with an entry.  You can easily forget it.  
@@ -246,16 +243,23 @@ Now predict and then try each of these expression in csharp:
 Finding remainders will prove more useful than you might think in
 the future!  Remember the strange ``%`` operator.
 
-When you are done with csharp, you can enter the special statement
-
-    quit;
-
-After we discuss variables and statements there is 
-:ref:`more about csharp <more-csharp>`.
-    
 .. note::
    The precedence of ``%`` is the same as ``/`` and ``*``, and hence
    higher than addition and subtraction, ``+`` and ``-``. 
 
+When you are *done with csharp*, you can enter the special statement
+
+    quit;
+
 There are some more details about numeric types in :ref:`value-types`.
+
+.. index:: expression
+
+We have been testing arithmetic expressions, with the word 
+*expression* used pretty much like with normal math.  More generally in C#
+an *expression* is any syntax that evaluates to a single value of some type.  
+We will introduce many more types and operations that can be used in expressions. 
+
+    
+
     
