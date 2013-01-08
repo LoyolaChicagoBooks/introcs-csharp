@@ -74,6 +74,55 @@ It includes all the function
 names in ``UIF``, and keeps your program from bombing out
 if the user enters an illegal format for a number.
 
+.. index::
+   double: documentation; function
+   
+.. _function-documentation:
+
+Function Documentation
+----------------------
+
+In keeping with :ref:`Two-Roles`, in future you will be a *consumer* of the library
+classes.  It is particularly important to document library classes with the 
+interface information users will need.  
+Documentation could be written in a separate document, but much developer history has
+shown that such documentation does not tend to either get written in the first place,
+or not updated well to stay consistent with updates in the code.  It is much more
+likely to be seen and maintained by the implementers if it sits right with the
+code, like our comments before the class and function headings.
+
+You will note that instead of the usual line comment syntax ``//``, we have added
+an extra ``/``, making ``///`.  That will also start a comment.  (The third ``/`` 
+is technically just a part of the comment.)  There is a special reason for the 
+notation:  Though it is convenient for the *implementer* of code to have the documentation
+right with the code, a *user* of the functions only needs the interface information
+found in good documentation.  The ``///`` lines before heading are specially recognized
+by separate automatic documentation generating programs.  
+
+There are many documentation
+generating programs and conventions.  
+For now we will just use plain text in the ``///`` lines.
+This is recognized by the MonoDevelop system. Now if you open the ``examples`` solution,
+in MonoDevelop, and edit 
+:repsrc:`addition3/addition3.cs`,
+you can place your mouse over ``UIF`` and a popup window shows the ``UIF`` class heading
+documentation.  
+
+If you move the mouse over ``PromptInt``, you should see the popup function
+signature and the function documentation.  If you change the two ``///`` lines
+in ``uif.cs`` above the ``PromptInt`` heading to start with just ``//``. 
+you no longer see the documentation part of the popup for 
+``PromptInt`` in the ``addition3.cs`` edit window. (Be sure to change back to ``///``.)
+
+There are more elaborate documentation conventions that can be used for
+MonoDevelop and other documentation generation programs.  We defer that discussion
+to a later appendix.
+
+This documentation also works inside a single program file.  If you have a long 
+program with lots of functions defined, this can also be helpful when calling
+one of your own functions.  You can avoid jumping
+around to check on the signature and use of your functions.
+
 Library Projects in MonoDevelop
 ----------------------------------------
 
