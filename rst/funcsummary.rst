@@ -52,6 +52,11 @@ Function definition
    of ``Main``, and we defer discussion of :ref:`command-line-param` until
    we have introduced :ref:`one-dim-arrays`. 
 
+#. There are various conventions for putting documentation just above the headings
+   of function definitions.  The official format, specified by C# and recognized by
+   MonoDevelop, involves putting the function interface description on 
+   consecutive lines
+   starting with ``///``.  [:ref:`function-documentation`] 
 
 .. index::  ( ); function call
    

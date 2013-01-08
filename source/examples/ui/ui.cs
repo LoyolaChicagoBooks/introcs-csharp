@@ -1,18 +1,18 @@
 using System;
 namespace IntroCS
 {  
-   // Console input functions with prompts and safer parsing
+   /// Console input functions with prompts and safer parsing
    public class UI 
    {
-      // After displaying the prompt, return a line from the keyboard.
+      /// After displaying the prompt, return a line from the keyboard.
       public static string PromptLine(string prompt)
       {
          Console.Write(prompt);
          return Console.ReadLine();
       }
       
-      // Prompt the user to enter an integer until the response is legal.
-      // Return the result as in int. 
+      /// Prompt the user to enter an integer until the response is legal.
+      /// Return the result as in int. 
       public static int PromptInt(string prompt)
       {
          string nStr = PromptLine(prompt).Trim();
@@ -23,8 +23,8 @@ namespace IntroCS
          return int.Parse(nStr);
       }
                                               
-      // Prompt the user to enter a decimal value until the response 
-      // is legal.  Return the result as a double. 
+      /// Prompt the user to enter a decimal value until the response 
+      /// is legal.  Return the result as a double. 
       public static double PromptDouble(string prompt)
       {
          string nStr = PromptLine(prompt).Trim();
@@ -35,9 +35,9 @@ namespace IntroCS
          return double.Parse(nStr);
       }
                                                  
-      // Prompt the user until a keyboard entry is an int
-      // in the range [lowLim, highLim].  Then return the int value 
-      // in range.  Append the range to the prompt.
+      /// Prompt the user until a keyboard entry is an int
+      /// in the range [lowLim, highLim].  Then return the int value 
+      /// in range.  Append the range to the prompt.
       public static int PromptIntInRange(string prompt, 
                                          int lowLim, int highLim)
       {
@@ -51,9 +51,9 @@ namespace IntroCS
         return number;
       }
            
-      // Prompt the user until a keyboard entry is a decimal
-      // in the range [lowLim, highLim].  Then return the double 
-      // value in range.  Append the range to the prompt.
+      /// Prompt the user until a keyboard entry is a decimal
+      /// in the range [lowLim, highLim].  Then return the double 
+      /// value in range.  Append the range to the prompt.
       public static double PromptDoubleInRange(string prompt, 
                                      double lowLim, double highLim)
       {
@@ -67,9 +67,9 @@ namespace IntroCS
         return number;
       }
            
-      // Prompt the user with a question. 
-      // Force an understandable keyboard response;
-      // Return true of false based on the final response.  
+      /// Prompt the user with a question. 
+      /// Force an understandable keyboard response;
+      /// Return true of false based on the final response.  
       public static Boolean Agree(string question)
       {
          string meanYes = "ytYT", meanNo = "nfNF",
@@ -85,7 +85,7 @@ namespace IntroCS
       
       // helper string testing functions
       
-      // True when s consists of only 1 or more digits.
+      /// True when s consists of only 1 or more digits.
       public static bool IsDigits(string s)
       {
          foreach( char ch in s) {
@@ -96,7 +96,7 @@ namespace IntroCS
          return (s.Length > 0);
       }
 
-      // True if s is the string form of an integer. 
+      /// True if s is the string form of an integer. 
       public static bool IsIntString(string s)
       {
          if (s.StartsWith("-")) {
@@ -105,7 +105,7 @@ namespace IntroCS
          return IsDigits(s);
       }
 
-      // Return true if s represents a decimal string. 
+      /// Return true if s represents a decimal string. 
       public static bool IsDecimalString(string s)
       {
          if (s.StartsWith("-")) {
