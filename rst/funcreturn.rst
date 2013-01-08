@@ -144,7 +144,7 @@ printing is one possibility, done in
 
 .. literalinclude:: ../source/examples/addition2/addition2.cs
 
-**In class recommendation**:  Improve example :repsrc:`painting.cs/painting.cs`
+**In class recommendation**:  Improve example :repsrc:`painting/painting.cs`
 with functions.  Copy it to a file :file:`painting_input.cs` in your
 own project and modify it.
 	
