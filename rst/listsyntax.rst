@@ -182,6 +182,26 @@ so ``var`` is handy with them::
 
 When initializing a generic object, you still need to remember both the angle braces 
 around the type and the parentheses for the parameter list after that.    
+
+.. index:: side effect
+
+An aside on the ``Remove`` method:  It both causes a side effect, changing the list,
+*and* it return a value.  If a function returns a value, 
+we typically use the function call as an 
+expression in a larger statement.  This is not necessary, as described in
+:ref:`not-using-ret-val`.  In that section we discussed the *mistake* of not
+using return values.  The ``Remove`` method illustrates that this is 
+not always a mistake:  If you just want the side effect, trying to remove an element,
+whether or not it is in the list, then there is no need to check for the return value.
+This complete C# statement is fine::
+
+  someList.Remove(element);
+
+You should generally think carefully before *defining* a function 
+that both has a side effect 
+and a return value.  Most functions that return a value do not have a side effect.  
+If you see a function used in the normal way as an expression, it is easy to forget that
+it was *also* producing some side effect.
   
 .. index::
    double: example; ReadLines
