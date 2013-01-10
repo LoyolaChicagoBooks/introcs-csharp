@@ -186,7 +186,7 @@ around the type and the parentheses for the parameter list after that.
 .. index:: side effect
 
 An aside on the ``Remove`` method:  It both causes a side effect, changing the list,
-*and* it return a value.  If a function returns a value, 
+*and* it returns a value.  If a function returns a value, 
 we typically use the function call as an 
 expression in a larger statement.  This is not necessary, as described in
 :ref:`not-using-ret-val`.  In that section we discussed the *mistake* of not
