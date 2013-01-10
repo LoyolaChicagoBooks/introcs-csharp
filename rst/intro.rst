@@ -5,7 +5,11 @@ These notes are designed for Comp 170 at Loyola University, Chicago.
 The materials are available to all on the web.
 Here are some important web links:
 
-*   http://introcs.cs.luc.edu is online version for your web browser.
+*   http://introcs.cs.luc.edu is the online text version for your web browser.
+
+*   https://www.youtube.com/playlist?list=PLc5TVkj91XZhxRSJHsDoJzX5K1XKBAFLH
+    is the growing YouTube playlist of videos based on book sections.   The numbers
+    at the beginning of the titles are chapter and section numbers from the text.
 
 *   The multiple production versions are generated largely by 
     `Sphinx <http://sphinx.pocoo.org/>`_ software from a common
@@ -34,6 +38,15 @@ Here are some important web links:
     Example file links throughout this text refer to the repository's latest
     versions of particular files that you should
     also have in your downloaded examples.
+    
+Except on very geometrically oriented topics, text-oriented learners may be 
+happiest just reading the book.  For those who learn best with a combination
+of spoken words combined with written words, the videos should be a good
+start.  Even if you use a video for a section, you are encouraged to review
+the written text afterward.  
+Then be aware of the written version for quick reference.
+The written text may include extra details and exercises, and it
+will have the latest revisions.
  
 Alternate Notes Formats
 -------------------------------------------   
