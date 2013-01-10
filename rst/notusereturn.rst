@@ -7,57 +7,34 @@
 Not using Return Values
 ==================================
 
-Some functions are void, and get used as a whole instruction in your code:  
-They go off and do something, leaving some lasting side effect; 
-come back, and are ready to go on to the next task.
-
 Some functions return a value, and get used as an expression in a larger calling statement.
 The calling statement uses the value returned.  
 Usually the only effect of such a function is in the
 value returned.
 
-Usually there is this division:  
+Some functions are ``void``, and get used as a whole instruction in your code:  
+Without returning a value, the only way to be useful is to do something that 
+leaves some lasting *side effect*:  make some change to the system that persists after
+the termination of the function and its local variables disappear.  
+The only such effect that we have seen so 
+far is to print something that remains on the console screen.  
+Later we will talk about other persistent changes 
+to values in objects, locations in files, ....
 
-#. Void; do something as whole instruction, with a side effect in the larger system
+Usually there is this division in the behavior of functions, returning a value or not:  
+
+#. ``void``: do something as whole instruction, with a side effect in the larger system.
 #. Return a value to use in a larger calling statement
 
-It is legal to *both* accomplish something with a side effect in the system,
-like add to a set, leaving it changed, *and* return a value.
 
-An example is the method ``Add`` for :ref:`sets`: 
+It is legal to do *both*: accomplish something with a side effect in the system, *and*
+return a value.  We will see examples of that later, like in :ref:`sets`.
 
-  It can modify the set - 
-  a change that lives on after the method terminates,
-  
-*and*
-
-  it returns a boolean value, so ``someSet.Add(element)`` can be used
-  in a larger statement, making note of the boolean value returned.
-  
-There is a purpose to the return value in this situation:  Adding to a set
-may or may not change the set, since sets ignore duplicates.  The method returns 
-true if the set was changed.
-
-You may or may not find that returned information useful.  You might use it,
-as in this trivial example::
-
-    bool changed = someSet.Add(element));
-    Console.WriteLine("Set changed: {0}.", changed);
-    
-or if you do not care about the returned value you can *ignore* it, and use
-the method call as a *whole* statement, as you would use a void method::
-
-    someSet.Add(element);
-
-The system does not complain if a return value is ignored and essentially thrown away.
-
-You should generally think carefully before writing a function that both has a side effect 
-and a return value.  Most functions that return a value do not have a side effect.  
-If you see a function used in the normal way as an expression, it is easy to forget that
-it was *also* producing some side effect.
-
-Another common error is to forget to assign a return value to a variable when that is what
-you actually want for the logic of your program.   For example with this definition::
+This means that the compiler needs to permit the programmer to ignore a 
+returned value, and use a function returning a value as a whole statement.  
+However, this allows
+a common error: forgetting to immediately use a returned value that your program logic
+really needs.   For example with this definition::
 
     static int CalcResult(int param)
     {
@@ -67,30 +44,36 @@ you actually want for the logic of your program.   For example with this definit
        return result;
     }
     
-you might try to use it in this bad code::
+you might try to use it in this bad code, intending to use the ``result``
+from CalcResult::
 
-    CalcResult(x);
-    Console.WriteLine(result);
+    static void BadUseResult(int x)
+    {
+       int result = 0;
+       CalcResult(x);
+       Console.WriteLine(result);
+    }
     
-You went to the trouble to calculate ``result`` in the function.  
-Why can you not just use it this way?
-
+In fact you would always print 0, ignoring the ``result`` calculated in ``CalcResult``.
 The reason is the *scope* rules for functions:  The local variable ``result`` 
-disappears when the function returns.  It has no meaning later in the calling function.  
+disappears when the ``CalcResult`` function returns.  
+It has no meaning later in the calling function, ``BadUseResult``.   
 
-Any of the following alternatives are OK::
+We set up the worst situation, where there is a logical error, 
+but not an error shown by the compiler.  More commonly a student leaves out
+the ``int result = 0;`` line, incorrectly relying on the declaration of ``result``
+in ``CalcResult``.  At least in that situation a compiler error brings attention
+to the problem.
 
-    int result = CalcResult(x);  //remember it!
-    Console.WriteLine(result);
-   
-    //OR
+You can actually use the result from ``CalcResult`` with    ::
+
+    int value = CalcResult(x);  //store the returned value!
+    Console.WriteLine(value);
+
+or  ::
     
-    int value = CalcResult(x);  // no need for names to match
-    Console.WriteLine(value);  
-   
-    //OR
-    
-    Console.WriteLine(CalcResult(x));  
-    
-The last version works as long as you do not need the 
-returned value in another place, later.
+    Console.WriteLine(CalcResult(x)); // immediately use the returned value 
+       
+This version works as long as you do *not* need the 
+returned value in another place, later, since you do not remember it past that
+one statement.
