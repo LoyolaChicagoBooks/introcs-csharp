@@ -30,8 +30,8 @@ and the parentheses after the method name are empty.  The general method syntax 
 More string methods are listed below, some with further parameters.
 
 Data can also be associated with object *properties*.  
-A property of a string is its Length (an int).  References to property values
-use dot notation but do not have a parameter list at the end::
+A property of a string is its ``Length`` (an ``int``).  References to property values
+use dot notation but do not have a parameter list in parentheses at the end::
 
     csharp> string s = "Hello";
     csharp> s.Length;
