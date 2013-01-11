@@ -73,7 +73,7 @@ the class ``UIF``.
    In MonoDevelop, if you use a file from a library project, 
    be sure that the current project includes 
    a *reference* to the library project. If you expand the references in the MonoDevelop 
-   project addition3, by clicking on the References line in the solution pod, 
+   project addition3, by clicking on the References line in the solution pad, 
    you should see the project ui.  
 
 Shortly we will come to making your own :ref:`library-projects-in-monodevelop`.   
@@ -154,7 +154,7 @@ Try adding a reference yourself.  Follow these instructions:
 #.  Create another regular Console project, addition3, in your *same* solution, 
     and copy in our :repsrc:`addition3/addition3.cs`, so that is the only file.
     
-#.  In the Solutions pod, in your addition3 project,
+#.  In the Solutions pad, in your addition3 project,
     click on the References entry just inside the project.
     You should see that the project is automatically set up to reference System.
     

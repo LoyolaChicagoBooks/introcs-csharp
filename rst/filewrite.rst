@@ -12,16 +12,16 @@ Writing Files
 Try the following:
 
 #.  In monoDevelop build, *not* run, the project :repsrc:`first_file`.  Build is
-    the first selection in the local popup menu for first_file in the Solution pod. 
+    the first selection in the local popup menu for first_file in the Solution pad. 
     Recall to get the local popup menu
-    * go to the Solution pod
+    * go to the Solution pad
     * right click on the project (Mac control-click)
 
 #.  Next open an operating system directory window for the project.
     With MonoDevelop open, a quick way to do that is to go to the same popup window,
     and this time select "Open Containing Folder".
 
-#.  Besides the project files from the Solutions pod, in the directory window
+#.  Besides the project files from the Solutions pad, in the directory window
     you should also see a folder
     :file:`bin`.  Change to that folder and then to its sub-folder :file:`Debug`.
     This is where the build step put its result :file:`first_file.exe` and debug

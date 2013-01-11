@@ -226,7 +226,7 @@ Running the Tests
 ---------------------------
 
 In MonoDevelop, run the Run rational_nunit project.  
-A test pod should appear and show something like
+A test pad should appear and show something like
 
 .. image:: images/NUnitTestMonoDevelop.png
 
