@@ -17,11 +17,11 @@ It turns out that the semicolon is all you need to have a legal statement::
     ;
     
 We will see places that it is useful, but
-meanwhile it can cause errors: Although you may be hard pressed to
-remember to put semicolons at the end of all your statements, and may
-get compulsive in response about adding them at the end of statement
-lines, be careful NOT to put one at the end of a method heading or 
-an if condition::
+meanwhile it can cause errors: You may be hard pressed to
+remember to put semicolons at the end of all your statements, and in response you may
+get compulsive about adding them at the end of statement
+lines.  Be careful NOT to put one at the end of a method heading or 
+an ``if`` condition::
 
     if ( x < 0); // WRONG PROBABLY!
         Console.WriteLine(x);
@@ -30,7 +30,7 @@ Remember indentation and newlines are only significant for humans. The
 two lines above are equivalent to::
 
     if ( x < 0)
-       ; // Do nothing as statement when the condition is true
+       ;  // Do nothing as statement when the condition is true
     Console.WriteLine(x); // past if statement - do it always
 
 (Whenever you do need an empty statement, you are encouraged to put the
@@ -39,8 +39,8 @@ semicolon all by itself on a line, as above.)
 This code is deadly, since it compiles and is almost surely 
 *not* what you mean.
 
-If you always put an open brace at the end of the line of a condition, 
-you are less likely to make this error.
+If you always put an open brace *directly* after the condition in an ``if`` statement, 
+you will not make this error.
 
 The corresponding error at the end of a method heading will at least 
 generate a compiler error, though it may appear cryptic::
@@ -59,7 +59,7 @@ Match Wrong ``if`` With ``else``
 
 If you do not consistently put the substatements for the true
 and false choices inside braces, you can run into problems from
-the fact that the else part of an if statement is optional. 
+the fact that the else part of an if statement is *optional*. 
 Even if you use braces consistently, 
 you may well need to read code that does not place
 braces around single statements. If C# understood indentation as

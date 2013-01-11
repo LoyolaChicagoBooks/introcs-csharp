@@ -19,6 +19,9 @@ chapter, particularly keep handy :ref:`string-methods-length`.
 Be mindful of the processes developed in class filling in
 :ref:`solve-string-replace`.
 
+Parts 2 and 4 also depend on :ref:`If-Statements` 
+through :ref:`More-Conditional-Expressions`.
+
 Design, compile and run a C# program to accomplish each of
 the following tasks. Add one part at a time and test before trying the
 next one. The program can just include a Main method, or it is neater to
