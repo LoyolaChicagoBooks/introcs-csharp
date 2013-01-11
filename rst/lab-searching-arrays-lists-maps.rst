@@ -4,7 +4,7 @@
 Lab: Performance
 =================
 
-In the sorting notes (see :ref:`sorting`) we took advantage of a few ideas
+In :ref:`sorting` we took advantage of a few ideas
 to show how to do basic 
 benchmarking to compare the various approaches.
 

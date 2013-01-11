@@ -147,7 +147,7 @@ The ``WriteLine`` function can take parameters in different ways:
 - It can take a string parameter followed by any number of parameters used to 
   substitute into the initial format string.
 - It can take no parameters, and just advance to the next line (not used yet in
-  these notes).
+  this book).
   
 Though each of these uses has the same name, ``Console.WriteLine``, 
 they are technically all different functions:  A function is not just recognized

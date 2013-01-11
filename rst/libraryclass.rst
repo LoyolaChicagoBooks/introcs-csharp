@@ -16,9 +16,11 @@ the example program :repsrc:`addition2/addition2.cs`.  In that case there were r
 integers.  Clearly another common situation is to prompt for a string.  We can create 
 functions to do all these things and more, and embed them into a class for an
 interactive program.  
+
 A neater thing is to put them as a class in a separate library
 that can be used directly for multiple programs.  We can create functions ``PromptLine``,
 ``PromptInt``, and  ``PromptDouble``, and put them in their own class, ``UIF`` 
+(for User Input First version)
 in project ui's file :repsrc:`uif.cs <ui/uif.cs>`.  
 We explain the namespace line after the code:
 
@@ -34,7 +36,7 @@ same class names.
 
 Once we start writing and using multiple classes at once, it is a good idea for us to 
 specify our own namespace.  We will consistently use ``IntroCS`` in our multi-file
-examples in these notes.  
+examples in this book.  
 
 Specifying a namespace makes it possible for all other classes in the 
 same namespace to reference *public* parts of the current class, and vice-versa.
@@ -46,7 +48,7 @@ The code included in a namespace is enclosed in braces, so the general syntax is
    |     class definition(s)...
    | ``}``   
 
-We will keep user interface library classes like this one, :repsrc:`uif.cs <ui/uif.cs>`, 
+We will keep user input library classes like this one, :repsrc:`uif.cs <ui/uif.cs>`, 
 in a project ui.
 
 Notice that the functions we want accessible in ``UIF`` 
@@ -65,8 +67,9 @@ the class ``UIF``.
 .. warning::
 
    If you use a file from a library project, be sure that the current project includes 
-   a *reference* to the file. If you expand the references in the MonoDevelop 
-   project addition3, you should see the project ui.  
+   a MonoDevelop *reference* to the file. If you expand the references in the MonoDevelop 
+   project addition3, by clicking on the line in the solution pod, 
+   you should see the project ui.  
    
 Though we have not discussed all the C# syntax needed yet, there is also an 
 improved class ``UI`` in the ui project that we discuss later.

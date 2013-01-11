@@ -308,7 +308,7 @@ This sort is a more advanced example that uses *recursion*.
 .. later 
    
    We're going to explain it 
-   elsewhere in our notes/book.
+   elsewhere in our book.
    
    We'll have a bit more to say about this algorithm in our discussion of recursion.
 

@@ -36,4 +36,4 @@ the same way, due to the fact the reference types can have aliases, and value ty
 
 There are some more complicated situations where there are further distinctions between
 classes and structs, but we shall not concern ourselves 
-with those fine advanced points in these notes.
+with those fine advanced points in this book.

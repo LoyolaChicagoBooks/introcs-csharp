@@ -199,7 +199,7 @@ As you think how to break this game into parts, also think how the parts interac
 The code that generated the exchange above is the 
 project folder :repsrc:`csproject1`.
 
-The code uses many of the topics discussed so far in these notes.
+The code uses many of the topics discussed so far in this book.
 
 We will add some features from another meaning of :ref:`Interface`,
 and discuss the revision in project

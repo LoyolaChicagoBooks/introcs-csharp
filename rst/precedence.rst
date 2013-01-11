@@ -6,7 +6,7 @@ Precedence of Operators
 ==========================
 
 Earlier lines have higher precedence.  
-Only operators used in these notes are included:
+Only operators used in this book are included:
 
 ..  code-block:: none
 
