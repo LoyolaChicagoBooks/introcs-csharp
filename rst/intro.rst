@@ -29,7 +29,7 @@ Here are some important web links:
     
     The *essential resource* to download and unzip onto your machine is the 
     
-       `course example file <http://introcs.cs.luc.edu/book/download/comp170code.zip>`_
+       `course example file <http://introcs.cs.luc.edu/book/latest/download/default/source.zip>`_
     
 *   To quickly browse and view individual files in the examples folder, go to
        
@@ -40,8 +40,8 @@ Here are some important web links:
     also have in your downloaded examples.
     
 Except on very geometrically oriented topics, text-oriented learners may be 
-happiest just reading the book.  For those who learn best with a combination
-of spoken words combined with written words, the videos should be a good
+happiest just reading the book.  For those who learn best with
+spoken words combined with written words, the videos should be a good
 start.  Even if you use a video for a section, you are encouraged to review
 the written text afterward.  
 Then be aware of the written version for quick reference.
@@ -53,29 +53,26 @@ Alternate Notes Formats
 
 You may use any of the C# Notes formats:
 
-- `Web pages online <http://introcs.cs.luc.edu/book/html/default>`_ (Sphinx default theme) 
+- `Web pages online <http://introcs.cs.luc.edu/book/latest/html/default/>`_ (Sphinx default theme) 
   or a version with the same content and 
-  `a responsive web theme <http://introcs.cs.luc.edu/book/html/bootstrap>`_ 
+  `a responsive web theme <http://introcs.cs.luc.edu/book/latest/html/bootstrap>`_ 
   (best for mobile devices).
 
 - Download a
-  `zip file <http://introcs.cs.luc.edu/book/download/default/comp170html.zip>`_
+  `zip file <http://introcs.cs.luc.edu/book/latest/download/default/comp170html.zip>`_
   of the html web pages to unzip and browse *locally*.  
   Start your browser on the page index.html.	
   Or if you prefer, download
-  `the version with a responsive theme <http://introcs.cs.luc.edu/book/download/bootstrap/comp170html.zip>`_.
+  `the version with a responsive theme <http://introcs.cs.luc.edu/book/latest/download/bootstrap/comp170html.zip>`_.
   Unzip, open the index file, and all the pages are perfectly set up and linked.  
   However the *search capacity does not work* on a local copy, unless you have 
   a server going on your local machine....   
   In any case, you can still find things through the table of contents and the index links.
   
-- `PDF file <http://introcs.cs.luc.edu/book/download/comp170.pdf>`_ 
+- `PDF file <http://introcs.cs.luc.edu/book/latest/download/default/comp170.pdf>`_ 
   in fixed paged format for printing
   and for somewhat prettier computer viewing if your screen is wide enough.
 
-- `eBook file <http://introcs.cs.luc.edu/book/download/comp170.epub>`_ 
+- `eBook file <http://introcs.cs.luc.edu/book/latest/download/default/comp170.epub>`_ 
   for offline reading on smartphones and tablets
   (or desktop computers running a soft reader application).
-
-- These and possible additional file formats are all linked at
-  http://introcs.cs.luc.edu/book/download.
