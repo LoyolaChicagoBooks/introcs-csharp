@@ -4,11 +4,11 @@
 Some Instance Methods and the Length Property
 =================================================
 
-Thus far we have not emphasized the use of objects, or even noted 
-what is an object.  Strings are a special type in C#. We have
+Strings are a special type in C#. We have
 used string literals as parameters to functions and we have used the 
 special concatenation operator ``+``.
-In fact strings are objects.  Like other objects,
+Thus far we have not emphasized the use of objects, or even noted 
+what is an object.  In fact strings are objects.  Like other objects,
 strings have a general notation for functions that are specially tied to the 
 particular type of object.  These functions are called *instance methods*.
 They always act on an object of the particular class, but a reference to the
@@ -21,7 +21,7 @@ a dot as in::
 
 ``ToUpper`` (converting to upper case) is particular action that makes sense
 with strings.  It take s (the string object reference before the dot in this example)
-and returns a new string (in upper case).  Since this action
+and returns a *new* string in upper case, based on ``s``.  Since this action
 depends only on the string itself, no further parameters are necessary,
 and the parentheses after the method name are empty.  The general method syntax is
 
