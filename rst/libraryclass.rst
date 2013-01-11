@@ -38,6 +38,8 @@ Once we start writing and using multiple classes at once, it is a good idea for 
 specify our own namespace.  We will consistently use ``IntroCS`` in our multi-file
 examples in this book.  
 
+.. index:: public
+
 Specifying a namespace makes it possible for all other classes in the 
 same namespace to reference *public* parts of the current class, and vice-versa.
 
