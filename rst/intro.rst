@@ -1,7 +1,7 @@
 Resources Online
 ============================
 
-These notes are designed for Comp 170 at Loyola University, Chicago.  
+This book is designed for Comp 170 at Loyola University, Chicago.  
 The materials are available to all on the web.
 Here are some important web links:
 

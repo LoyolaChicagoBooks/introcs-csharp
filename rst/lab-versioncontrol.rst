@@ -63,7 +63,7 @@ In this lab, we're going to learn:
 
 #. How to do your work at home and in the lab.
 
-#. How to get our notes, examples, and projects (now that that you know how
+#. How to get our book, examples, and projects (now that that you know how
    to use Mercurial).
 
 Before We Proceed
@@ -580,12 +580,12 @@ is required. We're not going into all of those details in this lab, of course, b
 likely revisit this topic as we get closer to the team project, which we think will make
 you thankful for having a version control system.
 
-Getting our notes, examples, and projects
+Getting our book, examples, and projects
 -----------------------------------------
 
 We're going to conclude by taking this opportunity to introduce you to how *we* (Drs. 
 Harrington and Thiruvathukal) are actually using the stuff we are teaching to work as 
-a team on developing the course notes and examples. 
+a team on developing the book and examples. 
 
 #. Pick a different location (outside of your repository folder and its subfolders) 
    to check out our stuff from Bitbucket::
@@ -619,9 +619,9 @@ a team on developing the course notes and examples.
 #. You can explore introcs-csharp/source/examples to see our programs. 
 
 #. There are other folders, too. The ``rst`` folder contains the "source code" for the
-   notes themselves. The ``devel`` folder contains scripts to build the HTML, PDF, and ePub
-   versions of our notes--using a cool system named Sphinx (from http://sphinx.pocoo.org).
+   book itself. The ``devel`` folder contains scripts to build the HTML, PDF, and ePub
+   versions of our book--using a cool system named Sphinx (from http://sphinx.pocoo.org).
    It's well beyond the scope of our course to talk about this in any kind of detail but
    suffice it to say, we use version control to coordinate our work to create these 
-   course notes and will continue to do so when it comes to making improvements in this
+   materials and will continue to do so when it comes to making improvements in this
    and future courses.

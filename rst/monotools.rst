@@ -80,7 +80,7 @@ syntax.
 
 As there is significant evolution of both the Microsoft
 and Mono *toolchains*--a fancy word we want you to know and a more
-elegant way of saying SDK--we'll issue updates to these notes.
+elegant way of saying SDK--we'll issue updates to this book.
 
 .. index::
    double: mono; installation

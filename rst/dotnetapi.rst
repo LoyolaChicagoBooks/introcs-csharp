@@ -6,7 +6,7 @@
 ====================
 
 
-These notes can only introduce so many classes and methods from the C# library.  
+This book can only introduce so many classes and methods from the C# library.  
 You should browse the MSDN .Net Framework Class Library's online documentation.  
 
     http://msdn.microsoft.com/en-us/library/gg145045.aspx

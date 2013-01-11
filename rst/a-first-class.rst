@@ -453,7 +453,7 @@ a string, you need a ``ToString`` method with the exact same heading
 as the ``ToString`` for a Rational.    
 
 A more complete discussion of ``override`` would lead us into class hierarchies and 
-inheritance, which we are not emphasizing in these notes.
+inheritance, which we are not emphasizing in this book.
 
 The whole code for Rational is in :repsrc:`rational_nunit/rational.cs`.
 
