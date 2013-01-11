@@ -29,9 +29,9 @@ We explain the namespace line after the code:
 .. index:: 
    double: namespace; IntroCS
 
-We have been ``using System;`` in every program.  ``System`` is a *namespace* that 
+We have been ``using System`` in every program.  ``System`` is a *namespace* that 
 collects a particular group of class names, making them available to the program,
-and distinguishing any classes in a different namespace that might have the 
+and distinguishes them form any classes in a different namespace that might have the 
 same class names.  
 
 Once we start writing and using multiple classes at once, it is a good idea for us to 
