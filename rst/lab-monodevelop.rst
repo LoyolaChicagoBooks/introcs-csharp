@@ -65,15 +65,15 @@ We start by creating a *solution* with a project in it.
      to this *solution*. 
 
 #. Look at the MonoDevelop window that appears.  It should have two main sub-windows or 
-   "Pods" as MonoDevelop calls them.  A narrow one on the left is the Solution pod,
+   "Pads" as MonoDevelop calls them.  A narrow one on the left is the Solution pad,
    containing a hierarchical view of the solution.  You should see your solution name
    at the top and hello under that.  Folders have a little triangle shown to their 
    left.  You can click on the triangle.  A triangle pointing down, 
    means the inside of the folder is displayed.  A triangle pointing to the right
    means the contents are not being displayed.
    
-   A larger file editing pod is to the right, for the file MonoDevelop created,
-   main.cs.  If it does not appear, double click on main.cs in the solution pod.  
+   A larger file editing pad is to the right, for the file MonoDevelop created,
+   main.cs.  If it does not appear, double click on main.cs in the solution pad.  
    you will notice that the starter MonoDevelop
    gives you is a traditional first program, printing "Hello, World!". 
    In the current versions of mono, a new C#
@@ -83,7 +83,7 @@ We start by creating a *solution* with a project in it.
    
 #. Now you can actually *run* the program defined by this project:
 
-   - *Right* click on the hello folder in the solution pod.
+   - *Right* click on the hello folder in the solution pad.
    - Select *Build Hello* or *Rebuild Hello*.
    - If the build was successful, which it will be, you will see
      *Build successful.* in the status line.
@@ -102,10 +102,10 @@ We start by creating a *solution* with a project in it.
      
 #. The program is a bit generic.  We have the convention of naming
    source file in a one-file project like the project name:
-   Right click on main.cs in the solution pod, and select rename.  
+   Right click on main.cs in the solution pad, and select rename.  
    Enter hello (keeping the .cs).
    
-   Also rename the class to match in the edit pod.  
+   Also rename the class to match in the edit pad.  
    Classes get capitalized:  make ``Hello`` replace ``MainClass``.
    
    This program still has features that were not in :repsrc:`painting/painting.cs`.
@@ -123,7 +123,7 @@ We start by creating a *solution* with a project in it.
     
    
 #. You can now add further projects.  To add a new project in your solution,
-   *right* click on the solution name in the solution pod, select Add,
+   *right* click on the solution name in the solution pad, select Add,
    and in the submenu select New project.
    
    You see a window much like when creating a solution, except there is no
@@ -131,7 +131,7 @@ We start by creating a *solution* with a project in it.
    way, giving a new name for the project, like lab1.
 
 
-TODO:  redo images, viewing pods, copying files from the examples....
+TODO:  redo images, viewing pads, copying files from the examples....
    
 ..  old - how use?
 
