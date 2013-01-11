@@ -45,7 +45,7 @@ To be completed in the lab
 The following is the code for a very well-known program, *Hello,
 World!*:
 
-.. literalinclude:: ../source/examples/hello_world/hello_world.cs
+.. literalinclude:: ../source/examples/hello/hello.cs
    :language: csharp
    :emphasize-lines: 9
    :linenos:

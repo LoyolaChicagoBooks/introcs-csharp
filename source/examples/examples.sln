@@ -79,8 +79,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "good_sum", "good_sum\good_s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grade1", "grade1\grade1.csproj", "{14DEC6D6-7FC5-423C-8186-ABA279819FF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hello_world", "hello_world\hello_world.csproj", "{9D0B68A4-956F-49C7-ADF3-1A52A3F73D53}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hello_you1", "hello_you1\hello_you1.csproj", "{E87BDF7C-E959-463F-89DE-8C585E1BB022}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hello_you2", "hello_you2\hello_you2.csproj", "{F51B149E-3A15-4350-98AF-A8C41718B222}"
@@ -194,8 +192,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "path", "path\path.csproj", "{47962E12-EDDA-4CE6-91B9-02CD73A9C07C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs_project1", "cs_project1\cs_project1.csproj", "{3AB6647B-77BB-4662-96A8-906FCF233D78}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{651DCE63-F44F-4279-80A3-3D78BE5CA099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -388,12 +384,6 @@ Global
 		{648AC1C9-8E52-4CA8-BE69-83769907823E}.Debug|x86.Build.0 = Debug|x86
 		{648AC1C9-8E52-4CA8-BE69-83769907823E}.Release|x86.ActiveCfg = Release|x86
 		{648AC1C9-8E52-4CA8-BE69-83769907823E}.Release|x86.Build.0 = Release|x86
-		{651DCE63-F44F-4279-80A3-3D78BE5CA099}.Debug|x86.ActiveCfg = Debug|x86
-		{651DCE63-F44F-4279-80A3-3D78BE5CA099}.Debug|x86.Build.0 = Debug|x86
-		{651DCE63-F44F-4279-80A3-3D78BE5CA099}.Default|Any CPU.ActiveCfg = Debug|x86
-		{651DCE63-F44F-4279-80A3-3D78BE5CA099}.Default|Any CPU.Build.0 = Debug|x86
-		{651DCE63-F44F-4279-80A3-3D78BE5CA099}.Release|x86.ActiveCfg = Release|x86
-		{651DCE63-F44F-4279-80A3-3D78BE5CA099}.Release|x86.Build.0 = Release|x86
 		{69E2E34C-0F86-4B98-92E0-D64376E24DC2}.Debug|x86.ActiveCfg = Debug|x86
 		{69E2E34C-0F86-4B98-92E0-D64376E24DC2}.Debug|x86.Build.0 = Debug|x86
 		{69E2E34C-0F86-4B98-92E0-D64376E24DC2}.Release|x86.ActiveCfg = Release|x86
@@ -464,10 +454,6 @@ Global
 		{926122E3-566B-4595-8928-E2DE9B3AEC8D}.Default|Any CPU.Build.0 = Debug|x86
 		{926122E3-566B-4595-8928-E2DE9B3AEC8D}.Release|x86.ActiveCfg = Release|x86
 		{926122E3-566B-4595-8928-E2DE9B3AEC8D}.Release|x86.Build.0 = Release|x86
-		{9D0B68A4-956F-49C7-ADF3-1A52A3F73D53}.Debug|x86.ActiveCfg = Debug|x86
-		{9D0B68A4-956F-49C7-ADF3-1A52A3F73D53}.Debug|x86.Build.0 = Debug|x86
-		{9D0B68A4-956F-49C7-ADF3-1A52A3F73D53}.Release|x86.ActiveCfg = Release|x86
-		{9D0B68A4-956F-49C7-ADF3-1A52A3F73D53}.Release|x86.Build.0 = Release|x86
 		{9DA0448B-68FE-4092-8C58-101A8656FEC0}.Debug|x86.ActiveCfg = Debug|x86
 		{9DA0448B-68FE-4092-8C58-101A8656FEC0}.Debug|x86.Build.0 = Debug|x86
 		{9DA0448B-68FE-4092-8C58-101A8656FEC0}.Release|x86.ActiveCfg = Release|x86

@@ -24,7 +24,7 @@ later, but any program you can run will include:
 By convention class names are capitalized.
 
 You can see that both the example program :repsrc:`painting/painting.cs` and the lab program
-:repsrc:`hello_world/hello_world.cs` follow this pattern.  The discussion of these parts through 
+:repsrc:`hello/hello.cs` follow this pattern.  The discussion of these parts through 
 line 6 in
 :ref:`sample-program` are about all we have to say at this point.  For now this
 is the boilerplate code.  We will make additions as necessary.  We choose not to
