@@ -66,11 +66,14 @@ the class ``UIF``.
 
 .. warning::
 
-   If you use a file from a library project, be sure that the current project includes 
-   a MonoDevelop *reference* to the file. If you expand the references in the MonoDevelop 
-   project addition3, by clicking on the line in the solution pod, 
+   In MomoDevelop, if you use a file from a library project, 
+   be sure that the current project includes 
+   a *reference* to the file. If you expand the references in the MonoDevelop 
+   project addition3, by clicking on the References line in the solution pod, 
    you should see the project ui.  
-   
+
+Shortly we will come to making your own :ref:`library-projects-in-monodevelop`.   
+
 Though we have not discussed all the C# syntax needed yet, there is also an 
 improved class ``UI`` in the ui project that we discuss later.
 It includes all the function
@@ -90,7 +93,8 @@ classes.  It is particularly important to document library classes with the
 interface information users will need.  
 Documentation could be written in a separate document, but much developer history has
 shown that such documentation does not tend to either get written in the first place,
-or not updated well to stay consistent with updates in the code.  It is much more
+or not updated well to stay consistent with updates in the code.  
+Inconsistent documentation is useless.  Documentation is much more
 likely to be seen and maintained by the implementers if it sits right with the
 code, like our comments before the class and function headings.
 
@@ -100,21 +104,22 @@ is technically just a part of the comment.)  There is a special reason for the
 notation:  Though it is convenient for the *implementer* of code to have the documentation
 right with the code, a *user* of the functions only needs the interface information
 found in good documentation.  The ``///`` lines before heading are specially recognized
-by separate automatic documentation generating programs.  
+by *separate* automatic documentation generating programs.  
 
 There are many documentation
 generating programs and conventions.  
 For now we will just use plain text in the ``///`` lines.
-This is recognized by the MonoDevelop system. Now if you open the ``examples`` solution,
-in MonoDevelop, and edit 
+This is recognized by the MonoDevelop system. If you open our ``examples`` solution,
+in MonoDevelop, and edit window for
 :repsrc:`addition3/addition3.cs`,
 you can place your mouse over ``UIF`` and a popup window shows the ``UIF`` class heading
 documentation.  
 
-If you move the mouse over ``PromptInt``, you should see the popup function
-signature and the function documentation.  If you change the two ``///`` lines
+If you move the mouse over ``PromptInt``, you should see the popup label showing 
+the function signature and the function documentation.  
+If you change the two ``///`` lines
 in ``uif.cs`` above the ``PromptInt`` heading to start with just ``//``. 
-you no longer see the documentation part of the popup for 
+you should no longer be able to see the documentation part of the popup for 
 ``PromptInt`` in the ``addition3.cs`` edit window. (Be sure to change back to ``///``.)
 
 There are more elaborate documentation conventions that can be used for
@@ -124,7 +129,9 @@ to a later appendix.
 This documentation also works inside a single program file.  If you have a long 
 program with lots of functions defined, this can also be helpful when calling
 one of your own functions.  You can avoid jumping
-around to check on the signature and use of your functions.
+around to be reminded of the signature and use of your functions.
+
+.. _library-projects-in-monodevelop:
 
 Library Projects in MonoDevelop
 ----------------------------------------
@@ -136,12 +143,12 @@ Try adding a reference yourself.  Follow these instructions:
     
 #.  Then add the project name ui, and continue like when starting previous projects.
     
-#.  Copy in the files from
+#.  Copy in the ``.cs`` files from
     our ui project, :repsrc:`uif.cs <ui/uif.cs>` and :repsrc:`ui.cs <ui/ui.cs>`.
     Now you have your library project.
 
-#.  Create another regular Console project in your *same* solution, addition3, and copy in
-    our :repsrc:`addition3/addition3.cs`, so that is the only file.
+#.  Create another regular Console project, addition3, in your *same* solution, 
+    and copy in our :repsrc:`addition3/addition3.cs`, so that is the only file.
     
 #.  In the Solutions pod, in your addition3 project,
     click on the References entry just inside the project.
@@ -161,7 +168,7 @@ Try adding a reference yourself.  Follow these instructions:
 #.  Run your addition3 project.
 
 You only need to add a library project once, but every further project that needs it,
-must have a reference to the library project added.  You might try another for yourself
+must have a *reference* to the library project added.  You might try another for yourself
 with the next exercise!
 
 .. _QuotientUIEx:
