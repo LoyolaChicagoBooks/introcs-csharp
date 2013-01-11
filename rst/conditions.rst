@@ -27,7 +27,7 @@ quotes!). These are the only possible *Boolean* values (named after
 abbreviation for the type ``bool``.  It is the type of the
 results of true-false conditions or tests.
 
-The simplest place to use conditions in a decision made with an 
+The simplest place to use conditions is in a decision made with an 
 ``if`` statement. 
 
 We will consider :ref:`More-Conditional-Expressions` later, but this is a 

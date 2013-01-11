@@ -45,11 +45,12 @@ arbitrary expression on the left, not just a variable.
 
 All these tests work for numbers,
 and characters.  Strings can also be compared, most often for
-equality (==) or inequality (!=). 
+equality (==) or inequality (!=), though they also have a defined order,
+so you can use ``<``, for instance.
 
 Predict the results and try each line in csharp::
 
-    x = 5; 
+    int x = 5; 
     x; 
     x == 5; 
     x == 6; 
@@ -60,8 +61,12 @@ Predict the results and try each line in csharp::
     6 != x; 
     "hi" == "h" + "i"; 
     "HI" != "hi";  
+    string s = "Hello";
+    string t = "HELLO";
+    s == t;  
+    s.ToUpper() == t;
 
-An equality check does not make an assignment. Strings are case
+An equality check does not make an assignment. Strings equality tests are case
 sensitive. 
 
 **Try this**: Following up on the discussion of the *inexactness* of float

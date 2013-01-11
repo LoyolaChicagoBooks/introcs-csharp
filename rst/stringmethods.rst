@@ -65,7 +65,7 @@ Summary of String Length and Some Instance Methods
 ``int IndexOf(string target)``
     Returns the index of the beginning of the first occurrence of the 
     string ``target`` 
-    in **this** string object. Returns -1 if ``target`` not found. Example:: 
+    in **this** string object. Returns -1 if ``target`` not found. Examples:: 
     
         csharp> string greeting = "Bonjour", part = "jo";      
         csharp> greeting.IndexOf(part);
@@ -112,33 +112,11 @@ Summary of String Length and Some Instance Methods
         csharp> greeting.Length;  //no parentheses
         7       
 
+.. index:: immutable
+
+All of these methods that return a string return a *new* string.  No string method
+alters the original string.  Strings are *immutable*:  
+They are objects that cannot be changed
+after they are first produced.
+
 Further string methods are introduced in :ref:`more-string-methods`.
-
-
-Testing Strings For Equality
-------------------------------
-
-Strings can be tested for equality like numbers,
-with ``==``: *two* equal signs, not the *one* equal sign used for *assignment*.
-The result of an equality test operation is of type ``Boolean`` 
-(or use the abbreviation ``bool``). The allowed bool values are 
-``true`` or ``false``.  
-We will see shortly that
-string expressions can be used for the Boolean conditions 
-in ``if`` statements, introduced in 
-:ref:`Simple-if-Statements`.
-
-When testing for equality, the case of letters matters::
-
-    csharp> string s = "Hello"; // initial value assigned
-    csharp> string t = "HELLO";
-    csharp> s == t;  // equality test
-    false
-    csharp> s.ToUpper() == t;
-    true
-    csharp> string u = "High".Substring(0,2); // assign
-    csharp> u == "Hi"; // equality test
-    true
-    csharp> u == "High";
-    false
-
