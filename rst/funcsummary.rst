@@ -33,6 +33,9 @@ Function definition
    Each formal parameter entry has the form
  
       **type** **parameterName**
+      
+#. If the function is going to be called from outside its class, the heading needs
+   to start with ``public`` before the ``static``. [:ref:`library-classes`]
    
 #. If **returnTypeOrVoid** in the heading is not ``void``, there must be a 
    *return statement* in the function body.  A return statement has the form
