@@ -41,6 +41,8 @@ examples in this book.
 Specifying a namespace makes it possible for all other classes in the 
 same namespace to reference *public* parts of the current class, and vice-versa.
 
+Public classes and functions start their heading with ``public``.
+
 The code included in a namespace is enclosed in braces, so the general syntax is 
 
    | ``namespace`` *name* 
@@ -66,9 +68,9 @@ the class ``UIF``.
 
 .. warning::
 
-   In MomoDevelop, if you use a file from a library project, 
+   In MonoDevelop, if you use a file from a library project, 
    be sure that the current project includes 
-   a *reference* to the file. If you expand the references in the MonoDevelop 
+   a *reference* to the library project. If you expand the references in the MonoDevelop 
    project addition3, by clicking on the References line in the solution pod, 
    you should see the project ui.  
 
