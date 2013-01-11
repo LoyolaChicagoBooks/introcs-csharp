@@ -101,5 +101,3 @@ For further reinforcement
    your home computer or laptop.  
 
 #. Can you make a new program variant print out two separate lines?
-
-#. See whether you can get a head start on :ref:`lab-division`.
