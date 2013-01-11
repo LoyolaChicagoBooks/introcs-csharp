@@ -16,7 +16,7 @@ the original creator of C#, and its
 Visual Studio software development environment, which works only on Windows machines,
 and costs a lot if you are not a student.
 The :ref:`lab-edit-compile-run` will introduce an alternative to the 
-Microsoft environment: Mono, which is free, 
-open-source software that makes C# available for multiple platforms:  
+Microsoft environment: MonoDevelop and Mono, which are free, 
+open-source software projects that make C# available for multiple platforms:  
 Windows, Mac, or Linux machines.  With a substantial fraction of students having their own
 machine that does  *not* run Windows, this flexibility is important.

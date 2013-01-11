@@ -59,11 +59,11 @@ You may use any of the C# Notes formats:
   (best for mobile devices).
 
 - Download a
-  `zip file <http://introcs.cs.luc.edu/book/latest/download/default/comp170html.zip>`_
+  `zip file <http://introcs.cs.luc.edu/book/latest/download/default/html.zip>`_
   of the html web pages to unzip and browse *locally*.  
   Start your browser on the page index.html.	
   Or if you prefer, download
-  `the version with a responsive theme <http://introcs.cs.luc.edu/book/latest/download/bootstrap/comp170html.zip>`_.
+  `the version with a responsive theme <http://introcs.cs.luc.edu/book/latest/download/bootstrap/html.zip>`_.
   Unzip, open the index file, and all the pages are perfectly set up and linked.  
   However the *search capacity does not work* on a local copy, unless you have 
   a server going on your local machine....   
