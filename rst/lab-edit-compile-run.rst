@@ -105,7 +105,7 @@ a Mac.  Windows versions should be similar.
    means the contents are not being displayed. Listed under hello is the automatically
    generated sample code file Main.cs.  It also appears in the edit window to the right.
    
-   ..   image:: images/lab-edit/Main.cs.png
+   ..   image:: images/lab-edit/Main.png
      	:alt: MonoDevelop Main.cs Image
      	:align: center
    
