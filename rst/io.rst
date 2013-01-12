@@ -112,18 +112,60 @@ We omitted the long tail of the error message.
 There is no decimal point in an ``int``.
 You see the fix with the corresponding function that returns a double.
 
-Writing and Running Programs
------------------------------
-
-MORE MONODEVELOP!  FIll it in!
-
 Example Projects and the Source Repository 
 --------------------------------------------
 
-TODO:  relate the zip file, MD projects, folder conventions, _stub, 
-source references in the book, indicating project and linking to the repository,
-colored versions vs raw for selecting the whole file....
-....
+We have started to refer to whole programs that we have written.  You will
+want to have your own copies to test and modify for related work.
+
+All of our examples are set up in a MonoDevelop solution in our 
+.
+`zip file that you can download <http://introcs.cs.luc.edu/book/latest/download/default/source.zip>`_.
+
+Unzip source.zip in a place you control.  The ``examples`` subdirectory is
+a MonoDevelop solution.  
+
+There are various way to access our files.  
+
+#. One way is to look at individual files from your download
+   under our examples directory.  
+#. If you open the examples solution in MonoDevelop, 
+   you can select files from the Solutions pad.
+#. In the notes we refer to individual code file names that are hyperlinked.
+   They link to the *latest version* in our online source repository.
+   You get a display of color-coded web page with numbered lines.  If you
+   want to adapt a chunk, you can select it, and copy.
+   If you want to copy all of a large file, your editing shortcuts
+   for Select All do *not* work:  You get a bunch of extra html.
+   An alternative is to click the **Raw** button in the web page 
+   to the left above the source code.
+   That brings up a plain text page with just the code.  
+   You can either download it or select all of it, and you
+   *only* get the code.
+
+We have one main convention in naming our projects:  Most projects are
+examples of full, functional programs to run.  Others are intended to be
+copied by you as *stubs* for your solutions, for you to elaborate.  
+These project folders all end with
+"_stub", like ``string_manip_stub``.  Even the stubs can be compiled 
+immediately, though they may not accomplish anything.
+
+.. _our-md-projects:
+
+Running our MonoDevelop Examples Solution
+------------------------------------------
+
+MORE MONODEVELOP!  FIll it in!
+
+
+To open the solution, you need to select :file:`examples/examples.sln`.
+
+
+Copying and Modifying Our Example MonoDevelop Projects
+----------------------------------------------------------------
+
+MORE MONODEVELOP!  FIll it in!
+
 
 .. _AdditionProblem:
 
