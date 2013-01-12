@@ -92,8 +92,10 @@ a Mac.  Windows versions should be similar.
      	:alt: MonoDevelop Dialog Image
      	:align: center
    
-#. At the Project Features form, just press ok.  We are not using the feature
-   mentioned there.  You now have created a solution in MonoDevelop, with one project
+#. At the Project Features form (no image here), just press ok.  
+   We are not using the feature mentioned in that dialog.  
+   
+   You now have created a solution in MonoDevelop, with one project
    inside it. Later we can add further *projects* to this *solution*. 
 
 #. Look at the MonoDevelop window that appears.  It should have two main sub-windows or 
@@ -103,7 +105,8 @@ a Mac.  Windows versions should be similar.
    left.  You can click on the triangle.  A triangle pointing down, 
    means the inside of the folder is displayed.  A triangle pointing to the right
    means the contents are not being displayed. Listed under hello is the automatically
-   generated sample code file Main.cs.  It also appears in the edit window to the right.
+   generated sample code file Main.cs.  
+   It should also appear in the edit window to the right.
    
    ..   image:: images/lab-edit/Main.png
      	:alt: MonoDevelop Main.cs Image
@@ -112,7 +115,9 @@ a Mac.  Windows versions should be similar.
 #. You can open a context sensitive popup window 
    on most entries in the Solution pad.  With a two button mouse you right click on
    a particular item.  In this case use the project hello.  On a one-button Mac you will
-   need to hold the Control key and click.  
+   need to hold the Control key and click.  We may use the short term *right-click* in the
+   future, though it may not directly apply to a Mac, where you may interpret it as
+   Control-click.
    
 #. Bring up the context menu on the hello project in the Solution pad.
    Select Run Item.  
@@ -157,9 +162,10 @@ a Mac.  Windows versions should be similar.
      	:alt: MonoDevelop Remove Main.cs Image
      	:align: center
    
-    You get another popup.  Choose the left button, Delete.  
+    You get another popup.  The image below shows the way it first appears, 
+    *with the wrong button chosen*.  **Choose the left button, Delete**.  
     Otherwise the file is left in the hello
-    folder, but it is just not listed as being in the project.
+    folder, but it is not listed as being in the project.
       
     ..  image:: images/lab-edit/sureRemove.png
      	:alt: MonoDevelop Delete Main.cs Image
@@ -227,8 +233,8 @@ that you complete the work and demonstrate it by the beginning of the
 next lab.
 
 At this point, you have accomplished the major objective for this
-introductory lab: to
-enter, compile, and run a C# program as a MonoDevelop project. 
+introductory lab: to create a MonoDevelop project, and
+enter, compile, and run a C# program. 
 
 For further reinforcement
 ~~~~~~~~~~~~~~~~~~~~~~~~~
