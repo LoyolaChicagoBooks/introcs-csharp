@@ -120,3 +120,12 @@ They are objects that cannot be changed
 after they are first produced.
 
 Further string methods are introduced in :ref:`more-string-methods`.
+
+Time to reflect, thinking back to :ref:`learn-solve`.  
+Without forcing all the code details on yourself, 
+how can you concisely say what powers you have with strings so far?  
+Remember that kernel.
+
+With strings: 
+Index characters, Find a part; extract a part; convert case; determine length.  
+These may not be evocative phrases for you.  Find your own. 
