@@ -15,6 +15,5 @@ Appendix
    hw-booklist
    lab-versioncontrol
    hgteamwork
-   lab-monodevelop.rst
    offerings
    acknowledgments
