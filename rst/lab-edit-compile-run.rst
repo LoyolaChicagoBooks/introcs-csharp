@@ -37,7 +37,7 @@ an integrated tool, like MonoDevelop, that does them all in the same place,
 and automates the steps that do not need human interaction!  
 
 If you are doing this on your own
-machine, make sure you have Mono and monoDevelop installed as in
+machine, make sure you have Mono and MonoDevelop installed as in
 :ref:`development-tools`.
 
 Other tools are available, like
