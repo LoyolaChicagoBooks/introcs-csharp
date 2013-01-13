@@ -272,7 +272,7 @@ used without an object reference and dot refer to the
 there is *always* a current object:
 
 #.  In a constructor, referring to the object being created.
-#.  When some method ``methodName`` is called with explicit dot notation, 
+#.  When some instance method ``methodName`` is called with explicit dot notation, 
     ``someObject.methodName()``, 
     then it is acting on the current object ``someObject``.
 #.  When a constructor or instance method (no ``static``) inside the class is called,
