@@ -31,7 +31,7 @@ While our last example, Rational, is in fact a very practical
 use of object-oriented programming, this is somewhat more artificial,
 but hopefully informative, particularly with the transformation.
 Here is a procedural version, example file 
-:repstr:`static_version/static_version.cs`
+:repsrc:`static_version/static_version.cs`
 
 .. literalinclude:: ../source/examples/static_version/static_version.cs
    :start-after:  chunk
