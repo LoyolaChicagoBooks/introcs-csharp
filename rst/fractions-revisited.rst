@@ -1,4 +1,9 @@
-Fractions Revisited
+.. index:: IComparable Interface
+   interface; IComparable
+   
+.. _rationals-revisited:
+
+Rationals Revisited
 =====================
 
 C# has a built-in method to sort a List.  ``List`` is a

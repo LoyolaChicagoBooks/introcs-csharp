@@ -6,7 +6,7 @@
 A First Class Example: Rational
 ================================
 
-Making A DataType
+Making A Datatype
 --------------------
 
 C# comes with lots of built-in datatypes, but not
@@ -79,7 +79,7 @@ The helping function, ``ShowParse``, in our testing code makes the display neate
 
 One non-obvious method is ``CompareTo``.  This one method allows
 all the usual comparison operators to be used with the result.  
-We will discuss it more later.
+We will discuss it more in :ref:`rationals-revisited`.
 
 The results we would like when running this testing code:
 
