@@ -4,14 +4,21 @@ Class Examples
 Getters and Setters
 --------------------
 
-The example :file:`example_class.cs` has none of the
-functionality of of our :repsrc:`rational.cs <rational_nunit/rational.cs>`,
-but it is very simple,
-just illustrating several getters and setters:
+Our class Rational in :repsrc:`rational_nunit/rational.cs` is a
+practical utility class.  We used it as a first example to avoid being artificial,
+and illustrate many points.  One choice we made for it to be practical, is to have
+``Rational`` objects be immutable.  Though we constructed Rationals and used them,
+there was no public code that modified a Rational.  We discussed :ref:`getters`.
+For mutable objects, another basic kind of method is a *setter*, 
+that sets an attribute of the object's state, changing it from what it was before.
+
+This time we have a nonsensical but very simple class to illustrate the use of
+both getters and setters, example 
+:repsrc:`example_class/example_class.cs`:
 
 .. literalinclude:: ../source/examples/example_class/example_class.cs
 
-Make sure the code and the output from running make sense.
+Make sure you can follow the code and the output from running.
 
 Converting A Static Game to A Game Instance
 ----------------------------------------------
@@ -24,7 +31,7 @@ While our last example, Rational, is in fact a very practical
 use of object-oriented programming, this is somewhat more artificial,
 but hopefully informative, particularly with the transformation.
 Here is a procedural version, example file 
-:file:`static_version.cs`
+:repstr:`static_version/static_version.cs`
 
 .. literalinclude:: ../source/examples/static_version/static_version.cs
    :start-after:  chunk

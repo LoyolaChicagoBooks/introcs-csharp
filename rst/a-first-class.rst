@@ -326,6 +326,8 @@ and use ``this`` as the object's name.
 .. index::
    double: OOP; getter
 
+.. _getters:
+
 Getters
 --------
 
@@ -349,7 +351,11 @@ and public methods can be used from outside the class, we can simply code
    :start-after: numerator chunk
    :end-before: chunk
 
-These methods allow one-way communication of the numerator value out of the class.  
+These methods allow one-way communication of the numerator and denominator 
+values out of the object.
+These are examples
+of a simple category of methods:  A *getter* simply returns the value of a part
+of the object's state, without changing the object at all.  
 
 Note again that there is no ``static`` in the method heading.  
 The field value for the *current* Rational is returned.
@@ -431,7 +437,7 @@ your knowledge of arithmetic! They do not add further C# syntax.
 ToString Override
 ---------------------
 
-All the built-in type can be concatenated into strings with the '+' operators.  
+All the built-in types can be concatenated into strings with the '+' operators.  
 We would like that behavior with our custom types, too.  How can the compiler
 know how to handle types that were *not invented* when the compiler was written?
 
@@ -439,10 +445,10 @@ The answer is to have common features among all objects.  Any object has a ``ToS
 method.  The default version supplied by the system is not very useful for an object 
 that it knows nothing about!  You need to define your own version, 
 one that knows how you have defined
-your type with its own specific instance variables, 
-and to have that version used *in place of* the default:
+your type with its own specific instance variables. 
+You need to have that version used *in place of* the default:
 You need to *override* the default.  To emphasize the change
-in meaning, the word ``override`` must be in the heading:
+in meaning, the word ``override`` *must* be in the heading:
 
 .. literalinclude:: ../source/examples/rational_nunit/rational.cs
    :start-after: ToString chunk
