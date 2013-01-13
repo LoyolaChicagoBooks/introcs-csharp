@@ -131,6 +131,10 @@ Here is how to do a quick sanity check of your Mono setup:
    ``/usr/bin/gmcs`` as output.  ``gmcs`` is one of the interfaces to
    the C# compiler.
 
+.. index:: MonoDevelop; installation
+
+.. _install-md:
+
 Mono-develop Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
