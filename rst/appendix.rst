@@ -7,6 +7,7 @@ Appendix
    :maxdepth: 3
    
    monotools
+   monodevelop
    cmdline
    precedence
    homework-gradecalculation
