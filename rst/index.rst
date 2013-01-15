@@ -27,6 +27,8 @@ Introduction to Computer Science in C#
    classes
    testing
    interfaces
+   recursion
+   datastructures
    appendix
    
 :ref:`genindex`

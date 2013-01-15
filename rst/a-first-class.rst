@@ -6,7 +6,7 @@
 A First Class Example: Rational
 ================================
 
-Making A Datatype
+Making a Datatype
 --------------------
 
 C# comes with lots of built-in datatypes, but not
