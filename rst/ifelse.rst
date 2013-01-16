@@ -124,7 +124,7 @@ Open MonoDevelop with the examples solution, and open
 :repsrc:`ok_if_scope/`ok_if_scope.cs` in the edit window.  
 The last function, ``OkScope2``, 
 is the one shown above.  Now *remove* the logically
-unnecessary ``= 0`` initialization for ``val``so the line is just ``int val;``.  
+unnecessary ``= 0`` initialization for ``val`` so the line is just ``int val;``.  
 As the comment says, an error should
 appear saying that there is an uninitialized local variable!  Why?
 
