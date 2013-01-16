@@ -56,10 +56,14 @@ the if-false compound statement can be replace by a single statement
 without braces, except in one otherwise ambiguous situation discussed
 later with two ``if``\ s and an ``else``.
 
+.. _compound-statement-scope:
+
 .. index::
    double: scope; compound statement
-
-.. rubric:: More on Compound Statements and Scope
+   { }; scope
+   
+Scope With Compound Statements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The section on local scope referred to function and method bodies,
 which happen to be enclosed in braces, making a compound statement.
@@ -68,7 +72,7 @@ If fact braces limit the scope of things declared inside,
 
 As a result the following code makes no sense::
 
-    static int BadScope(int x) 
+    static int BadBlockScope(int x) 
     {
        if ( x < 100) {
           int val = x + 2;
@@ -91,16 +95,59 @@ If we want ``val`` be used inside the braces and
 to make sense past the end of the compound statement,
 it cannot be declared inside the braces. Instead it must be
 declared before the compound statements that are parts of the 
-|if-else| statement.  The following would work::
+|if-else| statement.  The following would work:
 
-    static int OkScope(int x) 
-    {
-       int val;
-       if ( x < 100) {
-          val = x + 2;
-       }
-       else {
-          val = x - 2:
-       }
-       return val;
-    }
+.. literalinclude:: ../source/examples/ok_if_scope/ok_if_scope.cs
+   :start-after: chunk
+   :end-before: chunk
+
+There is even more subtlety here than meets the eye:
+An |if-else| statement can generally be rewritten as two simple
+if statements (though it is less efficient and less clear).
+The two ``if`` statements would use opposite conditions, as in this variation:
+
+.. index:: compiler error; uninitialized local variable
+
+.. literalinclude:: ../source/examples/ok_if_scope/ok_if_scope.cs
+   :start-after: past chunk
+   :end-before: chunk
+   :linenos:
+
+
+Notie that in this variation we added an 
+initialization for ``val`` to be 0, though the 
+value of the initialization is never used:  ``val`` is
+guaranteed to be assigned a value in one of the ``if`` statements
+before its value is used in the return statement.
+
+Open MonoDevelop with the examples solution, and open 
+:repsrc:`ok_if_scope/`ok_if_scope.cs` in the edit window.  
+The last function, ``OkScope2``, 
+is the one shown above.  Now *remove* the logically
+unnecessary ``= 0`` initialization for ``val``so the line is just ``int val;``.  
+As the comment says, an error should
+appear saying that there is an uninitialized local variable!  Why?
+
+For safety 
+the C# compiler has some basic analysis to check that every local
+variable gets given a value before its value is used.  In the ``OkScope`` function
+there is no *one*
+place where ``val`` gets an initial value, but the compiler is smart enough to see
+that one of the branches of any if-else statement is always taken, 
+and ``val`` gets a value in each, so there is
+no problem. 
+
+The compiler analysis is not complete:  It does not actually evaluate any
+expressions.  This is good enough to catch many initialization errors that coders make, 
+but it
+is not sufficient in general: We can see this from the altered ``OkScope2``.
+
+The original code shows the fix:  Give a dummy initialization that is never used
+in execution, but keeps the compiler happy.
+
+Although this extra initialization is annoying, the extra step is rarely needed. 
+Meanwhile it is very easy to forget to give a value to a local variable before use!  
+Having
+the error caught quickly by the compiler is very handy, offsetting the extra work
+when the compiler gives this error unnecessarily.
+

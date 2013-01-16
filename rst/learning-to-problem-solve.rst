@@ -1,7 +1,7 @@
-.. _learn-solve:
-
 .. index::
    single: problem solving; strategy
+
+.. _learn-solve:
 
 Learning to Solve Problems
 ==================================
