@@ -65,10 +65,10 @@ later with two ``if``\ s and an ``else``.
 Scope With Compound Statements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The section on local scope referred to function and method bodies,
-which happen to be enclosed in braces, making a compound statement.
-If fact braces limit the scope of things declared inside, 
-*wherever* they appear.
+The section :ref:`Local-Scope` referred to function  bodies,
+which happen to be enclosed in braces, making the function body a *compound statement*.
+In fact variables declared inside *any* compound statement have their scope restricted
+in inside that compound statement.
 
 As a result the following code makes no sense::
 
@@ -88,14 +88,16 @@ because whichever compound statement gets executed,
 ``val`` ceases being defined after the
 closing brace of its compound statement, 
 so the ``val`` in the return statement has
-not been declared or given a value.  It
+not been declared or given a value.  The code
 would generate a compiler error. 
  
 If we want ``val`` be used inside the braces and 
 to make sense past the end of the compound statement,
 it cannot be declared inside the braces. Instead it must be
 declared before the compound statements that are parts of the 
-|if-else| statement.  The following would work:
+|if-else| statement.   A local variable in a function declared before a nested compound 
+statement is still visible (in scope) *inside*  that compound statement.
+The following would work:
 
 .. literalinclude:: ../source/examples/ok_if_scope/ok_if_scope.cs
    :start-after: chunk
@@ -126,7 +128,8 @@ The last function, ``OkScope2``,
 is the one shown above.  Now *remove* the logically
 unnecessary ``= 0`` initialization for ``val`` so the line is just ``int val;``.  
 As the comment says, an error should
-appear saying that there is an uninitialized local variable!  Why?
+appear (at least after you try to compile the program).
+The error will say that there is an uninitialized local variable!  Why?
 
 For safety 
 the C# compiler has some basic analysis to check that every local
