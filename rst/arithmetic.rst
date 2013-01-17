@@ -260,6 +260,28 @@ We have been testing arithmetic expressions, with the word
 an *expression* is any syntax that evaluates to a single value of some type.  
 We will introduce many more types and operations that can be used in expressions. 
 
-    
+Divisible by 17 Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    
+What is a simple expression that lets you see if an int x is divisible by 17?   
+
+Mixed Arithmetic Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Think of the results for each of these in csharp, one at a time, write them down,
+and *then* test.
+Did you get them right?  If not, can you explain the results after seeing them? ::
+
+    2 * 5 + 3;
+    2 + 5 * 3;
+    1.5 * 3;
+    4.0 * 3 / 8;
+    4 * 3 / 8;
+    6 * (2.0/3);
+    6 * (2/3);
+    3 + 10 % 6;
+    10 % 6 + 3;
+      
+
+
+   
