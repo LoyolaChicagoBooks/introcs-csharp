@@ -69,8 +69,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "g_c_d_subtraction_method", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gcdbruteforce", "gcdbruteforce\gcdbruteforce.csproj", "{50124D6A-E198-4434-A5FA-F72871B73CCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gcdsubtraction", "gcdsubtraction\gcdsubtraction.csproj", "{7FABFF2A-6B1D-425C-8783-2CB651EF2EA7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "glazer_calc", "glazer_calc\glazer_calc.csproj", "{AB7D80EE-2FAE-4B96-A5E4-B99DEDAD14D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "good_scope", "good_scope\good_scope.csproj", "{4DC547CB-955F-40EC-98A7-936CE319ACA6}"
@@ -106,8 +104,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "print_param", "print_param\print_param.csproj", "{E9444301-7585-4860-B3B0-22CE1D9E4128}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "print_table", "print_table\print_table.csproj", "{1F0C7739-4C00-46B0-95EE-78680728D4E4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prompt_user1", "prompt_user1\prompt_user1.csproj", "{17651F82-369F-4485-8045-F2DEE9E460F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "return1", "return1\return1.csproj", "{90932993-4F0C-469E-A860-90E33DA03A6A}"
 EndProject
@@ -236,10 +232,6 @@ Global
 		{14DEC6D6-7FC5-423C-8186-ABA279819FF2}.Debug|x86.Build.0 = Debug|x86
 		{14DEC6D6-7FC5-423C-8186-ABA279819FF2}.Release|x86.ActiveCfg = Release|x86
 		{14DEC6D6-7FC5-423C-8186-ABA279819FF2}.Release|x86.Build.0 = Release|x86
-		{17651F82-369F-4485-8045-F2DEE9E460F5}.Debug|x86.ActiveCfg = Debug|x86
-		{17651F82-369F-4485-8045-F2DEE9E460F5}.Debug|x86.Build.0 = Debug|x86
-		{17651F82-369F-4485-8045-F2DEE9E460F5}.Release|x86.ActiveCfg = Release|x86
-		{17651F82-369F-4485-8045-F2DEE9E460F5}.Release|x86.Build.0 = Release|x86
 		{1F0C7739-4C00-46B0-95EE-78680728D4E4}.Debug|x86.ActiveCfg = Debug|x86
 		{1F0C7739-4C00-46B0-95EE-78680728D4E4}.Debug|x86.Build.0 = Debug|x86
 		{1F0C7739-4C00-46B0-95EE-78680728D4E4}.Release|x86.ActiveCfg = Release|x86
@@ -416,10 +408,6 @@ Global
 		{7635DAE7-F6A5-47E8-9E39-07E21E0FEC9F}.Default|Any CPU.Build.0 = Debug|x86
 		{7635DAE7-F6A5-47E8-9E39-07E21E0FEC9F}.Release|x86.ActiveCfg = Release|x86
 		{7635DAE7-F6A5-47E8-9E39-07E21E0FEC9F}.Release|x86.Build.0 = Release|x86
-		{7FABFF2A-6B1D-425C-8783-2CB651EF2EA7}.Debug|x86.ActiveCfg = Debug|x86
-		{7FABFF2A-6B1D-425C-8783-2CB651EF2EA7}.Debug|x86.Build.0 = Debug|x86
-		{7FABFF2A-6B1D-425C-8783-2CB651EF2EA7}.Release|x86.ActiveCfg = Release|x86
-		{7FABFF2A-6B1D-425C-8783-2CB651EF2EA7}.Release|x86.Build.0 = Release|x86
 		{80A8DA50-800D-47E3-A2E2-C03682BA73B3}.Debug|x86.ActiveCfg = Debug|x86
 		{80A8DA50-800D-47E3-A2E2-C03682BA73B3}.Debug|x86.Build.0 = Debug|x86
 		{80A8DA50-800D-47E3-A2E2-C03682BA73B3}.Release|x86.ActiveCfg = Release|x86

@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace IntroCS
 {
-   // A class that maintains a list of books. 
+   /// A class that maintains a list of books. 
    public class BookList
    {
       private List<Book> list;
 
-      // Create an empty list of books. 
+      /// Create an empty list of books. 
       public BookList()
       {
          list = new List<Book>();
@@ -24,8 +24,8 @@ namespace IntroCS
          return true; //always true in basic assignment
       }
                                                       //PrintList chunk
-      // List the full descriptions of each book,
-      // with each book separated by a blank line. 
+      /// List the full descriptions of each book,
+      /// with each book separated by a blank line. 
       public void PrintList() // 
       {  // everyone code;    for extra credit, note assignment instructions
 
@@ -50,8 +50,8 @@ namespace IntroCS
       // Extra Credit past here //
       ////////////////////////////
                                                 // extra credit ToString chunk
-      // Return a single string containing the same data as 
-      // printed by PrintList, including a final newline.
+      /// Return a single string containing the same data as 
+      /// printed by PrintList, including a final newline.
       public override string ToString()
       {
          return "Extra Credit ToString method not implemented.";
@@ -89,9 +89,9 @@ namespace IntroCS
 
      // Revised AddBook documentation for extra credit:
      
-     // Adds aBook to the list if aBook is
-     // not already in the list.
-     // Return true if aBook is added,
-     // and false if it was already in the list. 
+     /// Adds aBook to the list if aBook is
+     /// not already in the list.
+     /// Return true if aBook is added,
+     /// and false if it was already in the list. 
    }
 }

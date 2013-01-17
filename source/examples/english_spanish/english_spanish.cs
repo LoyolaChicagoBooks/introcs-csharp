@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace EnglishSpanish
+namespace IntroCS
 {
-   class MainClass
+   class EnglishSpanish
    {
       public static void Main(string[] args)
       {

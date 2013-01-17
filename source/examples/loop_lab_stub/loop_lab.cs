@@ -21,22 +21,22 @@ namespace IntroCS
          PrintTableBorders(2, 1, 6, 3);
       } 
                                                              // PrintReps chunk
-      // Print n copies of s, end to end.
-      // For example PrintReps("Ok", 9) prints: OkOkOkOkOkOkOkOkOk
+      /// Print n copies of s, end to end.
+      /// For example PrintReps("Ok", 9) prints: OkOkOkOkOkOkOkOkOk
       static void PrintReps(string s, int n)
       {                                                      //body
          Console.Write("Not Implemented");
       }
                                                            //StringOfReps chunk    
-      // Return a string containing n copies of s, end to end.
-      // For example StringOfReps("Ok", 9) returns: "OkOkOkOkOkOkOkOkOk"
+      /// Return a string containing n copies of s, end to end.
+      /// For example StringOfReps("Ok", 9) returns: "OkOkOkOkOkOkOkOkOk"
       static string StringOfReps(string s, int n)
       {                                                     // body
          return "Not implemented";
       }
                                                             // Factorial chunk
-      // Return n! (n factorial: 1*2*3 *...* n if n >=1; 
-      // 0! is 1.).  For example Factorial(4) returns 1*2*3*4 = 24.
+      /// Return n! (n factorial: 1*2*3 *...* n if n >=1; 
+      /// 0! is 1.).  For example Factorial(4) returns 1*2*3*4 = 24.
       static int Factorial(int n)
       {                                                     // body
          return 1;  // so it compiles
@@ -56,18 +56,18 @@ namespace IntroCS
          Console.WriteLine("Not implemented");
       }
                                                      //PrintTableBorders chunk
-      // Print the borders of the cells of a table. 
-      // The borders divide the table into rows and columns.
-      // The blank space within a cell is width characters wide
-      // for height lines.
-      // The horizontal borders are dashes '-' and the vertical borders
-      // are vertical bars, '|', except that all intersections are '+'.
       // For example PrintTableBorders(3, 2, 4, 1) prints
       //    +----+----+----+
       //    |    |    |    |
       //    +----+----+----+
       //    |    |    |    |
       //    +----+----+----+
+      /// Print the borders of the cells of a table. 
+      /// The borders divide the table into rows and columns.
+      /// The blank space within a cell is width characters wide
+      /// for height lines.
+      /// The horizontal borders are dashes '-' and the vertical borders
+      /// are vertical bars, '|', except that all intersections are '+'.
       static void PrintTableBorders(int columns, int rows, 
                                     int width, int height)
       {                                                     // body

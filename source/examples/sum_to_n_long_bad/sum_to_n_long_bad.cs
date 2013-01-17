@@ -4,7 +4,7 @@ namespace IntroCS
    class SumToNTest  // INCORRECT!
    {
       //                                      bad chunk
-      // Return the sum of the numbers from 1 through n.
+      /// Return the sum of the numbers from 1 through n.
       static long SumToN(int n)  //CHANGED:  quick and WRONG
       {
          int average = (n+1)/2;    //from Gausse's motivation

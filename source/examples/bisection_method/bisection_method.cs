@@ -16,11 +16,11 @@ namespace IntroCS
    class BisectionMethod
    {
 
-      // This is the basic bisection method.
-      // Ported straight from http://en.wikipedia.org/wiki/Bisection_method.
-      // Source: Burden, Richard L.; Faires, J. Douglas (1985), 
-      //   "2.1 The Bisection Algorithm",
-      // Numerical Analysis (3rd ed.), PWS Publishers
+      /// This is the basic bisection method.
+      /// Ported straight from http://en.wikipedia.org/wiki/Bisection_method.
+      /// Source: Burden, Richard L.; Faires, J. Douglas (1985), 
+      ///   "2.1 The Bisection Algorithm",
+      /// Numerical Analysis (3rd ed.), PWS Publishers
       public static double Bisection(Function F, double a, double b, 
                                      double tolerance, int iterations) {
          // check the preconditions for the method to work
@@ -60,8 +60,8 @@ namespace IntroCS
       }
 
 
-      // This bisection method returns the best double approximation
-      // to a root of F.f.  Returns double.NaN if the F.f(a)*F.f(b) > 0.
+      /// This bisection method returns the best double approximation
+      /// to a root of F.f.  Returns double.NaN if the F.f(a)*F.f(b) > 0.
       public static double Bisection(Function F, double a, double b) {
          if (F.f(a) == 0) {
             return a;

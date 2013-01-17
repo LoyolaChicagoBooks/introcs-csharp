@@ -60,7 +60,7 @@ namespace IntroCS
          }
       }     
       
-      //Return ints taken from space separated integers in a string.
+      /// Return ints taken from space separated integers in a string.
       public static int[] IntsFromString(string input)
       {
          string[] integers = input.Split(' ');

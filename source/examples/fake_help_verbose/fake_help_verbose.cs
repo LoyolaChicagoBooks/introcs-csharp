@@ -46,7 +46,7 @@ with any other problem!");
 
       }
 
-      // Establish random responses by repetitive data recording
+      /// Establish random responses by repetitive data recording
       public static List<string> GetParagraphs()
       {
          List<string> all = new List<string>();
@@ -70,7 +70,7 @@ precisely?");
          return all;
       }
 
-      // Establish response dictionary by repetitive data recording
+      /// Establish response dictionary by repetitive data recording
       public static Dictionary<string, string> GetDictionary()
       {
          Dictionary<string, string> d = new Dictionary<string, string>();

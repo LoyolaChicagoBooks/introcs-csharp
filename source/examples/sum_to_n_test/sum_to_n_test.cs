@@ -3,7 +3,7 @@ namespace IntroCS
 {
    class SumToNTest
    {     
-      // Return the sum of the numbers from 1 through n.
+      /// Return the sum of the numbers from 1 through n.
       static int SumToN(int n)  
       {
          int sum = 1, i = 2;  

@@ -3,9 +3,9 @@ namespace IntroCS
 {
    class Wages  //with alternate version of calcWeeklyWages
    {
-      // Return the total weekly wages for a worker working 
-      // totalHours with a given regular hourlyWage.  
-      // Include overtime for hours over 40.
+      /// Return the total weekly wages for a worker working 
+      /// totalHours with a given regular hourlyWage.  
+      /// Include overtime for hours over 40.
       static double CalcWeeklyWages(double totalHours, double hourlyWage)
       {                       // start chunk
          double regularHours, overtime;

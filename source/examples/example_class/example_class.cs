@@ -1,7 +1,6 @@
 using System;
 
-// A simple class / object example:
-
+/// A simple class / object example:
 class Example // nothing in here is marked static
 {
    private int n; // one instance variable or "attribute"
@@ -36,8 +35,7 @@ class Example // nothing in here is marked static
 } // end of class Example
 
 
-// A simple test class for Example:
-
+/// A simple test class for Example:
 class ExampleTest
 {
    public static void Main()

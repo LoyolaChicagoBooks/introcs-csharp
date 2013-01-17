@@ -14,8 +14,8 @@ namespace IntroCS
          Console.WriteLine("Your number is {0}.", x);
       }
       
-      // Return true if s contains one or more digits
-      // and nothing else. Otherwise return false.
+      /// Return true if s contains one or more digits
+      /// and nothing else. Otherwise return false.
       static Boolean IsDigits(string s)
       {
          int i = 0;
@@ -28,32 +28,32 @@ namespace IntroCS
          return (s.Length > 0);
       }
       
-      // Return true when s is a legal int string,
-      // and return false otherwise.
+      /// Return true when s is a legal int string,
+      /// and return false otherwise.
       static bool IsIntString(string s)
       {
          return false;  // so stub compiles; COMPLETE
       }
       
-      // Return an int entered by the user.  Catch input
-      // errors, and keep promping the user until a
-      // legal entry is made.  Return the corresponding int.  
+      /// Return an int entered by the user.  Catch input
+      /// errors, and keep promping the user until a
+      /// legal entry is made.  Return the corresponding int.  
       static int PromptInt(string prompt)  
       { //FIX so loops until legal
          string nStr = UIF.PromptLine(prompt).Trim(); 
          return int.Parse(nStr);
       }
       
-      // Return true when s is a legal decimal string,
-      // and return false otherwise.
+      /// Return true when s is a legal decimal string,
+      /// and return false otherwise.
       static bool IsDecimalString(string s)
       {
          return false;  // so stub compiles; COMPLETE
       }
       
-      // Return a double entered by the user.  Catch input
-      // errors, and keep promping the user until a legal
-      // decimal entry is made.  Return the corresponding double.  .
+      /// Return a double entered by the user.  Catch input
+      /// errors, and keep promping the user until a legal
+      /// decimal entry is made.  Return the corresponding double.  .
       static double PromptDouble(string prompt)  
       {  //FIX so loops until legal
          string nStr = UIF.PromptLine(prompt).Trim(); 

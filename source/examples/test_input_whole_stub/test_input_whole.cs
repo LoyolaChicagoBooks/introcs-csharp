@@ -9,8 +9,8 @@ namespace IntroCS
          Console.WriteLine("The number is {0}.", n);
       }
       
-      // Return true if s contains one or more digits
-      // and nothing else. Otherwise return false.
+      /// Return true if s contains one or more digits
+      /// and nothing else. Otherwise return false.
       static Boolean IsDigits(string s)
       {
          int i = 0;
@@ -23,10 +23,10 @@ namespace IntroCS
          return (s.Length > 0);
       }
       
-      // Return a whole number.  Catch input
-      // errors, and keep prompting the user until
-      // a legal entry is made, and return
-      // the corresponding int.  Trim extra whitespace.
+      /// Return a whole number.  Catch input
+      /// errors, and keep prompting the user until
+      /// a legal entry is made, and return
+      /// the corresponding int.  Trim extra whitespace.
       static int PromptWhole(string prompt)
       {
          return 0; // so stub compiles:  FIX!

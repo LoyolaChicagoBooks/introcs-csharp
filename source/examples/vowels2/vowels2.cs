@@ -9,7 +9,7 @@ namespace IntroCS
          PrintVowels(s);
       } 
                                        //  new chunk
-      // Print the vowels (aeiou) in s, one per line.
+      /// Print the vowels (aeiou) in s, one per line.
       static void PrintVowels(string s)
       {
          int i = 0;
