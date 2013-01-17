@@ -317,3 +317,15 @@ camel-case for variable inside programs, while we use underscores in
 program file names (since different operating systems deal with case
 differently).
 
+Assignment Exercise
+~~~~~~~~~~~~~~~~~~~~~~
+
+*Think* what the result would be in csharp::
+
+   int x = 1;
+   x = x + 1;
+   x = x * 3;
+   x = x * 5;
+   x;
+   
+Write your prediction.  Then test.  Can you explain it if you got it wrong?
