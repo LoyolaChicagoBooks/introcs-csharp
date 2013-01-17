@@ -12,8 +12,8 @@ namespace IntroCS
          Console.WriteLine("Your number is {0}.", n);
       }      
                                                    //  new chunk
-      // Prompt the user to obtain an int until the response is in the
-      // range [lowLim, highLim].  Then return the int in range.
+      /// Prompt the user to obtain an int until the response is in the
+      /// range [lowLim, highLim].  Then return the int in range.
       static int PromptIntInRange(string prompt, int lowLim, int highLim)
       {
          int number = UIF.PromptInt(prompt);

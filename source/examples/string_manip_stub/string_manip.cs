@@ -20,18 +20,18 @@ class StringManip
         Console.WriteLine("str3 with worst => best: " + str5);
     }
     
-    // Return s with the first occurence of target
-    // replaced by replacement.
+    /// Return s with the first occurence of target
+    /// replaced by replacement.
     static string replaceFirst(string s, string target,
                                string replacement)
     {
         return "Not implemented"; // so it compiles
     }
     
-    // Most concrete version:
-    // Assume s is "It was the best of times"
-    // target is "best"
-    // replacement is "worst"
+    /// Most concrete version:
+    /// Assume s is "It was the best of times"
+    /// target is "best"
+    /// replacement is "worst"
     static string replaceFirst1(string s, string target,
                                 string replacement)
     {   
@@ -63,9 +63,9 @@ class StringManip
     could be anything, with any length, and get the next version.
     */
 
-    // Return s with the first occurence of target
-    //  replaced by replacement.  As far as we got,
-    //  the target is ASSUMED to be in s.
+    /// Return s with the first occurence of target
+    ///  replaced by replacement.  As far as we got,
+    ///  the target is ASSUMED to be in s.
     static string replaceFirst3(string s, string target,
                                 string replacement)
     {   // code in class! ASSUME target appears in s

@@ -10,8 +10,8 @@ namespace IntroCS
          Console.WriteLine("Only digits in {0} ?: ", IsDigits(s));
       }
                                                  //    new chunk
-      // Return true if s contains one or more digits
-      // and nothing else. Otherwise return false.
+      /// Return true if s contains one or more digits
+      /// and nothing else. Otherwise return false.
       static Boolean IsDigits(string s)
       {
          Boolean allDigitsSoFar = (s.Length > 0);

@@ -9,10 +9,10 @@ namespace IntroCS
          Console.WriteLine(Agree("Do you understand? "));
       }
       
-      // Prompt the user with a question; Return true of false.
-      // Allow certain starting characters for true and
-      // others for false, and repeat until the response
-      // is in one of these groups.
+      /// Prompt the user with a question; Return true of false.
+      /// Allow certain starting characters for true and
+      /// others for false, and repeat until the response
+      /// is in one of these groups.
       static Boolean Agree(string question)
       {
          return true;  // so stub compiles

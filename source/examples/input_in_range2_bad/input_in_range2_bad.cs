@@ -12,9 +12,9 @@ namespace IntroCS
          Console.WriteLine("Your number is {0}.", n);
       }      
                                                  
-      // Prompt the user to obtain an int until the response is in the
-      // range [lowLim, highLim].  Then return the int in range.
-      // Use the specified prompt, adding a reminder of the allowed range.
+      /// Prompt the user to obtain an int until the response is in the
+      /// range [lowLim, highLim].  Then return the int in range.
+      /// Use the specified prompt, adding a reminder of the allowed range.
       static int PromptIntInRange(string prompt, int lowLim, int highLim)
       {
          string longPrompt = string.Format("{0} ({1} through {2}) ",

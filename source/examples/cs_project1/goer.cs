@@ -2,14 +2,14 @@ using System;
 namespace IntroCS
 {
    
-   // Response to try to go to a new place.
+   /// Response to try to go to a new place.
    public class Goer
    {
       private Game game;
       
-      // Try to go to one direction. If there is an exit, enter the new
-      // place, otherwise print an error message.
-      // Return false(does not end game)
+      /// Try to go to one direction. If there is an exit, enter the new
+      /// place, otherwise print an error message.
+      /// Return false(does not end game)
       public bool Execute(Command command)
       {
          if(!command.hasSecondWord()) {
@@ -38,7 +38,7 @@ to exit the current place in the specified direction.
 The direction should be in the list of exits for the current place.";
       }
    
-      // Constructor for objects of class Goer
+      /// Constructor for objects of class Goer
       public Goer(Game game)
       {
          this.game = game;

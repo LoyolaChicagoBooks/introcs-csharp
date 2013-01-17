@@ -10,8 +10,8 @@ namespace IntroCS
          Console.WriteLine("GradeFiles not implemented");
       }
                                                    // codeIndex chunk                                          
-      // Take the first letter code for a catagory, and 
-      // return the index of that category in the array categories.
+      /// Take the first letter code for a catagory, and 
+      /// return the index of that category in the array categories.
       static int codeIndex(string code, string[] categories)
       {
          for (int i = 0; i < categories.Length; i++) {

@@ -16,7 +16,7 @@ namespace IntroCS
          } while (mod > 0);
       }
                                             // start chunk
-      // Print a table for modular multiplication mod n.
+      /// Print a table for modular multiplication mod n.
       static void MultTable(int n)
       {
          int numberWidth = ("" + n).Length;
@@ -40,7 +40,7 @@ namespace IntroCS
          }
       }
                                              // StringRep chunk
-      // Return s repeated n times.
+      /// Return s repeated n times.
       static string StringOfReps(string s, int n)
       {
          string ret = "";

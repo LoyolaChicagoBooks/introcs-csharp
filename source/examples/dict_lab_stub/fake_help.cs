@@ -37,8 +37,8 @@ namespace IntroCS
          Console.Write("\n"+ goodbye);
       }
 
-      // Take input fromUser and use guessList and responses to
-      //  determine and return a string response. 
+      /// Take input fromUser and use guessList and responses to
+      ///  determine and return a string response. 
       public static string Response(string fromUser, List<string> guessList,
                                     Dictionary<string, string> responses)
       {

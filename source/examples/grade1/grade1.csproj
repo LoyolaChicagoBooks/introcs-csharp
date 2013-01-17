@@ -38,4 +38,10 @@
     <Compile Include="grade1.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\ui\ui.csproj">
+      <Project>{6A581A4A-8492-46E7-8F21-9D8F17D104F4}</Project>
+      <Name>ui</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

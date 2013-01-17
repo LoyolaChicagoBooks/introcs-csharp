@@ -3,16 +3,16 @@ using System.Collections.Generic;
 namespace IntroCS
 {
    
-   // Help Response
+   /// Help Response
    public class Helper : Response
    {
       public string CommandName {get; private set;}
       private CommandMapper commandMapper;
       private Dictionary<string, Response> responses;
 
-      // Print out some Help information.
-      // Here we print some stupid, cryptic message and a list of the 
-      // command words.
+      /// Print out some Help information.
+      /// Here we print some stupid, cryptic message and a list of the 
+      /// command words.
       public bool Execute(Command cmd)
       {
          if (!cmd.hasSecondWord()) {
@@ -43,7 +43,7 @@ Your command words are:
 for help on the command.";
       }
            
-      // Constructor for objects of class Helper
+      /// Constructor for objects of class Helper
       public Helper(Dictionary<string, Response> responses,
                     CommandMapper commandMapper)
       {

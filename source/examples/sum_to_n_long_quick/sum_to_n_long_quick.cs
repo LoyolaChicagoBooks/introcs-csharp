@@ -4,7 +4,7 @@ namespace IntroCS
    class SumToNTest  // finally quick and correct
    {
       //                             good chunk
-      // Return the sum of the numbers from 1 through n.
+      /// Return the sum of the numbers from 1 through n.
       static long SumToN(int n)
       {
          return (long)n*(n+1)/2;
