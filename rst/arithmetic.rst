@@ -268,9 +268,10 @@ What is a simple expression that lets you see if an int x is divisible by 17?
 Mixed Arithmetic Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Think of the results for each of these in csharp, one at a time, write them down,
-and *then* test.
-Did you get them right?  If not, can you explain the results after seeing them? ::
+*Think* of the result of one of these at a time; write your prediction, 
+and *then* test, and write the correct answer afterward if you were wrong.
+Then go on to the next.... 
+For the ones you got wrong, can you explain the result after seeing it? ::
 
     2 * 5 + 3;
     2 + 5 * 3;
@@ -281,7 +282,3 @@ Did you get them right?  If not, can you explain the results after seeing them? 
     6 * (2/3);
     3 + 10 % 6;
     10 % 6 + 3;
-      
-
-
-   
