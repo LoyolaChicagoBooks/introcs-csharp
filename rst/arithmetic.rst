@@ -276,6 +276,9 @@ For the ones you got wrong, can you explain the result after seeing it? ::
     2 * 5 + 3;
     2 + 5 * 3;
     1.5 * 3;
+    7.0/2.0;
+    7.0/2;
+    7/2.0;
     4.0 * 3 / 8;
     4 * 3 / 8;
     6 * (2.0/3);
