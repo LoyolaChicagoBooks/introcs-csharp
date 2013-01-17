@@ -57,3 +57,39 @@ You can chain concatenations.  We could make a full sentence adding a period:
     csharp> "We get " + x + ".";
     "We get 3."
     
+Four Copies Exercise
+~~~~~~~~~~~~~~~~~~~~~~
+In csharp declare and initialize a string variable.  Write an expression that
+evaluates to four copies of the string, so it work no matter with value you
+gave your string.
+
+Thirty-two Copies Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This is an extension of the previous exercise, except with 32 copies,
+but do not do it with one long
+expression.  Include some extra short assignment statements in the middle, 
+to shorten the overall 
+writing.  Hint:  32 was chosen since you can reach it by repeated doubling.
+
+Sum String Exercise
+~~~~~~~~~~~~~~~~~~~~~~
+
+In csharp declare and initialize two int's, x and y.  Then enter an expression whose
+value is "x + y is 56", except that 56 is replaced by the sum of x and y, and is not
+a literal, but calculated from the actual values of x and y.
+
+This has a trick to it.
+
+Ints and Strings Added
+~~~~~~~~~~~~~~~~~~~~~~
+
+If x and y are initialized small ints, *think* what the csharp response 
+is to each of these, one at a time, then test::
+
+   x + "??" + y;
+   x + y + "??";
+   x * y + "??";
+   "??" + x * y;
+   x + "??" * y;
+   
+Check yourself.  Can you explain it?
