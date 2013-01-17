@@ -83,8 +83,14 @@ This has a trick to it.
 Ints and Strings Added
 ~~~~~~~~~~~~~~~~~~~~~~
 
-If x and y are initialized small ints, *think* what the csharp response 
-is to each of these, one at a time, then test::
+In csharp enter  ::
+
+   int x = 2;
+   int y = 3;
+   
+*Think* what the csharp response 
+is to each of these, write one predicted response at a time, then *then test it,
+and put the right answer beside it if you were wrong::
 
    x + "??" + y;
    x + y + "??";
@@ -92,4 +98,4 @@ is to each of these, one at a time, then test::
    "??" + x * y;
    x + "??" * y;
    
-Check yourself.  Can you explain it?
+Can you explain the ones you got wrong, after looking at the actual answer?
