@@ -43,11 +43,17 @@ or in the shorter ::
 
     string name = Console.ReadLine();
 
+.. index:: Console; ReadKey
+   ReadKey
+   
 Fine point:  Notice that in most operating systems you can edit and correct your line
 before pressing the Return key.  This is handy, 
 but it means that the Return key *must* always be pressed to signal the end
 of the response.  
 Hence a whole line must be read, and there is *no* function ``Console.Read()``.  
+Just for completeness we mention that you can read a raw single keystroke immediately
+(no editing beforehand).  If you want to explore that later, see  
+:repsrc:`test_readkey/test_readkey.cs`. 
      
 
 .. index::
@@ -155,17 +161,41 @@ immediately, though they may not accomplish anything.
 Running our MonoDevelop Examples Solution
 ------------------------------------------
 
-MORE MONODEVELOP!  FIll it in!
+If you are just starting MonoDevelop, and you have *not* run our solution before:
 
+#.  On the Welcome screen select the button Open Solution or File.
+#.  You get anopen-file dialog.  Navigate to our example solution.
+    (It must be unzipped already!)
+#.  Select :file:`examples/examples.sln`.
 
-To open the solution, you need to select :file:`examples/examples.sln`.
-
+The next time you come to the Welcome screen, our examples should be listed in the
+Recent Projects, and you can click to open it directly.
 
 Copying and Modifying Our Example MonoDevelop Projects
 ----------------------------------------------------------------
 
-MORE MONODEVELOP!  FIll it in!
+We strongly encourage you not to modify our examples in place, if you want
+to keep the changes, because we will make additions and modifications to source.zip,
+and the easiest thing to do is to unzip the new version on top of the old version,
+clobbering any changes that you made to files.
 
+If you do want to alter our code, we suggest you copy it to a project in your
+solution ("work", discussed before).
+
+#. Open your solution.
+#. Create a new project, maybe with the same name as the one we had.  If it was a
+   "_stub" project, remove the "_stub" from your project's name.
+#. In the Solution Pad open the menu on the new project, select, Add, and then in the
+   further submenu, select Add Files....
+#. This brings up an operating system open-file dialog.  Switch folders into our
+   example projects.  Select the files you want to copy.
+#. A further dialog window pops up, with the choice **Copy** selected.
+   Click to approve copy (as opposed to move or link).  
+#. Now the desired files should appear in your project.  
+   If you intended to copy everything for a project, test by running the project.
+   Even our stub projects should compile, though a stub project may not do anything
+   when you run it until you add your own code to it.  To make successful incremental
+   additions, it is always good to start from something the compiles!
 
 .. _AdditionProblem:
 

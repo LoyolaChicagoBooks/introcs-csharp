@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DB10CDE7-016D-4828-8C9F-667A9F7803C4}</ProjectGuid>
+    <ProjectGuid>{9065147A-5266-428F-8DF0-EE77057805A6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>test_readkey</RootNamespace>
     <AssemblyName>test_readkey</AssemblyName>
@@ -35,7 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="testreadkey.cs" />
+    <Compile Include="test_readkey.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
