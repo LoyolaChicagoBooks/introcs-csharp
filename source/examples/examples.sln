@@ -141,8 +141,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_while1", "test_while1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_while2", "test_while2\test_while2.csproj", "{39E6EAD0-8447-4EAA-ADB0-13B9C23AE483}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testreadkey", "test_readkey\testreadkey.csproj", "{DB10CDE7-016D-4828-8C9F-667A9F7803C4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vowels2", "vowels2\vowels2.csproj", "{60301B5D-D672-46BA-9F38-A079E0CEC3D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wages1", "wages1\wages1.csproj", "{C3B508CE-5596-4233-9FAF-0F23715FF0CE}"
@@ -190,6 +188,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs_project1", "cs_project1\cs_project1.csproj", "{3AB6647B-77BB-4662-96A8-906FCF233D78}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ok_if_scope", "ok_if_scope\ok_if_scope.csproj", "{BDFC284F-6A97-45CB-A857-DBAD8DAE12E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_readkey", "test_readkey\test_readkey.csproj", "{9065147A-5266-428F-8DF0-EE77057805A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -434,6 +434,12 @@ Global
 		{8B33C0D2-FB47-4722-97BA-BDB4076B4FCD}.Default|Any CPU.Build.0 = Debug|Any CPU
 		{8B33C0D2-FB47-4722-97BA-BDB4076B4FCD}.Release|x86.ActiveCfg = Release|Any CPU
 		{8B33C0D2-FB47-4722-97BA-BDB4076B4FCD}.Release|x86.Build.0 = Release|Any CPU
+		{9065147A-5266-428F-8DF0-EE77057805A6}.Debug|x86.ActiveCfg = Debug|x86
+		{9065147A-5266-428F-8DF0-EE77057805A6}.Debug|x86.Build.0 = Debug|x86
+		{9065147A-5266-428F-8DF0-EE77057805A6}.Default|Any CPU.ActiveCfg = Debug|x86
+		{9065147A-5266-428F-8DF0-EE77057805A6}.Default|Any CPU.Build.0 = Debug|x86
+		{9065147A-5266-428F-8DF0-EE77057805A6}.Release|x86.ActiveCfg = Release|x86
+		{9065147A-5266-428F-8DF0-EE77057805A6}.Release|x86.Build.0 = Release|x86
 		{90932993-4F0C-469E-A860-90E33DA03A6A}.Debug|x86.ActiveCfg = Debug|x86
 		{90932993-4F0C-469E-A860-90E33DA03A6A}.Debug|x86.Build.0 = Debug|x86
 		{90932993-4F0C-469E-A860-90E33DA03A6A}.Release|x86.ActiveCfg = Release|x86
@@ -520,10 +526,6 @@ Global
 		{D9BE9DA0-A313-4F1F-AB3A-8EF17364BE9C}.Default|Any CPU.Build.0 = Debug|x86
 		{D9BE9DA0-A313-4F1F-AB3A-8EF17364BE9C}.Release|x86.ActiveCfg = Release|x86
 		{D9BE9DA0-A313-4F1F-AB3A-8EF17364BE9C}.Release|x86.Build.0 = Release|x86
-		{DB10CDE7-016D-4828-8C9F-667A9F7803C4}.Debug|x86.ActiveCfg = Debug|x86
-		{DB10CDE7-016D-4828-8C9F-667A9F7803C4}.Debug|x86.Build.0 = Debug|x86
-		{DB10CDE7-016D-4828-8C9F-667A9F7803C4}.Release|x86.ActiveCfg = Release|x86
-		{DB10CDE7-016D-4828-8C9F-667A9F7803C4}.Release|x86.Build.0 = Release|x86
 		{DCF93268-4D32-4538-9C10-E32E0DB3CB79}.Debug|x86.ActiveCfg = Debug|x86
 		{DCF93268-4D32-4538-9C10-E32E0DB3CB79}.Debug|x86.Build.0 = Debug|x86
 		{DCF93268-4D32-4538-9C10-E32E0DB3CB79}.Release|x86.ActiveCfg = Release|x86

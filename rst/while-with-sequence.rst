@@ -54,7 +54,14 @@ In the body of the loop, the main thing is to print the next character,
 and the next character is ``s[i]``::
 
     Console.WriteLine(s[i]);
-    
+
+
+.. index: 
+   ++
+   --
+   operator; ++
+   operator; --
+       
 We also need to remember the part to get ready for the next time 
 through the loop.  We have dealt with regular sequence of values
 before.  We change ``i`` with::
@@ -66,7 +73,7 @@ This change is so common, there is a simpler syntax::
     i++;
     
 This increases the value of the numeric variable i by 1.
-(The reverse is ``i--;``)
+(The reverse is ``i--;``) [#plusplustype]_
 
 So all together:
 
@@ -340,3 +347,25 @@ example :repsrc:`check_digits2/check_digits2.cs`.
 Returning out of a loop 
 is a good pattern to remember when you are searching for something, 
 and you know the final answer for your function as soon as you find it.
+
+.. [#plusplustype]
+   To be complete, these two statements are not always totally equivalent::
+      
+      c = c + 1;
+      c++;
+      
+   In ``c++`` the type of ``c`` must be integral, but not necessarily ``int``.  
+   It could be a smaller type, like ``char``.    For instance ::
+   
+       char c = 'A';
+       while (c <= 'Z') {
+           Console.Write(c);
+           c++;
+       }
+       
+   prints the whole English alphabet, capitalized.  The ``c++`` could
+   not be replaced by ``c = c + 1``, but you could use ``c = (char)(c + 1)``:
+   The ``int`` literal 1 forces
+   the sum expression to be an int, which must be cast back to a ``char`` to be
+   assigned to ``c``.  Similarly with the -- operator.
+   
