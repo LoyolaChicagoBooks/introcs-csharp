@@ -67,16 +67,17 @@ Thirty-two Copies Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is an extension of the previous exercise, except with 32 copies,
 but do not do it with one long
-expression.  Include some extra short assignment statements in the middle, 
+expression.  Include some extra short *assignment statements* in the middle, 
 to shorten the overall 
-writing.  Hint:  32 was chosen since you can reach it by repeated doubling.
+writing.  Hint:  32 was chosen since you can reach it by repeated *doubling*.
 
 Sum String Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
 In csharp declare and initialize two int's, x and y.  Then enter an expression whose
 value is "x + y is 56", except that 56 is replaced by the sum of x and y, and is not
-a literal, but calculated from the actual values of x and y.
+a literal, but calculated from the actual values of variables x and y (which do not
+need to add up to 56 specifically).
 
 This has a trick to it.
 
