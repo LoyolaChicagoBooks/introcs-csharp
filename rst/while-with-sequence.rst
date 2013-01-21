@@ -349,23 +349,34 @@ is a good pattern to remember when you are searching for something,
 and you know the final answer for your function as soon as you find it.
 
 .. [#plusplustype]
-   To be complete, these two statements are not always totally equivalent::
-      
-      c = c + 1;
-      c++;
+
+   To be complete, the statements ``c = c + 1;`` and ``c++;`` are not always 
+   equivalent.
+   
+   .. fails in tex
+       To be complete, these two statements are not always 
+       totally equivalent::
+          
+          c = c + 1;
+          c++;
       
    In ``c++`` the type of ``c`` must be integral, but not necessarily ``int``.  
-   It could be a smaller type, like ``char``.    For instance ::
+   It could be a smaller type, like ``char``.    
    
-       char c = 'A';
-       while (c <= 'Z') {
-           Console.Write(c);
-           c++;
-       }
+   .. fails in tex 
+       For instance ::
        
-   prints the whole English alphabet, capitalized.  The ``c++`` could
+           char c = 'A';
+           while (c <= 'Z') {
+               Console.Write(c);
+               c++;
+           }
+       
+       prints the whole English alphabet, capitalized.  
+    
+   The ``c++`` could
    not be replaced by ``c = c + 1``, but you could use ``c = (char)(c + 1)``:
    The ``int`` literal 1 forces
-   the sum expression to be an int, which must be cast back to a ``char`` to be
-   assigned to ``c``.  Similarly with the -- operator.
-   
+   the sum expression to be an ``int``, which must be cast back to a ``char`` to be
+   assigned to ``c``.  Similarly with the ``--`` operator.
+
