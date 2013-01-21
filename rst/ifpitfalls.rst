@@ -26,6 +26,9 @@ an ``if`` condition::
     if ( x < 0); // WRONG PROBABLY!
         Console.WriteLine(x);
 
+This code is deadly, since it compiles and is almost surely 
+*not* what you mean.
+
 Remember indentation and newlines are only significant for humans. The
 two lines above are equivalent to::
 
@@ -36,9 +39,6 @@ two lines above are equivalent to::
 (Whenever you do need an empty statement, you are encouraged to put the
 semicolon all by itself on a line, as above.)
 
-This code is deadly, since it compiles and is almost surely 
-*not* what you mean.
-
 If you always put an open brace *directly* after the condition in an ``if`` statement, 
 you will not make this error.
 
@@ -47,7 +47,7 @@ generate a compiler error, though it may appear cryptic::
 
     static void badSemicolon(int x);
     {
-        x = x = 2;
+        x = x + 2;
         // ...
 
 .. index::
@@ -73,7 +73,7 @@ the following would be OK::
        Console.WriteLine("x not positive, untested y");
 
 Unfortunately placing the ``else`` under the first ``if`` is not enough to make
-them go together (remember the C# compiler ignores whitespace). The
+them go together (remember the C# compiler ignores extra whitespace). The
 following is equivalent to the compiler, with the else apparently going
 with the second if::
 
@@ -130,7 +130,7 @@ and change it to ::
         Console.WriteLine("  positive");
 
 We am not going to get the behavior we want.  
-The positive part will *always* be printed.
+The word "positive" will *always* be printed.
 
 If we had first taken a bit more effort originally to write ::
 
@@ -149,6 +149,6 @@ This way we do not have to keep worrying about this question when we revise:
 "Have I switched to multiple lines after the ``if``
 and need to introduce braces?"
 
-All three of the pitfalls mentioned in this section are fixed or 
-minimized by consistent
-use of braces in the sub-statements of ``if`` statements.
+The last two of the pitfalls mentioned in this section are fixed by consistent
+use of braces in the sub-statements of ``if`` statements.  Even with good use of
+braces, you still need to watch out for an incorrect semicolon after a condition.
