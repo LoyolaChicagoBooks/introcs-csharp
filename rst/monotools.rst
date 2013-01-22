@@ -204,6 +204,14 @@ Mono-develop Installation
 
 #. Have Mono installed first. 
 
+#. Also there are two other packages you need first:  They have link on the
+   MonoDevelop site, but these appear to be more recent:
+
+      - .NET Framework 4.0: 
+        http://www.microsoft.com/en-us/download/details.aspx?id=17851 
+      - GTK# for .NET 2.12.10: 
+        http://download.mono-project.com/gtk-sharp/gtk-sharp-2.12.10.win32.msi
+      
 #. Now go to <http://mono-develop.com>.
 
 #. As with Mono, we need to look for the downloads link. You should
@@ -211,7 +219,7 @@ Mono-develop Installation
 
 #. As with Mono, you will see a self-extracting installer, 
    which you should run as before.
-
+   
 #. If the preceding steps were successful, you can launch
    MonoDevelop by double-clicking the icon in your Applications
    folder. (You won't know what to do with it yet, but at least you can
