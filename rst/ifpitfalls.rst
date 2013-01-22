@@ -40,7 +40,21 @@ two lines above are equivalent to::
 semicolon all by itself on a line, as above.)
 
 If you always put an open brace *directly* after the condition in an ``if`` statement, 
-you will not make this error.
+you will not make this error::
+
+    if ( x < 0) {
+        Console.WriteLine(x);
+    }
+
+Then even if you were to add a semicolon::
+
+    if ( x < 0) { ;
+        Console.WriteLine(x);
+    }
+
+it would be a waste of a keystroke, but it would just be the first (empty) statement 
+inside the block, and the writing would still follow:
+The extra semicolon would have no effect.
 
 The corresponding error at the end of a method heading will at least 
 generate a compiler error, though it may appear cryptic::
@@ -49,6 +63,8 @@ generate a compiler error, though it may appear cryptic::
     {
         x = x + 2;
         // ...
+
+This is another easy one to make and *miss* - just one innocent semicolon.
 
 .. index::
    double: pitfall; dangling else;
