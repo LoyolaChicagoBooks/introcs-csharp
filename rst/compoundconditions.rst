@@ -21,10 +21,10 @@ true. A short example function using this would be::
     static void checkGraduation(int credits, double GPA) 
     {
         if (credits >= 120 && GPA >=2.0) { 
-            Console.WriteLine("You are eligible to graduate!") 
+            Console.WriteLine("You are eligible to graduate!"); 
         }
         else { 
-            Console.WriteLine("You are not eligible to graduate.") 
+            Console.WriteLine("You are not eligible to graduate."); 
         }
     }
 
