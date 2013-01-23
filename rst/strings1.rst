@@ -44,18 +44,18 @@ concatenating:
 
 .. code-block:: none
 
-    csharp> x = 3;
+    csharp> int x = 42;
     csharp> string result;
     csharp> result = "We get " + x;
     csharp> result;
-    "We get 3"
+    "We get 42"
 
 You can chain concatenations.  We could make a full sentence adding a period:
 
 .. code-block:: none
 
     csharp> "We get " + x + ".";
-    "We get 3."
+    "We get 42."
     
 Four Copies Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -70,6 +70,7 @@ but do not do it with one long
 expression.  Include some extra short *assignment statements* in the middle, 
 to shorten the overall 
 writing.  Hint:  32 was chosen since you can reach it by repeated *doubling*.
+To repeatedly double, you must save the result after each intermediate doubling.
 
 Sum String Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
