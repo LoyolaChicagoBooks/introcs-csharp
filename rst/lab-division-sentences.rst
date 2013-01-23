@@ -131,4 +131,64 @@ your own and complete it:
 
 .. literalinclude:: ../source/examples/do_the_math_stub/do_the_math.cs
 
-Be sure to run it and test it thoroughly. 
+Be sure to run it and test it thoroughly. Show your output to a TA.
+
+.. index:: MonoDevelop; empty project - no console error
+   MonoDevelop; file not in project error 
+
+.. _monodevelop-reminders:
+
+MonoDevelop Reminders and Fixes 
+---------------------------------
+
+Be careful to open your MonoDevelop solution and add a new **C# Console project** to
+it, and add your new file directly into the project (through the Solution pad).  
+There are two main places to
+mess up here.  We emphasize them and mention fixes if you make the easy mistakes:
+   
+#.  It is easy to select Empty Project instead of C# and Console Project.  If you
+    do that, a correct program will compile successfully, but it will run 
+    in limbo, with no console attached to it, and all ``Console.ReadLine()`` calls
+    return ``null``, which is likely to make the program have a run-time error.
+    One way to fix it:
+    
+    - If you discovered this while running your program, there is no good access to 
+      the running process.  (You lack a console!)
+      In this case you need to close your solution, ending the running process,
+      and open the solution again.
+         
+    - Double click on the project in the Solution Pad 
+      (if that does anything, or right-click it and select Options).  
+      An elaborate Project Options dialog window appears.
+      
+    - In the left pane under Run, select General.  
+      In the right pane, two check boxes should appear.  Make sure you have the first
+      checked: Run on external console.  That should check the second one
+      automatically.  Close the window and you should be set. 
+      
+#.  Another common error is to proceed like with most text processors, 
+    and open the top File menu,  
+    and choose to open and edit a new file for your program.  
+    *You cannot run this program from MonoDevelop.*  
+    If you have a separate project set up, 
+    but without this file or any other showing in the Solutions pad, an attempt to
+    run the project with say no ``Main`` method (in fact no program at all). 
+    The fix:
+    
+    - You will shortly need to navigate in an operating system open file dialog to where 
+      you put the file created from the File menu.  If you do not
+      remember where that was, a good trick is to click in the edit window of the file
+      and then go to the File menu and select Save As.  The dialog should
+      show where the file currently is.  Cancel the dialog.   
+    
+    - Right click on the project in the Solution pad, and choose Add and then 
+      Add Files....  Browse to where the file is and select it; click Open.
+      Unless you have some
+      reason to keep a copy in the original place, select Move, and Ok.
+      Now the orphaned file is moved into your project.  You should see it list 
+      under the project in the Solution pad. 
+      You can proceed to edit and run it.
+      
+#.  If you lose the display of the Solution pad somehow, you can go to the View menu, 
+    select Pads, and then select Solution.    
+    
