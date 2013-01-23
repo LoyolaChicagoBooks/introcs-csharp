@@ -121,7 +121,7 @@ to get used to the idea of substitution.
 A technical point: Since braces have special meaning in a format
 string, there must be a special rule if you want braces to actually
 be included in the final *formatted* string. The rule is to double
-the braces: ``'{{'`` and ``'}}'``. The fragment ::
+the braces: ``"{{"`` and ``"}}"``. The fragment ::
 
     int a = 2, b = 3;
     Console.WriteLine("The set is {{{0}, {1}}}.", a, b);
