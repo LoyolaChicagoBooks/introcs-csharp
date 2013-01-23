@@ -118,7 +118,7 @@ Sign Exercise
 ~~~~~~~~~~~~~             
    
 Write a program ``sign.cs`` to ask the user for a number. Print out
-which category the number is in: ``"positive'``, ``"negative"``, or
+which category the number is in: ``"positive"``, ``"negative"``, or
 ``"zero"``.
 
 

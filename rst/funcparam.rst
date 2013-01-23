@@ -57,7 +57,7 @@ function call. The argument supplies the actual data to be used in
 the function execution. When the call is made, C# does this by
 associating the **formal** parameter name ``person`` with the **actual**
 parameter data, as in an assignment statement. In the first call,
-this actual data is ``'Emily'``. We say the actual parameter value
+this actual data is ``"Emily"``. We say the actual parameter value
 is *passed* to the function for execution.
 
 The execution in greater detail:
@@ -65,12 +65,12 @@ The execution in greater detail:
 #. Lines 13: Execution starts in Main.  
 
 #. Line 15: Call to ``HappyBirthday``, with actual parameter
-   ``'Emily'``.
+   ``"Emily"``.
 
-#. Line 5: ``'Emily'`` is passed to the function, so
-   ``person = 'Emily'``.
+#. Line 5: ``"Emily"`` is passed to the function, so
+   ``person = "Emily"``.
 
-#. Lines 7-10: The song is printed, with ``'Emily'`` used as the
+#. Lines 7-10: The song is printed, with ``"Emily"`` used as the
    value of ``person`` in line 9: printing ::
        
        Happy Birthday, dear Emily.
@@ -78,12 +78,12 @@ The execution in greater detail:
 #. End of line 15 after returning from the function call
 
 #. Line 16: Call to ``HappyBirthday``, this time with actual
-   parameter ``'Andre'``
+   parameter ``"Andre"``
 
-#. Line 5: ``'Andre'`` is passed to the function, so
-   ``person = 'Andre'``.
+#. Line 5: ``"Andre"`` is passed to the function, so
+   ``person = "Andre"``.
 
-#. Lines 7-10: The song is printed, with ``'Andre'`` used as the
+#. Lines 7-10: The song is printed, with ``"Andre"`` used as the
    value of ``person`` in line 9: printing ::
        
        Happy Birthday, dear Andre.
