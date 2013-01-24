@@ -269,7 +269,7 @@ Sum To ``n``
 
 Let us write a function to sum the numbers from 1 to ``n``::
 
-    /** Return the sum of the numbers from 1 through n. */
+    /// Return the sum of the numbers from 1 through n. 
     static int SumToN(int n) 
     {
        ...
@@ -368,7 +368,7 @@ Finally this was supposed to fit in a function.  The ultimate purpose
 was to *return* the sum, which is the final value of the
 variable ``sum``, so the whole function is::
 
-  /** Return the sum of the numbers from 1 through n. */
+  /// Return the sum of the numbers from 1 through n. 
   static int SumToN(int n)     // line 1
   {
      int sum = 1, i = 2;       // 2
