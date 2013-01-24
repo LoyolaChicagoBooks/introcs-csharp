@@ -46,7 +46,7 @@ replacement makes sense.  The following heading
 (with documentation) should work:
 
 .. literalinclude:: ../source/examples/string_manip_stub/string_manip.cs
-   :start-after: }
+   :start-after: end main chunk
    :end-before: {
 
 
@@ -55,8 +55,8 @@ of the tests it should pass.  Here is a Main program written
 to test the function in different ways and display the results:
 
 .. literalinclude:: ../source/examples/string_manip_stub/string_manip.cs
-   :start-after: {
-   :end-before: /**
+   :start-after: main chunk
+   :end-before: main chunk
 
 
 Writing tests *first* is a good idea to focus you on what really 

@@ -232,8 +232,8 @@ if a non-digit is encountered::
 When we get all the way through the string, the answer so far is the
 final answer to be returned::
 
-   /** Return true if s contains one or more digits
-    * and nothing else. Otherwise return false. */
+   /// Return true if s contains one or more digits
+   /// and nothing else. Otherwise return false. 
    static bool IsDigits(string s)
    {
       bool allDigitsSoFar = true;

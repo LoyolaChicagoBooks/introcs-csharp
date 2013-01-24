@@ -2,7 +2,7 @@ using System;
 
 // problem stub for class -- significant logical sequence 
 class StringManip
-{
+{                                              // main chunk
     static void Main ()
     {
         string str1 = "It was the best of times.";
@@ -19,7 +19,7 @@ class StringManip
         string str5 = replaceFirst(str3, "worst", "best");
         Console.WriteLine("str3 with worst => best: " + str5);
     }
-    
+                                              // end main chunk  
     /// Return s with the first occurence of target
     /// replaced by replacement.
     static string replaceFirst(string s, string target,
