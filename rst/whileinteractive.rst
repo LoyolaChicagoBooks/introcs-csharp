@@ -179,7 +179,7 @@ loop (and indent it)::
 Luckily you will get a compiler error in that situation, avoiding
 more major troubleshooting:  
 The *complete* copy of the line copies the *declaration*
-part as well as the assignment part, and mono sees the declaration of 
+part as well as the assignment part, and the compiler sees the declaration of 
 ``number`` already there 
 from the scope outside the while block, and complains.
 
