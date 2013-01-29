@@ -380,3 +380,15 @@ and you know the final answer for your function as soon as you find it.
    the sum expression to be an ``int``, which must be cast back to a ``char`` to be
    assigned to ``c``.  Similarly with the ``--`` operator.
 
+Exercise
+-----------
+
+Duplicate Character Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write and test a function with the documentation and heading below::
+
+   /// Return true if two consecutive characters in s are the same.
+   /// Return false otherwise.
+   static bool HasRepeat(string s)
+   
