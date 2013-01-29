@@ -7,7 +7,12 @@ namespace IntroCS
       static void Main() //testing routine
       {
          string s = UIF.PromptLine("Enter a line: ");
-         Console.WriteLine("Only digits in {0} ?: ", IsDigits(s));
+         if (IsDigits(s)) {
+             Console.WriteLine("Only digits in {0}", s);
+         }
+         else {
+            Console.WriteLine("Not only digits in {0}", s);
+         }
       }
                                                  //    new chunk
       /// Return true if s contains one or more digits
