@@ -22,7 +22,7 @@ Be mindful of the processes developed in class filling in
 Parts 2 and 4 also depend on :ref:`If-Statements` 
 through :ref:`More-Conditional-Expressions`.
 
-Design, compile and run a C# program to accomplish each of
+Design, compile and run a single C# program to accomplish all of
 the following tasks. Add one part at a time and test before trying the
 next one. The program can just include a Main method, or it is neater to
 split things into separate methods (all static void, with names like
@@ -30,7 +30,7 @@ ShowLength, SentenceType, LastFirst1, LastFirst),
 and have Main call all the ones
 you have written so far (or for testing purposes, just the one you
 are working on, with the other function calls commented out).
-Use the UIF class for user input.  
+Practice using a library reference: **Use the UIF class for user input.**    
 
 #. Read a string from the keyboard 
    and print the length of the string, with a label.
