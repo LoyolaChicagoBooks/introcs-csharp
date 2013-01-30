@@ -1,6 +1,3 @@
-Algorithms using While
-======================
-
 .. index::
    double:  PF4; recursion
    double:  SP1; history
@@ -10,6 +7,9 @@ Algorithms using While
 .. _gcd:
 
 Greatest Common Divisor
+=========================
+
+Euclid's Algorithm
 -----------------------
 
 The greatest common divisor of two non-zero integers is a great
