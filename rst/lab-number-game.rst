@@ -55,12 +55,17 @@ game is going to be acting like Player A.
 Part 1: No Hints; Fixed Secret Number
 -------------------------------------------
 
+If using MonoDevelop, create a new project in a solution 
+in which you already have added the ui library project.  Add the ui project 
+as a reference for the lab project.  
+Make sure your program has ``namespace IntroCS;`` to match the ui project.
+
 You are going to play a game, and later may repeat it, so put the code
 for playing the number game in a function called ``Game``::
 
     static void Game()
         
-For now your Main function can just call ``Game()``.
+For now your ``Main`` function can just call ``Game()``.
 
 In ``Game``:
 
@@ -70,7 +75,7 @@ In ``Game``:
    Admittedly, this is not much fun for the player the second time!
 
 #. Prompt the player for a guess.  
-   You can use ``UI.PromptInt``.
+   Use ``UI.PromptInt``.
    Every time the player guesses wrong,
    print "Wrong!".  A later version will give clues.  Keep
    prompting for another number until the player guesses correctly.
@@ -183,8 +188,8 @@ Part 4:  Let the Player Set the Range of Values
 ------------------------------------------------
 
 In ``Game``: 
-Instead of setting ``big`` automatically to 100, make ``big``
-be a parameter, so the heading looks like::
+Instead of setting declaring ``big`` and  automatically initializing it to 100,
+ make ``big`` be a parameter, so the heading looks like::
     
         static void Game(int big)
 
@@ -254,7 +259,7 @@ Should you finish everything early, try the following:
    "E" for equal (when the computer wins).
    As you saw in the initial example with George and Andy,
    each hint reduces the range of the possible secret numbers.
-   Have the computer guess a random number in the *exact* range that 
+   Have the computer guess a *random* number in the *exact* range that 
    remains possible.
 
    To do this you must note the asymmetry of the parameters for the method
