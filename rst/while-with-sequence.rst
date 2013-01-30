@@ -386,9 +386,12 @@ Exercise
 Duplicate Character Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write and test a function with the documentation and heading below::
+Create a file ``double_char_test.cs``, 
+and write and test a function with the documentation and heading below::
 
-   /// Return true if two consecutive characters in s are the same.
-   /// Return false otherwise.
-   static bool HasRepeat(string s)
+   /// If two consecutive characters in s are the same, return true.
+   /// Return false otherwise.  Examples: 
+   /// HasDoubleChar("bigfoot") and HasDoubleChar("aaah!") are true; 
+   /// HasDoubleChar("treated") and HasDoubleChar("haha!") are false.
+   static bool HasDoubleChar(string s)
    
