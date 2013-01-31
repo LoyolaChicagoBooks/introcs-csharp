@@ -94,8 +94,15 @@ to write a program where you have the code to add all the data you
 want to a file, but the program does not end up creating a file.
 Usually this means you forgot to close the file!
 
-You can open (From the File menu) the file sample.txt, drilling down through the
-:file:`bin` folder.  It should contain just what was written!
+MonoDevelop places ``sample.txt`` in a hard-to-guess place in the file system, 
+that is *not* shown in the Solution pad!
+From the top File menu, you can Open the file sample.txt, drilling down from
+the project directory, through the
+:file:`bin` folder to the :file:`Debug` folder.  
+It should contain just what was written!  
+
+If you were to run the program from the command line, 
+the file would appear in the current directory.
 
 As you can use a :ref:`Format-Strings` with 
 ``Console`` methods ``Write`` and ``WriteLine``, 
