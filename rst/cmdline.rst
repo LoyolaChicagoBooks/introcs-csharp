@@ -113,6 +113,33 @@ For Windows 7 or 8 users enter the command below (substituting your login ID):
    
 The cd is short for "Change Directory", changing the current directory.
 
+.. warning::
+
+   Windows only: 
+   The cd command does not work the way you are likely to think about it on
+   a Windows system with more than one drive (like C: and flash drive E: that you have
+   plugged in).  Windows remembers a separate current directory for each
+   separate drive.  It also *separately* remembers a *current drive*.  
+   *You do not change the current drive with the cd command.*  
+   The command to change the current drive is just the name of the
+   drive with a colon after it.  For example the command
+   
+   .. code-block:: none
+       
+       E:
+   
+   sets the current drive to E:, and the active directory is the
+   current directory on E:.
+   
+   However, if the current drive is C:, and you enter the command
+   
+   .. code-block:: none
+       
+       cd E:\comp170
+      
+   then you change the current directory on E:, but *the current drive remains C:*.
+      
+
 Since there is always a current directory, it makes sense to allow a path to be *relative*
 to the current directory.  In that case do not start with the slash that would
 indicate the root directory.  For example, if you are in you home directory,

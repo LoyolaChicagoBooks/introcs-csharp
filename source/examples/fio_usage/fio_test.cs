@@ -17,15 +17,18 @@ namespace IntroCS
             reader1.Close();
          }
 
-         StreamReader reader2 = FIO.OpenReader(FIO.GetLocation(sample), sample);
+         StreamReader reader2 = FIO.OpenReader(FIO.GetLocation(sample), 
+                                               sample);
          if (reader2 != null) {
             Console.WriteLine("second reader test passed");
             reader2.Close();
          }
 
-         StreamWriter writer1 = FIO.OpenWriter(FIO.GetLocation(sample), output);
+         StreamWriter writer1 = FIO.OpenWriter(FIO.GetLocation(sample), 
+                                               output);
          writer1.Close();
-         Console.WriteLine("writer test passed; file written at {0}", FIO.GetPath(output));
+         Console.WriteLine("writer test passed; file written at {0}", 
+                           FIO.GetPath(output));
       }
    }
 }

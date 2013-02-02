@@ -3,6 +3,8 @@ using System.IO;
 
 namespace IntroCS
 {
+   /// File I/O functions to help find files and folders
+   /// when they may be in more than one path.
    public class FIO
    {
       private static string[] path = { ".", "..", Path.Combine("..", "..") };
@@ -20,7 +22,7 @@ namespace IntroCS
       }
 
       /// Find a directory containing the filename
-      /// and return the full path, if it exists. 
+      /// and return the full file path, if it exists. 
       /// Otherwise return null.
       public static string GetPath(string filename)
       {
