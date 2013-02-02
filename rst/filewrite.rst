@@ -95,17 +95,23 @@ want to a file, but the program does not end up creating a file.
 Usually this means you forgot to close the file!
 
 MonoDevelop places ``sample.txt`` in a hard-to-guess place in the file system, 
-that is *not* shown in the Solution pad!
-From the top File menu, you can Open the file sample.txt, drilling down from
-the project directory, through the
+that is *not* shown in the Solution pad, so do not look for it there!  
+You *can* see it in an operating system file
+window.  The easiest way to do that in MonoDevelop is to right-click in the 
+Solution pad on the project, and select Open Containing Folder.  This should start you
+in the project directory.  Then you can drill down through the
 :file:`bin` folder to the :file:`Debug` folder.  
+You can open the ``sample.txt`` file with your favorite text processor. 
 It should contain just what was written!  
 
-If you were to run the program from the command line, 
+That folder also contains the executable
+program created when MonoDevelop builds your project.  
+
+If you were to run the program from the command line instead of from MonoDevelop, 
 the file would appear in the current directory.
 
 As you can use a :ref:`Format-Strings` with 
-``Console`` methods ``Write`` and ``WriteLine``, 
-you can also use a format string with a ``StreamWriter``, 
+functions ``Write`` and ``WriteLine`` ,of the ``Console`` class, 
+you can also use a format string with the corresponding methods of a ``StreamWriter``, 
 and embed fields by using braces in 
 the format string.

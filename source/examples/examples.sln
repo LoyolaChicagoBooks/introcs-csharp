@@ -163,8 +163,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csproject_stub", "csproject
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dict_lab_stub", "dict_lab_stub\dict_lab_stub.csproj", "{F1171176-7547-4843-BD7C-83349B2013B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "files", "files\files.csproj", "{491DE16F-51F3-46ED-8DEA-0EBAB4CE12F6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grade_file_homework_stub", "grade_file_homework_stub\grade_file_homework_stub.csproj", "{14719763-CB03-432A-BEAD-B6A9B59B35FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "igame_stub", "igame_stub\igame_stub.csproj", "{CAEFB58D-7696-4342-8DC7-7789BF0BA25B}"
@@ -190,6 +188,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ok_if_scope", "ok_if_scope\ok_if_scope.csproj", "{BDFC284F-6A97-45CB-A857-DBAD8DAE12E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_readkey", "test_readkey\test_readkey.csproj", "{9065147A-5266-428F-8DF0-EE77057805A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sum_file", "sum_file\sum_file.csproj", "{47894560-F239-45E6-877F-5B41768A24F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -318,6 +318,12 @@ Global
 		{46F5EEC0-62EF-441A-B1DC-E983AEA8FF64}.Debug|x86.Build.0 = Debug|x86
 		{46F5EEC0-62EF-441A-B1DC-E983AEA8FF64}.Release|x86.ActiveCfg = Release|x86
 		{46F5EEC0-62EF-441A-B1DC-E983AEA8FF64}.Release|x86.Build.0 = Release|x86
+		{47894560-F239-45E6-877F-5B41768A24F3}.Debug|x86.ActiveCfg = Debug|x86
+		{47894560-F239-45E6-877F-5B41768A24F3}.Debug|x86.Build.0 = Debug|x86
+		{47894560-F239-45E6-877F-5B41768A24F3}.Default|Any CPU.ActiveCfg = Debug|x86
+		{47894560-F239-45E6-877F-5B41768A24F3}.Default|Any CPU.Build.0 = Debug|x86
+		{47894560-F239-45E6-877F-5B41768A24F3}.Release|x86.ActiveCfg = Release|x86
+		{47894560-F239-45E6-877F-5B41768A24F3}.Release|x86.Build.0 = Release|x86
 		{47962E12-EDDA-4CE6-91B9-02CD73A9C07C}.Debug|x86.ActiveCfg = Debug|x86
 		{47962E12-EDDA-4CE6-91B9-02CD73A9C07C}.Debug|x86.Build.0 = Debug|x86
 		{47962E12-EDDA-4CE6-91B9-02CD73A9C07C}.Default|Any CPU.ActiveCfg = Debug|x86
@@ -328,12 +334,6 @@ Global
 		{48CFA4C2-A5D2-4F69-80CE-4365BE11EF8B}.Debug|x86.Build.0 = Debug|x86
 		{48CFA4C2-A5D2-4F69-80CE-4365BE11EF8B}.Release|x86.ActiveCfg = Release|x86
 		{48CFA4C2-A5D2-4F69-80CE-4365BE11EF8B}.Release|x86.Build.0 = Release|x86
-		{491DE16F-51F3-46ED-8DEA-0EBAB4CE12F6}.Debug|x86.ActiveCfg = Debug|x86
-		{491DE16F-51F3-46ED-8DEA-0EBAB4CE12F6}.Debug|x86.Build.0 = Debug|x86
-		{491DE16F-51F3-46ED-8DEA-0EBAB4CE12F6}.Default|Any CPU.ActiveCfg = Debug|x86
-		{491DE16F-51F3-46ED-8DEA-0EBAB4CE12F6}.Default|Any CPU.Build.0 = Debug|x86
-		{491DE16F-51F3-46ED-8DEA-0EBAB4CE12F6}.Release|x86.ActiveCfg = Release|x86
-		{491DE16F-51F3-46ED-8DEA-0EBAB4CE12F6}.Release|x86.Build.0 = Release|x86
 		{4B4CF4A8-3F1D-43D3-9B45-917C1BB3B7F7}.Debug|x86.ActiveCfg = Debug|x86
 		{4B4CF4A8-3F1D-43D3-9B45-917C1BB3B7F7}.Debug|x86.Build.0 = Debug|x86
 		{4B4CF4A8-3F1D-43D3-9B45-917C1BB3B7F7}.Release|x86.ActiveCfg = Release|x86

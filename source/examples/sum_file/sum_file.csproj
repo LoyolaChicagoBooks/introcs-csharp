@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{491DE16F-51F3-46ED-8DEA-0EBAB4CE12F6}</ProjectGuid>
+    <ProjectGuid>{47894560-F239-45E6-877F-5B41768A24F3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>files</RootNamespace>
-    <AssemblyName>files</AssemblyName>
+    <RootNamespace>sum_file</RootNamespace>
+    <AssemblyName>sum_file</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>True</DebugSymbols>
@@ -40,11 +40,5 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="numbers.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ui\ui.csproj">
-      <Project>{6A581A4A-8492-46E7-8F21-9D8F17D104F4}</Project>
-      <Name>ui</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>

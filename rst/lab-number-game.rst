@@ -189,7 +189,7 @@ Part 4:  Let the Player Set the Range of Values
 
 In ``Game``: 
 Instead of setting declaring ``big`` and  automatically initializing it to 100,
- make ``big`` be a parameter, so the heading looks like::
+make ``big`` be a parameter, so the heading looks like::
     
         static void Game(int big)
 
