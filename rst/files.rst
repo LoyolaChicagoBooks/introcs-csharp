@@ -14,5 +14,6 @@ Files, Paths, and Directories
    paths
    directories
    fio
+   cmdline-execution
    
 
