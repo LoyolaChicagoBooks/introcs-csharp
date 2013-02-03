@@ -1,0 +1,116 @@
+.. index::
+   double: command line; execution
+
+.. _cmdline-execution:
+
+Command Line Execution
+========================
+
+
+C# shields you from the differences
+between operating systems 
+with its ``File``, ``Path``, and ``Directory`` classes.
+
+If you leave MonoDevelop and go to the command line as described in
+:ref:`commandline`, then you are exposed to the differences
+between the operating systems.  *Look over that section.*
+
+Thus far we have let MonoDevelop hide what actually is happening when
+you execute a program.  The natural environment for the text-based programs
+we are writing is the command line.  We need to get outside MonoDevelop.
+
+#.  To show off the transition, first build or run the ``addition1`` example project
+    from inside MonoDevelop.
+#.  Open a terminal on a Mac or a Mono Command Prompt console in Windows.
+#.  Following the 
+    :ref:`commandline`,
+    change the current directory to the addition1 example project directory.
+#.  Then change to the subdirectory ``bin`` and then the subdirectory ``Debug``.
+#.  Enter the command to list the directory (``dir`` in Windows; ``ls`` on a Mac).
+#.  You should see ``addition1.exe``.  This is the compiled program
+    created by MonoDevelop.  Enter the command 
+
+    .. code-block:: none
+       
+        mono addition1.exe
+    
+    This should run your program.  Note that when you complete it, the window does not
+    disappear!  You keep that history.  Keep this terminal/console window open
+    until the end of the chapter.  
+#.  Windows only:  On Windows, MonoDevelop creates a regular Windows executable file.
+    For consistency you can use the command above, but you no longer need Mono.
+    You can just enter the command ``addition1.exe`` or the shorter ``addition1``.
+
+.. index:: gmcs
+   double: command line; compile
+
+.. _gmcs:
+
+GMCS: Compiling 
+---------------
+   
+Continue with the same terminal/console window.
+Let us now consider creating an executable program for ``addition1.cs``,
+directly, without using MonoDevelop:
+
+#.  Enter the command ``cd ..`` twice, to go up to the project directory.
+#.  Print a listing of the directory.  You should see
+    ``addition1.cs`` but not ``addition1.exe``.
+#.  Try the command
+
+    .. code-block:: none
+       
+        mono addition1.exe
+        
+    You should get an error message, because ``addition1.exe`` is not in the current
+    directory.
+#.  Enter the command
+ 
+    .. code-block:: none
+       
+        gmcs addition1.cs
+        
+    This is the Mono system compiler, building from the source code.
+#.  Print a listing of the directory.  You should see
+    now ``addition1.exe``, created by the compiler.
+#.  Try the command again:
+
+    .. code-block:: none
+       
+        mono addition1.exe
+        
+Now try a program that had multiple files.  The project version addition3
+uses the library class UIF.  Continue with the same terminal/console window:
+
+#.  Enter the commands:
+
+    .. code-block:: none
+       
+       cd ../addition3
+       gmcs addition3.cs
+       
+    You should get an error about missing the UIF class. The gmcs program
+    does not know about the information MonoDevelop keeps in its references.
+#.  Extend the command:
+
+    .. code-block:: none
+       
+       gmcs addition3.cs ../ui/uif.cs
+       
+    That should work, now referring to both needed files.
+#.  Enter the command
+
+    .. code-block:: none
+       
+        mono addition3.exe
+
+.. index:: NAnt build tool
+
+Under the hood, MonoDevelop uses gmcs also.  It adds further options,
+so there is better debugging information when you get a runtime error.
+
+MonoDevelop keeps track of all of the parts of your projects, and recompiles only
+as needed.  There are
+also command-line tools that manage multi-file projects neatly, remembering
+the parts, and compiling only as necessary.
+One example is NAnt, which comes with Mono.
