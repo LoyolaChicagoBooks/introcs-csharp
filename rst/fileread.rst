@@ -10,8 +10,9 @@ Reading Files
 =============
 
 In MonoDevelop, go to project :repsrc:`print_first_file`.
-If you open a directory window and drill down two folders to :file:`bin/Debug`,
-you should find a copy of the ``sample.txt`` that we stored there.  You can open it and
+Right click on the project in the Solution pad, and select Open Containing Folder. 
+Drill down two folders to :file:`bin/Debug`.
+You should find a copy of the ``sample.txt`` that we stored there.  You can open it and
 look at it if you like.
    
 Run the example program
@@ -47,8 +48,10 @@ Reading to End of Stream
 
 In ``first_file.cs``, we explicitly coded reading two lines.  You will often
 want to process each line in a file, without knowing the total number of
-lines ahead of time.  This will require a loop and a new test to make sure that you
-have not yet come to the end of the file's stream.  You can use the ``EndOfStream``
+lines while programming.  This means that files provide us with only our
+second kind of a sequence:  this time the sequence of lines in the file!
+To process all of them will require a loop and a new test to make sure that you
+have not yet come to the end of the file's stream: You can use the ``EndOfStream``
 property. It has the wrong sense (true at the end of the file), so we negate it,
 testing for ``!reader.EndOfStream`` in the example program ``print_file_lines.cs``.
 This little program reads and prints the contents of a file specified by the 
@@ -69,8 +72,8 @@ user, one line at a time:
    with a couple of restrictions:
    
    - Use an initializer, from which the type of the variable can be inferred.
-   - Declare a local variable inside a method or in a loop heading.
-   - Declare a single variable in the statement.
+   - Declare a local variable inside a method body or in a loop heading.
+   - Declare only a single variable in the statement.
    
    You could have used this syntax long ago, but as the type names become longer, 
    it is more useful!
@@ -149,7 +152,7 @@ is in the ``System.IO`` namespace is ::
     bool File.Exists(string filenamePath) 
 
 It is true if the named files exists in the file system.  More on the File class
-shortly.
+shortly. It contains many functions for testing path strings.
 
 You should see the file :repsrc:`sum_file/numbers.txt` in the MonoDevelop project.
 It is in the right form for the program.  If you run the program and enter the
