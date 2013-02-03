@@ -21,12 +21,12 @@ C# has the abstraction of a *stream*,
 as a sequence of characters to be processed sequentially.
 A stream can either be written sequentially or read sequentially.
 You have already read and written streams of 
-characters to the Console.  Most of the syntax for files will be very similar,
+characters to the Console.  Most of the syntax that we use for files will be very similar,
 using methods ``ReadLine``, ``WriteLine``, and ``Write`` in the same way you
 used them for the ``Console``.
 
 Files can be handled very differently by different operating systems, but
-C# abstracts away the differences and and provides stream interfaces between
+C# abstracts away the differences and provides stream interfaces between
 a C# program and files.
 
 The Path Abstraction
