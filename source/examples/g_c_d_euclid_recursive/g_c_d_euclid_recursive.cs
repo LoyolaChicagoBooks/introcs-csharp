@@ -5,6 +5,8 @@ namespace IntroCS
    public class GCDEuclidRecursive
    {
                                                  // chunk-gcd-begin
+      /// Return the greatest comon divisor of nonnegative numbers,
+      /// not both 0.
       public static int GreatestCommonDivisor (int a, int b)
       {
          if (b == 0) {

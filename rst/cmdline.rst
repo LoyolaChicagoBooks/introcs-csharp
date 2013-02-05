@@ -6,7 +6,7 @@ Command Line Introduction
 ==========================
 
 We will be directing you to use a command window or terminal to compile and run
-C# programs.
+C# programs. [#RYacobellis]_
 
 Reasons to use the command line:
 
@@ -393,3 +393,8 @@ they work differently:
 - On the first tab OS-X will do nothing but give a sound if there is 
   ambiguity, but the second tab will list all the options.  Then you need to type enough
   more to disambiguate the meaning.
+
+
+.. [#RYacobellis]
+
+   Thanks to Dr. Robert Yacobellis for elaborations to this section.

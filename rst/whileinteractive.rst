@@ -293,7 +293,7 @@ Yes-no (true/false) questions are common.
 How might you write an input utility function ``Agree``? 
 You can speed things
 up by considering only the first letter of responses.
-If it is important that the user enter correctly, you should
+Assume that it is important that the user enter correctly, you should
 consider three categories of answer:  ones accepted as true, 
 ones accepted as false, and ambiguous ones.  
 You need to allow for 

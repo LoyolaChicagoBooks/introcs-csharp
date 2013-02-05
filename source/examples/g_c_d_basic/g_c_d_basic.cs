@@ -5,6 +5,7 @@ namespace IntroCS
    public class GCDBasic
    {
                                               // chunk-gcd-begin
+      /// Return the greatest common divisor of positive numbers.
       public static int GreatestCommonDivisor (int a, int b)
       {
          int n = Math.Min (a, b);
