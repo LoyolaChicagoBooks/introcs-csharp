@@ -3,7 +3,9 @@ using System;
 namespace IntroCS
 {
    public class GCDEuclidRemainderLoop
-   {                                                   //  gcd chunk                             
+   {                                                   //  gcd chunk 
+      /// Return the greatest comon divisor of nonnegative numbers,
+      /// not both 0.
       public static int GreatestCommonDivisor (int a, int b)
       {
          while (b != 0) {
