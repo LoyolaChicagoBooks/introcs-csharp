@@ -4,7 +4,7 @@
 
 .. _booklist:
 
-Book List Assignment
+Homework: Book List
 ======================
  
 **Objectives**:
