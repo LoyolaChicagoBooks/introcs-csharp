@@ -4,7 +4,7 @@
 
 .. _fileabstraction:
 
-The File Abstraction
+Files As Streams
 ============================ 
 
 Thus far you have been able to save programs, but anything produced
@@ -28,13 +28,3 @@ used them for the ``Console``.
 Files can be handled very differently by different operating systems, but
 C# abstracts away the differences and provides stream interfaces between
 a C# program and files.
-
-The Path Abstraction
-==============================
-
-George is working on this now.
-
-The Folder Abstraction
-==============================
-
-George is working on this now.

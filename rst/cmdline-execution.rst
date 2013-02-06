@@ -53,8 +53,10 @@ Continue with the same terminal/console window.
 Let us now consider creating an executable program for ``addition1.cs``,
 directly, without using MonoDevelop:
 
-#.  Enter the command ``cd ..`` twice, to go up to the project directory.
-#.  Print a listing of the directory.  You should see
+#.  Enter the command ``cd ..`` and then *repeat*: ``cd ..``, 
+    to go up to the project directory.
+#.  Print a listing of the directory. 
+    You should see
     ``addition1.cs`` but not ``addition1.exe``.
 #.  Try the command
 
@@ -104,10 +106,34 @@ uses the library class UIF.  Continue with the same terminal/console window:
        
         mono addition3.exe
 
-.. index:: NAnt build tool
+#. Now let us try a project where we read a file.  Enter commands
 
-Under the hood, MonoDevelop uses gmcs also.  It adds further options,
-so there is better debugging information when you get a runtime error.
+    .. code-block:: none
+       
+       cd ../sum_file
+       gmcs sum_file.cs
+       mono sum_file.exe
+       
+   We ran this program earlier through MonoDevelop.  Recall that that
+   entering the file name ``numbers.txt`` failed, and to refer to the right 
+   place for the ``numbers.txt`` file, we needed to use ``..\..\numbers.txt``
+   or ``../../numbers.txt``.  This time *just enter* ``numbers.txt``.  The
+   program should work, giving the answer 16.
+   
+By default gmcs and mono read from and write to the current directory of the 
+terminal/console.  In the situation above, ``sum_file.cs`` and ``numbers.txt``
+were in the project directory, which is the current directory. 
+Then sum_file.exe was written to and run from
+the same directory.
+
+This is unlike the MonoDevelop default, where the current directory for execution
+is not the project directory.
+
+Under the hood, MonoDevelop uses gmcs also, with a bunch of further options
+in the parameters, changing the execution directory and also arranging
+for better debugging information when you get a runtime error.
+
+.. index:: NAnt build tool
 
 MonoDevelop keeps track of all of the parts of your projects, and recompiles only
 as needed.  There are

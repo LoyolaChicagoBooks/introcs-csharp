@@ -12,8 +12,7 @@ Files, Paths, and Directories
    filewrite
    fileread
    paths
-   directories
-   fio
+   dir-file
    cmdline-execution
+   fio
    
-

@@ -111,7 +111,7 @@ If you were to run the program from the command line instead of from MonoDevelop
 the file would appear in the current directory.
 
 As you can use a :ref:`Format-Strings` with 
-functions ``Write`` and ``WriteLine`` ,of the ``Console`` class, 
+functions ``Write`` and ``WriteLine``, of the ``Console`` class, 
 you can also use a format string with the corresponding methods of a ``StreamWriter``, 
 and embed fields by using braces in 
 the format string.
