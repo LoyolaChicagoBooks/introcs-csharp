@@ -55,13 +55,15 @@ you get to a terminal, so we will only distinguish Windows and Mac OS-X.
 .. index::
    double:  command line; paths
 
-.. _file-and-directory-paths:
+.. _navigating-directories:
 
-File and Directory Paths
-------------------------
+Navigating Directories
+---------------------------
+
+First make sure you are familiar with :ref:`path-strings`.
 
 In a command shell there is always a *current working directory*, usually
-shown in the prompt for a the next command.  
+shown in the prompt for the next command.  
 When you open a Mono Command Prompt or Terminal window you will see
 a prompt that tells you what folder or directory the command shell has
 started in: In Windows 7 this is typically C:\\Windows\\System32, and on
@@ -78,34 +80,20 @@ command ``dir`` (short for directory) in Windows or ``ls`` (short for list) on a
 You will see below that you can change the current
 directory with the *cd* command.
 
-Referring to files not in the current directory is more complicated.  
-Files and  directories are located in the hierarchy of directories in the
-file system.  On a Mac, the file system is unified in 
+You need to refer to files not in the current directory via a relative or absolute
+path name.
+
+On a Mac, the file system is unified in 
 one hierarchy. On Windows there may be several drives, and you need to start a
 path reference with a drive, like C:, if it is not the current drive.
 
-Files are generally referred to by a chain of directories before
-the final name of the file desired. Elements of the directory chain are separated
-by operating system specific punctuation:  In Windows the separator is backslash, \\,
-and on a Mac it is (forward) slash, /.  For example on a Mac the path 
- 
-   /Users/anh 
-   
-starts with a /, meaning the *root* or top directory in the hierarchy, and Users is
-a subdirectory, and anh is a subdirectory of Users (in this case the home directory
-for the user with login anh).  
-It is similar with Windows, except there may be a drive in the beginning,
-and the separator is a \\, so
-
-   C:\\Windows\\System32
-
-is on C: drive; Windows is a subdirectory of the root directory \\, and System 32 is
-a subdirectory of Windows.
-
-The starting directory in Windows is unfortunate.  You are likely to want to operate
+When you open a new command window in Windows, the starting directory is unfortunate,
+``C:\windows\System32``.  
+You are likely to want to operate
 out of your home directory (where the Mac users start automatically).
 
-For Windows 7 or 8 users enter the command below (substituting your login ID):
+Windows 7 or 8 users enter the command below (substituting your login ID)
+o get to your home directory:
 
 .. code-block:: none
    
@@ -139,31 +127,6 @@ The cd is short for "Change Directory", changing the current directory.
       
    then you change the current directory on E:, but *the current drive remains C:*.
       
-
-Since there is always a current directory, it makes sense to allow a path to be *relative*
-to the current directory.  In that case do not start with the slash that would
-indicate the root directory.  For example, if you are in you home directory,
-
-   ``dir Downloads`` (Windows) or ``ls Downloads`` (Mac) would list the 
-   subdirectory of the current directory, Downloads.
-   
-If the Downloads directory contained a file, ``myFile.txt``, you could refer to it 
-in commands as ``Downloads\myFile.txt`` or  ``Downloads/myFile.txt`` on a Mac.
-
-Referring to files in the current directory just by their plain file name is
-actually an example of using relative paths.
-
-With relative paths, you sometimes want to move up the directory hierarchy:  ..
-(two periods) refers to the directory one level up the chain.  
-
-For example, if the examples directory has subdirectories hello and arrays, 
-and the current directory is hello, then  .. refers to examples and 
-..\\arrays or ../arrays on a Mac refers to the arrays directory.
-
-Occasionally you need to
-refer explicitly to the current directory:  it is referred to as "." (a single
-period).
-
 Suppose you don’t know the path to your *hello* directory on Windows, but can 
 you can find it in an Windows Explorer window (right clicking on Start); 
 here’s how to
@@ -210,7 +173,7 @@ dir or ls
    double: command line; cd
 
 cd 
-  stands for change directory – you can use this
+  stands for *Change Directory* – you can use this
   command to change the current working directory to a different one.
 
   You can use this command to change to directories where your C#
@@ -232,7 +195,8 @@ cd
 
   Mac Note: if you type just *cd* and press Enter you will change back to
   your home directory.  There is also a shorthand name for your home
-  directory in command paths:  tilde (~), often shifted backquote.
+  directory in command paths:  tilde (~), often shifted backquote. Sorry,
+  no such thing with Windows.
 
 .. index:
    double: command line; mkdir

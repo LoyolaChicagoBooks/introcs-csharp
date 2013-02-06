@@ -35,11 +35,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="fio_test.cs" />
+    <Compile Include="fio_usage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="sample.dat" />
+    <None Include="sample.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\fio\fio.csproj">

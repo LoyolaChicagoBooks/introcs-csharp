@@ -11,7 +11,7 @@ Reading Files
 
 In MonoDevelop, go to project :repsrc:`print_first_file`.
 Right click on the project in the Solution pad, and select Open Containing Folder. 
-Drill down two folders to :file:`bin/Debug`.
+Drill down two folders through :file:`bin` to :file:`Debug`.
 You should find a copy of the ``sample.txt`` that we stored there.  You can open it and
 look at it if you like.
    
@@ -163,12 +163,14 @@ response:
    numbers.txt
 
 you should be told that the file does not exist.  Recall that the executable
-created by MonoDevelop is two folders down in :file:`bin/Debug`.  This is the default 
-*current directory* when monoDevelop runs the program.
+created by MonoDevelop is two directories down through :file:`bin` 
+to :file:`Debug`.  This is the default 
+*current directory* when MonoDevelop runs the program.
 You can refer to
 a file that is not in the current directory.  
-A brief description of what we need now:
-The symbol for the parent directory is ``..``.  Folders and files are separated by
+A full description is in the next section, but briefly, what we need now:
+The symbol for the parent directory is ``..``.  
+The hierarchy of folders and files are separated by
 ``\`` in Windows and ``/`` on a Mac,  so you can test the program successfully
 if you use the file name:
 ``..\..\numbers.txt`` in Windows and ``../../numbers.txt`` on a Mac.  On a Mac, running 
@@ -179,7 +181,7 @@ the program looks like:
 	Enter the name of a file of integers: ../../numbers.txt
 	The sum is 16
 
-Later we will discuss a more flexible way of finding files to open, 
+In :ref:`fio` we will discuss a more flexible way of finding files to open, 
 that works well in MonoDevelop and many other situations.
  
 .. index::
