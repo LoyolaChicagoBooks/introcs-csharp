@@ -61,7 +61,7 @@ Functional Requirements
      | Please enter the grade for exam 3: **80**
      | Total exam points: 270
      |
-     | Calculated average exam grade = 90.0
+     | Calculated average exam grade = 90
 
    Write a function, ``FindAverage``, 
    to do this, and that can be reused for each
@@ -72,6 +72,12 @@ Functional Requirements
    you'll basically be able to *reuse* the code that you developed in the
    previous assignment to compute the weighted average and print the
    final letter grade.
+   
+#. Print the final numerical average rounded to one decimal place.
+   If the final average was actually 93.125, you would print 93.1.  
+   If the final average was actually 93, you would print 93.0.  
+   If the final average was actually 93.175, you would print 93.2.  
+   
 
 Style Requirements
 ------------------
@@ -136,7 +142,9 @@ Grading Rubric
 
 - One function that is reused and works for the average in each category: 5
 
-- Previous program features still work: 5
+- Print final numerical grade rounded to one decimal place: 2
+
+- Previous program features still work: 3
 
 - Style: 5
 
