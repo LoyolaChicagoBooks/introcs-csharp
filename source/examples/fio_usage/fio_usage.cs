@@ -16,7 +16,7 @@ namespace IntroCS
          StreamReader reader1 = FIO.OpenReader(sample);
          if (reader1 != null) {
             Console.Write(reader1.ReadToEnd());
-            Console.WriteLine("\nFirst reader test passed.");
+            Console.WriteLine("First reader test passed.");
             reader1.Close();
          }
 
