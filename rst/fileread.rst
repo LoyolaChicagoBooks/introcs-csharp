@@ -151,8 +151,7 @@ is in the ``System.IO`` namespace is ::
 
     bool File.Exists(string filenamePath) 
 
-It is true if the named files exists in the file system.  More on the File class
-shortly. It contains many functions for testing path strings.
+It is true if the named files exists in the file system.  
 
 You should see the file :repsrc:`sum_file/numbers.txt` in the MonoDevelop project.
 It is in the right form for the program.  If you run the program and enter the
