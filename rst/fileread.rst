@@ -208,16 +208,16 @@ b.  A user who forgot the file name woud be stuck!
 Example Copy to Upper Case
 --------------------------
 
-Here is a simple fragment copying a file line by line to a new file in upper case:
+Here is a simple fragment from example file :repsrc:`copy_upper/copy_upper.cs`.
+It copies a file line by line to a new file in upper case:
 
 .. literalinclude:: ../source/examples/copy_upper/copy_upper.cs
    :start-after: chunk
    :end-before:  chunk
 
-It is from example file :repsrc:`sum_file/sum_file.cs`.
-You can test this in the MonoDevelop example project sum_file.  
+You may test this in the MonoDevelop example project copy_upper:  
 
-#.  Expand it in the Solution pad.  The project
+#.  Expand the copy_upper project in the Solution pad.  The project
     includes the input file.  You may not see it at first.  You need to expand the folder
     for :file:`bin` and then file:`Debug`.  You see :file:`text.txt`.  
 #.  To see
