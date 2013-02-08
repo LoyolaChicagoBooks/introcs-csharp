@@ -191,6 +191,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_readkey", "test_readke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sum_file", "sum_file\sum_file.csproj", "{47894560-F239-45E6-877F-5B41768A24F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "copy_upper", "copy_upper\copy_upper.csproj", "{FDF1587E-89FE-4183-B589-63475B467F6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -614,6 +616,12 @@ Global
 		{FDCDBEF1-1E81-4E7B-9017-443331068245}.Debug|x86.Build.0 = Debug|x86
 		{FDCDBEF1-1E81-4E7B-9017-443331068245}.Release|x86.ActiveCfg = Release|x86
 		{FDCDBEF1-1E81-4E7B-9017-443331068245}.Release|x86.Build.0 = Release|x86
+		{FDF1587E-89FE-4183-B589-63475B467F6D}.Debug|x86.ActiveCfg = Debug|x86
+		{FDF1587E-89FE-4183-B589-63475B467F6D}.Debug|x86.Build.0 = Debug|x86
+		{FDF1587E-89FE-4183-B589-63475B467F6D}.Default|Any CPU.ActiveCfg = Debug|x86
+		{FDF1587E-89FE-4183-B589-63475B467F6D}.Default|Any CPU.Build.0 = Debug|x86
+		{FDF1587E-89FE-4183-B589-63475B467F6D}.Release|x86.ActiveCfg = Release|x86
+		{FDF1587E-89FE-4183-B589-63475B467F6D}.Release|x86.Build.0 = Release|x86
 		{FF05E81B-5D0E-44AD-81AD-A1D4243B0AE6}.Debug|x86.ActiveCfg = Debug|x86
 		{FF05E81B-5D0E-44AD-81AD-A1D4243B0AE6}.Debug|x86.Build.0 = Debug|x86
 		{FF05E81B-5D0E-44AD-81AD-A1D4243B0AE6}.Release|x86.ActiveCfg = Release|x86
