@@ -177,8 +177,8 @@ the program looks like:
 
 .. code-block:: none
 
-	Enter the name of a file of integers: ../../numbers.txt
-	The sum is 16
+   Enter the name of a file of integers: ../../numbers.txt
+   The sum is 16
 
 In :ref:`fio` we will discuss a more flexible way of finding files to open, 
 that works well in MonoDevelop and many other situations.
@@ -191,14 +191,14 @@ Safe Sum File Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 a.  Copy :file:`sum_file.cs` to a file :file:`safe_sum_file.cs` in a new project of yours.  
-	Modify the program: Write
-	a new function with the heading below.  Use it in ``Main``, in place of the ``if`` 
-	statement that checks (only once) for a legal file::         
-	
-		// Prompt the user to enter a file name to open for reading.
-		// Repeat until the name of an existing file is given.
-		// Open and return the file.
-		public static StreamReader PromptFile(string prompt)
+   Modify the program: Write
+   a new function with the heading below.  Use it in ``Main``, in place of the ``if`` 
+   statement that checks (only once) for a legal file::         
+   
+      // Prompt the user to enter a file name to open for reading.
+      // Repeat until the name of an existing file is given.
+      // Open and return the file.
+      public static StreamReader PromptFile(string prompt)
 
 b.  A user who forgot the file name woud be stuck!
     Elaborate the function and program, so that an empty line entered means
@@ -208,30 +208,30 @@ b.  A user who forgot the file name woud be stuck!
 Example Copy to Upper Case
 --------------------------
 
-Here is a simple fragment copying a file line by line to a new file in upper case::
+Here is a simple fragment copying a file line by line to a new file in upper case:
 
-         var reader = new StreamReader("text.txt");
-         var writer = new StreamWriter("upper_text.txt");
-         while (!reader.EndOfStream) {
-            string line = reader.ReadLine();
-            writer.WriteLine(line.ToUpper());
-         }
-         reader.Close();
-         writer.Close();
+.. literalinclude:: ../source/examples/copy_upper/copy_upper.cs
+   :start-after: chunk
+   :end-before:  chunk
 
-You can try this in csharp:
+It is from example file :repsrc:`sum_file/sum_file.cs`.
+You can test this in the MonoDevelop example project sum_file.  
 
-- First create a :file:`text.txt`, 
-- Open csharp in the same directory.
-- Give the command in csharp::
+#.  Expand it in the Solution pad.  The project
+    includes the input file.  You may not see it at first.  You need to expand the folder
+    for :file:`bin` and then file:`Debug`.  You see :file:`text.txt`.  
+#.  To see
+    what else is in the file system directory, 
+    you can select the Debug folder and right click and select
+    Open Containing Folder.  
+    You should see :file:`text.txt` but not :file:`upper_text.txt`.
+    Leave that operating system file folder open.  
+#.  Go back to MonoDevelop and run the project.  Now look at the
+    operating system :file:`Debug` folder again.  You should see :file:`upper_text.txt`.
+    You can open it and see that it holds an upper case version of the contents
+    of :file:`text.txt`.
 
-    csharp> using System.IO;
-
-- Then paste the lines above.
-
-Outside of csharp you can look at upper_text.txt.
-
-This is another case where ``ReadToEnd`` could have eliminated the loop. 
+This is another case where the ``ReadToEnd`` function could have eliminated the loop. 
 [#finalNewline]_  ::
 
     string contents = reader.ReadToEnd();
