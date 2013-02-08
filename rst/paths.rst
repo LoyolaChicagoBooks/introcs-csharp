@@ -63,7 +63,7 @@ With relative paths, you sometimes want to move up the directory hierarchy:  ``.
 
 Next imagine reversing the relative path from a MonoDevelop project directory to the
 current directory for execution:  If the current directory is the execution 
-directory, then ``..`` refers to directory :file:`bin`, 
+directory, then ``..`` refers to directory :file:`bin`, and then
 ``..\..`` or ``../..`` refers to the project directory.  Further, if the 
 project directory contains the file :file:`numbers.txt`, then it could be referred to
 relative to the execution directory as :file:`..\\..\\numbers` or :file:`../../numbers`.
