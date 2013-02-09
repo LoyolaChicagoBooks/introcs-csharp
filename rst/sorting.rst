@@ -142,9 +142,11 @@ The way Selection Sort works is as follows:
    ``IntArrayMin()``
    to find the position of the minimum value in the rest of the array. 
    This function has a parameter, ``start`` to indicate where
-   we wish to begin the search. So as you can see from the loop in ``IntArraySelectionSort()``,
-   when we are looking at position ``i``, we are searching for the minimum from position
-   ``i + 1`` to the end of the array. 
+   we wish to begin the search. 
+   So as you can see from the loop in ``IntArraySelectionSort()``,
+   when we start with position ``i``, and we compare to the later elements 
+   from position ``i + 1`` to the end of the array, updating the position of the
+   smallest element so far. 
 
 As a concrete example, if you have an array of 10 elements, this means that
 ``i`` goes from 0 to 9. When we are looking at position 0, we check to find the 
@@ -154,10 +156,12 @@ place. Then
 we consider ``i=1`` and look at positions 1..9. And so on.
 
 We won't do the full algorithmic analysis here. Selection Sort is interesting because
-it does most of its work through *comparisons*, which is always the same regardless
-of how the data are ordered, :math:`N \cdot \frac{N-1}{2}`, which is 
+it does most of its work through *comparisons*, with the same number of them no matter
+how the data are ordered, exactly
+:math:`N \cdot \frac{N-1}{2}`, which is 
 :math:`O(N^2)` The 
-number of *exchanges* is O(N ). The comparisons are a non-trivial cost, however, and do show
+number of *exchanges* is O(N). The comparisons are a non-trivial cost, 
+however, and do show
 in our own performance experiments with randomly-generated data. 
 
 
