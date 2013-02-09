@@ -222,7 +222,9 @@ A string method producing an array:
 
 ``string[] Split(char`` **separator** ``)``   
     Returns an array of substrings from *this* string.  They are the pieces left
-    after chopping out the separator character from the string.  Example: 
+    after chopping out the separator character from the string. 
+    A piece may be the empty string. 
+    Example: 
 
     ..  code-block:: none
     
@@ -232,27 +234,72 @@ A string method producing an array:
 		{ "apple", "pear", "banana" }
 		csharp> fruit[1];
 		"pear"
+		csharp> var s = "  extra   spaces ";
+		csharp> s.Split(' ');
+		{ "", "", "extra", "", "", "spaces", "" }
 		
 Note: The response with the list in braces is a purely *csharp* convention for displaying
 sequences for the user.  There is no corresponding string displayed by C# Write commands.
+Also see that the string is split at *each* ``separator``, 
+even if that produces empty strings.
 
-Split is useful for parsing a line with several parts::
+.. index:: IntsFromString
 
-    string line = UI.PromptLine("Enter integers on a line");
-    string[] tokens = line.Split(' ');
-    int[] nums = new int[tokens.Length];
-    for (int i = 0; i < nums.Length; i++) {
-       nums[i] = int.Parse(tokens[i]);
-    }
+Split is useful for parsing a line with several parts.  You might get a group of 
+integers on a line of text, for instance from::
 
-Here if the user enters "2 5 22", then ``tokens`` is an array containing strings "2", "5",
-and "22".  If we want them all converted to integers and place in a new array,
-we need to create an array of the same length, and loop through, parsing each
-string in ``tokens`` into an integer in the corresponding location in ``nums``.
+         string input = UI.PromptLine(
+            "Please enter some integers, separated by single spaces: ");
 
-The use of the same index in more than one array is a standard way to have entries in
-corresponding positions.
+To extract the numbers, you want to the separate the entries in the string
+with ``Split``, *and* you probably want further processing: 
+If you want them as integers, not strings, you must convert each one separately.  
 
+It is useful to put this idea in a function.
+See the type returned.  It is an array ``int[]`` for the int results:
+
+.. literalinclude:: ../source/examples/searching/searching.cs
+   :start-after: IntsFromString chunk
+   :end-before: chunk
+
+In a call to ``IntsFromString("2 5 22")``,  ``integers`` would be 
+an array containing strings "2", "5", and "22".  
+We need the conversions to ``int`` to go in a new array that we call ``data``.
+We must set its length, which will clearly be the same as for ``integers``,
+``integers.Length``.
+To assign elements into ``data`` we need a loop providing indices,
+like the ``for`` loop provided.  Then for each index, we parse a
+string in ``integers`` into an ``int``, 
+and place the ``int`` in the corresponding location in ``data``.  We need to return
+``data`` at the end to make it accessible to the caller.
+
+Remember some patterns illustrated here,
+*that you will use over and over*:
+
+* You can return any type, including an array type.
+* If you want to return a new array, you must first create an array of the proper 
+  length before you can make assignments to individual elements.
+* The use of the same index variable in more than one array is a standard way to have 
+  related entries in corresponding positions of the arrays.
+  
+We will use this function for testing in :ref:`searching`.
+
+GetTokens Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Complete this function::
+
+   ///Return an array with the string split at blanks
+   /// into positive length tokens.
+   /// Example:  GetTokens("  extra  spaces ") returns an
+   /// array containing {"extra", "spaces"} 
+   public static string[] GetTokens(string s)
+   
+Hint: It is harder now to get the right length for your new array:
+After splitting at ``' '``, you can count the non-empty strings in the result.
+Then create your new array and copy only non-empty strings.
+Handling the indices for the new array also gets more complicated.
+     
 .. index:: alias
 
 .. _alias:

@@ -12,7 +12,7 @@ These examples make use of arrays and loops, not to mention functions
 (for putting it all together). 
 
 .. index::
-   double: search; linear
+   search; linear
    double: algorithms; linear search
 
 Linear Search
@@ -59,20 +59,12 @@ The following code shows how to use the linear search:
 
 .. literalinclude:: ../source/examples/searching/searching.cs
    :start-after: chunk-driver-begin
-   :end-before: chunk-driver-end
+   :end-before: chunk
    :linenos:
 
 In this example, we ask the user to enter an array of data by entering
-the values space separated on a line. 
-Extracting the numbers sounds like something we might use again, so it is
-set up as a function, where we separate the numbers with the ``Split`` method. (It is
-important that the items in this array are only separated by a single 
-space character as ``Split`` is not flexible to handle extra spaces.
-
-Once we have gotten the input text split into an array of strings (string[]),
-and created an array of the same length for the output,
-we set up a simple loop to convert each item in the string
-array into an integer.
+the values space separated on a line. .  To convert to an int array we
+use the function ``IntsFromString`` discussed in :ref:`split`.
 
 To allow easy termination of the testing loop, we do not use ``PromptInt``
 for ``searchItem``, because any
