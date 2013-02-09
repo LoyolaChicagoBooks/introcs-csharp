@@ -191,9 +191,9 @@ Safe Sum File Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 a.  Copy :file:`sum_file.cs` to a file :file:`safe_sum_file.cs` in a new project of yours.  
-   Modify the program: Write
-   a new function with the heading below.  Use it in ``Main``, in place of the ``if`` 
-   statement that checks (only once) for a legal file::         
+    Modify the program: Write
+    a new function with the heading below.  Use it in ``Main``, in place of the ``if`` 
+    statement that checks (only once) for a legal file::         
    
       // Prompt the user to enter a file name to open for reading.
       // Repeat until the name of an existing file is given.

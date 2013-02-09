@@ -5,7 +5,8 @@ namespace IntroCS
    public class Searching
    {
       // chunk-linearsearch-begin
-      public static int IntArrayLinearSearch(int[] data, int item) {
+      public static int IntArrayLinearSearch(int[] data, int item) 
+      {
          int N=data.Length;
          for (int i=0; i < N; i++) {
             if (data[i] == item) {
@@ -18,7 +19,8 @@ namespace IntroCS
 
       // chunk-linearsearchfrom-begin
       public static int IntArrayLinearSearch(int[] data, int item, 
-                                             int start) {
+                                             int start) 
+      {
          int N=data.Length;
          if (start < 0) {
             return -1;
@@ -33,10 +35,10 @@ namespace IntroCS
       // chunk-linearsearchfrom-end
 
       // chunk-driver-begin
-      public static void Main (string[] args)
+      public static void Main()
       {        
          string input = UI.PromptLine(
-            "Please enter some integers, separated by spaces:");
+            "Please enter some integers, separated by single spaces: ");
          int[] data = IntsFromString(input);
          for (int i=0; i < data.Length; i++) {
             Console.WriteLine("data[{0}]={1}", i, data[i]);
@@ -59,7 +61,7 @@ namespace IntroCS
             input = UI.PromptLine(prompt);
          }
       }     
-      
+                                         // IntsFromString chunk      
       /// Return ints taken from space separated integers in a string.
       public static int[] IntsFromString(string input)
       {
@@ -69,5 +71,5 @@ namespace IntroCS
             data[i] = int.Parse(integers[i]);
          return data;
       }
-   }   // chunk-driver-end
+   }                                     // end chunk
 }
