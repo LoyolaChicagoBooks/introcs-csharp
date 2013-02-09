@@ -7,7 +7,7 @@ namespace IntroCS
    {
       // sort methods, a function has been created for it.
       // chunk-exchange-begin
-      public static void exchange (int[] data, int m, int n)
+      public static void Exchange(int[] data, int m, int n)
       {
          int temporary;
 
@@ -26,7 +26,7 @@ namespace IntroCS
          for (j=N-1; j>0; j--) {
             for (i=0; i<j; i++) {
                if (data [i] > data [i + 1]) {
-                  exchange (data, i, i + 1);
+                  Exchange (data, i, i + 1);
                }
             }
          }
@@ -41,7 +41,7 @@ namespace IntroCS
 
          for (j=1; j<N; j++) {
             for (i=j; i>0 && data[i] < data[i-1]; i--) {
-               exchange (data, i, i - 1);
+               Exchange (data, i, i - 1);
             }
          }
       }
@@ -66,7 +66,7 @@ namespace IntroCS
          for (i=0; i < N-1; i++) {
             int k = IntArrayMin (data, i);
             if (i != k) {
-               exchange (data, i, k);
+               Exchange (data, i, k);
             }
          }
       }
@@ -86,7 +86,7 @@ namespace IntroCS
                for (j=m+interval; j<N; j+=interval) {
                   for (i=j; i>=interval && data[i]<data[i-interval]; 
                        i-=interval) {
-                     exchange (data, i, i - interval);
+                     Exchange (data, i, i - interval);
                   }
                }
             }
@@ -127,32 +127,33 @@ namespace IntroCS
       // chunk-shellsort-better-end
 
       // chunk-quicksort-begin
-      public static void IntArrayQuickSort (int[] data, int l, int r)
+      public static void IntArrayQuickSort (int[] data, 
+                                            int lowI, int highI)
       {
-         int i, j;
-         int x;
- 
-         i = l;
-         j = r;
-
-         x = data [(l + r) / 2]; // find pivot item 
+         int afterSmall = lowI, beforeBig = highI;
+         int pivot = data[(lowI + highI) / 2];  
+         // in loop data[i] <= pivot if i < afterSmall
+         //         data[i] >= pivot if i > beforeBig
          while (true) {
-            while (data[i] < x)
-               i++;
-            while (x < data[j])
-               j--;
-            if (i <= j) {
-               exchange (data, i, j);
-               i++;
-               j--;
+            while (data[afterSmall] < pivot)
+               afterSmall++;
+            while (pivot < data[beforeBig])
+               beforeBig--;
+            if (afterSmall <= beforeBig) {
+               Exchange (data, afterSmall, beforeBig);
+               afterSmall++;
+               beforeBig--;
             }
-            if (i > j)
+            if (afterSmall > beforeBig)
                break;
-         }
-         if (l < j)
-            IntArrayQuickSort (data, l, j);
-         if (i < r)
-            IntArrayQuickSort (data, i, r);
+         }  // after loop:
+         // data[i] <= pivot for i <= beforeBig, 
+         // data[i] == pivot for i when beforeBig < i < afterSmall, 
+         // data[i] >= pivot for i >= afterSmall, 
+         if (lowI < beforeBig)
+            IntArrayQuickSort (data, lowI, beforeBig);
+         if (afterSmall < highI)
+            IntArrayQuickSort (data, afterSmall, highI);
       }
 
       public static void IntArrayQuickSort (int[] data)

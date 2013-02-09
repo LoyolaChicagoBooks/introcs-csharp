@@ -303,25 +303,37 @@ there are limits on available memory (e.g. embedded systems).
 Quicksort a.k.a. Partition Sort
 ----------------------------------
 
-This sort is a more advanced example that uses *recursion*. 
+This sort is a more advanced example that uses *recursion*. We list it because it
+is one of the best sorts for *random* data, having an *average* time behavior of 
+:math:`O(N  \log N)`.  
+Quicksort is a rather interesting case. While it has an excellent average
+behavior, it has a worst case performance of :math:`O(N ^2)`.
 
 .. later 
    
-   We're going to explain it 
-   elsewhere in our book.
-   
    We'll have a bit more to say about this algorithm in our discussion of recursion.
-
-Quicksort is a rather interesting case. It is often perceived to be one of the
-best sorting algorithms but, in practice, has a worst case performance also on the
-order :math:`O(N ^2)`. When the data are randomly sorted (as in our experiments) 
-it does better at :math:`O(N  \log N)`.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-quicksort-begin
    :end-before: chunk-quicksort-end
    :linenos:
 
+Though the initial call is to sort an entire array, this is accomplished by
+dealing with sections, so the main work is done in the version with the
+two extra parameters, giving the lowest and highest index considered.
+
+It picks an arbitrary element as *pivot*, and then swaps 
+elements with values above and below the pivot until the array is in three sections:  
+
+#. elements <= pivot;
+#. elements equal to pivot
+#. elements >= pivot.
+
+Though sections 1 and 3 are not sorted, there are no inversions *between* them,
+so only the smaller sections 1 and 3 need to be sorted *separately*, 
+and only then if they have at least two elements.  They can be sorted with the same
+function, just with a smaller range of indices to deal with in each case.  
+These *recursive* calls end when a part it reduced to one element.
 
 .. index::
    single: Random
