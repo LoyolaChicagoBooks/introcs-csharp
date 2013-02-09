@@ -52,7 +52,7 @@ Suppose we have the following integers ``a`` and ``b``::
 After this code does its job, the value of ``a`` would be 35 
 and the value of ``b`` would be 25.
 
-So in the ``exchange()`` function above, 
+So in the ``Exchange()`` function above, 
 if we have two different array elements at positions ``m`` and ``n``,
 we are basically getting each value at these positions, 
 e.g. ``data[m]`` and ``data[n]`` and treating them
@@ -63,7 +63,7 @@ the above code does what we're saying it does, and a
 good way is to type it directly into the C# interpreter (csharp) 
 so you can see it for yourself.
 
-The ``exchange()`` function is vital to all of the sorting algorithms in the following way. 
+The ``Exchange()`` function is vital to all of the sorting algorithms in the following way. 
 It is used whenever two items are found to be out of order. 
 When this occurs, they will be *swapped*. This doesn't mean
 that the item comes to its final resting place in the array. 
@@ -93,7 +93,7 @@ We define the number of *inversions* as the number of element pairs that
 are out of order. They needn't be adjacent. If ``data[7] > data[16]``, 
 that's an inversion. Every time an inversion is required, 
 we also say that there is corresponding data *movement*. If you look at the
-``exchange()`` code, you'll observe that a swap requires three movements 
+``Exchange()`` code, you'll observe that a swap requires three movements 
 to take place, which happens very quickly on most processors but still amounts
 to a significant cost. 
 
@@ -121,7 +121,7 @@ Selection Sort
 --------------
 
 The Selection Sort algorithm works to minimize the amount of data movement,
-hence the number of ``exchange()`` calls. 
+hence the number of ``Exchange()`` calls. 
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-selectionsort-begin
@@ -149,9 +149,9 @@ The way Selection Sort works is as follows:
 As a concrete example, if you have an array of 10 elements, this means that
 ``i`` goes from 0 to 9. When we are looking at position 0, we check to find the 
 position of the minimum element in 
-positions 1..9. If the minimum is not already at position ``i``, we swap the minimum into
+positions 0..9. If the minimum is not already at position ``i``, we swap the minimum into
 place. Then
-we consider ``i=1`` and look at positions 2..9. And so on.
+we consider ``i=1`` and look at positions 1..9. And so on.
 
 We won't do the full algorithmic analysis here. Selection Sort is interesting because
 it does most of its work through *comparisons*, which is always the same regardless
@@ -169,10 +169,10 @@ in our own performance experiments with randomly-generated data.
 Insertion Sort
 --------------
 
-In the Insertion Sort algorithm, we build a sorted
+In the Insertion Sort algorithm, we build up a longer and longer sorted
 list from the bottom of the array. We repeatedly insert the next element
 into the sorted part of the array by sliding it down (using our familiar
-``exchange()`` method) to its proper position.
+``Exchange()`` method) to its proper position.
 
 This will require as many exchanges as Bubble Sort,
 since only one inversion is removed per exchange. So Insertion Sort also
