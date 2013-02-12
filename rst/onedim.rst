@@ -122,7 +122,7 @@ and the syntax is the same as for a string.  Print all elements of array ``b``::
     
 You could also use ``while`` syntax.  The ``foreach`` syntax would be::
 
-   foreach( int x : b) {
+   foreach( int x in b) {
       Console.WriteLine(x);
    }
 
