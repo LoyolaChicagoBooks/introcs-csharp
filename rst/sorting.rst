@@ -327,17 +327,19 @@ dealing with sections, so the main work is done in the version with the
 two extra parameters, giving the lowest and highest index considered.
 
 It picks an arbitrary element as *pivot*, and then swaps 
-elements with values above and below the pivot until the array is in three sections:  
+elements with values above and below the pivot until the part of the array 
+being processed is in three sections:  
 
 #. elements <= pivot;
-#. elements equal to pivot
+#. possibly some of the elements equal to pivot
 #. elements >= pivot.
 
 Though sections 1 and 3 are not sorted, there are no inversions *between* them,
 so only the smaller sections 1 and 3 need to be sorted *separately*, 
-and only then if they have at least two elements.  They can be sorted with the same
-function, just with a smaller range of indices to deal with in each case.  
-These *recursive* calls end when a part it reduced to one element.
+and only then if they have at least two elements.  They can be sorted 
+by calling the same function, 
+just with a smaller range of indices to deal with in each case.  
+These *recursive* calls stop when a part it reduced to one element.
 
 .. index::
    single: Random

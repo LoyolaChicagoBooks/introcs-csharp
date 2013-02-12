@@ -93,3 +93,17 @@ copying the fio_test project to your solution.
 If you do this now and stick to one work solution, then you will be ready for 
 several later uses of ``FIO``.
 
+File Line Removal Exercise
+------------------------------
+
+Complete the function described below, and make a Main program and
+sample file to test it::
+
+    /// Take all lines from reader that do not start with startToRemove
+    /// and copy them to writer.
+    static void FileLineRemoval(StreamReader reader, StreamWriter writer
+                                char startToRemove)
+    
+For example, in Unix/Mac scripts lines starting with ``'#'`` are
+comment lines.  Making ``startToRemove`` be ``'#'`` would write only non-comment lines
+to the writer.
