@@ -12,9 +12,9 @@ namespace IntroCS
          Stopwatch watch = new Stopwatch ();
          int[] data = new int[n];
          Sorting.IntArrayGenerate (data, seed);
+         int m = Math.Max(1, n/rep);
          watch.Reset ();       
          watch.Start ();
-         int m = Math.Max(1, n/rep);
          // perform the rep lookups
          for (int k=0, i=0; k < rep; k++, i=(i+m)%n) {
             Searching.IntArrayLinearSearch (data, data [i]);
@@ -31,9 +31,9 @@ namespace IntroCS
          Sorting.IntArrayGenerate (data, seed);
          // Use our existing work on sorting to generate sorted array for testing 
          Sorting.IntArrayQuickSort (data);
+         int m = Math.Max(1, n/rep);
          watch.Reset ();       
          watch.Start ();
-         int m = Math.Max(1, n/rep);
          // perform the rep lookups
          for (int k=0, i=0; k < rep; k++, i=(i+m)%n) {
             BinarySearching.IntArrayBinarySearch (data, data [i]);
@@ -48,9 +48,9 @@ namespace IntroCS
          int[] data = new int[n];
          Sorting.IntArrayGenerate (data, seed);
          List<int> dataAsList = new List<int> (data);
+         int m = Math.Max(1, n/rep);
          watch.Reset ();       
          watch.Start ();
-         int m = Math.Max(1, n/rep);
          // perform the rep lookups
          for (int k=0, i=0; k < rep; k++, i=(i+m)%n) {
             dataAsList.Contains(data [i]);
@@ -65,9 +65,9 @@ namespace IntroCS
          var data = new int[n];
          Sorting.IntArrayGenerate (data, seed);         
          var myset = new HashSet<int> (data);
+         int m = Math.Max(1, n/rep);
          watch.Reset ();       
          watch.Start ();
-         int m = Math.Max(1, n/rep);
          // perform the rep lookups
          for (int k=0, i=0; k < rep; k++, i=(i+m)%n) {
             myset.Contains(data [i]);

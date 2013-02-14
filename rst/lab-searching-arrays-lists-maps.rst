@@ -51,7 +51,7 @@ The Experiments
 -------------------
 
 We're going to measure the performance of data structures we have been learning
-about in lectures. For this lab, we'll focus on:
+about (and will learn about, for lists and sets). For this lab, we'll focus on:
 
 - Integer arrays using :ref:`searching` and :ref:`binarysearching`
 
@@ -94,14 +94,17 @@ for each of the cases:
 Starter Project
 ------------------
 
-Copy folder examples/performance_lab_stub to  examples/performance_lab,
-so you have your own copy to modify.
-
-To make your life easier, there we have put together a project with a build file
+To make your life easier, we have put together a project 
 that refers to all the code for all of the experiments you need
-to run. (That's right, we're giving you the code for the experiments, 
+to run. (That's right, we're giving you the code for the *experiments*, 
 but you're going to write
 some code to run the various experiments and then run for varying sizes of ``n``.)
+
+Recreate example project performance_lab_stub in your solution as performance_lab,
+so you have your own copy to modify.  You will need to copy into the
+lab project the file :file:``sorting.cs`` from the example sorting project.
+(An alternative is to recreate the whole sorting project, and reference it from the lab 
+project.)
 
 Here is the code for the first experiment, to test the performance of linear
 searching on integer arrays:
@@ -118,64 +121,73 @@ less detail, except to highlight the differences:
 - On line 3, we create a ``Stopwatch`` instance. We'll be using this to do the timing.
 
 - On lines 4-5, we are creating the data to be searched. Because we have already
-  written this code in our sorting algorithms examples, we can use the project
-  by taking advantage of project references and using the ``Sorting`` class name
-  to access the method ``IntArrayGenerate()`` within this class. We take advantage
+  written this code in our sorting algorithms examples, we can refer to the
+  Sorting class code in :file:`sorting.cs`, as long as you made the lab project 
+  able to reference it.  We use the ``Sorting`` class name
+  to access the method ``IntArrayGenerate()`` within this class. We also take advantage
   of this in the other experiments.
 
-- Line 6 resets the stopwatch. It is not technically required; however, we tend to be
+- Line 6 converts the number of repetitions into the increment in index values for each
+  time.
+  
+- Line 7 resets the stopwatch. It is not technically required; however, we tend to be
   in the habit of doing it, because we sometimes reuse the same stopwatch and want
   to make sure it is completely zeroed out. A call to ``Reset()`` ensures it is zero.
 
-- Line 7 actually starts the stopwatch. We are starting here as opposed to before line
+- Line 8 actually starts the stopwatch. We are starting here as opposed to before line
   3, because the random data generation has nothing to do with the actual searching of
   the array data structure.
 
-- Line 8 converts the number of repetitions into the increment in index values for each
-  time.
-  
 - Lines 10 through 12 are searching ``rep`` times for an item already known to
   be in the array. 
 
 - Line 13 stops the stopwatch.
 
-- Line 14 returns the elapsed time in milliseconds
+- Line 14 returns the elapsed time in *milliseconds*
   between the ``Start()`` and ``Stop()`` method calls,
   which reflects the actual time of the experiment.
 
-Each of the other experiments is constructed similarly. For linear search and binary search
-we use the methods created earlier.  For the lists and the set we use the built-in ``Contains`` 
-method to search.  The list and set are directly initialized in their constructors from the
-array data.
+Each of the other experiments is constructed similarly. 
+For linear search and binary search
+we use the methods created earlier.  
+For the lists and the set we use the built-in ``Contains`` 
+method to search.  
+The list and set are directly initialized in their constructors from the
+array data.  (More on that later.)
 
-You need to fill in the Main method:
+You need to fill in the ``Main`` method:
 
-#. Write the code to parse command line args for the parameters rep and *any number* 
-   of values for n.  For instance:
+#. Write the code to parse command line ``args`` for the parameters ``rep`` 
+   and *any number* 
+   of values for ``n``.  For instance:
    
       mono PerformanceLab.exe 50 1000 10000 100000
 
-   would generate the table shown below for 50 repetitions for each of the values of n, 1000,
+   would generate the table shown below for 50 repetitions 
+   for each of the values of ``n``: 1000,
    10000, and 100000.
    
 #. Write the code to run each of the experiments for ``rep`` and a given value of ``n``.
 
-#. Iterate through the values of ``n`` and print a table,
+#. Iterate through the values of ``n`` and print a nice right-justified table,
    something like the following, with the number of seconds calculated.
-   Experiment and adjust the repetitions to get perceptible values.  
+   Experiment and adjust the repetitions *to get perceptible values*.  
    Our choice of 50 may not be appropriate with these ``n`` values.  ::
 
-           n   rep   linear    binary    list     set
-        1000    50   ??.???    ??.???  ??.???  ??.???
-       10000    50   ??.???    ??.???  ??.???  ??.???
-      100000    50   ??.???    ??.???  ??.???  ??.???
+           n   rep     linear      list  binary     set
+        1000    50   ????.???  ????.???  ??.???  ??.???
+       10000    50   ????.???  ????.???  ??.???  ??.???
+      100000    50   ????.???  ????.???  ??.???  ??.???
   
   The table would be longer if more values of n were entered on the command line.
+  Note that the experiments return times in milliseconds, (1/1000 of a second)
+  while the table should print times in seconds.
   
   Because the range of speeds is so enormous, make an accommodation with the 
-  slow linear version:  If rep >= 100 and (long)n*rep  >= 100000000, then, 
-  for the linear column only, time with rep2 = rep/100 instead of rep, 
-  and then compensate by multiplying the time by (double)rep/rep2.
+  slow linear versions:  If ``rep >= 100`` and ``(long)n*rep  >= 100000000``, then, 
+  for the linear and list columns *only*, time with ``rep2 = rep/100`` instead of ``rep``, 
+  and then compensate by multiplying the time by ``(double)rep/rep2`` to produce
+  the final table value.
   (This multiplier 
-  is not just 100, since the integer division creating rep2 may not be exact.)  
+  is not just 100, since the integer division creating ``rep2`` may not be exact.)  
   
