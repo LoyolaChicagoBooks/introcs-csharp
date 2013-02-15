@@ -134,7 +134,7 @@ get started, we provided this simple *stub* in the example file
    //
 
 The body of ``Main`` presently contains only *comments*, skipped by the compiler.  
-We illustrate two forms:
+We illustrate two forms (being inconsistent for your information only):
 
 * ``//`` to the end of the *same* line
 * ``/*`` to ``*/`` through any number of lines.
