@@ -28,7 +28,7 @@ array:
 
 .. literalinclude:: ../source/examples/searching/searching.cs
    :start-after: chunk-linearsearch-begin
-   :end-before: chunk-linearsearch-end
+   :end-before: chunk
    :linenos:
 
 Here's what it does:
@@ -52,7 +52,7 @@ Here's what it does:
 
 .. literalinclude:: ../source/examples/searching/searching.cs
    :start-after: chunk-linearsearchfrom-begin
-   :end-before: chunk-linearsearchfrom-end
+   :end-before: chunk
    :linenos:
 
 The following code shows how to use the linear search: 
