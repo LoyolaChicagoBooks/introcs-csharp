@@ -1,5 +1,7 @@
 .. index::
-   triple:  &&; and; boolean operation
+   &&; boolean operation AND
+   and &&
+   boolean operation; && AND
 
 .. _Compound-Boolean-Expressions:
    
@@ -48,7 +50,9 @@ There is a C# version.  Be sure to use this pattern::
    low < val && val < high
 
 .. index::
-   triple:  ||; or; boolean operation
+   ||; boolean operation OR
+   or ||
+   boolean operation; || OR
 
 Now suppose we want the opposite condition:  that val is *not* 
 strictly between low and high.
@@ -67,7 +71,9 @@ The compound condition is true if at least one of the component conditions
 are true. It is false if both conditions are false.
 
 .. index::
-   triple:  !; not; boolean operation
+   single: ! boolean operation NOT
+   not !
+   boolean operation; ! NOT
 
 Another logical way to express the opposite of the condition low < val < high
 is that it is *not* the case

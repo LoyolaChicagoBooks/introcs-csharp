@@ -5,7 +5,8 @@ String Special Cases
 ======================
 
 .. index::
-   double: escape code; \
+   escape code \
+   \ escape code
    
 There are some special cases for creating literal strings.  
 For instance you might want quotes
@@ -58,7 +59,8 @@ Example:
     def
     
 .. index::
-   double: string; @
+   string; @
+   @ string literal
 
 Literal strings that are simply delimited by quotes ``"`` 
 must start and end on the same line. 

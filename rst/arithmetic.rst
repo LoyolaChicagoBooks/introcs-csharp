@@ -1,9 +1,4 @@
-.. index::
-   single: operator; + (with numbers)
-   single: +; arithmetic
-   double: operator; -
-   double: operator; *
-   double:  ( ); grouping
+.. index:: arithmetic
 
 .. _arithmetic:
    
@@ -44,6 +39,10 @@ The ``csharp>`` prompt tells you that the C# interpreter has started
 and is awaiting input. This allows you to create small bits of C# 
 and test them, interactively, without having to write a full program! 
 
+.. index::
+   single: operator; + (with numbers)
+   single: +; arithmetic
+
 Play along with the examples here, entering what comes after the prompt:
 
 .. code-block:: none
@@ -56,6 +55,22 @@ The csharp program just has a *read, evaluate, and print loop*: the acronym is
 without a prompt.  Csharp can evaluate arbitrary C# expressions.  It is very handy for
 testing as you get used to new syntax.
 
+.. index::
+   operator; -
+   -; subtraction
+
+Subtraction works as you would expect.  
+Blanks are optional around symbols: 
+
+.. code-block:: none
+ 
+    csharp> 10 - 3;
+    7
+
+For the binary arithmetic operators, 
+you are encouraged to add blanks to make the expression
+more easily readable by humans.
+
 The csharp program is not line-oriented.  The semicolon indicates that
 you are finished with an entry.  You can easily forget it.  
 If your statement is incomplete you get another ``>`` prompt (with no
@@ -67,17 +82,9 @@ If your statement is incomplete you get another ``>`` prompt (with no
           > ;
     7
 
-Subtraction works as you would expect.  
-
-Blanks are optional around symbols: 
-
-.. code-block:: none
- 
-    csharp> 10 - 3;
-    7
-
-For the arithmetic operators, you are encouraged to add blanks to make the expression
-more easily readable by humans.
+.. index::
+   operator; *
+   * multiplication
 
 In math class you could enter something like 4(10) for multiplication:
 
@@ -97,7 +104,11 @@ C#.  Recall that an asterisk is used as a multiplication operator:
  
     csharp> 4 * 10;
     40
-    
+
+.. index::
+   double:  ( ); grouping
+   -; negation
+     
 Enter each of the following expressions into csharp, and think what they
 will produce (and then check):    
 
@@ -108,13 +119,13 @@ will produce (and then check):
 
 If you expected the last answer to be 20, think again: C# uses
 the normal *precedence* of arithmetic operations: Multiplications
-and divisions are done before addition and subtraction, unless
+divisions, and negations are done before addition and subtraction, unless
 there are parentheses forcing the order: 
 
 .. code-block:: none
  
-    csharp> (2+3)*4; 
-    20 
+    csharp> -(2+3)*4; 
+    -20 
 
 A sequence of operations with equal precedence also work like in math: left to right.
 
@@ -124,12 +135,12 @@ A sequence of operations with equal precedence also work like in math: left to r
     9 
 
 .. index:: 
-   double: division; remainder 
-   single: operator; /
-   double: operator; %
-   double: %; remainder 
-   double: division; /
-   single: . ; double literal
+   single: remainder %
+   single: % remainder
+   single: operator; /, %
+   division /
+   / division
+   . ; double literal
    double
    int
    type; int

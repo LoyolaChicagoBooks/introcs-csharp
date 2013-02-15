@@ -129,9 +129,9 @@ get started, we provided this simple *stub* in the example file
 :repsrc:`do_the_math_stub/do_the_math.cs`.  
 
 .. index:: comment
-   /* ... */
-   */
-   //
+   /* ... */ comment
+   */ end comment
+   // comment
 
 The body of ``Main`` presently contains only *comments*, skipped by the compiler.  
 We illustrate two forms (being inconsistent for your information only):

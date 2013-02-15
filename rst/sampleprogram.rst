@@ -209,7 +209,7 @@ get the user response; convert it to a ``double``, and assign to a variable
 the value 10.
 
 .. index:: comment
-   //
+   // comment
 
 At this point we have all the data we need from the user.  The next part is
 the brief calculations of results:
