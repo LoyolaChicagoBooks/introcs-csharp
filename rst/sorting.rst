@@ -33,7 +33,7 @@ swap two data values at positions ``m`` and ``n`` in a given integer array:
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-exchange-begin
-   :end-before: chunk-exchange-end
+   :end-before: chunk
    :linenos:
 
 In general, swapping two values in an array is 
@@ -109,7 +109,7 @@ Bubble Sort requires :math:`O(N^2)` exchanges.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-bubblesort-begin
-   :end-before: chunk-bubblesort-end
+   :end-before: chunk
    :linenos:
 
 
@@ -126,7 +126,7 @@ hence the number of ``Exchange()`` calls.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-selectionsort-begin
-   :end-before: chunk-selectionsort-end
+   :end-before: chunk
    :linenos:
 
 It's a remarkably simple algorithm to explain. As shown in the code, the
@@ -188,7 +188,7 @@ portion.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-insertionsort-begin
-   :end-before: chunk-insertionsort-end
+   :end-before: chunk
    :linenos:
 
 .. index::
@@ -229,12 +229,12 @@ method works--not how the method works *best*.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-shellsort-begin
-   :end-before: chunk-shellsort-end
+   :end-before: chunk
    :linenos:
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-shellsort-naive-begin
-   :end-before: chunk-shellsort-naive-end
+   :end-before: chunk
    :linenos:
 
 
@@ -288,7 +288,7 @@ the intervals based on the first suggestion of Knuth:
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-shellsort-better-begin
-   :end-before: chunk-shellsort-better-end
+   :end-before: chunk
    :linenos:
 
 Shell sort is a complex sorting algorithm to make "work well", which is why it is not
@@ -320,7 +320,7 @@ behavior, it has a worst case performance of :math:`O(N ^2)`.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-quicksort-begin
-   :end-before: chunk-quicksort-end
+   :end-before: chunk
    :linenos:
 
 Though the initial call is to sort an entire array, this is accomplished by
@@ -358,7 +358,7 @@ The following code generates a random array:
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-random-begin
-   :end-before: chunk-random-end
+   :end-before: chunk
    :linenos:
 
 There are a few things to note in this code:
@@ -409,7 +409,7 @@ of each of the sorting algorithms.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-drivervars-begin
-   :end-before: chunk-drivervars-end
+   :end-before: chunk
    :linenos:
 
 The variables declared here are to set up the apparatus:
@@ -428,7 +428,7 @@ The variables declared here are to set up the apparatus:
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-driverparameters-begin
-   :end-before: chunk-driverparameters-end
+   :end-before: chunk
    :linenos:
 
 This code is designed so we can accept the parameters ``arraySize`` and ``randomSeed``
@@ -439,7 +439,7 @@ of teaching, we wanted to make it possible to run it with or without command-lin
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-driverapparatus-begin
-   :end-before: chunk-driverapparatus-end
+   :end-before: chunk
    :linenos:
 
 This code fragment is actually replicated a few times in the actual ``Main()`` method (to
@@ -544,6 +544,3 @@ as follows:
 .. [uClibc] http://en.wikipedia.org/wiki/UClibc
 
 .. [TCSortingJava] http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm
-
-.. out of date
-   .. [SortingFolder] https://bitbucket.org/gkthiruvathukal/introcs-csharp/src/default/projects/Arrays/Sorting/main.cs
