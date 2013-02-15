@@ -5,8 +5,8 @@ namespace IntroCS
 {
    public class Sorting
    {
-      // sort methods, a function has been created for it.
       // chunk-exchange-begin
+      /// Exchange the elements of data at indices m and n.
       public static void Exchange(int[] data, int m, int n)
       {
          int temporary;
@@ -48,6 +48,8 @@ namespace IntroCS
       // chunk-insertionsort-end
 
       // chunk-selectionsort-begin
+      /// Among the indices >= start for data, 
+      /// return the index of the minimal element.
       public static int IntArrayMin (int[] data, int start)
       {
          int minPos = start; 
@@ -73,13 +75,13 @@ namespace IntroCS
       // chunk-selectionsort-end
 
       // chunk-shellsort-begin
+      /// Shell sort of data using specified swapping intervals.
       public static void IntArrayShellSort (int[] data, int[] intervals)
       {
          int i, j, k, m;
          int N = data.Length;
 
          // The intervals for the shell sort must be sorted, ascending
-
          for (k=intervals.Length-1; k>=0; k--) {
             int interval = intervals [k];
             for (m=0; m<interval; m++) {
@@ -105,6 +107,8 @@ namespace IntroCS
 
       // chunk-shellsort-better-begin
     
+      /// Generates the intervals for Shell sort on a  
+      /// list of length n via an algorithm from Knuth.
       static int[] GenerateIntervals (int n)
       {
          if (n < 2) {  // no sorting will be needed
@@ -127,6 +131,7 @@ namespace IntroCS
       // chunk-shellsort-better-end
 
       // chunk-quicksort-begin
+      /// Sort elements of data in index range [lowI, highI].
       public static void IntArrayQuickSort (int[] data, 
                                             int lowI, int highI)
       {
@@ -163,20 +168,19 @@ namespace IntroCS
       // chunk-quicksort-end
  
       // chunk-random-begin
+      /// Fill data with pseudo-random data seeded by randomSeed.
       public static void IntArrayGenerate (int[] data, int randomSeed)
       {
          Random r = new Random (randomSeed);
          for (int i=0; i < data.Length; i++)
             data [i] = r.Next ();
       }
-
       // chunk-random-end
-
-      // This program is designed to run from the command line.
-      // with array size and seed as parameters.
-      // If the arguments are not specified, the user will be prompteds.
-                                                 
+                                                
       // chunk-driver-begin
+      /// Sorting timing tests allowing command line parameters
+      /// for the size of the array and the random seed.
+      /// If the arguments are not specified, the user is prompted.
       public static void Main (string[] args)
       {
          // chunk-drivervars-begin

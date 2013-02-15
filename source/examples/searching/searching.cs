@@ -5,6 +5,8 @@ namespace IntroCS
    public class Searching
    {
       // chunk-linearsearch-begin
+      /// Return the index of the first position in data
+      /// where item appears, or -1 if item does not appear.
       public static int IntArrayLinearSearch(int[] data, int item) 
       {
          int N=data.Length;
@@ -18,6 +20,8 @@ namespace IntroCS
       // chunk-linearsearch-end
 
       // chunk-linearsearchfrom-begin
+      /// Return the first index >= start in data where
+      /// item appears, or -1 if item does not appear there.
       public static int IntArrayLinearSearch(int[] data, int item, 
                                              int start) 
       {
