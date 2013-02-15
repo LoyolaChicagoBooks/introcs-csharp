@@ -126,11 +126,24 @@ character (which must be a *letter* or an *underscore*):
 We have shown everything you need to understand to
 complete this lab. To help you
 get started, we provided this simple *stub* in the example file
-:repsrc:`do_the_math_stub/do_the_math.cs`.  Save the stub in a project of
-your own and complete it:
+:repsrc:`do_the_math_stub/do_the_math.cs`.  
+
+.. index:: comment
+   /* ... */
+   */
+   //
+
+The body of ``Main`` presently contains only *comments*, skipped by the compiler.  
+We illustrate two forms:
+
+* ``//`` to the end of the *same* line
+* ``/*`` to ``*/`` through any number of lines.
+
+Save the stub in a project of
+your own and replace the comments with your code to complete it:
 
 .. literalinclude:: ../source/examples/do_the_math_stub/do_the_math.cs
-
+     
 Be sure to run it and test it thoroughly. Show your output to a TA.
 
 .. index:: MonoDevelop; empty project - no console error

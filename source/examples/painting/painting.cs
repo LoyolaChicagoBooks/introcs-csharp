@@ -16,7 +16,7 @@ class Painting
       widthString = Console.ReadLine();
       width = double.Parse(widthString);
       
-      wallArea = 2 * (length + width) * HEIGHT;
+      wallArea = 2 * (length + width) * HEIGHT; // ignore doors
       ceilingArea = length * width;
       
       Console.WriteLine("The wall area is " + wallArea 
