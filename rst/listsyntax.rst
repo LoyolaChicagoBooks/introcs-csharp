@@ -35,8 +35,9 @@ The type for an ``int`` list is ::
 
     List<int>
 
-In general the new generic syntax allows a type (or several in a list) in angle
-brackets after a class name.  Lists are an example.  We will see more shortly.
+In general the new generic syntax allows a type (or several, comma separated) in angle
+brackets after a class name.  Lists are an example that depends on just
+one included type.  We will see more shortly.
 
 There is a namespace for the generics for collections, including List:
 System.Collections.Generic.
@@ -148,9 +149,9 @@ You can check for membership in a ``List`` with ``Contains``:
 
 ..  code-block:: none
 
-	csharp> words.Contains(""in");
+	csharp> words.Contains("in");
 	true
-	csharp> words.Contains(""into");
+	csharp> words.Contains("into");
 	false
 
 You can also remove all elements at once:
