@@ -102,7 +102,8 @@ array of length :math:`N`. The maximum
 number of inversions occurs when the array is sorted in reverse order
 and has no equal elements.
 
-Each exchange in Bubble Sort removes precisely one inversion; therefore,
+Bubble Sort exchanges only adjacent elements.  
+Each such exchange removes precisely one inversion; therefore,
 Bubble Sort requires :math:`O(N^2)` exchanges.
 
 
@@ -343,8 +344,8 @@ These *recursive* calls stop when a part it reduced to one element.
 
 .. index::
    single: Random
-   double: random numbers; seeding
-   double: random numbers; regeneration
+   double: random number; seed
+   regenerate random numbers
    
 Random Data Generation
 ------------------------
