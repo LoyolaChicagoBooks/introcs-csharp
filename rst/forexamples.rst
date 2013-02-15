@@ -40,11 +40,12 @@ This means to increment the variable i by k.
     is also legal, and just assigns the value of k to i.
 
 .. index::
-   double: operator; +=
-   double: operator; -=
-   double: operator; *=
-   double: operator; /=
-   double: operator; %=
+   operator; += -= *= /= %=
+   += operator
+   -= operator
+   *= operator
+   /= operator
+   %= operator
 
 Most C# binary operations have a similar variation.  For instance
 if *op* is ``+``, ``-``, ``*``, ``/`` or ``%``,
@@ -64,9 +65,10 @@ is the same as  ::
     x = x * 5;
     
 .. index::
-   double: format; field width
-   double: format; precision
-   double: format; table
+   format; field width, precision, tables
+   field width formatting
+   precision; formatting
+   table; format
    double: example; power_table.cs
 
 .. _tables:

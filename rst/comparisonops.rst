@@ -1,12 +1,12 @@
 .. index:: 
-   double: boolean expression; comparison
+   boolean expression; comparison
    comparison; < > <= >= == !=
-   <; less than 
-   <=; less than or equal 
-   >; greater than 
-   >=; greater than or equal
-   ==; equality test
-   single: != ; inequality test
+   < less than 
+   <= less than or equal 
+   > greater than 
+   >= greater than or equal
+   == equality test
+   single: != inequality test
    
 .. _More-Conditional-Expressions:
     
