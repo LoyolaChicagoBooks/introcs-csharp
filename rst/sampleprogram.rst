@@ -208,12 +208,19 @@ get the user response; convert it to a ``double``, and assign to a variable
 (``width`` in this case).  In the sample run the variable ``width`` is assigned
 the value 10.
 
+.. index:: comment
+   //
+
 At this point we have all the data we need from the user.  The next part is
 the brief calculations of results:
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 19-20
 
+At the end of the first line is a *comment*.  It starts with ``//`` and ends
+at the end of the same line.  It is ignored by the compiler.  It is there for humans,
+hopefully to add something that helps understanding of the program.
+  
 We have two assignment statements.  The values to assign are given by arithmetic
 expressions on the right side of the equal signs.  It looks pretty much like
 regular math, except in math class you may be used to only having one letter names
