@@ -33,11 +33,11 @@ array:
 
 Here's what it does:
 
-- In lines 2-3 we set up a loop to go from 0 to N-1. We often use N
+- In lines 4-5 we set up a loop to go from 0 to N-1. We often use N
   to indicate the size of the array (and it's much easier to type
   than ``data.Length``.
 
-- In line 4, we see whether we found a match for the item we are searching.
+- In line 6, we see whether we found a match for the item we are searching.
   If we find the match, we immediately leave the loop by returning the
   position where it was found.
 
