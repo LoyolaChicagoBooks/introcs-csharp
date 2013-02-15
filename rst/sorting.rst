@@ -36,6 +36,20 @@ swap two data values at positions ``m`` and ``n`` in a given integer array:
    :end-before: chunk
    :linenos:
 
+For example if we have an array nums, shown with indices:
+
+.. code-block:: none
+
+    nums: -1  8 11 22  9 -5  2 
+   index:  0  1  2  3  4  5  6   
+
+Then after ``Exchange(nums, 2, 5)`` the array would look like
+
+.. code-block:: none
+
+    nums: -1  8 -5 22  9 11  2 
+   index:  0  1  2  3  4  5  6   
+
 In general, swapping two values in an array is 
 no different than swapping any two integers.
 Suppose we have the following integers ``a`` and ``b``::
@@ -134,6 +148,7 @@ actual sorting is done by a function, ``IntArraySelectionSort()``, which
 takes an array of data as its only parameter, like Bubble sort.
 The way Selection Sort works is as follows:
 
+
 #. An outer loop visits each item in the array to find out whether it is the
    minimum of all the elements after it. 
    If it is not the minimum, it is going to be swapped with whatever
@@ -149,12 +164,75 @@ The way Selection Sort works is as follows:
    from position ``i + 1`` to the end of the array, updating the position of the
    smallest element so far. 
 
-As a concrete example, if you have an array of 10 elements, this means that
-``i`` goes from 0 to 9. When we are looking at position 0, we check to find the 
-position of the minimum element in 
-positions 0..9. If the minimum is not already at position ``i``, we swap the minimum into
-place. Then
-we consider ``i=1`` and look at positions 1..9. And so on.
+An illustration to accompany the discussion:
+
+.. code-block:: none
+
+    data: 12  8 -5 22  9  2 
+   index:  0  1  2  3  4  5    
+           i     k                    
+
+The first time through the loop, ``i`` is 0, and ``k`` gets the value 2, since data[2]
+is -5, the smallest element.  Those two positions get swapped.
+
+.. code-block:: none
+
+    data: -5  8 12 22  9  2 
+   index:  0  1  2  3  4  5    
+
+The next 
+time through the loop i is 1 and k becomes 5:
+
+.. code-block:: none
+
+    data: -5  8 12 22  9  2 
+   index:  0  1  2  3  4  5    
+              i           k                    
+
+After the swap:
+
+.. code-block:: none
+
+    data: -5  2 12 22  9  8 
+   index:  0  1  2  3  4  5    
+
+and so on.  Here is the data after each of the last three swaps:
+
+.. code-block:: none
+
+    -5  2  8 22  9 12 
+
+    -5  2  8  9 22 12 
+
+    -5  2  8  9 12 22 
+
+Consider the first call to ``IntArrayMin``.  
+
+.. code-block:: none
+
+    data: 12  8 -5 22  9  2 
+   index:  0  1  2  3  4  5    
+
+Initially ``minPos`` is 0.  Here are the
+changes for each value of ``pos``:
+
+.. code-block:: none
+
+   pos=1:  8 = data[1] < data[0] = 12, so minPos becomes 1
+   pos=2: -5 = data[2] < data[1] = 8, so minPos becomes 2
+   pos=3: 22 = data[3] is not < data[2] = -5, so minPos still 2
+   pos=4:  9 = data[4] is not < data[2] = -5, so minPos still 2
+   pos=5:  2 = data[5] is not < data[2] = -5, so minPos still 2
+
+and 2 gets returned, and we ge the swap
+
+.. code-block:: none
+
+    data: -5  8 12 22  9  2 
+   index:  0  1  2  3  4  5    
+
+The next call to ``IntArrayMin`` has ``start`` as 1, so ``minPos`` is initially 1,
+and we compare to the elements of data at index 2, 3, 4, and 5....
 
 We won't do the full algorithmic analysis here. Selection Sort is interesting because
 it does most of its work through *comparisons*, with the same number of them no matter
@@ -164,7 +242,6 @@ how the data are ordered, exactly
 number of *exchanges* is O(N). The comparisons are a non-trivial cost, 
 however, and do show
 in our own performance experiments with randomly-generated data. 
-
 
 .. index::
    double: sorting; insertion sort
@@ -179,17 +256,89 @@ list from the bottom of the array. We repeatedly insert the next element
 into the sorted part of the array by sliding it down (using our familiar
 ``Exchange()`` method) to its proper position.
 
+.. literalinclude:: ../source/examples/sorting/sorting.cs
+   :start-after: chunk-insertionsort-begin
+   :end-before: chunk
+   :linenos:
+
+Consider the earlier example array as we illustrate some of the steps.   
+I use the symbol '-' for an element that we know to 
+be in the sorted list at the beginning of the array, 
+and '@' over the next one we are trying to insert *at* the right position.
+We start with a one-element sorted list and try to position the second element:
+
+
+.. code-block:: none
+
+           -  @
+    data: 12  8 -5 22  9  2 
+   index:  0  1  2  3  4  5    
+
+After each outer loop in sequence we end up with:
+
+.. code-block:: none
+
+           -  -  @
+    data:  8 12 -5 22  9  2 
+   index:  0  1  2  3  4  5    
+
+           -  -  -  @
+    data: -5  8 12 22  9  2 
+   index:  0  1  2  3  4  5    
+
+           -  -  -  -  @
+    data: -5  8 12 22  9  2 
+   index:  0  1  2  3  4  5    
+
+           -  -  -  -  -  @
+    data: -5  8  9 12 22  2 
+   index:  0  1  2  3  4  5    
+
+           -  -  -  -  -  -
+    data: -5  2  8  9 12 22  
+   index:  0  1  2  3  4  5    
+
+Let us illustrate several times just through the inner loop, the first time,
+when the 8 is moved into 
+position from index ``j`` = 1, so ``i`` starts at 1.  We show the letter i
+over the data at index ``i``, and show the comparison test to be done with a `>`
+with a '?' over it.
+
+.. code-block:: none
+
+             ? i
+    data: 12 > 8  -5  22   9   2   1>0 and 12>8: true, so swap, loop
+   index:  0   1   2   3   4   5    
+
+           i
+    data:  8  12  -5  22   9   2   0>0 false, skip comparison of data, end loop
+   index:  0   1   2   3   4   5    
+
+Let us also illustrate at a later time through the inner loop, when the 9 is moved into 
+position from index ``j`` = 4, so ``i`` starts at 4.  
+
+.. code-block:: none
+
+                         ? i  
+    data: -5   8  12  22 > 9   2  4>0 and 22>9: true, so swap, loop
+   index:  0   1   2   3   4   5    
+
+                     ? i  
+    data: -5   8  12 > 9  22   2  3>0 and 12>9: true, so swap, loop
+   index:  0   1   2   3   4   5    
+
+                 ? i  
+    data: -5   8 > 9  12  22   2  2>0 and 8>9: false, end inner loop
+   index:  0   1   2   3   4   5    
+
+The 9 started at index ``j`` = 4, and now the list is sorted up through index 4.  
+
 This will require as many exchanges as Bubble Sort,
 since only one inversion is removed per exchange. So Insertion Sort also
 requires :math:`O(N^2)` exchanges. On average Insertion Sort requires
 only half as many comparisons as Bubble Sort, since the average distance an
 element must move for random input is one-half the length of the sorted
 portion. 
-
-.. literalinclude:: ../source/examples/sorting/sorting.cs
-   :start-after: chunk-insertionsort-begin
-   :end-before: chunk
-   :linenos:
 
 .. index::
    double: sorting; Shell sort
