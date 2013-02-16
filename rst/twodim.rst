@@ -236,7 +236,7 @@ Individual entries would be referred to with double square braces,
 not with indices separated by commas between one set of braces.  
 With ``tri`` constructed as above:
 
-- ``tri[3, 3]`` would given a compiler error: no mixing ``[][]`` and ``[, ]``.
+- ``tri[3, 3]`` would given a compiler error: no changing ``[][]`` to ``[, ]``.
 - ``tri[3][3]`` would refer to an element.
 - ``tri[1][3]`` would given a run-time out-of-bounds error.
   since ``tri[1]`` is an array of length 2.
