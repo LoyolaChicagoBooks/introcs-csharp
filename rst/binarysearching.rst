@@ -51,8 +51,8 @@ during each pass in half. If you think about how it's working here with 16 items
 there is integer division here, the interval will not always be precisely half. it is the
 floor of dividing by 2 (integer division, that is).
 
-You can see that the above determined the item within 3 steps. At most it would be 4 steps,
-which is :math:`log_2 16 = 4`.
+You can see that the above determined the item within 3 steps. To reduce to one element
+to consider, it could be 4 or 5 steps.  Note that :math:`4 < log_2 17 < 5`.
 
 Now that we've seen how the method works, here is the code that does the work:
 
@@ -63,30 +63,36 @@ Now that we've seen how the method works, here is the code that does the work:
 
 Here's a quick explanation, because it largely follows from the above explanation.
 
-- Line 5-6. Initially item could be anywhere in the array, 
+- Line 5-6: Initially item could be anywhere in the array, 
   so minimum is at position 0 and maximum is at position 
   N-1 (data.Length - 1).
-- The loop to make repeated passes over the array begins on line 6. We use a bottom-tested
+- The loop to make repeated passes over the array begins on line 7. We use a bottom-tested
   do-while loop, 
   because we know that we need to enter this loop--no matter what--at least once
   to determine whether the item is in the middle or not. 
-- Line 8 does just what we expect. 
-  It calculates the median position (mid) and then proceeds
-  to test whether the value is present at this position. If it is greater than the value
-  at this position, we know it is in the "upper half". Otherwise, it's in the lower half.
-  It is also possible that we've found the item, which is what we test on line 9.
-- If the interval shrinks until there is no space for data left (``max`` < ``min``), then
-  the binary search terminates. 
-- The binary search either returns the *position* where we found the item, 
-  or it returns -1 (to indicate not found). 
-  The -1 value is a commonly-returned function in most search operations
-  (especially on lists and strings), so we use this mostly out of respect for tradition. 
+- Line 8 does just what we expect: 
+  It calculates the median position (mid).
+- It is always possible that we've found the item, which is what we test on line 9,
+  and return with our answer if we found it.
+- Lines 11-14: If not, we continue.  If the item is greater than the value
+  at this mid position, we know it is in the "upper half". 
+  Otherwise, it's in the "lower half".
+- Line 15: We can only continue searching if there is some data left to consider 
+  (``min <= ``max``).   
+- Line 16: Otherwise the binary search loop terminates, and we 
+  return -1 (to indicate not found). 
+  The -1 value is a commonly-returned indicator of failure in search operations
+  (especially on arrays, lists, and strings), 
+  so we use this mostly out of respect for tradition. 
   It makes particular sense, 
   because -1 is not within the *index set* of the array (which starts
   at 0 in C# and ends at ``data.Length - 1``. 
 
 Similar to linear searching, we provide a main program that tests it out.  The whole code
-is in :repsrc:`binary_searching/binary_searching.cs`.
+is in :repsrc:`binary_searching/binary_searching.cs`.  It uses 
+an elaboration of binary search that prints
+out the steps visually, as in the introduction to this section. 
+It also references functions from the example projects searching and sorting.
 
 .. literalinclude:: ../source/examples/binary_searching/binary_searching.cs
    :start-after: chunk-driver-begin

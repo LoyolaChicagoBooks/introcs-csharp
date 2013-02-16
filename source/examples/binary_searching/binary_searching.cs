@@ -66,22 +66,12 @@ namespace IntroCS
          } while(min <= max);
          return -1;
       }
-
-      /// Return ints taken from space separated integers in a string.
-      public static int[] IntsFromString(string input)
-      {
-         string[] integers = input.Split(' ');
-         int[] data = new int[integers.Length];
-         for (int i=0; i < data.Length; i++)
-            data[i] = int.Parse(integers[i]);
-         return data;
-      }
                                           // chunk-driver-begin
       public static void Main()
       {
          string input = UI.PromptLine(
             "Please enter some integers, separated by single spaces:");
-         int[] data = IntsFromString(input);
+         int[] data = Searching.IntsFromString(input);
          Sorting.IntArrayShellSortBetter(data);
          string prompt =
            "Please enter a number you want to find (blank line to end):";
