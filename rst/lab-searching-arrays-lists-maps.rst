@@ -28,13 +28,12 @@ in nature. That is, the execution time can be expressed as a polynomial function
 of the data size :math:`n`. Examples
 include but are not limited to:
 
+- :math:`O(1)` is constant time, 
+  characterized by a calculation with a limited number of steps.
 - :math:`O(n)` is linear time; often characterized by a single loop
-
 - :math:`O(n^2)` is the time squared; often characterized by a nested loop
-
 - :math:`O(log\ n)` is logarithmic (base 2) time; often characterized by a loop
   that repeatedly divides its work in half. The binary search is a well-known example.
-
 - :math:`O(n\ log\ n)` is an example of a hybrid. Perhaps there is an outer loop that
   is linear and an inner loop that is logarithmic. 
 
@@ -54,9 +53,7 @@ We're going to measure the performance of data structures we have been learning
 about (and will learn about, for lists and sets). For this lab, we'll focus on:
 
 - Integer arrays using :ref:`searching` and :ref:`binarysearching`
-
 - :ref:`lists` of integers with linear searching
-
 - :ref:`sets` of integers; checking if an item is contained in the set
 
 In the interest of fairness, we are only going to look at the time it takes
@@ -71,22 +68,18 @@ The experimental apparatus that we are constructing will do the following
 for each of the cases:
 
 - create the data structure (e.g. new array, new list, new set)
-
 - use a random seed ``seed``, initialize a random generator that will generate
   ``n`` values. 
-
 - insert the random values into the data structure . 
   For the case of sets, which eliminate duplicates, it is
   entirely possible you will end up with a tiny fraction of a percent
   fewer than ``n`` values.
-
 - to measure the performance of any given search method, we need to perform a 
   significant number of lookups (based on numbers in the random sequence) to
   ensure that we get an accurate idea of the *average* lookup time in practice. 
   We'll call this parameter, ``rep``.  We will spread out the values looked for 
   by checking data elements that have indices at a regular interval throughout the array.
-  The separation is ``m = n/rep`` when ``rep < n``. We wrap around if ``rep > n``.
-  
+  The separation is ``m = n/rep`` when ``rep < n``. We wrap around if ``rep > n``. 
 - We'll start a Stopwatch just before entering the loop to perform the lookups. 
 
 
@@ -119,30 +112,23 @@ look at the other experiments but these will likely be presented in a bit
 less detail, except to highlight the differences:
 
 - On line 3, we create a ``Stopwatch`` instance. We'll be using this to do the timing.
-
 - On lines 4-5, we are creating the data to be searched. Because we have already
   written this code in our sorting algorithms examples, we can refer to the
   Sorting class code in :file:`sorting.cs`, as long as you made the lab project 
   able to reference it.  We use the ``Sorting`` class name
   to access the method ``IntArrayGenerate()`` within this class. We also take advantage
   of this in the other experiments.
-
 - Line 6 converts the number of repetitions into the increment in index values for each
   time.
-  
 - Line 7 resets the stopwatch. It is not technically required; however, we tend to be
   in the habit of doing it, because we sometimes reuse the same stopwatch and want
   to make sure it is completely zeroed out. A call to ``Reset()`` ensures it is zero.
-
 - Line 8 actually starts the stopwatch. We are starting here as opposed to before line
   3, because the random data generation has nothing to do with the actual searching of
   the array data structure.
-
 - Lines 10 through 12 are searching ``rep`` times for an item already known to
   be in the array. 
-
 - Line 13 stops the stopwatch.
-
 - Line 14 returns the elapsed time in *milliseconds*
   between the ``Start()`` and ``Stop()`` method calls,
   which reflects the actual time of the experiment.
@@ -153,7 +139,7 @@ we use the methods created earlier.
 For the lists and the set we use the built-in ``Contains`` 
 method to search.  
 The list and set are directly initialized in their constructors from the
-array data.  (More on that later.)
+array data.  (More on that in later chapters.)
 
 You need to fill in the ``Main`` method:
 
