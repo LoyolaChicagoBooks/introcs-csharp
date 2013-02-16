@@ -47,5 +47,9 @@
       <Project>{6A581A4A-8492-46E7-8F21-9D8F17D104F4}</Project>
       <Name>ui</Name>
     </ProjectReference>
+    <ProjectReference Include="..\searching\searching.csproj">
+      <Project>{ED752864-8025-47E1-8C27-563A925C73A6}</Project>
+      <Name>searching</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
