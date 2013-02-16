@@ -47,7 +47,7 @@ Let's see how we might search for the value 115.
   so we're done.
 
 So binary search (as its name might suggest) works by dividing the interval to be searched
-during each pass in half. If you think about how it's working here with 16 items. Because
+during each pass in half. If you think about how it's working here with 17 items. Because
 there is integer division here, the interval will not always be precisely half. it is the
 floor of dividing by 2 (integer division, that is).
 
