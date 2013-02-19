@@ -184,7 +184,7 @@ You need to fill in the ``Main`` method:
 Once again, you are encouraged to develop this is steps, for example
 
 #. Make sure you can parse the command line parameters.
-#. Print out one test for one rep, n pair.
-#. Print out the tests for multiple n values for one test
-#. Print out for all tests, but worry about formatting later.
-#. The full program.
+#. Print out one test for one rep, n.
+#. Print out the results for all tests for one rep, n
+#. Make the printing be formatted for the columns
+#. The full program, for all n.
