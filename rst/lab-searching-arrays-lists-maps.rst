@@ -92,11 +92,14 @@ that refers to all the code for all of the experiments you need
 to run. (That's right, we're giving you the code for the *experiments*, 
 but you're going to write
 some code to run the various experiments and then run for varying sizes of ``n``.)
+The stub file is :repsrc:`performance_lab_stub/performance_lab.cs`.
 
 Recreate example project performance_lab_stub in your solution as performance_lab,
 so you have your own copy to modify.  You will need to copy into the
-lab project the file :file:``sorting.cs`` from the example sorting project.
-(An alternative is to recreate the whole sorting project, and reference it from the lab 
+lab project the file :file:`sorting.cs` from the example sorting project, and the file 
+:file:`searching.cs` from the linear searching project.
+(An alternative is to recreate the whole sorting project and searching project, 
+and reference them from the lab 
 project.)
 
 Here is the code for the first experiment, to test the performance of linear
