@@ -97,8 +97,9 @@ The stub file is :repsrc:`performance_lab_stub/performance_lab.cs`.
 Recreate example project performance_lab_stub in your solution as performance_lab,
 so you have your own copy to modify.  You will need to copy into the
 lab project the file :file:`sorting.cs` from the example sorting project, and the file 
-:file:`searching.cs` from the linear searching project.
-(An alternative is to recreate the whole sorting project and searching project, 
+:file:`searching.cs` from the linear searching project, and the file 
+:file:`binary_searching.cs` from the binary searching project.
+(An alternative is to recreate their whole projects, 
 and reference them from the lab 
 project.)
 
