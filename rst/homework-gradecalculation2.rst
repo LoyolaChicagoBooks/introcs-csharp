@@ -68,6 +68,9 @@ Functional Requirements
      | Please enter the grade for exam 4: **92**
      |
      | Calculated average exam grade = 90.5
+   
+   Of course you must return the grade to the caller for use in the 
+   overall weighted average grade.
      
    A category may have only a single grade, in which case the 
    user will just enter the number of grades as 1.
