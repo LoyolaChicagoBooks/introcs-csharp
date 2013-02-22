@@ -38,11 +38,18 @@ Functional Requirements
    at the end of the loop, after each time they have been entered 
    in the loop.
 
-#. Add code to prompt the user for the number of items in each category:
+#. Write a function, ``FindAverage``, 
+   to do the following.  The example refers to the category exam, 
+   but you will want your code to work for each 
+   category, and hence the category
+   *name* will need to be a parameter to ``FindAverage``.)
 
-      Please enter the number of exams: **3**
 
-#. Instead of prompting the user for an overall average 
+   Prompt the user for the number of items in the category:
+
+      Please enter the number grades in category exam: **4**
+
+   Instead of prompting the user for an overall average 
    exam grade, use a loop  to 
    read one grade at a time. The grades will be added together (on the fly)
    to give the grade for that category. For example, after you have asked
@@ -53,20 +60,17 @@ Functional Requirements
    category you're calculating:
 
      | Please enter the grade for exam 1: **100**
-     | Total exam points: 100
      |
      | Please enter the grade for exam 2: **90**
-     | Total exam points: 190
      |
      | Please enter the grade for exam 3: **80**
-     | Total exam points: 270
      |
-     | Calculated average exam grade = 90
-
-   Write a function, ``FindAverage``, 
-   to do this, and that can be reused for each
-   category.  (Since it works for each category, the category
-   *name* will need to be a parameter to ``FindAverage``.)
+     | Please enter the grade for exam 4: **92**
+     |
+     | Calculated average exam grade = 90.5
+     
+   A category may have only a single grade, in which case the 
+   user will just enter the number of grades as 1.
 
 #. Once you have read in the data for each of the items within a category,
    you'll basically be able to *reuse* the code that you developed in the
@@ -77,7 +81,6 @@ Functional Requirements
    If the final average was actually 93.125, you would print 93.1.  
    If the final average was actually 93, you would print 93.0.  
    If the final average was actually 93.175, you would print 93.2.  
-   
 
 Style Requirements
 ------------------
