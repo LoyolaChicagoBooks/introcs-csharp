@@ -34,8 +34,7 @@ Here are some important web links:
       
     There is a mixture of new high-def videos and older
     lower resolution
-    800x600 pixel videos.  See 
-    `00README.html <https://luc.box.com/files/0/f/611829684/1/f_6306832603>`_
+    800x600 pixel videos.  See 00README.html in that folder
     for a description of the differences
     between the old videos and the latest update of the online book.
     
