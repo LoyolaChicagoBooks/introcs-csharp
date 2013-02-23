@@ -5,24 +5,27 @@ class Example // nothing in here is marked static
 {
    private int n; // one instance variable or "attribute"
    private double d; // another - these form an Example object's state
-   
+                                               // constructor chunk
    public Example(int n, double d) // a constructor - no return type
    {
       this.n = n; this.d = d; // "this" is required (why?)
    }
-   
+                                             // end constructor chunk
    public int GetN() // a "getter" method
    {
       return n;
    }
+
    public double GetD() // another
    {
       return d;
    }
+                                           // SetN chunk
    public void SetN(int n) // a "setter" method
    {
       this.n = n;
    }
+                                        // end SetN chunk
    public void SetD(double d) // another
    {
       this.d = d;
@@ -62,8 +65,8 @@ class ExampleTest
       Console.WriteLine(e); // prints Example: n = 3, d = 10.5
 
       e2.SetN(77);  // symbolism uses e2, not e
-      Console.WriteLine(e2); // prints Example: n = 77, d = 0 
-      Console.WriteLine(e); // prints Example: n = 77, d = 0 
+      Console.WriteLine(e2); // prints Example: n = 77, d = 10.5 
+      Console.WriteLine(e); // prints Example: n = 77, d = 10.5 
       // but e is the same object - so its fields are changed 
    }
 } // end of class ExampleTest

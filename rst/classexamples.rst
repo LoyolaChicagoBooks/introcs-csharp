@@ -1,5 +1,5 @@
-Class Examples
-================================
+Class Instance Examples
+========================
 
 Getters and Setters
 --------------------
@@ -7,29 +7,62 @@ Getters and Setters
 Our class Rational in :repsrc:`rational_nunit/rational.cs` is a
 practical utility class.  We used it as a first example to avoid being artificial,
 and illustrate many points.  One choice we made for it to be practical, is to have
-``Rational`` objects be immutable.  Though we constructed Rationals and used them,
-there was no public code that modified a Rational.  We discussed :ref:`getters`.
+``Rational`` objects be immutable:  Though we constructed Rationals and used them,
+there was no public code that *modified* a Rational.  We discussed :ref:`getters`.
 For mutable objects, another basic kind of method is a *setter*, 
 that sets an attribute of the object's state, changing it from what it was before.
 
 This time we have a nonsensical but very simple class to illustrate the use of
 both getters and setters, example 
-:repsrc:`example_class/example_class.cs`:
+:repsrc:`example_class/example_class.cs`.  It is highly commented:
 
 .. literalinclude:: ../source/examples/example_class/example_class.cs
 
-Make sure you can follow the code and the output from running.
+Make sure you can follow the code and the output from running.  
 
-Converting A Static Game to A Game Instance
+One important point is disambiguating the use of ``n`` and ``d`` in several
+places where they are used as local variable, 
+while also being instance variables names.   For instance
+note the constructor:
+
+.. literalinclude:: ../source/examples/example_class/example_class.cs
+   :start-after: constructor chunk
+   :end-before: chunk
+
+The compiler first looks to see if an identifier, like ``n`` is a local variable.  
+If so, it stops there.  We need to be trickier to access an *instance variable* of the 
+*same* name.  We can generally skip dot notation when referring to the current object, 
+but here we have an exception, since plain ``n`` refers to the local variable.  
+We *can* use dot notation with a reference to the current object.
+The current object is ``this``, so we can refer to ``this.n``.
+After seeing the ``this.``, the compiler knows that what follows must refer to a 
+*part of the current object*, and hence the ``n`` means the instance variable.
+Similarly with ``d``.
+
+In the class Rational we never changed the value of an instance variable in a 
+*public* method.  That kept Rationals immutable.  In ``Example`` 
+we choose to have a *setter*, like ``SetN``, changing the value of the instance variable:
+
+.. literalinclude:: ../source/examples/example_class/example_class.cs
+   :start-after: SetN chunk
+   :end-before: chunk
+
+Since an ``Example`` object is mutable, we can play with aliases,  as in the
+last few lines of ``Main``, after ``e`` becomes an alias for ``e2``. We change
+an object under one name, and it affect the alias the same way,
+as you can see from running the program.
+
+Converting A Static Game To A Game Instance
 ----------------------------------------------
 
 For a comparison of procedural and object-oriented coding,
 consider converting :ref:`lab-number-game` so that a Game
-is an instance.
+is an object, an instance of the Game class.
 
 While our last example, Rational, is in fact a very practical 
-use of object-oriented programming, this is somewhat more artificial,
-but hopefully informative, particularly with the transformation.
+use of object-oriented programming, Game is somewhat more artificial.  
+We create it hoping that highlighting the differences between procedural 
+and object-oriented presentation is informative.
 Here is a procedural version, example file 
 :repsrc:`static_version/static_version.cs`
 
@@ -38,11 +71,12 @@ Here is a procedural version, example file
    :end-before: chunk
 
 The project also refers to the library class UI, with the functions we use for safe
-keyboard input.  It is all static methods.  Is there any reason to make this
-class have its own own instances?
+keyboard input.  It is all static methods.  
+
+Is there any reason to make this UI class have its own own instances?
 
 **No**.  There is no state to remember between UI method calls.  What comes in through
-the keyboard goes out through a return value, and you are done with it.  
+the keyboard goes out through a return value, and then you are completely done with it.  
 A simple static function works fine each time.  *Do not get fancy for nothing*.
 
 What state would a game hold?  We might set it up so the user
@@ -76,14 +110,20 @@ into instance variables, just because you can, when an old-fashioned
 local variable is all that you need.  It is good to have variables leave the
 programmer's consciousness when they are no longer needed, as a local variable does.  
 An instance variable lingers on, leaving extra places to make errors.
-  
-Go ahead and make the changes: create project Game inside the current solution.
+
+This introductory discussion could get you going, making a transformation.  
+Go ahead and make the changes as far as you can: 
+create project Game inside the current solution.
 Have a class Game for the Game instance, with instance variable ``big`` and method
 ``Play``.
 
-You still need a static ``Main`` method to first create the Game object.  You could prompt
-the user for the value for ``big`` to send to the constructor.  Once you have an object, 
-you can call *instance method* ``Play``.  What about parameters? What needs to change?
+You still need a static ``Main`` method to first create the Game object.  
+You could prompt the user for the value for ``big`` to send to the constructor.  
+Once you have an object, you can call *instance method* ``Play``.  
+What about parameters? What needs to change?
+
+There is also a video for this section that follows all the way through the steps.
+A possible final result is in :repsrc:`instance_version/game.cs`.
 
 .. _animal-lab:
 
@@ -118,12 +158,12 @@ files as discussed below.
 	
 	- An Animal can ``Excrete`` (removing and printing what was *first* in the gut List). 
 	  Recall the method ``RemoveAt`` in :ref:`listsyntax`.  Print "" if the ``gut``
-	  was already empty.  Following the
+	  *was already empty*.  Following the
 	  Froggy example above, Froggy could ``Excrete``, and "worm" would be printed.
 	  Then its ``gut`` would contain only "fly". 
 	  
 	- A ``ToString`` method: 
-	  Remember the ``override`` keyword.  For example, it would return the
+	  Remember the ``override`` keyword.  For example, make it return the
 	  string for Froggy: 
 	  
 		 "Animal: Froggy"

@@ -3,8 +3,8 @@
    
 .. _class:
 
-A First Class Example: Rational
-================================
+A First Example of Class Instances: Rational 
+============================================
 
 Making a Datatype
 --------------------

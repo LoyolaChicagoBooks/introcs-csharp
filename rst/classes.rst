@@ -2,8 +2,8 @@
 
 .. _Classes:
 
-Classes
-######################
+Classes and Object-Oriented Programming
+########################################
 
 .. toctree::
    :maxdepth: 3
