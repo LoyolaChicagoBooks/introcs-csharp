@@ -56,11 +56,11 @@ Converting A Static Game To A Game Instance
 ----------------------------------------------
 
 For a comparison of procedural and object-oriented coding,
-consider converting :ref:`lab-number-game` so that a Game
-is an object, an instance of the Game class.
+consider converting :ref:`lab-number-game` so that a GuessGame
+is an object, an instance of the GuessGame class.
 
 While our last example, Rational, is in fact a very practical 
-use of object-oriented programming, Game is somewhat more artificial.  
+use of object-oriented programming, GuessGame is somewhat more artificial.  
 We create it hoping that highlighting the differences between procedural 
 and object-oriented presentation is informative.
 Here is a procedural version, example file 
@@ -81,14 +81,14 @@ A simple static function works fine each time.  *Do not get fancy for nothing*.
 
 What state would a game hold?  We might set it up so the user
 chooses the size of the range of choices just once, and remember it 
-for possibly multiple plays of the Game.  The variable was
+for possibly multiple plays of the GuessGame.  The variable was
 ``big`` before, we can keep the name.  
-If we are going to remember it inside our Game instance, 
+If we are going to remember it inside our GuessGame instance, 
 then ``big`` needs to become an instance variable, and it will be something
 we can set in a constructor.
 
-What actions/methods will this object have?  Only one - playing a Game.
-The Game could be played multiple times, and that action, play, 
+What actions/methods will this object have?  Only one - playing a GuessGame.
+The GuessGame could be played multiple times, and that action, play, 
 makes sense as a method, Play, which will look a lot like the current 
 static function. 
 
@@ -113,11 +113,11 @@ An instance variable lingers on, leaving extra places to make errors.
 
 This introductory discussion could get you going, making a transformation.  
 Go ahead and make the changes as far as you can: 
-create project Game inside the current solution.
-Have a class Game for the Game instance, with instance variable ``big`` and method
-``Play``.
+create project GuessGame inside the current solution.
+Have a class GuessGame for the GuessGame instance, 
+with instance variable ``big`` and method ``Play``.
 
-You still need a static ``Main`` method to first create the Game object.  
+You still need a static ``Main`` method to first create the GuessGame object.  
 You could prompt the user for the value for ``big`` to send to the constructor.  
 Once you have an object, you can call *instance method* ``Play``.  
 What about parameters? What needs to change?
@@ -134,19 +134,19 @@ Animal Class Lab
 Complete a simple (silly) class, with constructor and methods,
 including a ``ToString`` method, and a separate testing class.
 
-Copy the folder :repsrc:`animal_lab_stub` to a folder of yours, and modify the
-files as discussed below.
+Make an animal_lab project in your solution, and copy in the files from the example
+project :repsrc:`animal_lab_stub`.  Then modify the two files as discussed below.
 
 #. Complete the simple class Animal in your copy of the file 
    :repsrc:`animal.cs <animal_lab_stub/animal.cs>`.  
    The bullets below
-   name and describe the methods you need to write, after the constructor:
+   name and describe the instance variables, constructor, and methods you need to write:
 
 	- An Animal has a ``name`` and a ``gut``.  
 	  In our version the ``gut`` is a List of strings 
 	  describing the contents, in the order eaten.  
 	  A newly created Animal gets a ``name`` from a parameter
-	  passed to the constructor, while the ``gut`` starts off *empty*.
+	  passed to the constructor, while the ``gut`` always starts off *empty*.
 	
 	- An Animal has a ``Greet`` method, so an animal "Froggy" would say (that is, print) 
 		
@@ -163,8 +163,8 @@ files as discussed below.
 	  Then its ``gut`` would contain only "fly". 
 	  
 	- A ``ToString`` method: 
-	  Remember the ``override`` keyword.  For example, make it return the
-	  string for Froggy: 
+	  Remember the ``override`` keyword.  Make it return a string in the format
+	  shown below for Froggy, including the Animal's name: 
 	  
 		 "Animal: Froggy"
 		 

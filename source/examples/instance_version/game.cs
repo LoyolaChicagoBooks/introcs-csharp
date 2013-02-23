@@ -2,7 +2,7 @@ using System;
 
 namespace IntroCS
 {                           
-   public class Game  //OOP version of Game from static_version
+   public class GuessGame  //OOP version of Game from static_version
    {
       private static Random r = new Random();
       private int big;  // moved to instance variable
@@ -10,11 +10,11 @@ namespace IntroCS
       public static void Main()
       {
          int bound = UI.PromptInt("Enter a secret number bound: ");
-         Game game = new Game(bound);  // need Game object
+         GuessGame game = new GuessGame(bound);  // need Game object
          game.Play();   // call no-parameter instance method on game
       }
 
-      public Game(int big)
+      public GuessGame(int big)
       {
          this.big = big; // need this. to access same-named instance variable
       }
@@ -29,8 +29,7 @@ namespace IntroCS
             if (guess < secret) {
                Console.WriteLine("Too small!");
             } else {
-               Console.WriteLine("Too big!");
-               
+               Console.WriteLine("Too big!");            
             }
             guess = UI.PromptInt("Next guess: ");
             guesses++;
