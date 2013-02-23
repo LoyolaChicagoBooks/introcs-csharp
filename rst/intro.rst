@@ -30,7 +30,7 @@ Here are some important web links:
     - streamed, including at full size (though generally after an initial delay)
     - downloaded individually 
     - the whole gigabyte folder can be downloaded at once to play later on your machine.  
-      (This is a choice on the page under Folder Options.)
+      (This is a choice on the menu under the page's Folder Options.)
       
     There is a mixture of new high-def videos and older
     lower resolution
