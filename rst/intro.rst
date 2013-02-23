@@ -5,38 +5,65 @@ This book is designed for Comp 170 at Loyola University, Chicago.
 The materials are available to all on the web.
 Here are some important web links:
 
-*   http://introcs.cs.luc.edu is the online text version for your web browser.
+.. index:: book examples download
+   examples download
+   source download, source.zip
 
-*   The 
-    `course example file, source.zip <http://introcs.cs.luc.edu/book/latest/download/default/source.zip>`_
+*   `The course example file, source.zip <http://introcs.cs.luc.edu/book/latest/download/default/source.zip>`_
     is the *essential resource* to download and unzip onto your machine.
     Computer programs are designed to run on a computer and solve problems.  
     Though the initial problems will be tiny and often silly, 
     they will serve as learning tools to prepare for substantive problems.
     
-*   https://www.youtube.com/playlist?list=PLc5TVkj91XZhxRSJHsDoJzX5K1XKBAFLH
-    is the growing YouTube playlist of videos based on book sections.   The numbers
-    at the beginning of the titles are chapter and section numbers from the text.
-    Older videos in an 800x600 pixel size that does not play well with YouTube are
-    in box.com at https://luc.box.com/s/ggx0n1a0ijf8ctikxjo4/1/611829684.  The box.com 
-    videos may either be streamed, including at full size, or they can be downloaded.
-    The sequences on YouTube and Box
-    interleave, using the same numbering system.
+*   http://introcs.cs.luc.edu is an online text version for your web browser.  
+    See also :ref:`alt-formats`.
+    Except on very geometrically oriented topics, 
+    *text-oriented learners may be happiest just reading the book*.  
 
-Except on very geometrically oriented topics, text-oriented learners may be 
-happiest just reading the book.  For those who learn best with
-spoken words combined with written words, the videos should be a good
-start.  Even if you use a video for a section, you are encouraged to review
-the written text afterward.  
-Then be aware of the written version for quick reference.
-The written text may include extra details and exercises, and it
-will have the latest revisions.     
+*   https://luc.box.com/s/ggx0n1a0ijf8ctikxjo4/1/611829684 is a box.com
+    folder containing all the videos.  
+    The numbers
+    at the beginning of the titles are chapter and section numbers from the text.
+    The listing in box.com takes up several pages.
+    These box.com videos may be 
+    
+    - streamed, including at full size (though generally after an initial delay)
+    - downloaded individually 
+    - the whole gigabyte folder can be downloaded at once to play later on your machine.  
+      (This is a choice on the page under Folder Options.)
+      
+    There is a mixture of new high-def videos and older
+    lower resolution
+    800x600 pixel videos.  See 
+    `00README.html <https://luc.box.com/files/0/f/611829684/1/f_6306832603>`_
+    for a description of the differences
+    between the old videos and the latest update of the online book.
+    
+    Box does not let you stream videos automatically in a *playlist* sequence.
+    Most of the videos for the beginning of the book are created more recently in
+    high-definition, in a form that YouTube handles in both full or lower resolution in
+    the *YouTube playlist*
+    https://www.youtube.com/playlist?list=PLc5TVkj91XZhxRSJHsDoJzX5K1XKBAFLH.
+    The older videos' size does not play well on YouTube, so 
+    *only the newer videos are in the playlist*.  
+    This is a good place to play through at least *the first five chapters of the book*,
+    plus some *isolated* later sections' videos. 
+    *YouTube does not supply a direct way to download and save videos*, 
+    so use the Box folder for that.
+    
+    For those who learn best with
+    spoken words combined with written words, the videos should be a good
+    start.  Even if you use a video for a section, you are encouraged to 
+    *review the written text afterward*.  
+    Then be aware of the written version for quick reference.
+    The written text may include extra details and exercises, and it
+    will have the latest revisions.     
 
 Her are further links that may be useful in our repository:
 
 *   http://bitbucket.org/gkthiruvathukal/introcs-csharp/
     is the home page for the repository of all the sources for the book.
-    To read this book, you do not need to go to that URL, but if you do, the home page
+    To read this book, you do *not* need to go to that URL, but if you do, the home page
     gives you an idea of what *updates have been made recently* to the book or 
     accompanying examples. Since improvements are made on an ongoing basis, 
     the notes about recent changes may be useful to you.
@@ -51,13 +78,19 @@ Her are further links that may be useful in our repository:
     of the source code files.  
     You can quickly browse and view individual files in the examples folder.
     Example file links throughout this text refer to these repository files.
+
+
+.. index:: book alternate formats
+
+.. _alt-formats:
     
-Alternate Notes Formats
+Alternate Book Formats
 -------------------------------------------   
 
-You may use any of the C# Notes formats:
+You may use any of the **Introduction to Computer Science with C# and Mono** formats:
 
-- `Web pages online <http://introcs.cs.luc.edu/book/latest/html/default/>`_ (Sphinx default theme) 
+- `Web pages online <http://introcs.cs.luc.edu/book/latest/html/default/>`_ 
+  (Sphinx default theme) 
   or a version with the same content and 
   `a responsive web theme <http://introcs.cs.luc.edu/book/latest/html/bootstrap>`_ 
   (best for mobile devices).
