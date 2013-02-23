@@ -8,7 +8,7 @@
 Classes And Structs
 ======================
 
-
+C# has an alternate syntax to a class: a *struct*. 
 Everything we have said so far about classes such an ``Rational`` applies to
 structs also!  In fact you could change ``class`` into ``struct`` in the heading for
 Rational, and it would become a struct, with no further code changes in any of the
@@ -32,7 +32,8 @@ since it only contains two integers.  Its size is no more than one double.
 
 The behavior of a Rational is the same either way, because it is immutable.  If we
 allowed mutating methods, then a class version and a struct version would not behave
-the same way, due to the fact the reference types can have aliases, and value types cannot.
+the same way, due to the fact the reference types can have aliases, 
+and value types cannot.
 
 There are some more complicated situations where there are further distinctions between
 classes and structs, but we shall not concern ourselves 
