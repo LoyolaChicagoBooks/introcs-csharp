@@ -59,6 +59,22 @@ Here are some important web links:
     The written text may include extra details and exercises, and it
     will have the latest revisions.     
 
+In various formats, be aware of these helpful features:
+    
+    * We have picked out particularly important words, phrases, and symbols,
+      and put them in our 
+      `index <genindex.html>`_, which is accessible from each web page.
+    * In a web version on our website, you can use the 
+      `Search option <search.html?q=&check_keywords=yes&area=default>`_ to
+      look for words, in general.  The location of the search link varies depending on
+      theme being used, and can be hidden.  This does *not* work on a downloaded 
+      local html copy.
+    * We start with a brief table of contents for the whole book.  
+      *In the web versions*
+      you can get the most detailed table of contents for a single chapter by 
+      clicking on a chapter title in the main table of contents or the current
+      chapter title in the top banner on a regular content page.
+
 Her are further links that may be useful in our repository:
 
 *   http://bitbucket.org/gkthiruvathukal/introcs-csharp/
