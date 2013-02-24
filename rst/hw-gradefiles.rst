@@ -236,7 +236,7 @@ Hints
       :end-before: chunk
 
    You may assume the data is good and the -1 is never returned, 
-   but the compiler needs this line.
+   but the compiler requires this last line.
    
 #. You cannot have one fixed formula to calculate the final weighted grade,
    because you do not know the number of categories when writing the code. 
