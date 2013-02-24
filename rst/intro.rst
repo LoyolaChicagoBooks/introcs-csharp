@@ -27,8 +27,8 @@ Here are some important web links:
     The listing in box.com takes up several pages.
     These box.com videos may be 
     
-    - streamed, including at full size (though generally after an initial delay)
-    - downloaded individually 
+    - streamed, including at full size (though generally after an initial delay),
+    - downloaded individually or 
     - the whole gigabyte folder can be downloaded at once to play later on your machine.  
       (This is a choice on the menu under the page's Folder Options.)
       
