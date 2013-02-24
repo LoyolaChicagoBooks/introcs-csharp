@@ -82,6 +82,10 @@ Requirements
    abbreviation as part of their name.  We will use comp170 in the examples below,
    but it could be something else.  The folder also contains sample data files
    for a course abbreviation comp150.
+   
+   Note that these data files are not in the MonoDevelop execution directory, but
+   in the project directory, so the FIO library class is useful to provide
+   flexibility in reading the data files.
 
 #. There are two master files for any course. 
    One is "categories\_" + the course abbreviation
@@ -172,6 +176,9 @@ Requirements
    
         Doe, John 78.9 C+
         Hernandez, Maria 88.2 B+
+    
+    Write this file to the same directory where you found the input data.  Again
+    the FIO library class is useful.
    
 #. The rest of the test data for 
    course abbreviations comp170 and all the data for comp150 in the homework directory.   
