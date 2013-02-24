@@ -123,7 +123,7 @@ Once you have an object, you can call *instance method* ``Play``.
 What about parameters? What needs to change?
 
 There is also a video for this section that follows all the way through the steps.
-A possible final result is in :repsrc:`instance_version/game.cs`.
+A possible final result is in :repsrc:`instance_version/guess_game.cs`.
 
 .. _animal-lab:
 

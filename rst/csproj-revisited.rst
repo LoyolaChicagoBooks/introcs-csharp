@@ -170,6 +170,7 @@ writing classes implementing and using an interface
    type. (Test adding one at a time.)
    
    One such game to create with little more work would be a variation on
-   instance based Guessing Game discussed earlier.  You need to make slight
-   modifications.  You could make Play return the opposite of the number of guesses, 
+   instance based Guessing Game :repsrc:`instance_version/guess_game.cs`.  
+   You need to make slight modifications.  
+   You could make Play return the opposite of the number of guesses, 
    so more guesses does generate a worse score.
