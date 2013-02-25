@@ -79,11 +79,6 @@ see how the functions from ``FileUtil`` are actually used:  The
 ``ReadParagraph``, ``GetParagraphs``, and ``GetDictionary`` are used to provide
 the text data needed. 
 
-The ``FileUtil`` class already has one completed method, ``GetDataReader``, 
-This function is used
-in ``Main`` to read the two data files.  It exits the program gracefully with
-an error message if the file is missing.
-
 ReadParagraph
 ~~~~~~~~~~~~~~
 
