@@ -182,7 +182,10 @@ Extra credit
 ~~~~~~~~~~~~~~~~~~~~~~
     
 #.  (20%) Modify ReadParagragh so it *also* works if the paragraph ends 
-    at the end of the file, with no blank line after it.
+    at the end of the file, with no blank line after it, or if the line after
+    the paragraph only has whitespace characters.  Both changes are good to
+    bullet-proof the code, since
+    the added or removed whitespace is hard to see in print.
     
 #.  (20%) The crude word classification scheme would recognize "crash", but not
     "crashed" or "crashes".  You could make whole file entries
