@@ -36,11 +36,10 @@ Complete the first line in each file to show your names. At the top of
 the Book class include any comments about help in *all* of the classes.
 
 Create methods one at a time, and test them.  Complete :file:`book.cs` first,
-preferably testing along the way.  Then add methods to
+preferably testing along the way.  (You can write an initial version of the
+testing program, so it does not depend on BookList.)  Then add methods to
 :file:`book_list.cs`, and concurrently add and run tests in :file:`test_book_list.cs`.
-Though you are only required to have
-a class to test the final result, you are strongly encouraged to flesh out
-:file:`test_book.cs`, so it does not depend on BookList.  Then when you get to 
+Testing the Book class first means that when you get to 
 BookList you can have more confidence that any problems you have are from the latest
 part you wrote, not parts written earlier in the class Book.
 
@@ -139,7 +138,7 @@ It should have a ``Main`` program that creates a BookList, adds some books
 to it (more than in the skeleton!), and convincingly displays tests of
 each of BookList's methods that exercise all paths through your code.
 Check for one-off errors in PrintBookYears. With all the methods that
-print something, the results are easy to see. Do print a label, as in
+print something, the results are easy to see. *Do print a label*, as in
 the skeleton, before printing output from each method test, so that the
 user of the program can see the correctness of the test 
 *without any knowledge of the source code*!
