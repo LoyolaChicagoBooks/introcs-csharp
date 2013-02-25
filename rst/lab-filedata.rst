@@ -178,31 +178,34 @@ sequence of instructions to handle the data in the exact same sequence.
 
 Show the program output to a TA (after the extra credit if you like).
 
-Extra credit (1 point)
+Extra credit 
 ~~~~~~~~~~~~~~~~~~~~~~
+    
+#.  (20%) Modify ReadParagragh so it *also* works if the paragraph ends 
+    at the end of the file, with no blank line after it.
+    
+#.  (20%) The crude word classification scheme would recognize "crash", but not
+    "crashed" or "crashes".  You could make whole file entries
+    for each key variation, repeating the value paragraph.  
+    A concise approach is to use a data file
+    like :repsrc:`help_not_responses2.txt <dict_lab_stub/help_not_responses2.txt>`.  
+    Here are the first few lines:
 
-The crude word classification scheme would recognize "crash", but not
-"crashed" or "crashes".  You could make whole file entries
-for each key variation, repeating the value paragraph.  
-A concise approach is to use a data file
-like :repsrc:`help_not_responses2.txt <dict_lab_stub/help_not_responses2.txt>`.  
-Here are the first few lines:
+    .. literalinclude:: ../source/examples/dict_lab_stub/help_not_responses2.txt
+       :language: none
+       :lines: 1-15
 
-.. literalinclude:: ../source/examples/dict_lab_stub/help_not_responses2.txt
-   :language: none
-   :lines: 1-15
+    The line that used to have one key now may have several blank-separated keys.
 
-The line that used to have one key now may have several blank-separated keys.
+    Here is how the documentation for ``GetDictionary`` should be changed:
 
-Here is how the documentation for ``GetDictionary`` should be changed:
+    .. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
+       :start-after: Extra credit documentation
+       :end-before: }
 
-.. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
-   :start-after: Extra credit documentation
-   :end-before: }
+    Modify the lab project to use this file effectively:  Find
+    "help_not_responses.txt" on line 22 in ``Main``.  Change it to
+    "help_not_responses2.txt" (inserting '2'), so ``Main`` reads it.
 
-Modify the lab project to use this file effectively:  Find
-"help_not_responses.txt" on line 22 in ``Main``.  Change it to
-"help_not_responses2.txt" (inserting '2'), so ``Main`` reads it.
-
-In your test of the program, be sure to use several of the keys that apply to the
-same response, and show to your TA.
+    In your test of the program, be sure to use several of the keys that apply to the
+    same response, and show to your TA.
