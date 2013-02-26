@@ -23,7 +23,7 @@ This is a known bug to do with the Windows
 operating system.  Please report it to Microsoft. 
 There is nothing we can do about this.
 
-macintosh 
+macintosh
 This is a known bug to do with the Mac 
 operating system.  Please report it to Apple. 
 There is nothing we can do about this.
