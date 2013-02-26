@@ -10,7 +10,7 @@ namespace IntroCS
       /// from reader. All the newlines at the ends of these lines are included.
       /// The function ends after reading (but not including) an empty line.
       public static string ReadParagraph(StreamReader reader)
-      {                                  // end heading chunk
+      {                                       // end heading chunk
 
          // REPLACE the next line with your lines of code
          return "You have not coded ReadParagraph yet!\n";
@@ -56,7 +56,7 @@ namespace IntroCS
       /// paragraph value that is terminated by an empty line.  Each
       /// key on the line is mapped to the same paragraph that follows.
       /// The file must end with two newlines in sequence:  one at the end
-      /// of the last nonempty line followed by one for the empty line.///
+      /// of the last nonempty line followed by one for the empty line.
    }
 }
 
