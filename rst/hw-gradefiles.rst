@@ -148,7 +148,8 @@ Requirements
 
    - category letter is the first letter of the category.  With the categories
      given in the example above, they would be E, L, H, P, and C.
-   - item is a number within that category (0, 1, 2, ...)
+   - item is a number within that category (1, 2, 3, ...) - 
+     only used in part of the extra credit.
    - points earned is a real number
    - the lines are in no special order.
    
