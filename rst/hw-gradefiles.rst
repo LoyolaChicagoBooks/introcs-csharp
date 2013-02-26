@@ -30,7 +30,6 @@ with your own solutions. As we inch closer to the semester project,
 you're going to want to use your imagination to create a good solution
 to a problem.
 
-
 Brief Problem Statement
 -----------------------
 
@@ -178,8 +177,8 @@ Requirements
         Doe, John 78.9 C+
         Hernandez, Maria 88.2 B+
     
-    Write this file to the same directory where you found the input data.  Again
-    the :ref:`fio` is useful.
+   Write this file to the same directory where you found the input data.  Again
+   the :ref:`fio` is useful.
    
 #. The rest of the test data for 
    course abbreviations comp170 and all the data for comp150 in the homework directory.   
@@ -203,7 +202,7 @@ Hints
    of the Console. The parameter syntax will be the same. 
 
 #. For each file line you'll want to use the :ref:`Split`, 
-   and then the ``Trim`` 
+   and then the ``Trim``
    method from :ref:`more-string-methods` on each part to
    remove surrounding spaces. Then 
    use indexing to get the field of interest. (More below.)
