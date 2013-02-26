@@ -43,14 +43,14 @@
     <None Include="categories_comp170.txt" />
     <None Include="comp150_summary_solution.txt" />
     <None Include="comp170_summary_solution.txt" />
-    <None Include="P00000001Comp170.data" />
-    <None Include="P11111111Comp170.data" />
-    <None Include="P12312312Comp150.data" />
-    <None Include="P12345678Comp170.data" />
-    <None Include="P23452345Comp170.data" />
-    <None Include="P33333333Comp150.data" />
     <None Include="students_comp150.txt" />
     <None Include="students_comp170.txt" />
+    <None Include="P00000001comp170.data" />
+    <None Include="P11111111comp170.data" />
+    <None Include="P12312312comp150.data" />
+    <None Include="P12345678comp170.data" />
+    <None Include="P23452345comp170.data" />
+    <None Include="P33333333comp150.data" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\fio\fio.csproj">
