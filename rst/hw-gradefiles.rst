@@ -289,7 +289,7 @@ any combination that does not include both of the last two options about missing
    See :ref:`Left Justification <left-justification>`. **[2]**
 #. Change the scheme for calculating letter grades to use a function that calculates
    the proper grade, where the only ``if`` statement is one simple one
-   inside a *loop*.  The ``if`` statement will have a return statement in its body, 
+   inside a *loop*.  The ``if`` statement will have a ``return`` statement in its body, 
    and no ``else``.  The loop will need to use
    corresponding arrays of data for grade cutoffs and grade names. **[3]**
 #. For any student who has missed passing in all the required items, 
@@ -327,6 +327,5 @@ any combination that does not include both of the last two options about missing
        Doe, John 78.9 C+ Missing: L: 1, 4 H: 3
        
    The most straightforward way to do this requires something 
-   like a 2-dimensional array. 
-   We may get to 2-dimensional arrays in time for the due date, 
-   or you may need to read ahead if you want to use this approach. **[5]**
+   like an array of arrays, array of lists or array of sets. 
+   You may need to read ahead if you want to use one of these approaches. **[5]**
