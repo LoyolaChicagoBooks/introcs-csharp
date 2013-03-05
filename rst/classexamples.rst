@@ -47,6 +47,9 @@ we choose to have a *setter*, like ``SetN``, changing the value of the instance 
    :start-after: SetN chunk
    :end-before: chunk
 
+This is another place you need to be careful *not* to redeclare the instance variable,
+as discussed in :ref:`local-variables-hiding-instance-variables`.
+
 Since an ``Example`` object is mutable, we can play with aliases,  as in the
 last few lines of ``Main``, after ``e`` becomes an alias for ``e2``. We change
 an object under one name, and it affect the alias the same way,

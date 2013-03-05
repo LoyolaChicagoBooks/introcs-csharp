@@ -604,3 +604,32 @@ Visually following such paths will be even more important later, when we constru
 more complex types of objects, and you need to follow
 a path through *several* references in sequence.
 
+.. _local-variables-hiding-instance-variables:
+
+Local Variables Hiding Instance Variables
+------------------------------------------
+
+A common error is for students to try to declare the instance variables twice,
+once in the regular instance variable declarations, and then again in a 
+constructor, like::
+
+      public Rational(int numerator, int denominator)
+      {
+         int num = numerator;       // LOGICAL ERROR!
+         int denom = denominator;   // LOGICAL ERROR!
+      }
+
+This is deadly.  it is worse than redeclaring a local variable, which at least will 
+trigger a compiler error.
+
+.. index:: warning; redeclaring instance variables
+
+..  warning::
+
+    Instance variable *only* get declared outside of all
+    functions and constructors.  Same-name 
+    local variable declarations hide the
+    instance variables, but *compile just fine*.  The local variables disappear
+    after the constructor ends, leaving the instance variables 
+    *without* your desired initialization. Instead the hidden instance variables 
+    just get the default initialization, 0 for a number.
