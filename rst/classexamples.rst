@@ -47,8 +47,18 @@ we choose to have a *setter*, like ``SetN``, changing the value of the instance 
    :start-after: SetN chunk
    :end-before: chunk
 
-This is another place you need to be careful *not* to redeclare the instance variable,
-as discussed in :ref:`local-variables-hiding-instance-variables`.
+Here, while we are declaring a local variable, the formal parameter, 
+with the same name as the instance variable, we are careful to use ``this.``
+to disambiguate the instance variable.  
+*The following variation is wrong and is an unfortunately easy slip*::
+
+   public void SetN(int newN) // NOT a "setter" method
+   {
+      int n = newN; // LOGICAL ERROR! NO LASTING EFFECT
+   }
+
+This is the same error discussed for a constructor
+in :ref:`local-variables-hiding-instance-variables`.  
 
 Since an ``Example`` object is mutable, we can play with aliases,  as in the
 last few lines of ``Main``, after ``e`` becomes an alias for ``e2``. We change
