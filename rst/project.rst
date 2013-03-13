@@ -117,20 +117,25 @@ Roles
    though what pair from the team is working together at different times
    may be fluid. The lead programmer might be involved in pairs more
    often than others, but be sure the other coders get to drive often.
-#. Librarian/version coordinator: You are strongly encouraged to
-   use something like Dropbox or the more capable Bitbucket and Mercurial.  
+#. Librarian/version coordinator: The default should be for you to have a
+   box.com folder shared with your whole team and me and your TA, with all
+   as editors.  Your folder should have the name of your team.  
+   You should always have a folder that contains the latest working version 
+   of the project.  You should also keep old versions, for instance copied into
+   numbered version folders.  
+   Box does not handle successive versions automatically.  
+   You can choose
+   to use the more capable professional combination of 
+   Bitbucket and :ref:`hg-and-teamwork`.  
    The latter will have a learning curve, and in that case this person 
    should be the best informed on Mercurial, and help
-   the other team members.  Only commit working code.
-   Comment out incomplete additions that you want to show to everyone,
-   or comment out the call to a method that compiles but does not yet 
-   function logically.
+   the other team members.  
 #. Report coordinator: Gather the contributions for reports from team
    members and make sure the whole reports get to posted on schedule. 
    Your instructor needs
    a clear idea of the contributions of each member each week. If a team
-   member is not clear on this to the report writer, the report writer
-   needs to be insistent.
+   member is not clear on this to the report writer, 
+   *the report writer needs to be insistent*.
 #. Instruction coordinator: Make sure there are clear written documents
    and help within the program for the user, who you assume is not a
    C# programmer and knows nothing about your program at the start.
@@ -215,7 +220,9 @@ Ideally have one individual
 compiling is to first generate a stub file like we have given you for
 homework, that includes the public interface documentation, 
 headings, and dummy return values
-and compiles but does nothing. You will then provide your team members
+and compiles but does nothing. 
+*Post this under a box folder for the current version number.*
+You will then provide your team members
 with something that tells them what they can use and allows them to
 compile their own part. Then later substitute more functional classes.
 
@@ -226,8 +233,8 @@ clearly use a common method instead. If you copy and then make
 substitutions in the same places, you are likely better off
 with a method with the common parts and with parameters inserted where there
 are differences.  You can make a quick test with a
-couple of copied portions, but then convert to using a method with
-parameters for the substitutions. 
+couple of copied portions, but then 
+*convert to using a method with parameters for the substitutions*. 
 Besides being a waste of effort to define seven methods each
 defining a tool, with just a few strings differing from one method to
 the next, we will require you to rewrite it, with one method with
@@ -240,25 +247,45 @@ If you are making many substitutions
 of static textual data, put the data into a resource file in a variation
 of the Fake Advise Lab. 
 
+You only want to commit working code into the shared current version folder.
+Comment out incomplete additions that you want to show to everyone,
+or comment out the call to a method that compiles but does not yet 
+function logically.  An alternative is to have a separate folder for
+in-process code to share for comment, 
+so you will not try to compile it with the current working version.
+   
 Weekly reports 
 ------------------------------------------------
 
 Reports are due from the report writer each Tuesday.
 
-A sample form to fill out on the computer is in the skeleton project
-:file:`Weekly-Report.rtf`. Table cells expand. It is easy
-to copy the table from this week to last week and edit it to show 
-how much your plans matched reality.
-
-#. Only one team member needs to do the report.
+#. Inside your team's box folder have a subfolder called WeeklyReports.  
+   A sample stub form to fill out on the computer is in 
+   `Weekly-Report.rtf <http://anh.cs.luc.edu/170/examples/Weekly-Report.rtf>`_.
+   Make the name of each weekly 
+   report document be the date it was due, like Mar26.rtf.
+   It is easy
+   to copy the table from this week to last week and edit it to show 
+   how much your plans matched reality.
+   You should post a version for your team to look at first.  Please distinguish
+   drafts from the final version for me to look at.   You might have a separate
+   folder Drafts, and move the report into the WeeklyReport folder when 
+   it is final. Box easily allows moving files, but not renaming them.
+#. Only one report should be generated each week, with the person in the role of
+   report writer making sure a complete version is produced and placed in the
+   WeeklyReport folder.
 #. Under plans for the next week, include concrete tasks planned to be
-   completed, and who will do them, with a brief, but informative
-   explanation. These do not only include coding: they can be any of the
+   completed, and who will do them, with an informative
+   explanation.  The content and depth of the person's work should be clear. 
+   If you can state that clearly and be brief, great.
+   The tasks do not only include coding: they can be any of the
    parts listed above, and for any particular part of the project, where
-   that makes sense.
+   that makes sense.  *If individuals cannot state clearly what they are working on,* 
+   *then the team leader and lead coder have a significant issue in their leadership*
+   *that needs to be addressed.*
 #. In the review of the last week (after the first week) include the
    last week's plans and what actually happened, task by task,
-   concretely and briefly, but enough to give an idea on the magnitude
+   concretely, with enough detail to give an idea on the magnitude
    of the work. This can include the portion completed and/or changes in
    the plans and their reasons. "Still working on X" is not useful: Who
    was doing what? What methods, doing what, were completed? Which are
@@ -269,8 +296,9 @@ how much your plans matched reality.
 Intermediate deliverables
 -------------------------
 
-These materials should be submitted electronically
-on Thursday April 19.
+These materials should be placed in a subfolder **Intermediate** 
+of your team project folder.
+See the due date in the schedule.
 
 -  Include parts 2-4 listed below under Final Deliverables, but for an
    intermediate version that runs, and does *not* need to have the goal
@@ -278,10 +306,12 @@ on Thursday April 19.
    and description of parameters and return values. 
    If for some reason you do not have all the documentation that you were encouraged
    to write *first*, at least be sure to have and point out significant examples of your
-   clear documentation.  This allows feedback
+   clear documentation of purpose, parameters, and return values.  
+   This allows instructor feedback
    for completing the rest.
--  Include a :file:`projectPlans.rtf` document (a
-   template is in the skeleton project)
+-  Copy the linked stub of 
+   `projectPlans.rtf <http://anh.cs.luc.edu/170/examples/projectPlans.rtf>`_ document.
+   Then complete it:
 
    -  List the project roles again, and who ended up filling them. For
       coding, say who was the person primarily responsible for each
@@ -331,11 +361,9 @@ One submission of the group work is due one hour before the final presentations.
    embedded in the code where they add clarity (not just verbosity). You
    may have a separate overview document.  Include "Overview" in the 
    file name
-#. Overall project and process review in a document named
-   :file:`projectReview.rtf`.  
-   A template is already in the skeleton
-   project directory.
-
+#. Overall project and process review in a document named like the linked stub,
+   `projectReview.rtf <http://anh.cs.luc.edu/170/examples/projectReview.rtf>`_.
+   
    -  The first section should be Changes. So the instructor does not 
       duplicate effort, please give an overview of the changes from the
       intermediate version. What classes are the same? What features
@@ -349,7 +377,7 @@ One submission of the group work is due one hour before the final presentations.
    -  How could we administer this project better? What particularly
       worked about the structure we set up?
 
-#. A 10 minute presentation of your work to the class in final exam
+#. A 10-15 minute presentation of your work to the class in final exam
    period. What would you want to hear about other projects? (Say it
    about yours.) What was the overall idea? What was the overall
    organization? What did you learn that was beyond the regular class
@@ -364,16 +392,19 @@ and check with the whole team to make sure your collection is complete.
 **Your Assessment of Individuals in the Group**:
 
 This is due electronically 10 minutes after the final class presentation period,
-from each team member, *independently*.  
+from each team member, *independently*, turned in a manner specified by your 
+instructor, like other homework assignments.  
 
-Change the name of the file in the skeleton project,
-:file:`Indiv-Mem-Assessment.rtf` to your
+Change the name of the linked stub file
+`Indiv-Mem-Assessment.rtf <http://anh.cs.luc.edu/170/examples/Indiv-Mem-Assessment.rtf>`_
+to your
 teamAbbreviation-yourName.rtf. 
 You may want to tweak it after the
 group presentation, but have it essentially done beforehand. 
 
 Writing this is NOT a part of your
 collective group deliberations. It is individual in two senses: both
-in being about individual team members and in being the view of one
+in being about individual team members and in being the view of *one*
 individual, you. For this document only, everyone should be writing
-separately, privately, and independently from individual experience.
+separately, privately, and independently from individual experience.  
+If you lack data on some point, say so, rather than using what others are saying.

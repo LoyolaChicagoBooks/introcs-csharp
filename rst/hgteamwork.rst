@@ -1,4 +1,7 @@
+.. index:: Mercurial
+   version control
 
+.. _hg-and-teamwork:
 
 Mercurial and Teamwork
 =========================
