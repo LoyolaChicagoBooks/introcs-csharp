@@ -650,7 +650,7 @@ instance variable ``r``::
         {
             int n = r.Next(0, 10);  // legal in text *just* to here
             //...
-            int r = a % b;   // declaration makes *earlier* line wrong
+            int r = a % b; // r declaration makes *earlier* line wrong
             //...
         }
 
