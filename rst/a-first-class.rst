@@ -636,11 +636,15 @@ trigger a compiler error.
     
 Generally when you get a compiler error, the error is at or *before* the location the
 error is referenced, but with local variables covering instance variables, 
-the real cause can come later in the text of the method::
+the real cause can come later in the text of the method.  Below, when you first
+refer to ``r`` in ``Badnames``, it appears to be correctly referring to the
+instance variable ``r``::
 
     class ForwardError
     {
         private Random r = new Random();
+        
+        // ...
         
         void BadNames(int a, int b)
         {
@@ -649,12 +653,12 @@ the real cause can come later in the text of the method::
             int r = a % b;   // declaration makes *earlier* line wrong
             //...
         }
-    }
+
     
 The compiler scans through *all* of ``BadNames``, and sees the ``r`` declared locally
 in its scope.
 The error may be marked on the earlier line, where the compiler then assumes 
-``r`` is a the local ``int`` variable, which therefore is not an object with a ``Next``
+``r`` is the local ``int`` variable, which therefore is not an object with a ``Next``
 method.
 
 This is based on a real student example.  A second issue that it points to is using too
