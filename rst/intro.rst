@@ -99,32 +99,49 @@ Her are further links that may be useful in our repository:
 
 .. _alt-formats:
     
-Alternate Book Formats
+Downloading Text and Source Code
 -------------------------------------------   
 
-You may use any of the **Introduction to Computer Science with C# and Mono** formats:
+introcs.cs.luc.edu (Primary Site)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Web pages online <http://introcs.cs.luc.edu/book/latest/html/default/>`_ 
-  (Sphinx default theme) 
-  or a version with the same content and 
-  `a responsive web theme <http://introcs.cs.luc.edu/book/latest/html/bootstrap>`_ 
-  (best for mobile devices).
+The following table provides links for alternate web viewing, printing, or e-reading.
+These are provided at the master site, http://introcs.cs.luc.edu.
 
-- Download a
-  `zip file <http://introcs.cs.luc.edu/book/latest/download/default/html.zip>`_
-  of the html web pages to unzip and browse *locally*.  
-  Start your browser on the page index.html.	
-  Or if you prefer, download
-  `the version with a responsive theme <http://introcs.cs.luc.edu/book/latest/download/bootstrap/html.zip>`_.
-  Unzip, open the index file, and all the pages are perfectly set up and linked.  
-  However the *search capacity does not work* on a local copy, unless you have 
-  a server going on your local machine....   
-  In any case, you can still find things through the table of contents and the index links.
-  
-- `PDF file <http://introcs.cs.luc.edu/book/latest/download/default/comp170.pdf>`_ 
-  in fixed paged format for printing
-  and for somewhat prettier computer viewing if your screen is wide enough.
+.. csv-table:: Course Text Reading/Download Options
+    :header: "Format", "URL"
+    :widths: 15, 30
 
-- `eBook file <http://introcs.cs.luc.edu/book/latest/download/default/comp170.epub>`_ 
-  for offline reading on smartphones and tablets
-  (or desktop computers running a soft reader application).
+    "Web Pages/Default Theme", "http://introcs.cs.luc.edu/book/latest/html/default/"
+    "Web Pages/Responsive Theme", "http://introcs.cs.luc.edu/book/latest/html/bootstrap"
+    "Zip archive", "http://introcs.cs.luc.edu/book/latest/download/default/html.zip"
+    "PDF", "http://introcs.cs.luc.edu/book/latest/download/default/comp170.pdf"
+    "ePub Experimental", "http://introcs.cs.luc.edu/book/latest/download/default/comp170.epub"
+
+.. csv-table:: Source Code Reading/Download Options
+    :header: "Format", "URL"
+    :widths: 15, 30
+
+    "Source Code/ZIP", "http://introcs.cs.luc.edu/book/latest/download/default/source.zip"
+    "Bitbucket", "http://bitbucket.org/gkthiruvathukal/introcs-csharp/"
+
+introcs.courses.thiruvathukal.com (Backup Site)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table:: Available Formats (Primary Site)
+    :header: "Format", "URL"
+    :widths: 15, 30
+
+    "Web Pages/Default Theme", "http://introcs.courses.thiruvathukal.com/book/latest/html/default/"
+    "Web Pages/Responsive Theme", "http://introcs.courses.thiruvathukal.com/book/latest/html/bootstrap"
+    "Zip archive", "http://introcs.courses.thiruvathukal.com/book/latest/download/default/html.zip"
+    "PDF", "http://introcs.courses.thiruvathukal.com/book/latest/download/default/comp170.pdf"
+    "ePub Experimental", "http://introcs.courses.thiruvathukal.com/book/latest/download/default/comp170.epub"
+
+.. csv-table:: Source Code Reading/Download Options
+    :header: "Format", "URL"
+    :widths: 15, 30
+
+    "Bitbucket", "http://bitbucket.org/gkthiruvathukal/introcs-csharp/"
+    "Bitbucket as ZIP", "https://bitbucket.org/gkthiruvathukal/introcs-csharp/get/tip.zip"
+    "Bitbucket at .tar.gz", "https://bitbucket.org/gkthiruvathukal/introcs-csharp/get/tip.tar.gz"
