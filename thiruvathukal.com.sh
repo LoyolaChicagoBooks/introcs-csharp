@@ -8,3 +8,4 @@ make CONFIG=default epub
 make CONFIG=default latexpdf
 popd
 rsync -avz $(pwd)/build/ thiruvathukal.com:/home/gkt/sites/introcs/
+
