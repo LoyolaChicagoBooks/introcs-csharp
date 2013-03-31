@@ -102,7 +102,7 @@ Her are further links that may be useful in our repository:
 Downloading Text and Source Code
 -------------------------------------------   
 
-introcs.cs.luc.edu (Primary Site)
+Primary Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following table provides links for alternate web viewing, printing, or e-reading.
@@ -125,18 +125,19 @@ These are provided at the master site, http://introcs.cs.luc.edu.
     "Source Code/ZIP", "http://introcs.cs.luc.edu/book/latest/download/default/source.zip"
     "Bitbucket", "http://bitbucket.org/gkthiruvathukal/introcs-csharp/"
 
-introcs.courses.thiruvathukal.com (Backup Site)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mirror Site
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This backup site is primarily for emergency use only. In most cases, you should use the
+http://introcs.cs.luc.edu site to view and download course materials.
 
 .. csv-table:: Available Formats (Primary Site)
     :header: "Format", "URL"
     :widths: 15, 30
 
-    "Web Pages/Default Theme", "http://introcs.courses.thiruvathukal.com/book/latest/html/default/"
-    "Web Pages/Responsive Theme", "http://introcs.courses.thiruvathukal.com/book/latest/html/bootstrap"
-    "Zip archive", "http://introcs.courses.thiruvathukal.com/book/latest/download/default/html.zip"
-    "PDF", "http://introcs.courses.thiruvathukal.com/book/latest/download/default/comp170.pdf"
-    "ePub Experimental", "http://introcs.courses.thiruvathukal.com/book/latest/download/default/comp170.epub"
+    "Web Pages", "http://introcs.courses.thiruvathukal.com/html/"
+    "PDF", "http://introcs.courses.thiruvathukal.com/latex/comp170.pdf"
+    "ePub Experimental", "http://introcs.courses.thiruvathukal.com/epub/comp170.epub"
 
 .. csv-table:: Source Code Reading/Download Options
     :header: "Format", "URL"
