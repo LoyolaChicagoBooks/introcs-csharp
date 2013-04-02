@@ -15,3 +15,7 @@ hg update --clean
 ./makeall.introcs default
 ./makeall.introcs bootstrap
 
+pushd /var/www/book/latest
+rm ../mirror.tar.gz
+tar czf ../mirror.tar.gz *
+popd
