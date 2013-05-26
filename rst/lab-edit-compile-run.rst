@@ -1,14 +1,14 @@
-.. index:: MonoDevelop
-   labs; MonoDevelop
+.. index:: Xamarin Studio
+   labs; Xamarin Studio
 
 
 .. _lab-edit-compile-run:
 
-Lab Exercise: Editing, Compiling, and Running with MonoDevelop
-================================================================
+Lab: Editing, Compiling, and Running with Xamarin Studio
+===========================================================================
 
 This first lab is aimed at taking you through the end-to-end process of
-writing and running a basic computer program with the MonoDevelop
+writing and running a basic computer program with the Xamarin Studio
 environment. As with all things in
 life, we will learn in this lab that becoming a programmer requires you
 to learn a number of other things along the way.
@@ -33,11 +33,11 @@ defined as follows:
    up repeating these steps (debugging).
 
 These steps can all be done with different tools.  Many find it simpler to have
-an integrated tool, like MonoDevelop, that does them all in the same place,
+an integrated tool, like Xamarin Studio, that does them all in the same place,
 and automates the steps that do not need human interaction!  
 
 If you are doing this on your own
-machine, make sure you have Mono and MonoDevelop installed as in
+machine, make sure you have Mono and Xamarin Studio installed as in
 :ref:`development-tools`.
 
 Other tools are available, like
@@ -45,8 +45,7 @@ the development environment
 Visual Studio (from Microsoft, only for Windows).
 
 Understanding the lower level tools that accomplish each step is important, but we defer
-a discussion to get you going with monoDevelop.
-
+a discussion to get you going with Xamarin Studio.
 
 Goals
 -----
@@ -62,10 +61,10 @@ each time.
 Steps
 -----
 
-We start by creating a *solution* with a project in it.  The images are from
+We start by creating a *solution* with a *project* in it.  The images are from
 a Mac.  Windows versions should be similar.
 
-#.  Open MonoDevelop, in the appropriate way for an application in your
+#.  Open Xamarin Studio, in the appropriate way for an application in your
     operating system.  It should be in the Start menu for Windows.
     Using Spotlight is quick on a Mac.
 
@@ -74,103 +73,114 @@ a Mac.  Windows versions should be similar.
     Go File -> New -> Solution.  
    
     ..  image:: images/lab-edit/newSolution.png
-     	:alt: MonoDevelop Start Image
+     	:alt: Xamarin Studio Start Image
      	:align: center
 
-#. You get a dialog window to fill out:
+#. You get a dialog window to fill out.  Follow the order below.  
+   Later parts may not be visible until you do the previous parts:
 
    - Select C# in left hand side panel
-   - Select Console Project in right hand side panel
-   - In the bottom field, "Solution name", 
-     enter any name you like:  We recommend **work**.
+   - Select Console Project in the middle panel
+   - In the bottom field, "Solution name" (*not* the top Name field),
+     enter any name you like:  We recommend **work**, which will make
+     sense for all your work for the course.
    - Leave the Location field above it as is or change it if you like.
-   - Above that, Enter **hello** for the name (of the project).
+   - Above that, Enter **hello** in the Name field, for the name of the project.
    - Make sure *Create directory for solution* is checked in the bottom right.
-   - Press the Forward button.
+   - Press the OK button.
    
    ..   image:: images/lab-edit/consoleProjectDialog.png
-     	:alt: MonoDevelop Dialog Image
+     	:alt: Xamarin Studio Dialog Image
      	:align: center
    
-#. At the Project Features form (no image here), just press ok.  
-   We are not using the feature mentioned in that dialog.  
-   
-   You now have created a solution in MonoDevelop, with one project
-   inside it. Later we can add further *projects* to this *solution*. 
+   You now have created a solution in Xamarin Studio, with one project
+   inside it. Later we can add further *projects* to *this solution*. 
 
-#. Look at the MonoDevelop window that appears.  It should have two main sub-windows or 
-   "Pads" as MonoDevelop calls them.  A narrow one on the left is the Solution pad,
+#. Look at the Xamarin Studio window that appears.  It should have two main sub-windows or 
+   "Pads" as Xamarin Studio calls them.  A narrow one on the left is the Solution Pad,
    containing a hierarchical view of the solution.  You should see your solution name
-   at the top and hello under that.  Folders have a little triangle shown to their 
-   left.  You can click on the triangle.  A triangle pointing down, 
+   at the top and the hello project under that.  
+   Folders have a little triangle shown to their 
+   left.  You can click on the triangle.  A triangle pointing down 
    means the inside of the folder is displayed.  A triangle pointing to the right
-   means the contents are not being displayed. Listed under hello is the automatically
-   generated sample code file Main.cs.  
-   It should also appear in the edit window to the right.
+   means the contents are not being displayed. Listed under hello are References and
+   Properties, that we will ignore for now.  Below them is the line for the automatically
+   generated sample code file Program.cs.  
+   The file should also appear in the Edit Pad to the right.
    
-   ..   image:: images/lab-edit/Main.png
-     	:alt: MonoDevelop Main.cs Image
+   ..   image:: images/lab-edit/Program.png
+     	:alt: Xamarin Studio Program.cs Image
      	:align: center
    
-#. You can open a context sensitive popup window 
-   on most entries in the Solution pad.  With a two button mouse you right click on
-   a particular item.  In this case use the project hello.  On a one-button Mac you will
-   need to hold the Control key and click.  We may use the short term *right-click* in the
-   future, though it may not directly apply to a Mac, where you may interpret it as
-   Control-click.
+#. Program.cs should be selected in the Solution Pad, as shown above.  
+   Change the selection by clicking on hello. 
+   At the right end of the
+   highlighted hello entry you should see an icon with a small gear and a triangle.
+   Click on it to get the context sensitive popup window.   
+   When selected, most entries in the Solution Pad should show this icon,
+   allowing you to open its context sensitive menu. 
    
-#. Bring up the context menu on the hello project in the Solution pad.
+#. Bring up the context menu on the hello project in the Solution Pad.
    Select Run Item.  
 
    ..   image:: images/lab-edit/runMainMenu.png
-     	:alt: MonoDevelop Run Main.cs Image
+     	:alt: Xamarin Studio Run Program.cs Image
      	:align: center
    
     
-#.  Here MonoDevelop combines several steps: saving the file,
-    compiling it, and starting running it, if compilation succeeded.
-    With the canned file, it should succeed!  You see a Console window
+#.  Here Xamarin Studio combines several steps: saving the file,
+    compiling it into an executable program, 
+    and starting running it if compilation succeeded.
+    With the canned file it should succeed!  You see a Console window
     something like
     
     ..  image:: images/lab-edit/pressKey.png
-     	:alt: MonoDevelop Press Key to close Image
+     	:alt: Xamarin Studio Press Key to close Image
      	:align: center
    
     You have a chance to see the output of this simple program.
-    Follow the instructions and press the Enter key.
+    Follow the instructions and press the space or Enter key.
     
 #.  On Windows, that kills the window.  **On a Mac, only, there is one more step:**
 
     ..  image:: images/lab-edit/processComplete.png
-     	:alt: MonoDevelop Process Complete Image
+     	:alt: Xamarin Studio Process Complete Image
      	:align: center
    
     You have to actively close the Mac terminal window, either by clicking the
     red window closing button, or using the keyboard, with Command-W.
 
 #.  Initially, for immediate practice running a program, this automatically generated
-    file, ``Main.cs``, is convenient.  Hereafter it is an annoyance.  
+    file, ``Program.cs``, is convenient.  Hereafter it is an annoyance.  
     The file name is always the same, and not useful, 
     and you would need to redo the whole
     code for your own program.  A general approach is to *delete* this
-    file and put in a file of your own.   
+    file and put in a file of your own:
     
-    Open the context sensitive menu for the file Main.cs, and select
-    Remove.
+    -   Make sure Program.cs is selected in the Solution Pad.
+        You save a step by closing the Edit Pad for Program.cs,
+        clicking on the X in the Program.cs tab at the top of the Edit Pad.      
+
+    -   In the Solution Pad open the context sensitive menu for Program.cs, and select
+        Remove.
     
-    ..  image:: images/lab-edit/menuRemoveMain.png
-     	:alt: MonoDevelop Remove Main.cs Image
-     	:align: center
+        ..  image:: images/lab-edit/menuRemoveMain.png
+            :alt: Xamarin Studio Remove Program.cs Image
+            :align: center
    
-    You get another popup.  The image below shows the way it first appears, 
-    *with the wrong button chosen*.  **Choose the left button, Delete**.  
-    Otherwise the file is left in the hello
-    folder, but it is not listed as being in the project.
+    -   You get another popup.  When it appears the right button is selected,
+        *but you do not want that selection*, Remove From Project. 
+        The image below shows the proper button, the
+        *left* button*, **Delete**, being chosen.  
+        Otherwise the file is left in the hello
+        folder, but it is just not listed as being in the project.
       
-    ..  image:: images/lab-edit/sureRemove.png
-     	:alt: MonoDevelop Delete Main.cs Image
-     	:align: center
-   
+        ..  image:: images/lab-edit/sureRemove.png
+            :alt: Xamarin Studio Delete Program.cs Image
+            :align: center   
+            
+    -   If you forgot to close the Edit Pad tab containing Program.cs earlier, you can still
+        do it, just say not to save changes to the file when asked. 
 
 #. To get in code that you want, there are several approaches.  The one we take
    now is to start from a completely
@@ -178,22 +188,22 @@ a Mac.  Windows versions should be similar.
    Select the submenu Add...  and  then New File....  
 
    ..   image:: images/lab-edit/addNewFileMenu.png
-     	:alt: MonoDevelop Add new file Image
+     	:alt: Xamarin Studio Add new file Image
      	:align: center
-   
 
-#. In the popup New File Dialog Window, click on Empty File.  Enter the name hello.cs.
+#. In the popup New File Dialog Window, click on Empty File (not Empty *Class*).  
+   Enter the name hello.cs.
    Click the New button.
    
    ..   image:: images/lab-edit/makeEmptyFileDialog.png
-     	:alt: MonoDevelop Add empty file Image
+     	:alt: Xamarin Studio Add empty file Image
      	:align: center
    
 #. This should add hello.cs to the hello project and open an editing window for hello.cs.
    The file should have no text.
    
    ..   image:: images/lab-edit/editEmptyHello.png
-     	:alt: MonoDevelop edit empty file Image
+     	:alt: Xamarin Studio edit empty file Image
      	:align: center
    
    
@@ -201,27 +211,27 @@ a Mac.  Windows versions should be similar.
    the following code.  This is actually an equivalent
    *Hello, World!* program to the automatically generated one,
    but it is a bit shorter.  
-   It only introduces the syntax we actually need at the beginning,
+   It only introduces the syntax we actually *need* at the beginning,
    and will be discussing more shortly:
     
    ..  literalinclude:: ../source/examples/hello/hello.cs
        :language: csharp
        :linenos:
    
-   This program is deliberately simple, so you can type it into a text
+   This program is deliberately simple, so you can type it into the text
    editor quickly and become familiar with how
    to create, edit, and save a program. 
             
    ..   image:: images/lab-edit/pasteHello.png
-     	:alt: MonoDevelop Edited new file Image
+     	:alt: Xamarin Studio Edited new file Image
      	:align: center
    
 #.  You can run the project just as before.  You should ge the same result, unless
     you made a typing error.  In that case look, fix it, and try again.
     
-#.  Now try a bit of editing.  Look at the program to see where output came
+#.  Now try a bit of editing:  Look at the program to see where output came
     from.  Change what is printed and run it, but don't eliminate the console
-    window.
+    window (so you can show it off).
 
 #.  Now grab the instructor or teaching assistant so
     they can perform a quick inspection of your work and check it off
@@ -233,7 +243,7 @@ that you complete the work and demonstrate it by the beginning of the
 next lab.
 
 At this point, you have accomplished the major objective for this
-introductory lab: to create a MonoDevelop project, and
+introductory lab: to create a Xamarin Studio project, and
 enter, compile, and run a C# program. 
 
 For further reinforcement
@@ -241,11 +251,12 @@ For further reinforcement
 
 #. Can you make a new program variant print out two *separate* lines?
    
-#. Download and install Mono Software Development Kit and MonoDevelop on
+#. Download and install Mono Software Development Kit and Xamarin Studio on
    your home computer or laptop.  
    
-#. You can now add further projects.  To add a new project in your solution,
-   *right* click on the solution name in the solution pad, select Add,
+#. You can now add further projects to your *current* solution.  
+   To add a new project in your solution, in the Solution Pad open the context
+   sensitive menu for the whole solution (top line), select Add,
    and in the submenu select New project.
    
    You see a window much like when creating a solution, except there is no

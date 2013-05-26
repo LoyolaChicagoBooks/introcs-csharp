@@ -146,15 +146,15 @@ your own and replace the comments with your code to complete it:
      
 Be sure to run it and test it thoroughly. Show your output to a TA.
 
-.. index:: MonoDevelop; empty project - no console error
-   MonoDevelop; file not in project error 
+.. index:: Xamarin Studio; empty project - no console error
+   Xamarin Studio; file not in project error 
 
-.. _monodevelop-reminders:
+.. _xamarinstudio-reminders:
 
-MonoDevelop Reminders and Fixes 
----------------------------------
+Xamarin Studio Reminders and Fixes 
+-------------------------------------
 
-Be careful to open your MonoDevelop solution and add a new **C# Console project** to
+Be careful to open your Xamarin Studio solution and add a new **C# Console project** to
 it, and add your new file directly into the project (through the Solution pad).  
 There are two main places to
 mess up here.  We emphasize them and mention fixes if you make the easy mistakes:
@@ -182,7 +182,7 @@ mess up here.  We emphasize them and mention fixes if you make the easy mistakes
 #.  Another common error is to proceed like with most text processors, 
     and open the top File menu,  
     and choose to open and edit a new file for your program.  
-    *You cannot run this program from MonoDevelop.*  
+    *You cannot run this program from Xamarin Studio.*  
     If you have a separate project set up, 
     but without this file or any other showing in the Solutions pad, an attempt to
     run the project with say no ``Main`` method (in fact no program at all). 

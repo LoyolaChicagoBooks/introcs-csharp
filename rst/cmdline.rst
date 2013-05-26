@@ -225,7 +225,7 @@ Then, with Mono installed (and for Windows, with a Mono command window), the
 programs associated with Mono can be used:
 
 gmcs
-  compiles one or more listed C# source files without using MonoDevelop.
+  compiles one or more listed C# source files without using Xamarin Studio.
 
 csharp
   is the interactive C# statement testing program.

@@ -11,16 +11,16 @@ C# shields you from the differences
 between operating systems 
 with its ``File``, ``Path``, and ``Directory`` classes.
 
-If you leave MonoDevelop and go to the command line as described in
+If you leave Xamarin Studio and go to the command line as described in
 :ref:`commandline`, then you are exposed to the differences
 between the operating systems.  *Look over that section.*
 
-Thus far we have let MonoDevelop hide what actually is happening when
+Thus far we have let Xamarin Studio hide what actually is happening when
 you execute a program.  The natural environment for the text-based programs
-we are writing is the command line.  We need to get outside MonoDevelop.
+we are writing is the command line.  We need to get outside Xamarin Studio.
 
 #.  To show off the transition, first build or run the ``addition1`` example project
-    from inside MonoDevelop.
+    from inside Xamarin Studio.
 #.  Open a terminal on a Mac or a Mono Command Prompt console in Windows.
 #.  Following the 
     :ref:`commandline`,
@@ -28,7 +28,7 @@ we are writing is the command line.  We need to get outside MonoDevelop.
 #.  Then change to the subdirectory ``bin`` and then the subdirectory ``Debug``.
 #.  Enter the command to list the directory (``dir`` in Windows; ``ls`` on a Mac).
 #.  You should see ``addition1.exe``.  This is the compiled program
-    created by MonoDevelop.  Enter the command 
+    created by Xamarin Studio.  Enter the command 
 
     .. code-block:: none
        
@@ -37,7 +37,7 @@ we are writing is the command line.  We need to get outside MonoDevelop.
     This should run your program.  Note that when you complete it, the window does not
     disappear!  You keep that history.  Keep this terminal/console window open
     until the end of the chapter.  
-#.  Windows only:  On Windows, MonoDevelop creates a regular Windows executable file.
+#.  Windows only:  On Windows, Xamarin Studio creates a regular Windows executable file.
     For consistency you can use the command above, but you no longer need Mono.
     You can just enter the command ``addition1.exe`` or the shorter ``addition1``.
 
@@ -51,7 +51,7 @@ GMCS: Compiling
    
 Continue with the same terminal/console window.
 Let us now consider creating an executable program for ``addition1.cs``,
-directly, without using MonoDevelop:
+directly, without using Xamarin Studio:
 
 #.  Enter the command ``cd ..`` and then *repeat*: ``cd ..``, 
     to go up to the project directory.
@@ -92,7 +92,7 @@ uses the library class UIF.  Continue with the same terminal/console window:
        gmcs addition3.cs
        
     You should get an error about missing the UIF class. The gmcs program
-    does not know about the information MonoDevelop keeps in its references.
+    does not know about the information Xamarin Studio keeps in its references.
 #.  Extend the command:
 
     .. code-block:: none
@@ -114,7 +114,7 @@ uses the library class UIF.  Continue with the same terminal/console window:
        gmcs sum_file.cs
        mono sum_file.exe
        
-   We ran this program earlier through MonoDevelop.  Recall that that
+   We ran this program earlier through Xamarin Studio.  Recall that that
    entering the file name ``numbers.txt`` failed, and to refer to the right 
    place for the ``numbers.txt`` file, we needed to use ``..\..\numbers.txt``
    or ``../../numbers.txt``.  This time *just enter* ``numbers.txt``.  The
@@ -126,16 +126,16 @@ were in the project directory, which is the current directory.
 Then sum_file.exe was written to and run from
 the same directory.
 
-This is unlike the MonoDevelop default, where the current directory for execution
+This is unlike the Xamarin Studio default, where the current directory for execution
 is not the project directory.
 
-Under the hood, MonoDevelop uses gmcs also, with a bunch of further options
+Under the hood, Xamarin Studio uses gmcs also, with a bunch of further options
 in the parameters, changing the execution directory and also arranging
 for better debugging information when you get a runtime error.
 
 .. index:: NAnt build tool
 
-MonoDevelop keeps track of all of the parts of your projects, and recompiles only
+Xamarin Studio keeps track of all of the parts of your projects, and recompiles only
 as needed.  There are
 also command-line tools that manage multi-file projects neatly, remembering
 the parts, and compiling only as necessary.

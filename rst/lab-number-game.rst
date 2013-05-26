@@ -55,7 +55,7 @@ game is going to be acting like Player A.
 Part 1: No Hints; Fixed Secret Number
 -------------------------------------------
 
-If using MonoDevelop, create a new project in a solution 
+If using Xamarin Studio, create a new project in a solution 
 in which you already have added the ui library project.  Add the ui project 
 as a reference for the lab project.  
 Make sure your program has ``namespace IntroCS;`` to match the ui project.

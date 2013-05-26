@@ -103,7 +103,7 @@ Now after writing the new class to respond to a new command,  the *only* thing y
 need to do is add a new instance of that class to the array initializer in the
 CommandMapper constructor!
 
-The revised MonoDevelop project is :repsrc:`csproject_stub` (no 1 this time).
+The revised Xamarin Studio project is :repsrc:`csproject_stub` (no 1 this time).
 
 See how the Game class is simplified, too.
 

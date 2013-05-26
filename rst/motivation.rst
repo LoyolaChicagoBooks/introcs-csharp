@@ -52,8 +52,8 @@ While many open-source tools have hackers jumping in to eliminate bugs, and mayb
 providing enough documentation for a professional, documentation for a 
 beginner is often lacking.  This book contributes there, partly in the
 documentation for Mono's lovely interactive environment csharp, and also 
-for the integrated development environment, MonoDevelop.  
-We show beginners how to start using the MonoDevelop environment,
+for the integrated development environment, Xamarin Studio.  
+We show beginners how to start using the Xamarin Studio environment,
 with its large array of features (not all needed by the
 beginner), and introduce more features as needed.
 

@@ -225,7 +225,7 @@ into an actual (reduced) rational number. We test three general cases:
 Running the Tests
 ---------------------------
 
-In MonoDevelop, run the Run rational_nunit project.  
+In Xamarin Studio, run the Run rational_nunit project.  
 A test pad should appear and show something like
 
 .. image:: images/NUnitTestMonoDevelop.png

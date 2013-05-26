@@ -31,7 +31,7 @@ At the level of actual programming, when two folks are working on the
 same project, it is important to think about how you can organize your
 work so each person on the team can get something done. As we've been
 learning throughout the semester, the C# language gives us a way to
-organize our code using projects (with MonoDevelop). Within a project
+organize our code using projects (with Xamarin Studio). Within a project
 we can organize it as a collection of files, each of which maintains
 part of the solution to a problem.  These parts are typically organized
 using classes within a namespace and methods.
