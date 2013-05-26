@@ -7,7 +7,7 @@ Appendix
    :maxdepth: 3
    
    monotools
-   monodevelop
+   xamarinstudio
    cmdline
    precedence
    homework-gradecalculation

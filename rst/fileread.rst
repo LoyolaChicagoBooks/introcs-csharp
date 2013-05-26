@@ -9,7 +9,7 @@
 Reading Files
 =============
 
-In MonoDevelop, go to project :repsrc:`print_first_file`.
+In Xamarin Studio, go to project :repsrc:`print_first_file`.
 Right click on the project in the Solution pad, and select Open Containing Folder. 
 Drill down two folders through :file:`bin` to :file:`Debug`.
 You should find a copy of the ``sample.txt`` that we stored there.  You can open it and
@@ -153,7 +153,7 @@ is in the ``System.IO`` namespace is ::
 
 It is true if the named files exists in the file system.  
 
-You should see the file :repsrc:`sum_file/numbers.txt` in the MonoDevelop project.
+You should see the file :repsrc:`sum_file/numbers.txt` in the Xamarin Studio project.
 It is in the right form for the program.  If you run the program and enter the
 response:
 
@@ -162,9 +162,9 @@ response:
    numbers.txt
 
 you should be told that the file does not exist.  Recall that the executable
-created by MonoDevelop is two directories down through :file:`bin` 
+created by Xamarin Studio is two directories down through :file:`bin` 
 to :file:`Debug`.  This is the default 
-*current directory* when MonoDevelop runs the program.
+*current directory* when Xamarin Studio runs the program.
 You can refer to
 a file that is not in the current directory.  
 A full description is in the next section, but briefly, what we need now:
@@ -181,7 +181,7 @@ the program looks like:
    The sum is 16
 
 In :ref:`fio` we will discuss a more flexible way of finding files to open, 
-that works well in MonoDevelop and many other situations.
+that works well in Xamarin Studio and many other situations.
  
 .. index::
    double: example; copy file to upper case
@@ -215,7 +215,7 @@ It copies a file line by line to a new file in upper case:
    :start-after: chunk
    :end-before:  chunk
 
-You may test this in the MonoDevelop example project copy_upper:  
+You may test this in the Xamarin Studio example project copy_upper:  
 
 #.  Expand the copy_upper project in the Solution pad.  The project
     includes the input file.  You may not see it at first.  You need to expand the folder
@@ -226,7 +226,7 @@ You may test this in the MonoDevelop example project copy_upper:
     Open Containing Folder.  
     You should see :file:`text.txt` but not :file:`upper_text.txt`.
     Leave that operating system file folder open.  
-#.  Go back to MonoDevelop and run the project.  Now look at the
+#.  Go back to Xamarin Studio and run the project.  Now look at the
     operating system :file:`Debug` folder again.  You should see :file:`upper_text.txt`.
     You can open it and see that it holds an upper case version of the contents
     of :file:`text.txt`.

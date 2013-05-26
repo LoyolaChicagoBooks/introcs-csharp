@@ -82,7 +82,7 @@ Requirements
    but it could be something else.  The folder also contains sample data files
    for a course abbreviation comp150.
    
-   Note that these data files are not in the MonoDevelop execution directory, but
+   Note that these data files are not in the Xamarin Studio execution directory, but
    in the project directory, so the :ref:`fio` is useful to provide
    flexibility in reading the data files.
 

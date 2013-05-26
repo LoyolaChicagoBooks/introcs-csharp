@@ -191,10 +191,10 @@ This should print for you::
     123
 
 .. index::
-   MonoDevelop; command line parameters
-   command line; parameters in MonoDevelop
+   Xamarin Studio; command line parameters
+   command line; parameters in Xamarin Studio
 
-You can simulate command line parameters inside MonoDevelop:
+You can simulate command line parameters inside Xamarin Studio:
 
 #.  Open the local popup menu for the project you are using.
 #.  Select Run With > 
@@ -448,7 +448,7 @@ Command Line Adder Exercise
 
 Write a program ``adder.cs`` that calculates and prints the sum of 
 command line parameters, so if you make the command line parameters
-in MonoDevelop be 
+in Xamarin Studio be 
 
 ..  code-block:: none
 
@@ -457,8 +457,8 @@ in MonoDevelop be
 then the program prints 29.
 
 Do try running from the command line:  If you compiled with
-MonoDevelop, that means going down to the bin/Debug directory.
-Recall MonoDevelop for Windows produces a Windows executable,
+Xamarin Studio, that means going down to the bin/Debug directory.
+Recall Xamarin Studio for Windows produces a Windows executable,
 not a Mono file, so you can run
     
 ..  code-block:: none

@@ -6,7 +6,7 @@ Path Strings
 ====================
 
 When a program is running, there is alway a *current working directory*.  
-When you run a project through MonoDevelop, by default the current directory is the directory
+When you run a project through Xamarin Studio, by default the current directory is the directory
 two levels below the project directory.
    
 Files in the current working directory can to referred to by their simple names,
@@ -52,7 +52,7 @@ your home directory, you likely have a subdirectory :file:`Downloads`, and the
 directory might contain :file:`source.zip`.  From the home directory, this file could
 be referred to as :file:`Downloads\\source.zip` or  :file:`Downloads/source.zip` on a Mac.
 
-Relative to a MonoDevelop project directory, the current directory for execution
+Relative to a Xamarin Studio project directory, the current directory for execution
 of the program is :file:`bin\\Debug` or  :file:`bin/Debug` on a Mac.
 
 Referring to files in the current directory just by their plain file name is
@@ -61,7 +61,7 @@ actually an example of using relative paths.
 With relative paths, you sometimes want to move up the directory hierarchy:  ``..``
 (two periods) refers to the directory one level up the chain.  
 
-Next imagine reversing the relative path from a MonoDevelop project directory to the
+Next imagine reversing the relative path from a Xamarin Studio project directory to the
 current directory for execution:  If the current directory is the execution 
 directory, then ``..`` refers to directory :file:`bin`, and then
 ``..\..`` or ``../..`` refers to the project directory.  Further, if the 

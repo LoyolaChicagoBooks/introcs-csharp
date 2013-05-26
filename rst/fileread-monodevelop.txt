@@ -1,19 +1,18 @@
 .. omit?
-   See :ref:`monodevelop-run-with` for testing sum_file.cs inside MonoDevelop.  
+   See :ref:`xamarin-run-with` for testing sum_file.cs inside Xamarin Studio.  
    
-   .. index::
-      double: MonoDevelop; working directory
-      double: MonoDevelop; execution arguments
-      double: MonoDevelop; custom execution
+   .. index:: working directory; Xamarin Studio
+      execution arguments; Xamarin Studio
+      double: Xamarin Studio; custom execution
       
-   .. _monodevelop-run-with:
+   .. _xamarin-run-with:
       
-   Setting the Working Directory and Command Line Arguments in MonoDevelop
+   Setting the Working Directory and Command Line Arguments in Xamarin Studio
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    
    ..  warning::
    
-      If you are using files with MonoDevelop, note that the *default* directory to start from
+      If you are using files with Xamarin Studio, note that the *default* directory to start from
       when running a program, is the subdirectory :file:`bin/Debug`.  
       We will keep data files in the 
       main project directory.  To avoid needing directory path names with test data, 
@@ -49,6 +48,6 @@
    project directory :file:`numbers.txt`.  You could make a custom run mode using the
    command line parameter ``examples.txt`` and setting the working directory to the project
    directory :file:`SumFile`.  You might want to copy the project to your repository. open
-   it in MonoDevelop, add a new data file, and use that as a command line parameter.
+   it in Xamarin Studio, add a new data file, and use that as a command line parameter.
 
    (omitted above)

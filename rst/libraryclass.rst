@@ -70,13 +70,13 @@ the class ``UIF``.
 
 .. warning::
 
-   In MonoDevelop, if you use a file from a library project, 
+   In Xamarin Studio, if you use a file from a library project, 
    be sure that the current project includes 
-   a *reference* to the library project. If you expand the references in the MonoDevelop 
+   a *reference* to the library project. If you expand the references in the Xamarin Studio 
    project addition3, by clicking on the References line in the solution pad, 
    you should see the project ui.  
 
-Shortly we will come to making your own :ref:`library-projects-in-monodevelop`.   
+Shortly we will come to making your own :ref:`library-projects-in-xamarinstudio`.   
 
 Though we have not discussed all the C# syntax needed yet, there is also an 
 improved class ``UI`` in the ui project that we discuss later.
@@ -113,8 +113,8 @@ by *separate* automatic documentation generating programs.
 There are many documentation
 generating programs and conventions.  
 For now we will just use plain text in the ``///`` lines.
-This is recognized by the MonoDevelop system. If you open our ``examples`` solution,
-in MonoDevelop, and edit window for
+This is recognized by the Xamarin Studio system. If you open our ``examples`` solution,
+in Xamarin Studio, and edit window for
 :repsrc:`addition3/addition3.cs`,
 you can place your mouse over ``UIF`` and a popup window shows the ``UIF`` class heading
 documentation.  
@@ -127,7 +127,7 @@ you should no longer be able to see the documentation part of the popup for
 ``PromptInt`` in the ``addition3.cs`` edit window. (Be sure to change back to ``///``.)
 
 There are more elaborate documentation conventions that can be used for
-MonoDevelop and other documentation generation programs.  We defer that discussion
+Xamarin Studio and other documentation generation programs.  We defer that discussion
 to a later appendix.
 
 This documentation also works inside a single program file.  If you have a long 
@@ -135,14 +135,14 @@ program with lots of functions defined, this can also be helpful when calling
 one of your own functions.  You can avoid jumping
 around to be reminded of the signature and use of your functions.
 
-.. _library-projects-in-monodevelop:
+.. _library-projects-in-xamarinstudio:
 
-Library Projects in MonoDevelop
+Library Projects in Xamarin Studio
 ----------------------------------------
 
 Try adding a reference yourself.  Follow these instructions:
 
-#.  In your own MonoDevelop solution, start to add a project, but *instead* of leaving
+#.  In your own Xamarin Studio solution, start to add a project, but *instead* of leaving
     Console Project selected in the dialog window, select **Library Project**.
     
 #.  Then add the project name ui, and continue like when starting previous projects.

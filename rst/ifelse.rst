@@ -122,7 +122,7 @@ value of the initialization is never used:  ``val`` is
 guaranteed to be assigned a value in one of the ``if`` statements
 before its value is used in the return statement.
 
-Open MonoDevelop with the examples solution, and open 
+Open Xamarin Studio with the examples solution, and open 
 :repsrc:`ok_if_scope/`ok_if_scope.cs` in the edit window.  
 The last function, ``OkScope2``, 
 is the one shown above.  Now *remove* the logically

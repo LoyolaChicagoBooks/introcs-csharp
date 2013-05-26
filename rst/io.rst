@@ -124,18 +124,18 @@ Example Projects and the Source Repository
 We have started to refer to whole programs that we have written.  You will
 want to have your own copies to test and modify for related work.
 
-All of our examples are set up in a MonoDevelop solution in our 
+All of our examples are set up in a Xamarin Studio solution in our 
 .
 `zip file that you can download <http://introcs.cs.luc.edu/book/latest/download/default/source.zip>`_.
 
 Unzip source.zip in a place you control.  The ``examples`` subdirectory is
-a MonoDevelop solution.  
+a Xamarin Studio solution.  
 
 There are various way to access our files.  
 
 #. One way is to look at individual files from your download
    under our examples directory.  
-#. If you open the examples solution in MonoDevelop, 
+#. If you open the examples solution in Xamarin Studio, 
    you can select files from the Solutions pad.
 #. In the notes we refer to individual code file names that are hyperlinked.
    They link to the *latest version* in our online source repository.
@@ -158,10 +158,10 @@ immediately, though they may not accomplish anything.
 
 .. _our-md-projects:
 
-Running our MonoDevelop Examples Solution
-------------------------------------------
+Running our Xamarin Studio Examples Solution
+-----------------------------------------------
 
-If you are just starting MonoDevelop, and you have *not* run our solution before:
+If you are just starting Xamarin Studio, and you have *not* run our solution before:
 
 #.  On the Welcome screen select the button Open Solution or File.
 #.  You get anopen-file dialog.  Navigate to our example solution.
@@ -171,7 +171,7 @@ If you are just starting MonoDevelop, and you have *not* run our solution before
 The next time you come to the Welcome screen, our examples should be listed in the
 Recent Projects, and you can click to open it directly.
 
-Copying and Modifying Our Example MonoDevelop Projects
+Copying and Modifying Our Example Xamarin Studio Projects
 ----------------------------------------------------------------
 
 We strongly encourage you not to modify our examples in place, if you want

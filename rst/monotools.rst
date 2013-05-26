@@ -54,14 +54,17 @@ There are two major IDEs for .Net development, which we explain briefly below:
 - Visual Studio is the Microsoft IDE that interfaces directly to the
   Microsoft SDK.
 
-- MonoDevelop is the free/open source IDE for developing applications
+- Xamarin Studio is the free/open source IDE for developing applications
   using the Mono SDK on Windows and all other platforms (in
-  particular, Linux and OS X).
+  particular, Linux and OS X).  The project started as MonoDevelop.  
+  Now Xamarin is both a major contributor to the code and has commercial
+  versions for iOS development.  The name on the software is now
+  Xamarin Studio, though you may see references to MonoDevelop instead.
 
 In addition, there is another Windows-specific IDE, SharpDevelop, that
-inspired the creation of MonoDevelop. It is still actively maintained
+inspired the creation of Xamarin Studio. It is still actively maintained
 and provides a somewhat "lighter weight" alternative to Visual Studio
-for Windows users. Like MonoDevelop, it is aimed at developers who
+for Windows users. Like Xamarin Studio, it is aimed at developers who
 would prefer a more free/open source "friendly" version.
 
 Our Approach
@@ -71,10 +74,10 @@ In the interest of providing a consistent experience for our students who use
 various operating systems on their on=wn machines,
 we will be using the multi-platform Mono (the SDK).
 
-We find the IDE MonoDevelop convenient to integrate everything for a beginner,
+We find the IDE Xamarin Studio convenient to integrate everything for a beginner,
 and it is a powerful tool at a more advanced level.  Hence we start off
-introducing and using MonoDevelop.  Later we will look at some of the
-underlying tools that are obscured by the use of MonoDevelop.
+introducing and using Xamarin Studio.  Later we will look at some of the
+underlying tools that are obscured by the use of Xamarin Studio.
 
 Mono has an extra advantage in the tool csharp, for immediate testing of
 small snippets of code.  We will ude it extensively as we introduce bits of
@@ -131,16 +134,16 @@ Here is how to do a quick sanity check of your Mono setup:
    ``/usr/bin/gmcs`` as output.  ``gmcs`` is one of the interfaces to
    the C# compiler.
 
-.. index:: MonoDevelop; installation
+.. index:: Xamarin Studio; installation
 
 .. _install-md:
 
-Mono-develop Installation
+Xamarin Studio Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Make sure Mono is installed first. 
 
-#. Now go to <http://mono-develop.com>.
+#. Now go to <http://monodevelop.com> (not Xamararin for the open source version).
 
 #. As with Mono, we need to look for the downloads link. 
    You should download the *stable* version.
@@ -148,11 +151,11 @@ Mono-develop Installation
 #. As with Mono, you will see a DMG file, 
    which you should download and double-click to mount on your desktop.
 
-#. This time, you will see an App for MonoDevelop, 
+#. This time, you will see an App for Xamarin Studio, 
    which you can drag and drop into the Applications folder.
 
 #. If the preceding steps were successful, you can launch
-   MonoDevelop by double-clicking the icon in your Applications
+   Xamarin Studio by double-clicking the icon in your Applications
    folder. (You won't know what to do with it yet, but at least you can
    verify that it launches correctly and then use Command-Q to exit.)
 
@@ -199,32 +202,26 @@ own programs.  When working, you can just leave this window open,
 saving it for later use, 
 (or close and reopen later....)  
 
-Mono-develop Installation
+Xamarin Studio Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Have Mono installed first. 
-
-#. Also there are two other packages you need first:  They have link on the
-   MonoDevelop site, but these appear to be more recent:
-
-      - .NET Framework 4.0: 
-        http://www.microsoft.com/en-us/download/details.aspx?id=17851 
-      - GTK# for .NET 2.12.10: 
-        http://download.mono-project.com/gtk-sharp/gtk-sharp-2.12.10.win32.msi
-      
+   
 #. Now go to <http://mono-develop.com>.
 
 #. As with Mono, we need to look for the downloads link. You should
-   download the *stable* version. That should be at least numbered 3.0.
+   download the *stable* version. That should be at least numbered 4.0.8.
+
+   Install the second and third packages first, then the Xamarin Studio installer.
+      
 
 #. As with Mono, you will see a self-extracting installer, 
    which you should run as before.
    
 #. If the preceding steps were successful, you can launch
-   MonoDevelop by double-clicking the icon in your Applications
+   Xamarin Studio by double-clicking the icon in your Applications
    folder. (You won't know what to do with it yet, but at least you can
    verify that it launches correctly and then close the window.)
-
 
 Linux
 -----
@@ -239,14 +236,14 @@ as Ubuntu.
 #. You can test the sanity of your setup by following the instructions
    under OS X.
 
-MonoDevelop releases on Linux tend to lag behind the official stable
+Xamarin Studio releases on Linux tend to lag behind the official stable
 release. 
 
 This page,
 https://launchpad.net/~keks9n/+archive/monodevelop-latest, 
 
 describes
-how to update your MonoDevelop setup if it is not version 2.8 or later
+how to update your Xamarin Studio setup if it is not version 2.8 or later
 as we'll need for this course.
 
 We wish to stress that Linux is recommended for students who already

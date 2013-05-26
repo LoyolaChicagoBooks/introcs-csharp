@@ -57,7 +57,7 @@ Function definition
 
 #. There are various conventions for putting documentation just above the headings
    of function definitions.  The official format, specified by C# and recognized by
-   MonoDevelop, involves putting the function interface description on 
+   Xamarin Studio, involves putting the function interface description on 
    consecutive lines
    starting with ``///``.  [:ref:`function-documentation`] 
 

@@ -8,17 +8,17 @@ FIO Helper Class
 
 We have already discussed and used the ``UI`` class to aid keyboard input.
 Now we are going to develop an ``FIO`` class for our libraries.  The ``FIO`` class aids
-file input and output with MonoDevelop, and illustrates a number of
+file input and output with Xamarin Studio, and illustrates a number of
 more generally useful ideas.
 
 You saw in the last section how we might refer to ``numbers.txt`` in different
 ways depending on the execution environment.  Our situation
-is based on the particular choices made by the creators of MonoDevelop.
+is based on the particular choices made by the creators of Xamarin Studio.
 More generally, there are many times when a program may need a file 
 that may be stored in one of several directories.
 
 Our ``FIO`` class will address this issue, and we will set up the
-parameters to work specifically with both MonoDevelop and command line
+parameters to work specifically with both Xamarin Studio and command line
 development.
 
 We use one idea that is discussed more in the next chapter:  We need a sequence
@@ -88,7 +88,7 @@ has changed.
 
 You are encouraged to make a library project fio in *your* work solution, copying
 the fio.cs file. (Follow instruction like for ui in 
-:ref:`library-projects-in-monodevelop`.)  You can test your new library by also 
+:ref:`library-projects-in-xamarinstudio`.)  You can test your new library by also 
 copying the fio_test project to your solution. 
 If you do this now and stick to one work solution, then you will be ready for 
 several later uses of ``FIO``.
