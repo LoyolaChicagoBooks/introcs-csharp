@@ -57,7 +57,7 @@ testing as you get used to new syntax.
 
 .. index::
    operator; -
-   -; subtraction
+   single: -; subtraction
 
 Subtraction works as you would expect.  
 Blanks are optional around symbols: 
@@ -84,7 +84,7 @@ If your statement is incomplete you get another ``>`` prompt (with no
 
 .. index::
    operator; *
-   * multiplication
+   single: * multiplication
 
 In math class you could enter something like 4(10) for multiplication:
 
@@ -107,7 +107,7 @@ C#.  Recall that an asterisk is used as a multiplication operator:
 
 .. index::
    double:  ( ); grouping
-   -; negation
+   single: -; negation
      
 Enter each of the following expressions into csharp, and think what they
 will produce (and then check):    
@@ -139,8 +139,8 @@ A sequence of operations with equal precedence also work like in math: left to r
    single: % remainder
    single: operator; /, %
    division /
-   / division
-   . ; double literal
+   single: / division
+   single: . ; double literal
    double
    int
    type; int
