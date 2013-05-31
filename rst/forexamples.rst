@@ -41,11 +41,11 @@ This means to increment the variable i by k.
 
 .. index::
    operator; += -= *= /= %=
-   += operator
-   -= operator
-   *= operator
-   /= operator
-   %= operator
+   single: += operator
+   single: -= operator
+   single: *= operator
+   single: /= operator
+   single: %= operator
 
 Most C# binary operations have a similar variation.  For instance
 if *op* is ``+``, ``-``, ``*``, ``/`` or ``%``,
@@ -239,7 +239,8 @@ prints:
 where the '|' appears after any blank padding in each line.
 
 .. index:: 
-   double: ASCII; example
+   ASCII example
+   example; ASCII
    
 .. _ASCII:
 

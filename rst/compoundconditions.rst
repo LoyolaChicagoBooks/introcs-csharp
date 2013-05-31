@@ -1,5 +1,5 @@
 .. index::
-   &&; boolean operation AND
+   single: &&; boolean operation AND
    and &&
    boolean operation; && AND
 
@@ -50,7 +50,7 @@ There is a C# version.  Be sure to use this pattern::
    low < val && val < high
 
 .. index::
-   ||; boolean operation OR
+   single: ||; boolean operation OR
    or ||
    boolean operation; || OR
 
