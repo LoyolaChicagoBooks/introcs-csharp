@@ -1,6 +1,6 @@
 .. index::
-   double: short- circuit; &&
-   double: short- circuit; ||
+   double: short-circuit; &&
+   double: short-circuit; ||
    
 .. _short-circuit:
 

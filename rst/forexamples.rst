@@ -573,23 +573,26 @@ Head or Tails Exercise
 Write a program ``heads_tails.cs``. It should include a function ``Flip()``,
 that will randomly prints ``Heads`` or ``Tails`` *once*.
 Accomplish this by choosing 0 or 1 arbitrarily with a random
-number generator.  Recall in :ref:`lab-number-game`::
+number generator.  Use a static variable declaration and
+initialization as in :ref:`lab-number-game`::
 
-  Random r = new Random();
+  static Random r = new Random();
   
 Then, for ``int``\ s ``low`` and ``higher``, with ``low < higher``::
  
     int n = r.Next(low, higher);
 
 returns a (pseudo) random ``int``, satisfying ``low <= n < higher``.
-If you select ``low`` and ``higher`` so there are only two possible values
-for n,
+If you select ``low`` and ``higher`` as 0 and 2, 
+so there are only two possible values for n,
 then you can choose to print ``Heads`` or ``Tails`` with an
 |if-else| statement based on the result.
     
 In your Main method have a ``for`` loop calling  ``Flip()``
 10 times to test it, so you generate a random sequence of 
-10 heads and/or tails.
+10 heads and/or tails.  With these 10 rapid calls, it is important
+that a new Random object is only created once.  The suggested static
+variable declaration ensures that.
 
 
 .. index:: exercise; GroupFlips
