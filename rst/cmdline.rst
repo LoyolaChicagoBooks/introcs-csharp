@@ -183,7 +183,7 @@ cd
   On Windows, suppose you created a directory C:\\COMP170\\hello; to
   change to that, type *cd C:\\COMP170\\hello* and press Enter – the shell
   prompt will change to show this new directory location and programs like
-  *gmcs* and *mono* will be able to “see” (access) files there, directly
+  *mcs* and *mono* will be able to “see” (access) files there, directly
   by name.  If the Comp170 directory was you current directory, it would
   be shorter to use relative paths and just ``cd hello``.
 
@@ -224,7 +224,7 @@ rmdir
 Then, with Mono installed (and for Windows, with a Mono command window), the
 programs associated with Mono can be used:
 
-gmcs
+mcs
   compiles one or more listed C# source files without using Xamarin Studio.
 
 csharp

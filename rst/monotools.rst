@@ -130,8 +130,8 @@ Here is how to do a quick sanity check of your Mono setup:
 #. Type ``which csharp`` and hit enter/return. You should see
    ``/usr/bin/csharp`` as output. ``csharp`` is the C# interpreter.
 
-#. Type ``which gmcs`` and hit enter/return. You should see
-   ``/usr/bin/gmcs`` as output.  ``gmcs`` is one of the interfaces to
+#. Type ``which mcs`` and hit enter/return. You should see
+   ``/usr/bin/mcs`` as output.  ``mcs`` is one of the interfaces to
    the C# compiler.
 
 .. index:: Xamarin Studio; installation

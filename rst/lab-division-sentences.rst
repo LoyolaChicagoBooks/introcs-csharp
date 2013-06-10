@@ -28,9 +28,8 @@ printers, and the network. We already got a glimpse of this access
 when we explored ``Console.WriteLine`` in the first lab exercise.
 
 So in this lab, we're going to explore the use of C# as a
-calculator. We're going to begin by looking at the **csharp** command
-as opposed to the compiler (**gmcs** that we used in the first
-lab). Then we will take what we've learned in this session and use it
+calculator. We're going to begin by looking at the **csharp** command. 
+Then we will take what we've learned in this session and use it
 to write a full program.
 
 Requirements
