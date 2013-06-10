@@ -41,12 +41,12 @@ we are writing is the command line.  We need to get outside Xamarin Studio.
     For consistency you can use the command above, but you no longer need Mono.
     You can just enter the command ``addition1.exe`` or the shorter ``addition1``.
 
-.. index:: gmcs
+.. index:: mcs
    double: command line; compile
 
 .. _gmcs:
 
-GMCS: Compiling 
+MCS: Compiling 
 ---------------
    
 Continue with the same terminal/console window.
@@ -70,7 +70,7 @@ directly, without using Xamarin Studio:
  
     .. code-block:: none
        
-        gmcs addition1.cs
+        mcs addition1.cs
         
     This is the Mono system compiler, building from the source code.
 #.  Print a listing of the directory.  You should see
@@ -89,15 +89,15 @@ uses the library class UIF.  Continue with the same terminal/console window:
     .. code-block:: none
        
        cd ../addition3
-       gmcs addition3.cs
+       mcs addition3.cs
        
-    You should get an error about missing the UIF class. The gmcs program
+    You should get an error about missing the UIF class. The mcs program
     does not know about the information Xamarin Studio keeps in its references.
 #.  Extend the command:
 
     .. code-block:: none
        
-       gmcs addition3.cs ../ui/uif.cs
+       mcs addition3.cs ../ui/uif.cs
        
     That should work, now referring to both needed files.
 #.  Enter the command
@@ -111,7 +111,7 @@ uses the library class UIF.  Continue with the same terminal/console window:
     .. code-block:: none
        
        cd ../sum_file
-       gmcs sum_file.cs
+       mcs sum_file.cs
        mono sum_file.exe
        
    We ran this program earlier through Xamarin Studio.  Recall that that
@@ -120,7 +120,7 @@ uses the library class UIF.  Continue with the same terminal/console window:
    or ``../../numbers.txt``.  This time *just enter* ``numbers.txt``.  The
    program should work, giving the answer 16.
    
-By default gmcs and mono read from and write to the current directory of the 
+By default mcs and mono read from and write to the current directory of the 
 terminal/console.  In the situation above, ``sum_file.cs`` and ``numbers.txt``
 were in the project directory, which is the current directory. 
 Then sum_file.exe was written to and run from
@@ -129,7 +129,7 @@ the same directory.
 This is unlike the Xamarin Studio default, where the current directory for execution
 is not the project directory.
 
-Under the hood, Xamarin Studio uses gmcs also, with a bunch of further options
+Under the hood, Xamarin Studio uses mcs also, with a bunch of further options
 in the parameters, changing the execution directory and also arranging
 for better debugging information when you get a runtime error.
 

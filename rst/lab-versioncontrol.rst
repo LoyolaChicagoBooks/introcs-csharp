@@ -339,7 +339,7 @@ Now do the following steps:
 #. Verify that the .cs and .exe files are in the labs directory
    (``ls`` on Linux or OS X; ``dir`` on MS-DOS)::
 
-      gkt@gkt-mini:~/gkt170/labs$ gmcs hello.cs 
+      gkt@gkt-mini:~/gkt170/labs$ mcs hello.cs 
       gkt@gkt-mini:~/gkt170/labs$ ls -l
       total 8
       -rw-r--r-- 1 gkt gkt  224 2012-02-20 20:02 hello.cs
@@ -450,7 +450,7 @@ So let's do it:
     #. As you can see, my labs folder contains the code for ``hello.cs`` and the 
        compiled code, ``hello.exe``. In the next section, we'll learn how to "ignore"
        compiled code, which really doesn't belong in the repository, because it is something
-       we can *regenerate* from ``hello.cs``, simply by using the C# compiler, ``gmcs``.
+       we can *regenerate* from ``hello.cs``, simply by using the C# compiler, ``mcs``.
     
     #. So let's add ``hello.cs`` to our *copy of* the repository. It is important to note
        at this point that we are working only with a copy of our repository on Bitbucket. 

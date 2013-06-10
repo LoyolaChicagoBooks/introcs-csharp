@@ -82,7 +82,7 @@ getting
 getter
 gkt
 glazer
-gmcs
+mcs
 gung
 hg
 hgignore

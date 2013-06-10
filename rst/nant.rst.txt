@@ -78,7 +78,7 @@ The main script to use is the run script:
     
   The run scripts are set up to automatically find and include
   any code needed from our :ref:`library-classes`, in particular ``UIF`` and ``UI``.
-  Using the gmcs command and these libraries requires extra verbiage that we are avoiding
+  Using the mcs command and these libraries requires extra verbiage that we are avoiding
   by using a run script.  So once you start using the library classes, 
   *do use the run script*.
   
