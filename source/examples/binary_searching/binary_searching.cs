@@ -4,7 +4,7 @@ namespace IntroCS
 {
    public class BinarySearching
    {                                     // chunk-binarysearch-begin
-      /// Return the index of item in sorted array data,
+      /// Return the index of item in a non-empty sorted array data,
       /// or return -1 if item is not in the array.
       public static int IntArrayBinarySearch(int[] data, int item) 
       {

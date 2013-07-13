@@ -28,12 +28,14 @@ Usually there is this division in the behavior of functions, returning a value o
 
 
 It is legal to do *both*: accomplish something with a side effect in the system, *and*
-return a value.  We will see examples of that later, like in :ref:`sets`.
+return a value, and sometimes use the function only for its side effect.  
+We will see examples of that later, like in :ref:`sets`.
 
-This means that the compiler needs to permit the programmer to ignore a 
+This later advanced use will mean that the compiler needs to 
+*permit* the programmer to ignore a 
 returned value, and use a function returning a value as a whole statement.  
-However, this allows
-a common error: forgetting to immediately use a returned value that your program logic
+However, this means that the compiler cannot catch a common logical error, 
+forgetting to immediately use a returned value that your program logic
 really needs.   For example with this definition::
 
     static int CalcResult(int param)
@@ -44,7 +46,7 @@ really needs.   For example with this definition::
        return result;
     }
     
-you might try to use it in this bad code, intending to use the ``result``
+you might try to use ``CalcResult`` in this bad code, intending to use the ``result``
 from CalcResult::
 
     static void BadUseResult(int x)
@@ -65,9 +67,9 @@ the ``int result = 0;`` line, incorrectly relying on the declaration of ``result
 in ``CalcResult``.  At least in that situation a compiler error brings attention
 to the problem.
 
-You can actually use the result from ``CalcResult`` with    ::
+You can actually use the result from ``CalcResult`` with either  ::
 
-    int value = CalcResult(x);  //store the returned value!
+    int value = CalcResult(x);  //store the returned value in an assignment!
     Console.WriteLine(value);
 
 or  ::
