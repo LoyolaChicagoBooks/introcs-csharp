@@ -1,0 +1,10 @@
+Examples from elsewhere in make
+Testing procedural programs (referenced earlier)
+Ch 1
+Bisection, and other Math/science
+
+Other things needed for professional finish:
+    Summaries
+    Exercises
+    Glossary
+    Tweak latex so preface, acknowledgements, appendix separate from numbered chapters.
