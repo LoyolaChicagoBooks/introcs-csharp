@@ -68,8 +68,8 @@ Here's a quick explanation, because it largely follows from the above explanatio
   N-1 (data.Length - 1).
 - The loop to make repeated passes over the array begins on line 7. We use a bottom-tested
   do-while loop, 
-  because we know that we need to enter this loop--no matter what--at least once
-  to determine whether the item is in the middle or not. 
+  because we know that we need to enter this loop at least once, no matter what,
+  to determine whether the item is in the middle or not.
 - Line 8 does just what we expect: 
   It calculates the median position (mid).
 - It is always possible that we've found the item, which is what we test on line 9,
@@ -78,7 +78,7 @@ Here's a quick explanation, because it largely follows from the above explanatio
   at this mid position, we know it is in the "upper half". 
   Otherwise, it's in the "lower half".
 - Line 15: We can only continue searching if there is some data left to consider 
-  (``min <= ``max``).   
+  (``min <= max``).   
 - Line 16: Otherwise the binary search loop terminates, and we 
   return -1 (to indicate not found). 
   The -1 value is a commonly-returned indicator of failure in search operations
@@ -98,3 +98,21 @@ It also references functions from the example projects searching and sorting.
    :start-after: chunk-driver-begin
    :end-before: chunk
    :linenos:
+
+Elaborated Binary Search Exercise
+----------------------------------
+
+Even if you do not find ``item`` in a binary search, it is sometimes useful to know
+where ``item`` lies in relation to the array elements.  It could be
+before the first element, in between two elements, or after the last element.
+Suppose ``N`` is the (positive) array length.
+Instead of just returning -1 if ``item`` is not in the array, return 
+
+* -1 if ``item < data[0]``
+* ``-(k+1)`` if ``data[k-1] < item < data[k]`` 
+* ``-(N+1)`` if ``data[N-1] < item``
+
+Modify :repsrc:`binary_searching/binary_searching.cs` into 
+:file:`binary_searching2.cs` so this extra information is returned
+(and indicated clearly in the main testing program).
+This should *not* require an extra loop or test in the binary search. 

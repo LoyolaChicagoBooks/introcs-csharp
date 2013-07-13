@@ -103,7 +103,7 @@ likely to be seen and maintained by the implementers if it sits right with the
 code, like our comments before the class and function headings.
 
 You will note that instead of the usual line comment syntax ``//``, we have added
-an extra ``/``, making ``///`.  That will also start a comment.  (The third ``/`` 
+an extra ``/``, making ``///``.  That will also start a comment.  (The third ``/`` 
 is technically just a part of the comment.)  There is a special reason for the 
 notation:  Though it is convenient for the *implementer* of code to have the documentation
 right with the code, a *user* of the functions only needs the interface information

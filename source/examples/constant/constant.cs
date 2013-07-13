@@ -1,6 +1,6 @@
 using System;
 
-class Constant
+class UseConstant
 {
    static double PI = 3.14159265358979; // constant, value not reset
 
