@@ -6,6 +6,7 @@ Context
 
    motivation
    intro
+   download
    milesintro
 
  
