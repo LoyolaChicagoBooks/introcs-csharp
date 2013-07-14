@@ -6,7 +6,7 @@ python get-examples.py
 
 rm -rf build/
 pushd rst
-make CONFIG=default html
+make CONFIG=bootstrap html
 make CONFIG=default epub
 make CONFIG=default latexpdf
 popd
