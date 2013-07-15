@@ -11,3 +11,7 @@ make CONFIG=default epub
 make CONFIG=default latexpdf
 popd
 
+pushd build
+mkdir -p dist
+zip -r dist/html.zip html/
+popd
