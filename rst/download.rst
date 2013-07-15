@@ -39,6 +39,7 @@ which is a reliable mirror to the Primary Site above.
     :widths: 15, 30
 
     "Web Pages", "http://introcs.courses.thiruvathukal.com/html/"
+    "Web Pages (offline ZIP)", "http://introcs.courses.thiruvathukal.com/dist/html.zip"
     "PDF", "http://introcs.courses.thiruvathukal.com/latex/comp170.pdf"
     "ePub (Experimental)", "http://introcs.courses.thiruvathukal.com/epub/comp170.epub"
 
