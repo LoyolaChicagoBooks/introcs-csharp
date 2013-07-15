@@ -26,7 +26,7 @@ These are provided at the master site, http://introcs.cs.luc.edu.
     :widths: 15, 30
 
     "C# Examples (as pages)", "http://bitbucket.org/loyolachicagocs_books/introcs-csharp/"
-    "C# Examples (as ZIP)", "http://introcs.cs.luc.edu/book/latest/download/default/source.zip"
+    "C# Examples (as ZIP)", "https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip"
 
 Dr. Thiruvathukal's Site
 --------------------------
@@ -47,5 +47,5 @@ which is a reliable mirror to the Primary Site above.
     :widths: 15, 30
 
     "C# Examples (as pages)", "http://bitbucket.org/loyolachicagocs_books/introcs-csharp/"
-    "C# Examples (as ZIP)", "http://introcs.cs.luc.edu/book/latest/download/default/source.zip"
+    "C# Examples (as ZIP)", "https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip"
 
