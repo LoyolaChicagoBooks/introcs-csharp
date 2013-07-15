@@ -30,7 +30,7 @@ extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax', 'sphinx.ext.extlinks' ]
 todo_include_todos = True
 
 extlinks = {'repsrc': 
-              ('https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/src/default/source/examples/%s','')
+              ('https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/src/default/%s','')
            }
 
 
