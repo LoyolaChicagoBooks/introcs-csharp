@@ -1,1 +1,0 @@
-for %%f in (*.cs) do build.cmd %%~nf
