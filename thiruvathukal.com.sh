@@ -16,5 +16,5 @@ mkdir -p dist
 zip -r dist/html.zip html/
 popd
 
-rsync -avz $(pwd)/build/ thiruvathukal.com:/home/gkt/sites/introcs/
+rsync -avz $(pwd)/build/ gkt@thiruvathukal.com:/home/gkt/sites/introcs/
 
