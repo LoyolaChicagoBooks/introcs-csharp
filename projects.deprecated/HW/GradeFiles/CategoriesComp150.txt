@@ -1,3 +1,0 @@
-Exam, Homework, Project
-15, 2, 3
-3, 4, 1
