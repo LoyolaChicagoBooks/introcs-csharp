@@ -38,10 +38,10 @@ which is a reliable mirror to the Primary Site above.
     :header: "Format", "URL"
     :widths: 15, 30
 
-    "Web Pages", "http://introcs.courses.thiruvathukal.com/html/"
-    "Web Pages (offline ZIP)", "http://introcs.courses.thiruvathukal.com/dist/html.zip"
-    "PDF", "http://introcs.courses.thiruvathukal.com/latex/comp170.pdf"
-    "ePub (Experimental)", "http://introcs.courses.thiruvathukal.com/epub/comp170.epub"
+    "Web Pages", "http://introcs.cs.courseclouds.com/html/"
+    "Web Pages (offline ZIP)", "http://introcs.cs.courseclouds.com/dist/html.zip"
+    "PDF", "http://introcs.cs.courseclouds.com/latex/comp170.pdf"
+    "ePub (Experimental)", "http://introcs.cs.courseclouds.com/epub/comp170.epub"
 
 .. csv-table:: Source Code Reading/Download Options
     :header: "Format", "URL"
