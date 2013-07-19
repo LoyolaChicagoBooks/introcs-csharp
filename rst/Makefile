@@ -123,7 +123,10 @@ latex:
 
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
-	./fixgenindex.py $(BUILDDIR)/latex/comp170.tex
+	# For Andy
+	-python2 ./fixgenindex.py $(BUILDDIR)/latex/comp170.tex
+	# For George (python2 broken on most systems)
+	-python2.7 ./fixgenindex.py $(BUILDDIR)/latex/comp170.tex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
