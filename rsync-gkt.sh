@@ -1,1 +1,0 @@
-rsync -avz $(pwd)/build/ gkt@thiruvathukal.com:/home/gkt/sites/introcs/
