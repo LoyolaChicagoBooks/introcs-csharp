@@ -5,21 +5,19 @@
 Downloading Text and Source Code
 ===================================
 
-Primary Site
---------------
+Primary Site (cs.luc.edu)
+---------------------------
 
-The following table provides links for alternate web viewing, printing, or e-reading.
-These are provided at the master site, http://introcs.cs.luc.edu.
+This is the primary site at Loyola University Chicago.
 
-.. csv-table:: Course Text Reading/Download Options
+.. csv-table:: Available Formats (Primary Site)
     :header: "Format", "URL"
     :widths: 15, 30
 
-    "Web Pages/Default Theme", "http://introcs.cs.luc.edu/book/latest/html/default/"
-    "Web Pages/Responsive Theme", "http://introcs.cs.luc.edu/book/latest/html/bootstrap"
-    "Zip archive", "http://introcs.cs.luc.edu/book/latest/download/default/html.zip"
-    "PDF", "http://introcs.cs.luc.edu/book/latest/download/default/comp170.pdf"
-    "ePub Experimental", "http://introcs.cs.luc.edu/book/latest/download/default/comp170.epub"
+    "Web Pages", "http://introcs.cs.luc.edu/html/"
+    "Web Pages (offline ZIP)", "http://introcs.cs.luc.edu/dist/html.zip"
+    "PDF", "http://introcs.cs.luc.edu/latex/comp170.pdf"
+    "ePub (Experimental)", "http://introcs.cs.luc.edu/epub/comp170.epub"
 
 .. csv-table:: Source Code Reading/Download Options
     :header: "Format", "URL"
@@ -28,11 +26,12 @@ These are provided at the master site, http://introcs.cs.luc.edu.
     "C# Examples (as pages)", "http://bitbucket.org/loyolachicagocs_books/introcs-csharp/"
     "C# Examples (as ZIP)", "https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip"
 
-Dr. Thiruvathukal's Site
---------------------------
 
-Dr. Thiruvathukal maintains an offsite web presence for his own site, http://thiruvathukal.com,
-which is a reliable mirror to the Primary Site above.
+
+Mirror Site (courseclouds.com)
+--------------------------------
+
+This is an offsite mirror at site5.com, maintained by Prof. Thiruvathukal.
 
 .. csv-table:: Available Formats (Primary Site)
     :header: "Format", "URL"
