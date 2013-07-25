@@ -129,6 +129,10 @@ html_theme_options = {
     # Switching to -1 shows all levels.
     'globaltoc_depth': 2,
 
+    # A list of tuples containting pages to link to.  The value should
+    # be in the form [(name, page), ..]
+    'navbar_links': [('Index', 'genindex')],
+
     # Include hidden TOCs in Site navbar?
     #
     # Note: If this is "false", you cannot have mixed ``:hidden:`` and
@@ -144,11 +148,11 @@ html_theme_options = {
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    'navbar_fixed_top': "false",
+    'navbar_fixed_top': "true",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "footer",
+    'source_link_position': "nav",
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
@@ -205,7 +209,7 @@ html_last_updated_fmt = '%d-%B-%Y %H:%M:%S'
 #html_domain_indices = True
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
