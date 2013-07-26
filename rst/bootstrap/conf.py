@@ -144,6 +144,7 @@ html_theme_options = {
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
+    # 'navbar_class': "navbar navbar-inverse",
     'navbar_class': "navbar navbar-inverse",
 
     # Fix navigation bar to top of page?
@@ -160,7 +161,7 @@ html_theme_options = {
     # such as "amelia" or "cosmo".
     #
     # Note that this is served off CDN, so won't be available offline.
-    'bootswatch_theme': "readable",
+    'bootswatch_theme': "united",
 }
 
 
