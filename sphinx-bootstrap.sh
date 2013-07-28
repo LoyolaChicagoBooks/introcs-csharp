@@ -6,5 +6,5 @@ rm -rf build/
 pushd rst
 make CONFIG=bootstrap html
 make CONFIG=bootstrap epub
-make CONFIG=default LATEXOPTS=' -interaction=batchmode ' latexpdf
+make CONFIG=bootstrap LATEXOPTS=' -interaction=batchmode ' latexpdf
 popd
