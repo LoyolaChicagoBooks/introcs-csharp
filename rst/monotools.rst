@@ -58,8 +58,8 @@ There are two major IDEs for .Net development, which we explain briefly below:
   using the Mono SDK on Windows and all other platforms (in
   particular, Linux and OS X).  The project started as MonoDevelop.  
   Now Xamarin is both a major contributor to the code and has commercial
-  versions for iOS development.  The name on the software is now
-  Xamarin Studio, though you may see references to MonoDevelop instead.
+  versions for iOS development.  *The name on the software is now*
+  **Xamarin Studio**, though you may see references to MonoDevelop instead.
 
 In addition, there is another Windows-specific IDE, SharpDevelop, that
 inspired the creation of Xamarin Studio. It is still actively maintained
@@ -87,13 +87,19 @@ As there is significant evolution of both the Microsoft
 and Mono *toolchains*--a fancy word we want you to know and a more
 elegant way of saying SDK--we'll issue updates to this book.
 
+Everything is free, but there are a number of steps.  Follow them carefully.
+
+
+
+
+
 .. index::
    double: mono; installation
 
 .. _install-mono:
 
-Installing Mono
----------------
+Installing Mono and Xamarin Studios
+------------------------------------
 
 Because the Mono Project web page is known to change frequently, these
 instructions are designed to be as generic as possible. If you have
@@ -104,13 +110,15 @@ tutoring help.
 OS X
 ----
 
+There are two downloads to get and install in order. Mono first:
+
 #. Go to <http://mono-project.com>.
 
 #. Look for the Mono downloads link. You want to get the latest *stable*
    version of Mono for OS X. For this class, you need version 2.10 or
    later.
 
-#. You may see a link to download *Runtime* or *SDK*. Make sure you select SDK.
+#. You may see a link to download *Runtime* or *SDK*. Make sure you select **SDK**.
 
 #. For OS X, the SDK is distributed as a DMG disk image. You'll need
    to download this image and double-click it. Open the image and run
@@ -144,6 +152,7 @@ Xamarin Studio Installation
 #. Make sure Mono is installed first. 
 
 #. Now go to <http://monodevelop.com> (not Xamararin for the open source version).
+   This link appears on the Mono page, too.
 
 #. As with Mono, we need to look for the downloads link. 
    You should download the *stable* version.
@@ -161,6 +170,8 @@ Xamarin Studio Installation
 
 Windows
 -------
+
+There are four packages, so this takes a while.  Mono first:
 
 #. Go to <http://mono-project.com>.
 
@@ -207,21 +218,26 @@ Xamarin Studio Installation
 
 #. Have Mono installed first. 
    
-#. Now go to <http://mono-develop.com>.
+#. Now go to <http://mono-develop.com>.  
 
 #. As with Mono, we need to look for the downloads link. You should
-   download the *stable* version. That should be at least numbered 4.0.8.
+   click the link for the download of the requirements for the *stable* version. 
+   That should be at least numbered 4.0.12.
 
-   Install the second and third packages first, then the Xamarin Studio installer.
-      
+   **Note however, that you will next**
+   **install two support packages**, 
+   .Net Framework 4.0, and then
+   GKT#,  
+   and install Xamarin Studio **last**. 
 
 #. As with Mono, you will see a self-extracting installer, 
    which you should run as before.
    
 #. If the preceding steps were successful, you can launch
-   Xamarin Studio by double-clicking the icon in your Applications
-   folder. (You won't know what to do with it yet, but at least you can
-   verify that it launches correctly and then close the window.)
+   Xamarin Studio by double-clicking the icon on the Desktop
+   or using the Start Menu. 
+   (You won't know what to do with it yet, but at least you can
+   verify at it launches correctly and then close the window.)
 
 Linux
 -----
