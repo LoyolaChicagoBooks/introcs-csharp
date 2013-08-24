@@ -41,7 +41,7 @@ Format agreements:
 			   :language: none
 	
 		
-		:file:, :menuitem:, :keyb: consistently used.  
+		:file:, :menuitem:, :kbd: consistently used.  
 
         index names consistent:  
             topic lower case, 
