@@ -1,0 +1,54 @@
+
+.. index:: 
+   double:Console; WriteLine
+   
+
+.. _write-to-console:
+   
+Writing to the Console
+======================
+   
+In interactive use of csharp, you can type an
+expression and immediately see the result of its evaluation. This
+is fine to test out syntax and maybe do simple calculator
+calculations. In a regular C# program run from a file like in
+:ref:`sample-program`, 
+you must explicitly give instructions to print to a window
+like where csharp runs: the current 
+console or terminal window.
+
+This is accomplished through a function with a long name: ``Console.WriteLine``.
+Like with math, you can pass it a value to work on by placing it in
+parentheses after the name of the function.  Unlike in high school algebra classes,
+in C# we have many types of data to supply other than numbers.  The simplest
+way to use the ``Console.WriteLine`` function is to give it a string.   
+We can demonstrate in csharp.  The response is just the line that would
+be printed in a regular program:
+
+.. code-block:: none
+
+    csharp> Console.WriteLine("Hello, world!");
+    Hello, world!
+
+What is printed to the screen does not have the quotes we needed to
+define the literal string.
+
+``Console`` is a class in C# maintained by the system, that
+interacts with the terminal or console window where text output 
+appears for the program.  A function defined in that class is WriteLine.
+To refer to a function like ``WriteLine`` in another class, you must indicate
+the location of the function with the "dot" notation shown:
+class name, then ``.``, then the function, 
+gives the more elaborate name needed in the program.
+
+The string printed can be the result of evaluating an expression, for instance
+concatenating:
+
+
+.. code-block:: none
+
+    csharp> int total = 5;
+    csharp> Console.WriteLine("All together: " + total);
+    All together: 5
+
+Printing is better shown off in a real program....
