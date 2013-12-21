@@ -125,10 +125,9 @@ We have started to refer to whole programs that we have written.  You will
 want to have your own copies to test and modify for related work.
 
 All of our examples are set up in a Xamarin Studio solution in our 
-.
-`zip file that you can download <http://introcs.cs.luc.edu/book/latest/download/default/source.zip>`_.
+`zip file that you can download <https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip>`_.
 
-Unzip source.zip in a place you control.  The ``examples`` subdirectory is
+Unzip default.zip in a place you control.  The ``examples`` subdirectory is
 a Xamarin Studio solution.  
 
 There are various way to access our files.  
@@ -175,7 +174,7 @@ Copying and Modifying Our Example Xamarin Studio Projects
 ----------------------------------------------------------------
 
 We strongly encourage you not to modify our examples in place, if you want
-to keep the changes, because we will make additions and modifications to source.zip,
+to keep the changes, because we will make additions and modifications to default.zip,
 and the easiest thing to do is to unzip the new version on top of the old version,
 clobbering any changes that you made to files.
 

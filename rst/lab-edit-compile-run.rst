@@ -69,8 +69,8 @@ a Mac.  Windows versions should be similar.
     Using Spotlight is quick on a Mac.
 
 #.  You get a Welcome screen.  Toward the upper left corner is a link for 
-    New Solution.  Click on it.  Alternately you can follow the path through the menus
-    Go File -> New -> Solution.  
+    New Solution.  Click on it.  Alternately you can follow the path through the menus:
+    File -> New -> Solution.  
    
     ..  image:: images/lab-edit/newSolution.png
      	:alt: Xamarin Studio Start Image

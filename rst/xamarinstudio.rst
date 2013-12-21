@@ -7,9 +7,10 @@ Xamarin Studio
 
 Several sections have given basics for Xamarin Studio:
 
-  | :ref:`install-md`
+  | :ref:`install-md-win`
+  | or :ref:`install-md-osx`
   | :ref:`lab-edit-compile-run` 
-  | :ref: `xamarinstudio-reminders`
+  | :ref:`xamarinstudio-reminders`
   | :ref:`our-md-projects`
 
 ..  later  

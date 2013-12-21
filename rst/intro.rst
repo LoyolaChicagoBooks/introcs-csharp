@@ -7,9 +7,9 @@ Here are some important web links:
 
 .. index:: book examples download
    examples download
-   source download, source.zip
+   source download, default.zip
 
-*   `The course example file, source.zip <https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip>`_
+*   `The course example file, default.zip <https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip>`_
     is the *essential resource* to download and unzip onto your machine.
     Computer programs are designed to run on a computer and solve problems.  
     Though the initial problems will be tiny and often silly, 
@@ -20,7 +20,7 @@ Here are some important web links:
     Except on very geometrically oriented topics, 
     *text-oriented learners may be happiest just reading the book*.  
 
-*   https://luc.box.com/s/ggx0n1a0ijf8ctikxjo4/1/611829684 is a box.com
+*   https://luc.box.com/CSharpVideos is a box.com
     folder containing all the videos.  
     The numbers
     at the beginning of the titles are chapter and section numbers from the text.
@@ -34,21 +34,12 @@ Here are some important web links:
       
     There is a mixture of new high-def videos and older
     lower resolution
-    800x600 pixel videos.  See 00README.html in that folder
+    800x600 pixel videos.   In that folder see 00README.html,
+    https://luc.box.com/s/2lqak4pbsdcyw08ds3ia,
     for a description of the differences
     between the old videos and the latest update of the online book.
     
     Box does not let you stream videos automatically in a *playlist* sequence.
-    Most of the videos for the beginning of the book are created more recently in
-    high-definition, in a form that YouTube handles in both full or lower resolution in
-    the *YouTube playlist*
-    https://www.youtube.com/playlist?list=PLc5TVkj91XZhxRSJHsDoJzX5K1XKBAFLH.
-    The older videos' size does not play well on YouTube, so 
-    *only the newer videos are in the playlist*.  
-    This is a good place to play through at least *the first five chapters of the book*,
-    plus some *isolated* later sections' videos. 
-    *YouTube does not supply a direct way to download and save videos*, 
-    so use the Box folder for that.
     
     For those who learn best with
     spoken words combined with written words, the videos should be a good
