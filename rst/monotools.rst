@@ -71,7 +71,7 @@ Our Approach
 ------------
 
 In the interest of providing a consistent experience for our students who use
-various operating systems on their on=wn machines,
+various operating systems on their own machines,
 we will be using the multi-platform Mono (the SDK).
 
 We find the IDE Xamarin Studio convenient to integrate everything for a beginner,
@@ -110,13 +110,18 @@ tutoring help.
 OS X
 ----
 
+.. warning::
+   Xamarin Studio needs at least version 10.8 of OSX.  
+   If you have an older version, you can upgrade the operating system, or
+   possibly use an older version of Xamarin Studio.  In that case, ask for help.
+   
 There are two downloads to get and install in order. Mono first:
 
 #. Go to <http://mono-project.com>.
 
 #. Look for the Mono downloads link. You want to get the latest *stable*
    version of Mono for OS X. For this class, you need version 2.10 or
-   later.
+   later, though preferably 3.2.4 or later.
 
 #. You may see a link to download *Runtime* or *SDK*. Make sure you select **SDK**.
 
@@ -144,9 +149,9 @@ Here is how to do a quick sanity check of your Mono setup:
 
 .. index:: Xamarin Studio; installation
 
-.. _install-md:
+.. _install-md-osx:
 
-Xamarin Studio Installation
+Xamarin Studio Installation - OSX
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Make sure Mono is installed first. 
@@ -213,8 +218,11 @@ own programs.  When working, you can just leave this window open,
 saving it for later use, 
 (or close and reopen later....)  
 
-Xamarin Studio Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _install-md-win:
+
+
+Xamarin Studio Installation - Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Have Mono installed first. 
    
