@@ -49,8 +49,8 @@ to the current directory.  In that case do *not* start with the slash that would
 indicate the root directory.  For example, if the current directory is
 your home directory, you likely have a subdirectory :file:`Downloads`, and the 
 :file:`Downloads`
-directory might contain :file:`default.zip`.  From the home directory, this file could
-be referred to as :file:`Downloads\\default.zip` or  :file:`Downloads/default.zip` on a Mac.
+directory might contain :file:`examples.zip`.  From the home directory, this file could
+be referred to as :file:`Downloads\\examples.zip` or  :file:`Downloads/examples.zip` on a Mac.
 
 Relative to a Xamarin Studio project directory, the current directory for execution
 of the program is :file:`bin\\Debug` or  :file:`bin/Debug` on a Mac.
