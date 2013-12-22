@@ -87,7 +87,8 @@ no function value is produced, the word ``void`` is used.
 
 Every program must start running somewhere.  In C# that is at a function with
 name ``Main``.  So our program starts running here.  
-This syntax for this function needs to start just like here, with ``static void Main``.
+This syntax for this function needs to start just like here, with 
+``static void Main``.
 
 Even though this is not a mathematical function producing a value, a function in
 C# must be followed by parentheses ``( )``.
@@ -100,7 +101,8 @@ brace on the second to last line of the program.
    :lines: 7
    
 A program works with data of many different possible types.  One type
-is ``double``.  A ``double`` can hold a number, including a possible fractional part.
+is ``double``.  A ``double`` can hold an approximate numerical value, 
+including a possible fractional part.
 
 To refer to data in a program we use names called *variables*.  
 This line says that
@@ -126,7 +128,7 @@ In this case we follow a convention, using all capital letters, to
 suggest that the value of ``HEIGHT`` will be constant (unchanging), 
 and we assign its value at the same time with ``= 8``.  This naming of
 constants is not
-strictly necessary, but it makes the program easier to read.
+strictly necessary, but it makes the program's intention easier to follow.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 11
@@ -153,7 +155,7 @@ rather than ``WriteLine``.  The ``WriteLine`` function wrote a whole line -
 see that the output next *after* the ``WriteLine`` statement
 started on the next line.
 Here ``Write`` does not advance the printing position to the next line
-after it:  The 20.5 of the sample out follows the string on the same line.
+after it.
 
 This statement serves as a *prompt*: letting the user know that information is being 
 requested (a room length).
@@ -165,7 +167,8 @@ Here is where the program takes in the information requested from the user.
 Its action is actually right to left:  ``Console.ReadLine`` is another
 function available with the ``Console``, that reads a line typed in by the
 user on the keyboard.  Here in the sample run, 
-on the same line as the prompt string,
+on the same line as the prompt string 
+(because of the previous ``Write``, not ``WriteLine``),
 the user types
 ``20.5`` and the Enter or Return key.
 

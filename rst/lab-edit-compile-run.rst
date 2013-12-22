@@ -58,6 +58,8 @@ will provide by far the best experience for you in the course, where
 you can keep adding onto previous efforts without having to start over
 each time.
 
+.. _steps:
+
 Steps
 -----
 

@@ -178,6 +178,10 @@ Windows
 
 There are four packages, so this takes a while.  Mono first:
 
+.. maybe
+   Dr. Yacobellis has a video showing Windows installation.
+   https://connect.luc.edu/p4hmzk2kbmt/
+
 #. Go to <http://mono-project.com>.
 
 #. Look for the Mono downloads link. You want to get the latest

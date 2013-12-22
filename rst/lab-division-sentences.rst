@@ -47,7 +47,8 @@ We want to develop a program that can do the following:
 - Calculate the quotient and the remainder (e.g. 10/4 = 2 with a
   remainder of 2 = 2 2/4).
 
-Your final program should work as in this sample run, and use the same format:
+Your final program should work as in this sample run, and use the same 
+labeled format:
 
 .. code-block:: none
 
@@ -125,7 +126,9 @@ character (which must be a *letter* or an *underscore*):
 We have shown everything you need to understand to
 complete this lab. To help you
 get started, we provided this simple *stub* in the example file
-:repsrc:`do_the_math_stub/do_the_math.cs`.  
+:repsrc:`do_the_math_stub/do_the_math.cs`. 
+You are encouraged to copy this into your own project as reviewed 
+after the lab in :ref:`xamarinstudio-reminders`.
 
 .. index:: comment
    /* ... */ comment

@@ -129,14 +129,15 @@ All of our examples are set up in a Xamarin Studio solution in our
 
 The zip file and the folder it unzips to have a ridiculously long name 
 starting with "loyolachicagocs...".  We suggest you *rename the folder*
-`examples` to match the name of the Xamarin Studio solution it contains.  
+``examples`` to match the name of the Xamarin Studio solution it contains.  
 
 There are various way to access our files.  
 
 #. One way is to look at individual files from your download
    under our examples directory.  
 #. If you open the examples solution in Xamarin Studio, 
-   you can select files from the Solutions pad.
+   you can select files from the Solutions pad. 
+   (Instructions are in the next section.)
 #. In the notes we refer to individual code file names that are hyperlinked.
    They link to the *latest version* in our online source repository.
    You get a display of color-coded web page with numbered lines.  If you
@@ -181,7 +182,7 @@ your modified files after downloading a later version of the examples.
 
 
 If you do want to alter our code, we suggest you copy it to a project in your
-solution ("work", discussed before).
+solution ("work", discussed in the first lab in the :ref:`steps`).
 
 #. Open your solution.
 #. Create a new project, maybe with the same name as the one we had.  If it was a
@@ -189,14 +190,16 @@ solution ("work", discussed before).
 #. In the Solution Pad open the menu on the new project, select, Add, and then in the
    further submenu, select Add Files....
 #. This brings up an operating system open-file dialog.  Switch folders into our
-   example projects.  Select the files you want to copy.
+   example projects.  Select the files you want to copy.  
+   (It makes things easier if you put the examples folder 
+   right beside your work folder.)
 #. A further dialog window pops up, with the choice **Copy** selected.
    Click to approve copy (as opposed to move or link).  
 #. Now the desired files should appear in your project.  
    If you intended to copy everything for a project, test by running the project.
    Even our stub projects should compile, though a stub project may not do anything
    when you run it until you add your own code to it.  To make successful incremental
-   additions, it is always good to start from something the compiles!
+   additions, it is always good to start from something that compiles!
 
 .. _AdditionProblem:
 
@@ -217,7 +220,7 @@ Write a program, ``quotient.cs``, that
 prompts the user for two integers, and then prints them out in a
 sentence with an integer division problem like ::
 
-   The quotient of 14 and 3 is 4 with a remainder of 2
+   The quotient of 14 and 3 is 4 with a remainder of 2.
 
 Review :ref:`Division-and-Remainders` if you forget the integer
 division or remainder operator.
