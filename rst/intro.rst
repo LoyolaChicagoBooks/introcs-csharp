@@ -14,7 +14,7 @@ Here are some important web links:
     The zip file and the folder it unzips to have a ridiculously long name 
     starting with "loyolachicagocs...".  
     We suggest you *rename the unzipped folder*
-    `examples` to match other names we use.  
+    ``examples`` to match later references.  
     
     Computer programs are designed to run on a computer and solve problems.  
     Though the initial problems will be tiny and often silly, 
@@ -58,17 +58,20 @@ In various formats, be aware of these helpful features:
     
     * We have picked out particularly important words, phrases, and symbols,
       and put them in our 
-      `index <genindex.html>`_, which is accessible from each web page.
+      `index <genindex.html>`_, which is accessible from the banner 
+      of each web page.  The banner stays visible if the window is big enough,
+      and if the window is smaller, the baner only appears at the beginning 
+      of the page with a dropdown menu for most of the options.
     * In a web version on our website, you can use the 
       `Search option <search.html?q=&check_keywords=yes&area=default>`_ to
-      look for words, in general.  The location of the search link varies depending on
-      theme being used, and can be hidden.  This does *not* work on a downloaded 
+      look for words, in general.  The search link is also accessible from
+      the web page banner.  This does *not* work on a downloaded 
       local html copy.
     * We start with a brief table of contents for the whole book.  
       *In the web versions*
       you can get the most detailed table of contents for a single chapter by 
-      clicking on a chapter title in the main table of contents or the current
-      chapter title in the top banner on a regular content page.
+      clicking on a chapter title in the main table of contents or a 
+      chapter title in the Site drop-down menu in the banner.
 
 Her are further links that may be useful in our repository:
 
@@ -84,10 +87,8 @@ Her are further links that may be useful in our repository:
     set of sources in the repository.  The sources are
     largely plain text files.
     
-*   http://bitbucket.org/loyolachicagocs_books/introcs-csharp/src
-    is the part of our repository containing the *latest versions*
+*   http://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
+    is another repository containing the *latest versions*
     of the source code files.  
-    You can quickly browse and view individual files in the examples folder.
+    You can quickly browse and view individual files under the Source tab.
     Example file links throughout this text refer to these repository files.
-
-

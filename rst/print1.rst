@@ -32,8 +32,8 @@ be printed in a regular program:
     csharp> Console.WriteLine("Hello, world!");
     Hello, world!
 
-What is printed to the screen does *not* have the quotes we needed to
-define the literal string inside the program.
+What is printed to the screen does *not* have the quotes which we needed to
+define the literal string ``"Hello, world!"`` inside the program.
 
 ``Console`` is a C# class maintained by the system, that
 interacts with the terminal or console window where text output 

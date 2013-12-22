@@ -2,15 +2,31 @@
 
 .. _alt-formats:
     
-Downloading Text and Source Code
-===================================
+Downloading Text, Source Code, and Videos
+==========================================
 
-Primary Site (cs.luc.edu)
----------------------------
+Here are tables that summarize the links already described more fully in the 
+last section, plus several further versions.  The book has a primary site and a mirror,
+in case the first is down.
+The examples and videos are not mirrored.
+
+Example Source Code and Videos
+---------------------------------
+
+.. csv-table:: Source Code and Videos
+    :header: "Format", "URL"
+    :widths: 15, 30
+
+    "C# Examples (as pages)", "http://bitbucket.org/loyolachicagocs_books/introcs-csharp/"
+    "C# Examples (as ZIP)", "https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip"
+    "Videos", "https://luc.box.com/CSharpVideos"
+
+Primary Book Site (cs.luc.edu)
+---------------------------------
 
 This is the primary site at Loyola University Chicago.
 
-.. csv-table:: Available Formats (Primary Site)
+.. csv-table:: Available Book Formats (Primary Site)
     :header: "Format", "URL"
     :widths: 15, 30
 
@@ -19,21 +35,12 @@ This is the primary site at Loyola University Chicago.
     "PDF", "http://introcs.cs.luc.edu/latex/comp170.pdf"
     "ePub (Experimental)", "http://introcs.cs.luc.edu/epub/comp170.epub"
 
-.. csv-table:: Source Code Reading/Download Options
-    :header: "Format", "URL"
-    :widths: 15, 30
-
-    "C# Examples (as pages)", "http://bitbucket.org/loyolachicagocs_books/introcs-csharp/"
-    "C# Examples (as ZIP)", "https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip"
-
-
-
-Mirror Site (courseclouds.com)
---------------------------------
+Mirror Book Site (courseclouds.com)
+------------------------------------
 
 This is an offsite mirror at site5.com, maintained by Prof. Thiruvathukal.
 
-.. csv-table:: Available Formats (Primary Site)
+.. csv-table:: Available Book Formats (Mirror Site)
     :header: "Format", "URL"
     :widths: 15, 30
 
@@ -42,10 +49,4 @@ This is an offsite mirror at site5.com, maintained by Prof. Thiruvathukal.
     "PDF", "http://introcs.cs.courseclouds.com/latex/comp170.pdf"
     "ePub (Experimental)", "http://introcs.cs.courseclouds.com/epub/comp170.epub"
 
-.. csv-table:: Source Code Reading/Download Options
-    :header: "Format", "URL"
-    :widths: 15, 30
-
-    "C# Examples (as pages)", "http://bitbucket.org/loyolachicagocs_books/introcs-csharp/"
-    "C# Examples (as ZIP)", "https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip"
 
