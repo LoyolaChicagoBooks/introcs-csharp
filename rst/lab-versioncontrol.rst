@@ -580,7 +580,7 @@ is required. We're not going into all of those details in this lab, of course, b
 likely revisit this topic as we get closer to the team project, which we think will make
 you thankful for having a version control system.
 
-Getting our book, examples, and projects
+Getting our examples
 -----------------------------------------
 
 We're going to conclude by taking this opportunity to introduce you to how *we* (Drs. 
@@ -590,38 +590,35 @@ a team on developing the book and examples.
 #. Pick a different location (outside of your repository folder and its subfolders) 
    to check out our stuff from Bitbucket::
 
-    hg clone https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/introcs-csharp
+    hg clone https://gkthiruvathukal@bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
+
 
 #. Don't worry about breaking anything. Because Bitbucket knows what users are allowed
    to push changes to our repository, anything you change in your copy won't affect us.
-   You probably are interested in how to grab our examples and Xamarin Studio projects. If
-   you visit our site at Bitbucket, you would see a screen like this when viewing our
-   repository:
+   
+   ..  old    
+       You probably are interested in how to grab our examples and Xamarin Studio projects. If
+       you visit our site at Bitbucket, you would see a screen like this when viewing our
+       repository:
 
-   .. image:: images/lab-hg/introcs-repo.png
-      :height: 400 px
-      :alt: Xamarin Studio Image
-      :align: center
+       .. image:: images/lab-hg/introcs-repo.png
+          :height: 400 px
+          :alt: Xamarin Studio Image
+          :align: center
 
-#. There are several folders, but the ones of interest to you include ``examples`` and
-   ``projects``, where we keep our basic examples and Xamarin Studio projects, respectively.
+#. Look under the source tab on the project page.
 
-#. For example, if you performed a clone to introcs-csharp, you should be able to change
-   directory to introcs-csharp/source/examples to see all of our code examples::
+#. For example, if you performed a clone to introcs-csharp-examples, you should be able to change
+   directory one starting with 
+   loyolachicagocs_books-introcs-csharp-examples-... to see all of our code examples::
 
-        gkt@gkt-mini:~/introcs-csharp/source/examples$ ls
+        gkt@gkt-mini:~/loyolachicagocs_books-introcs-csharp-examples-662ea45b9965$ ls
         addition1
         ...
         write_test
         
    (Most output has been eliminated for conciseness.)
 
-#. You can explore introcs-csharp/source/examples to see our programs. 
+#. You can explore subfolders to see our programs. 
 
-#. There are other folders, too. The ``rst`` folder contains the "source code" for the
-   book itself. The ``devel`` folder contains scripts to build the HTML, PDF, and ePub
-   versions of our book--using a cool system named Sphinx (from http://sphinx.pocoo.org).
-   It's well beyond the scope of our course to talk about this in any kind of detail but
-   suffice it to say, we use version control to coordinate our work to create these 
-   materials and will continue to do so when it comes to making improvements in this
-   and future courses.
+

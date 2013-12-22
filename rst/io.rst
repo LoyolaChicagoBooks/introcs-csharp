@@ -127,8 +127,9 @@ want to have your own copies to test and modify for related work.
 All of our examples are set up in a Xamarin Studio solution in our 
 `zip file that you can download <https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip>`_.
 
-Unzip default.zip in a place you control.  The ``examples`` subdirectory is
-a Xamarin Studio solution.  
+The zip file and the folder it unzips to have a ridiculously long name 
+starting with "loyolachicagocs...".  We suggest you *rename the folder*
+`examples` to match the name of the Xamarin Studio solution it contains.  
 
 There are various way to access our files.  
 
@@ -163,8 +164,8 @@ Running our Xamarin Studio Examples Solution
 If you are just starting Xamarin Studio, and you have *not* run our solution before:
 
 #.  On the Welcome screen select the button Open Solution or File.
-#.  You get anopen-file dialog.  Navigate to our example solution.
-    (It must be unzipped already!)
+#.  You get an open-file dialog.  Navigate to our example solution.
+    (It must be unzipped already!  We assume you renamed the folder `examples`.)
 #.  Select :file:`examples/examples.sln`.
 
 The next time you come to the Welcome screen, our examples should be listed in the
@@ -173,10 +174,11 @@ Recent Projects, and you can click to open it directly.
 Copying and Modifying Our Example Xamarin Studio Projects
 ----------------------------------------------------------------
 
-We strongly encourage you not to modify our examples in place, if you want
-to keep the changes, because we will make additions and modifications to default.zip,
-and the easiest thing to do is to unzip the new version on top of the old version,
-clobbering any changes that you made to files.
+We strongly encourage you *not* to modify our examples in place, if you want
+to keep the changes, because we will make additions and modifications to 
+our source download, and we would not want you to overwrite any of
+your modified files after downloading a later version of the examples.
+
 
 If you do want to alter our code, we suggest you copy it to a project in your
 solution ("work", discussed before).

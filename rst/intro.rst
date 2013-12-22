@@ -7,10 +7,15 @@ Here are some important web links:
 
 .. index:: book examples download
    examples download
-   source download, default.zip
+   source download
 
-*   `The course example file, default.zip <https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip>`_
+*   `The course example file, <https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip>`_
     is the *essential resource* to download and unzip onto your machine.
+    The zip file and the folder it unzips to have a ridiculously long name 
+    starting with "loyolachicagocs...".  
+    We suggest you *rename the unzipped folder*
+    `examples` to match other names we use.  
+    
     Computer programs are designed to run on a computer and solve problems.  
     Though the initial problems will be tiny and often silly, 
     they will serve as learning tools to prepare for substantive problems.
@@ -24,6 +29,8 @@ Here are some important web links:
     folder containing all the videos.  
     The numbers
     at the beginning of the titles are chapter and section numbers from the text.
+    These make it easy to sequence the videos, even though there is not an
+    automatic *playlist*.
     The listing in box.com takes up several pages.
     These box.com videos may be 
     
@@ -38,8 +45,6 @@ Here are some important web links:
     https://luc.box.com/s/2lqak4pbsdcyw08ds3ia,
     for a description of the differences
     between the old videos and the latest update of the online book.
-    
-    Box does not let you stream videos automatically in a *playlist* sequence.
     
     For those who learn best with
     spoken words combined with written words, the videos should be a good
