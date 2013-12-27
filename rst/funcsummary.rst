@@ -123,8 +123,8 @@ Static Variables
 ----------------
 
 #.  There may be a declaration prefaced by the word ``static`` that appears 
-    inside a class and outside of any function definition in the class.
-    Static variable are visible within the functions of the class, and may
+    *inside* a class and *outside* of any function definition in the class.
+    Static variables are visible within each function of the class, and may
     be used by the functions.  [:ref:`Static-Variables`]
     
 #.  A common use of a static variable is to give a name to a constant 
