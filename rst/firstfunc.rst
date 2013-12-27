@@ -38,8 +38,9 @@ associate the name with whole song by using a new
 on method definitions.  Later we will see definitions that are
 attached to a particular object.
 For now the simpler cases do not involve creating a type of object, 
-but there is an extra word needed to distinguish a function definition 
-*not* attached to  on object, ``static``.    
+but there is an extra word, ``static``, 
+needed to distinguish a function definition 
+*not* attached to  on object.    
 We will also shortly look at functions more like 
 the functions from math class, that produce or *return* a value.  In 
 this simple case we will not deal with returning a value.  
@@ -77,8 +78,8 @@ consistent amount. Three spaces is a common indentation.
 
 The whole definition does just that: *defines* the meaning of the
 name ``HappyBirthdayEmily``, but it does not do anything else yet -
-for example, the definition itself does not make anything be
-printed yet. This is our first example of altering the order of
+for example, the definition itself does not yet make anything be
+printed. This is our first example of altering the order of
 execution of statements from the normal sequential order. This is
 important: the statements in the function *definition* are *not*
 executed as C# first passes over the lines.  

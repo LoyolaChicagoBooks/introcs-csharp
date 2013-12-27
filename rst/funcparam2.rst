@@ -59,8 +59,8 @@ of actual parameters in the three calls to SumProblem.
 Quotient Function Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Modify :file:`quotient.cs` from
-:ref:`QuotientProblem` and save it
+Modify :file:`quotient_format.cs` from
+:ref:`QuotientFormat` and save it
 as ``quotient_prob.cs``.
 You should create a function ``QuotientProblem`` with int
 parameters.  Like in the earlier versions, it should print a full
@@ -69,3 +69,5 @@ sentence with inputs, quotient, and remainder.
 should test the ``QuotientProblem`` function
 on several sets of literal values, and also test the function with
 input from the user.
+
+

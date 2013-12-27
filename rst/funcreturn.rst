@@ -144,6 +144,37 @@ printing is one possibility, done in
 
 .. literalinclude:: ../source/examples/addition2/addition2.cs
 
+This example constructs the sentence using the string ``+`` operator.
+Generating a string with substitutions using a format string 
+in ``Console.Write`` is neater, but 
+we are forced to directly print the string,
+and not remember it for later arbitrary use.  
+
+.. index::
+   double: string; Format
+
+.. _string-format:
+   
+We introduce 
+the C# library function  ``string.Format``, which does just what we want:  
+The parameters
+have the same form as for ``Console.Write``, but the formatted string is
+*returned*.
+
+Here is a revised version of the function ``SumProblemString``, 
+from example :repsrc:`addition2a/addition2a.cs`:
+
+.. literalinclude:: ../source/examples/addition2a/addition2a.cs
+   :start-after: chunk
+   :end-before: chunk
+
+The only caveat with ``string.Format`` is that
+there is *no* special function corresponding to ``Console.WriteLine``,
+with an automatic terminating newline.
+You can generate a newline with string.Format:  Remember the
+escape code ``"\n"``.  Put it at the end to go on to a newline.
+
+
 **In class recommendation**:  Improve example :repsrc:`painting/painting.cs`
 with functions.  Copy it to a file :file:`painting_input.cs` in your
 own project and modify it.
@@ -162,3 +193,5 @@ thing, but everywhere:
   than printing the string directly. 
 * Have ``Main`` print
   the result of each call to the ``QuotientString`` function.
+
+Use ``string.Format`` to create the sentence that you return.

@@ -131,6 +131,15 @@ produces
 .. code-block:: none
 
     The set is {2, 3}.
+    
+.. _QuotientFormat:
+
+Exercise for Format
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program, ``quotient_format.cs``, that behaves like
+:ref:`QuotientProblem`, but generate the sentence using 
+``Console.WriteLine`` with a format string and no ``+`` operator.
 
 
 .. index:: 

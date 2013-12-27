@@ -227,11 +227,12 @@ you get the opposite effect, changing x rather than y, with *no* error statement
 Be careful!
 
 There is some weirdness in csharp because it adds special syntax for expressions
-that does not appear in regular programs, but it also wants to allow syntax
+whuch does not appear in regular programs, but it also wants to allow syntax
 of regular programs.  Some conflict can occur when trying to display 
 an expression, sometimes leading to csharp giving 
 a strange error for apparently no reason.  In that case, 
-try putting parentheses around the expression:
+try putting *parentheses* around the expression, which is always legal for an
+expression, but would never start a regular statement:
 
 .. code-block:: none
 
