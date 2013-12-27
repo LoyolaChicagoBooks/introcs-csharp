@@ -145,7 +145,7 @@ and change it to ::
         Console.WriteLine("x is:");
         Console.WriteLine("  positive");
 
-We am not going to get the behavior we want.  
+We are not going to get the behavior we want.  
 The word "positive" will *always* be printed.
 
 If we had first taken a bit more effort originally to write ::

@@ -9,7 +9,7 @@ Interactive ``while`` Loops
 ---------------------------
 
 Next we consider a particular form of ``while`` loops:  Interactive while loops
-involve input from the user each time through.  
+involve input from the user each time through the loop.  
 We consider them now for three reasons:
 
 - Interactive ``while`` loops have one special 'gotcha'
@@ -162,7 +162,7 @@ easy to think
    
 WRONG!  The initialization code with
 the input from the user is *before* the loop.  C# execution approaches the 
-test in the ``while`` headings from *two* places: 
+test in the ``while`` headings from *two* places at different times: 
 the initialization *and* coming back
 from the bottom of the loop.  To get a *new* value to test, we must
 *repeat* getting input from the user at the bottom of the loop body.  
@@ -195,16 +195,16 @@ Do not forget to return it at the end.
    :start-after: chunk
    :end-before: chunk
 
-You can try this full example, :repsrc:`input_in_range1/input_in_range1.cs`.  Look at it
-and then try compiling and running.  Look at the Main code.
+You can try this full example, :repsrc:`input_in_range1/input_in_range1.cs`.  
+Look at it and then try compiling and running.  
+
+Look at the Main code.
 It is redundant - the limits are written both in the prompt and in the
 parameters.  We can do better.  In general we endeavor to supply data only
-once, and let the program use it in several places if it needs to.  In this
-case we can complete the last part of the prompt automatically in the code:
-
-There are two approaches here:  The caller could give a more explicit
-prompt.  Since the limits are given as parameters, anyway, we prefer
-to have the program elaborate the prompt.  If the limits are -10 and 10,
+once, and let the program use it in several places if it needs to.  
+Since the limits are given as parameters, anyway, we prefer
+to have the program elaborate the prompt automatically.  
+If the limits are -10 and 10,
 automatically add to the prompt something like (-10 through 10).
 
 We could use  ::
@@ -215,7 +215,8 @@ but we need the code twice, producing the same string each time.
 If you recall the  
 :ref:`string.Format function <string-format>`, then we can just create
 the string once, and use it twice.  
-Here is a revised version, in example :repsrc:`input_in_range2/input_in_range2.cs`, 
+Here is a revised version, in example 
+:repsrc:`input_in_range2/input_in_range2.cs`, 
 without redundancy in the prompts in ``Main``:
 
 .. literalinclude:: ../source/examples/input_in_range2/input_in_range2.cs
