@@ -152,12 +152,18 @@ This last version illustrates several important ideas:
    values. In general an actual parameter can be an expression. The
    expression is evaluated before it is passed in the function call.
    One of the simplest expressions is a plain variable name, which is
-   evaluated by replacing it with its associated value. Since it is
-   only the value of the actual parameter that is passed, not any
-   variable name, there is *no need* to have a variable name used in
-   an actual parameter match a formal parameter name. (Here we have the
+   evaluated by replacing it with its associated value. 
+   Note this important situation in the example:  
+   We have the
    value of ``userName`` in ``Main`` becoming the value of ``person``
-   in ``HappyBirthday``.)
+   in ``HappyBirthday``.  We used different names to illustrate the
+   important fact:  
+   
+   ..  note::
+       Only the *value* of the actual parameter is passed, not any
+       variable name, so there is *no need* to have a match between a variable name 
+       used in
+       an actual parameter and the formal parameter name.
 
 .. comment get this idea in somewhere else?
 

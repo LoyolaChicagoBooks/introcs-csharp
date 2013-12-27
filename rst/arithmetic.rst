@@ -186,12 +186,6 @@ Addition, subtraction, and multiplication work as you would expect for
     csharp> 0.5 * (2.0 + 4.5);
     3.25
 
-
-.. note::
-   
-   In C#, the result of the / operator depends on the
-   *type* of the operands, not on the *mathematical value* of the operands.
-
 If one or both
 of the operands to ``/`` is a ``double``, the result is a ``double``, 
 close to the actual quotient.  
@@ -207,6 +201,11 @@ only approximate in general.  For example:
 
 Small errors are also possible with the ``double`` type 
 and the other arithmetic operations.  See :ref:`type-double`.
+
+.. note::
+   
+   In C#, the result of the / operator depends on the
+   *type* of the operands, not on the *mathematical value* of the operands.
  
 Division with ``int`` data is handled completely differently.  
 

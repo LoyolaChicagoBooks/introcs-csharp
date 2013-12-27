@@ -211,33 +211,16 @@ We could use  ::
     
     Console.Write(" ({0} through {1}) ", lowLim, highLim);
     
-but we need the code twice, and it is quite a mouthful....
-  
-Thus far we have only seen the use of format strings when immediately 
-printing with ``Console.Write`` (or ``WriteLine``).
-Here we would like to generate a string, for *use later*.  
-
-.. index::
-   double: string; Format
-   
-We introduce 
-the C# library function  ``string.Format``, which does just what we want:  
-The parameters
-have the same form as for ``Console.Write``, but the formatted string is
-*returned*.
-
+but we need the code twice, producing the same string each time.
+If you recall the  
+:ref:`string.Format function <string-format>`, then we can just create
+the string once, and use it twice.  
 Here is a revised version, in example :repsrc:`input_in_range2/input_in_range2.cs`, 
 without redundancy in the prompts in ``Main``:
 
 .. literalinclude:: ../source/examples/input_in_range2/input_in_range2.cs
    :start-after: chunk
    :end-before: chunk
-
-The only caveat with ``string.Format`` is that
-there is *no* special function corresponding to ``Console.WriteLine``,
-with an automatic terminating newline.
-You can generate a newline with string.Format:  Remember the
-escape code ``"\n"``.  Put it at the end to go on to a newline.
 
 This time around we did the user input correctly, with the 
 request for new input *repeated* at the end of the loop.

@@ -137,8 +137,25 @@ around to be reminded of the signature and use of your functions.
 
 .. _library-projects-in-xamarinstudio:
 
-Library Projects in Xamarin Studio
-----------------------------------------
+Library Projects in Xamarin Studio (Optional)
+------------------------------------------------
+
+Xamarin Studio has a multi-step process for creating a library project and for separately
+referencing it in other projects.  The *advantage* of this approach is when you
+want to change the implementation but not the interface to library functions, you just do
+it once, in the library project.  Other projects reference that project.
+
+Some students find the Xamarin Studion overhead of setting up and referencing 
+library projects onerous.
+As a  practical matter with files that you want to reuse but are not likely to change, 
+you can just copy the source file into the new project, and avoid the 
+Xamarin Studio library setup overhead.  
+Many of our already created example projects use a library version
+of UIF and several other utility files.  You can do the same with your solutions, 
+following the instructions below, or you can just copy in the needed utility
+files for each project.
+
+Hence the rest of the section here is *optional*:
 
 Try adding a reference yourself.  Follow these instructions:
 
