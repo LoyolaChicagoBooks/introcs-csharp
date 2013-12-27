@@ -106,7 +106,7 @@ the ``while`` loop to the next sequential statement.
 The biggest trick with a loop is to make the same code do the next
 thing you want each time through.  That generally involves 
 the use of variables that are modified for each successive time through
-the loop.  
+the loop.  Here is a general pattern:
 
     | initialization
     | ``while (`` *continuationCondition* ``) {`` 
@@ -120,9 +120,10 @@ set up *both* in the initialization *and* inside the loop
 (often at the very end).  Without a change inside the loop, the loop would
 run forever!
 
-It is a big deal for beginning students, how to manage all this in general.
+How to manage all of this in general is a big deal for beginning students.
 We will see a number of common patterns in lots of practice.  We will use
-the term *successive modification loop* for loops following this pattern.
+the term *successive modification loop* for loops following the pattern
+above.
 
 Test yourself: Follow the code.  Figure out what is printed.
 If it helps, get detailed and play computer:
@@ -236,8 +237,8 @@ There are many different (and more exciting) patterns of change coming
 for loops, 
 but the simple examples so far get us started.
 
-.. index::
-   double: while; questions
+.. index:: while; questions for planning
+   planning questions; while loops
    
 Looking ahead to more complicated and interesting problems,
 here is a more complete list of questions to ask yourself when
@@ -356,7 +357,8 @@ All together we calculate the sum with::
 This exactly follows our general rubric, with preparation for the next time
 through the loop at the end of the loop.  
 We can condense it in this case: Since ``newSum`` is only used
-once, we can do away with it, and directly change the value of sum::
+once, we can do away with this extra variable name, 
+and directly change the value of sum::
 
    int sum = 1, i = 2;
    while (i <= n) {
@@ -418,7 +420,28 @@ Line   i   sum  Comment
 3               5<=4: false, skip loop
 6               return 10
 ====  ==  ====  ======================== 
-      
+
+The return only happens once, so it is not in the loop.  You get *a* value 
+for a sum each time through, but not the final one.  A common beginner
+error is to put the return statement inside the loop, like ::
+
+  static int SumToN(int n)     // 1   BAD VERSION!!!
+  {                            
+     int sum = 1, i = 2;       // 2
+     while (i <= n) {          // 3
+        sum = sum + i;         // 4
+        i = i + 1;             // 5
+        return sum;            // 6  WRONG!
+     }
+  }
+
+Recall that when a return statement is reached, function execution ends,
+no matter what comes next in the code.
+(This is a way to break out of a ``while`` loop that we will find useful 
+later.)  In this case however, it is not what we want at all.  The first sum
+is calculated in line 4, so ``sum`` becomes 2 + 1, but when you get to line
+6, the function terminates and never loops back, returning 3.
+   
 Now about large n....
 
 .. index::

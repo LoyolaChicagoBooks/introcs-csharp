@@ -170,7 +170,7 @@ use the string method ``Contains``.  Though IndexOf takes either a string
 or a character as parameter, ``Contains`` only takes a string.  There is a 
 nice quick idiom to convert anything to a string:  use ``""+``. 
 The condition could be ``"aeiou".Contains(""+s[i])``.  
-This adds
+The ``"" + s[i]`` adds
 the string version of ``s[i]`` to the empty string.
 
 The function is still not as general as it might be:
@@ -199,7 +199,7 @@ to determine this would return a Boolean result:
 
 There are several ways to check if a character is a digit.  We could use the
 ``Contains`` idiom from above, but here is another option:
-The codes for digits are sequential,
+The integer codes for digits are sequential,
 and since characters are technically a kind of integer, we can 
 compare:  The character ``s[i]`` is a digit if it is in the range from ``'0'``
 to ``'9'``, so the condition can be written::
@@ -374,7 +374,7 @@ and you know the final answer for your function as soon as you find it.
        
        prints the whole English alphabet, capitalized.  
     
-   The ``c++`` could
+   With a  ``c`` of type ``char`` the ``c++`` could
    not be replaced by ``c = c + 1``, but you could use ``c = (char)(c + 1)``:
    The ``int`` literal 1 forces
    the sum expression to be an ``int``, which must be cast back to a ``char`` to be

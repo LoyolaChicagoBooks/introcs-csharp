@@ -1,10 +1,75 @@
 While Examples
 ==============
 
+.. index:: bisection method
 
-.. todo::
+.. _bisection-method:
 
-   "bisection method"
+Bisection Method
+~~~~~~~~~~~~~~~~~~
+
+For a very different example we look to scientific computing.  In math 
+class you likely learned various ways to find roots of functions f(x) exactly.
+In practice those methods almost never work beyond low order polynomials.
+Hence the best we can do usually is to approximate solutions numerically.  
+One broadly useful approach is the *bisection method*.  You just need a
+continuous function (with an unbroken graph), 
+and you need to first find two places, 
+a and b, where f(a) and f(b) have opposite signs. If f is continuous and goes
+between positive and negative values, then it must cross 0 somewhere in between,
+and so there must be a real solution.  The question is how to get close
+to a crossing point efficiently.
+
+The basic idea is to bisect the interval between a and b, finding the midpoint,
+c = (a+b)/2. If f(c) is 0, you are done.  
+Otherwise f(c) has a sign which must be opposite *one* of f(a) and f(b).  In
+the iterative procedure, you change the value of a or b to be c, so you still
+have f(a) and f(b) with opposite signs, but now the interval between them
+is only half as long.  Repeating this procedure, you can home in on as small
+an interval as you like.  This approach always works, as long as the signs 
+at the initial endpoints are distinct.  Our functions indicate this 
+initial requirement
+being violated by returning ``double.NaN``, meaning *not a number*.
+ 
+There are other approaches that may be faster when they work, 
+but many if these methods can also completely fail, 
+so root finding algorithms generally have two
+extra parameters:  a maximum number of iterations and a tolerance 
+indicating how close to a root is close enough.
+
+Of course a production version would not print out all the intermediate data,
+as the interval shrinks, but we do for illustration:
+
+.. literalinclude:: ../source/examples/bisection_method1/bisection_method1.cs
+   :start-after: chunk
+   :end-before: chunk
+
+Since the bisection method always homes in on the real root rapidly,
+an alternate version specifically for the bisection method
+finds the *best* approximation possible with ``double``
+arithmetic.  While you can always halve an interval mathematically, you
+eventually run out of distinct ``double`` values, so we can stop when
+the midpoint (calculated with limited precision) 
+is *exactly* the same as a or b:
+
+.. literalinclude:: ../source/examples/bisection_method1/bisection_method1.cs
+   :start-after: end chunk
+   :end-before: end chunk
+
+C# remembers ``double`` values to more decimal places than it will actually 
+display, so the second illustration also shows the difference between a and b.  
+
+You can try this full example, 
+:repsrc:`bisection_method1/bisection_method1.cs`.  
+Note the special check for ``double.NaN`` in ``Main``, 
+because ``double.NaN`` is not equal to itself!
+
+The current versions have a major limitation:  They just work with the one
+canned version of the function ``f`` in the class.   You need to edit 
+the source code to use the same process with a different function!
+There are several ways around this using more advanced C# features.
+After the section :ref:`interface`, a more flexible version
+should make sense, :repsrc:`bisection_method/bisection_method.cs`.
 
 Savings Exercise
 ~~~~~~~~~~~~~~~~

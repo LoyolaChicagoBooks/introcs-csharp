@@ -15,7 +15,7 @@ More Conditional Expressions
 
 All the usual arithmetic comparisons may be made in C#, but many do not
 use standard mathematical symbolism, mostly for lack of proper keys
-on a standard keyboard. (If you are looking at the following table in the web version,
+on a standard keyboard. (If you are looking at the following table in the html version,
 you may need an up-to-date browser to see the mathematical symbols correctly,
 and also the mathematical expressions later in the text.)
  
