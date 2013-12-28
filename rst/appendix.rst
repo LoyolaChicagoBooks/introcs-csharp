@@ -16,5 +16,7 @@ Appendix
    hw-booklist
    lab-versioncontrol
    hgteamwork
-   offerings
    acknowledgments
+
+.. out of date
+   offerings

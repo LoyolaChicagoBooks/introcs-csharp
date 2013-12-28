@@ -1,5 +1,5 @@
-.. index::  
-   double: class; Rational
+.. index::  class; Rational
+   Rational class 
    
 .. _class:
 
@@ -53,8 +53,8 @@ of interacting with it.
 This is quite a shift.
 *Do not take it lightly.*  
 
-.. index:: 
-   double: OOP; constructor
+.. index:: OOP; constructor
+   constructor 
 
 We can create a new object with the ``new`` syntax.
 We can give parameters defining the initial state of the new object.  
@@ -134,11 +134,11 @@ This is the same sort of wrapper we have used for our Main programs!
 *Before*, everything inside was
 labeled ``static``.  Now we see what happens with the ``static`` keyword omitted....
 
-.. index::
-   single: OOP; field, instance variable
-   double: field; private
-   double: instance variable; private
-
+.. index:: OOP; instance variable
+   instance variable
+   variable; instance
+   private; instance variable
+   
 Instance Variables
 ----------------------
 
@@ -184,8 +184,8 @@ We need to get values into our field variables.  They describe the state of our 
 
 We have *used* constructors for built-in types.  Now for the first time we *create* one.
 
-.. index::
-   double: constructor; OOP
+.. index:: OOP; constructor
+   constructor
 
 Constructors
 ----------------
@@ -239,9 +239,9 @@ Again C# is allowing a shorthand:  With the explicit object reference missing, t
 assumption is that the method be applied to the current object: In this case that is 
 the one just being initialized in this constructor.
 
-.. index::
-   double: OOP; instance method
-   double: OOP; private helping function
+.. index::  OOP; instance method
+   instance method
+   private; helping function
 
 .. _instance-methods:
 
@@ -307,9 +307,9 @@ starting with "someObject.", it is referring to the *current object*, also refer
    an instance method calls a static method.  (The instance variables are just 
    inaccessible inside the static method.)
    
-.. index::
-   double: this; instance method
-   double this; OOP
+.. index:: OOP; this
+   this instance 
+
 
 The current object is *implicit* inside a constructor or instance method definition,
 but it can be referred to *explicitly*.  It is called ``this``.  
@@ -323,8 +323,8 @@ where there is reason for an object to refer to itself explicitly,
 and use ``this`` as the object's name.
 
  
-.. index::
-   double: OOP; getter
+.. index:: OOP; getter
+   getter method 
 
 .. _getters:
 
@@ -442,7 +442,9 @@ We would like that behavior with our custom types, too.  How can the compiler
 know how to handle types that were *not invented* when the compiler was written?
 
 The answer is to have common features among all objects.  Any object has a ``ToString``
-method.  The default version supplied by the system is not very useful for an object 
+method, and that method is used implicitly when an object is used with a
+string concatenation, and also for ``Write``.
+The default version supplied by the system is not very useful for an object 
 that it knows nothing about!  You need to define your own version, 
 one that knows how you have defined
 your type with its own specific instance variables. 
@@ -453,6 +455,9 @@ in meaning, the word ``override`` *must* be in the heading:
 .. literalinclude:: ../source/examples/rational_nunit/rational.cs
    :start-after: ToString chunk
    :end-before: chunk
+
+See what the method does:  it uses the object state to create and
+return a string representation of the object.
 
 For any kind of new object that you create and want to be able to implicitly convert to
 a string, you need a ``ToString`` method with the exact same heading 

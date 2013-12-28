@@ -3,9 +3,9 @@
 Dictionary Examples
 ===================
 
-.. index::
-   double: HashSet; set
-   double: HashSet; generic
+.. index:: generic; HashSet
+   HashSet
+   set
 
 .. _sets:
 
@@ -55,10 +55,10 @@ that have been discussed for a ``List``, including ``Add`` and ``Contains`` and
 a constructor that takes a collection as parameter.  
 
 
-.. index::
-   double: example; Word Count
-   double: example; List
-   double: example; HashSet
+.. index:: example; Word Count
+   Word Count example
+   HashSet; example 
+   List; example
 
 Word Count Example
 -------------------

@@ -1,7 +1,7 @@
 
-.. index::   
-   double: function; return
-   double: function; execution sequence
+.. index:: function; return  
+   return 
+   execution sequence for function
 
 .. _Returned-Function-Values:
 
@@ -127,8 +127,8 @@ the function and returns nothing explicitly. On the other hand
 caller gets to decide what to do with the string, and above it is
 printed in ``Main``.
 
-.. index::
-   double: example; addition2.cs
+.. index:: example; addition2.cs
+   addition2.cs example
    
 In general functions should do a single thing.
 You can easily combine a sequence of functions, and you have more
@@ -150,8 +150,8 @@ in ``Console.Write`` is neater, but
 we are forced to directly print the string,
 and not remember it for later arbitrary use.  
 
-.. index::
-   double: string; Format
+.. index:: string; Format
+   Format method for string
 
 .. _string-format:
    

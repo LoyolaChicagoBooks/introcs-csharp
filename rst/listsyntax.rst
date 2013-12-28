@@ -204,9 +204,9 @@ and a return value.  Most functions that return a value do not have a side effec
 If you see a function used in the normal way as an expression, it is easy to forget that
 it was *also* producing some side effect.
   
-.. index::
-   double: example; ReadLines
-   double: example; List
+.. index:: example; ReadLines
+   ReadLines example
+   List; ReadLines example
 
 Interactive List Example
 -------------------------

@@ -1,6 +1,6 @@
 
 .. index:: 
-   double:Console; WriteLine
+   double: Console; WriteLine
    
 
 .. _write-to-console:
@@ -56,7 +56,7 @@ for instance concatenating:
 More elaborate use of ``WriteLine`` is discussed in :ref:`Format-Strings`.
 
 .. index:: 
-   double:Console; Write
+   double: Console; Write
 
 The ``Console.WriteLine`` function automatically makes the printing
 position advance to the next line, as when you press the Enter or Return key.

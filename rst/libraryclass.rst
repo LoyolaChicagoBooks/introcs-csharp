@@ -1,5 +1,5 @@
-.. index::
-   double: multiple source files; library class
+.. index:: library class
+   multiple source files using library class
 
 .. _library-classes:
 
@@ -26,8 +26,8 @@ We explain the namespace line after the code:
 
 .. literalinclude:: ../source/examples/ui/uif.cs
 
-.. index:: 
-   double: namespace; IntroCS
+.. index:: namespace; IntroCS
+   IntroCS namespace 
 
 We have been ``using System`` in every program.  ``System`` is a *namespace* that 
 collects a particular group of class names, making them available to the program,

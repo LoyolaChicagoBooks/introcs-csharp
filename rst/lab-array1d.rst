@@ -9,7 +9,7 @@ Lab: Arrays
 Overview
 --------
 
-In this lab, we'll learn how to work with arrays. Arrays are
+In this lab, we'll practice working with arrays. Arrays are
 fundamental to computer science, especially when it comes to
 formulating various *algorithms*. We've already learned a bit about
 arrays through the ``string`` data type. In many ways, a character
@@ -22,9 +22,8 @@ string reveals the secrets of arrays:
 
 - we know that the string has a finite length, e.g. ``s.Length``.
 
-So you've already learned the *concept*. But what if we want to have
-arrays that can hold different kinds of data, for example, integer or
-floating point data? That's why we need this lab.
+So you've already learned these *concepts*. But practice is useful
+creating and manipulating arrays with different kinds of data.
 
 Goals
 -----
@@ -32,13 +31,9 @@ Goals
 In this lab, we're going to practice:
 
 - creating arrays that hold numerical data
-
 - populating an array with data
-
 - using the tools of loops and decisions to do something interesting with the data
-
 - printing the data
-
 
 Tasks
 -----

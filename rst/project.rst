@@ -50,18 +50,15 @@ Overview
 
 You will be assigned to groups of 3-4 people to work on a project that
 will extend until the end of the semester, with only a little other work
-introduced in class, and of course Exam 3. This leaves a month
-of course time for the project (classes, labs, dedicated homework time),
+introduced in class, and of course your last exam. This leaves a month
+of course time (in a regular semester) 
+for the project (classes, labs, dedicated homework time),
 ending with presentations in final exam period. Your group will be
-designing and implementing a game. 
-You are invited to start from the project that is provided and has been
-discussed in class, or start from scratch if you really want.
-
-Develop a text based game driven by user commands, involving moving
-between different locations or game states. The final game
-should be fun to play and have some goal -- some way to win it. The game
-may be a game for one person working against what is built into the
-program, or it may involve several players.
+designing and implementing a project of your choosing.  You could
+choose to make a text based game, starting from our game skeleton or not, 
+or something completely different, started from scratch.   
+The project should have some clear focus or aim,
+For instance a game should be able to be won.
 
 Start by brainstorming and listing ideas -- do not criticize ideas at
 this point. That is what is meant by brainstorming - having your internal critic
@@ -76,10 +73,10 @@ works completely before using your past experience to decide what to add
 next. This may different than what you imagined before the work on your
 first stage! Like the provided project, early stages do not need
 to be full featured, but make sure that you are building up to a version
-that you can win, and which includes interesting features. You should
-end with a game that has enough instructions provided for the user, so
+with an aim, and which includes interesting features. You should
+end with a program that has enough instructions provided for the user, so
 someone who knows *nothing* of your implementation process or intentions
-can play the game successfully. Your implementation should also be
+can use the program successfully. Your implementation should also be
 documented, imagining that a new team of programmers is about to take
 over after your departure, looking to create yet another version.
 
@@ -154,7 +151,8 @@ Roles
 
 Conflict resolution: You will certainly have disagreements and possibly
 conflicts. Try to resolve them within the team. When that is not
-working, anyone can go to the instructor with a problem.
+working, anyone can go to the instructor with a problem.  Do not delay
+coming to me if things are clearly not working with the team.
 
 The process
 ------------

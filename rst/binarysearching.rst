@@ -1,5 +1,5 @@
-.. index::
-   double: search; binary
+.. index:: search; binary
+   binary search 
    single: algorithms; binary search
 
 .. _binarysearching:
@@ -16,9 +16,13 @@ Suppose we have the following array data shown under the array indices:
 
    10  20  30  40  50  60  70  80  90  100 115 125 135 145 155 178 198
 
+Binary search works by keeping track of the midpoint (mid) and the minimum (min) and 
+maximum (max) positions where the item *might be*.
+
 If we are looking for a number, say, 115, here is a visual on how we might go about it.
 We start with the indices over the data being considered.
-Here min and max are the smallest and largest index to still consider:
+Here min and max are the smallest and largest index to still consider.
+A textual explanation follows the visual:
 
 ..  code-block:: none
 
@@ -30,11 +34,6 @@ Here min and max are the smallest and largest index to still consider:
                                          100 115 125                    
     min=9 max=11 mid=10
     Item 115 found at position 10
-
-Binary search works by keeping track of the midpoint (mid) and the minimum (min) and 
-maximum (max) positions where the item *might be*.
-
-Let's see how we might search for the value 115.
 
 - We start by testing the data at position 8. 115 is greater than the value at position
   8 (100), so we assume that the value must be somewhere between positions 9 and 16.

@@ -1,8 +1,6 @@
 
-.. index::
-   double: homework; input-output
-   double: homework; decision
-   double: homework; loop
+.. index:: homework; grade calculation 2
+   grade calculation 2 homework
    
 .. _homework-grade-calculation2:
 
@@ -54,19 +52,13 @@ Functional Requirements
    read one grade at a time. The grades will be added together (on the fly)
    to give the grade for that category. For example, after you have asked
    for the number of exams, you'd prompt the user to enter each exam 
-   grade and have the program compute the sum. 
-   To make sure everyone understands what should
-   be happening, you should also print a *running total* of the grade 
-   category you're calculating:
+   grade and have the program compute the sum. As soon as a category
+   sum is calculated, also print out the average as shown in the sample below:
 
      | Please enter the grade for exam 1: **100**
-     |
      | Please enter the grade for exam 2: **90**
-     |
      | Please enter the grade for exam 3: **80**
-     |
      | Please enter the grade for exam 4: **92**
-     |
      | Calculated average exam grade = 90.5
    
    Of course you must return the grade to the caller for use in the 
@@ -80,7 +72,7 @@ Functional Requirements
    previous assignment to compute the weighted average and print the
    final letter grade.
    
-#. Print the final numerical average rounded to one decimal place.
+#. Print the final numerical average, *this time rounded to one decimal place*.
    If the final average was actually 93.125, you would print 93.1.  
    If the final average was actually 93, you would print 93.0.  
    If the final average was actually 93.175, you would print 93.2.  

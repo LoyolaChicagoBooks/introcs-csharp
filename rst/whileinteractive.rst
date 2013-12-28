@@ -1,7 +1,6 @@
-.. index::
-   double: interactive; loop
+.. index:: interactive while loop
    single: loop; while
-   double: interactive; while
+   while; interactive
    
 .. _Interactive-while-Loops:
 	
@@ -52,8 +51,9 @@ sequence above, the call would be:
 
    ``PromptIntInRange("Enter a score: (0 through 100) ", 0, 100)``
 
-.. index::
-   double: concrete example; splitting a loop
+.. index:: concrete example; splitting a loop
+   loop; splitting concrete example
+   splitting a loop concrete example
 
 There is an issue with the common term "loop" in programming.
 In normal English, a loop has no beginning and no end, like a circle.
@@ -148,8 +148,8 @@ As a first version, we can use the parameter ``prompt``::
 
 That is the initialization step before the loop.
 
-.. index::
-   double: pitfall; repeat interactive input
+.. index:: pitfall; repeat interactive input
+   interactive while loop; repeat interactive input
    
 *If* we get into the body of the loop, it means there is an error, 
 and the concrete example indicates we print a warning message.
@@ -167,8 +167,8 @@ the initialization *and* coming back
 from the bottom of the loop.  To get a *new* value to test, we must
 *repeat* getting input from the user at the bottom of the loop body.  
 
-.. index::
-   double: pitfall; repeat declaration
+.. index:: pitfall; repeat declaration
+   declaration repeat pitfall
    
 You might decide to be quick 
 and just copy the initialization line into the bottom of the
@@ -228,8 +228,8 @@ request for new input *repeated* at the end of the loop.
 That repetition *is* easy to forget.  Before we see what happens
 when you forget, note:
 
-.. index::
-   double: pitfall; infinite loop
+.. index:: pitfall; infinite loop
+   infinite loop
    
 .. warning::
 
@@ -262,8 +262,8 @@ Remember :kbd:`Ctrl-C` !
 A more extreme abort is to close the entire console/terminal window 
 running the program.
 
-.. index::
-   double: exercise; Agree
+.. index:: exercise; Agree
+   Agree exercise
    
 .. _agree-function-exercise:
 
@@ -296,8 +296,8 @@ running sum of the numbers. Only print out the sum after all the
 numbers are entered (at least in your *final* version).
 
 
-.. index;
-   double: exercise; InputWhole
+.. index:: exercise; InputWhole
+   InputWhole exercise
    
 .. _safe-whole-number-input:
 

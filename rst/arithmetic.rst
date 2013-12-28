@@ -106,7 +106,8 @@ C#.  Recall that an asterisk is used as a multiplication operator:
     40
 
 .. index::
-   double:  ( ); grouping
+   single:  ( ); grouping
+   grouping ( )
    single: -; negation
      
 Enter each of the following expressions into csharp, and think what they

@@ -1,6 +1,7 @@
 .. index::
-   double: function; consumer
-   double: function; writer
+   double: function; consumer and writer
+   consumer of functions
+   writer of functions
 
 .. _Two-Roles:
 

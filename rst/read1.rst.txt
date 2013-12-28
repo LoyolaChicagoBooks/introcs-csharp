@@ -1,8 +1,7 @@
 
 .. index:: 
-   double:Console; WriteLine
+   double: Console; WriteLine
    
-
 .. _write-to-console:
    
 Writing to the Console

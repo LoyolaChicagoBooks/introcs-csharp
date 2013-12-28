@@ -1,7 +1,6 @@
-.. index::
-   double:  while; index
-   double:  index; sequence
-   double:  while; sequence
+.. index::  while; index for sequence
+   sequence with while
+   
 
 .. _While-Sequence:
 
@@ -15,8 +14,8 @@ characters that we can index.
 
 .. _OneCharPerLine:
 
-.. index::
-   double:  example; OneCharPerLine
+.. index::  example; OneCharPerLine
+   OneCharPerLine example
    
 Consider the following silly function description and heading as a start:
 
@@ -98,8 +97,8 @@ not just print it.
 	- It is still a regular sequence of character indices, but
 	  everything needs to be reworked.
 
-.. index::
-   double: string; PrintVowels
+.. index:: string; PrintVowels
+   PrintVowels example
    
 .. _PrintVowels:
    
@@ -160,8 +159,8 @@ a character is in or not in a string.  We can use ``"aeiou".IndexOf(s[i])``.
 We do not care where ``s[i]`` comes in the string of vowels.  
 All we care is that ``"aeiou".IndexOf(s[i]) >= 0``.
 
-.. index::
-   double: string; Contains
+.. index:: string; Contains
+   Contains for strings
    
 This is still a bit of a mouthful.  Often it is just important if a
 character or string is *contained* in another string, not where it appears,

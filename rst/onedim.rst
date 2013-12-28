@@ -28,7 +28,7 @@ so ::
 declares ``a`` to refer to an array containing ``int`` elements.  You do *not*
 know how many elements will be allowed in this array from this declaration.  
 We must give further information to create the corresponding array object.  
-All object can be created using the ``new`` syntax.  An array must get a definite
+A new object can be created using the ``new`` syntax.  An array must get a definite
 length, which can be a literal integer of any integer expression.  For example ::
 
    int[] a;
@@ -148,15 +148,16 @@ Now the array ``b`` of our earlier examples (of length 4) would contain 0, 5,
 10, and 15.
 
 .. index::
-   double:  command line; parameters
-   double:  Main; parameters
+   command line; parameter
+   parameter; command line to Main
+   Main; parameters
 
 .. _command-line-param:
 
 Parameters to Main
 ---------------------
 
-The Main function may take an array of strings as parameter, as in example 
+The ``Main`` function may take an array of strings as parameter, as in example 
 :repsrc:`print_param/print_param.cs`:
 
 .. literalinclude:: ../source/examples/print_param/print_param.cs
@@ -210,8 +211,8 @@ You can simulate command line parameters inside Xamarin Studio:
 
 Try it!
         
-.. index::
-   double: string; Split
+.. index:: string; Split
+   Split method for strings
    
 .. _Split:
 
@@ -284,6 +285,9 @@ Remember some patterns illustrated here,
   
 We will use this function for testing in :ref:`searching`.
 
+.. index:: exercise; GetToken
+   GetToken exercise
+   
 GetTokens Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -316,8 +320,8 @@ With a primitive type like an ``int``, an assignment copies the data:
    :alt: copying an int
    :align: center
 
-In the diagram, the contents of the memory box labeled ``a`` is copied to the
-memory box labeled ``d``. The value of ``d`` starts off equal to the value of ``a``, 
+In the diagram, the contents of the memory box labeled ``b`` is copied to the
+memory box labeled ``d``. The value of ``d`` starts off equal to the value of ``b``, 
 but can later be changed independently.
 
 Contrast an assignment with arrays.  The value that is copied is the *reference*,
@@ -347,9 +351,9 @@ the formal parameter name is an **alias** for the actual parameter name.
    method, then the change affects the actual parameter array.
    The change *remains* in the actual parameter array *after* the method has terminated.
 
-.. index::
-   double: example; Scale
-   double: Scale; array parameter
+.. index:: example; Scale
+   Scale example
+   array; parameter
 
 For example, consider the following function::
 
@@ -403,8 +407,8 @@ length array, where you have values for each parts, as in::
     
     return new[] {minVal, maxVal};
     
-.. index::
-   double: OOP; default value
+.. index:: OOP; default value
+   default value in instance 
 
 .. _default-fields:
    
@@ -437,9 +441,10 @@ of objects always get a specific value, not random data.  Here are the defaults:
           words[i] = "";
        }
         
-.. index::
-   double: example; command line adder
-   double: Main; parameters
+.. index:: exercise; command line adder
+   command line adder exercise
+   Main; parameter exercise
+   parameter; for Main exercise
 
 .. _command-line-adder-exercise:
    
@@ -471,9 +476,8 @@ while on a Mac you need to run with mono:
 
     mono adder.exe 2 5 22
     
-.. index::
-   double: example; TrimAll
-   double: array; TrimAll
+.. index:: exercise; TrimAll for arrays
+   TrimAll exercise
 
 .. _trim-all-exercise:
    
@@ -483,16 +487,15 @@ Trim All Exercise
 Write a program ``trimmer.cs`` that includes and tests a 
 function with heading::
 
-   // Trim all elements of s and replace them in the array.
+   // Trim all elements of a and replace them in the array.
    //  Example: If a contains {" is  ", " it", "trimmed?   "}
    //  then after the function call the array contains
    //  {"is", "it", "trimmed?"}.   
    static void TrimAll(string[] a) 
    
    
-.. index::
-   double: example; Dups
-   double: array; Dups
+.. index:: exercise; Dups
+   Dups exercise for arrays
 
 .. _Dups-exercise:
    
@@ -508,9 +511,8 @@ function with heading::
 	public static int dups(int[] a)
 
 
-.. index::
-   double: example; Mirror
-   double: array; Mirror
+.. index:: exercise; Mirror
+   Mirror exercise for arrays
 
 .. _Mirror-exercise:
    
@@ -525,9 +527,8 @@ function with heading::
 	public static string[] Mirror(string[] a)
 
 
-.. index::
-   double: example; Reverse
-   double: array; Reverse
+.. index:: exercise; Reverse for arrays
+   Reverse exercise for arrays
 
 .. _Reverse-exercise:
    
@@ -543,9 +544,8 @@ function with heading::
 	public static void Reverse(string[] a)
 
    
-.. index::
-   double: example; Histogram
-   double: array; Histogram
+.. index:: exercise; Histogram
+   Histogram exercise
 
 .. _Histogram-exercise:
    

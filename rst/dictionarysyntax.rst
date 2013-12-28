@@ -82,8 +82,8 @@ Here is a longer csharp sequence, broken up with our comments:
           > e2sp["two"], e2sp["three"]);
     uno, dos, tres...
 
-.. index::
-   double: dictionary; Keys
+.. index:: dictionary; Keys
+   Keys
 
 If you want to iterate through a whole ``Dictionary``, you will want the syntax below,
 with ``foreach`` and the property ``Keys``:
@@ -102,8 +102,9 @@ that you cannot depend on the order of processing with ``foreach``, though the p
 implementation remembers the order in which keys were added.
 
 
-.. index::
-   double: dictionary; ContainsKey
+.. index:: example; ContainsKey
+   dictionary; ContainsKey example
+   ContainsKey example
 
 
 It is often useful to know if a key is already in a ``Dictionary``:

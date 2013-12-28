@@ -98,7 +98,7 @@ ResponseMapper, taking advantage of the Dictionary in other methods, too.
 
 There is even more to recommend this setup:  The old setup had references in multiple places 
 to various details about the collection of Responses.  That made it harder to follow and
-definitely harder to update if you want to add an new command.  
+definitely harder to update if you want to add a new command.  
 Now after writing the new class to respond to a new command,  the *only* thing you
 need to do is add a new instance of that class to the array initializer in the
 CommandMapper constructor!
@@ -128,7 +128,11 @@ class where they are easy to track, separated from other classes.
 Data most used by one class should probably reside in that class.
 Cohesion is related to separation of concerns:  The data and methods most used
 by one class should probably reside in that class, so you do not need to go 
-looking elsewhere for important parts.  
+looking elsewhere for important parts. Also, if you need to change something,
+where concerns are separated into cohesive classes, with the data and
+logic in one place, it is easier to see what to change, and the changes are likely
+to be able to be kept internal to the class, 
+affecting only its internal implementation, not its public interface.
 
 Some methods are totally related to the connection between classes, and there may not be
 a clear candidate for a class to maximize the separation of concerns.  One thing to 
@@ -141,7 +145,10 @@ it would be useless except all by itself.  The must be some coupling between cla
 where one class uses another, but with increased cohesion and strong
 separation of concerns you are likely to be able to have 
 looser coupling.  Limiting coupling makes it easier to follow 
-your code.  There is less jumping around.
+your code.  There is less jumping around. More important, it is easier to
+modify the code.  There will be less interfacing between classes, so if
+you need to change the public interface of a class, there are fewer places
+in other classes that need to be changed to keep in sync.
 
 Aim for strong cohesion, clear separation of concerns, and loose coupling.  Together 
 they make your code clearer, easier to modify, and easier to debug.
@@ -151,7 +158,7 @@ IGame Interface Exercise
 
 On a much smaller scale than the project, this exercise offers you
 experience 
-writing classes implementing and using an interface
+writing classes implementing and using an interface.
 
 1. Copy project stub :repsrc:`igame_stub` to your own project, and note the additions
    discussed below.

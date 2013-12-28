@@ -1,8 +1,7 @@
-.. index::
-   double: file; write
-   double: StreamWriter; WriteLine
-   double: StreamWriter; class
-   single: file; close
+.. index:: file; write and close
+   double StreamWriter; WriteLine
+   class; StreamWriter
+   close file
    
 .. _filewrite:
 

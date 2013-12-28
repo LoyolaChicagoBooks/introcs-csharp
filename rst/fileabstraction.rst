@@ -1,6 +1,5 @@
-.. index:: 
-   single: file; abstraction
-   double: file; stream
+.. index:: file; stream abstraction
+   stream
 
 .. _fileabstraction:
 

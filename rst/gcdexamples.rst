@@ -1,8 +1,7 @@
-.. index::
-   double:  PF4; recursion
-   double:  SP1; history
-   double:  history; Euclid
-   double:  algorithms; greatest common divisor
+.. index:: algorithms; greatest common divisor
+   Euclid's algorithm
+   greatest common divisor algorithm
+     
 
 .. _gcd:
 
@@ -64,10 +63,6 @@ Notice that in the example above, the first number (10) was smaller than
 the second (15), and the first transformation just swapped the numbers,
 so the larger number was first.  Thereafter the first number is always
 larger.
-
-In other words, Euclid's method is smart enough to work for 10 and 15
-and 15 and 10. And it must. After all, the greatest common divisor of
-these two numbers is always 5 as the order doesn't matter.
 
 GCD "Brute Force" Method
 ------------------------
@@ -152,7 +147,7 @@ The code above goes though all integers 2 through ``min(a, b)``.  That is
 not generally necessary when the GCD is greater than 1, 
 even with a brute-force mindset.   Write a
 ``g_c_d_basic_faster.cs`` to do this with a slightly different
-``GreatestCommonDivisor`` function.
+``GreatestCommonDivisor`` function. [#gcdbrute]_
 
 GCD Subtraction Method
 ----------------------
@@ -254,7 +249,7 @@ The first statement of Euclid's algorithm said (in C#) when  ::
 
 It is saying the result of the function with one set of parameters is equal to
 calling the function with another set of parameters.  If we put this into a
-C# function definition, ti would mean the instructions for the function say 
+C# function definition, it would mean the instructions for the function say 
 to *call itself*.  This is a broadly useful technique called *recursion*, 
 where a function calls *itself* inside its definition. 
 We don't expect you to master this
@@ -267,12 +262,12 @@ technique immediately but do feel that it is important you at least
    :linenos:
 
 - Recalling our earlier definition, the case :math:`gcd(a, 0) = a` is
-  handled by lines 3-5.
+  handled by lines 5-7.
 
 - And the case :math:`gcd(a, b) = gcd(b, a \bmod b)` is handled by
-  line 10.
+  line 12, with the function calling itself.
 
-- Lines 4 and 7-9 exist to show you all of the *steps* that Euclid's
+- Lines 6 and 9-11 exist to show you all of the *steps* that Euclid's
   algorithm takes to compute the greatest common divisor.
 
 The recursive version of the ``gcd`` function *refers to itself*
@@ -289,3 +284,9 @@ algorithm than the looping version.
 The general idea of recursion is for a
 function to call itself with *simpler* parameters, until a simple enough place
 is reached, where the answer cam be directly calculated.
+
+.. [#gcdbrute]
+   
+   The original brute-force gcd approach always goes through all the integers
+   between 1 and ``min(a, b)``.  There is a way to stop the first time
+   the real gcd is reached.  How can you arrange that?

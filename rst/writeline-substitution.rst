@@ -142,8 +142,8 @@ Write a program, ``quotient_format.cs``, that behaves like
 ``Console.WriteLine`` with a format string and no ``+`` operator.
 
 
-.. index:: 
-   double: method; overloading
+.. index:: method; overloading
+   overloading a method
 
 .. _overloading:
 

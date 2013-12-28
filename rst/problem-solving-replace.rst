@@ -1,5 +1,5 @@
-.. index::
-   double: string; problem solving
+.. index:: string; problem solving
+   problem solving
 
 .. _solve-string-replace:
 

@@ -1,5 +1,5 @@
-.. index::
-   double: if; statement
+.. index:: statement; if
+   if statement
 
 .. _If-Statements:
     
