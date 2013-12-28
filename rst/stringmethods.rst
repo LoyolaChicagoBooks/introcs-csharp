@@ -1,5 +1,4 @@
-.. index::
-   double: string; method
+.. index:: string; method
 
 Some Instance Methods and the Length Property
 =================================================

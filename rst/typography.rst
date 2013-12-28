@@ -1,5 +1,5 @@
-.. index::
-   double: syntax template; typography
+.. index:: syntax template typography
+   typography of syntax templates
 
 .. _Syntax-Template-Typography:
 

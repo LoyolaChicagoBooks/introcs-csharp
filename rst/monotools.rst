@@ -80,7 +80,7 @@ introducing and using Xamarin Studio.  Later we will look at some of the
 underlying tools that are obscured by the use of Xamarin Studio.
 
 Mono has an extra advantage in the tool csharp, for immediate testing of
-small snippets of code.  We will ude it extensively as we introduce bits of
+small snippets of code.  We will use it extensively as we introduce bits of
 syntax. 
 
 As there is significant evolution of both the Microsoft
@@ -89,12 +89,7 @@ elegant way of saying SDK--we'll issue updates to this book.
 
 Everything is free, but there are a number of steps.  Follow them carefully.
 
-
-
-
-
-.. index::
-   double: mono; installation
+.. index:: mono installation
 
 .. _install-mono:
 
@@ -178,9 +173,10 @@ Windows
 
 There are four packages, so this takes a while.  Mono first:
 
-.. maybe
-   Dr. Yacobellis has a video showing Windows installation.
-   https://connect.luc.edu/p4hmzk2kbmt/
+
+Dr. Yacobellis has a video showing Windows installation.
+https://connect.luc.edu/p4hmzk2kbmt/  
+There may be further changes to the system.
 
 #. Go to <http://mono-project.com>.
 
@@ -200,8 +196,8 @@ There are four packages, so this takes a while.  Mono first:
 Here is how to do a quick sanity check of your Mono setup:
 
 .. index::
-   single: mono command prompt (Windows)
-   double: csharp; mono command prompt (Windows)
+   mono command prompt (Windows)
+   csharp; mono command prompt (Windows)
    
 .. _mono-command-prompt:
 
@@ -269,7 +265,6 @@ release.
 
 This page,
 https://launchpad.net/~keks9n/+archive/monodevelop-latest, 
-
 describes
 how to update your Xamarin Studio setup if it is not version 2.8 or later
 as we'll need for this course.

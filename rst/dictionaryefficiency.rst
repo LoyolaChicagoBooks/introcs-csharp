@@ -1,7 +1,7 @@
-.. index::
-   double: big oh; dictionary
-   double: big oh; linear order
-   double: big oh; constant order
+.. index:: big oh
+   dictionary; big oh 
+   linear order
+   constant order
 
 .. _dictionary-efficiency:
 

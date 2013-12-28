@@ -1,6 +1,6 @@
-.. index::
-   double: value object; reference object
-   double: value object; struct
+.. index:: value object
+   reference object
+   struct
    
 
 .. _structs-and-classes:

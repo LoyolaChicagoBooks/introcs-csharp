@@ -155,33 +155,33 @@ project :repsrc:`animal_lab_stub`.  Then modify the two files as discussed below
    The bullets below
    name and describe the instance variables, constructor, and methods you need to write:
 
-	- An Animal has a ``name`` and a ``gut``.  
-	  In our version the ``gut`` is a List of strings 
-	  describing the contents, in the order eaten.  
-	  A newly created Animal gets a ``name`` from a parameter
-	  passed to the constructor, while the ``gut`` always starts off *empty*.
-	
-	- An Animal has a ``Greet`` method, so an animal "Froggy" would say (that is, print) 
-		
-		 Hello, my name is Froggy.
-	
-	- An Animal can ``Eat`` a string naming the food, adding the food to the ``gut``.
-	  If Froggy eats "worm" and then "fly", its ``gut`` list contains
-	  "worm" and "fly".
-	
-	- An Animal can ``Excrete`` (removing and printing what was *first* in the gut List). 
-	  Recall the method ``RemoveAt`` in :ref:`listsyntax`.  Print "" if the ``gut``
-	  *was already empty*.  Following the
-	  Froggy example above, Froggy could ``Excrete``, and "worm" would be printed.
-	  Then its ``gut`` would contain only "fly". 
-	  
-	- A ``ToString`` method: 
-	  Remember the ``override`` keyword.  Make it return a string in the format
-	  shown below for Froggy, including the Animal's name: 
-	  
-		 "Animal: Froggy"
-		 
-	- All the methods that print should be void.  Which need a parameter, of what type?
+   * An Animal has a ``name`` and a ``gut``.  
+     In our version the ``gut`` is a List of strings 
+     describing the contents, in the order eaten.  
+     A newly created Animal gets a ``name`` from a parameter
+     passed to the constructor, while the ``gut`` always starts off *empty*.
+    
+   * An Animal has a ``Greet`` method, so an animal "Froggy" would say (that is, print) 
+        
+        Hello, my name is Froggy.
+    
+   * An Animal can ``Eat`` a string naming the food, adding the food to the ``gut``.
+     If Froggy eats "worm" and then "fly", its ``gut`` list contains
+     "worm" and "fly".
+    
+   * An Animal can ``Excrete`` (removing and printing what was *first* in the gut List). 
+     Recall the method ``RemoveAt`` in :ref:`listsyntax`.  Print "" if the ``gut``
+     *was already empty*.  Following the
+     Froggy example above, Froggy could ``Excrete``, and "worm" would be printed.
+     Then its ``gut`` would contain only "fly". 
+      
+   * A ``ToString`` method: 
+     Remember the ``override`` keyword.  Make it return a string in the format
+     shown below for Froggy, including the Animal's name: 
+      
+         "Animal: Froggy"
+         
+   * All the methods that print should be void.  Which need a parameter, of what type?
 
 #. Complete the file :repsrc:`test_animal.cs <animal_lab_stub/test_animal.cs>` 
    with its class ``TestAnimal`` containing the 

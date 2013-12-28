@@ -1,9 +1,9 @@
 
 
-.. index:: 
-   single: variable; assignment, =
-   double: assignment statement; =
+.. index:: variable; assignment
+   assignment statement
    statement; assignment
+   single: =
 
 .. _Variables-and-Assignment:
 
@@ -53,8 +53,9 @@ side of the equal sign, either giving an initial value or
 
 .. image:: images/variableAssignment.png
 
-.. index:: 
-   double: initializer; =
+.. index:: initializer
+   single: =; initializer
+   declaration initializer
    
 Variables can also be initialized as they are declared::
 
@@ -287,13 +288,9 @@ can usually catch these errors, since it is the version used in the *one*
 declaration that matters.
 
 
-.. index::
-   double: identifier; naming convention
-   double: identifier; camel case
-   double: naming convention; camel case
-   double: identifier; multiple word
-   double: identifier; underscores
-   double: multiple word; underscores
+.. index:: identifier; multi-word naming convention
+   camel case
+   naming convention; camel case
    
 What is legal is distinct from what is conventional or good
 practice or recommended. Meaningful names for variables are

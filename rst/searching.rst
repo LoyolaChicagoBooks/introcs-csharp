@@ -11,9 +11,9 @@ up repeatedly in programming.
 These examples make use of arrays and loops, not to mention functions
 (for putting it all together). 
 
-.. index::
+.. index:: algorithms; linear search
    search; linear
-   double: algorithms; linear search
+   linear search 
 
 Linear Search
 ------------------
@@ -63,7 +63,7 @@ The following code shows how to use the linear search:
    :linenos:
 
 In this example, we ask the user to enter an array of data by entering
-the values space separated on a line. .  To convert to an int array we
+the values space separated on a line. To convert to an int array we
 use the function ``IntsFromString`` discussed in :ref:`split`.
 
 To allow easy termination of the testing loop, we do not use ``PromptInt``

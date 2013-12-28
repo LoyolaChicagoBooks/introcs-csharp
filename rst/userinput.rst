@@ -1,5 +1,5 @@
-.. index::
-   double: library; UI
+.. index:: library; UI
+   UI library class
    
 .. _UI:
 
@@ -25,3 +25,12 @@ Though that could be addressed with our present technology,
 it probably makes sense to wait for an introduction
 of Exception handling syntax to really make things bulletproof.
 Meanwhile you have good examples of interactive loops and string manipulation.
+
+There are even fancier ways of arranging for legal numeric input.  
+We have only been reading whole lines, but it is possible to read
+individual characters with ``Console.ReadKey``,  
+without a newline being entered yet.  A much more extensive advanced
+subject is the special regular expression language for 
+describing arbitrary patterns in strings using the ``Regex`` class.  
+Though we will not discuss the details, another slick replacement for UI 
+using these features is in the example class :repsrc:`uifnt/UIFNT.cs`. 

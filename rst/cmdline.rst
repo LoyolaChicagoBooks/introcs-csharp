@@ -52,8 +52,8 @@ Accessing the command line (often called a *command shell*):
 Mac OSX, Linux and other Unix variants work basically the same once
 you get to a terminal, so we will only distinguish Windows and Mac OS-X.
 
-.. index::
-   double:  command line; paths
+.. index:: command line; paths
+   paths on command line  
 
 .. _navigating-directories:
 
@@ -69,9 +69,9 @@ a prompt that tells you what folder or directory the command shell has
 started in: In Windows 7 this is typically C:\\Windows\\System32, and on
 a Mac it is typically /Users/*yourLogin*.  
 
-.. index:
-   double: command line; dir
-   double: command line; ls
+.. index:: command line; dir and ls
+   dir on Windows command line 
+   ls on Mac command line
    
 Files in the current working directory can to referred to by their simple names,
 e.g., *myfile.txt*.  You can list all the files in the directory with the simple
@@ -93,13 +93,17 @@ You are likely to want to operate
 out of your home directory (where the Mac users start automatically).
 
 Windows 7 or 8 users enter the command below (substituting your login ID)
-o get to your home directory:
+to get to your home directory:
 
 .. code-block:: none
    
    cd C:\Users\yourLoginId
    
 The cd is short for "Change Directory", changing the current directory.
+
+.. index:: drive change on Windows
+
+.. _drive-change:
 
 .. warning::
 
@@ -166,11 +170,12 @@ advanced documentation would include more options.
 
 Some commands are common between the Windows and Mac shells:
 
-dir or ls
+dir (Windows) or ls (Mac)
   to list all the files a in the current directory or a named directory.
   
-.. index:
-   double: command line; cd
+.. index:: command line; cd
+   cd on command line
+   change directory on command line 
 
 cd 
   stands for *Change Directory* – you can use this
@@ -185,7 +190,9 @@ cd
   prompt will change to show this new directory location and programs like
   *mcs* and *mono* will be able to “see” (access) files there, directly
   by name.  If the Comp170 directory was you current directory, it would
-  be shorter to use relative paths and just ``cd hello``.
+  be shorter to use relative paths and just ``cd hello``.  Remember if
+  you want a different Windows drive, you must first use a 
+  :ref:`drive change command <drive-change>`.
 
   On a Mac you can also use either an absolute or a relative path with ``cd``.
 
@@ -198,8 +205,8 @@ cd
   directory in command paths:  tilde (~), often shifted backquote. Sorry,
   no such thing with Windows.
 
-.. index:
-   double: command line; mkdir
+.. index:: command line; mkdir
+   mkdir on command line
 
 mkdir
   stands for make directory –
@@ -213,8 +220,8 @@ mkdir
   
   An optional Windows abbreviation is *md*.
 
-.. index:
-   double: command line; rmdir
+.. index:: command line; rmdir
+   rmdir on command line
 
 rmdir
     removes an *empty* directory that you give as parameter, e.g.,
@@ -224,6 +231,10 @@ rmdir
 Then, with Mono installed (and for Windows, with a Mono command window), the
 programs associated with Mono can be used:
 
+.. index:: command line; mcs
+   mcs compile on command line
+   compile on command line mcs
+   
 mcs
   compiles one or more listed C# source files without using Xamarin Studio.
 
@@ -234,10 +245,9 @@ Other useful commands window commands with different names for Windows and Mac,
 listed by generic function, with general Windows syntax first and Mac second, and then
 often examples in the same order:
 
-.. index:
-   double: command line; display text file
-   double: command line; type
-   double: command line; cat
+.. index:: command line; display text file
+   type on Windows command line 
+   cat on Mac command line 
 
 Display the contents of a text file in the command window. Name origin:  a more complicated
 use of cat is to con\ **cat**\ enate files. 
@@ -248,9 +258,10 @@ use of cat is to con\ **cat**\ enate files.
   | type my_program.cs
   | cat my_program.cs
 
-.. index:
-   double: command line; copy file
-   double: command line; cp
+.. index:: command line; copy file
+   copy on Windows command line 
+   cp on Mac command line 
+   
 
 Make a copy of a file.  Caution: If the second file already exists, 
 you wipe out the original contents!
@@ -262,11 +273,10 @@ you wipe out the original contents!
   | cp prog1.cs prog2.cs
   
 
-.. index:
-   double: command line; delete a file
-   double: command line; del
-   double: command line; cat
- 
+.. index:: command line; delete a file
+   erase on Windows command line 
+   rm on Mac command line 
+
 Erase or remove a file:
 
   | erase *fileToKill*
@@ -278,9 +288,9 @@ Erase or remove a file:
 
 Another Windows equivalent is ``del`` (short for delete).
 
-.. index:
-   double: command line; help
-   double: command line; man
+.. index:: command line; help
+   help on command line 
+   man on Mac command line 
 
 Help on a command:
 
@@ -293,8 +303,8 @@ immensely detailed help overload on a Mac from
 
    man *commandName*
 
-.. index:
-   double: command line; script
+.. index:: command line; script
+   script on command line 
    
 Scripts
 -------
@@ -306,9 +316,9 @@ Scripting languages are in fact whole new specialized programming languages,
 that include many of the types of
 programming statements found in C#.
 
-.. index:
-   double: command line; copy text
-   double: command line; paste
+.. index:: command line; copy and paste text
+   copy text on command line
+   paste text on command line 
 
 .. _copypaste:
 
@@ -331,10 +341,10 @@ the check boxes under edit options are *all* checked.
 Click OK.  Then you can select with 
 mouse and press Enter for the selection to be remembered in the copy buffer.
 
-.. index::
-   double: command line; shortcuts
-   double: command line; file completion
-   double: command line; history
+.. index:: command line; shortcuts
+   shortcuts on command line 
+   file completion on command line
+   history on command line
 
 Command Line Shortcuts
 -----------------------

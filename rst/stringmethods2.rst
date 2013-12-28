@@ -14,8 +14,8 @@ Play with the new string methods in csharp!
 
 This variation of ``IndexOf`` has a second parameter:
 
-.. index::
-   double: string; IndexOf
+.. index:: string; IndexOf
+   IndexOf string method
    
 ``int IndexOf(string target, int start)``   
     Returns the index of the beginning of the first occurrence of the string 
@@ -36,8 +36,8 @@ This variation of ``IndexOf`` has a second parameter:
         csharp> state.IndexOf("i", 5);
         7                     
 
-.. index::
-   double: string; Trim
+.. index:: string; Trim
+   Trim string method
    
 ``string Trim()``   
     Returns a string formed from **this** string object, but
@@ -50,8 +50,9 @@ This variation of ``IndexOf`` has a second parameter:
         csharp> "#" + s.Trim() + "#";
         #123#
 
-.. index::
-   double: string; Replace
+.. index:: string; Replace
+   Replace string method
+   
    
 ``string Replace(string target, string replacement)``
     Returns a string formed from **this** string by replacing
@@ -66,8 +67,8 @@ This variation of ``IndexOf`` has a second parameter:
         csharp> "oooooh".Replace("oo", "ah");
         "ahahoh"      
 
-.. index::
-   double: string; StartsWith
+.. index:: string; StartsWith
+   StartsWith string method
    
 ``bool StartsWith(string prefix)`` 
     Returns ``true`` if  **this** string object starts 
@@ -81,8 +82,8 @@ This variation of ``IndexOf`` has a second parameter:
         csharp> "1 - 2 - 3".StartsWith("-");
         false   
 
-.. index::
-   double: string; EndsWith
+.. index:: string; EndsWith
+   EndsWith string method
    
 ``bool EndsWith(string suffix)`` 
     Returns ``true`` if  **this** string object ends 
@@ -97,8 +98,8 @@ This variation of ``IndexOf`` has a second parameter:
         false                   
 
 
-.. index::
-   double: exercise; CountRep
+.. index:: exercise; CountRep
+   CountRep exercise 
 
 .. _countrep:
 
@@ -124,9 +125,8 @@ two e's do not count, since the middle e is already
 used in the match of the first two e's.
 
       
-.. index::
-   double: exercise; safe PromptInt
-   double: exercise; safe PromptDouble
+.. index:: exercise; safe PromptInt and PromptDouble
+   safe PromptInt and PromptDouble exercises
    
 .. _safe-input-number:
 

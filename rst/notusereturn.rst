@@ -1,6 +1,5 @@
-.. index::
-   double: function; scope
-   double: function; not use return value
+.. index:: function; not use return value
+   return; value not used 
    
 .. _not-using-ret-val:
 

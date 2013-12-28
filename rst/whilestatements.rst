@@ -1,5 +1,5 @@
-.. index::
-   double:  while; statement
+.. index:: 
+   double: while; statement
 
 .. _While-Statements:
 
@@ -100,8 +100,8 @@ returns to the ``while`` loop heading for another test. When the
 test is finally false, execution jumps past the indented body of
 the ``while`` loop to the next sequential statement.
 
-.. index::
-   double: while; rubric
+.. index:: while; rubric
+   pattern for while
    
 The biggest trick with a loop is to make the same code do the next
 thing you want each time through.  That generally involves 
@@ -381,10 +381,9 @@ variable ``sum``, so the whole function is::
      return sum;               // 6
   }
 
-.. index::
-   double: testing; edge case
-   double: testing; range testing
-   double: edge case; range testing
+.. index:: testing; edge case
+   range testing
+   edge case
    
 The comment before the function definition does not give a clear idea of the 
 range of possible values for n.  How small makes sense for the comment?
@@ -445,7 +444,8 @@ is calculated in line 4, so ``sum`` becomes 2 + 1, but when you get to line
 Now about large n....
 
 .. index::
-   double: big oh; order of n
+   big oh; order of n
+   order of n
    
 With loops we can make programs run for a long time.
 The time taken becomes an issue.  In this case we go though the loop
@@ -453,8 +453,8 @@ n-1 times, so the total time is approximately proportional to n.
 We write that the time is O(n), spoken "oh of n", or "big oh of n" or
 "order of n".
 
-.. index::
-   double: pitfall; limit on number size
+.. index:: pitfall; limit on number size
+   overflow
    
 Computers are pretty fast, so you can try the testing program 
 :repsrc:`sum_to_n_test/sum_to_n_test.cs`
@@ -481,8 +481,8 @@ works for 100000 and for 98765.  We can get correct
 answers for things that will take perceptible time.  Try working up to 
 1 billion (1000000000, nine 0's).  It takes a while: O(n) can be slow!
 
-.. index::
-   double: Gauss; sum through n
+.. index::sum through n example
+   example; sum through n
    
 By hand it is a lot slower, unless you totally change the algorithm:
 There is a classic story about how a calculation like this
@@ -494,8 +494,8 @@ Gauss discovered the general, exact, mathematical formula:
     
 That is the number of terms (n), times the average term (n+1)/2.
 
-.. index::
-   double: big oh; constant order
+.. index:: big oh; constant order
+   constant order
    
 Our loop was instructive, but not the fastest approach.  The simple exact
 formula takes about the same time for any n.  
@@ -505,7 +505,7 @@ This is basically constant time.  In discussing
 how the speed relates to the size of n, we say it is O(1). 
 The point is here that 1 is a constant.  The time is of *constant order*.
 
-.. index::
+.. index:: 
    double: pitfall; division
    
 We can write a ridiculously short
@@ -534,8 +534,7 @@ last, when we know the answer will be an integer, things should be better::
 
    return n*(n+1)/2;
 
-.. index::
-   double: pitfall; cast
+.. index:: cast
    
 Here is a shot at the whole function:
 

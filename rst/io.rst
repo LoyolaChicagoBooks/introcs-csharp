@@ -57,10 +57,10 @@ Just for completeness we mention that you can read a raw single keystroke immedi
      
 
 .. index::
-   string; convert to int
-   string; convert to double
-   double: Parse; int
-   double: Parse; double
+   string; convert to int or double
+   Parse; int and double
+   int; Parse
+   double; parse
    
 .. _Numbers-and-Digit-Strings:
 

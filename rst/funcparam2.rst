@@ -1,5 +1,5 @@
-.. index::
-   double: function; parameter
+.. index:: function; parameter
+   parameter 
 
 .. _more-func-param:
 
@@ -16,9 +16,9 @@ follow the code, and then run:
 
 .. literalinclude:: ../source/examples/addition1/addition1.cs
 
-.. index::
-   double: parameter; actual
-   double: parameter; formal
+.. index:: parameter; actual and formal
+   actual parameter 
+   formal parameter 
 
 The actual parameters in the function call are evaluated left to
 right, and then these values are associated with the formal

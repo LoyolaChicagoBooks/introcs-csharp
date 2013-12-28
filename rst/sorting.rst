@@ -1,8 +1,9 @@
 .. index::
-   double:  PF4; recursion
-   double:  SP1; history
-   double:  algorithms; array
-   
+   PF4
+   recursion
+   SP1
+   history
+   sorting
 
 .. _sorting:
 
@@ -86,10 +87,10 @@ have been reordered so we'll get closer to having a sorted array.
 
 Let's now take a look at the various sorting algorithms.
 
-.. index::
-   double: sorting; bubble sort
-   double: algorithms; bubble sort
-   single: array; nested loop
+.. index:: sorting; bubble sort
+   algorithms; bubble sort
+   array; nested loop
+   bubble sort
    
 Bubble Sort
 -----------
@@ -127,10 +128,10 @@ Bubble Sort requires :math:`O(N^2)` exchanges.
    :linenos:
 
 
-.. index::
-   double: sorting; selection sort
-   double: algorithms; selection sort
-   single: array; nested loop
+.. index:: sorting; selection sort
+   algorithms; selection sort
+   nested loop
+   selection sort
 
 Selection Sort
 --------------
@@ -243,10 +244,10 @@ number of *exchanges* is O(N). The comparisons are a non-trivial cost,
 however, and do show
 in our own performance experiments with randomly-generated data. 
 
-.. index::
-   double: sorting; insertion sort
-   double: algorithms; insertion sort
-   single: array; nested loop
+.. index:: sorting; insertion sort
+   algorithms; insertion sort
+   nested loop
+   insertion sort
    
 Insertion Sort
 --------------
@@ -340,9 +341,10 @@ only half as many comparisons as Bubble Sort, since the average distance an
 element must move for random input is one-half the length of the sorted
 portion. 
 
-.. index::
-   double: sorting; Shell sort
-   single: array; nested loop
+.. index:: sorting; Shell sort
+   nested loop
+   Shell sort
+   algorithms; Shell sort
 
 Shell Sort
 ----------
@@ -447,11 +449,10 @@ We nevertheless think it is a very cool algorithm to have heard of as a computer
 student and think it has promise in a number of situations, especially in systems where
 there are limits on available memory (e.g. embedded systems).
 
-.. index::
-   double: sorting; Quicksort
-   double: algorithms; Quicksort
-   single: array; nested loop
-   single: recursion
+.. index:: sorting; Quicksort
+   algorithms; Quicksort
+   recursion; Quicksort
+   Quicksort
 
 
 Quicksort a.k.a. Partition Sort
@@ -492,8 +493,8 @@ just with a smaller range of indices to deal with in each case.
 These *recursive* calls stop when a part it reduced to one element.
 
 .. index::
-   single: Random
-   double: random number; seed
+   Random
+   seed
    regenerate random numbers
    
 Random Data Generation
@@ -525,10 +526,9 @@ There are a few things to note in this code:
    using the same random data.  Hence we specify the same seed each time.
 
 
-.. index::
-   double: performance; Stopwatch
-   double: performance; TimeSpan
-   double: timing; Stopwatch
+.. index:: Stopwatch
+   performance; Stopwatch and TimeSpan
+   timing
    
 Timing
 -------

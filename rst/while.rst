@@ -1,5 +1,5 @@
-.. index:: 
-   double: while; loop
+.. index:: loop; while
+   while
 
 .. _While-Loops:
 

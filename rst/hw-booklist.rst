@@ -1,6 +1,6 @@
-.. index::
-   double: homework; booklist
-   double: homework; OOP
+.. index:: homework; booklist
+   booklist homework 
+   OOP; homework
 
 .. _booklist:
 
@@ -146,7 +146,7 @@ user of the program can see the correctness of the test
 Grading Rubric
 --------------------
 
-Book class.  Requires the constructor.  Then
+Book class  
 
 - [1 point] public Book(string title, string author, int year)
 - [1] public string GetTitle()

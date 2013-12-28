@@ -4,8 +4,8 @@
 Multi-dimensional Arrays
 ========================================
 
-.. index::
-   double: array; two dimensional array
+.. index:: array; two dimensional
+   two dimensional array
 
 Rectangular Arrays (Two Dimensional)
 --------------------------------------
@@ -166,10 +166,8 @@ for the row of dashes setting off the column sums:
    :end-before: chunk
 
 
-.. index::
-   double: exercise; two dimensional array
-   double: exercise; row and column numbering
-   double: two dimensional array; row and column numbering
+.. index:: exercise; row and column numbering
+   row and column numbering exercise
 
 .. _row-col-number-exercise:
 
@@ -189,10 +187,8 @@ the values in the array, not print them out::
 If there are no more than 9 rows or columns, this display gives row and
 column numbers neatly for the normal human counting system, starting from 1.
 
-.. index::
-   double: exercise; two dimensional array
-   double: exercise; varying column width
-   double: two dimensional array; varying column width
+.. index:: exercise; varying column width
+   varying column width exercise
 
 .. _varying-width-columns-exercise:
 

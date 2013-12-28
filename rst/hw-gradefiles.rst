@@ -1,5 +1,5 @@
-.. index:: 
-   double: homework; grade files
+.. index:: homework; grade files
+   grade files homework
 
 .. _hw-gradefiles:
 
@@ -76,7 +76,6 @@ Requirements
    :repsrc:`grade_files.cs <grade_file_homework_stub/grade_files.cs>`.  
    If the user does not provide at command line argument,
    prompt the user for it once the program starts.
-   The abbreviation should not include spaces.
    An example would be comp170.  All data files will include the course
    abbreviation as part of their name.  We will use comp170 in the examples below,
    but it could be something else.  The folder also contains sample data files
@@ -181,7 +180,8 @@ Requirements
    the :ref:`fio` is useful.
    
 #. The rest of the test data for 
-   course abbreviations comp170 and all the data for comp150 in the homework directory.   
+   course abbreviations comp170 and all the data for comp150 is 
+   in the homework directory.   
    There are also sample solution files for the 
    summaries (including some extra credit additions at the ends of lines).  
    Their names end in ``_solution.txt`` to distinguish them from the
@@ -190,6 +190,10 @@ Requirements
    While your program should certainly work for course abbreviations comp170 and comp150,
    it should also work in general for any data files your refer to
    in the defined formats and place in the same folder.
+   
+#.  Turn in materials as in the last homework, including a single copy of
+    the homework source files and a log.txt file for each student, in the
+    same form as for the last homework.
       
 Hints
 -----

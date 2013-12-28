@@ -31,11 +31,11 @@ at the initial endpoints are distinct.  Our functions indicate this
 initial requirement
 being violated by returning ``double.NaN``, meaning *not a number*.
  
-There are other approaches that may be faster when they work, 
-but many if these methods can also completely fail, 
+There are other approaches to finding roots that may be faster when they work, 
+but many of these methods can also completely fail, 
 so root finding algorithms generally have two
-extra parameters:  a maximum number of iterations and a tolerance 
-indicating how close to a root is close enough.
+extra parameters:  a maximum number of iterations and a tolerance that
+indicates how close to a root is close enough.
 
 Of course a production version would not print out all the intermediate data,
 as the interval shrinks, but we do for illustration:

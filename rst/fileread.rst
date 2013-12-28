@@ -1,8 +1,6 @@
-.. index::
-   double: file; read
-   double: StreamReader; ReadLine
-   double: StreamReader; class
-   single: file; close
+.. index:: file; read and close
+   StreamReader; ReadLine
+   close file
 
 .. _fileread:
 
@@ -38,8 +36,8 @@ Using the ``Close`` method is
 generally optional with files being read. There is nothing to lose
 if a program ends without closing a file that was being read. [#readclose]_
 
-.. index::
-   double: StreamReader; EndOfStream
+.. index:: StreamReader; EndOfStream
+   EndOfStream 
 
 .. _endofstream:
    
@@ -59,8 +57,8 @@ user, one line at a time:
 
 .. literalinclude:: ../source/examples/print_file_lines/print_file_lines.cs
     
-.. index:: 
-   double: var; type
+.. index:: var
+   type; var
 
 ``var``
    For conciseness (and variety) we declared ``reader`` 
@@ -80,8 +78,8 @@ user, one line at a time:
 
 Things to note about reading from files:
 
-.. index::
-   double:  StreamReader; null from ReadLine
+.. index:: StreamReader; null from ReadLine
+   ReadLine; null with StreamReader 
    
 - Reading from a file returns the part read, of course.  Never forget the
   *side effect*:  The location in the file advances past the part just read.
@@ -98,8 +96,9 @@ Things to note about reading from files:
   to the ``null`` value returned, *then* you get an error!
 
 .. index::
-   double: file; ReadToEnd
-   double: StreamReader; ReadToEnd
+   file; ReadToEnd
+   StreamReader; ReadToEnd
+   ReadToEnd
   
 .. _ReadToEnd:
 
@@ -118,8 +117,8 @@ loop we could have just had::
 so we do not want to add an extra newline
 when writing.  We use the ``Write`` method instead of ``WriteLine``.
 
-.. index::
-   double: example; sum_files.cs
+.. index:: example; sum_files.cs
+   sum_files.cs example
        
 Example: Sum Numbers in File
 -------------------------------
@@ -147,7 +146,7 @@ If you give a good file name, it skips lines that contain only whitespace.
 .. literalinclude:: ../source/examples/sum_file/sum_file.cs
 
 A useful function used in ``Main`` for avoiding filename typo errors 
-is in the ``System.IO`` namespace is :: 
+is ``File.Exist`` in the ``System.IO`` namespace :: 
 
     bool File.Exists(string filenamePath) 
 
@@ -183,8 +182,8 @@ the program looks like:
 In :ref:`fio` we will discuss a more flexible way of finding files to open, 
 that works well in Xamarin Studio and many other situations.
  
-.. index::
-   double: example; copy file to upper case
+.. index:: exercise; safe sum
+   safe sum exercise 
    
 
 Safe Sum File Exercise

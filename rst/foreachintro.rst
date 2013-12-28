@@ -4,10 +4,10 @@
 ``foreach`` Syntax 
 =====================
 
-.. index::
-   double: statement; foreach
+.. index:: statement; foreach
+   foreach; syntax 
    
-This sections on ``foreach`` loops and the later :ref:`For-Loops`
+These sections on ``foreach`` loops and the later :ref:`For-Loops`
 introduce new looping statements. 
 Neither is absolutely necessary:  
 You could do all the same things with ``while`` loops,

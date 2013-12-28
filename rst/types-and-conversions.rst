@@ -47,8 +47,8 @@ Add two positive numbers and get a negative number!  This is called *overflow*.
 Be very careful if you are
 going to be using big numbers!
 
-.. index::
-   double: type; long
+.. index:: type; long
+   long
 
 .. _type-long:
    
@@ -70,8 +70,8 @@ they can be stored in the smaller space of a ``short``.
 There are other smaller types, too.
 We will not have need for integral types other than ``int`` and ``long`` in this book.
 
-.. index::
-   double: type; double
+.. index:: type; double
+   double
 
 .. _type-double:
    
@@ -140,8 +140,8 @@ There is no such neat system for showing off small inaccuracies in ``double``
 arithmetic accumulating 
 due to limited precision.  These inaccuracies *still* happen silently.
 
-.. index::
-   double:  numeric type; range
+.. index::  numeric type range
+   range of numeric types
    
 .. _numeric-type-limits:
 
@@ -168,8 +168,8 @@ float
    32 bits; maximum magnitude: :math:`3.402823(10^{38})`; about 7 digits of accuracy
      
 
-.. index::
-   double: type; char
+.. index:: type; char
+   char
    
 .. _type-char:
 

@@ -14,9 +14,9 @@ must be enclosed in quotes ``"`` to delimit the string.  Special cases
 are considered later in :ref:`strings2`.
 
 
-.. index::
-   double: string; concatenation
-   double: string; +
+.. index:: string; concatenation with +
+   concatenation
+   single: +; concatenation
 
 .. _String-Concatenation:
    

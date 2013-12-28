@@ -100,6 +100,8 @@ For example::
          Console.WriteLine("{0} {1}", i, j);
       }
 
+Guess what this does, and then paste it into csharp to check.
+
 The comma separated lists in a ``for`` statement heading 
 are mentioned here for completeness.  Later we will find a situation
 where this is actually useful.

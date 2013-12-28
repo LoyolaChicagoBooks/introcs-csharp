@@ -55,17 +55,18 @@ game is going to be acting like Player A.
 Part 1: No Hints; Fixed Secret Number
 -------------------------------------------
 
-If using Xamarin Studio, create a new project in a solution 
-in which you already have added the ui library project.  Add the ui project 
-as a reference for the lab project.  
-Make sure your program has ``namespace IntroCS;`` to match the ui project.
+You will want to use the UI class, so either copy ui.cs into your project, or
+(for Xamarin Studio) create a new project in a solution 
+in which you already have added the ui library project, and add the ui project 
+as a *reference* for the lab project.  
+Make sure your program has ``namespace IntroCS;`` to match the UI class.
 
 You are going to play a game, and later may repeat it, so put the code
 for playing the number game in a function called ``Game``::
 
     static void Game()
         
-For now your ``Main`` function can just call ``Game()``.
+For now your write a ``Main`` function to just call ``Game()``.
 
 In ``Game``:
 
@@ -123,7 +124,7 @@ In ``Game``, make the following alterations and additions:
 #. For now set an ``int`` variable ``big`` to 100.  We will make sure 
    the secret number is less than ``big``.
 
-#. Have the program print 
+#. Have the Game function print 
    "In this game you guess a positive number less than 100."
    For future use it is best if you have the printing statement
    reference the variable ``big``, rather than the literal ``100``.
@@ -205,7 +206,7 @@ In ``Main``:
 Hence the program might start with:
 
     | Enter a secret number bound: **10**
-    | Guess a number less than 10!
+    | In this game you guess a number less than 10!
     | Guess the number: **5**
     | Higher!
     | Guess the number: **7**
@@ -270,7 +271,7 @@ Should you finish everything early, try the following:
    The first parameter *may* be returned, but second 
    parameter is *never* returned.
    
-   You will need two parameters ``low`` and ``higher`` that keep
+   You will need two variables ``low`` and ``higher`` that keep
    bracketing the allowed range.  The simplest thing is to set them so they
    will be the parameters for the following call to ``Next``. 
 

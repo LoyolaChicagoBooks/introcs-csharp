@@ -169,18 +169,23 @@ You need to fill in the ``Main`` method:
        10000    50   ????.???  ????.???  ??.???  ??.???
       100000    50   ????.???  ????.???  ??.???  ??.???
   
-  The table would be longer if more values of n were entered on the command line.
-  Note that the experiments return times in milliseconds, (1/1000 of a second)
-  while the table should print times in seconds.
+   The table would be longer if more values of n were entered on the command line.
+   Note that the experiments return times in milliseconds, (1/1000 of a second)
+   while the table should print times in *seconds*.
   
-  Because the range of speeds is so enormous, make an accommodation with the 
-  slow linear versions:  If ``rep >= 100`` and ``(long)n*rep  >= 100000000``, then, 
-  for the linear and list columns *only*, time with ``rep2 = rep/100`` instead of ``rep``, 
-  and then compensate by multiplying the time by ``(double)rep/rep2`` to produce
-  the final table value.
-  (This multiplier 
-  is not just 100, since the integer division creating ``rep2`` may not be exact.)  
-  
+   You will need a very large number of repetitions to show anything 
+   above 0 for the fastest searches!
+   Because the range of speeds is so enormous, make an accommodation with the 
+   slow linear versions:  If ``rep >= 100`` and ``(long)n*rep  >= 100000000``, then, 
+   for the linear and list columns *only*, time with ``rep2 = rep/100`` instead of ``rep``, 
+   and then compensate by multiplying the time by ``(double)rep/rep2`` to produce
+   the final table value.
+   (This multiplier 
+   is not just 100, since the integer division creating ``rep2`` may not be exact.)  
+   
+   Show your TA a run with a table with at least three lines of data and with n 
+   being successive powers of 10, and non-zero entries everywhere.
+   
 Once again, you are encouraged to develop this is steps, for example
 
 #. Make sure you can parse the command line parameters.

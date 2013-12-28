@@ -1,5 +1,5 @@
-.. index::
-   double: command line; execution
+.. index:: command line; execution
+   execution on command line 
 
 .. _cmdline-execution:
 
@@ -42,7 +42,8 @@ we are writing is the command line.  We need to get outside Xamarin Studio.
     You can just enter the command ``addition1.exe`` or the shorter ``addition1``.
 
 .. index:: mcs
-   double: command line; compile
+   command line; compile
+   compile on command line
 
 .. _gmcs:
 

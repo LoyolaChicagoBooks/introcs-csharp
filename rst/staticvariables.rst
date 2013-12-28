@@ -1,6 +1,6 @@
    
-.. index::
-   double: global; constant
+.. index:: constant
+   global constant
 
 .. _Static-Variables:
 

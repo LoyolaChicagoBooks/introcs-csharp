@@ -1,5 +1,5 @@
-.. index:: 
-   double: for; loop
+.. index:: loop; for
+   for
 
 .. _For-Loops:
 

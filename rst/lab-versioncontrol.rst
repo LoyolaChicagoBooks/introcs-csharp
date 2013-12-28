@@ -1,6 +1,7 @@
 .. index::
-   double: labs; hg
-   double: labs; version control
+   double: labs; hg and version control
+   version control lab
+   hg
 
 .. 	_lab-versioncontrol:
 

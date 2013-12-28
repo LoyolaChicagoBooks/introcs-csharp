@@ -1,6 +1,6 @@
-.. index::
-   double: statement; do while
-   while; do while
+.. index:: statement; do while
+   do while 
+   while vs. do while
    
 .. _do-while:
 

@@ -65,11 +65,12 @@ is the same as  ::
     x = x * 5;
     
 .. index::
-   format; field width, precision, tables
+   format; field width and precision 
    field width formatting
-   precision; formatting
+   precision; format
    table; format
-   double: example; power_table.cs
+   example; power_table.cs
+   power_table.cs example
 
 .. _tables:
 
@@ -211,8 +212,9 @@ of the format string by putting all the substitution expressions in braces
 right beside each other, and generate the space between columns with a 
 larger field width.
 
-.. index:: 
-   double: left justification; format
+.. index:: left justification
+   format; left justification
+   justification
    
 .. _left-justification:
    
@@ -291,7 +293,8 @@ We can add a newline after each of these is printed.  This requires a test::
       }
    }
 
-Recall that ``Console.WriteLine()`` with no parameters *only* advances to the next line.
+Recall that ``Console.WriteLine()`` 
+with no parameters *only* advances to the next line.
 
 Paste that whole code at once into csharp to see the result.
 
@@ -300,17 +303,16 @@ There is no eighth entry on the last line, and hence no advance to the
 next line.  A program printing this table should include an extra 
 ``Console.WriteLine()`` after the loop.
 
-.. index::
-   double: table; nested loop
-   double: format; table
-   double: example; mod_mult_table.cs
+.. index:: example; mod_mult_table.cs
+   mod_mult_table.cs example
+   nested loop; table 
 
 .. _modular_mult_table:
 
 Modular Multiplication Table
 ------------------------------
 
-We have introduced the remainder operator ``%`` and mentioned have the corresponding
+We have introduced the remainder operator ``%`` and mentioned that the corresponding
 mathematical term is "mod".  We can extend that to the idea of modular arithmetic 
 systems.  For example, if we only look at remainders mod 7, we can just consider
 numbers 0, 1, 2, 3, 4, 5, and 6.  We can do multiplication and addition and take 
@@ -489,8 +491,9 @@ some are not: Print ``"* |"`` once, and then there is a repetitive pattern print
       Console.WriteLine();
 
 The dashed line can be generated using ``StringOfReps`` from 
-:ref:`lab-loops`.  How many dashes?  For each of
-seven columns, and in a row header, we need a digit and an space or 
+:ref:`lab-loops`.  How many dashes?  A digit and a space for each of
+seven columns and for a row header, 
+so we need
 (7+1)*(1+1) characters, plus one for the '|':  1 + (7+1)*(1+1).  
 Thinking ahead, we will leave that expression unsimplified.
 
@@ -523,16 +526,17 @@ Finally, let us generalize this table to mod n.  With n up to about 25,
 it is reasonable to print.
 Most of the changes are just replacing 7 by n.  
 There is a further complication
-with column width, since the numbers can be more than one digit long.  We can do
-formatting with a field width.  
+with column width, since the numbers can be more than one digit long.  
+We can do formatting with a field width.  
 Unfortunately in C# the field width must be a *literal*
-integer embedded in the format string, but our number of digits in n is *variable*.
+integer embedded in the format string, 
+but our number of digits in n is *variable*.
 
 Here is a good trick:  Construct the format string inside the program.  
 We can do that with *another* format string.  To get the  format for a 
 number and an extra space
-mod 7, we want format string "{0,1} ", but for mod 11, we want "{0,	2} ".  We can 
-create a format string to substitute into the place where the 1 or 2 goes.  
+mod 7, we want format string "{0,1} ", but for mod 11, we want "{0,	2} ".  We 
+can create a format string to substitute into the place where the 1 or 2 goes.  
 This 1 or 2 to substitute is the number of characters in n as a string, 
 given by ``("" + n).Length``.
 
@@ -544,28 +548,21 @@ create our main format string with::
     int numberWidth = ("" + n).Length;
     string colFormat = string.Format("{{0,{0}}} ", numberWidth);
 
-The whole function code is below and in example :repsrc:`mod_mult_table/mod_mult_table.cs`.
+The whole function code is below and in example 
+:repsrc:`mod_mult_table/mod_mult_table.cs`.
 
 ..  literalinclude:: ../source/examples/mod_mult_table/mod_mult_table.cs
     :start-after: chunk
     :end-before: chunk
 
 
-.. todo::
-
-   Reversing a string...
-
-.. todo::
-
-   Palindrome
-
 Exercises
 ----------
 
 
-.. index::
-   double: exercise; heads or tails
-   double: random; heads or tails
+.. index:: random; heads or tails exercise
+   exercise; heads or tails
+   heads or tails exercise
    
 Head or Tails Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -588,7 +585,7 @@ so there are only two possible values for n,
 then you can choose to print ``Heads`` or ``Tails`` with an
 |if-else| statement based on the result.
     
-In your Main method have a ``for`` loop calling  ``Flip()``
+In your ``Main`` method have a ``for`` loop calling  ``Flip()``
 10 times to test it, so you generate a random sequence of 
 10 heads and/or tails.  With these 10 rapid calls, it is important
 that a new Random object is only created once.  The suggested static
@@ -618,3 +615,63 @@ Test this with a variety of calls to ``GroupFlips`` in ``Main``.
 The previous exercise would correspond to a single call in ``Main``::
 
     GroupFlips(10, 1);
+    
+.. index:: exercise; reverse string
+   reverse string exercise; 
+
+.. _reverse-string-ex:
+  
+Reverse String Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``string_reverse.cs``. It should include a function with
+description and heading::
+
+    /// Return the reverse of s.
+    /// For example Reverse("hello") returns "olleh".
+    static string Reverse(string s)
+
+    
+In your ``Main`` method call Reverse several times to test..
+
+
+.. index:: exercise; only letters
+   only letters exercise; 
+
+.. _only-letters-ex:
+  
+Only Letters Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that defines and tests a function with
+description and heading::
+
+    /// Return s with all non-letters removed.
+    /// For example OnlyLetters("Hello, World!") returns "HelloWorld".
+    static string OnlyLetters(string s)
+
+Assume the English alphabet.
+    
+.. index:: exercise; palindrome
+   palindrome exercise; 
+
+.. _palindrome-ex:
+  
+Palindrome Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``palindrome.cs`` that defines and tests a function with
+description and heading::
+
+    /// Return true when s is a palindrome.
+    /// For example IsPalindrome("A Toyota!") returns true.
+    static bool IsPalindrome(string s)
+  
+A palindrome is a string that contains the same sequence of letters,
+ignoring capitalization, forward and backward.  Non-letters are ignored.
+Examples are "Madam, I'm Adam." and "Able was I 'ere I saw Elba."
+
+``IsPalindrome`` can be written very concisely by copying and using
+functions from previous exercises.
+
+

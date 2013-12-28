@@ -20,8 +20,9 @@ File Class
 
 We will generally access operating system files using the ``Stream`` abstraction,
 discussed earlier in this chapter.
-There is also a ``File`` class is in the ``System.IO`` namespace, with a number
-of specialized and convenience functions.  We already used the ``File.Exists`` function.
+There is also a ``File`` class in the ``System.IO`` namespace, with a number
+of specialized and convenience functions.  
+We already used the ``File.Exists`` function.
 
 You can look at the MSDN documentation for other uses of the ``File`` class.
 

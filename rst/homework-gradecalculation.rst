@@ -1,7 +1,5 @@
 
-.. index::
-   double: homework; input-output
-   double: homework; decision
+.. index:: homework; input-output and decision
 
 .. _homework-grade-calculation:
 
@@ -11,7 +9,7 @@ Homework: Grade Calculation
 You are going to be 
 putting together your first programming assignment where
 you will be taking the various concepts we have learned
-thus far in lecture and lab and to put together your first
+thus far from class and to put together your first
 meaningful program on your own.
 
 This program will incorporate the following elements:
@@ -21,7 +19,7 @@ This program will incorporate the following elements:
 - Make some decisions.
 - Produce output.
 
-As we've mentioned in the early lectures, our focus is going
+As we've mentioned earlier in class, our focus is going
 to be on learning how to write computer programs that start
 with a Main() function and perhaps use other functions as
 needed to *get a particular job done*. Eventually, we will
@@ -114,8 +112,8 @@ with a ``void`` function.  In a ``void`` function
 there is no return value in the ``return`` statement.
 
 Assuming the weights add to 100, then we will use
-these weights as *floating point* numbers to compute your
-grade. We will be using ``double``, which gives you the
+these weights to compute your
+grade as a ``double``, which gives you the
 best precision when it comes to floating-point arithmetic.
 
 We'll talk in class about why we want the weights to be
@@ -168,18 +166,6 @@ the calculation to be performed:
     csharp> double homework_grade = 100;
     csharp> double project_grade = 100;
     csharp> double participation_grade = 5;  
-
-    csharp> ShowVars();
-    int exam_weight = 40
-    double lab_weight = 15
-    int hw_weight = 15
-    int project_weight = 20
-    int participation_weight = 10
-    double exam_grade = 50
-    double homework_grade = 100
-    double lab_grade = 100
-    double project_grade = 100
-    double participation_grade = 5
 
 This is intended only to be as an example though. Your 
 program must ask the user to enter each of these variables.
