@@ -20,13 +20,32 @@ between positive and negative values, then it must cross 0 somewhere in between,
 and so there must be a real solution.  The question is how to get close
 to a crossing point efficiently.
 
+As an example we show :math:`f(x)=x^2 - 2`. in the range from x = 0 to x = 2.
+The extra horizontal and vertical lines will be explained.
+
+.. image:: images/bisection.png
+
 The basic idea is to bisect the interval between a and b, finding the midpoint,
 c = (a+b)/2. If f(c) is 0, you are done.  
-Otherwise f(c) has a sign which must be opposite *one* of f(a) and f(b).  In
-the iterative procedure, you change the value of a or b to be c, so you still
-have f(a) and f(b) with opposite signs, but now the interval between them
-is only half as long.  Repeating this procedure, you can home in on as small
-an interval as you like.  This approach always works, as long as the signs 
+Otherwise f(c) has a sign which must be opposite *one* of f(a) and f(b).  
+
+In the figure a= 0, f(0) < 0, b = 2, f(2) > 0.  
+The initial interval has the same x coordinates as for the top gray line.
+It midpoint is at 1, the x coordinate of the red vertical segment coming down from
+the gray line in the figure.  Note f(1) < 0, the opposite sign of f(2), 
+so we next consider the half of the original interval from the midpoint 1 to 2.
+The function still must cross 0 in the smaller interval because of the opposite
+signs for f on the endpoints.  In
+the iterative procedure, you  continue this process, halving the length of 
+the interval,
+shifting one endpoint or the other to be the middle
+of the most recent interval, so for each interval, the signs of f on 
+the two ends are opposite.
+Repeating this procedure, you can home in on as small
+an interval as you like.  The figure show this process for the first 5 steps,
+halving the interval length each time.
+
+This approach always works, as long as the signs 
 at the initial endpoints are distinct.  Our functions indicate this 
 initial requirement
 being violated by returning ``double.NaN``, meaning *not a number*.
@@ -37,6 +56,9 @@ so root finding algorithms generally have two
 extra parameters:  a maximum number of iterations and a tolerance that
 indicates how close to a root is close enough.
 
+In the function we use ``a`` and ``b`` and the endpoints of an interval and ``c`` as the 
+midpoint.  In each iteration the value of a or b is reset to be the
+previous midpoint value ``c``.
 Of course a production version would not print out all the intermediate data,
 as the interval shrinks, but we do for illustration:
 

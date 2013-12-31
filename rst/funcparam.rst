@@ -168,7 +168,7 @@ This last version illustrates several important ideas:
 .. comment get this idea in somewhere else?
 
 	.. index::
-	   triple: traceback; error; execution
+	   traceback; error in execution
 	
 	Now that we have nested function calls, it is worth looking further
 	at tracebacks from execution errors.  If we add a line to ``Main`` in
