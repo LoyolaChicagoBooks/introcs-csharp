@@ -8,4 +8,3 @@ Interfaces
    
    fractions-revisited
    csproj-revisited
-   project
