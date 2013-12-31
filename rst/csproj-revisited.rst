@@ -204,6 +204,7 @@ See that the ``Bisection`` function
 now has a parameter for an object containing the mathematical function to
 use for root finding.
 
-Add a new class satisfying the ``Function`` interface, add a test in ``Main``.
+Add a new class satisfying the ``Function`` interface; add a test in ``Main``.
 Try a function with multiple roots in the original interval and see what happens.  
-Then, using distinct intervals, find different roots of the same function.
+Then, using *distinct* intervals in different tests, 
+find different roots of the same function.
