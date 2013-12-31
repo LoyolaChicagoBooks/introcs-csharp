@@ -52,9 +52,9 @@ halving the interval length each time.  You need to look at the output of the co
 follow the results for even smaller intervals.
 
 This approach always works, as long as the signs of f
-at the initial endpoints are distinct.  Our functions checks, and if this 
-initial requirement
-is violated, the function returns the special double value,
+at the initial endpoints are distinct.  Our ``Bisection`` functions check, 
+and if this initial requirement
+is violated, the function returns the special double code value,
 ``double.NaN``, meaning *not a number*.
  
 There are other approaches to finding roots that may be faster when they work, 
@@ -74,12 +74,12 @@ as the interval shrinks, but we do for illustration:
    :start-after: chunk
    :end-before: chunk
 
-Since the bisection method always homes in on the real root rapidly,
+Since the bisection method always homes in on a real root rapidly,
 an alternate version specifically for the bisection method
 finds the *best* approximation possible with ``double``
 arithmetic.  While you can always halve an interval mathematically, you
 eventually run out of distinct ``double`` values! We can stop when
-the midpoint (calculated with limited precision) 
+the midpoint (calculated with limited ``double`` precision) 
 is *exactly* the same as ``a`` or ``b``:
 
 .. literalinclude:: ../source/examples/bisection_method1/bisection_method1.cs
@@ -93,7 +93,7 @@ displays match.
 
 You can try this full example, 
 :repsrc:`bisection_method1/bisection_method1.cs`.  
-Note the special check for ``double.NaN`` in ``Main``, 
+Note the special function checking for ``double.NaN`` in ``Main``, 
 because ``double.NaN`` is not equal to itself!
 
 The current versions have a major limitation:  They just work with the one
