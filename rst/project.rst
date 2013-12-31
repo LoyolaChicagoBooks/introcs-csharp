@@ -1,4 +1,6 @@
-Group Game Project
+.. _group-project:
+
+Group Project
 =====================
 
 Objectives

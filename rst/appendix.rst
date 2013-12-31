@@ -14,6 +14,7 @@ Appendix
    homework-gradecalculation2
    hw-gradefiles
    hw-booklist
+   project
    lab-versioncontrol
    hgteamwork
    acknowledgments

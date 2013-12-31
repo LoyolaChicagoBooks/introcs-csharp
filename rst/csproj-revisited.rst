@@ -108,10 +108,16 @@ The revised Xamarin Studio project is :repsrc:`csproject_stub` (no 1 this time).
 See how the Game class is simplified, too.
 
 Talking about adding commands - these classes could be the basis of a game project for
-a small group.  Have any ideas? 
+a small group.  Have any ideas?  See :ref:`group-project`.
+
+There are further examples of defining and using Interfaces
+in the starting code for the exercises at the end of the next section.
 
 Cohesion, Coupling, and Separation of Concerns
 -----------------------------------------------
+
+This section is motivated by the revisions to the project, 
+not specifically about Interfaces, though good use of them helps.
 
 There are three important ideas in organizing your code into
 classes and methods:
@@ -181,3 +187,23 @@ writing classes implementing and using an interface.
    You need to make slight modifications.  
    You could make Play return the opposite of the number of guesses, 
    so more guesses does generate a worse score.
+
+.. index exercise; bisection
+   interface; Function  
+
+.. _bisection-exercise:   
+ 
+Bisection With Function Interface Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See :repsrc:`bisection_method/bisection_method.cs`. Identify the Interface.
+See how two new classes satisfy it.  Note that the rest of the
+code in these classes is quite different:  One has an instance variable
+and an explicit constructor, while the other does not.  
+See that the ``Bisection`` function
+now has a parameter for an object containing the mathematical function to
+use for root finding.
+
+Add a new class satisfying the ``Function`` interface, add a test in ``Main``.
+Try a function with multiple roots in the original interval and see what happens.  
+Then, using distinct intervals, find different roots of the same function.
