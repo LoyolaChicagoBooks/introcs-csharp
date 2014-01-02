@@ -21,9 +21,10 @@ Here are some important web links:
     they will serve as learning tools to prepare for substantive problems.
     
 *   http://introcs.cs.luc.edu is an online text version for your web browser.  
-    See also :ref:`alt-formats`.
+    See also :ref:`alt-formats` for pdf and epub versions.
     Except on very geometrically oriented topics, 
-    *text-oriented learners may be happiest just reading the book*.  
+    *text-oriented learners may be happiest just reading the book*
+    in one of these formats.  
 
 *   https://luc.box.com/CSharpVideos is a box.com
     folder containing all the videos.  
@@ -72,6 +73,15 @@ In various formats, be aware of these helpful features:
       you can get the most detailed table of contents for a single chapter by 
       clicking on a chapter title in the main table of contents or a 
       chapter title in the Site drop-down menu in the banner.
+    * The web version shifts the behavior of the top banner depending  on
+      screen resolution, so it adapts for anything from large monitors 
+      to small mobile devices. With a wide screen the banner stays at the 
+      top of your screen, and shows all the standard internal links and
+      drop-down menus.  On a narrower screen the banner is only at the top
+      of each webpage, and scrolls off the screen; the only direct
+      link is to the main table of contents, while the rest of the links
+      of the wide version can be accessed via the icon at the right side of 
+      the banner.
 
 Her are further links that may be useful in our repository:
 

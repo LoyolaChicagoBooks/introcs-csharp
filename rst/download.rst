@@ -24,8 +24,6 @@ Example Source Code and Videos
 Primary Book Site (cs.luc.edu)
 ---------------------------------
 
-This is the primary site at Loyola University Chicago.
-
 .. csv-table:: Available Book Formats (Primary Site)
     :header: "Format", "URL"
     :widths: 15, 30
@@ -37,8 +35,6 @@ This is the primary site at Loyola University Chicago.
 
 Mirror Book Site (courseclouds.com)
 ------------------------------------
-
-This is an offsite mirror at site5.com, maintained by Prof. Thiruvathukal.
 
 .. csv-table:: Available Book Formats (Mirror Site)
     :header: "Format", "URL"
