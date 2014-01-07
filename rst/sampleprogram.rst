@@ -6,6 +6,23 @@
 A Sample C# Program
 ======================================
 
+As a start let us consider a ridiculously simple problem and a program to solve it.
+Suppose you paint the walls of rooms in one color and the ceiling in another, and
+you want to calculate the size of the areas to cover with paint.  
+For simplicity ignore doors.
+What data do you need to start with?  Clearly the dimensions of the room.
+Suppose we consider modern houses where the height of the room is predictably 8 feet, 
+so the new starting data is just the length and width of the room.
+
+You need to
+
+#. Obtain the length and width from the user.
+#. Calculate the wall area and ceiling area.
+#. Let the user know the results.
+
+This is a very simple programming pattern:  data in, calculate results, 
+output results.  In this case the calculations in the middle are very easy.
+
 In the examples that you should have downloaded is a first simple program,
 :repsrc:`painting/painting.cs`.
 
