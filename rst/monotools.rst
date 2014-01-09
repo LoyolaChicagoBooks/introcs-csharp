@@ -114,13 +114,14 @@ There are two downloads to get and install in order. Mono first:
 
 #. Go to <http://mono-project.com>.
 
-#. Look for the Mono downloads link. You want to get the latest *stable*
+#. Look for the Mono downloads link. Link on OS-X.  
+   You want to get the latest *stable*
    version of Mono for OS X. For this class, you need version 2.10 or
    later, though preferably 3.2.4 or later.
 
-#. You may see a link to download *Runtime* or *SDK*. Make sure you select **SDK**.
+#. They remind you to get Mono, and provide a link, but you should already have it.
 
-#. For OS X, the SDK is distributed as a DMG disk image. You'll need
+#. For OS X, the Xamarin Studio SDK is distributed as a DMG disk image. You'll need
    to download this image and double-click it. Open the image and run
    the installer. Administrative privileges are required to run the
    installer, so if you do not know this information, please stop
@@ -129,7 +130,8 @@ There are two downloads to get and install in order. Mono first:
 Here is how to do a quick sanity check of your Mono setup:
 
 #. Go to Applications -> Utilities and launch the Terminal
-   application. (Terminal is how you get to a command-line shell in OS X.)
+   application, or quicker, enter terminal in Spotlight. 
+   (Terminal is how you get to a command-line shell in OS X.)
 
 #. You'll see a prompt that looks like this 
    ``computername:folder user$``. 
@@ -173,7 +175,6 @@ Windows
 
 There are four packages, so this takes a while.  Mono first:
 
-
 Dr. Yacobellis has a video showing Windows installation.
 https://connect.luc.edu/p4hmzk2kbmt/  
 There may be further changes to the system.
@@ -182,11 +183,12 @@ There may be further changes to the system.
 
 #. Look for the Mono downloads link. You want to get the latest
    *stable* version of Mono for Windows. For this class, you need version
-   2.10 or later.
+   2.10 or later, preferably 3.2.3 or later.
 
-#. You may see a link to download *Runtime* or *SDK*. Make sure you select SDK.
+#. Choose the link: Mono for Windows, Gtk#, and XSP, and download the
+   installation package
 
-#. For Windows, there is only one option to download the SDK. It is a
+#. It is a
    self-extracting executable, so you will need to double click it to
    install. For Windows 7 users, you may need to check your taskbar to
    see whether the installer is being held up by Microsoft's enhanced
@@ -228,18 +230,25 @@ Xamarin Studio Installation - Windows
    
 #. Now go to <http://mono-develop.com>.  
 
-#. As with Mono, we need to look for the downloads link. You should
+#. As with Mono, we need to look for the downloads link, click on the Windows icon.
+   You should
    click the link for the download of the requirements for the *stable* version. 
-   That should be at least numbered 4.0.12.
+   That should be at least numbered 4.2.2. **Do not install it yet.**
 
    **Note however, that you will next**
-   **install two support packages**, 
-   .Net Framework 4.0, and then
-   GKT#,  
-   and install Xamarin Studio **last**. 
-
-#. As with Mono, you will see a self-extracting installer, 
-   which you should run as before.
+   **install two support packages**:
+   
+   * .Net Framework 4.0 first.  The link takes you to a Microsoft download site.
+     Do not click the top Download button - that gives you much more than you need.
+     Further down in Popular download 01 is 
+     Microsoft .NET Framework 4 (Web Installer).  Click on that and follow
+     the default sequence.
+   
+   * GKT#  The GKT@ download directly downloads the GKT installer.  Again follow
+     the default installation sequence.
+     
+   * install Xamarin Studio **last**. The Download link gets you the installer
+     directly.  Install it following the default steps.
    
 #. If the preceding steps were successful, you can launch
    Xamarin Studio by double-clicking the icon on the Desktop
