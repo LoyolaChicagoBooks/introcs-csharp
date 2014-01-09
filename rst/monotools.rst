@@ -117,20 +117,15 @@ There are two downloads to get and install in order. Mono first:
 #. Look for the Mono downloads link. Link on OS-X.  
    You want to get the latest *stable*
    version of Mono for OS X. For this class, you need version 2.10 or
-   later, though preferably 3.2.4 or later.
-
-#. They remind you to get Mono, and provide a link, but you should already have it.
-
-#. For OS X, the Xamarin Studio SDK is distributed as a DMG disk image. You'll need
-   to download this image and double-click it. Open the image and run
-   the installer. Administrative privileges are required to run the
+   later, though preferably 3.2.4 or later. Choose the MRE version.
+   It installs directly. Administrative privileges are required to run the
    installer, so if you do not know this information, please stop
    here.   
 
 Here is how to do a quick sanity check of your Mono setup:
 
 #. Go to Applications -> Utilities and launch the Terminal
-   application, or quicker, enter terminal in Spotlight. 
+   application, or quicker: enter terminal in Spotlight. 
    (Terminal is how you get to a command-line shell in OS X.)
 
 #. You'll see a prompt that looks like this 
@@ -159,8 +154,10 @@ Xamarin Studio Installation - OSX
 #. As with Mono, we need to look for the downloads link. 
    You should download the *stable* version.
 
-#. As with Mono, you will see a DMG file, 
-   which you should download and double-click to mount on your desktop.
+#. For OS X, the Xamarin Studio SDK is distributed as a DMG disk image. You'll need
+   to download this image and double-click it. Open the image and run
+   the installer. Administrative privileges are required to run the
+   installer.   
 
 #. This time, you will see an App for Xamarin Studio, 
    which you can drag and drop into the Applications folder.
