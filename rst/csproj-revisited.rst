@@ -1,7 +1,7 @@
 csproject Revisited
 =====================
 
-The :repsrc:`csproject1` project skeleton was set up with the different commands
+The :repsrc:`cs_project1` project skeleton was set up with the different commands
 in different classes, keeping related things together.
 
 On the other hand they had high level structure in common.  
