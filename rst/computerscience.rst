@@ -198,7 +198,7 @@ programs could be compiled and run.
 
 A later variant for executing a high-level language is
 an *interpreter*.  An interpreter translates the high-level language
-into machine code, and immediately execute it, not storing the
+into machine code, and immediately executes it, not storing the
 machine code for later
 use, so every time a statement in the code is executed again,
 the translation needs to be redone.  Interpreters are also 
