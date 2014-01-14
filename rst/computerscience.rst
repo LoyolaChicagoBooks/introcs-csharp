@@ -24,7 +24,7 @@ analyzing the phrasing in Google searches?
 Images are analyzed:  What can a satellite image tell you about the
 distribution of drought?  
 
-Sounds:  how do you convert verbal speech accurately'
+Sounds:  how do you convert verbal speech accurately
 into written sentences?
 
 DNA holds information that our bodies process into proteins.
@@ -293,7 +293,7 @@ Design
     radiation for cancer treatment have had errors and led to patient death.
     
     Hardware changes can be evolutionary or revolutionary:
-    Instead of electric circuits can we light, quantum particles, DNA...?
+    Instead of electric circuits can we use light, quantum particles, DNA...?
     
 Computation and Automation
     What can we compute and automate?  Some useful
