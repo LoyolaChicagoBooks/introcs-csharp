@@ -6,6 +6,7 @@
 Homework: Grade Calculation
 ===========================
 
+Create a program file ``grade_calc.cs`` for this assignment.
 You are going to be 
 putting together your first programming assignment where
 you will be taking the various concepts we have learned
@@ -75,6 +76,8 @@ A run with bad weights:
 
 Details
 -------
+
+Make your program file have the name ``grade_calc.cs``.
 
 This is based on the idea of Dr. Thiruvathukal's own 
 legendary course syllabus.
