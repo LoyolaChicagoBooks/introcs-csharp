@@ -137,7 +137,7 @@ You can start with the csharp special help command:
       print (obj)             - Shorthand for Console.WriteLine
       quit;                   - You'll never believe it - this quits the repl!
       help;                   - This help text
-      TabAtStartCompletes - Whether tab will complete even on emtpy lines
+      TabAtStartCompletes - Whether tab will complete even on empty lines
     
 A lot of this is still beyond us but these parts are useful:
 
@@ -190,7 +190,7 @@ specific sequence of steps.
 
 #.  First the right hand side expression
     is evaluated, ``n + 1``.  
-#.  This involves looking up the current alue of ``n``, 
+#.  This involves looking up the current value of ``n``, 
     which we set to 7, so the expression is the same as ``7 + 1`` which is 8.  
 #.  *After* this evaluation, an assignment is made to the left hand variable, 
     which happens to be ``n`` again.
@@ -228,7 +228,7 @@ you get the opposite effect, changing x rather than y, with *no* error statement
 Be careful!
 
 There is some weirdness in csharp because it adds special syntax for expressions
-whuch does not appear in regular programs, but it also wants to allow syntax
+which does not appear in regular programs, but it also wants to allow syntax
 of regular programs.  Some conflict can occur when trying to display 
 an expression, sometimes leading to csharp giving 
 a strange error for apparently no reason.  In that case, 
