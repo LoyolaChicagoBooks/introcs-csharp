@@ -216,7 +216,7 @@ In the earliest grades, however, you would say
 
     "14 divided by 4 is 3 with a remainder of 2." 
 
-Note the the quotient is an integer 3, that matches the C# evaluation of 14/4,
+Note the quotient is an integer 3, that matches the C# evaluation of 14/4,
 so having a way to generate an integer quotient is not actually too strange.
 The problem here is
 that the answer from grade school is in *two* parts, the integer quotient 3 and the
