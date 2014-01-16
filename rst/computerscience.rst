@@ -1,3 +1,7 @@
+.. index:: computer science
+
+.. _computer_science:
+
 Computer Science, Broadly
 ================================= 
 
@@ -5,6 +9,8 @@ We intend this book as an introduction to computer science, with a focus on
 creating problem solutions in the C# programming language.  
 We should not jump in too quickly.  You can get lost in our details and
 miss an idea of the much larger breadth of computer science.  
+
+.. index:: information processing
 
 Information Processing
 ------------------------
@@ -44,6 +50,8 @@ The *computer* doing computations and processing can be a familiar *electronic*
 computer, but it can be genes or brain chemicals, 
 or a whole society as its economy adapts.
 
+.. index:: algorithms
+
 Algorithms
 ------------
 
@@ -82,6 +90,7 @@ programming:
   long to go on: for each egg in step 2.  Step 4 says
   when to stop repeating step 3.
 
+.. index:: data representation
 
 Data Representation
 ---------------------
@@ -98,6 +107,9 @@ http://en.wikipedia.org/wiki/Jacquard_weaving,
 used cards with each row of holes punched in them
 indicating which warp threads are raised and which lowered when a cross
 thread is woven in.  
+
+.. index:: bits and bytes
+   binary number system
 
 In modern electronic computers the most basic bit of data 
 (actually called a *bit*) is held by two-state switches, often 
@@ -141,6 +153,13 @@ represented as a sequence of colored pixels.  Since the human eye is only
 sensitive to three specific colors, red, green, and blue, 
 a pixel is represented by a numerical intensity
 for each of the three colors.
+
+.. index:: instruction representation
+   machine language
+   assembler
+   interpreter
+   architecture
+   
 
 Instruction Representation
 ----------------------------
@@ -216,6 +235,8 @@ In this approach:
 
 Program source => COMPILER => bytecode => INTERPRETER => execution
 
+.. index:: program development cycle
+
 Program Development Cycle
 ---------------------------
 
@@ -243,6 +264,8 @@ sequence:
 Note that very important parts of this process are not centered on coding, 
 but on communicating clearly with a possibly non-technical client.
 Communication skills are critical.  
+
+.. index:: computer science; key concepts
 
 Key Computer Science Areas
 -----------------------------
@@ -298,6 +321,10 @@ Design
 Computation and Automation
     What can we compute and automate?  Some useful
     sounding problems have been proven to be unsolvable.  What are the limits?
+
+.. index:: Denning - Peter
+   Miles - Rob
+   C# Yellow Book
 
 A detailed discussion of these principles and the breadth of
 importance of computer science can be found at
