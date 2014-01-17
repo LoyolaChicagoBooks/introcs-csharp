@@ -70,7 +70,7 @@ you are likely to be able to solve it instantly, with very little
 conscious effort.  Once it becomes a programming problem, with
 parameters stated in general, with just placeholder names
 like ``s`` and ``target``, and given the limited set of approaches
-you have in a programming language, the complexion of this
+you have in a programming language, then the complexion of this
 problem changes completely.  Many students guess the general problem will
 be nearly as simple as the concrete examples they do in their heads,
 and then get very discouraged when the answer does not flow out of 
@@ -80,7 +80,7 @@ to handle if you acknowledge that up front!
 So let's start in with the practice, and gain some experience.  
 With ``s``, ``target``, and ``replacement`` all being general, this
 problem could easily be too much to contemplate at once, 
-so let us replace concrete examples by generality gradually.  
+so let us replace *concrete* examples by generality gradually.  
 The idea is to get to the end.  Rather than trying to jump a chasm, 
 we can take small steps and go around.
 
@@ -141,7 +141,7 @@ temporary choice.
 	want to be able to use those parts, I must find a way to *refer* to them.
 	How can we refer to a part of a string?  
 	
-	There are substring methods wiuth strings!  That is the first
+	There are substring methods with strings!  That is the first
 	big idea.  The exact syntax comes second, but now look:
 	There are two versions of the substring method given.  One
 	generates a substring going all the way to the end of a string.
@@ -181,7 +181,7 @@ Finally we should allow ``s`` to not contain ``target``.
    Not sure how far along we are with if statements at this point,
    though it is important for the part of lab last-first.
    
-The testing regime in Main is clear to understand and write,
+The testing regime in ``Main`` is clear to understand and write,
 but pretty primitive.  You have to look at a lot of output
 every time you test.  We will come up with better testing schemes
 later.
