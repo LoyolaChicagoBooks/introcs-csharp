@@ -244,7 +244,7 @@ Looking ahead to more complicated and interesting problems,
 here is a more complete list of questions to ask yourself when
 designing a function with a ``while`` loop:
 
--  What variables do We need?
+-  What variables do we need?
 -  What needs to be initialized and how? This certainly includes any
    variable tested in the condition.
 -  What is the condition that will allow the loop to continue?
@@ -340,8 +340,9 @@ the idea of the next number in sequence::
 
    i = i + 1;
    
-What about ``sum``?  What was the ``newSum`` on one line becomes the old or
-just plain ``sum`` on the next line, so we can make an assignment::
+What about ``sum``?  What was the ``newSum`` 
+on one time through the loop becomes the old or
+just plain ``sum`` the next time through, so we can make an assignment::
 
    sum = newSum:
    
@@ -424,13 +425,13 @@ The return only happens once, so it is not in the loop.  You get *a* value
 for a sum each time through, but not the final one.  A common beginner
 error is to put the return statement inside the loop, like ::
 
-  static int SumToN(int n)     // 1   BAD VERSION!!!
+  static int SumToN(int n)  // 1   BAD VERSION!!!
   {                            
-     int sum = 1, i = 2;       // 2
-     while (i <= n) {          // 3
-        sum = sum + i;         // 4
-        i = i + 1;             // 5
-        return sum;            // 6  WRONG!
+     int sum = 1, i = 2;    // 2
+     while (i <= n) {       // 3
+        sum = sum + i;      // 4
+        i = i + 1;          // 5
+        return sum;         // 6  WRONG!
      }
   }
 
