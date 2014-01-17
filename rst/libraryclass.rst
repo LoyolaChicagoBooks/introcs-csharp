@@ -70,13 +70,15 @@ the class ``UIF``.
 
 .. warning::
 
-   In Xamarin Studio, if you use a file from a library project, 
+   In Xamarin Studio, if you use a file from a library project (without
+   just copying the present version of that file into the current project), 
    be sure that the current project includes 
    a *reference* to the library project. If you expand the references in the Xamarin Studio 
    project addition3, by clicking on the References line in the solution pad, 
    you should see the project ui.  
 
-Shortly we will come to making your own :ref:`library-projects-in-xamarinstudio`.   
+Shortly you will see the optional section for making your own 
+:ref:`library-projects-in-xamarinstudio`.   
 
 Though we have not discussed all the C# syntax needed yet, there is also an 
 improved class ``UI`` in the ui project that we discuss later.
@@ -127,8 +129,7 @@ you should no longer be able to see the documentation part of the popup for
 ``PromptInt`` in the ``addition3.cs`` edit window. (Be sure to change back to ``///``.)
 
 There are more elaborate documentation conventions that can be used for
-Xamarin Studio and other documentation generation programs.  We defer that discussion
-to a later appendix.
+Xamarin Studio and other documentation generation programs, not discussed here.  
 
 This documentation also works inside a single program file.  If you have a long 
 program with lots of functions defined, this can also be helpful when calling
@@ -140,10 +141,12 @@ around to be reminded of the signature and use of your functions.
 Library Projects in Xamarin Studio (Optional)
 ------------------------------------------------
 
-Xamarin Studio has a multi-step process for creating a library project and for separately
+Xamarin Studio has a multi-step process for 
+creating a library project and for separately
 referencing it in other projects.  The *advantage* of this approach is when you
-want to change the implementation but not the interface to library functions, you just do
-it once, in the library project.  Other projects reference that project.
+want to change the implementation but not the interface to library functions, 
+you just do it once, in the library project.  
+Other projects reference that project.
 
 Some students find the Xamarin Studion overhead of setting up and referencing 
 library projects onerous.
@@ -159,10 +162,12 @@ Hence the rest of the section here is *optional*:
 
 Try adding a reference yourself.  Follow these instructions:
 
-#.  In your own Xamarin Studio solution, start to add a project, but *instead* of leaving
+#.  In your own Xamarin Studio solution, start to add a project, 
+    but *instead* of leaving
     Console Project selected in the dialog window, select **Library Project**.
     
-#.  Then add the project name ui, and continue like when starting previous projects.
+#.  Then add the project name ui, and continue like when starting 
+    previous projects.
     
 #.  Copy in the ``.cs`` files from
     our ui project, :repsrc:`uif.cs <ui/uif.cs>` and :repsrc:`ui.cs <ui/ui.cs>`.
@@ -188,9 +193,22 @@ Try adding a reference yourself.  Follow these instructions:
     
 #.  Run your addition3 project.
 
-You only need to add a library project once, but every further project that needs it,
-must have a *reference* to the library project added.  You might try another for yourself
-with the next exercise!
+You only need to add a library project once, 
+but every further project that needs it,
+must have a *reference* to the library project added.  
+You might try another for yourself
+with the next exercise!  
+
+Again this approach allows you to change the implementation of
+your library class in just one copy in one project, 
+which can be referenced from many places.  
+If you copy the file into different projects, and then decide the code 
+needs to be updated, you are stuck *finding* and editing *all* the copies!
+Not good.  Our library files uif.cs, ui.cs, and later fio.cs, 
+should not be moving targets, so copying should not cause a problem.  This
+may simplify your life, but the tradeoff is not getting used to using
+library references, which are useful in the larger scheme of things.
+
 
 .. _QuotientUIEx:
 	
