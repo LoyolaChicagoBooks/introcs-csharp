@@ -53,8 +53,8 @@ The statements chosen based on the condition
 can be any kind of statement.  This is the suggested form, but
 as with the plain ``if`` statement, the if-true compound statement or 
 the if-false compound statement can be replace by a single statement
-without braces, except in one otherwise ambiguous situation discussed
-later with two ``if``\ s and an ``else``.
+without braces, except in one otherwise ambiguous situation later,
+:ref:`match_wrong_if`.
 
 .. _compound-statement-scope:
 

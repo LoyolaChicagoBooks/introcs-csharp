@@ -90,7 +90,9 @@ Summary of String Length and Some Instance Methods
     
         csharp> string name = "Sheryl Crow";                         
         csharp> name.Substring(3,5);
-        "ryl C"   
+        "ryl C"  
+        
+    Java programmers:  Note the second parameter is *not* the same as in Java. 
 
 ``string ToUpper()``   
     Return a string like **this** string, except all in upper case.  Example:: 
@@ -113,10 +115,25 @@ Summary of String Length and Some Instance Methods
 
 .. index:: immutable
 
-All of these methods that return a string return a *new* string.  No string method
-alters the original string.  Strings are *immutable*:  
-They are objects that cannot be changed
-after they are first produced.
+..  warning::
+    All of these methods that return a string return a *new* string.  No string method
+    alters the original string.  Strings are *immutable*:  
+    They are objects that cannot be changed
+    after they are first produced.  This is a common source of errors.
+    
+::
+
+    csharp> string s = "Hello";
+    csharp> s.ToUpper()
+    "HELLO"
+    csharp> s
+    "Hello"
+    csharp> s = s.ToUpper();
+    csharp> s
+    "HELLO"    
+
+See that you need an explicit assignment if you *want* the variable associated
+with the original string to change.
 
 Further string methods are introduced in :ref:`more-string-methods`.
 

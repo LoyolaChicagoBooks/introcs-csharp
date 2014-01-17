@@ -69,6 +69,8 @@ This is another easy one to make and *miss* - just one innocent semicolon.
 .. index:: pitfall; dangling else;
    dangling else pitfall 
    if-else; pitfall
+   
+.. _match_wrong_if:
 
 Match Wrong ``if`` With ``else``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
