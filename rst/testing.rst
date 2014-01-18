@@ -137,7 +137,8 @@ whenever we are talking about data. Everything we do, especially when it comes t
 
 In this test, we construct a few Rational instances (r1, r2, and r3) and perform at least
 one test for each of the essential operators (>, <, and =). Recall from our earlier discussion
-of the Rational class that we return ``< 0`` when one Rational is *less than* another. We return
+of the Rational class that the CompareTo method return a value ``< 0`` 
+when one Rational is *less than* another. It returns a number 
 ``> 0`` for *greater than*, and ``== 0`` for *equal to*.
 
 If any one of these comparisons fails, this means that we cannot rely on the ability to 
@@ -221,18 +222,86 @@ into an actual (reduced) rational number. We test three general cases:
   representation. In this case, we are also getting an extra test to ensure the result
   is reduced.
 
+.. index:: Xamarin Studio; running NUnit tests
+   testing; running in Xamarin Studio
+   
+.. _running-nunit-tests:
 
-Running the Tests
+Running the NUnit Tests
 ---------------------------
 
-In Xamarin Studio, run the Run rational_nunit project.  
+#. In Xamarin Studio, select the rational_nunit project. 
+#. In the main Xamarin Studio menu click "Run" and select "Run Unit Tests" 
+
 A test pad should appear and show something like
 
-.. image:: images/NUnitTestMonoDevelop.png
+.. image:: images/NUnitTestXamarinInit.png
 
-As you can see in the above display, all of the tests in ``RationalTests``  
+This likely just shows the overall results in the summary line at the bottom.
+You can show details by clicking on one or more of headings at the 
+top of the pad.  In particular, if you click Successful Test, Failed Tests, 
+and Output (and likely drag the top of the pad to make 
+it large enough to see everything), you should see something like
+
+.. image:: images/NUnitTestXamarinDetails.png
+
+As you can see in the above displays, all of the tests in ``RationalTests``  
 get executed, and they all pass.
+There are no failed tests to see, 
+but that part would be the most important details if any were there!
+The output just details the sequence of execution.
+
+Xamarin Studio remembers the headings selected, so next time you run tests,
+the same details will show.
+
+The testing file is using NUnit.Framework.  There is a little more to this.
+If you edit the references, selecting All sources, and entering nunit
+in the search box, you see 
+
+.. image:: images/NUnitReferencesXamarin.png
+
+Note there are more than one version of nunit.framework. On a Mac,
+the selected version worked directly, but the logical looking one, provided 
+by Xamarin, did *not* work directly.  Either worked if we select the context
+menu in the Solutions pad for the nunit.framework version added to the references, 
+and make it look like
+
+.. image:: images/NUnitNotSpeciofVersion.png
+   :width: 180 pt
+with the "Require Specific Version" item toggled so it is *not* checked.
 
 We waited until now to discuss unit testing, because the test classes are coded with
 *instance* methods,
 unlike the static methods that we started out with.
+
+A test can also call ``Main`` of a program, with specified parameters that
+would normally come from the command line.  See the small project 
+:repsrc:`cmdline_to_file`.
+
+.. index:: String Replace NUnit Exercise'
+   exercise; String Replace NUnit
+   
+String Replace NUnit Test Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you completed the program from the stub 
+:repsrc:`string_manip_stub/string_manip.cs`,
+then add a testing class using NUnit that tests ``ReplaceFirst`` 
+with the same parameters as used in the original file's ``Main``.  
+If you did the elaboration of ``ReplaceFirst`` that just returns the original
+string when the target is not found, then add tests for that, too.
+Remember the necessary library reference and try it out.
+
+.. index:: Grade File NUnit Exercise'
+   exercise; Grade File NUnit test
+   
+Grade File NUnit Test Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add a testing class using NUnit to :ref:`hw-gradefiles`.  
+Remember the necessary library reference.
+Sample data files and files for testing the results
+are included in the project.  Just test 
+using command line parameters (so there is no Console input).  
+Test with both comp170 and comp150.  
+
