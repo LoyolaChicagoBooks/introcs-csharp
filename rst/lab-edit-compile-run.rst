@@ -77,6 +77,7 @@ a Mac.  Windows versions should be similar.
     ..  image:: images/lab-edit/newSolution.png
      	:alt: Xamarin Studio Start Image
      	:align: center
+        :width: 227.25 pt
 
 #. You get a dialog window to fill out.  Follow the order below.  
    Later parts may not be visible until you do the previous parts:
@@ -94,6 +95,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/consoleProjectDialog.png
      	:alt: Xamarin Studio Dialog Image
      	:align: center
+        :width: 489.3 pt
    
    You now have created a solution in Xamarin Studio, with one project
    inside it. Later we can add further *projects* to *this solution*. 
@@ -113,6 +115,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/Program.png
      	:alt: Xamarin Studio Program.cs Image
      	:align: center
+        :width: 485.25 pt
    
 #. Program.cs should be selected in the Solution Pad, as shown above.  
    Change the selection by clicking on hello. 
@@ -128,6 +131,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/runMainMenu.png
      	:alt: Xamarin Studio Run Program.cs Image
      	:align: center
+        :width: 389.25 pt
    
     
 #.  Here Xamarin Studio combines several steps: saving the file,
@@ -139,6 +143,7 @@ a Mac.  Windows versions should be similar.
     ..  image:: images/lab-edit/pressKey.png
      	:alt: Xamarin Studio Press Key to close Image
      	:align: center
+        :width: 283.5 pt
    
     You have a chance to see the output of this simple program.
     Follow the instructions and press the space or Enter key.
@@ -148,6 +153,7 @@ a Mac.  Windows versions should be similar.
     ..  image:: images/lab-edit/processComplete.png
      	:alt: Xamarin Studio Process Complete Image
      	:align: center
+        :width: 198.75 pt
    
     You have to actively close the Mac terminal window, either by clicking the
     red window closing button, or using the keyboard, with Command-W.
@@ -169,6 +175,7 @@ a Mac.  Windows versions should be similar.
         ..  image:: images/lab-edit/menuRemoveMain.png
             :alt: Xamarin Studio Remove Program.cs Image
             :align: center
+            :width: 326.25 pt
    
     -   You get another popup.  When it appears the right button is selected,
         *but you do not want that selection*, Remove From Project. 
@@ -180,6 +187,7 @@ a Mac.  Windows versions should be similar.
         ..  image:: images/lab-edit/sureRemove.png
             :alt: Xamarin Studio Delete Program.cs Image
             :align: center   
+            :width: 436.5 pt
             
     -   If you forgot to close the Edit Pad tab containing Program.cs earlier, you can still
         do it, just say not to save changes to the file when asked. 
@@ -192,6 +200,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/addNewFileMenu.png
      	:alt: Xamarin Studio Add new file Image
      	:align: center
+        :width: 468.75 pt
 
 #. In the popup New File Dialog Window, click on Empty File (not Empty *Class*).  
    Enter the name hello.cs.
@@ -200,6 +209,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/makeEmptyFileDialog.png
      	:alt: Xamarin Studio Add empty file Image
      	:align: center
+        :width: 427.5 pt
    
 #. This should add hello.cs to the hello project and open an editing window for hello.cs.
    The file should have no text.
@@ -207,6 +217,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/editEmptyHello.png
      	:alt: Xamarin Studio edit empty file Image
      	:align: center
+        :width: 272.25 pt
    
    
    Much like in most word processors type in (or paste) 
@@ -227,6 +238,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/pasteHello.png
      	:alt: Xamarin Studio Edited new file Image
      	:align: center
+        :width: 274.5 pt
    
 #.  You can run the project just as before.  You should ge the same result, unless
     you made a typing error.  In that case look, fix it, and try again.

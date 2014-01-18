@@ -44,6 +44,7 @@ For example::
 A simple schematic diagram with a name for a location in memory (the box):
 
 .. image:: images/variableDeclaration.png
+   :width: 72 pt
 
 Although we are used to reading left to right, an assignment statement works 
 *right to left*.  The value on the right side of the equal sign is calculated 
@@ -52,6 +53,7 @@ side of the equal sign, either giving an initial value or
 *overwriting* any previous value stored there.
 
 .. image:: images/variableAssignment.png
+   :width: 72 pt
 
 .. index:: initializer
    single: =; initializer
@@ -174,6 +176,7 @@ showing we can change the value of a variable.  The most *recent* assignment is 
 (until the next assignment....)  We can imagine a schematic diagram:
 
 .. image:: images/variableChange.png
+   :width: 43.5 pt
 
 We can carry this csharp session one step further,
 illustrating a difference between C# and math:
