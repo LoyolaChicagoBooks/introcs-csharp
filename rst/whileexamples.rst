@@ -26,6 +26,7 @@ in this case the square root of 2.  The figure below shows the graph,
 with extra horizontal and vertical lines that will will be explained.
 
 .. image:: images/bisection.png
+   :width: 233.25 pt
 
 In the figure a= 0, f(0) < 0, b = 2, f(2) > 0.  
 

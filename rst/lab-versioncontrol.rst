@@ -112,7 +112,7 @@ Go to ``Repositories -> Create Repository`` (the option is at the bottom
 of the list of menu options). You'll see this screen:
 
 .. image:: images/lab-hg/hgcreaterepository.png
-   :height: 400 px
+   :height: 300 pt
    :alt: Xamarin Studio Image
    :align: center
 
@@ -147,7 +147,7 @@ create more of them later.
 Here is an example of a filled out form:
 
 .. image:: images/lab-hg/hgcreaterepository2.png
-   :height: 400 px
+   :height: 300 pt
    :alt: Xamarin Studio Image
    :align: center
 
@@ -224,7 +224,7 @@ from the list of repositories.  If all goes well, you should see the
 following screen:
 
 .. image:: images/lab-hg/hgrepositorysummary.png
-   :height: 400 px
+   :height: 300 pt
    :alt: Xamarin Studio Image
    :align: center
 
@@ -532,7 +532,7 @@ Do the following:
    source". So go to the *Source* tab.
 
    .. image:: images/lab-hg/bitbucket-source.png
-      :height: 400 px
+      :height: 290 pt
       :alt: Xamarin Studio Image
       :align: center
 
@@ -544,7 +544,7 @@ Do the following:
    can look at it--through the web! When you do so, you'll see something like this.
 
    .. image:: images/lab-hg/HelloWorld.png
-      :height: 400 px
+      :height: 290 pt
       :alt: Xamarin Studio Image
       :align: center
 
@@ -603,7 +603,7 @@ a team on developing the book and examples.
        repository:
 
        .. image:: images/lab-hg/introcs-repo.png
-          :height: 400 px
+          :height: 290 pt
           :alt: Xamarin Studio Image
           :align: center
 
