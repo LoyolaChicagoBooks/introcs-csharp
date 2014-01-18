@@ -236,6 +236,7 @@ Running the NUnit Tests
 A test pad should appear and show something like
 
 .. image:: images/NUnitTestXamarinInit.png
+   :width: 509.25 pt
 
 This likely just shows the overall results in the summary line at the bottom.
 You can show details by clicking on one or more of headings at the 
@@ -244,6 +245,7 @@ and Output (and likely drag the top of the pad to make
 it large enough to see everything), you should see something like
 
 .. image:: images/NUnitTestXamarinDetails.png
+   :width: 490 pt
 
 As you can see in the above displays, all of the tests in ``RationalTests``  
 get executed, and they all pass.
@@ -259,6 +261,7 @@ If you edit the references, selecting All sources, and entering nunit
 in the search box, you see 
 
 .. image:: images/NUnitReferencesXamarin.png
+   :width: 489.75 pt
 
 Note there are more than one version of nunit.framework. On a Mac,
 the selected version worked directly, but the logical looking one, provided 
@@ -266,8 +269,9 @@ by Xamarin, did *not* work directly.  Either worked if we select the context
 menu in the Solutions pad for the nunit.framework version added to the references, 
 and make it look like
 
-.. image:: images/NUnitNotSpeciofVersion.png
-   :width: 180 pt
+.. image:: images/NUnitNotSpecificVersion.png
+   :width: 288 pt
+   
 with the "Require Specific Version" item toggled so it is *not* checked.
 
 We waited until now to discuss unit testing, because the test classes are coded with
