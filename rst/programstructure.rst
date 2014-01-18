@@ -68,6 +68,7 @@ in a solution, like your work solution:
 #. Select Options.
    
    .. image:: images/select_options.png
+      :width: 332.25 pt
    
 #. In the popup Solution Options Window, you will see "Code Formatting" 
    in the left column.  If you do not see "C# source code" and then "Text file"
@@ -75,6 +76,7 @@ in a solution, like your work solution:
    click on "Code Formatting" to expand the hierarchy.
   
    .. image:: images/set_indent.png 
+      :width: 351.75 pt
    
 #. Click on Text file, and then the right side should show options.  
    Adjust them to look like the picture: tab and indent widths 3, 

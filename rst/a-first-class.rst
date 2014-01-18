@@ -487,6 +487,7 @@ variables ``numerator`` and ``denominator``.
 The figure illustrates the memory state at the beginning of the constructor call:
 
 .. image:: images/callConstructor.png
+   :width: 207 pt
 
 Note the immediate value assigned to the numeric instance variables is zero:  This is 
 as discussed in :ref:`default-fields`.  
@@ -499,6 +500,7 @@ by ``this``.  It found ``num`` there.  Now it copies the 6 into that location.
 Similarly for ``denominator`` and ``denom``:
 
 .. image:: images/callConstructorCopied.png
+   :width: 207 pt
 
 Then the constructor calls ``normalize``.  Since normalize is also an instance method,
 a reference to ``this`` is passed implicitly.  While illustrating the memory state 
@@ -510,22 +512,26 @@ Later ``normalize`` calls ``gcd``.  Since ``gcd`` is static, note that the local
 variables for ``gcd`` do *not* contain a reference to ``this``.
 
 .. image:: images/callGCD.png
+   :width: 207 pt
 
 At the end of ``gcd`` the ``int`` 2 is returned and initializes 
 ``n`` in the calling method ``normalize``.
 Then normalize modifies the instance variable pointed to by ``this``, and finishes.
 
 .. image:: images/finishNormalize.png
+   :width: 207 pt
 
 That is the same object ``this`` in the constructor.  
 Just before the constructor completes we have:
 
 .. image:: images/finishConstructor.png
+   :width: 207 pt
 
 Then in ``Main`` the constructor's ``this`` is the reference to the new object 
 initializing ``f``.
 
 .. image:: images/setF.png
+   :width: 198 pt
 
 Consider the next line of ``Main``::
 
@@ -537,6 +543,7 @@ it does this by calling the ``ToString`` method for ``f``,
 so the implicit ``this`` in the call to ``ToString`` refers to the same object as ``f``:
 
 .. image:: images/callToString.png
+   :width: 196.5 pt
 
 ``ToString`` returns "-3/5", and it gets printed as part of the line generated
 by ``WriteLine``....  
@@ -557,6 +564,7 @@ this use of a local variable
 ``f`` is independent of the ``f`` in ``Main``:
 
 .. image:: images/callAdd.png
+   :width: 220.5 pt
 
 Since the return statement in ``Add`` creates a new object, 
 the figure shows  a call to the
@@ -567,6 +575,7 @@ constructor call, but
 The ``this`` of the constructor ends up as the reference returned by ``Add``:
 
 .. image:: images/endAdd.png
+   :width: 220.5 pt
 
 which gets sent to the WriteLine statement and gets printed as in the earlier code.
 
@@ -598,6 +607,7 @@ variable, you must follow the reference path arrow that leads *from a local vari
 an instance field that you want to reference. 
 
 .. image:: images/pathToNum.png
+   :width: 220.5 pt
 
 Then use the proper object-oriented notation to refer to the path.  
 In the example, it takes one step,
