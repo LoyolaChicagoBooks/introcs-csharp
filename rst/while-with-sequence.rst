@@ -338,9 +338,13 @@ function to come up with an answer ``false`` if *any* character is not a digit,
 not just the last character.  The bad code would give the wrong answer
 with the string "R2D2".  If you do not see that, play computer with this string
 and the bad code variation 
-that sets ``allDigitsSoFar`` every time through the loop.
+that sets ``allDigitsSoFar`` every time through the loop.  
+
+There is a less commonly useful way to make an assignment without ``if`` 
+work here [#boolassign]_, but a much more important, 
+improved approach follows:
    
-We are not done.  The last correct code is still inefficient.  If an early
+The last correct code is still inefficient.  If an early
 character in a long string is not a digit, we already know the 
 final answer, but this code goes through and still checks all the
 other characters in the string!  People checking by hand 
@@ -394,8 +398,8 @@ and you know the final answer for your function as soon as you find it.
           c = c + 1;
           c++;
       
-   In ``c++`` the type of ``c`` must be integral, but not necessarily ``int``.  
-   It could be a smaller type, like ``char``.    
+   In ``c++`` the type of ``c`` must be numeric, but not necessarily ``int``.  
+   It could be a *smaller* type, like ``char``.    
    
    .. fails in tex 
        For instance ::
@@ -413,6 +417,16 @@ and you know the final answer for your function as soon as you find it.
    The ``int`` literal 1 forces
    the sum expression to be an ``int``, which must be cast back to a ``char`` to be
    assigned to ``c``.  Similarly with the ``--`` operator.
+
+.. [#boolassign]
+
+   The Boolean assignment did not work when ``allDigitsSoFar`` was already
+   ``false``, and the next character was a digit.  This could be fixed with
+   a compound Boolean expression in the assignment:
+   
+   ``allDigitsSoFar = allDigitsSoFar  && (s[i] < '0' || s[i] > '9');``
+   
+   This way, once ``allDigitsSoFar`` is ``false``, it stays ``false``.
 
 Exercise
 -----------
