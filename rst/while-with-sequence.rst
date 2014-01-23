@@ -110,10 +110,11 @@ Let us get more complicated.  Consider the function described:
    :start-after: chunk
    :end-before: {
 
-For instance PrintVowels("hello") would print:
+For instance PrintVowels("computer") would print:
 
-    | e
     | o
+    | u
+    | e
 
 We have seen that we can go through the whole string and do the same
 thing each time through the loop, using ``s[i]`` in some specific way.
@@ -123,7 +124,7 @@ the same thing each time:  We only want to print *some* of the
 characters.  Again your eyes and mind are so fast, you likely miss what you
 need to do when you go through ``PrintVowels`` by hand.  Your
 eyes let you just grab the vowels easily, but think, what is actually
-happening?  You are checking each character to see if it is a vowel,
+happening?  You are checking each character to see **if** it is a vowel,
 and printing it if it is:  You are doing the same thing each time -
 *testing* **if** the character is a vowel.  The pseudocode is   ::
 
@@ -306,8 +307,40 @@ The whole function would be:
 You can try this code in example :repsrc:`check_digits1/check_digits1.cs`.
 
 .. index::  return; from inside loop
+
+Note that we earlier made an improvement by replacing an |if-else| statement 
+generating a Boolean value by a simple Boolean assignment.  
+In the most recent sample code, there is an ``if`` statement setting a Boolean
+value::
+
+            if (s[i] < '0' || s[i] > '9') {
+               allDigitsSoFar = false;
+            }
+            
+You might be tempted to replace this ``if`` statement by a simple Boolean
+assignment:
+
+    allDigitsSoFar = (s[i] < '0' || s[i] > '9');  // bad!
+    
+Play computer with this change to see for yourself why it is bad, before
+looking at our explanation below....
+
+The place where we originally said to use a simple Boolean assignment was
+replacing an |if-else| statement, that *always* set a boolean value.  In the more
+recent correct code for digits, we hada simple ``if`` statement, 
+and were only setting the boolean variable
+to ``false`` some of the time: when we had *not* found a digit.  The bad code
+sets the variable for *each* character in the string, 
+so it can change an earlier ``false`` value back to ``true`` for a later digit.
+The final value
+always comes from the the *last* character in the string.  We want the
+function to come up with an answer ``false`` if *any* character is not a digit,
+not just the last character.  The bad code would give the wrong answer
+with the string "R2D2".  If you do not see that, play computer with this string
+and the bad code variation 
+that sets ``allDigitsSoFar`` every time through the loop.
    
-We are not done.  This code is still inefficient.  If an early
+We are not done.  The last correct code is still inefficient.  If an early
 character in a long string is not a digit, we already know the 
 final answer, but this code goes through and still checks all the
 other characters in the string!  People checking by hand 
@@ -333,7 +366,9 @@ That means no
 non-digit was found, so if there are any characters at all,
 they are all digits. There are 
 *one or more* digits as long as the string length is *positive*.
-Again we do not need an ``if`` statement for a check.  Look in the full
+Again we do *not* need an |if-else| statement to check the length and
+set the Boolean result.  
+Look in the full
 code for the function:
 
 .. literalinclude:: ../source/examples/check_digits2/check_digits2.cs
