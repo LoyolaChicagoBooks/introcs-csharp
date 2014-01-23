@@ -318,7 +318,7 @@ value::
             }
             
 You might be tempted to replace this ``if`` statement by a simple Boolean
-assignment:
+assignment::
 
     allDigitsSoFar = (s[i] < '0' || s[i] > '9');  // bad!
     
@@ -326,7 +326,7 @@ Play computer with this change to see for yourself why it is bad, before
 looking at our explanation below....
 
 The place where we originally said to use a simple Boolean assignment was
-replacing an |if-else| statement, that *always* set a boolean value.  In the more
+replacing an |if-else| statement, that *always* set a Boolean value.  In the more
 recent correct code for digits, we hada simple ``if`` statement, 
 and were only setting the boolean variable
 to ``false`` some of the time: when we had *not* found a digit.  The bad code
