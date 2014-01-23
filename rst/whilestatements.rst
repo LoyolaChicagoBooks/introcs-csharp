@@ -46,7 +46,8 @@ tea starts at 115 degrees Fahrenheit. You want it at 112 degrees. A
 chip of ice turns out to lower the temperature one degree each
 time. You test the temperature each time, and also print out the
 temperature before reducing the temperature. In C# you could
-write and run the code below, saved in example program cool.cs:
+write and run the code below, saved in example program 
+:repsrc:`cool/cool.cs`:
 
 .. literalinclude:: ../source/examples/cool/cool.cs
    :start-after: chunk
@@ -62,7 +63,8 @@ closely is to make a table with a line for each instruction
 executed, keeping track of all the variables.  We call this
 *playing computer*.
 
-Each row shows the line number of the start of the next instruction
+Each row in the code sample above 
+shows the line number of the start of the next instruction
 executed, and the values of all the variables *after* the instruction
 is executed.  The important thing to see with loops is that the same
 line can be executed over and over, but with different variable
@@ -100,8 +102,18 @@ returns to the ``while`` loop heading for another test. When the
 test is finally false, execution jumps past the indented body of
 the ``while`` loop to the next sequential statement.
 
+.. note::
+   Unless a program is purely sequential, 
+   the numbers under the **Line** column are *not* just in textual, sequential
+   order.  The order of the numbers is the order of *execution*.
+   Each line number in the "playing computer" table is the
+   line *number label* for the next particular line *getting executed*.
+   Since in decisions, loops, and function calls, lines may be reordered
+   or repeated, the corresponding line numbers may be skipped, repeated, 
+   or otherwise out of numerical order.
+
 .. index:: while; rubric
-   pattern for while
+   pattern for a while loop
    
 The biggest trick with a loop is to make the same code do the next
 thing you want each time through.  That generally involves 
@@ -151,7 +163,8 @@ carefully, one step at a time.
    :end-before: chunk
    :linenos:
 
-Check yourself by running the example program :repsrc:`test_while2/test_while2.cs`.
+Check yourself by running the example program 
+:repsrc:`test_while2/test_while2.cs`.
 
 The sequence order is important. The variable ``i`` is increased before
 it is printed, so the first number printed is 6. Another common
@@ -178,9 +191,9 @@ Line   i  Comment
 
 You should be able to generate a table like the one above, following 
 the execution of one statement at a time.  You are playing through the role
-of the computer in detail.  We will refer to this later as *playing computer*.
-As code gets more complicated, particularly with loops, this is an
-important skill.
+of the computer in detail.  
+As code gets more complicated, particularly with loops, this "playing computer"
+is an important skill.
 
 **Problem**:  Write a program with a ``while`` loop to print:
 
@@ -198,7 +211,7 @@ important skill.
 
 **Analysis**:  
 We have seen that we can produce a regular sequence of numbers in a loop.
-The "Blastoff!" part does not fit the pattern, so it must be a *separate*
+The "Blastoff!" part does not fit the pattern, so it is logically a *separate*
 part after the loop.  We need a name for the number that decreases.  It can
 be ``time``.  Remember the general rubric for a ``while`` loop:
 
@@ -215,7 +228,7 @@ The main thing to do is print the time over and over.
 The initial value of the time is 10.  We are going to want to keep printing 
 until the time is down to 1, so we *continue* while the time is at least 1,
 meaning the continuationCondition can be ``time >= 1``, 
-or we could use ``time > 0``.
+or we could use ``time > 0``, since ``time`` is an integer here.
 
 Finally we need to get ready to print a different time in 
 the next pass through the loop.
@@ -293,8 +306,8 @@ detailed sequence of steps like::
     10 = 6 + 4
     15 = 10 + 5
     
-You could put this in code directly for a specific sum, but if n is general,
-we need a loop, and hence we must see a pattern in code that we can repeat.
+You could put this in code directly for a specific sum, but if ``n`` is general,
+we need a loop, and hence we must see a *pattern* in code that we can repeat.
 
 Each of the second terms in the additions is a successive integer, 
 that we can generate.  Starting in the second line, the first number
@@ -387,9 +400,9 @@ variable ``sum``, so the whole function is::
    edge case
    
 The comment before the function definition does not give a clear idea of the 
-range of possible values for n.  How small makes sense for the comment?
+range of possible values for ``n``.  How small makes sense for the comment?
 What actually works in the function?  The smallest expression 
-starting with 1 would just be 1: (n = 1).  Does that work in the function?
+starting with 1 would just be 1: (``n`` is 1).  Does that work in the function?
 You were probably not thinking of that when developing the function!
 Now look back now at this *edge case*.  You can play computer on the code
 or directly test it.  In this case the initialization of ``sum`` is 1,
@@ -435,8 +448,8 @@ error is to put the return statement inside the loop, like ::
      }
   }
 
-Recall that when a return statement is reached, function execution ends,
-no matter what comes next in the code.
+Recall that *when a return statement is reached, function execution ends*,
+*no matter what comes next in the code*.
 (This is a way to break out of a ``while`` loop that we will find useful 
 later.)  In this case however, it is not what we want at all.  The first sum
 is calculated in line 4, so ``sum`` becomes 2 + 1, but when you get to line
