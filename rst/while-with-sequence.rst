@@ -327,9 +327,9 @@ looking at our explanation below....
 
 The place where we originally said to use a simple Boolean assignment was
 replacing an |if-else| statement, that *always* set a Boolean value.  In the more
-recent correct code for digits, we hada simple ``if`` statement, 
+recent correct code for digits, we had a simple ``if`` statement, 
 and were only setting the boolean variable
-to ``false`` some of the time: when we had *not* found a digit.  The bad code
+to ``false`` *some* of the time: when we had *not* found a digit.  The bad code
 sets the variable for *each* character in the string, 
 so it can change an earlier ``false`` value back to ``true`` for a later digit.
 The final value
