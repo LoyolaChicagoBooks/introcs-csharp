@@ -10,7 +10,7 @@ _________________
 Suppose you want the user to enter three integers for sides of a 
 right triangle.  If they do not make a right triangle, say so
 and make the user try again.
-x
+
 One way to look at the while statement rubric is:
 
 .. code-block:: none
@@ -72,5 +72,5 @@ loop rubric at the beginning of this section.  It has the general form:
        }
     } while (condition);
 
-It only sets the data to be tested once.  
-(The trade-off is that the condition is tested twice.)
+It only sets the data to be tested *once*.  
+(The trade-off is that the condition is tested *twice*.)

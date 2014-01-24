@@ -333,8 +333,8 @@ not the array data itself, so both end up pointing at the *same*  actual array:
 .. image:: images/arrayAlias.png
    :alt: copying an array reference
    :align: center
-   :width: 132.75 pt
-
+   :width: 433.5 pt
+   
 Hereafter, array assignments like::
 
    b[2] = -10;

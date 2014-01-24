@@ -20,8 +20,8 @@ We will see many more kinds of sequences later.  For now we can illustrate
 with a string, which is a sequence of characters.
 
 We have already processed strings a character at a time, with ``while`` loops.
-We took advantage of the fact that strings could be indexed, and our ``while``
-loops directly controlled the sequence of indices, and then we could
+We took advantage of the fact that strings could be indexed.  Our ``while``
+loops directly controlled the sequence of indices. Then we could
 look up the character at each index of a given string ``s``::
 
 	int i = 0;

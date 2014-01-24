@@ -189,7 +189,7 @@ Part 4:  Let the Player Set the Range of Values
 ------------------------------------------------
 
 In ``Game``: 
-Instead of setting declaring ``big`` and  automatically initializing it to 100,
+Instead of declaring ``big`` and  automatically initializing it to 100,
 make ``big`` be a parameter, so the heading looks like::
     
         static void Game(int big)
@@ -201,7 +201,8 @@ In ``Main``:
     
         Enter a secret number bound: **10**
 
-#.  Pass the value given by the player to the ``Game`` function.  
+#.  Pass the value given by the player to the ``Game`` function 
+    (so it will be ``big`` inside ``Game``).  
 
 Hence the program might start with:
 
