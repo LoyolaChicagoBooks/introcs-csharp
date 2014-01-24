@@ -191,8 +191,8 @@ Constructors
 ----------------
 
 The constructor is a slight variation on a regular method:  Its name is the same as the
-kind of object constructed, the class name (Rational here), 
-and it has *no return type* (and *no* ``static``).  Implicitly you
+kind of object constructed, so here it is the class name, Rational. 
+It has *no return type* (and *no* ``static``).  Implicitly you
 are creating the kind of object named, a **Rational** in this case.
 The constructor can have parameters like a regular method.  We will certainly
 want to give a state to our new object.
@@ -217,8 +217,8 @@ Note that with ``num`` and ``denom`` we are *not* using
 full object notation with an object reference and a
 dot, as we have when referring to a field in a different (so far always built-in)
 class, like ``arrayObject.Length``.  The constructor is creating an object,
-and the notation for the instance variables is understood to be giving values to
-the Rational object being constructed.
+and the use of the bare instance variable names is understood to be giving values to
+the instance variables in this Rational object being constructed.
 C# allows this shorthand notation inside a constructor and also inside an instance method 
 (discussed below).
 
@@ -334,7 +334,7 @@ Getters
 In instance methods, where instance variables are accessible, 
 you have an extra way of getting 
 data in and out of the method:  Reading or setting instance variables.  
-The simplest methods do nothing but that....
+The simplest methods do nothing but that.  We start with those:
 
 We have chosen to make our Rationals immutable.  The ``private`` in front
 of the field declarations was important to keep code outside the
@@ -377,19 +377,29 @@ swaps the numerator and denominator:
    :end-before: chunk
 
 We have used static methods before (in fact all the methods we wrote 
-before this section were static methods).  They are not associated with an instance.  
+before this section were static methods).  
+They are not associated with an instance.  
 They are still useful.  
-For example, in analogy with the other numeric types we may want a static ``Parse`` method
+For example, in analogy with the other numeric types 
+we may want a static ``Parse`` method
 to act on a string parameter and return a new Rational.
 
-The most obvious kind of string to parse would be one like "2/3" or "-10/77", which we can 
-split at the '/'.  Integers are also rational numbers, so we would like to parse "123".
+The most obvious kind of string to parse would be one like "2/3" or "-10/77", 
+which we can split at the '/'.  
+Integers are also rational numbers, so we would like to parse "123".
 Finally decimal strings can be converted to rational numbers, 
 so we would like to parse "123.45".
-That last case is the trickiest.  See how our ``Parse`` method below distinguishes and handles
-all the cases.  It constructs integer strings for both the numerator and denominator,
-and then parses the integers.  Note that the method *is* ``static``.  There is no Rational
-being referred to when it starts, but in this case the method returns one:
+See how our ``Parse`` method below distinguishes and handles
+all the cases.  It constructs integer strings,
+``parts[0]`` and ``parts[1]``, for both the numerator and denominator,
+and then parses the integers.  Note that the method *is* ``static``.  
+There is no Rational
+being referred to when it starts, but in this case the method *returns* one.
+
+That last case is the trickiest.  For example "123.45" becomes 12345/100 
+(before being reduced to lowest terms).  
+Note that there were originally *two* digits after the decimal point 
+and then the denominator gets *two* zeroes to have the right power of 10:
 
 .. literalinclude:: ../source/examples/rational_nunit/rational.cs
    :start-after: Parse chunk

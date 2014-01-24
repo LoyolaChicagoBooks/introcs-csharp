@@ -28,7 +28,7 @@ List and Dictionary. This lab will provide simple versatile methods to
 fill a ``List<string>`` or a ``Dictionary<string, string>``: You only need
 you to write the string data itself into a text file, with the only
 overhead being a few extra newlines. Minor further adaptations could
-save time later in your game project, too.
+save time later in a project, too.
 
 Look in your copy of 
 :repsrc:`fake_help.cs <dict_lab_stub/fake_help.cs>`.  
