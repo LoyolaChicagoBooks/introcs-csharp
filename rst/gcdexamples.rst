@@ -227,12 +227,23 @@ condition?  You stop when ``b`` is 0, so you continue while ``b != 0``.
 The parameters ``a`` and ``b`` need to be replaced by ``b`` and ``a % b``.
 One extra variable needs to be introduced to make this double change work.  The simplest
 is to introduce a variable ``r`` for the remainder.  Check and see for yourself that you
-need an extra variable like ``r``.
-This code is from :repsrc:`g_c_d_remainder_loop/g_c_d_remainder_loop.cs`:
+need an extra variable like ``r``::
 
-.. literalinclude:: ../source/examples/g_c_d_remainder_loop/g_c_d_remainder_loop.cs
-   :start-after: gcd chunk
-   :end-before: gcd end chunk
+      /// Return the greatest comon divisor of nonnegative numbers,
+      /// not both 0.
+      public static int GreatestCommonDivisor (int a, int b)
+      {
+         while (b != 0) {
+            int r = a % b;
+            a = b;
+            b = r;
+         }
+         return a;
+      } 
+
+More verbose demonstration code, 
+that prints the progress each time through
+loop is in :repsrc:`g_c_d_remainder_loop/g_c_d_remainder_loop.cs`.
 
 .. index::  
    double:  recursion; greatest common divisor
@@ -254,21 +265,28 @@ to *call itself*.  This is a broadly useful technique called *recursion*,
 where a function calls *itself* inside its definition. 
 We don't expect you to master this
 technique immediately but do feel that it is important you at least
-*hear* about it and see its tremendous power:
+*hear* about it and see its tremendous power::
 
-.. literalinclude:: ../source/examples/g_c_d_euclid_recursive/g_c_d_euclid_recursive.cs
-   :start-after: chunk-gcd-begin
-   :end-before: chunk-gcd-end
-   :linenos:
+      /// Return the greatest comon divisor of nonnegative numbers,
+      /// not both 0.
+      public static int GreatestCommonDivisor (int a, int b)
+      {
+         if (b == 0) {                               // base
+            return a;                                //   case
+         } else {
+            return GreatestCommonDivisor (b, a % b); // recursion
+         }
+      }
 
 - Recalling our earlier definition, the case :math:`gcd(a, 0) = a` is
-  handled by lines 5-7.
+  handled directly by lines commented as "base case".
 
 - And the case :math:`gcd(a, b) = gcd(b, a \bmod b)` is handled by
-  line 12, with the function calling itself.
+  line with comment "recursion", with the function calling itself.
 
-- Lines 6 and 9-11 exist to show you all of the *steps* that Euclid's
-  algorithm takes to compute the greatest common divisor.
+In :repsrc:`g_c_d_euclid_recursive/g_c_d_euclid_recursive.cs` 
+is a wordier demonstration version that prints to the screen 
+the progress at each recursive call.
 
 The recursive version of the ``gcd`` function *refers to itself*
 by *calling* itself.  Though this seems circular, you can see
@@ -278,12 +296,13 @@ the calls to the same function are not completely the same:
 number eventually reaches 0, and in that case 
 there is a direct final answer.  Hence the function is not really circular.
 
-This recursive version is a much more direct translation of the original mathematical
-algorithm than the looping version.
+This recursive version is a much more direct translation of the original 
+mathematical algorithm than the looping version!
 
 The general idea of recursion is for a
 function to call itself with *simpler* parameters, until a simple enough place
-is reached, where the answer cam be directly calculated.
+is reached, where the answer can be directly calculated.
+
 
 .. [#gcdbrute]
    
