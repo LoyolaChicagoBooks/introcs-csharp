@@ -188,7 +188,7 @@ Here is a variant if you do not care about the specific location of the target::
 
 Using ``break`` statements is a matter of taste.  There is some advantage in reading
 and following a loop that has only one exit criteria, 
-which is easily visible in the heading.  One the other hand, in many situations,
+which is easily visible in the heading.  On the other hand, in many situations,
 using a break statement makes the code much less verbose, and hence easier to follow.
 If you *are* reading through the loop, it may be clearer to have an immediate action
 where it is certain that the loop should terminate. 
