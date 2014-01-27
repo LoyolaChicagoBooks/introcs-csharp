@@ -147,7 +147,34 @@ rather than just use the values in expressions::
    }
    
 Now the array ``b`` of our earlier examples (of length 4) would contain 0, 5,
-10, and 15.
+10, and 15.  There is no analog of *changing* the value of ``b[i]`` with a
+``foreach`` loop.  We can only *use the value* of sequence elements.
+
+We have had the array indices so far be given by a single symbol, 
+which is the most common case in practice, but in fact what appears
+inside the square braces can be any ``int`` *expression*.
+Like parentheses, square brackets *delimit*
+the inside expression, which gets evaluated first, before the array value is
+looked up.  Consider this csharp sequence:
+
+..  code-block:: none
+
+    csharp> int[] a = {5, 9, 15, -4};
+    csharp> int i = 2;
+    csharp> a[i];
+    15
+
+This should be clear.  Now think first, what should ``a[i+1]`` be?
+
+...
+
+..  code-block:: none
+
+    csharp> a[i+1];
+    -4
+
+In steps:  ``a[i+1]`` is ``a[2+1]`` is ``a[3]`` is -4. Be careful,
+``a[i+1]`` is *NOT* ``a[i] + 1`` (which would be 16). 
 
 .. index::
    command line; parameter
