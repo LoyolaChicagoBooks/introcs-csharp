@@ -580,7 +580,7 @@ Since the return statement in ``Add`` creates a new object,
 the figure shows  a call to the
 constructor from inside ``Add``.  We do not go through the details of another
 constructor call, but
-``this`` in The constructor ends up pointing to the Rational shown.
+``this`` in the constructor ends up pointing to the Rational shown.
 
 The ``this`` of the constructor ends up as the reference returned by ``Add``:
 
