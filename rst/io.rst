@@ -161,13 +161,13 @@ immediately, though they may not accomplish anything.
 
 A further convention is using "chunk" comments inside example source files:  
 To keep the book and the source code in sync, our 
-`Sphinx <http://sphinx-doc.org/>`
+`Sphinx <http://sphinx-doc.org/>`_
 building routine directly uses excerpts from 
 the exact source code that is in the
 examples download.  We have to mark the limits of the excerpts that we want
 for the book.
 Our convention is to have a comment referring to the beginning or the
-end of an excerpt "chunk".  
+end of an excerpt "chunk".      
 Hence a comment including "chunk" in a source file is
 *not* intended as commentary on the code, but merely a marker for 
 automatically regenerating a revision of the book. 
