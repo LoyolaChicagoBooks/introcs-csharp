@@ -37,18 +37,18 @@ method is *false*, the assertion fails.
 
 Here are some examples of assertions:
 
-- Assert.IsTrue(true): The assertion is successful, because the boolean value *true* 
-  is true.
+- ``Assert.IsTrue(true)``: The assertion is trivially successful, 
+  because the boolean value ``true`` is true.
   
-- Assert.IsTrue(false): The assertion is not successful, because the boolean value
-  *false* is true.
+- ``Assert.IsTrue(false)``: The assertion is not successful, because the boolean value
+  ``false`` is not true!
   
-- Assert.IsFalse(false): This assertion is successful, because the test for whether
-  *false* is equal to *false* is true.
+- ``Assert.IsFalse(false)``: This assertion is successful, because 
+  ``false`` is, of course, false.
   
-- Assert.IsTrue(5 > 0): success
+- ``Assert.IsTrue(5 > 0)``: Success
 
-- Assert.IsTrue(0 > 5): failure
+- ``Assert.IsTrue(0 > 5)``: Failure
 
 There are many available assertion methods. In our tests, we use ``Assert.IsTrue()``,
 which works for everything we want to test. Other assertion methods do their magic

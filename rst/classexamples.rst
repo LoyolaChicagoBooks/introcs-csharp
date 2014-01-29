@@ -60,8 +60,10 @@ to disambiguate the instance variable.
 This is the same error discussed for a constructor
 in :ref:`local-variables-hiding-instance-variables`.  
 
-Since an ``Example`` object is mutable, we can play with aliases,  as in the
-last few lines of ``Main``, after ``e`` becomes an alias for ``e2``. We change
+Since an ``Example`` object is mutable, we can play with :ref:`alias`,  
+as in the
+last few lines of ``Main``, after ``e`` becomes an alias for ``e2``. 
+We change
 an object under one name, and it affect the alias the same way,
 as you can see from running the program.
 
@@ -147,13 +149,16 @@ Animal Class Lab
 Complete a simple (silly) class, with constructor and methods,
 including a ``ToString`` method, and a separate testing class.
 
-Make an animal_lab project in your solution, and copy in the files from the example
-project :repsrc:`animal_lab_stub`.  Then modify the two files as discussed below.
+Make an animal_lab project in your solution, 
+and copy in the files from the example
+project :repsrc:`animal_lab_stub`.  
+Then modify the two files as discussed below.
 
 #. Complete the simple class Animal in your copy of the file 
    :repsrc:`animal.cs <animal_lab_stub/animal.cs>`.  
    The bullets below
-   name and describe the instance variables, constructor, and methods you need to write:
+   name and describe the instance variables, constructor, 
+   and methods you need to write:
 
    * An Animal has a ``name`` and a ``gut``.  
      In our version the ``gut`` is a List of strings 
@@ -161,16 +166,19 @@ project :repsrc:`animal_lab_stub`.  Then modify the two files as discussed below
      A newly created Animal gets a ``name`` from a parameter
      passed to the constructor, while the ``gut`` always starts off *empty*.
     
-   * An Animal has a ``Greet`` method, so an animal "Froggy" would say (that is, print) 
+   * An Animal has a ``Greet`` method, so an animal named "Froggy" would say 
+     (that is, print) 
         
         Hello, my name is Froggy.
     
-   * An Animal can ``Eat`` a string naming the food, adding the food to the ``gut``.
+   * An Animal can ``Eat`` a string naming the food, 
+     adding the food to the ``gut``.
      If Froggy eats "worm" and then "fly", its ``gut`` list contains
      "worm" and "fly".
     
    * An Animal can ``Excrete`` (removing and printing what was *first* in the gut List). 
-     Recall the method ``RemoveAt`` in :ref:`listsyntax`.  Print "" if the ``gut``
+     Recall the method ``RemoveAt`` in :ref:`listsyntax`.  Print the
+     empty string, "", if the ``gut``
      *was already empty*.  Following the
      Froggy example above, Froggy could ``Excrete``, and "worm" would be printed.
      Then its ``gut`` would contain only "fly". 
@@ -181,6 +189,8 @@ project :repsrc:`animal_lab_stub`.  Then modify the two files as discussed below
       
          "Animal: Froggy"
          
+     Try this first, and note the extra credit version below.
+         
    * All the methods that print should be void.  Which need a parameter, of what type?
 
 #. Complete the file :repsrc:`test_animal.cs <animal_lab_stub/test_animal.cs>` 
@@ -190,18 +200,31 @@ project :repsrc:`animal_lab_stub`.  Then modify the two files as discussed below
    with enough explanation that someone running the test program, 
    but *not* looking at the code of either file, can see that everything works.
 
-
+#. 20% EXTRA CREDIT:  Elaborate ``ToString`` so if Froggy had "worm", "fly"
+   and "bug" in the gut, the string would be:
+   
+       "Animal: Froggy ate worm, fly and bug"  
+       
+   with a comma separated list of the gut contents, except use proper English,
+   so the last separator
+   is " and ", not ", ". 
+   If the gut has nothing in it, list the contents as "nothing":
+    
+       "Animal: Froggy ate nothing"  
+       
 Planning A Class Structure
 -------------------------------
 
-We are going to build up to a game for you to write.  Here is 
-an idea for a skeleton of a text (adventure?) game.  It does not
+Here is an idea for a skeleton of a text (adventure?) game.  
+It could be the basic of a later group project. It does not
 have much in it yet, but it can be planned in terms of classes.
 Classes with instances correspond to nouns you would be using, 
 particularly nouns used in more than one place with different 
 state data being remembered.
-Verbs associated with nouns you use tend to be methods.  Think how you might break 
-this down.  The parts appearing after the '>' prompt are entries by the user.
+Verbs associated with nouns you use tend to be methods.  
+Think how you might break this down. 
+ 
+The parts appearing after the '>' prompt are entries by the user.
 Other lines are computer responses::
 
 	Welcome to Loyola!
@@ -254,13 +277,17 @@ interaction between classes provide the *interface* between classes.  Unfortunat
 "interface" is used in more than one way.  Here it means publicly specified ways
 for different parts to interact.
 
-As you think how to break this game into parts, also think how the parts interact.
+As you think how to break this game into parts (classes), 
+also think how the parts interact (public methods).
+Maybe discuss ideas in class.
 
-The code that generated the exchange above is the 
+If the plan is to discuss it in class, wait before looking at 
+the code that generated the exchange above, in the 
 project folder :repsrc:`csproject1`.
 
 The code uses many of the topics discussed so far in this book.
 
 We will add some features from another meaning of :ref:`Interface`,
 and discuss the revision in project
-:repsrc:`csproject_stub` (no 1).  You *might* use this as a basis of a project....
+:repsrc:`csproject_stub` (no 1).  You *might* use this version 
+as a basis of a project.
