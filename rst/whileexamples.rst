@@ -6,7 +6,7 @@ While Examples
 .. _bisection-method:
 
 Bisection Method
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 For a very different example we look to scientific computing.  In math 
 class you likely learned various ways to find roots of functions f(x) exactly.
