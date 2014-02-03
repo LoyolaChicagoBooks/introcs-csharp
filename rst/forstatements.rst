@@ -87,6 +87,14 @@ If the condition part is omitted, the condition is
 interpreted as always true, leading to an infinite loop, that can only
 terminate due to a ``return`` or :ref:`break statement <break-continue>` in the body.  
 
+Note the different parts of the heading used at different times (consistent 
+with the positions in the corresponding while loop):
+
+* When starting the whole statement, the initialization is done, and then
+  the test.
+* After finishing the body and returning to the heading, the update operations
+  are done, followed by the test. 
+
 **Other variations**
 
 As in a regular local variable declaration, 
