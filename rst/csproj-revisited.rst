@@ -103,6 +103,19 @@ Now after writing the new class to respond to a new command,  the *only* thing y
 need to do is add a new instance of that class to the array initializer in the
 CommandMapper constructor!
 
+.. note::
+   Interfaces never say anything about constructors.  Classes satisfying
+   an interface can have totally different constructors.  
+   
+In the code above,
+``Quitter`` has a very simple constructor.  
+(A ``Quitter`` has no individualized data, 
+and only has an instance because an interface can
+only work with an instance, not with a static class.)
+On the other hand the ``Goer`` and ``Helper``
+objects need to reference more data to work properly, so they have
+parameters.
+
 The revised Xamarin Studio project is :repsrc:`csproject_stub` (no 1 this time).
 
 See how the Game class is simplified, too.
@@ -112,6 +125,12 @@ a small group.  Have any ideas?  See :ref:`group-project`.
 
 There are further examples of defining and using Interfaces
 in the starting code for the exercises at the end of the next section.
+
+.. index::
+   cohesion of code units
+   coupling of classes
+   separation of concerns among classes
+   class; choosing what parts fit
 
 Cohesion, Coupling, and Separation of Concerns
 -----------------------------------------------
@@ -158,6 +177,10 @@ in other classes that need to be changed to keep in sync.
 
 Aim for strong cohesion, clear separation of concerns, and loose coupling.  Together 
 they make your code clearer, easier to modify, and easier to debug.
+
+.. index:: exercise; igame
+   interface; igame exercise
+   igame exercise
 
 IGame Interface Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
