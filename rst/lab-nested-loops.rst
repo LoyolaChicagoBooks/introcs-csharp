@@ -67,7 +67,10 @@ and fill in function bodies for each part below:
 
     **ALSO** find the largest value of ``n`` for which the function works.
     (You might want to add a bit of code further testing Factorial,
-    to make this easier.)
+    to make this easier.)  Caution:  although a negative result from the 
+    product of two positive numbers is clearly wrong, only half of the
+    allowed values are negative, so the first wrong answer could equally well
+    be positive.
     
 #.  Modify the function to return a ``long``.  
     Then what is the largest value of ``n`` for which the function works?
