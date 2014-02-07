@@ -167,8 +167,9 @@ the initialization *and* coming back
 from the bottom of the loop.  To get a *new* value to test, we must
 *repeat* getting input from the user at the bottom of the loop body.  
 
-.. index:: pitfall; repeat declaration
-   declaration repeat pitfall
+.. index:: compiler error; declaration repeat
+   declaration repeat error
+   type; declaration repeat error
    
 You might decide to be quick 
 and just copy the initialization line into the bottom of the
