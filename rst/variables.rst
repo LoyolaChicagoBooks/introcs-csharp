@@ -3,7 +3,7 @@
 .. index:: variable; assignment
    assignment statement
    statement; assignment
-   single: =
+   single: = ; assignment
 
 .. _Variables-and-Assignment:
 

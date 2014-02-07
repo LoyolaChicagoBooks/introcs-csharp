@@ -131,9 +131,9 @@ You are encouraged to copy this into your own project as reviewed
 after the lab in :ref:`xamarinstudio-reminders`.
 
 .. index:: comment
-   /* ... */ comment
-   */ end comment
-   // comment
+   single: /* ... */ comment
+   single: */ end /* comment
+   single: // comment
 
 The body of ``Main`` presently contains only *comments*, skipped by the compiler.  
 We illustrate two forms (being inconsistent for your information only):

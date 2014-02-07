@@ -16,7 +16,8 @@ are considered later in :ref:`strings2`.
 
 .. index:: string; concatenation with +
    concatenation
-   single: +; concatenation
+   single: +; string concatenation
+   operator; + string concatenation
 
 .. _String-Concatenation:
    

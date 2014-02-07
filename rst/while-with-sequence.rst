@@ -55,11 +55,11 @@ and the next character is ``s[i]``::
     Console.WriteLine(s[i]);
 
 
-.. index: 
-   ++
-   --
-   operator; ++
-   operator; --
+.. index:: 
+   single: ++ increment
+   single: -- decrement
+   operator; ++ increment
+   operator; -- decrement
        
 We also need to remember the part to get ready for the next time 
 through the loop.  We have dealt with regular sequence of values

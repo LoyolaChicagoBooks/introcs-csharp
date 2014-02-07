@@ -228,7 +228,7 @@ rmdir
     
        rmdir hello
 
-Then, with Mono installed (and for Windows, with a Mono command window), the
+With Mono installed (and for Windows, with a Mono command window), the
 programs associated with Mono can be used:
 
 .. index:: command line; mcs
@@ -241,7 +241,7 @@ mcs
 csharp
   is the interactive C# statement testing program.
   
-Other useful commands window commands with different names for Windows and Mac,
+Other useful commands with different names for Windows and Mac,
 listed by generic function, with general Windows syntax first and Mac second, and then
 often examples in the same order:
 
@@ -249,7 +249,8 @@ often examples in the same order:
    type on Windows command line 
    cat on Mac command line 
 
-Display the contents of a text file in the command window. Name origin:  a more complicated
+Display the contents of a text file in the command window. Unix/Mac
+name origin:  a more complicated
 use of cat is to con\ **cat**\ enate files. 
 
   | type *textFileName*
