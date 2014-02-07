@@ -54,11 +54,13 @@ This is quite a shift.
 *Do not take it lightly.*  
 
 .. index:: OOP; constructor
-   constructor 
+   constructor
+   new as operator
+   operator; new 
 
 We can create a new object with the ``new`` syntax.
 We can give parameters defining the initial state of the new object.  
-In our example these are fairly obvious,
+In our example these are fairly obvious:
 a numerator and denominator, so we can plan that ::
 
    Rational r = new Rational(2, 3);

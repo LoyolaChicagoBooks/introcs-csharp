@@ -143,8 +143,8 @@ In ``Game``, make the following alterations and additions:
    In case you are wondering, we are creating a *new object* 
    of the *class* ``Random`` which serves as the
    random number generator. We'll cover this in more detail when we
-   get to the :ref:`classes` chapter. Here is some illustration
-   in csharp.  Your answers will not be the same!  ::
+   get to the :ref:`classes` chapter. Here is some illustration using a ``Random``
+   object in csharp.  Your answers will not be the same!  ::
 
       csharp> Random r = new Random();
       csharp> r.Next(1, 100);   
@@ -154,13 +154,13 @@ In ``Game``, make the following alterations and additions:
       csharp> r.Next(1, 100); 
       79
       csharp> r.Next(2, 5); 
-      3
+      2
       csharp> r.Next(2, 5); 
       4
       csharp> r.Next(2, 5); 
       3
       csharp> r.Next(2, 5); 
-      2
+      3
 
    In general the minimum possible value of the number returned by ``r.Next``
    is the first parameter, and the value returned is always *less* than

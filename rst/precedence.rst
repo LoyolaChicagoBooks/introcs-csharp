@@ -19,6 +19,8 @@ Only operators used in this book are included:
     &&
     ||
     =  *=  /=  %=  +=  -=  
+
+All symbols are listed at the beginning of the index.
     
-Grouping parentheses are encouraged with less common combinations, even if
+Parentheses for grouping are encouraged with less common combinations, even if
 not strictly necessary.

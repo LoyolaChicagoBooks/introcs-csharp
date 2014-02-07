@@ -40,8 +40,8 @@ and is awaiting input. This allows you to create small bits of C#
 and test them, interactively, without having to write a full program! 
 
 .. index::
-   single: operator; + (with numbers)
-   single: +; arithmetic
+   single: operator; + with numbers
+   single: +; with numbers
 
 Play along with the examples here, entering what comes after the prompt:
 
@@ -51,8 +51,9 @@ Play along with the examples here, entering what comes after the prompt:
     5
 
 The csharp program just has a *read, evaluate, and print loop*: the acronym is 
-*repl*.  It evaluated the expression ``2 + 3`` and printed the result, on a line
-without a prompt.  Csharp can evaluate arbitrary C# expressions.  It is very handy for
+*repl*.  It evaluated the expression ``2 + 3`` and printed the result, 
+on a line without a prompt.  
+Csharp can evaluate arbitrary C# expressions.  It is very handy for
 testing as you get used to new syntax.
 
 .. index::
@@ -94,7 +95,8 @@ In math class you could enter something like 4(10) for multiplication:
     {interactive}(1,2): error CS0119: Expression denotes a 'value', 
     where a 'method group' was expected
 
-Unfortunately the error messages are not always easy to follow:  it is hard to guess the
+Unfortunately the error messages are not always easy to follow:  
+it is hard to guess the
 intention of the user making a mistake.
 
 The issue here is that the multiplication operator must be *explicit* in
@@ -128,7 +130,8 @@ there are parentheses forcing the order:
     csharp> -(2+3)*4; 
     -20 
 
-A sequence of operations with equal precedence also work like in math: left to right.
+A sequence of operations with equal precedence also work like in math: 
+left to right.
 
 .. code-block:: none
  
@@ -218,11 +221,11 @@ In the earliest grades, however, you would say
 
 Note the quotient is an integer 3, that matches the C# evaluation of 14/4,
 so having a way to generate an integer quotient is not actually too strange.
-The problem here is
-that the answer from grade school is in *two* parts, the integer quotient 3 and the
-remainder 2.  
+The problem here is that the answer from grade school is in *two* parts, 
+the integer quotient 3 and the remainder 2.  
 
-C# has a *separate* operation symbol to generate the remainder part.  There is no standard
+C# has a *separate* operation symbol to generate the remainder part.  
+There is no standard
 single operator character operator for this in regular math, 
 so C# grabs an unused symbol: 
 ``%`` is the remainder operator.  
