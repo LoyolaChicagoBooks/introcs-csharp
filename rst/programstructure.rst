@@ -94,3 +94,66 @@ If only spaces are used, there is no ambiguity in different displays.
 
 The 3 vs. 4 spaces is not a big deal, but 3 appears to be large enough to see 
 easily, and makes lines with nested indentation have more room.
+
+.. index:: compiler error; explanation link
+
+Compiler Error Help
+-----------------------
+
+There are an enormous number of possible *syntactic* errors in your source code
+that the compiler
+can detect.  
+
+.. index:: editor error annotations
+   syntax error annotations in editor
+   Xamarin Studio; editor error annotations
+   
+**Errors shown** *while* **editing**:  If you use an editor like Xamarin Studio, 
+some of these errors are even checked while you type and are
+noted while you are editing.  They may be indicated with a 
+red squiggly underline, and possibly a red comment at the right.  Sometimes
+the squiggle is just because you are in the middle of something, but if it
+is still there after you complete a whole statement, there may well
+be an issue to look at.  Sometimes fixing the issue makes the annotation
+go away, but sometimes your program may really be fixed, 
+and the error annotation
+does not go away until you formally compile/build the whole program.
+This annoying ambiguity leads some people to turn off error annotations,
+and just let
+the system note errors after a complete compile cycle.
+
+After compiling and getting an error, sometimes reading the error description 
+carefully  will help you 
+understand the problem.  Sometimes the error is very cryptic.   In those cases
+it might help to look at the C# .NET error documentation,
+
+   http://msdn.microsoft.com/en-us/library/ms228296.aspx.
+
+Each compiler error you make has a number shown in its description. 
+Many of these error numbers are shown in the left column
+of the linked page.  You can click to get a more complete explanation and 
+examples.
+
+Another important way to learn about the error messages is to leverage your
+experience:  After 
+you have eventually found how to fix your error, *take the extra time* to
+use your new knowledge,
+look back at the original error message,
+and see if the error description text makes more sense.  
+That should help next time,
+(and there usually is a next time). Even when the error description still 
+makes no particular sense, you may well get into the same situation again,
+with the same error number.  Then 
+remembering the issue you found in a previous time could help.
+
+Debugging can eat up an enormous amount of time, 
+so it is really worth your effort to understand the errors that you tend to make
+and the errors' relation to the error messages that you get.
+
+.. warning::
+   It is certainly helpful that the compiler finds *syntactic* errors for you,
+   but be sure to remember that compiling does *not* mean the program
+   will "work" and correctly do what you desire.  Test your compiled program
+   thoroughly to reduce the chance of *logical* errors remaining, that
+   cause *run-time* errors, or just the wrong results.
+ 
