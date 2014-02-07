@@ -52,7 +52,8 @@ restriction on the key type: it should be immutable. This has to do with the imp
 referenced in :ref:`dictionary-efficiency`.
 
 .. index::
-   double:  dictionary; [ ]
+   dictionary; key lookup [ ]
+   single: [ ]; dictionary key lookup
    
 Similar to an array or ``List``,  
 you can assign and reference elements of a ``Dictionary``, 

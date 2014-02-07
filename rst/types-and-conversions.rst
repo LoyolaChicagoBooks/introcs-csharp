@@ -365,3 +365,29 @@ in sequence (or simple classical cryptographic codes):
 
 The capital letter one place after A is B.
 
+.. index::  type; Boolean or bool
+   Boolean or bool
+
+.. _type-boolean:
+
+Type Boolean or bool
+---------------------
+
+There is one more very important value type, that we introduce here
+for completeness, though we will not use it until
+:ref:`If-Statements`.
+Logical conditions are either true or false.  The type with just these
+two values is *Boolean*, or *bool* for short.  The
+type is named after George Boole, who invented what we now call
+*Boolean algebra*.  Though it seemed like a useless mathematical curiosity 
+when Boole invented it, a century later Boolean algebra turned out to be
+central to the implementation of computer hardware.
+
+.. note::
+   The Boolean literals are ``true`` and ``false``, with *no* quotes
+   around them.  
+   
+With quotes they would be of type string, not Boolean!
+
+
+

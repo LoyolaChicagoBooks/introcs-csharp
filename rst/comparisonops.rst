@@ -1,6 +1,6 @@
 .. index:: 
-   boolean expression; comparison
-   comparison; < > <= >= == !=
+   boolean expression
+   comparison < > <= >= == !=
    single: < less than 
    single: <= less than or equal 
    single: > greater than 

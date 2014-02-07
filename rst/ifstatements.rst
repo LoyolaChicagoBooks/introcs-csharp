@@ -32,6 +32,9 @@ The general C# syntax for a simple ``if`` statement is
     | ``if (`` *condition* ``)`` 
     |     statement  
 
+The condition is an expression that is true or false, of :ref:`type-boolean`.  
+
+ 
 .. index::
    double: compound statement; { }
    statement; compound
