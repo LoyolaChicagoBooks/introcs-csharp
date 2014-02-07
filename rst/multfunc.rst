@@ -49,6 +49,29 @@ it would make no difference in execution.
 Functions that you write can also call other functions you write.
 In this case Main calls each of the birthday functions.
 
+.. index:: compiler error; bad place for heading syntax
+   single: { } ; matching
+   function; compiler error with heading
+    
+.. warning::
+   A common compiler error is caused by failing to match the braces
+   that wrap a function body.  A new function heading can only
+   exist outside all other function declarations and inside a class.
+   If you have too few or extra ``'}'`` you are likely to find
+   a perfectly fine looking function heading with an error,
+   for instance, about not
+   allowing ``static`` here....  
+   Check your earlier lack or excess of braces!
+
+.. index::
+   single: ( ) ; matching
+   single: [ ] ; matching
+   Xamaarin Studio; delimiter matching
+   
+Xamarin Studio, like other modern code editors, can show you
+matching delimiters.  If you place your cursor immediately after a delimiter
+{ } ( ) [ ], the matching one should become highlighted.
+
 Poem Function Exercise
 -------------------------
 

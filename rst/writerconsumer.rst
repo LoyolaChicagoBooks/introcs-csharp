@@ -1,5 +1,4 @@
-.. index::
-   double: function; consumer and writer
+.. index:: function; consumer and writer
    consumer of functions
    writer of functions
 
