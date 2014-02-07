@@ -18,8 +18,8 @@ we can test it and all of the parts associated with it, especially its methods.
 
 We will be introducing parts of file :repsrc:`rational_nunit/rational_unit_tests.cs`.
 
-.. index::
-   double: testing; assertion 
+.. index:: testing; assertion 
+   assertion testing
 
 Assertions
 -------------
@@ -55,8 +55,8 @@ which works for everything we want to test. Other assertion methods do their mag
 rather similarly, because every assertion method ultimately must determine whether
 what is being tested is true or false. 
 
-.. index::
-   double: attribute; [ ]
+.. index:: attribute [ ]
+   single: [ ]; attribute
    
 Attributes
 -------------

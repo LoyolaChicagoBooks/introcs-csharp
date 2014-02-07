@@ -7,7 +7,7 @@ One Dimensional Arrays
 ============================ 
 
 .. index::
-   double: array; [ ]
+   array; [ ] declaration
    
 Basic Syntax
 ---------------
@@ -62,13 +62,16 @@ declared.  As you can see that space does not actually contain the array, but on
 To make it easy to refer to the elements in the diagram, we also label the indices 
 associated with each element, though they are not actual a part of what is stored in memory.
 
-The general syntax to create a new array is
+The general syntax to create a  new array is
 
    ``new`` **type**\ ``[`` *length* ``]``
    
 After the type, there are square brackets enclosing an expression for the length
 of the array - this length is unchangeable after creation.
 
+.. index::
+   single: [ ]; array indexing
+   array; indexing [ ]
 
 The elements inside an array can to referenced with the same index notation used
 earlier for strings. :: 
