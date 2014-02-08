@@ -181,6 +181,11 @@ mess up here.  We emphasize them and mention fixes if you make the easy mistakes
       checked: Run on external console.  That should check the second one
       automatically.  Close the window and you should be set. 
       
+      Be careful, it is possible to uncomment the second checkbox, 
+      which makes your execution console close instantly at the end
+      of your program, so you miss any last thing printed.  Recheck if
+      necessary.
+      
 #.  Another common error is to proceed like with most text processors, 
     and open the top File menu,  
     and choose to open and edit a new file for your program.  
