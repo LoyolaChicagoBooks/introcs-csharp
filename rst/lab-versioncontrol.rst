@@ -1,5 +1,5 @@
 .. index::
-   double: labs; hg and version control
+   labs; hg and version control
    version control lab
    hg
 

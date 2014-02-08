@@ -68,7 +68,7 @@ is the same as  ::
    format; field width and precision 
    field width formatting
    precision; format
-   table; format
+   table formatting
    example; power_table.cs
    power_table.cs example
 
@@ -560,7 +560,7 @@ Exercises
 ----------
 
 
-.. index:: random; heads or tails exercise
+.. index:: Random; heads or tails exercise
    exercise; heads or tails
    heads or tails exercise
    

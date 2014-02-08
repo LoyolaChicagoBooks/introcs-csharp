@@ -1,3 +1,6 @@
+.. index:: list
+   type; List
+   
 .. _lists:
 
 Lists

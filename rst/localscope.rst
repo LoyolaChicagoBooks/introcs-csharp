@@ -1,6 +1,6 @@
 
-.. index::
-   double: local; scope
+.. index:: local variables' scope
+   scope; local
 
 .. _Local-Scope:
 

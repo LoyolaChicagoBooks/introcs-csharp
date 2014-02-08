@@ -184,8 +184,8 @@ This variation is in example :repsrc:`vowels2/vowels2.cs`.
    :end-before: chunk
 
 
-.. index::
-   double example; IsDigits
+.. index:: example; check_digits
+   IsDigits example function
    
 .. _IsDigits:
 

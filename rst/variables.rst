@@ -293,7 +293,6 @@ declaration that matters.
 
 .. index:: identifier; multi-word naming convention
    camel case
-   naming convention; camel case
    
 What is legal is distinct from what is conventional or good
 practice or recommended. Meaningful names for variables are

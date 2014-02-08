@@ -244,6 +244,7 @@ the one just being initialized in this constructor.
 .. index::  OOP; instance method
    instance method
    private; helping function
+   method
 
 .. _instance-methods:
 
@@ -649,7 +650,9 @@ constructor, like::
 This is deadly.  it is worse than redeclaring a local variable, which at least will 
 trigger a compiler error.
 
-.. index:: warning; redeclaring instance variables
+.. index:: redeclaring instance variables error
+   compiler error; before error in text
+   instance variable; redeclaring error
 
 ..  warning::
 

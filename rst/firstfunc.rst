@@ -105,8 +105,8 @@ Hence ``HappyBirthdayEmily``, not ``happyBirthdayEmily``.
 Can you predict what the program will do?  Note the two function calls
 to ``HappyBirthdayEmily``.  To see, load and run :repsrc:`birthday2/birthday2.cs`. 
 
-.. index:: 
-   double: function; execution sequence
+.. index:: function; execution sequence
+   execution sequence; function
    
 The *execution* sequence for the program is different from the 
 *textual* sequence.  Execution always starts in Main:

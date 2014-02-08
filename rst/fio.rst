@@ -1,5 +1,6 @@
 .. index:: 
-   single: FIO; file I/O
+   FIO file I/O
+   library; FIO
 
 .. _fio:
 

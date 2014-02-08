@@ -1,4 +1,5 @@
 .. index:: dictionary
+   type; Dictionary
 
 .. _dictionary:
 

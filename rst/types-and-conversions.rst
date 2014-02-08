@@ -1,5 +1,6 @@
 .. index::
-   double: type; value
+   type; value
+   value type
 
 
 .. _value-types:
@@ -8,7 +9,8 @@ Value Types and Conversions
 ===========================
 
 .. index::
-   double: int; value range
+   int; value range
+   type; int
 
 
 Type int
@@ -72,6 +74,7 @@ We will not have need for integral types other than ``int`` and ``long`` in this
 
 .. index:: type; double
    double
+   precision
 
 .. _type-double:
    

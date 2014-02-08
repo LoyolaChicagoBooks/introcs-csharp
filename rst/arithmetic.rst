@@ -142,7 +142,7 @@ left to right.
    single: remainder %
    single: % remainder
    single: operator; /, %
-   division /
+   division
    single: / division
    single: . ; double literal
    double
