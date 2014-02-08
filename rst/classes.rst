@@ -1,4 +1,5 @@
 .. index:: class
+   type; user defined object
 
 .. _Classes:
 

@@ -1,5 +1,5 @@
 
-.. index:: homework; input-output and decision
+.. index:: homework; grade_calc I
 
 .. _homework-grade-calculation:
 

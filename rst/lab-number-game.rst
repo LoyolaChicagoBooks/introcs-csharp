@@ -129,7 +129,7 @@ In ``Game``, make the following alterations and additions:
    For future use it is best if you have the printing statement
    reference the variable ``big``, rather than the literal ``100``.
 
-.. index:: random number; generator
+.. index:: random number generator
 
 #. Thus far the secret number was fixed in the program.  Now we are
    going to let it vary, by having the game generate a *random* number.

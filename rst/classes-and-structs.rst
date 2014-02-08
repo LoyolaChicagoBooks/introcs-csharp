@@ -1,4 +1,4 @@
-.. index:: value object
+.. index:: value type
    reference object
    struct
    
