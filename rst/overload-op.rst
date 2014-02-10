@@ -16,12 +16,12 @@ Still, to an experience user it has a striking deficiency:
 A Rational is a *number* and we are used to doing arithmetic with 
 standard operators.  We would like to replace the mouthful
 ``frac1.Multiply(frac2)`` by our common symbolism for multiplication,
-``frac1*frac2``.  C#, like C++, but unlike Java, allows this
-giving of a new meaning to operators, in a process called 
-*operator overloading*.  The C# syntax is illustrated in the 
+``frac1*frac2``.  This can be coded in C#, using *operator overloading* to 
+give new meanings to operators.  The C# syntax is illustrated in the 
 variant of the Rational class in 
-:repsrc:`rational_ops_stub/rational.cs`.  This is extended in the
-next section on user-defined casts.
+:repsrc:`rational_ops_stub/rational.cs`.  This class also contains code
+discussed in the
+next section, :ref:`casts_in_user_classes`.
 
 .. literalinclude:: ../source/examples/rational_ops_stub/rational.cs
    :start-after: operator chunk
@@ -29,15 +29,15 @@ next section on user-defined casts.
 
 To overload an operator requires a special method heading.  It
 must be ``public static``, and show the
-desired return type, and in place of a usual name is something like
+desired return type, and in place of a usual method name is something like
 ``operator *`` or ``operator -``, including the symbol being overloaded.
 Binary operations like multiplication require two operands. (In general
 at least one of them must be of the type of the class being defined.) 
 The method then
 computes and returns the named return type in the normal fashion.  
 (We could have directly defined variants with the first or second parameter 
-being an ``int`` or a ``double``, but we avoid that need by later overloading
-some implicit cast operations, as discussed below.)  
+being an ``int`` or a ``double``, but we avoid that need by overloading
+some implicit cast operations in :ref:`casts_in_user_classes`.)  
 
 The heading format is
 
@@ -51,8 +51,8 @@ negation, or as a binary operator for subtraction.  Since we included only
 one parameter, we were defining the unary version.  
 
 The operator does not need to produce a result of the same type.  We
-included ``==`` and ``!=`` as examples (returning a Boolean).  (These methods
-do cause compiler warnings, but not errors, 
+included ``==`` and ``!=`` as examples (returning a ``Boolean``).  (These methods
+do not cause compiler errors, but warnings are generated,  
 since we have not add further more advanced
 overloads of Equals and HashCode methods, that are ideally in sync with 
 the meaning of ``==``.  You should see a discussion of these methods in a 
@@ -75,7 +75,7 @@ The example testing class also uses the casting of next section:
 .. index:: operator; casts in user class
    casts in user-defined classes
    
-.. casts_in_user_classes:
+.. _casts_in_user_classes:
 
 Casts in User-Defined Classes
 -------------------------------
