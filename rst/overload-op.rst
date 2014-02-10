@@ -17,44 +17,47 @@ A Rational is a *number* and we are used to doing arithmetic with
 standard operators.  We would like to replace the mouthful
 ``frac1.Multiply(frac2)`` by our common symbolism for multiplication,
 ``frac1*frac2``.  This can be coded in C#, using *operator overloading* to 
-give new meanings to operators.  The C# syntax is illustrated in the 
+give new meanings to the operator ``*``.  The C# syntax is illustrated in the 
 variant of the Rational class in 
 :repsrc:`rational_ops_stub/rational.cs`.  This class also contains code
 discussed in the
-next section, :ref:`casts_in_user_classes`.
+next section, :ref:`casts_in_user_classes`.  
+Here are operator overload declarations for ``*`` and others:
 
 .. literalinclude:: ../source/examples/rational_ops_stub/rational.cs
    :start-after: operator chunk
    :end-before: chunk
 
-To overload an operator requires a special method heading.  It
-must be ``public static``, and show the
-desired return type, and in place of a usual method name is something like
-``operator *`` or ``operator -``, including the symbol being overloaded.
-Binary operations like multiplication require two operands. (In general
-at least one of them must be of the type of the class being defined.) 
-The method then
-computes and returns the named return type in the normal fashion.  
-(We could have directly defined variants with the first or second parameter 
-being an ``int`` or a ``double``, but we avoid that need by overloading
-some implicit cast operations in :ref:`casts_in_user_classes`.)  
+All operator overload headings have the special form
 
-The heading format is
+    ``public static`` *returnType* ``operator`` opSymbol ``(`` *parameters* ``)`` 
 
-    ``public static`` *returnType* ``operator`` *opSymbol* ``(`` *parameters* ``)`` 
-
-Here *opSymbol* can be any arithmetic or comparison operator, or
-some other operators that we have not discussed.
+Here opSymbol can be any arithmetic or comparison operator, or
+some other operators that we have not discussed.  So something like
+``operator *`` or ``operator -`` replaces the method name.
+Binary operations like multiplication require two operands, and hence the
+method has two parameters. 
+The method 
+computes and returns the named return type in the normal fashion. 
+In general
+at least one of the parameters must be of the type of the class being defined.
+  
+(We could have directly defined four further overloads of ``*``, 
+with the first or second parameter 
+being an ``int`` or a ``double``, but we will avoid that by also adding methods 
+to provide implicit :ref:`casts_in_user_classes`.)  
 
 The ``-`` symbol is special, since it can be used either as a unary operator for
-negation, or as a binary operator for subtraction.  Since we included only 
-one parameter, we were defining the unary version.  
+negation, or as a binary operator for subtraction.  Since we include only 
+one parameter above, we are defining the unary version.  
 
 The operator does not need to produce a result of the same type.  We
-included ``==`` and ``!=`` as examples (returning a ``Boolean``).  (These methods
-do not cause compiler errors, but warnings are generated,  
-since we have not add further more advanced
-overloads of Equals and HashCode methods, that are ideally in sync with 
+included ``==`` and ``!=`` as examples (returning a ``Boolean``).  
+
+(These methods
+do not cause compiler errors, but warnings are generated:  
+We have not added further more advanced
+overrides of Equals and HashCode methods, that are ideally in sync with 
 the meaning of ``==``.  You should see a discussion of these methods in a 
 data structures course, like Loyola's Comp 271.)
 
@@ -65,12 +68,12 @@ invites you to add further operator overloads.
 .. index:: precedence; with operator overloading
    operator overloading; precedence unchanged
 
-**Precedence**:  Note that the overloaded method definitions for operators include
-nothing about :ref:`precedence`. That is because the precedence of each operator
-is always the same as defined with built-in types.  Unary ``-`` has higher
-precedence that ``*`` ....
+**Precedence**:  Note that the operator overloading method definitions include
+nothing about :ref:`precedence`. That is because the precedence of operators
+is fixed across the whole language. Unary ``-`` has higher
+precedence than ``*`` ... no matter what the types involved.
 
-The example testing class also uses the casting of next section:
+An example testing class also uses the new casting syntax of next section:
 
 .. index:: operator; casts in user class
    casts in user-defined classes
@@ -87,12 +90,13 @@ when needed:  An expression like ``3.2 * 2`` is processed by the compiler,
 *implicitly* casting the
 2 to ``double`` 2.0, and then doing a ``double`` multiplication.  
 The same idea makes sense with an
-``int`` ``n`` and a Rational ``f``.  Mathematically an integer is rational.  
-We will
-show how we can set up an implicit cast of ``n`` to a Rational,
-so  ``f * n`` makes sense, though it could also be written with an explicit 
-cast ``f * (Rational) n``.  Here is the method to allow implicit and
-explicit casting of an ``int`` to a Rational:
+``int`` ``n`` and a Rational ``f``.  We only defined the operator overload ``*``
+for two Rationals, so in our code so far, ``f * n`` does not make sense.
+Mathematically an integer is rational, so mathematically, it should make sense.  
+We bridge this difference by defining an implicit cast of an ``int`` to a Rational,
+so  the compiler will take ``f * n`` and see the need to implicitly cast
+``n`` to a Rational.  The definition below will also allow explicit casts 
+if you choose, like ``f * (Rational) n``:
 
 .. literalinclude:: ../source/examples/rational_ops_stub/rational.cs
    :start-after: implicit cast chunk
@@ -104,21 +108,17 @@ the heading that takes a special form, starting with
 like Rational, while the parameter is the starting type, like ``int``.  
 This is not like a regular method with its return type and method name.
 Here it looks something like a constructor with a type in place of a method
-name, but a constructor would not have ``static implicit operator``!
+name, but a constructor would not start with ``static implicit operator``!
 
-This method declaration *allows* implicit use, 
-where the strong typing of C# would not allow an ``int``, but would allow
-a Rational.  It can also be used 
-*explicitly*, with *cast* notation, as in ``(Rational) n``.
-
-Now consider an expression with ``double`` ``d`` and a Rational ``f`` like 
+Now consider a ``double`` ``d`` and a Rational ``f``.
+We would like to allow an expression like 
 ``d * f``.
-Multiplication is not defined directly between a ``double`` and a Rational.  Since
-a ``double`` is only an approximation, in general, it would not be safe to implicitly convert 
+Again, the operator overload for ``*`` does not allow this directly, so consider
+implicit casts:  Since
+a ``double`` is only an approximation, in general, 
+it would not be wise to implicitly convert 
 a ``double`` to a Rational, but it does make sense to approximate a Rational 
-by a ``double`` before the multiplication with a ``double``.  Here is 
-the method to cast a Rational
-to a ``double``:
+by a ``double`` before use with a ``double``:
 
 .. literalinclude:: ../source/examples/rational_ops_stub/rational.cs
    :start-after: to double chunk
@@ -128,18 +128,20 @@ The general format of such an implicit cast in a user-defined class is:
 
     ``public static implicit operator`` *resultType* ``(`` *sourceType* *paramName* ``)``
 
-One of the two types should be the type of the containing class.
+One of the two types should be the type of the containing class.  
+We have illustrated both combinations.
     
-Finally, you need to be very careful where you declare implicit casts, to
+Finally, you need to be *very careful where you declare implicit casts*, to
 make sure you are not being overly general, and maybe allowing  
 trouble in a form that may be very hard to debug: 
-It is harder to trace implicit actions than explicit actions.
+It is much harder to foresee and trace implicit actions than explicit actions.
 You are
-*safe*, but more *verbose*, if you only allow *explicit* casts, as we have already 
-seen required from ``double`` to ``int``.  To only allow a cast to be used
-explicitly, replace ``implicit`` by ``explicit`` in the cast method heading.  
+*safe*, but more *verbose*, if you *only allow explicit* casts.  For example,
+we have already seen these required for a cast from ``double`` to ``int``.  
+To only allow an explicit cast with your type, 
+replace ``implicit`` by ``explicit`` in the cast method heading.  
 Though we have not used the
-``decimal`` type much, we use it for contrast to illustrate a cast
+``decimal`` type before, we use it here for contrast to illustrate a cast
 from Rational to ``decimal`` that can only be used explicitly, as in
 ``(decimal) f``:
 
@@ -147,14 +149,25 @@ from Rational to ``decimal`` that can only be used explicitly, as in
    :start-after: explicit cast chunk
    :end-before: chunk
 
+.. index:: type; decimal
+   decimal type
+   
 Example
 :repsrc:`rational_ops_stub/test_ops.cs` tests all of the operator overloads 
-and casts involving a Rational.  Look at it and run it.
+and casts shown for a Rational.  Look at the source code and run it.
 Note where overloaded operators are used and where implicit and explicit casts
-to or from a Rational are used.
+to or from a Rational are used.  
+
+The example also illustrates a special feature
+of the ``decimal`` type.  While a ``double`` is encoded with a power of 2, so
+0.1 is not stored accurately, a ``decimal`` is encoded with a power of 10, so
+exact decimal values with up to 28 digits can be stored and manipulated.
+(This is important for monetary calculations, so a ``decimal`` literal 
+has **m** for money appended, like  ``5.99m``, representing the mathematical
+quantity 5.99 exactly.) 
 
 .. index:: exercise; overloading operators
-   overloading operators; exercise
+   overloading operators; exercise      
    
 .. _overloading-operator-exercise:
 
