@@ -85,7 +85,7 @@ as a ``double`` with an integer value, and the cast from ``int`` to ``double``
 is done implicitly
 when needed:  An expression like ``3.2 * 2`` is processed by the compiler, 
 *implicitly* casting the
-2 to ``double`` 2.0, and then do a ``double`` multiplication.  
+2 to ``double`` 2.0, and then doing a ``double`` multiplication.  
 The same idea makes sense with an
 ``int`` ``n`` and a Rational ``f``.  Mathematically an integer is rational.  
 We will
