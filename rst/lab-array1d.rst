@@ -168,7 +168,8 @@ values. The second will be convenient to set up tests for this lab.
    representing :math:`1(10^3)+9(10^2)+6(10^1)+7(10^0)`.
 
    Without showing you the code, here is how you would convert a
-   number from its digits to an integer efficiently::
+   number from its digits to an integer efficiently, without
+   calculating high powers for 10 separately::
 
       num = 0
       num = 10 * 0 + 1 = 1
