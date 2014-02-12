@@ -141,36 +141,38 @@ values. The second will be convenient to set up tests for this lab.
 #. **20 % extra credit:** 
    Given two arrays, ``a`` and ``b`` that represent vectors. Write a
    function that computes the vector dot product of these two
-   floating point arrays. The vector dot product (in mathematics) is defined as the 
-   sum of ``a[i] * b[i]`` (for all i). Here's an example of how it
+   floating point arrays. The vector dot product (in mathematics) is defined  
+   as the sum of ``a[i] * b[i]`` (for all i). Here's an example of how it
    should work::
 
-      double[] a = new double[] { 1.0, 2.0, 3.0 };
+      double[] a = new double[] { 1.5, 2.0, 3.0 };
       double[] b = new double[] { 4.0, 2.0, -1.0 };
 
       double dotProduct = VectorDotProduct(a, b);
       Console.WriteLine("The dot product is {0}", dotProduct);
 
-      // Should print 1.0 * 4.0 + 2.0 * 2.0 + 3.0 * -1.0 = 5.0
+      // Should calculate 1.5 * 4.0 + 2.0 * 2.0 + 3.0 * -1.0 = 7.0
       
    From here on, create your own headings.
       
 #. **20 % extra credit:** 
    Suppose we have loaded an array with the digits of an integer,
-   where the highest power is kept in position 0, next highest in
+   where the digit for the highest power of 10 is kept in position 0, 
+   next highest in
    position 1, and so on. The ones position is always at position
    array.Length - 1::
 
 
       int[] digits = { 1, 9, 6, 7 };
 
+   representing :math:`1(10^3)+9(10^2)+6(10^1)+7(10^0)`.
 
    Without showing you the code, here is how you would convert a
-   number from its digits to an integer::
+   number from its digits to an integer efficiently::
 
       num = 0
       num = 10 * 0 + 1 = 1
-      num = 10 * 10 + 9 = 19
+      num = 10 * 1 + 9 = 19
       num = 10 * 19 + 6 = 196
       num = 10 * 196 + 7 = 1967
       done!
@@ -183,11 +185,14 @@ values. The second will be convenient to set up tests for this lab.
    in the array, so negative numbers are not addressed.
 
 #. **20 % extra credit:** 
-   Suppose that we not only have the digits but also the *base* that
-   in which the number is represented. (The base can be at most
-   10 if it uses only digits for place value.)
+   Each digit represents a multiple of a *power* of the 
+   *base*.  In the previous version the base is 10, 
+   but other bases are important.  Now make the base a parameter.
+   Here we consider bases no bigger than 10, so we can continue to use
+   only digits for place value symbols.
    Write a function (or revise the
    previous solution) to return the int or long represented.
    For example if {1, 0, 0, 1, 1} represents a base 2 number,
-   19 is returned.
+   :math:`1(2^4)+0(2^3)+0(2^2)+1(2^1)+1(2^0)=19`
+   is returned. Base 2 is central to computer hardware.
 
