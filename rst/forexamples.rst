@@ -581,10 +581,10 @@ important *not* to make the ``Random`` object be a local variable inside
 the ``Flip`` function:  A new ``Random`` object in likely 
 initialized using the current time.  The ``Flip`` function has no interaction 
 with the user,
-so it can be repeated very quickly, and a new ``Random`` objects
+so it can be repeated very quickly, and new ``Random`` objects
 may not register a new value
 through several reruns of ``Flip``.  This would give the same answer, 
-and completely go contrary to the idea of random results!
+and be completely contrary to the idea of random results!
 
 Hence it is generally a good idea to only create a single ``Random`` object
 that stays in scope for the whole program.
