@@ -24,12 +24,12 @@ We include a testing class at the end of this file.
 
 
 Besides the obvious tests, we also use
-the fact that an Example object is mutable to play with  :ref:`alias`,  
-as in the
-last few lines of ``Main``, after ``e`` becomes an alias for ``e2``. 
-We change
-an object under one name, and it affect the alias the same way,
-as you can see from running the program!
+the fact that an Example object is mutable to play with  :ref:`alias`:  
+In the
+last few lines of ``Main``, after ``e`` becomes an alias for ``e2``, 
+we change
+an object under one name, and it affect the alias the same way.
+Check this by running the program!
 
 Make sure you can follow the code and the output from running.  
 
@@ -41,7 +41,7 @@ For a comparison of procedural and object-oriented coding,
 consider converting :ref:`lab-number-game` so that a GuessGame
 is an object, an instance of the GuessGame class.
 
-While our last example, Rational, is in fact a very practical 
+While our last example, Contact, is a simple but practical 
 use of object-oriented programming, GuessGame is somewhat more artificial.  
 We create it hoping that highlighting the differences between procedural 
 and object-oriented presentation is informative.
@@ -73,7 +73,6 @@ What actions/methods will this object have?  Only one - playing a GuessGame.
 The GuessGame could be played multiple times, and that action, play, 
 makes sense as a method, Play, which will look a lot like the current 
 static function. 
-
 
 In the procedural version there are several other important variables:
 
@@ -182,14 +181,16 @@ Then modify the two files as discussed below.
 Planning A Class Structure
 -------------------------------
 
-Here is an idea for a skeleton of a text (adventure?) game.  
+The Console input/output interchange below illustrates 
+an idea for a skeleton of a text (adventure?) game.  
 It could be the basic of a later group project. It does not
 have much in it yet, but it can be planned in terms of classes.
 Classes with instances correspond to nouns you would be using, 
 particularly nouns used in more than one place with different 
 state data being remembered.
 Verbs associated with nouns you use tend to be methods.  
-Think how you might break this down. 
+Think how you might break this down, looking at what is happening
+in the sequence below. 
  
 The parts appearing after the '>' prompt are entries by the user.
 Other lines are computer responses::
@@ -248,7 +249,7 @@ As you think how to break this game into parts (classes),
 also think how the parts interact (public methods).
 Maybe discuss ideas in class.
 
-If the plan is to discuss it in class, wait before looking at 
+If the plan is to discuss it in class, *wait* before looking at 
 the code that generated the exchange above, in the 
 project folder :repsrc:`csproject1`.
 
