@@ -1,71 +1,38 @@
 Class Instance Examples
 ========================
 
-Getters and Setters
---------------------
+.. index:: exercise; getters and setters
 
-Our class Rational in :repsrc:`rational_nunit/rational.cs` is a
-practical utility class.  We used it as a first example to avoid being artificial,
-and illustrate many points.  One choice we made for it to be practical, is to have
-``Rational`` objects be immutable:  Though we constructed Rationals and used them,
-there was no public code that *modified* a Rational.  We discussed :ref:`getters`.
-For mutable objects, another basic kind of method is a *setter*, 
-that sets an attribute of the object's state, changing it from what it was before.
+More Getters and Setters
+-------------------------
 
-This time we have a nonsensical but very simple class to illustrate the use of
-both getters and setters, example 
-:repsrc:`example_class/example_class.cs`.  It is highly commented:
+As an exercise you could write a simple class Example, with
 
-.. literalinclude:: ../source/examples/example_class/example_class.cs
+#. ``int`` instance variable ``n`` and ``double`` instance variable ``d``
+#. a simple constructor with parameters to set instance variables 
+   ``n`` and ``d``
+#. getters and setters for both instance variables (4 methods in all)
+#. a ToString that prints a line with both instance variables labeled.
 
-Make sure you can follow the code and the output from running.  
+Compare yours to
+:repsrc:`example_class/example_class.cs`. 
 
-One important point is disambiguating the use of ``n`` and ``d`` in several
-places where they are used as local variable, 
-while also being instance variables names.   For instance
-note the constructor:
+We include a testing class at the end of this file.  
 
 .. literalinclude:: ../source/examples/example_class/example_class.cs
-   :start-after: constructor chunk
-   :end-before: chunk
+   :start-after:  test class
 
-The compiler first looks to see if an identifier, like ``n`` is a local variable.  
-If so, it stops there.  We need to be trickier to access an *instance variable* of the 
-*same* name.  We can generally skip dot notation when referring to the current object, 
-but here we have an exception, since plain ``n`` refers to the local variable.  
-We *can* use dot notation with a reference to the current object.
-The current object is ``this``, so we can refer to ``this.n``.
-After seeing the ``this.``, the compiler knows that what follows must refer to a 
-*part of the current object*, and hence the ``n`` means the instance variable.
-Similarly with ``d``.
 
-In the class Rational we never changed the value of an instance variable in a 
-*public* method.  That kept Rationals immutable.  In ``Example`` 
-we choose to have a *setter*, like ``SetN``, changing the value of the instance variable:
-
-.. literalinclude:: ../source/examples/example_class/example_class.cs
-   :start-after: SetN chunk
-   :end-before: chunk
-
-Here, while we are declaring a local variable, the formal parameter, 
-with the same name as the instance variable, we are careful to use ``this.``
-to disambiguate the instance variable.  
-*The following variation is wrong and is an unfortunately easy slip*::
-
-   public void SetN(int newN) // NOT a "setter" method
-   {
-      int n = newN; // LOGICAL ERROR! NO LASTING EFFECT
-   }
-
-This is the same error discussed for a constructor
-in :ref:`local-variables-hiding-instance-variables`.  
-
-Since an ``Example`` object is mutable, we can play with :ref:`alias`,  
+Besides the obvious tests, we also use
+the fact that an Example object is mutable to play with  :ref:`alias`,  
 as in the
 last few lines of ``Main``, after ``e`` becomes an alias for ``e2``. 
 We change
 an object under one name, and it affect the alias the same way,
-as you can see from running the program.
+as you can see from running the program!
+
+Make sure you can follow the code and the output from running.  
+
 
 Converting A Static Game To A Game Instance
 ----------------------------------------------
