@@ -10,7 +10,8 @@ Classes and Object-Oriented Programming
    :maxdepth: 3
    
    a-first-class
-   classes-and-structs
    classexamples
+   rational
+   classes-and-structs
    overload-op
 
