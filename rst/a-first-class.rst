@@ -97,17 +97,17 @@ When running this testing code, we would like the results:
 	
 We are using the same object oriented notation that we have for many other classes:
 *Calls to instance methods are always attached to a specific object.*
-So far that has always been
+That has always been
 the object of
 
    *object*\ ``.``\ *method*\ ``(``  ... ``)``
    
 So far we have been thinking and illustrating how we would like objects in this
 Contact class to look like and behave from the *outside*.  We could be
-describing another library class.  Now, for the first time, we start to delve inside,
-to the code and concepts needed to make this happen:
-
-We start with the most basic parts.  First we need a ``class``.
+describing another library class.  Now, for the first time, 
+we start to delve inside,
+to the code and concepts needed to make this happen.
+We start with the most basic parts.  First we need a ``class``:
 
 Class Syntax
 --------------
@@ -505,17 +505,24 @@ Again, the whole code for the elaborated Contact is in example
 :repsrc:`contact2/contact2.cs`.
 
 New testing code is in :repsrc:`contact2/test_contact2.cs`.  Run the project
-and check that it does what you would expect.  There is one new 
-feature illustrated in the testing code:  
+and check that it does what you would expect.  There are several new 
+features illustrated in the testing code:
+
+.. literalinclude:: ../source/examples/contact2/test_contact2.cs
+   :start-after: main chunk
+   :end-before: chunk
+
+Contact is now a type we can use with other types.  ``Main`` ends creating
+a ``List<Contact>`` and an array of Contacts, and processes Contacts in the
+``List`` with a ``foreach`` loop.
+
 We mentioned that this particular signature in the
 ``ToString`` heading means that the system recognizes it in string
 concatenation and in substitutions into a ``Write`` or ``WriteLine`` 
-format string::
+format string.  Find both in ``Main``.
 
-     Console.WriteLine ("Now both with changes:\n" + c1); //no ToString!
-     Console.WriteLine ("No ToString needed with + or WriteLine:\n{0}", c2);
-
-This also means that the body of our ``Print`` definition could have been
+The ``ToString`` override also means that the body of our ``Print`` 
+definition in the Contact class could have been
 even shorter, using the object ``this``::
 
       public void Print() 
