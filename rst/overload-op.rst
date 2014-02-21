@@ -77,6 +77,7 @@ An example testing class also uses the new casting syntax of next section:
 
 .. index:: operator; casts in user class
    casts in user-defined classes
+   implicit casts in user-defined classes
    
 .. _casts_in_user_classes:
 
@@ -140,7 +141,14 @@ You are
 we have already seen these required for a cast from ``double`` to ``int``.  
 To only allow an explicit cast with your type, 
 replace ``implicit`` by ``explicit`` in the cast method heading.  
-Though we have not used the
+
+.. index:: decimal type
+   type; decimal
+   explicit casts in user-defined classes
+
+.. _decimal-type:
+   
+**The decimal type**:  Though we have not used the
 ``decimal`` type before, we use it here for contrast to illustrate a cast
 from Rational to ``decimal`` that can only be used explicitly, as in
 ``(decimal) f``:
@@ -162,9 +170,9 @@ The example also illustrates a special feature
 of the ``decimal`` type.  While a ``double`` is encoded with a power of 2, so
 0.1 is not stored accurately, a ``decimal`` is encoded with a power of 10, so
 exact decimal values with up to 28 digits can be stored and manipulated.
-(This is important for monetary calculations, so a ``decimal`` literal 
+(This is important for *monetary calculations*, so a ``decimal`` literal 
 has **m** for money appended, like  ``5.99m``, representing the mathematical
-quantity 5.99 exactly.) 
+quantity 5.99 *exactly*.) 
 
 .. index:: exercise; overloading operators
    overloading operators; exercise      
