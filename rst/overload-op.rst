@@ -148,18 +148,15 @@ replace ``implicit`` by ``explicit`` in the cast method heading.
 
 .. _decimal-type:
    
-**The decimal type**:  Though we have not used the
-``decimal`` type before, we use it here for contrast to illustrate a cast
-from Rational to ``decimal`` that can only be used explicitly, as in
-``(decimal) f``:
-
 .. literalinclude:: ../source/examples/rational_ops_stub/rational.cs
    :start-after: explicit cast chunk
    :end-before: chunk
 
-.. index:: type; decimal
-   decimal type
-   
+**The decimal type**:  Though we have not used the
+``decimal`` type before, we use it here for contrast to illustrate a cast
+from Rational to ``decimal`` that can only be used explicitly, as in
+``(decimal) f``:
+  
 Example
 :repsrc:`rational_ops_stub/test_ops.cs` tests all of the operator overloads 
 and casts shown for a Rational.  Look at the source code and run it.
@@ -168,7 +165,7 @@ to or from a Rational are used.
 
 The example also illustrates a special feature
 of the ``decimal`` type.  While a ``double`` is encoded with a power of 2, so
-0.1 is not stored accurately, a ``decimal`` is encoded with a power of 10, so
+0.1 is *not* stored accurately, a ``decimal`` is encoded with a power of 10, so
 exact decimal values with up to 28 digits can be stored and manipulated.
 (This is important for *monetary calculations*, so a ``decimal`` literal 
 has **m** for money appended, like  ``5.99m``, representing the mathematical
