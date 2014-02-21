@@ -602,7 +602,40 @@ function with heading::
     // Similarly, Histogram(new int[]{2, 0, 3, 5, 3, 5}, -1, 1)
     // returns the new array {0, 1, 0}, 
     // that is, 0 -1's, 1 0, and 0 1's.
-	public static int[] Histogram(int[] a, int start, int end)
+    public static int[] Histogram(int[] a, int start, int end)
+
+This problem clearly requires you to loop through all the elements of 
+array ``a``.  You should *not* need any further nested loop.
+
+.. _Histogram-interval-exercise:
+   
+Histogram Interval Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is a slight elaboration of the previous problem, where
+you count entries in intervals, not just of width 1. 
+
+Write a program ``make_histogram2.cs`` that includes and tests a 
+function with heading::
+
+    // Return a histogram array counting repetitions of values
+    // in array a in the n half-open intervals [start, start + width),
+    // [start+width, start+2*width), ... [
+    // [start + (n-1)*width, start + n*width) .  The counts for 
+    // each of the n intervals, in order, goes in the returned array 
+    // of length n.  For example
+    // Histogram(new[]{89, 69, 100, 83, 99, 81}, 60, 10, 5)  
+    // would return an array containing counts 1, 0, 3, 1, 1,
+    // for 1 in sixties, 0 in seventies, 3 in eighties, 1 in nineties,
+    // and 1 in range 100 through 109.
+    public static int[] HistogramIntervals(int[] a, int start, 
+                                           int width, int n)
+
+The previous exercise version ``Histogram(a, start, end)`` 
+would return the same
+result as ``HistogramIntervals(a, start, 1, end-start+1)``
+
+Again, the only loop needed should be to process each element of ``a``.
 
 ..  later
     example `arraysFor <../examples/arraysForfiles.zip>`_, finish in class
