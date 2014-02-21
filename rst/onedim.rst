@@ -633,7 +633,7 @@ function with heading::
 
 The previous exercise version ``Histogram(a, start, end)`` 
 would return the same
-result as ``HistogramIntervals(a, start, 1, end-start+1)``
+result as ``HistogramIntervals(a, start, 1, end-start+1)``.
 
 Again, the only loop needed should be to process each element of ``a``.
 
