@@ -209,7 +209,8 @@ writing classes implementing and using an interface.
    instance based Guessing Game :repsrc:`instance_version/guess_game.cs`.  
    You need to make slight modifications.  
    You could make Play return the opposite of the number of guesses, 
-   so more guesses does generate a worse score.
+   so more guesses does generate a worse score. Note that you could not use the 
+   original static game version:  Only objects can satisfy an interface.
 
 .. index exercise; bisection
    interface; Function  

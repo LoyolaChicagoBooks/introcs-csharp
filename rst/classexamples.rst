@@ -44,8 +44,12 @@ is an object, an instance of the GuessGame class.
 While our last example, Contact, is a simple but practical 
 use of object-oriented programming, GuessGame is somewhat more artificial.  
 We create it hoping that highlighting the differences between procedural 
-and object-oriented presentation is informative.
-Here is a procedural version, example file 
+and object-oriented presentation is informative.  Also, we will see 
+with :ref:`interface` that
+there are C# language features that require an
+object rather than just a function and data.
+
+Here is a procedural game version, example file 
 :repsrc:`static_version/static_version.cs`
 
 .. literalinclude:: ../source/examples/static_version/static_version.cs
