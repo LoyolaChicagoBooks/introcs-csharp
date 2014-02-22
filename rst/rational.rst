@@ -8,19 +8,23 @@ The Rational Class
 
 Like other numbers, we think of a rational number as a unit, 
 but all rational numbers can be most easily represented as a fraction, 
-a ratio of two integers. 
-They also have lots of obvious operations defined on them.  This makes  
-it sound reasonable to create a class ``Rational``.  ::
+a ratio of two integers. We can create a class Rational, so  ::
 
    Rational r = new Rational(2, 3);
 
 would create a new Rational number for the mathematical expression, 2/3.
 
-In this example we will use most of the concepts for object so far, 
-and add a few more. There are lots of operations on rational
-numbers. Thinking ahead to what we would like for our rational numbers, here is
-some testing code.  Hopefully the method names are clear and reasonable. We
-operate on a single rational number, and do calculation with a pair,
+Our previous simple class examples have mostly been ways of 
+collecting related data, with limited methods beyond getters and setters.
+Rational numbers also have lots of obvious operations defined on them.  
+Our Rational example we will use most of the concepts for object so far, 
+and add a few more, to provide a rich practical class 
+with a variety of methods. 
+
+Thinking ahead to what we would like for our rational numbers, here is
+some testing code.  Hopefully the method names are clear and reasonable. 
+in the illustration
+we operate on a single rational number, and do calculation with a pair,
 and parse string literals.  The code is from 
 :repsrc:`test_rational/test_rational.cs`:
 
@@ -41,7 +45,7 @@ The results we would like when running this testing code:
 	-3/5 - 1/2 is -11/10
 	-3/5 * 1/2 is -3/10
 	(-3/5) / (1/2) is -6/5
-	1/2 > -3/5 ? True
+	1/2 > -3/5 ? true
 	-3/5 as a double is -0.6
 	1/2 as a decimal is 0.5
 	Parse "-12/30" to Rational: -2/5
@@ -241,6 +245,9 @@ The testing code we started with, in
 :repsrc:`test_rational/test_rational.cs`
 uses all the methods.  We will see more advance ways to test Rational
 in :ref:`testing`.
+
+There is also a more convenient version of Rational, 
+using advanced concepts, in :ref:`defining_operators`.
 
 Pictorial Playing Computer
 ---------------------------
