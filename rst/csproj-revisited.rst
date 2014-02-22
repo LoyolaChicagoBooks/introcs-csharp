@@ -182,6 +182,8 @@ they make your code clearer, easier to modify, and easier to debug.
    interface; igame exercise
    igame exercise
 
+.. _igame-interface-exercise:
+
 IGame Interface Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

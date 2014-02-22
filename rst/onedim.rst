@@ -454,7 +454,7 @@ it was filled with zeros.  It is a safety feature of C# that the internal fields
 of objects always get a specific value, not random data.  Here are the defaults:
 
    | primitive numeric types: zero
-   | boolean: false
+   | bool: false
    | all object types:  null
 
 .. warning::
@@ -471,7 +471,8 @@ of objects always get a specific value, not random data.  Here are the defaults:
    property.  If, for example, 
    you want an array of empty strings you would need a loop::
     
-       for (int i = 0; i < words.length; i++) {
+       string[] words = new string[10];
+       for (int i = 0; i < words.Length; i++) {
           words[i] = "";
        }
         

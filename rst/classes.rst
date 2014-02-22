@@ -12,6 +12,7 @@ Classes and Object-Oriented Programming
    a-first-class
    classexamples
    rational
+   planning_classes
    classes-and-structs
    overload-op
 
