@@ -555,7 +555,7 @@ constructor, like::
          string email = emailAddress; // LOGICAL ERROR
       }
 
-This is deadly.  it is worse than redeclaring a local variable, which at least will 
+This is deadly.  It is worse than redeclaring a local variable, which at least will 
 trigger a compiler error.
 
 ..  warning::

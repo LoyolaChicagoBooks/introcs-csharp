@@ -139,6 +139,9 @@ from a file containing one number per line (plus possible white space)::
          return sum;
       }
 
+.. index:: File; Exists
+   Exists - File class method
+
 Below and in :repsrc:`sum_file/sum_file.cs` is a more elaborate, complete example,
 that also exits gracefully if you give a bad file name.
 If you give a good file name, it skips lines that contain only whitespace.  
