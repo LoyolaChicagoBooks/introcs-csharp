@@ -454,7 +454,7 @@ it was filled with zeros.  It is a safety feature of C# that the internal fields
 of objects always get a specific value, not random data.  Here are the defaults:
 
    | primitive numeric types: zero
-   | boolean: false
+   | bool: false
    | all object types:  null
 
 .. warning::
@@ -471,7 +471,8 @@ of objects always get a specific value, not random data.  Here are the defaults:
    property.  If, for example, 
    you want an array of empty strings you would need a loop::
     
-       for (int i = 0; i < words.length; i++) {
+       string[] words = new string[10];
+       for (int i = 0; i < words.Length; i++) {
           words[i] = "";
        }
         
@@ -589,16 +590,53 @@ Histogram Exercise
 Write a program ``make_histogram.cs`` that includes and tests a 
 function with heading::
 
+    // Return a histogram array counting repetitions of values
+    // start through end in array a.  The count for value start+i
+    // is at index i of the returned array, starting at i == 0.  
+    // For example:
+    // Histogram(new int[]{2, 0, 3, 5, 3, 5}, 2, 5) counts how
+    // many times the numbers 2 through 5, inclusive, occur in
+    // the original array, and returns a new array containing
+    // {1, 2, 0, 2}, that is, 1 2, 2 3's, 0 4's, and 2 5's. The
+    // count of 2's appears as the first (0th) element of the
+    // returned array, the count of 3's as the second, etc.
+    // Similarly, Histogram(new int[]{2, 0, 3, 5, 3, 5}, -1, 1)
+    // returns the new array {0, 1, 0}, 
+    // that is, 0 -1's, 1 0, and 0 1's.
+    public static int[] Histogram(int[] a, int start, int end)
 
-	// Return a histogram array counting repetitions of values
-	//  start through end in array a.  The count for value start+i
-	//  is in index i of the returned array.  For example:
-	//  Histogram(new int[]{2, 0, 3, 5, 3, 5}, 0, 5) returns
-	//  a new array containing {1, 0, 1, 2, 0, 2}.  
-	public static int[] Histogram(int[] a, int start, int end)
+This problem clearly requires you to loop through all the elements of 
+array ``a``.  You should *not* need any further nested loop.
 
+.. _Histogram-interval-exercise:
    
+Histogram Interval Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+This is a slight elaboration of the previous problem, where
+you count entries in intervals, not just of width 1. 
+
+Write a program ``make_histogram2.cs`` that includes and tests a 
+function with heading::
+
+    // Return a histogram array counting repetitions of values
+    // in array a in the n half-open intervals [start, start + width),
+    // [start+width, start+2*width), ... [
+    // [start + (n-1)*width, start + n*width) .  The counts for 
+    // each of the n intervals, in order, goes in the returned array 
+    // of length n.  For example
+    // Histogram(new[]{89, 69, 100, 83, 99, 81}, 60, 10, 5)  
+    // would return an array containing counts 1, 0, 3, 1, 1,
+    // for 1 in sixties, 0 in seventies, 3 in eighties, 1 in nineties,
+    // and 1 in range 100 through 109.
+    public static int[] HistogramIntervals(int[] a, int start, 
+                                           int width, int n)
+
+The previous exercise version ``Histogram(a, start, end)`` 
+would return the same
+result as ``HistogramIntervals(a, start, 1, end-start+1)``.
+
+Again, the only loop needed should be to process each element of ``a``.
 
 ..  later
     example `arraysFor <../examples/arraysForfiles.zip>`_, finish in class

@@ -527,7 +527,7 @@ There are a few things to note in this code:
 
 
 .. index:: Stopwatch
-   performance; Stopwatch and TimeSpan
+   performance - Stopwatch and TimeSpan
    timing
    
 Timing

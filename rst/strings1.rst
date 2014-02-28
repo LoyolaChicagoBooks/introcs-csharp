@@ -5,8 +5,8 @@ Strings, Part I
 Enough with numbers for a while. Strings of characters are another
 important type in C#.
 
-.. index::
-   string; "
+.. index:: string
+   single: "..." for string literal
 
 A string in C# is a sequence of characters. For C# to
 recognize a literal sequence of characters, like ``hello``, as a string, it
@@ -92,13 +92,15 @@ In csharp enter  ::
    int y = 3;
    
 *Think* what the csharp response 
-is to each of these, write one predicted response at a time, then *then* test it,
-and put the right answer beside it if you were wrong::
+is to each of these then write one predicted response at a time, 
+*then* test it,
+and put the right answer beside your answer if you were wrong::
 
    x + "??" + y;
    x + y + "??";
    (x * y + "??");
    "??" + x * y;
+   "??" + x + y;
    x + "??" * y;
    
 Can you explain the ones you got wrong, after looking at the actual answer?

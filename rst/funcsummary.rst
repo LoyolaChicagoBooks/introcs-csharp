@@ -1,7 +1,7 @@
 
 
 .. index::
-   double: function; summary
+   function; summary
 
 .. _static-Function-summary:
 

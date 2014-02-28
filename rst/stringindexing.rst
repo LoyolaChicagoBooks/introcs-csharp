@@ -1,7 +1,6 @@
 .. _string-indexing:
 
-.. index::
-   double: string; index [ ]
+.. index:: string; index [ ]
    single: [ ]; string index
 
 String Indexing

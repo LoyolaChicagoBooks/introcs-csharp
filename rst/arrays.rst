@@ -1,4 +1,5 @@
 .. index:: array
+   type; array
 
 .. _array:
 
