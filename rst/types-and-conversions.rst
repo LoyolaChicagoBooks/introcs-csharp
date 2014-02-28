@@ -1,5 +1,6 @@
 .. index::
-   double: type; value
+   type; value
+   value type
 
 
 .. _value-types:
@@ -8,7 +9,8 @@ Value Types and Conversions
 ===========================
 
 .. index::
-   double: int; value range
+   int; value range
+   type; int
 
 
 Type int
@@ -72,6 +74,7 @@ We will not have need for integral types other than ``int`` and ``long`` in this
 
 .. index:: type; double
    double
+   precision
 
 .. _type-double:
    
@@ -145,8 +148,8 @@ due to limited precision.  These inaccuracies *still* happen silently.
    
 .. _numeric-type-limits:
 
-Numeric Type Limits
---------------------
+Numeric Types and  Limits
+--------------------------
 
 The listing below shows how the storage size in bits translates into the limits
 for various numerical types.  We will not discuss or use ``short`` or ``float`` further.
@@ -165,32 +168,17 @@ double
    about 15 digits of accuracy
    
 float
-   32 bits; maximum magnitude: :math:`3.402823(10^{38})`; about 7 digits of accuracy
-     
+   32 bits; maximum value: :math:`3.402823(10^{38})`; about 7 digits of accuracy
 
-.. index:: type; char
-   char
+decimal     
+   128 bits; maximum value: 79228162514264337593543950335; 
+   28 digits of accuracy;  can exactly represents decimal values
+   for financial operations; briefly discussed in *optional*
+   :ref:`Decimal Type <decimal-type>`.
+
+char
+   See :ref:`char as integer <integer-char>`.
    
-.. _type-char:
-
-Type char
-----------
-
-The type for an individual character is ``char``.  A ``char`` literal value is
-a *single* character enclosed in *single* quotes, like ``'a'`` or ``'$'``.  
-The literal for a
-single quote character itself and the literal for a newline use 
-*escape codes*, like in :ref:`Strings2`:  
-The literals are ``'\''`` and ``'\n'`` respectively.
-
-Be careful to distinguish a ``char`` like ``'A'`` from a string ``"A"``.
-
-An individual character is also technically a number, with the correspondence
-between numeric codes and characters given by the *Unicode* standard.
-Unicode allows special symbol characters and alphabets of many languages.  
-We will stick to the standard American keyboard for these characters. 
-
-
 .. index:: cast
 
 .. _cast:
@@ -320,47 +308,72 @@ with result 3.  It is the 3 that is then cast to a double (too late)!
 See the appendix :ref:`precedence`, listing all C# operations discussed in this book. 
 
 
-Integral Type char
--------------------
+.. index:: type; char
+   char
+   single: '_' for char literal
+   
+.. _type-char:
 
-Though the ``char`` type has character literals and prints as a character,
-internally a ``char`` is a type of integer, stored in 16 bits. 
+Type char
+----------
+
+The type for an individual character is ``char``.  A ``char`` literal value is
+a *single* character enclosed in *single* quotes, like ``'a'`` or ``'$'``.  
+The literal for a
+single quote character itself and the literal for a newline use 
+*escape codes*, like in :ref:`Strings2`:  
+The literals are ``'\''`` and ``'\n'`` respectively.
+
+Be careful to distinguish a ``char`` literal like ``'A'`` 
+from a string literal ``"A"``.
+
+.. _integer-char:
+
+**Char as integer**:  Though the ``char`` type has character literals 
+and prints as a character,
+internally a ``char`` is a *type of integer*, stored in 16 bits,
+with the correspondence
+between numeric codes and characters given by the *Unicode* standard.  
+Unicode allows special symbol characters and alphabets of many languages.  
+We will stick to the standard American keyboard for these characters.
+
 We mention the ``char`` type being numeric mostly because of errors 
 that you can make that would otherwise be hard to figure out.  This code does
-not concatenate:
+not concatenate the ``char`` symbols:
 
 .. code-block:: none
 
     csharp> Console.WriteLine('A' + '-');
     110
 
-What?  We mentioned that modern computers are set up to easily work with the ``int``
+What?  
+We mentioned that modern computers are set up to easily work with the ``int``
 type.  In arithmetic with *smaller* integral types the operands are first
-automatically converted to type ``int``.  An ``int`` sum is an ``int``, and that is
+automatically converted to type ``int``.  
+An ``int`` sum is an ``int``, and that is
 what is printed.  
 
 You can look at the numeric values inside a ``char`` with a cast!
 
 .. code-block:: none
 
-    csharp> int n = (int)'A';
-    csharp> n;
+    csharp> (int)'A';
     65
-    csharp> int m = (int)('-');
-    csharp> m;
+    csharp> (int)'-';
     45
  
 So the earlier 110 is correct:  65 + 45 = 110.
 
 For completeness: 
-It is also possible to cast back to char.  
+It is also possible to cast from small ``int`` back to ``char``.  
 This may be useful for dealing with the alphabet
 in sequence (or simple classical cryptographic codes):
 
 .. code-block:: none
 
-    csharp> char ch = (char)('A' + 1);
-    csharp> ch;
+    csharp> 'A' + 1;       
+    66
+    csharp> (char)('A' + 1);
     'B'
 
 The capital letter one place after A is B.
@@ -381,7 +394,7 @@ two values is *Boolean*, or *bool* for short.  The
 type is named after George Boole, who invented what we now call
 *Boolean algebra*.  Though it seemed like a useless mathematical curiosity 
 when Boole invented it, a century later Boolean algebra turned out to be
-central to the implementation of computer hardware.
+at the heart of the implementation of computer hardware.
 
 .. note::
    The Boolean literals are ``true`` and ``false``, with *no* quotes

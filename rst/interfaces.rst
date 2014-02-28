@@ -1,3 +1,5 @@
+.. index:: interface
+
 .. _Interface:
 
 Interfaces

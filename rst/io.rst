@@ -3,6 +3,9 @@
 Combining Input and Output
 ==========================
 
+.. index:: 
+   double: Console; ReadLine
+   
 .. _read-from-console:
    
 Reading from the Keyboard
@@ -57,10 +60,10 @@ Just for completeness we mention that you can read a raw single keystroke immedi
      
 
 .. index::
-   string; convert to int or double
-   Parse; int and double
+   string; Parse to int or double
+   Parse int and double
    int; Parse
-   double; parse
+   double; Parse
    
 .. _Numbers-and-Digit-Strings:
 

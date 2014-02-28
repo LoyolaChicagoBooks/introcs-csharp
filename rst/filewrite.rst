@@ -1,5 +1,5 @@
 .. index:: file; write and close
-   double StreamWriter; WriteLine
+   double: StreamWriter; WriteLine
    class; StreamWriter
    close file
    
@@ -109,6 +109,9 @@ program created when Xamarin Studio builds your project.
 If you were to run the program from the command line instead of from Xamarin Studio, 
 the file would appear in the current directory.
 
+.. index:: StreamWriter; format string
+   StreamWriter; Write
+   
 As you can use a :ref:`Format-Strings` with 
 functions ``Write`` and ``WriteLine``, of the ``Console`` class, 
 you can also use a format string with the corresponding methods of a ``StreamWriter``, 

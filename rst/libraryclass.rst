@@ -26,7 +26,7 @@ We explain the namespace line after the code:
 
 .. literalinclude:: ../source/examples/ui/uif.cs
 
-.. index:: namespace; IntroCS
+.. index:: namespace
    IntroCS namespace 
 
 We have been ``using System`` in every program.  ``System`` is a *namespace* that 
@@ -86,8 +86,9 @@ It includes all the function
 names in ``UIF``, and keeps your program from bombing out
 if the user enters an illegal format for a number.
 
-.. index::
-   double: documentation; function
+.. index:: documentation of functions
+   function; documentation ///
+   single: /// documentation
    
 .. _function-documentation:
 

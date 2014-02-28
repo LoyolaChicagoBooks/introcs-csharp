@@ -75,6 +75,9 @@ it is helpful.  If should be used in particular when something
 is printed and when something is returned, since neither of these
 important actions appear in the variable list.
 
+.. index:: 
+   double: while; execution sequence
+   
 If you play computer and follow the path of execution, you could
 generate the following table. Remember, that each time you reach
 the end of the block after the ``while`` heading,
@@ -251,7 +254,7 @@ for loops,
 but the simple examples so far get us started.
 
 .. index:: while; questions for planning
-   planning questions; while loops
+   loop; questions for planning
    
 Looking ahead to more complicated and interesting problems,
 here is a more complete list of questions to ask yourself when

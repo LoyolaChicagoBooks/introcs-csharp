@@ -68,7 +68,7 @@ is the same as  ::
    format; field width and precision 
    field width formatting
    precision; format
-   table; format
+   table formatting
    example; power_table.cs
    power_table.cs example
 
@@ -559,23 +559,44 @@ The whole function code is below and in example
 Exercises
 ----------
 
+.. index:: Random; static variable
 
-.. index:: random; heads or tails exercise
+
+.. index:: Random; heads or tails exercise
    exercise; heads or tails
    heads or tails exercise
    
+.. _head_tails_exercise:
+
 Head or Tails Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program ``heads_tails.cs``. It should include a function ``Flip()``,
 that will randomly prints ``Heads`` or ``Tails`` *once*.
 Accomplish this by choosing 0 or 1 arbitrarily with a random
-number generator.  Use a static variable declaration and
-initialization as in :ref:`lab-number-game`::
+number generator.
+ 
+Use a ``Random`` object, as in :ref:`lab-number-game`, *except* this time it is 
+important *not* to make the ``Random`` object be a local variable inside 
+the ``Flip`` function:  A new ``Random`` object in likely 
+initialized using the current time.  The ``Flip`` function has no interaction 
+with the user,
+so it can be repeated very quickly, and new ``Random`` objects
+may not register a new value
+through several reruns of ``Flip``.  This would give the same answer, 
+and be completely contrary to the idea of random results!
+
+Hence it is generally a good idea to only create a single ``Random`` object
+that stays in scope for the whole program.
+One way to do that is to make it *static*.  Place the declaration ::
 
   static Random r = new Random();
+
+inside your class but outside of any function, positioned like 
+the static constants discussed in :ref:`Static-Variables`.
   
-Then, for ``int``\ s ``low`` and ``higher``, with ``low < higher``::
+Then you can use ``r`` in any function in your class.  
+For ``int``\ s ``low`` and ``higher``, with ``low < higher``::
  
     int n = r.Next(low, higher);
 
@@ -597,8 +618,9 @@ variable declaration ensures that.
 Group Flips Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``format_flips.cs``. It should include the function ``Flip()``, 
-from the last exercise, *and* include another function::
+Write a program ``format_flips.cs``. It should include the function ``Flip()``
+and the ``static`` ``Random`` declaration 
+from the last exercise.  Also include another function::
  
    // Print out the results from the total number of random flips of a coin.
    // Group them groupSize per line, each followed by a space.

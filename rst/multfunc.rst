@@ -66,7 +66,7 @@ In this case Main calls each of the birthday functions.
 .. index::
    single: ( ) ; matching
    single: [ ] ; matching
-   Xamaarin Studio; delimiter matching
+   Xamarin Studio; delimiter matching
    
 Xamarin Studio, like other modern code editors, can show you
 matching delimiters.  If you place your cursor immediately after a delimiter

@@ -3,9 +3,10 @@
 Dictionary Examples
 ===================
 
-.. index:: generic; HashSet
+.. index:: generics; HashSet
    HashSet
    set
+   type; HashSet
 
 .. _sets:
 

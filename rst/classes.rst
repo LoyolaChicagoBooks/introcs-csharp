@@ -1,4 +1,5 @@
 .. index:: class
+   type; user defined object
 
 .. _Classes:
 
@@ -9,6 +10,9 @@ Classes and Object-Oriented Programming
    :maxdepth: 3
    
    a-first-class
-   classes-and-structs
    classexamples
+   rational
+   planning_classes
+   classes-and-structs
+   overload-op
 
