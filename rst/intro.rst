@@ -57,31 +57,31 @@ Here are some important web links:
 
 In various formats, be aware of these helpful features:
     
-    * We have picked out particularly important words, phrases, and symbols,
-      and put them in our 
-      `index <genindex.html>`_, which is accessible from the banner 
-      of each web page.  The banner stays visible if the window is big enough,
-      and if the window is smaller, the baner only appears at the beginning 
-      of the page with a dropdown menu for most of the options.
-    * In a web version on our website, you can use the 
-      `Search option <search.html?q=&check_keywords=yes&area=default>`_ to
-      look for words, in general.  The search link is also accessible from
-      the web page banner.  This does *not* work on a downloaded 
-      local html copy.
-    * We start with a brief table of contents for the whole book.  
-      *In the web versions*
-      you can get the most detailed table of contents for a single chapter by 
-      clicking on a chapter title in the main table of contents or a 
-      chapter title in the Site drop-down menu in the banner.
-    * The web version shifts the behavior of the top banner depending  on
-      screen resolution, so it adapts for anything from large monitors 
-      to small mobile devices. With a wide screen the banner stays at the 
-      top of your screen, and shows all the standard internal links and
-      drop-down menus.  On a narrower screen the banner is only at the top
-      of each webpage, and scrolls off the screen; the only direct
-      link is to the main table of contents, while the rest of the links
-      of the wide version can be accessed via the icon at the right side of 
-      the banner.
+* We have picked out particularly important words, phrases, and symbols,
+  and put them in our 
+  `index <genindex.html>`_, which is accessible from the banner 
+  of each web page.  The banner stays visible if the window is big enough,
+  and if the window is smaller, the baner only appears at the beginning 
+  of the page with a dropdown menu for most of the options.
+* In a web version on our website, you can use the 
+  `Search option <search.html?q=&check_keywords=yes&area=default>`_ to
+  look for words, in general.  The search link is also accessible from
+  the web page banner.  This does *not* work on a downloaded 
+  local html copy.
+* We start with a brief table of contents for the whole book.  
+  *In the web versions*
+  you can get the most detailed table of contents for a single chapter by 
+  clicking on a chapter title in the main table of contents or a 
+  chapter title in the Site drop-down menu in the banner.
+* The web version shifts the behavior of the top banner depending  on
+  screen resolution, so it adapts for anything from large monitors 
+  to small mobile devices. With a wide screen the banner stays at the 
+  top of your screen, and shows all the standard internal links and
+  drop-down menus.  On a narrower screen the banner is only at the top
+  of each webpage, and scrolls off the screen; the only direct
+  link is to the main table of contents, while the rest of the links
+  of the wide version can be accessed via the icon at the right side of 
+  the banner.
 
 Her are further links that may be useful in our repository:
 

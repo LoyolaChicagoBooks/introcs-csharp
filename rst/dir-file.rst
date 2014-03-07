@@ -11,7 +11,7 @@ You can look at the MSDN documentation for a wide variety of functions in the
 ``Directory`` class including ones to list all the files in a directory 
 or to check if a path string represents an actual directory.
 
-.. index:: File 
+.. index:: File class 
 
 .. _file-class:
 
