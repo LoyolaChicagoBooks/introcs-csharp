@@ -1,4 +1,4 @@
-.. index:: file; write and close
+.. index:: file (StreamWriter); write and close
    double: StreamWriter; WriteLine
    class; StreamWriter
    close file
@@ -13,6 +13,7 @@ Try the following:
 #.  In Xamarin Studio build, *not* run, the project :repsrc:`first_file`.  Build is
     the first selection in the local popup menu for first_file in the Solution pad. 
     Recall to get the local popup menu
+    
     * go to the Solution pad
     * right click on the project (Mac control-click)
 

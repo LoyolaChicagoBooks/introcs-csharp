@@ -53,6 +53,8 @@ clean:
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
+	./cssFix.py $(BUILDDIR)/html/_static/bootswatch-3.1.0/united/bootstrap.min.css
+	@echo css index fix done
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 #html2:

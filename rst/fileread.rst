@@ -1,4 +1,4 @@
-.. index:: file; read and close
+.. index:: file (StreamWriter); read and close
    StreamReader; ReadLine
    close file
 
@@ -96,7 +96,7 @@ Things to note about reading from files:
   to the ``null`` value returned, *then* you get an error!
 
 .. index::
-   file; ReadToEnd
+   file (StreamWriter); ReadToEnd
    StreamReader; ReadToEnd
    ReadToEnd
   
@@ -139,7 +139,7 @@ from a file containing one number per line (plus possible white space)::
          return sum;
       }
 
-.. index:: File; Exists
+.. index:: File class; Exists
    Exists - File class method
 
 Below and in :repsrc:`sum_file/sum_file.cs` is a more elaborate, complete example,

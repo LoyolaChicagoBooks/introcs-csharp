@@ -44,7 +44,8 @@ totally different types.
 
 An *interface* allows us to group diverse classes under one
 interface type.  An interface just focuses on the commonality of behavior
-in one or more methods among the different classes.  In this case we are only concerned 
+in one or more methods among the different classes.  
+In this case we are only concerned 
 with one method, ``CompareTo``.  We want it to be able to compare to another
 object of the same type.  
 
@@ -53,16 +54,22 @@ if has a public instance method with signature::
 
 	   public int CompareTo(T other);
 
-There is one more step before we can use a library method to sort:  Although this is the
-name that C# requires to be able to satisfy the ``Icomparable<T>`` interface, it does not
-automatically assume that is your intention.  You must explicitly say you want your class
-to be considered to satisfy this interface.  For instance for Rational, we need to change
+There is one more step before we can use a library method to sort:  
+Although this is the
+name that C# requires to be able to satisfy the ``Icomparable<T>`` interface, 
+it does not
+automatically assume that is your *intention*.  
+You must explicitly say that you want your class
+to be considered to satisfy this interface.  
+For instance for Rational, we need to change
 the class heading to::
 
    public class Rational : IComparable<Rational>
 
-In general one or more interface names can be listed after the class name and a  colon,
-and before the opening brace of the class body.  This particular interface is defined in
+In general one or more interface names can be listed 
+after the class name and a  colon,
+and before the opening brace of the class body.  
+This particular interface is defined in
 System.Collections.Generic, so we need to be using that namespace.
 
 The project :repsrc:`interfaces` 

@@ -1,4 +1,4 @@
-.. index:: file; stream abstraction
+.. index:: file (StreamWriter); stream abstraction
    stream
 
 .. _fileabstraction:
