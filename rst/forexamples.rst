@@ -696,4 +696,25 @@ Examples are "Madam, I'm Adam." and "Able was I 'ere I saw Elba."
 ``IsPalindrome`` can be written very concisely by copying and using
 functions from previous exercises.
 
+.. index:: exercise; nested play computer
 
+Nested Play Computer Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Predict what these code fragment prints.  Then check yourself in csharp::
+
+    for (int i = 3; i > 0; i--) {
+        for (int j = i; j < 4; j++) {
+            Console.Write(j);
+        }
+        Console.WriteLine();
+    }
+        
+    string s = "abcdef";    
+    for (int i = 1; i < s.Length; i += 2) {
+        for (int k = 0; k < i; k++) {
+            Console.Write(s[i]);
+        }
+    }
+    
+    
