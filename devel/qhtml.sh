@@ -1,1 +1,1 @@
-sh makehtml.sh default nocron
+sh makehtml.sh bootstrap nocron

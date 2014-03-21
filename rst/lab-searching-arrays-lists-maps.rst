@@ -95,13 +95,15 @@ some code to run the various experiments and then run for varying sizes of ``n``
 The stub file is :repsrc:`performance_lab_stub/performance_lab.cs`.
 
 Recreate example project performance_lab_stub in your solution as performance_lab,
-so you have your own copy to modify.  You will need to copy into the
-lab project the file :file:`sorting.cs` from the example sorting project, and the file 
-:file:`searching.cs` from the linear searching project, and the file 
-:file:`binary_searching.cs` from the binary searching project.
-(An alternative is to recreate their whole projects, 
-and reference them from the lab 
-project.)
+so you have your own copy to modify.  You can either 
+
+* copy into the
+  lab project the files :repsrc:`sorting/sorting.cs`,  
+  :repsrc:`searching/searching.cs`, and 
+  :repsrc:`binary_searching/binary_searching.cs`.  If you copy them into the lab 
+  project, rename the  :file:`binary_searching.cs`  Main method to something else.
+* An alternative is to recreate their whole projects, 
+  and *reference* them from the lab project.
 
 Here is the code for the first experiment, to test the performance of linear
 searching on integer arrays:
@@ -145,38 +147,44 @@ method to search.
 The list and set are directly initialized in their constructors from the
 array data.  (More on that in later chapters.)
 
-You need to fill in the ``Main`` method:
+You need to fill in the ``Main`` method.
+The stub already has code to generate a random value for the ``seed`` for 
+any run of the program.
 
 #. Write the code to parse command line ``args`` for the parameters ``rep`` 
    and *any number* 
    of values for ``n``.  For instance:
    
-      mono PerformanceLab.exe 50 1000 10000 100000
+      mono PerformanceLab.exe 50000 1000 10000 100000
 
-   would generate the table shown below for 50 repetitions 
+   would generate the table shown below for 50000 repetitions 
    for each of the values of ``n``: 1000,
    10000, and 100000.
    
 #. Write the code to run each of the experiments for ``rep`` and a given value of ``n``.
 
 #. Iterate through the values of ``n`` and print a nice right-justified table,
+   with a title including the number of repetitions,
    something like the following, with the number of seconds calculated.
    Experiment and adjust the repetitions *to get perceptible values*.  
-   Our choice of 50 may not be appropriate with these ``n`` values.  ::
+   Our choice of 50000 may not be appropriate with these ``n`` values.  
 
-           n   rep     linear      list  binary     set
-        1000    50   ????.???  ????.???  ??.???  ??.???
-       10000    50   ????.???  ????.???  ??.???  ??.???
-      100000    50   ????.???  ????.???  ??.???  ??.???
+   .. code-block:: none
+   
+     Times in seconds with 50000 repetitions
+            n    linear      list  binary     set
+         1000  ????.???  ????.???  ??.???  ??.???
+        10000  ????.???  ????.???  ??.???  ??.???
+       100000  ????.???  ????.???  ??.???  ??.???
   
    The table would be longer if more values of n were entered on the command line.
    Note that the experiments return times in milliseconds, (1/1000 of a second)
    while the table should print times in *seconds*.
   
-   You will need a very large number of repetitions to show anything 
+   *You will need a very large number of repetitions* to show anything 
    above 0 for the fastest searches!
    Because the range of speeds is so enormous, make an accommodation with the 
-   slow linear versions:  If ``rep >= 100`` and ``(long)n*rep  >= 100000000``, then, 
+   slow linear versions:  If ``rep >= 100`` and ``(long)n*rep >= 100000000``, then, 
    for the linear and list columns *only*, time with ``rep2 = rep/100`` instead of ``rep``, 
    and then compensate by multiplying the time by ``(double)rep/rep2`` to produce
    the final table value.
@@ -184,12 +192,13 @@ You need to fill in the ``Main`` method:
    is not just 100, since the integer division creating ``rep2`` may not be exact.)  
    
    Show your TA a run with a table with at least three lines of data and with n 
-   being successive powers of 10, and non-zero entries everywhere.
+   being successive powers of 10, and *non-zero entries everywhere*.
    
 Once again, you are encouraged to develop this is steps, for example
 
 #. Make sure you can parse the command line parameters.
-#. Print out one test for one rep, n.
-#. Print out the results for all tests for one rep, n
-#. Make the printing be formatted for the columns
+#. Print out one linear test for ``rep`` and one value of ``n``.
+#. Print out the results for all tests for ``rep`` and one value of ``n``.
+#. Make the printing be formatted for the columns.
+#. Add the modification for large ``rep*n``.
 #. The full program, for all n.
