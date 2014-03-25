@@ -120,7 +120,10 @@ There are two downloads to get and install in order. Mono first:
    later, though preferably 3.2.4 or later. Choose the MRE version.
    It installs directly. Administrative privileges are required to run the
    installer, so if you do not know this information, please stop
-   here.   
+   here.  
+   
+   Do *not* download Xamarin Studio from this site.  
+   This version of Xamararin Studio bugs you with emails.
 
 Here is how to do a quick sanity check of your Mono setup:
 
@@ -148,8 +151,10 @@ Xamarin Studio Installation - OSX
 
 #. Make sure Mono is installed first. 
 
-#. Now go to <http://monodevelop.com> (not Xamararin for the open source version).
-   This link appears on the Mono page, too.
+#. Now go to http://monodevelop.com.  **Note**:  Do *not* use a version
+   that is linked to the
+   mono-project.com site.  Getting the suggested open-source version
+   from http://monodevelop.com should not lead to a prompt for your email address....
 
 #. As with Mono, we need to look for the downloads link. 
    You should download the *stable* version.
@@ -157,7 +162,7 @@ Xamarin Studio Installation - OSX
 #. For OS X, the Xamarin Studio SDK is distributed as a DMG disk image. You'll need
    to download this image and double-click it. Open the image and run
    the installer. Administrative privileges are required to run the
-   installer.   
+   installer.  
 
 #. This time, you will see an App for Xamarin Studio, 
    which you can drag and drop into the Applications folder.
@@ -225,7 +230,10 @@ Xamarin Studio Installation - Windows
 
 #. Have Mono installed first. 
    
-#. Now go to <http://mono-develop.com>.  
+#. Now go to http://monodevelop.com.  **Note**:  Do *not* use a version
+   that is linked to the
+   mono-project.com site.  Getting the suggested open-source version
+   from http://monodevelop.com should not lead to a prompt for your email address....
 
 #. As with Mono, we need to look for the downloads link, click on the Windows icon.
    You should
