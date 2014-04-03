@@ -26,6 +26,9 @@ by Niklaus Wirth [WirthADP]_, who invented the Pascal language. (We have also ad
 some examples from Thomas W. Christopher's [TCSortingJava]_ animated sorting algorithms
 page.
 
+.. index:: exchanging array elements
+   array; exchange elements
+   
 Exchanging Array Elements
 -----------------------------
 
@@ -244,11 +247,29 @@ number of *exchanges* is O(N). The comparisons are a non-trivial cost,
 however, and do show
 in our own performance experiments with randomly-generated data. 
 
+.. index:: Shuffle exercise
+   exercise; Shuffle
+   
+Shuffle Exercise
+~~~~~~~~~~~~~~~~~
+
+Complete the ``Shuffle`` function and add a ``Main`` method to test it::
+
+    /// Shuffle the elements of an array into random positions, 
+    /// changing the array.  An array containing 
+    /// 2, 5, 7, 7, 7, 9 *might* end up in the order 
+    /// 7, 7, 2, 9, 7, 5.
+    static void Shuffle(int[] a)
+
+Use a Random and do something close to a reverse of selection sort, using 
+``Exchange`` with a random position.
+
 .. index:: sorting; insertion sort
    algorithms; insertion sort
    nested loop
    insertion sort
-   
+
+
 Insertion Sort
 --------------
 
