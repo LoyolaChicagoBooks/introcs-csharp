@@ -327,6 +327,8 @@ The literals are ``'\''`` and ``'\n'`` respectively.
 Be careful to distinguish a ``char`` literal like ``'A'`` 
 from a string literal ``"A"``.
 
+.. index:: Unicode
+
 .. _integer-char:
 
 **Char as integer**:  Though the ``char`` type has character literals 
@@ -336,6 +338,12 @@ with the correspondence
 between numeric codes and characters given by the *Unicode* standard.  
 Unicode allows special symbol characters and alphabets of many languages.  
 We will stick to the standard American keyboard for these characters.
+
+Besides different alphabets, Unicode also has characters for all sorts of 
+symbols: emoticons, chess pieces, advanced math....  See 
+http://www.unicode.org/charts.  All the symbols can be represented as escape 
+codes in C#, starting with ``\u`` followed by 4 hexadecimal digits.  For example
+``\u262F`` produces a yin-yang symbol.
 
 We mention the ``char`` type being numeric mostly because of errors 
 that you can make that would otherwise be hard to figure out.  This code does
