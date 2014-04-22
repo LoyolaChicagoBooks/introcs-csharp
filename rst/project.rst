@@ -300,15 +300,6 @@ These materials should be placed in a subfolder **Intermediate**
 of your team project folder.
 See the due date in the schedule.
 
--  Include parts 2-4 listed below under Final Deliverables, but for an
-   intermediate version that runs, and does *not* need to have the goal
-   working yet. Have documentation of your methods, including summary description
-   and description of parameters and return values. 
-   If for some reason you do not have all the documentation that you were encouraged
-   to write *first*, at least be sure to have and point out significant examples of your
-   clear documentation of purpose, parameters, and return values.  
-   This allows instructor feedback
-   for completing the rest.
 -  Copy the linked stub of 
    `projectPlans.rtf <http://anh.cs.luc.edu/170/examples/projectPlans.rtf>`_ document.
    Then complete it:
@@ -324,6 +315,16 @@ See the due date in the schedule.
       some were done).
    -  Where are you planning to go from here, and who you envision being
       primarily responsible for different parts?
+
+-  Include parts 2-4 listed below under Final Deliverables, but for an
+   intermediate version that runs, and does *not* need to have the goal
+   working yet. Have documentation of your methods, including summary description
+   and description of parameters and return values. 
+   If for some reason you do not have all the documentation that you were encouraged
+   to write *first*, at least be sure to have and point out significant examples of your
+   clear documentation of purpose, parameters, and return values.  
+   This allows instructor feedback
+   for completing the rest.
 
 -  The idea is to have everyone get an idea of what is expected, so we
    have no misunderstandings about the final version. We will give you
