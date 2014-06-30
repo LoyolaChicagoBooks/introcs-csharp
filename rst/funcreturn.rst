@@ -134,7 +134,8 @@ In general functions should do a single thing.
 You can easily combine a sequence of functions, and you have more
 flexibility in the combinations
 if each does just one unified thing.  The function
-SumProblem in :repsrc:`addition1/addition1.cs` does two thing:  It creates a sentence,
+SumProblem in :repsrc:`addition1/addition1.cs` does two thing:  
+It creates a sentence,
 and prints it.  If that is all you have, you are out of luck if you want
 to do something different with the sentence string.  A better way is
 to have a function that just creates the sentence, and returns it for

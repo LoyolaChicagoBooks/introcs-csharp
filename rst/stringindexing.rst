@@ -55,3 +55,15 @@ C# does not allow the typography for normal mathematical subscripts, like :math:
 There is a correspondence with index notation, so ``s[2]`` is
 sometimes spoken as "s sub 2".  The indices are sometimes referred to as 
 *subscripts*.
+
+In this introduction, we have used literal integers for the subscripts. 
+The most common situation in practice is to have a variable as the
+subscript, or an expression.  An expression inside square braces is always 
+evaluated to find the resulting index:: 
+
+   csharp> string s = "coding";
+   csharp> int n = 3;
+   csharp> s[n-1];
+   'd'
+
+When we get to loops, we will find this is useful.

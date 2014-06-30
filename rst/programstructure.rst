@@ -157,3 +157,106 @@ and the errors' relation to the error messages that you get.
    thoroughly to reduce the chance of *logical* errors remaining, that
    cause *run-time* errors, or just the wrong results.
  
+.. index:: sequential execution order
+   execution; sequential order
+   playing computer
+ 
+.. _sequential-execution:
+     
+Sequential Execution
+----------------------
+
+A function like ``Main`` involves a sequence of statements to execute.
+The basic sequence of execution is *sequential*: 
+first statement, then second, ....
+This is the same as the *textual order*, so it is easy to follow.  Later in
+:ref:`Defining-Own-Functions`, :ref:`If-Statements`, and :ref:`While-Loops`,
+we will see more complicated 
+execution sequences that do *not* match textual order.
+Whatever the order of execution given by the program, it is important to
+always keep track of the current state of the program: where we are and
+what are the values of variables. 
+
+For now consider a small, 
+artificial example program,
+:repsrc:`update_vars/update_vars.cs`,
+emphasizing the ability to *reassign* variable values. 
+ 
+.. literalinclude:: ../source/examples/update_vars/update_vars.cs
+   :linenos:
+       
+Can you *predict* the result? Run the program and check.
+Particularly if you did not guess right, it is important to
+understand what happens, one step at a time. That means keeping
+track of what changes to variables are made by each statement.
+
+In the table below, statements are referred to by the numbers labeling
+the lines in the code above. We can track the state of each
+variable after each line is executed. A dash is shown where a
+variable is not defined. For instance after line 7 is executed, a
+value is given to x, but y is still undefined. Then y gets a value
+in line 8. 
+The comment space can be used any time
+it is helpful.  If should be used in particular when something
+is printed, since this
+important action does not affect the variable list.
+
+====  ==  ==  =======================================
+Line  x   y   Comment
+====  ==  ==  =======================================
+5     \-  \-  Start at beginning of Main
+7     3   \-  initialize x
+8     3   5   5=3+2, using the value of x from the previous line
+9     3   10  10=2*5 on the right, use the value of y from the
+              previous line
+10    7   10  7=10-3 on the right, use the value of x and y from the
+              previous line
+11    7   10  print: 7 10
+====  ==  ==  =======================================
+
+The critical point here is to always use the most recently assigned value
+of each variable.
+
+The order of execution will always be the order of the lines in our
+table. In this simple *sequential* code, that *also* follows the
+textual order of the program. 
+
+Following each line of execution of a
+program in the proper order of execution, carefully, 
+keeping track of the current values of
+variables, will be called *playing computer*. A table like the one
+above is an organized way to keep track.
+
+The line numbering is not very exciting in a simple sequential program,
+but it will become very important when we get to other execution sequences.
+We start with the simple sequential numbering now for consistency, as
+we get used to the idea of such a table following execution sequence.
+
+.. index::  playing computer exercise
+   exercise; playing computer
+
+.. _playing-computer-exercise:
+   
+Play Computer Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here is a similar program,
+:repsrc:`update_vars2/update_vars2.cs`:
+ 
+.. literalinclude:: ../source/examples/update_vars2/update_vars2.cs
+   :linenos:
+
+Play computer, completing the table
+
+====  ==  ==  =======================================
+Line  a   b   Comment
+====  ==  ==  =======================================
+5     \-  \-  Start at beginning of Main
+7     5   \-  initialize a
+8     
+9     
+10    
+11    
+12    
+====  ==  ==  =======================================
+

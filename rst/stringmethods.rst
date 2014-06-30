@@ -145,3 +145,20 @@ Remember that kernel.
 With strings you can: 
 Index characters, find a part; extract a part; convert case; determine length.  
 These may not be evocative phrases for you.  Find your own. 
+
+When we get to loops, we will find this is useful.
+
+Here is a brief example of a function using several of these methods,
+
+:repsrc:`parenthesized/parenthesized.cs`: 
+ 
+.. literalinclude:: ../source/examples/parenthesized/parenthesized.cs
+   :linenos:
+ 
+It is a silly assumption, but until we get to :ref:`If-Statements`, 
+we will have to assume there *is*
+a parenthesized expression in the parameter string.
+
+Make sure you understand how the function works.  Perhaps play computer.
+
+

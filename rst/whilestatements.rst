@@ -60,20 +60,15 @@ execution follows sequentially after a loop completes.
 It is extremely important to totally understand how the flow of
 execution works with loops.  One way to follow it
 closely is to make a table with a line for each instruction
-executed, keeping track of all the variables.  We call this
-*playing computer*.
+executed, keeping track of all the variables, playing computer.  
+This will be different than when playing computer in
+:ref:`sequential-execution`, since lines will be repeated in the loop, 
+with different
+variable values each time.  The
+sequence of executed lines in the table will *not* be totally in 
+source code *textual* order!
 
-Each row in the code sample above 
-shows the line number of the start of the next instruction
-executed, and the values of all the variables *after* the instruction
-is executed.  The important thing to see with loops is that the same
-line can be executed over and over, but with different variable
-values.  We leave a column for the line number, each variable
-that is involved (particularly any that change) and a place for
-comments about what is happening.  The comment line can be used any time
-it is helpful.  If should be used in particular when something
-is printed and when something is returned, since neither of these
-important actions appear in the variable list.
+
 
 .. index:: 
    double: while; execution sequence
@@ -169,7 +164,7 @@ carefully, one step at a time.
 Check yourself by running the example program 
 :repsrc:`test_while2/test_while2.cs`.
 
-The sequence order is important. The variable ``i`` is increased before
+The line sequence is important. The variable ``i`` is increased before
 it is printed, so the first number printed is 6. Another common
 error is to assume that 10 will *not* be printed, since 10 is
 *past* 9, but the test that may stop the loop is *not* made in the
@@ -255,6 +250,8 @@ but the simple examples so far get us started.
 
 .. index:: while; questions for planning
    loop; questions for planning
+
+.. rubric:: Loop Planning Rubric
    
 Looking ahead to more complicated and interesting problems,
 here is a more complete list of questions to ask yourself when
