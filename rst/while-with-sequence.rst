@@ -418,6 +418,32 @@ and you know the final answer for your function as soon as you find it.
    the sum expression to be an ``int``, which must be cast back to a ``char`` to be
    assigned to ``c``.  Similarly with the ``--`` operator.
 
+.. index:: playing computer; loop
+   loop; playing computer
+   
+.. rubric:: Play Computer With a Loop
+
+We have not given you a chance to play computer with a loop.  Here is
+some simple silly code,
+:repsrc:`loop_steps/loop_steps.cs`,
+also using a sequence: 
+ 
+.. literalinclude:: ../source/examples/loop_steps/loop_steps.cs
+   :linenos:
+
+Play computer, completing the table.  You fill in the line numbers,
+carefully.  The sequence is *not* 9, 10, 11, 12, 13!
+
+====  ==  =======================================
+Line  i   Comment
+====  ==  =======================================
+5     \-  Start at beginning of Main
+7         set s = "abcd" (does not change)
+8     1   initialize i
+...
+====  ==  =======================================
+
+
 .. [#boolassign]
 
    The Boolean assignment did not work when ``allDigitsSoFar`` was already
