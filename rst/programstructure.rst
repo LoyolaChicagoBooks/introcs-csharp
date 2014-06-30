@@ -232,7 +232,7 @@ but it will become very important when we get to other execution sequences.
 We start with the simple sequential numbering now for consistency, as
 we get used to the idea of such a table following execution sequence.
 
-.. index::  playing computer exercise
+.. index::  playing computer; exercise
    exercise; playing computer
 
 .. _playing-computer-exercise:

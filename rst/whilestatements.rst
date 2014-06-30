@@ -41,6 +41,8 @@ Setting up the English example in a similar format would be:
     |     add a chip of ice 
     | }
 
+.. index:: playing computer; loop
+
 To make things concrete and numerical, suppose the following: The
 tea starts at 115 degrees Fahrenheit. You want it at 112 degrees. A
 chip of ice turns out to lower the temperature one degree each

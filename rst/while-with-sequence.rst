@@ -386,6 +386,31 @@ Returning out of a loop
 is a good pattern to remember when you are searching for something, 
 and you know the final answer for your function as soon as you find it.
 
+.. index:: playing computer; loop
+   loop; playing computer
+   
+.. rubric:: Play Computer With a Loop
+
+We have not given you a chance to play computer with a loop.  Here is
+some simple silly code,
+:repsrc:`loop_steps/loop_steps.cs`,
+also using a sequence: 
+ 
+.. literalinclude:: ../source/examples/loop_steps/loop_steps.cs
+   :linenos:
+
+Play computer, completing the table.  You fill in the line numbers,
+carefully.  The sequence is *not* 9, 10, 11, 12, 13!
+
+====  ==  =======================================
+Line  i   Comment
+====  ==  =======================================
+5     \-  Start at beginning of Main
+7         set s = "abcd" (does not change)
+8     1   initialize i
+...
+====  ==  =======================================
+
 .. [#plusplustype]
 
    To be complete, the statements ``c = c + 1;`` and ``c++;`` are not always 
@@ -418,30 +443,6 @@ and you know the final answer for your function as soon as you find it.
    the sum expression to be an ``int``, which must be cast back to a ``char`` to be
    assigned to ``c``.  Similarly with the ``--`` operator.
 
-.. index:: playing computer; loop
-   loop; playing computer
-   
-.. rubric:: Play Computer With a Loop
-
-We have not given you a chance to play computer with a loop.  Here is
-some simple silly code,
-:repsrc:`loop_steps/loop_steps.cs`,
-also using a sequence: 
- 
-.. literalinclude:: ../source/examples/loop_steps/loop_steps.cs
-   :linenos:
-
-Play computer, completing the table.  You fill in the line numbers,
-carefully.  The sequence is *not* 9, 10, 11, 12, 13!
-
-====  ==  =======================================
-Line  i   Comment
-====  ==  =======================================
-5     \-  Start at beginning of Main
-7         set s = "abcd" (does not change)
-8     1   initialize i
-...
-====  ==  =======================================
 
 
 .. [#boolassign]
@@ -453,6 +454,7 @@ Line  i   Comment
    ``allDigitsSoFar = allDigitsSoFar  && (s[i] < '0' || s[i] > '9');``
    
    This way, once ``allDigitsSoFar`` is ``false``, it stays ``false``.
+
 
 Exercise
 -----------
@@ -468,4 +470,6 @@ and write and test a function with the documentation and heading below::
    /// HasDoubleChar("bigfoot") and HasDoubleChar("aaah!") are true; 
    /// HasDoubleChar("treated") and HasDoubleChar("haha!") are false.
    static bool HasDoubleChar(string s)
+   
+   
    
