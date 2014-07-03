@@ -20,8 +20,8 @@ if you defined
 
    F(x)=x\ :sup:`2`
 
-then it follows that F(3) is 3\ :sup:`2`, and F(3)+F(4) is
-3\ :sup:`2` + 4\ :sup:`2`
+then it follows that F(3) is 3\ :sup:`2` = 9, and F(3)+F(4) is
+3\ :sup:`2` + 4\ :sup:`2` = 9 + 16 = 25.
 
 Function calls in expressions get
 replaced during evaluation by the value of the function.

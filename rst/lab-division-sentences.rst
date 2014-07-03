@@ -27,10 +27,14 @@ access to storage and peripherals, such as consoles (graphical displays),
 printers, and the network. We already got a glimpse of this access
 when we explored ``Console.WriteLine`` in the first lab exercise.
 
-So in this lab, we're going to explore the use of C# as a
-calculator. We're going to begin by looking at the **csharp** command. 
-Then we will take what we've learned in this session and use it
-to write a full program.
+We have discussed all the syntax and concepts needed in recent sections
+on :ref:`arithmetic`, :ref:`Variables-and-Assignment`,
+:ref:`io`, and :ref:`cast`.  Also you can make things easier for yourself using
+:ref:`substitution-in-writeline` to format output.
+
+Before writing your final program, you might like to review some of 
+the parts, testing in the :ref:`csharp` program, so you get immediate feedback
+for the calculations.
 
 Requirements
 ------------
@@ -56,76 +60,31 @@ labeled format:
    Please enter the denominator? 4
    Integer division result = 3 with a remainder 2
    Floating point division result = 3.5
-   Result as a mixed fraction = 3 2/4
+   The result as a mixed fraction is 3 2/4.
 
 For this lab the example format ``3 2/4`` is sufficient.
 It would look better as ``3 1/2``, but a general 
 efficient way to reduce fractions to
 lowest terms is not covered until the section on the algorithm :ref:`gcd`.  
 
-So let's get this party started by firing up the **csharp**
-command, as introduced in :ref:`csharp` and continued later with
-:ref:`more csharp <more-csharp>`.  We can illustrate some of the ideas
-for this lab:
+To do the part requiring a decimal quotient you are going to need to have a 
+``double`` value, though your original data was of type ``int``.
+You could use the approach in :ref:`cast`, with an explicit cast.
+Another approach mentioned in that section was to do the cast implicitly
+in a ``double`` declaration with initialization from an ``int``.  If we
+already had ``int`` variables, ``numerator`` and 
+``denominator``, that were previously assigned their values, 
+we could use::
 
-.. code-block:: none
+    double numeratorDouble = numerator; // implicit cast
+    double quotientDouble = numeratorDouble/denominator;
+    ...
 
-    csharp> Console.WriteLine("Please enter the numerator?");
-    Please enter the numerator?
-    csharp> string input = Console.ReadLine();
-    25
-    csharp> int numerator = int.Parse(input);
-    csharp> Console.WriteLine(numerator);
-    25
-
-Now let's practice using the C# operators of :ref:`Division-and-Remainders`::
-
-    csharp> int quotient = numerator / denominator;
-    csharp> Console.WriteLine(quotient);
-    3
-    csharp> int remainder = numerator % denominator;
-    csharp> Console.WriteLine(remainder);
-    2
-    csharp> Console.WriteLine("{0} / {1} = {2} with a remainder {3}", 
-          > numerator, denominator, quotient, remainder);
-    14 / 4 = 3 with a remainder 2
-
-
-In the above, we are also practicing using a :ref:`Format-Strings` 
-with ``Console.WriteLine``. 
-
-You may find this example to be helpful to print the output according
-to the final lab requirements::
-
-    14 / 4 = 3 2/4
-
-Now let's take a look at how we can get the results as a real number, not
-necessarily an integer. Here is a variation on the approach in :ref:`cast`.
-We do this by declaring a couple of ``double``  
-variables to hold each of the numerator and
-denominator integers. Then we will declare a variable to capture the
-result of the floating point division operation.  We named each of the
-floating-point variables with the number 2 in the name as C# permits
-variable names that have numbers and underscores after the first
-character (which must be a *letter* or an *underscore*):
-
-.. code-block:: none
-
-    csharp> double numerator2 = numerator;
-    csharp> double denominator2 = denominator;
-    csharp> double quotient2 = numerator2/denominator2;
-    csharp> Console.WriteLine(quotient2);              
-    3.5
-    csharp> Console.WriteLine("{0} / {1} = {2} remainder {3}", 
-          >                   numerator, denominator, quotient, remainder);
-    14 / 4 = 3 remainder 2
-    csharp> Console.WriteLine("{0} / {1} = {2} approximately", 
-          >                   numerator2, denominator2, quotient2);
-    14 / 4 = 3.5 approximately
-
-We have shown everything you need to understand to
-complete this lab. To help you
-get started, we provided this simple *stub* in the example file
+Remember: at least operand in a quotient must be double to get a double result.
+    
+To help you
+get started with your program code, 
+we provided this simple *stub* in the example file
 :repsrc:`do_the_math_stub/do_the_math.cs`. 
 You are encouraged to copy this into your own project as reviewed 
 after the lab in :ref:`xamarinstudio-reminders`.
@@ -189,8 +148,9 @@ mess up here.  We emphasize them and mention fixes if you make the easy mistakes
 #.  Another common error is to proceed like with most text processors, 
     and open the top File menu,  
     and choose to open and edit a new file for your program.  
-    *You cannot run this program from Xamarin Studio.*  
-    If you have a separate project set up, 
+    *You cannot** *run* **this program from Xamarin Studio.**  
+    The file you edit must show in the solution pad in Xamarain Studio, as
+    a source file in your project.  If you have a separate project set up, 
     but without this file or any other showing in the Solutions pad, an attempt to
     run the project with say no ``Main`` method (in fact no program at all). 
     The fix:

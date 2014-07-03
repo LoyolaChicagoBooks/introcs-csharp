@@ -31,7 +31,10 @@ Consider the following silly function description and heading as a start:
 
 We are accessing one character at a time.  We can do that with
 the indexing notation.  Thinking concretely about the example above,
-we are looking to print, ``s[0]``, ``s[1]``, ``s[2]``.
+we are looking to print, ``s[0]``, ``s[1]``, ``s[2]``.  If
+we knew we would always have three characters, we could do this
+with three explicit print statements, but we are looking to write a general
+definition for an arbitrary length string:
 This requires a loop.  
 For now our only option is a ``while`` loop.  We can follow 
 our basic rubric, one step at a time:
@@ -119,7 +122,7 @@ For instance PrintVowels("computer") would print:
 We have seen that we can go through the whole string and do the same
 thing each time through the loop, using ``s[i]`` in some specific way.
 
-This new description seems like a problem.  We do *not* appear to want to do
+This new description seems problematic.  We do *not* appear to want to do
 the same thing each time:  We only want to print *some* of the 
 characters.  Again your eyes and mind are so fast, you likely miss what you
 need to do when you go through ``PrintVowels`` by hand.  Your
@@ -132,10 +135,10 @@ and printing it if it is:  You are doing the same thing each time -
        print s[i]
     }
 
-We do want to do this each time through the loop.  We *can* use 
+We *do* want to do this each time through the loop.  We *can* use 
 a ``while`` statement.
 
-Next problem:  convert the pseudocode "s[i] is a vowel" to C#.
+Next task:  convert the pseudocode "s[i] is a vowel" to C#.
 
 There are multiple approaches.  The one you get by following your
 nose is just to consider all the cases where it is true::
@@ -157,7 +160,7 @@ That has a long condition!  Here is a nice trick to shorten that:
 We want to check if a character is in a group of letters.  We have
 already seen the string method IndexOf.  Recall we can use it to see if
 a character is in or not in a string.  We can use ``"aeiou".IndexOf(s[i])``.
-We do not care where ``s[i]`` comes in the string of vowels.  
+We do not care *where* ``s[i]`` comes in the string of vowels.  
 All we care is that ``"aeiou".IndexOf(s[i]) >= 0``.
 
 .. index:: string; Contains
@@ -287,16 +290,15 @@ A *much* more concise and still equivalent initialization is just::
     
 In more generality this 
 conciseness comes from the fact that it is a *Boolean* value that
-you are trying to set, based on a *Boolean* condition:  You do not
+you are trying to set each time, based on a *Boolean* condition:  You do not
 need to do that with an ``if`` statement!  You just need an 
-assignment statement!  If you use an ``if`` statement in such a situation,
-you being verbose and marking yourself as a novice.
+assignment statement.  If you use an ``if`` statement in such a situation,
+you being verbose and marking yourself as a novice!
 
 It could even be slightly more concise:  The precedence of assignment is
 very low, lower than the comparison ``>``, 
 so the parentheses could be omitted.  We think the
-code is easier to read with the parentheses left in, as written above,
-and below.
+code is easier to read with the parentheses left in, as written above.
 
 The whole function would be:
 
@@ -333,7 +335,7 @@ to ``false`` *some* of the time: when we had *not* found a digit.  The bad code
 sets the variable for *each* character in the string, 
 so it can change an earlier ``false`` value back to ``true`` for a later digit.
 The final value
-always comes from the the *last* character in the string.  We want the
+always comes from the the *last* character in the string!  We want the
 function to come up with an answer ``false`` if *any* character is not a digit,
 not just the last character.  The bad code would give the wrong answer
 with the string "R2D2".  If you do not see that, play computer with this string

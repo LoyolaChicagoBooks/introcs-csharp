@@ -177,6 +177,15 @@ Try adding a reference yourself.  Follow these instructions:
 #.  Create another regular Console project, addition3, in your *same* solution, 
     and copy in our :repsrc:`addition3/addition3.cs`, so that is the only file.
     
+    .. warning::
+       Xamarin Studio remembers the last kind of project you created.
+       That is fine when you are creating a sequence of Console projects.
+       However, if you have just explicitly chosen to create a library 
+       project, the default for your next project will also be library,
+       and really mess up your next Console project.  Fix such an error
+       after the fact as in the first 
+       entry in :ref:`xamarinstudio-reminders`. 
+    
 #.  In the Solutions pad, in your addition3 project,
     click on the References entry just inside the project.
     You should see that the project is automatically set up to reference System.

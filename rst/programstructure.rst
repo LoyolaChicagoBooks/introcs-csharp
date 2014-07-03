@@ -167,12 +167,12 @@ Sequential Execution
 ----------------------
 
 A function like ``Main`` involves a sequence of statements to execute.
-The basic sequence of execution is *sequential*: 
+The basic order of execution is *sequential*: 
 first statement, then second, ....
 This is the same as the *textual order*, so it is easy to follow.  Later in
 :ref:`Defining-Own-Functions`, :ref:`If-Statements`, and :ref:`While-Loops`,
 we will see more complicated 
-execution sequences that do *not* match textual order.
+execution orders that do *not* match textual order.
 Whatever the order of execution given by the program, it is important to
 always keep track of the current state of the program: where we are and
 what are the values of variables. 

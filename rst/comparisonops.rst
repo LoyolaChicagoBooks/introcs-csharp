@@ -111,12 +111,12 @@ displaying decimal numbers:
 In the format string are ``{1:F2}`` and ``{2:F2}``:  Inside 
 the braces, after the parameter index, you see a new part,
 ``:F2``.  
-The part after the colon gives optional formatting information.
+The part after the colon gives additional formatting information.
 In this case display with the decimal point  
-fixed (hence the **f**) so  **2** places beyond the decimal
+fixed (hence the **F**) so  **2** places beyond the decimal
 point are shown.  Also the result is *rounded*.  
 This is appropriate for money with dollars and cents.  
-Replace the 2 to display
+You can replace the 2 to display
 a different number of digits after the decimal point.
 More formatting instructions will be discussed later. 
 

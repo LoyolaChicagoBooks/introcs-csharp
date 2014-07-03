@@ -34,7 +34,7 @@ are working on, with the other function calls commented out).
 
 Alternately practice using an Xamarin Studio library reference: 
 Create a new project in a solution 
-in which you already have added the ui library project.  Mkae the ui project 
+in which you already have added the ui library project.  Make the ui project 
 be a reference for the lab project. 
  
 Make sure your program has ``namespace IntroCS;`` to match the ui project. 
@@ -51,7 +51,8 @@ the project name for a namespace.  We are never going to use that.
    (anything else). 
   
    This may be the first time you write a conditional
-   statement. It makes sense to only make small changes at once and build
+   statement. (This needs the next chapter.)
+   It makes sense to only make small changes at once and build
    up to final code. First you might just code it to check if a sentence is
    declarative or not. Then remember you can test further cases with 
    ``else if (...)``.
@@ -67,9 +68,10 @@ the project name for a namespace.  We are never going to use that.
    so it also allows a single name without spaces,
    like "Socrates", and prints the original without change. If there are
    two parts of the name, it should work as in the original version.
+   (This needs the next chapter.)
 
 Run the program (with parts 1, 2 and 4 active)
 from a terminal window and show your TA when you are
 done.  You should run it twice to show off both paths through
-part 4.  Alternately have the main program just call part 4 twice.
+part 4.  Alternately have the main program just call part 4 twice!
 

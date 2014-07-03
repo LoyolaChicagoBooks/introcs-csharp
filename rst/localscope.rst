@@ -32,7 +32,9 @@ The compilation error that Mono gives is pretty clear:
 
     The name 'x' does not exist in the current context.
 
-The context for ``x`` is the function ``F``, not ``Main``.
+The the error occurs in the function ``F``.  The *context* there just includes 
+the local variables already declared in ``F``.  And ``x`` is declared in  
+``Main``, not in ``F``, so it *does not exist* inside ``F``.
 We will fix this error below. 
 
 If you do want local data from one function to go to another,
@@ -43,9 +45,16 @@ compare and try the program :repsrc:`good_scope/good_scope.cs`:
 
 With parameter passing, the parameter name ``x`` in the function
 ``F`` does not need to match the name of the actual parameter in
-the calling function ``Main``. The definition of ``F`` could just as well have been::
+the calling function ``Main``. (Just the ``int`` value is passed.) 
+The definition of ``F`` could just as well have been::
 
    static void F(int whatever)
    {
       Console.WriteLine(whatever);
    }
+   
+.. warning::
+   It is a very common error to declare a variable in one function
+   and try to use it by name in a different function.  If you get
+   an error about a variable not existing, look to see where it was
+   declared (or if you remembered to declare it at all)!

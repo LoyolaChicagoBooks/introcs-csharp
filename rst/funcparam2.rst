@@ -9,9 +9,10 @@ Multiple Function Parameters
 A function can have more than one parameter in a parameter list.  The 
 list entries are
 separated by commas. Each formal parameter name is preceded by its type.
-For example the example program :repsrc:`addition1/addition1.cs` 
+The example program :repsrc:`addition1/addition1.cs` 
 uses 
-a function, ``SumProblem``,  to make it easy to display many sum problems. Read and
+a function, ``SumProblem``,  with two parameters
+to make it easy to display many sum problems. Read and
 follow the code, and then run:
 
 .. literalinclude:: ../source/examples/addition1/addition1.cs
@@ -62,9 +63,9 @@ Quotient Function Exercise
 Modify :file:`quotient_format.cs` from
 :ref:`QuotientFormat` and save it
 as ``quotient_prob.cs``.
-You should create a function ``QuotientProblem`` with int
+You should create a function ``QuotientProblem`` with ``int``
 parameters.  Like in the earlier versions, it should print a full
-sentence with inputs, quotient, and remainder.
+sentence with inputs, integer quotient, and remainder.
 ``Main``
 should test the ``QuotientProblem`` function
 on several sets of literal values, and also test the function with

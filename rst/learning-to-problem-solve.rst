@@ -7,7 +7,7 @@ Learning to Solve Problems
 ==================================
 
 This section might have been placed earlier, 
-but by placing it here, 
+but from reading all the way to here, 
 you should realize that you will have a *lot* of data and concepts to deal with.
 
 The manner in which you deal with all the data and ideas is very important 

@@ -35,7 +35,7 @@ after the condition, so the syntax will actually be:
     |    statement(s)
     | ``}``
 
-Setting up the English example in a similar format would be:
+Setting up the English example as pseudocode in a similar format would be:
 
     | while ( *your tea is too hot* ) { 
     |     add a chip of ice 
@@ -259,20 +259,23 @@ Looking ahead to more complicated and interesting problems,
 here is a more complete list of questions to ask yourself when
 designing a function with a ``while`` loop:
 
--  What variables do we need?
+-  What data is involved? Make sure you give good variable names.?
 -  What needs to be initialized and how? This certainly includes any
    variable tested in the condition.
--  What is the condition that will allow the loop to continue?
+-  What is the condition that will allow the loop to *continue*?  It
+   may be easier to think of the condition that will *stop* the loop.
+   That is fine - but remember to *negate* it (with ``!``) to turn it
+   into a proper *continuation* condition.
 -  What is the code that should only be executed once? What action do I want to
-   repeat? Where does the repetition come in the overall sequence of
-   operations?
--  How do I write the action so I can modify it for the next time
-   through the loop?
+   repeat? 
+-  How do I write the repeating action so I can modify it for the next time
+   through the loop to work with new data?
 -  What code is needed to do modifications to make the same code work
    the next time through the loop?
 -  Have I thought of variables needed in the middle and declared them;
    do other things need initialization?
--  Will the continuation condition eventually fail?  *Be sure to think about this!*
+-  Will the continuation condition eventually fail?  
+   *Be sure to think about this!*
 -  Separate actions to be done once before the repetition (code before the
    loop) from repetitive actions (in the loop) from actions not repeated, but
    done after the loop (code after the loop). Missing this distinction
@@ -311,7 +314,7 @@ detailed sequence of steps like::
 You could put this in code directly for a specific sum, but if ``n`` is general,
 we need a loop, and hence we must see a *pattern* in code that we can repeat.
 
-Each of the second terms in the additions is a successive integer, 
+In each calculation the second term in the additions is a successive integer, 
 that we can generate.  Starting in the second line, the first number
 in each addition
 is the sum from the previous line.  Of course the next integer and the next
@@ -322,7 +325,7 @@ in the form::
 
     sum + i
 
-We need to remember that result, the new sum.  you might first think to introduce
+We need to remember that result, the new sum.  You might first think to introduce
 such a name::
 
     newSum = sum + i;
@@ -356,8 +359,8 @@ the idea of the next number in sequence::
    i = i + 1;
    
 What about ``sum``?  What was the ``newSum`` 
-on one time through the loop becomes the old or
-just plain ``sum`` the next time through, so we can make an assignment::
+on *one* time through the loop becomes the old or
+just plain ``sum`` the *next* time through, so we can make an assignment::
 
    sum = newSum:
    
@@ -366,8 +369,8 @@ All together we calculate the sum with::
    int sum = 1, i = 2;
    while (i <= n) {
       int newSum = sum + i;
-      i = i + 1;
       sum = newSum:
+      i = i + 1;
    }
    
 This exactly follows our general rubric, with preparation for the next time

@@ -174,7 +174,8 @@ A further advance would be a version that is complete
 in all ways, except we still assume ``target`` is in ``s``,
 but beyond that, do not assume what the three parameters are.
 
-Finally we should allow ``s`` to not contain ``target``.
+Finally we should allow ``s`` to not contain ``target``
+(though this requires the central idea of the next chapter).
 
 .. forclass
 
