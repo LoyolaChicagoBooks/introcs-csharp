@@ -100,6 +100,12 @@ You can try running my complete example program, :repsrc:`wages1/wages1.cs`,
 also shown below.  
 
 .. literalinclude:: ../source/examples/wages1/wages1.cs
+  
+.. index::
+   format; digits shown in string
+   precision; format with {:F#} 
+   digits formatted in string
+   single: :; string precision formatting
    
 This program also introduces new notation for 
 displaying decimal numbers:  
@@ -118,7 +124,7 @@ point are shown.  Also the result is *rounded*.
 This is appropriate for money with dollars and cents.  
 You can replace the 2 to display
 a different number of digits after the decimal point.
-More formatting instructions will be discussed later. 
+More formatting syntax is introduced in :ref:`tables`. 
 
 Below is an equivalent alternative version of the body of
 ``CalcWeeklyWages``, used in :repsrc:`wages2/wages2.cs`. It uses just one

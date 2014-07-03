@@ -110,8 +110,10 @@ used cards with each row of holes punched in them
 indicating which warp threads are raised and which lowered when a cross
 thread is woven in.  
 
-.. index:: bits and bytes
+.. index:: bit
+   byte
    binary number system
+   base 2
 
 In modern electronic computers the most basic bit of data 
 (actually called a *bit*) is held by two-state switches, often 

@@ -71,6 +71,8 @@ is the same as  ::
    table formatting
    example; power_table.cs
    power_table.cs example
+   right justification
+   justification; right
 
 .. _tables:
 
@@ -214,7 +216,7 @@ larger field width.
 
 .. index:: left justification
    format; left justification
-   justification
+   justification; left
    
 .. _left-justification:
    
