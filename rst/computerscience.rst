@@ -129,22 +129,25 @@ Computer hardware can only handle a limited number of bits at a time,
 and memory space is limited, so usually integers are stored in a limited
 space, like 8, 16, 32 or 64 bits.  
 We illustrate with the smallest, 8 bits, called a *byte*.  Since
-each bit has two possible states, 8 bits have :math:`2^8=256` possible states,
-and directly considered an binary numerals, represent 0 through :math:`2^8-1=255`.
+each bit has two possible states, 8 bits have :math:`2^8=256` possible states.
+Directly considered as binary numerals, they represent 0 through 
+:math:`2^8-1=255`.
 
 We also want to represent negative numbers, and have about half of the available
 codes for them.  An 8-bit signed integer in *twos complement* notation
 represents 0 through :math:`2^7-1` 
 just as the unsigned numbers do.  These are all the 8-bit codes with a leading 0.
 A negative number :math:`n` in the range :math:`-2^7=-128` through -1, 
-is represented by 
+is represented by what would be 
 the unsigned notation for :math:`n+2^8`.  These will be all the 
 8-bit codes with a leading 1.
 For example -3 is represented like unsigned 256 - 3 = 253: 11111101 in binary.
 
+.. index:: mantissa and exponent
+
 Limited precision approximation of real numbers are stored in something like
 scientific notation, except in binary,  roughly :math:`(m)2^e`,
-with a mantissa m and exponent e. Both e and m have
+with a mantissa m and exponent e (and a sign). Both e and m have
 fixed numbers of bits, so the limited options for the 
 mantissa restricts the *precision* of the numbers, and the limited options
 for the exponent restricts the *range*. Data on these limits for 
