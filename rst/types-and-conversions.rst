@@ -76,8 +76,10 @@ We will not further discuss or use types ``short`` or ``byte`` in this book.
 Here we will only use the integral types ``int`` and ``long``.
 
 .. index:: type; double
-   double
+   double type
    precision
+   float type
+   type; float
 
 .. _type-double:
    
@@ -150,6 +152,9 @@ due to limited precision.  These inaccuracies *still* happen silently.
 
 .. index::  numeric type range
    range of numeric types
+   byte type
+   short type
+   type; byte and short
    
 .. _numeric-type-limits:
 
@@ -244,7 +249,7 @@ fails if the the ``double`` happens to have an integer value:
     {interactive}(1,4): error CS0266: Cannot implicitly convert type 'double' to 'int'. 
     An explicit conversion exists (are you missing a cast?)
     
-If you really want to possibly lose precision and use a ``double`` to produce
+If you really want to possibly lose precision and convert a ``double`` to 
 an ``int`` result, you *can* do it, but you must be explicit, using a *cast*
 as the csharp error messages suggest. 
 
@@ -261,6 +266,8 @@ you really intend the conversion.  Look what is lost!  The cast does not
 *round* to the nearest integer, it *truncates* toward 0, dropping the fractional
 part, .7 here.
 
+.. index:: Round function
+
 Rounding is possible, but if you really want the ``int`` type, it takes two steps,
 because the function ``Math.Round`` does round to a mathematical integer, but leaves
 the type as ``double``!  To round ``d`` to an ``int`` result we could use:
@@ -273,7 +280,7 @@ the type as ``double``!  To round ``d`` to an ``int`` result we could use:
 
 You can also use an explicit cast from int to double.  This is generally not needed,
 because of the automatic conversions, but there is one place where it is 
-important:  If you want ``double`` division but have ``int`` parts.  Here is a 
+important:  if you want ``double`` division but have ``int`` parts.  Here is a 
 quick artificial test:
 
 .. code-block:: none
@@ -319,7 +326,7 @@ See the appendix :ref:`precedence`, listing all C# operations discussed in this 
 
 .. index:: type; char
    char
-   single: '_' for char literal
+   single: \; for char literal code
    
 .. _type-char:
 

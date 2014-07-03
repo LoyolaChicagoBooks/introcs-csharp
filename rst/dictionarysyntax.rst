@@ -84,7 +84,7 @@ Here is a longer csharp sequence, broken up with our comments:
     uno, dos, tres...
 
 .. index:: dictionary; Keys
-   Keys
+   Keys property
 
 If you want to iterate through a whole ``Dictionary``, you will want the syntax below,
 with ``foreach`` and the property ``Keys``:
