@@ -80,7 +80,8 @@ we could use::
     double quotientDouble = numeratorDouble/denominator;
     ...
 
-Remember: at least operand in a quotient must be double to get a double result.
+Remember: at least one operand in a quotient must be double 
+to get a double result.
     
 To help you
 get started with your program code, 
