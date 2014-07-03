@@ -92,6 +92,8 @@ programming:
 
 .. index:: data representation
 
+.. _data-representation:
+
 Data Representation
 ---------------------
 

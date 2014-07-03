@@ -87,7 +87,7 @@ If the condition part is omitted, the condition is
 interpreted as always true, leading to an infinite loop, that can only
 terminate due to a ``return`` or :ref:`break statement <break-continue>` in the body.  
 
-,, index:: execution sequence; for loop
+.. index:: execution sequence; for loop
 
 Note the different parts of the heading used at different times (consistent 
 with the positions in the corresponding while loop):
@@ -232,5 +232,5 @@ It does not break out of the whole loop:
 It just 
 skips the rest of the *body* of the innermost current loop, *this time* through the loop.  
 In the simplest situations a ``continue`` statement just avoids an extra ``else`` clause. 
-It can considerable shorten code if the test is inside complicated, deeply nested 
+It can considerable shorten code if the test is inside of complicated, deeply nested 
 ``if`` statements.

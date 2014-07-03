@@ -9,10 +9,10 @@ String Indexing
 Strings are composed of characters.  In literals be careful of the different
 kinds of quotes: single for individual characters for type ``char`` and double for strings
 of 0 or more characters.  For example,
-'u' (single quotes) is a char type literal, while "u" is a string
-literal, referencing a string object. While "you" is a legal string
-literal, 'you' generates a compiler error (too many characters - only
-*one* allowed).
+``'u'`` (single quotes) is a char type literal, while ``"u"`` is a string
+literal, referencing a string object. While ``"you"`` is a legal string
+literal, ``'you'`` generates a compiler error (too many characters - only
+*one* character allowed).
 
 Many of the operations on strings depend upon referring to the 
 positions of characters in the string.  

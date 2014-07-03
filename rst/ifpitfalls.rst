@@ -104,10 +104,13 @@ with the second if::
 The compiler is consistent with the latter visual pattern: an ``else`` goes
 with the most *recent* ``if`` that could still take an ``else``. 
 Hence if ``x`` is 3
-and ``y`` is -2, the ``else`` part is executed and statement printed is
-incorrect: the else clause is only executed when ``x`` is positive and 
-``y`` (is
-tested and) is not positive. If you put braces everywhere to reinforce
+and ``y`` is -2, the ``else`` part is executed and the statement printed is
+incorrect: in this code 
+the else clause is only executed when ``x`` is positive and 
+``y`` (*is*
+tested and) is not positive. 
+
+If you put braces everywhere to reinforce
 your indentation, as we suggest, or if you only add the following
 one set of braces around the inner if statement::
 
@@ -122,7 +125,7 @@ then the braces enclosing the inner ``if`` statement make it impossible for
 the inner  ``if`` to continue on to an optional ``else`` part. 
 The ``else`` must go
 with the first ``if``. Now when the ``else`` part is reached, the statement
-printed will be true: ``x`` is not positive, and the test of ``y`` is skipped.
+printed will be true: ``x`` is not positive, and the test of ``y`` was skipped.
    
 
 .. index::
@@ -169,5 +172,7 @@ This way we do not have to keep worrying about this question when we revise:
 and need to introduce braces?"
 
 The last two of the pitfalls mentioned in this section are fixed by consistent
-use of braces in the sub-statements of ``if`` statements.  Even with good use of
-braces, you still need to watch out for an incorrect semicolon after a condition.
+use of braces in the sub-statements of ``if`` statements.  They fix the ``;`` 
+after if-condition problem only if the open brace comes right after
+the condition, but you still get a nasty error if you put in a semicolon 
+between the condition and opening brace.

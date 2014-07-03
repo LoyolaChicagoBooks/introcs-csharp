@@ -137,5 +137,8 @@ is eligible for neither.
 
 This exercise could be done by making an exhaustive treatment of all 
 possible combinations of age and citizenship.  Try to avoid that.  
-(Note the paragraph just before this exercise.)
+(Note the paragraph just before this exercise.)  
+
+Caution:  be sure to do exhaustive testing.  It is easy to write code
+that is correct for *some* inputs, but not all.
 

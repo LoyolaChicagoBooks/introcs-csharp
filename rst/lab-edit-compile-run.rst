@@ -44,24 +44,36 @@ Other tools are available, like
 the development environment 
 Visual Studio (from Microsoft, only for Windows).
 
-Understanding the lower level tools that accomplish each step is important, but we defer
+Understanding the lower level tools that accomplish each step is important, 
+but we defer
 a discussion to get you going with Xamarin Studio.
 
 Goals
 -----
 
-Our primary goal to create a C# Solution that you can use to do all of
-the remaining homework assignments and labs this semester. If you
-wish, you can create as many solutions as you like, but C# allows you
-to create a single solution and add (at any time) projects to it. This
-will provide by far the best experience for you in the course, where
-you can keep adding onto previous efforts without having to start over
-each time.
+Our primary goal to create and understand an Xamarin Studio setup
+that you can use to do all of
+the remaining homework assignments and labs for this course. 
 
+
+.. index: Xamarin Studio; solution
+   Xamarin Studio; project
+   
 .. _steps:
 
 Steps
 -----
+
+Xamarin Studio files and interactions 
+are organized hierarchically.  At a low level are
+individual C# source code files.  One, or possibly more, are used for a
+particular *project*.  Multiple projects are gathered together under a single
+*solution*.  Xamarin Studio deals with one solution at a time, though you can
+separately create multiple solutions.  The simplest thing is to create
+a *single solution for this course*, 
+and put each of the projects that you create in that one solution.   
+You can keep adding onto previous efforts without having to start over
+with a new solution each time.
 
 We start by creating a *solution* with a *project* in it.  The images are from
 a Mac.  Windows versions should be similar.

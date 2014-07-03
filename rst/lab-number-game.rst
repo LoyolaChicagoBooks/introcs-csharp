@@ -177,7 +177,7 @@ In ``Game``, make the following alterations and additions:
     | Guess the number: **72**
     | Lower!
     | Guess the number: **66**
-    | Lower!
+    | Higher!
     | Guess the number: **68**
     | Good job!  You win!
    
@@ -285,4 +285,9 @@ Should you finish everything early, try the following:
    Have the computer complain that the human is cheating (and stop the game) 
    if the computer
    guesses the only possible value, and the human does *not* respond with "E".
+   
+   Hint: There are multiple conditions to test here with different results.
+   If you make careful choice of the order of tests in an if-else-if... statement, 
+   and use the fact that when you get to a later test, the earlier ones are false,
+   then you can write the tests fairly concisely and clearly.
    
