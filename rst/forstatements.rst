@@ -203,7 +203,8 @@ using a break statement makes the code much less verbose, and hence easier to fo
 If you *are* reading through the loop, it may be clearer to have an immediate action
 where it is certain that the loop should terminate. 
 
-All the modifiers about innermost loop are important in a situation like the following::
+All the modifiers about *innermost* loop are important 
+in a situation like the following::
 
     for (....) {
        for (....) {
