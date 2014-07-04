@@ -75,11 +75,10 @@ and fill in function bodies for each part below:
 #.  Modify the function to return a ``long``.  
     Then what is the largest value of ``n`` for which the function works?
     
-    *Remember the values from this part and the last part
-    to tell the TA's checking out your work.*
+    *Remember the values from this part and the previous part*
+    *to tell the TA's checking out your work.*
 
-    .. index:: loop; nested
-       PrintRectangle
+    .. index:: PrintRectangle
       
 #.  Complete the method
 
@@ -108,9 +107,7 @@ and fill in function bodies for each part below:
     incrementally.
     You might start by just creating the inner rectangle, without the border.
 
-#.  **40% Extra Credit** Complete the method below.  The comments looks better in the
-    source code, because Sphinx turns comments to italics, so the vertical bars
-    do not appear vertical below!
+#.  **40% Extra Credit** Complete the method below.  
 
     .. literalinclude:: ../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: PrintTableBorders chunk
@@ -131,7 +128,8 @@ and fill in function bodies for each part below:
        +------+------+
     
     You can do this with lots of nested loops, 
-    or much more simply you can use ``StringOfReps``, possibly six times, 
+    or much more simply you can use ``StringOfReps``, possibly six times
+    in several assignment statements, 
     and print a single string.  Think of larger and larger building blocks.
    
     The source of this book is plain text where some of the tables are laid out

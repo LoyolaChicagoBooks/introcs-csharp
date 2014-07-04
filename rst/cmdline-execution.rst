@@ -17,7 +17,8 @@ between the operating systems.  *Look over that section.*
 
 Thus far we have let Xamarin Studio hide what actually is happening when
 you execute a program.  The natural environment for the text-based programs
-we are writing is the command line.  We need to get outside Xamarin Studio.
+that we are writing is the command line.  
+We need to get outside of Xamarin Studio.
 
 #.  To show off the transition, first build or run the ``addition1`` example project
     from inside Xamarin Studio.

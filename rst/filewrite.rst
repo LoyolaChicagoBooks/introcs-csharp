@@ -65,8 +65,6 @@ current directory to be this Debug directory.  This will be inconvenient
 in many circumstances, and later in the chapter we will see how to minimize the
 issue.
 
-.. index:: . ; object's method
-
 The second and third lines of ``Main`` write the specified strings to lines in the file.
 Note that the ``StreamWriter`` object ``writer``, not ``Console``, 
 comes before the dot and ``WriteLine``.  
@@ -78,7 +76,7 @@ a named part or attribute of a larger thing.
 
 The last line of ``Main`` is important for cleaning up. Until this line, this
 C# program controls the file, and nothing may be actually
-written to the file yet:  Since initiating a file operation
+written to the operating system file yet:  Since initiating a file operation
 is thousands of times
 slower than memory operations, C# *buffers* data, saving small
 amounts and writing a larger chunk all at once.
@@ -94,18 +92,13 @@ to write a program where you have the code to add all the data you
 want to a file, but the program does not end up creating a file.
 Usually this means you forgot to close the file!
 
-Xamarin Studio places ``sample.txt`` in a hard-to-guess place in the file system, 
+As discussed above, Xamarin Studio places ``sample.txt`` in the 
+:file:`Debug` sub-subfolder, a hard-to-guess place in the file system, 
 that is *not* shown in the Solution pad, so do not look for it there!  
-You *can* see it in an operating system file
-window.  The easiest way to do that in Xamarin Studio is to right-click in the 
-Solution pad on the project, and select Open Containing Folder.  This should start you
-in the project directory.  Then you can drill down through the
-:file:`bin` folder to the :file:`Debug` folder.  
-You can open the ``sample.txt`` file with your favorite text processor. 
+As you should have checked above, you *can* see it in an operating system file
+window.  Do drill down to the Debug folder if you have not already; 
+open the ``sample.txt`` file with your favorite text processor. 
 It should contain just what was written!  
-
-That folder also contains the executable
-program created when Xamarin Studio builds your project.  
 
 If you were to run the program from the command line instead of from Xamarin Studio, 
 the file would appear in the current directory.
@@ -113,8 +106,8 @@ the file would appear in the current directory.
 .. index:: StreamWriter; format string
    StreamWriter; Write
    
-As you can use a :ref:`Format-Strings` with 
-functions ``Write`` and ``WriteLine``, of the ``Console`` class, 
-you can also use a format string with the corresponding methods of a ``StreamWriter``, 
-and embed fields by using braces in 
+Just as you can use a :ref:`Format-Strings` with 
+functions ``Write`` and ``WriteLine`` of the ``Console`` class, 
+you can also use a format string with the corresponding methods of a 
+``StreamWriter``, and embed fields by using braces in 
 the format string.

@@ -20,11 +20,11 @@ Run the example program
 
 Now you have read a file and used it in a program.
 
-In the first line the operating system file (``sample.txt``) is
+In the first line of ``Main`` the operating system file (``sample.txt``) is
 associated again with a C# variable name (``reader``),
 this time for reading as a ``StreamReader`` object. 
 A ``StreamReader`` can only open an existing file, so
-``sample.txt``, must already exist.  
+``sample.txt`` must already exist.  
 
 Again we have parallel names to those used with ``Console``,
 but in this case the ``ReadLine`` method returns the next line from the file.
@@ -46,7 +46,7 @@ Reading to End of Stream
 
 In ``first_file.cs``, we explicitly coded reading two lines.  You will often
 want to process each line in a file, without knowing the total number of
-lines while programming.  This means that files provide us with only our
+lines while programming.  This means that files provide us with our
 second kind of a sequence:  this time the sequence of lines in the file!
 To process all of them will require a loop and a new test to make sure that you
 have not yet come to the end of the file's stream: You can use the ``EndOfStream``
@@ -73,7 +73,7 @@ user, one line at a time:
    - Declare a local variable inside a method body or in a loop heading.
    - Declare only a single variable in the statement.
    
-   You could have used this syntax long ago, but as the type names become longer, 
+   We could have used this syntax long ago, but as the type names become longer, 
    it is more useful!
 
 Things to note about reading from files:
@@ -149,11 +149,11 @@ If you give a good file name, it skips lines that contain only whitespace.
 .. literalinclude:: ../source/examples/sum_file/sum_file.cs
 
 A useful function used in ``Main`` for avoiding filename typo errors 
-is ``File.Exist`` in the ``System.IO`` namespace :: 
+is ``File.Exists`` in the ``System.IO`` namespace :: 
 
     bool File.Exists(string filenamePath) 
 
-It is true if the named files exists in the file system.  
+It is true if the named files exists in the operating system's file structure.  
 
 You should see the file :repsrc:`sum_file/numbers.txt` in the Xamarin Studio project.
 It is in the right form for the program.  If you run the program and enter the
@@ -221,7 +221,7 @@ You may test this in the Xamarin Studio example project copy_upper:
 
 #.  Expand the copy_upper project in the Solution pad.  The project
     includes the input file.  You may not see it at first.  You need to expand the folder
-    for :file:`bin` and then file:`Debug`.  You see :file:`text.txt`.  
+    for :file:`bin` and then :file:`Debug`.  You see :file:`text.txt`.  
 #.  To see
     what else is in the file system directory, 
     you can select the Debug folder and right click and select
