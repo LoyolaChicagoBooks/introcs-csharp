@@ -20,8 +20,8 @@ if you defined
 
    F(x)=x\ :sup:`2`
 
-then it follows that F(3) is 3\ :sup:`2`, and F(3)+F(4) is
-3\ :sup:`2` + 4\ :sup:`2`
+then it follows that F(3) is 3\ :sup:`2` = 9, and F(3)+F(4) is
+3\ :sup:`2` + 4\ :sup:`2` = 9 + 16 = 25.
 
 Function calls in expressions get
 replaced during evaluation by the value of the function.
@@ -134,7 +134,8 @@ In general functions should do a single thing.
 You can easily combine a sequence of functions, and you have more
 flexibility in the combinations
 if each does just one unified thing.  The function
-SumProblem in :repsrc:`addition1/addition1.cs` does two thing:  It creates a sentence,
+SumProblem in :repsrc:`addition1/addition1.cs` does two thing:  
+It creates a sentence,
 and prints it.  If that is all you have, you are out of luck if you want
 to do something different with the sentence string.  A better way is
 to have a function that just creates the sentence, and returns it for

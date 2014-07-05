@@ -153,8 +153,13 @@ with a regular wage of $10 per hour would work at $10 per hour for
 
     10*40 + 1.5*10*20 + 2*10*5 = $800.
 
-You may find :repsrc:`wages2/wages2.cs` easier to adapt than :repsrc:`wages1/wages1.cs`.
+You may find :repsrc:`wages2/wages2.cs` easier to adapt than 
+:repsrc:`wages1/wages1.cs`.
 
+Caution:  Be sure to thoroughly test your *final* program version.  It is
+easy to add new features that work by themselves, but break a part
+that worked before! In particular in a program with decisions, make sure you
+test with enough different data to check all lines of your program.
 
 .. [#grade]
    4 tests to distinguish the 5 cases, as in the previous version

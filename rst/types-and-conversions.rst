@@ -23,11 +23,9 @@ The ``int`` and ``double`` types are examples of *value types*,
 which means that this memory space holds an encoding of the complete data for the
 value of the variable.  The fixed space means that an ``int`` cannot be a totally 
 arbitrary integer of an enormous size.  In fact an ``int`` variable can only hold
-an integer in a specific range.  
+an integer in a specific range.  See :ref:`data-representation` for the 
+general format of the underlying encoding in bits.
 
-
-The smallest memory unit in a modern computer is a *bit* with two states, 
-that can be thought of as 0 or 1. 
 An `int` is held in a memory space of 32 bits, so it can have at
 most :math:`2^{32}` values, and the encoding is chosen so about half are positive and 
 half are negative: An ``int`` has maximum value :math:`2^{31} - 1 = 2147483647` and
@@ -50,7 +48,9 @@ Be very careful if you are
 going to be using big numbers!
 
 .. index:: type; long
-   long
+   long type
+   short type
+   byte type
 
 .. _type-long:
    
@@ -58,7 +58,7 @@ Type long
 ---------
 
 Most everyday uses of integers fit in this range of an ``int``, 
-and modern computers are designed
+and many modern computers are designed
 to operate on an ``int`` very efficiently, but sometimes you need a
 larger range.  Type `long` uses twice as much space.
 
@@ -67,14 +67,19 @@ with much larger numbers.
 
 When we get to :ref:`array`, you will see that a program may store
 an enormous number of integers, and then the total space may be an 
-issue.  If each of these numbers fit in a more modest range of values, 
-they can be stored in the smaller space of a ``short``.  
-There are other smaller types, too.
-We will not have need for integral types other than ``int`` and ``long`` in this book.
+issue.  If some numbers fit in a ``long``, but not an ``int``, 
+``long`` must be used, taking us twice the space of an array of ``int``
+elements.  If all the integers have even more limited ranges, 
+they might be stored in the smaller space of a ``short``  
+or a ``byte``.  
+We will not further discuss or use types ``short`` or ``byte`` in this book.  
+Here we will only use the integral types ``int`` and ``long``.
 
 .. index:: type; double
-   double
+   double type
    precision
+   float type
+   type; float
 
 .. _type-double:
    
@@ -99,7 +104,9 @@ C# does not have the typography for raised exponents.  Instead
 literal values can use the E to mean
 "times 10 to the power", and the E is followed by and exponent integer
 that can be positive or negative.  
-The whole double literal may not contain any embedded blanks.
+The whole double literal may not contain any embedded blanks.  Internally
+these numbers are stored with powers of 2, not 10:  See 
+:ref:`data-representation`.
 
 The lack of error handling with type ``int`` is not repeated with doubles. 
 We show behavior that could be important if you do scientific computing
@@ -145,6 +152,9 @@ due to limited precision.  These inaccuracies *still* happen silently.
 
 .. index::  numeric type range
    range of numeric types
+   byte type
+   short type
+   type; byte and short
    
 .. _numeric-type-limits:
 
@@ -152,7 +162,8 @@ Numeric Types and  Limits
 --------------------------
 
 The listing below shows how the storage size in bits translates into the limits
-for various numerical types.  We will not discuss or use ``short`` or ``float`` further.
+for various numerical types.  We will not discuss or use ``short``,
+``byte`` or ``float`` further.
 
 long
    64 bits; range -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
@@ -162,6 +173,9 @@ int
 
 short
    16 bits; range -32,768 to 32,767
+   
+byte
+    8 bits; range 0 to 255 (no negative values)
 
 double
    64 bits; maximum magnitude: :math:`1.7976931348623157(10^{308})`; 
@@ -235,7 +249,7 @@ fails if the the ``double`` happens to have an integer value:
     {interactive}(1,4): error CS0266: Cannot implicitly convert type 'double' to 'int'. 
     An explicit conversion exists (are you missing a cast?)
     
-If you really want to possibly lose precision and use a ``double`` to produce
+If you really want to possibly lose precision and convert a ``double`` to 
 an ``int`` result, you *can* do it, but you must be explicit, using a *cast*
 as the csharp error messages suggest. 
 
@@ -252,6 +266,8 @@ you really intend the conversion.  Look what is lost!  The cast does not
 *round* to the nearest integer, it *truncates* toward 0, dropping the fractional
 part, .7 here.
 
+.. index:: Round function
+
 Rounding is possible, but if you really want the ``int`` type, it takes two steps,
 because the function ``Math.Round`` does round to a mathematical integer, but leaves
 the type as ``double``!  To round ``d`` to an ``int`` result we could use:
@@ -264,7 +280,7 @@ the type as ``double``!  To round ``d`` to an ``int`` result we could use:
 
 You can also use an explicit cast from int to double.  This is generally not needed,
 because of the automatic conversions, but there is one place where it is 
-important:  If you want ``double`` division but have ``int`` parts.  Here is a 
+important:  if you want ``double`` division but have ``int`` parts.  Here is a 
 quick artificial test:
 
 .. code-block:: none
@@ -310,7 +326,7 @@ See the appendix :ref:`precedence`, listing all C# operations discussed in this 
 
 .. index:: type; char
    char
-   single: '_' for char literal
+   single: \; for char literal code
    
 .. _type-char:
 

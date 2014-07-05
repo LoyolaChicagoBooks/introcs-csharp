@@ -66,7 +66,7 @@ and :ref:`overloading-operator-exercise`
 invites you to add further operator overloads.
 
 .. index:: precedence; with operator overloading
-   operator overloading; precedence unchanged
+   operator; overloading precedence 
 
 **Precedence**:  Note that the operator overloading method definitions include
 nothing about :ref:`precedence`. That is because the precedence of operators

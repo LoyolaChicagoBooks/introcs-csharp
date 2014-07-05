@@ -282,7 +282,7 @@ A test can also call ``Main`` of a program, with specified parameters that
 would normally come from the command line.  See the small project 
 :repsrc:`cmdline_to_file`.
 
-.. index:: String Replace NUnit Exercise'
+.. index:: String Replace NUnit Exercise
    exercise; String Replace NUnit
    
 String Replace NUnit Test Exercise

@@ -54,6 +54,8 @@ if has a public instance method with signature::
 
 	   public int CompareTo(T other);
 
+.. index:: :; in class heading
+
 There is one more step before we can use a library method to sort:  
 Although this is the
 name that C# requires to be able to satisfy the ``Icomparable<T>`` interface, 
