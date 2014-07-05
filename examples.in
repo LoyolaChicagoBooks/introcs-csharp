@@ -1,0 +1,6 @@
+#
+# Syntax:
+# (hg|git),short name to bind in ./source/,URI to repository
+#
+hg,examples,https://hg@bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
+git,ios,https://bitbucket.org/josullivan1/comp170-xcode-xamarin-ios.git

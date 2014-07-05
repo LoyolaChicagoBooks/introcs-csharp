@@ -1,0 +1,2 @@
+hg pull
+hg update

@@ -1,0 +1,17 @@
+As I’m finishing up my summer COMP 170 class, I thought that telling students something like this early in their final Game project might help them get off to a better start (I’ll see if this makes any difference):
+Here's a suggestion as you are developing your Game: document your design first, before coding.
+
+What I mean is to document things like this, in a separate design document (text file, etc) in Bitbucket/Git or Box or Sakai - let me know where to find this:
+
+·         Make some initial decisions about how many classes you will have, and how they will interact.
+·         Similar decisions about what text files you'll have, if any, and what their content & structure are.
+o    This would include specifying which class(es) use which file(s).
+·         For each class, what instance variables does it have/need, and what are they used for?
+·         For each class, what constructor(s) will you have, and how will it/they work (parameters, etc)?
+·         For each class, what methods will you have, what will they do, and what are their signatures?
+·         For each class, what will be public / available for other classes to use, and what will be private?
+·         Which class(es) will interact with the user, and how will that interaction work?
+·         What is the overall "flow" through the parts of your program as it plays a game with the user?
+Of course you might change these decisions as you get into the project, but having at least a start at this information should help everyone be on the same page.
+
+Let me know what you think …
