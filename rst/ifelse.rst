@@ -68,7 +68,7 @@ Scope With Compound Statements
 The section :ref:`Local-Scope` referred to function  bodies,
 which happen to be enclosed in braces, making the function body a *compound statement*.
 In fact variables declared inside *any* compound statement have their scope restricted
-in inside that compound statement.
+to *inside* that compound statement.
 
 As a result the following code makes no sense::
 

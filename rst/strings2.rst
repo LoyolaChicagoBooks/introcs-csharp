@@ -6,7 +6,7 @@ String Special Cases
 
 .. index::
    escape code \
-   \ escape code
+   single: \; escape code
    
 There are some special cases for creating literal strings.  
 For instance you might want quotes

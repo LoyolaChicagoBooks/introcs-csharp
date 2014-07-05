@@ -1,3 +1,4 @@
+.. _substitution-in-writeline:
 
 Substitutions in Console.WriteLine
 ==================================
@@ -113,7 +114,7 @@ In fact the simple use of format strings
 shown so far can be completed replaced by long expressions with ``+``,
 if that is your taste.  We later discusses fancier formatting in :ref:`tables`,
 that *cannot* be duplicated with a simple string ``+`` operation.
-We will just use the simple numbered substitutions for now, 
+We will use the simple numbered substitutions for now just  
 to get used to the idea of substitution.
 
 .. index:: format; literal {}

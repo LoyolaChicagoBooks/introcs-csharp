@@ -9,10 +9,10 @@ String Indexing
 Strings are composed of characters.  In literals be careful of the different
 kinds of quotes: single for individual characters for type ``char`` and double for strings
 of 0 or more characters.  For example,
-'u' (single quotes) is a char type literal, while "u" is a string
-literal, referencing a string object. While "you" is a legal string
-literal, 'you' generates a compiler error (too many characters - only
-*one* allowed).
+``'u'`` (single quotes) is a char type literal, while ``"u"`` is a string
+literal, referencing a string object. While ``"you"`` is a legal string
+literal, ``'you'`` generates a compiler error (too many characters - only
+*one* character allowed).
 
 Many of the operations on strings depend upon referring to the 
 positions of characters in the string.  
@@ -55,3 +55,15 @@ C# does not allow the typography for normal mathematical subscripts, like :math:
 There is a correspondence with index notation, so ``s[2]`` is
 sometimes spoken as "s sub 2".  The indices are sometimes referred to as 
 *subscripts*.
+
+In this introduction, we have used literal integers for the subscripts. 
+The most common situation in practice is to have a variable as the
+subscript, or an expression.  An expression inside square braces is always 
+evaluated to find the resulting index:: 
+
+   csharp> string s = "coding";
+   csharp> int n = 3;
+   csharp> s[n-1];
+   'd'
+
+When we get to loops, we will find this is useful.

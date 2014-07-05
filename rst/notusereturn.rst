@@ -33,7 +33,7 @@ We will see examples of that later, like in :ref:`sets`.
 This later advanced use will mean that the compiler needs to 
 *permit* the programmer to ignore a 
 returned value, and use a function returning a value as a whole statement.  
-However, this means that the compiler cannot catch a common logical error, 
+However, this means that the compiler cannot catch a common logical error: 
 forgetting to immediately use a returned value that your program logic
 really needs.   For example with this definition::
 
@@ -56,25 +56,28 @@ from CalcResult::
     }
     
 In fact you would always print 0, ignoring the ``result`` calculated in ``CalcResult``.
-The reason is the *scope* rules for functions:  The local variable ``result`` 
+The reason is the :ref:`Local-Scope` rules:  The local variable name ``result`` 
 disappears when the ``CalcResult`` function returns.  
-It has no meaning later in the calling function, ``BadUseResult``.   
+It is not used in the calling function, ``BadUseResult``, and the 
+separately declared ``result`` of ``BadUseResult``
+retains its original 0 value.   
 
 We set up the worst situation, where there is a logical error, 
 but not an error shown by the compiler.  More commonly a student leaves out
 the ``int result = 0;`` line, incorrectly relying on the declaration of ``result``
 in ``CalcResult``.  At least in that situation a compiler error brings attention
-to the problem.
+to the problem: 
+The last line uses the variable ``result`` without it being declared.
 
 You can actually use the result from ``CalcResult`` with either  ::
 
     int value = CalcResult(x);  //store the returned value in an assignment!
-    Console.WriteLine(value);
+    Console.WriteLine(value);   //  use the remembered value
 
 or  ::
     
     Console.WriteLine(CalcResult(x)); // immediately use the returned value 
        
-This version works as long as you do *not* need the 
-returned value in another place, later, since you do not remember it past that
-one statement.
+This second version works as long as you do *not* need the 
+returned value later, in another place, since you do not remember it past that
+one statement!
