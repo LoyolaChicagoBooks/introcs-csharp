@@ -605,6 +605,26 @@ If you select ``low`` and ``higher`` as 0 and 2,
 so there are only two possible values for n,
 then you can choose to print ``Heads`` or ``Tails`` with an
 |if-else| statement based on the result.
+
+.. warning::
+
+   We have discovered some problems with the ``Next()`` implementation
+   when running on Mono that sometimes results in random values not
+   being generated. This is likely a bug that will be fixed. If you
+   experience any problems with ``Next()``, the following is for you!
+
+An alternative to generating random 0 and 1 values for heads and tails
+is to generate random double-precision values. Using the same
+variable, ``r``, you can call ``r.NextRandom()`` to get a random value
+between 0 and 1. You can consider any generated value :math:`n < 0.5` to
+be heads; :math:`n >= 0.5` represents tails::
+
+    double n = r.NextDouble();
+    if (n < 0.5) {
+       // heads
+    } else {
+       // tails
+    }
     
 In your ``Main`` method have a ``for`` loop calling  ``Flip()``
 10 times to test it, so you generate a random sequence of 
