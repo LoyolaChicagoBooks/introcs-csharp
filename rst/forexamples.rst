@@ -631,7 +631,7 @@ then you can choose to print ``Heads`` or ``Tails`` with an
 
 An alternative to generating random 0 and 1 values for heads and tails
 is to generate random double-precision values. Using the same
-variable, ``r``, you can call ``r.NextRandom()`` to get a random value
+variable, ``r``, you can call ``r.NextDouble()`` to get a random value
 between 0 and 1. You can consider any generated value :math:`n < 0.5` to
 be heads; :math:`n >= 0.5` represents tails::
 
