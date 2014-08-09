@@ -503,15 +503,23 @@ elements with values above and below the pivot until the part of the array
 being processed is in three sections:  
 
 #. elements <= pivot;
-#. possibly some of the elements equal to pivot
+#. possibly an element equal to pivot
 #. elements >= pivot.
 
-Though sections 1 and 3 are not sorted, there are no inversions *between* them,
-so only the smaller sections 1 and 3 need to be sorted *separately*, 
+Though sections 1 and 3 are not sorted, there are no inversions *between* any two
+separate sections, so only the smaller sections 1 and 3 need to be sorted *separately*, 
 and only then if they have at least two elements.  They can be sorted 
-by calling the same function, 
-just with a smaller range of indices to deal with in each case.  
-These *recursive* calls stop when a part it reduced to one element.
+by calling the *same* function, 
+but with a smaller range of indices to deal with in each case.  
+These *recursive* calls stop when a part is reduced to one element.
+
+.. index:: loop; invariant
+
+Another optional glimpse at an advanced topic:  The outer ``while`` loop
+in lines 11-20 has fairly complicated logic.  To prove it is correct
+overall, you can state and prove the simpler *loop invariant* expressed
+in the comments above the loop, lines 7-10.  This allows the conclusion
+after the loop in comment lines 21-24.
 
 .. index::
    Random
@@ -522,7 +530,7 @@ Random Data Generation
 ------------------------
 
 Now it is time to talk about how we are going to check the performance in 
-a real-world situation. We're going to start by modeling the situation here
+a real-world situation. We're going to start by modeling the situation when
 the data are in random order.
 
 The following code generates a random array:
@@ -537,14 +545,13 @@ There are a few things to note in this code:
 #. We use the random number generator option to include a *seed*. Random numbers
    aren't truly random. The particular sequence is just determined by a seed.
    The simplest way to create a Random object uses a seed taken from the system clock.
-
-#. Because the sorting algorithms *modify* the data that are passed to it, we 
-   need to have a way of regenerating the sequence. (We could also copy the 
-   data, but it is kind of a waste of memory.)
-
 #. In order to regenerate a particular example, we actually need the random sequence to be 
    consistent, so we know that each of the sorting algorithms is being tested
-   using the same random data.  Hence we specify the same seed each time.
+   using the same random data.  
+#. Because the sorting algorithms *modify* the data that are passed to it, we 
+   need to have a way of regenerating the sequence for the next test. 
+   Hence we specify the same seed each time.
+   (We could also copy the data, but it is kind of a waste of memory.)
 
 
 .. index:: Stopwatch
@@ -554,33 +561,29 @@ There are a few things to note in this code:
 Timing
 -------
 
-In this code, we are using another class from the
-.Net framework/library. 
-
-We need the ability to time the various sorting algorithms. Luckily, .Net gives us a
+We need the ability to time the various sorting algorithms. Luckily, the 
+.Net framework/library gives us a
 way of doing so through its ``Stopwatch`` class. This class supports methods that you
 would expect if you've ever used a stopwatch (the kind found in sports):
 
 - Reset: Resets the elapsed time to zero. We need this so we can use the same Stopwatch
   for each sorting algorithm.
-
 - Start: Starts the stopwatch. Will keep recording time until stopped.
-
 - Stop: Stops the stopwatch.
-
 - ElapsedMilliseconds: Not really a method but a property (like a variable). We'll use this to
   get the total time that has elapsed between pairs of Start/Stop events in milliseconds.
 
 
-So let's take a look at how we compare the sorting algorithms by looking at the ``Main()``
-method's code. As this code is fairly lengthy, we're going to look at parts of it. The
-``Main()`` method should be thought of as an *experiment* that tests the performance
+So let's take a look at the ``Main()``
+method's code to see how we compare the sorting algorithms. 
+The ``Main()`` method should be thought of as an *experiment* that tests the performance
 of each of the sorting algorithms.
+As all of the tests follow the same pattern, 
+we're going to look at the basic variable setup first, and then one test.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-drivervars-begin
    :end-before: chunk
-   :linenos:
 
 The variables declared here are to set up the apparatus:
 
@@ -595,11 +598,11 @@ The variables declared here are to set up the apparatus:
 
 - ``watch``: The stopwatch object we're using to do the timings of all experiments.
 
+- ``data``:  The array to be sorted.
 
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-driverparameters-begin
    :end-before: chunk
-   :linenos:
 
 This code is designed so we can accept the parameters ``arraySize`` and ``randomSeed``
 from the command line or by prompting the user. When programmers design benchmarks, they
@@ -610,30 +613,32 @@ of teaching, we wanted to make it possible to run it with or without command-lin
 .. literalinclude:: ../source/examples/sorting/sorting.cs
    :start-after: chunk-driverapparatus-begin
    :end-before: chunk
-   :linenos:
 
-This code fragment is actually replicated a few times in the actual ``Main()`` method (to
-run each of the different sorting algorithms). Essentially, we do the following for each
-of the sorting algorithms we want to benchmark:
+This code fragment is one of the tests in ``Main``.  All of the tests set up 
+for timing first, run the desired sorting algorithm (bubble sort in this case),
+and report the timing results.  Since the timing setup and reporting is 
+always done the same way, they actions are placed in helping methods:
 
-#. Create the random array of data.
+.. literalinclude:: ../source/examples/sorting/sorting.cs
+   :start-after: chunk timing
+   :end-before: chunk
 
-#. Reset the Stopwatch object to zero.
+``TimeSetup``:
 
-#. Start the Stopwatch.
+#. Creates the 'random' array of ``data``, based on ``randomSeed``.
+#. Resets the ``Stopwatch`` object to zero.
+#. Starts the ``Stopwatch``.
 
-#. Run the sorting algorithm of interest (here ``IntArrayBubbleSort()``). In the rest
-   of the ``Main()`` code, we change this line to call the function for each of the
-   other sorting algorithms.
+After the sort, ``TimeResult``:
 
-#. Stop the Stopwatch and get the elapsed time (watch.Elapsed). 
+#. Stops the ``Stopwatch`` and get the elapsed time (``watch.ElapsedMilliseconds``). 
+   The value  
+   is an integer (long) number of
+   milliseconds (thousandths of a second).
+#. Prints the performance results in seconds.
 
-#. Print the performance results.
 
-When you get ``watch.ElapsedMilliseconds``, this gives you an integer (long) number of
-milliseconds (thousandths of a second).
-
-You can find this code in  :repsrc:`sorting/sorting.cs`. 
+You can find the whole program in :repsrc:`sorting/sorting.cs`. 
 
 Running the Code
 ----------------------
@@ -699,7 +704,7 @@ as follows:
   task but a great deal of work has already been done in the past to determine
   functions that generate good intervals. 
 
-- The Quicksort is generally fastest.  It is by far the
+- The Quicksort is generally fastest on random data.  It is by far the
   most commonly used sorting algorithm. Yet there are signs that Shell sort
   is making a comeback in embedded systems, because it concise to code
   and is still quite fast.  See

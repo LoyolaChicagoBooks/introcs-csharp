@@ -1,4 +1,8 @@
 .. index:: .net api
+   API for .Net
+   library; reference for .Net
+   URL for .Net library reference
+   msdn.microsoft.com
 
 .. _dotnetapi:
 
@@ -16,7 +20,7 @@ and System.Collections.Generic, and you can drill down to them.
 
 One complication is that
 variations on these classes and methods are included for several Microsoft languages.  
-Under the Syntax heading, make sure the C# tab is selected.
+Under the Syntax heading, make sure the **C# tab** is selected.
 
 For example, you can click in the left column on System.Collections Namespaces, and then
 System.Collections.Generic, and then, for example, List(T).  (In C# that is ``List<T>``.)

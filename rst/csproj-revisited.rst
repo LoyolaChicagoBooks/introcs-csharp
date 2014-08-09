@@ -18,7 +18,7 @@ the crucial ``proccessCommand`` method.
 
 In a game with more possible commands, the code
 would only get more repetitious!
-You would like to think of having a loop to go through
+You would like to think of having a loop to replace the
 repetitious code.  
 
 A major use of a C# interface will allow this all to work 
@@ -50,7 +50,7 @@ no method parentheses are needed.
 
 Note the unusual syntax: the declaration does
 not end with a semicolon.  The only semicolons are inside the braces.
-You will not be required to code with this notation, but it sure is neater than
+You will not be required to code with this notation, but it surely is neater than
 using a getter method!
 
 Now we can define our own interface taking all of these common features

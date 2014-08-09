@@ -16,10 +16,8 @@ arrays through the ``string`` data type. In many ways, a character
 string reveals the secrets of arrays:
 
 - each element of a string is a common type (char)
-
 - we can use indexing to find any given character, e.g. ``s[i]`` gives
   us the character at position ``i``.
-
 - we know that the string has a finite length, e.g. ``s.Length``.
 
 So you've already learned these *concepts*. But practice is useful
@@ -43,7 +41,7 @@ a new project of yours.
 Complete the body of a function
 for each main part, and call each function in ``Main`` several times with
 actual parameters chosen to test it well.  To label your illustrations, make
-liberal use of the first function, PrintNums, to display and label inputs 
+liberal use of the first function, ``PrintNums``, to display and label inputs 
 and outputs.  Where several tests are appropriate for the same function, 
 you might want to write a separate testing function that prints 
 and labels inputs, passes the data on to the function being tested,

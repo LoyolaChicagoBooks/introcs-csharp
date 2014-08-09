@@ -68,6 +68,11 @@ In various formats, be aware of these helpful features:
   look for words, in general.  The search link is also accessible from
   the web page banner.  This does *not* work on a downloaded 
   local html copy.
+* The web version and pdf versions display mathematical formulas
+  prettily.  If you use the local html version when not connected to the
+  internet, you see only the LaTex encoded source for formulas.  
+  While offline reading sections
+  with math formulas, we suggest using the pdf version.
 * We start with a brief table of contents for the whole book.  
   *In the web versions*
   you can get the most detailed table of contents for a single chapter by 

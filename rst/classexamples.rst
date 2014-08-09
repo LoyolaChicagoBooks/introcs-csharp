@@ -113,7 +113,7 @@ with instance variable ``big`` and method ``Play``.
 You still need a static ``Main`` method to first create the GuessGame object.  
 You could prompt the user for the value for ``big`` to send to the constructor.  
 Once you have an object, you can call *instance method* ``Play``.  
-What about parameters? What needs to change?
+What about parameters? What needs to change from the procedural version?
 
 There is also a video for this section that 
 follows all the way through the steps.

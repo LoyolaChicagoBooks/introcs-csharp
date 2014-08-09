@@ -9,11 +9,8 @@ to show how to do basic
 benchmarking to compare the various approaches.
 
 - using randomly-generated data
-
 - making sure each algorithm is working with the same data
-
 - making sure that we try a range of sizes to observe the effects of scaling
-
 - using a timer with sufficiently high resolution (the ``Stopwatch`` gives 
   us measurements in milliseconds).
 
@@ -24,8 +21,9 @@ something that is easy to learn but takes a lifetime to master (to borrow
 a phrase from the famous Othello board game).
 
 Most of the algorithms we cover in introductory courses tend to be *polynomial*
-in nature. That is, the execution time can be expressed as a polynomial function of the size
-of the data size :math:`n`. Examples
+in nature. That is, the execution time can be bounded by a polynomial function 
+of the data size :math:`n`. A more accurate measure may also include 
+a logarithm.  Examples
 include but are not limited to:
 
 - :math:`O(1)` is constant time, 
@@ -44,13 +42,14 @@ In this lab, we're going to look at a few different data structures and methods
 that perform searches on them and do *empirical* analysis to get an idea of how
 well each combination works. Contrasted with other labs where you had to write 
 a lot of code, we're going to give you some code to do all of the needed work 
-but ask you to do the actual analysis and produce a basic table.
+but ask you to write the code to 
+do the actual analysis and produce a basic table.
 
 The Experiments
 -------------------
 
 We're going to measure the performance of data structures we have been learning
-about (and will learn about, for lists and sets). For this lab, we'll focus on:
+about (and *will* learn about, for lists and sets). For this lab, we'll focus on:
 
 - Integer arrays using :ref:`searching` and :ref:`binarysearching`
 - :ref:`lists` of integers with linear searching
@@ -79,9 +78,9 @@ for each of the cases:
   ensure that we get an accurate idea of the *average* lookup time in practice. 
   We'll call this parameter, ``rep``.  We will spread out the values looked for 
   by checking data elements that have indices at a regular interval throughout the array.
-  The separation is ``m = n/rep`` when ``rep < n``. We wrap around if ``rep > n``. 
+  The separation is ``m = n/rep`` when ``rep < n``. The separation is 1, and
+  we wrap around at the end of the array if ``rep > n``. 
 - We'll start a Stopwatch just before entering the loop to perform the lookups. 
-
 
 
 Starter Project
@@ -100,8 +99,10 @@ so you have your own copy to modify.  You can either
 * copy into the
   lab project the files :repsrc:`sorting/sorting.cs`,  
   :repsrc:`searching/searching.cs`, and 
-  :repsrc:`binary_searching/binary_searching.cs`.  If you copy them into the lab 
-  project, rename the  :file:`binary_searching.cs`  Main method to something else.
+  :repsrc:`binary_searching/binary_searching.cs`.  *If* you copy them into the lab 
+  project, *rename* the unused ``Main`` method from :file:`binary_searching.cs`  
+  to something else (since Xamarin Studio allows only one ``Main`` method in a
+  project).
 * An alternative is to recreate their whole projects, 
   and *reference* them from the lab project.
 
@@ -130,7 +131,7 @@ less detail, except to highlight the differences:
   in the habit of doing it, because we sometimes reuse the same stopwatch and want
   to make sure it is completely zeroed out. A call to ``Reset()`` ensures it is zero.
 - Line 8 actually starts the stopwatch. We are starting here as opposed to before line
-  3, because the random data generation has nothing to do with the actual searching of
+  4, because the random data generation has nothing to do with the actual searching of
   the array data structure.
 - Lines 10 through 12 are searching ``rep`` times for an item already known to
   be in the array. 
@@ -149,9 +150,10 @@ array data.  (More on that in later chapters.)
 
 You need to fill in the ``Main`` method.
 The stub already has code to generate a random value for the ``seed`` for 
-any run of the program.
+any run of the program.  *Read* through to the end of the lab before 
+starting to code.  A step-by-step sequence is suggested at the end.
 
-#. Write the code to parse command line ``args`` for the parameters ``rep`` 
+*  Your code must parse command line ``args`` for the parameters ``rep`` 
    and *any number* 
    of values for ``n``.  For instance:
    
@@ -161,13 +163,13 @@ any run of the program.
    for each of the values of ``n``: 1000,
    10000, and 100000.
    
-#. Write the code to run each of the experiments for ``rep`` and a given value of ``n``.
+*  In the end you will want to run each experiment 
+   for ``rep`` repetitions and iterate through each different value of ``n``.
 
-#. Iterate through the values of ``n`` and print a nice right-justified table,
-   with a title including the number of repetitions,
+*  Present the result data in a nice printed right-justified table for
+   all values of n,
+   with a title including the number of repetitions.  Print
    something like the following, with the number of seconds calculated.
-   Experiment and adjust the repetitions *to get perceptible values*.  
-   Our choice of 50000 may not be appropriate with these ``n`` values.  
 
    .. code-block:: none
    
@@ -181,24 +183,42 @@ any run of the program.
    Note that the experiments return times in milliseconds, (1/1000 of a second)
    while the table should print times in *seconds*.
   
-   *You will need a very large number of repetitions* to show anything 
-   above 0 for the fastest searches!
+*  Your final aim is to 
+   show your TA or instructor the results of 
+   a run with a table with at least three lines of data and with n 
+   being successive powers of 10, and *non-zero entries everywhere*.  *Read on*
+   for the major catch!  
+   
+   You will need to 
+   *experiment* and adjust the repetitions and ``n`` choices.  
+   In order to *get all perceptible values* (nonzero), you will need a 
+   very large number of repetitions to work for the fastest searches.
+   Our choice of 50000 in the example is not appropriate with these ``n`` values.  
+   The catch is that without further tweaking, you will only get nonzero
+   values for all the fastest searches if the slower ones take 
+   *ridiculously long*.
+   
    Because the range of speeds is so enormous, make an accommodation with the 
-   slow linear versions:  If ``rep >= 100`` and ``(long)n*rep >= 100000000``, then, 
-   for the linear and list columns *only*, time with ``rep2 = rep/100`` instead of ``rep``, 
-   and then compensate by multiplying the time by ``(double)rep/rep2`` to produce
-   the final table value.
-   (This multiplier 
-   is not just 100, since the integer division creating ``rep2`` may not be exact.)  
+   slow linear versions:  If ``rep >= 100`` and ``(long)n*rep >= 100000000``, 
+   then, for the linear and list columns *only*, time with ``rep2 = rep/100`` 
+   instead of ``rep``, 
+   and then compensate by multiplying the resulting time by ``(double)rep/rep2`` 
+   to produce the final table value.
+   (This multiplier is not necessarily just 100, since the integer division creating
+   ``rep2`` may not be exact.)           
    
-   Show your TA a run with a table with at least three lines of data and with n 
-   being successive powers of 10, and *non-zero entries everywhere*.
-   
-Once again, you are encouraged to develop this is steps, for example
+Before making the modification for large numbers, be sure to test with 
+small enough values (though some results will be 0).
+Once again, you are encouraged to develop this is steps, for example:
 
-#. Make sure you can parse the command line parameters.
-#. Print out one linear test for ``rep`` and one value of ``n``.
+#. Make sure you can parse the command line parameters.  In a testing version
+   write code to print out ``rep``, 
+   and *separate* code to print out all ``n`` values, for any number
+   of ``n`` values.
+#. Print out one *linear* test for ``rep`` and one value of ``n``.
 #. Print out the results for all tests for ``rep`` and one value of ``n``.
-#. Make the printing be formatted for the columns.
+   Keep ``rep*n`` small enough so the linear searches do not take too much time.
+#. Do all values of ``n``.
+#. Make the printing be formatted as in the sample table.
 #. Add the modification for large ``rep*n``.
-#. The full program, for all n.
+#. Experiment and get a table to show off!
