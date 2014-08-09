@@ -177,7 +177,8 @@ Still, no general argument has been made to apply to the
 *infinite* number of possible starting integers.
 
 In the PrintStrangeSequence you iterate the ``Jump`` function 
-starting from parameter value ``n``, until the result is 1.
+starting from parameter value ``n``, as long as the current number is not 1. 
+If you start with 1, stop immediately.
 
 ``CountStrangeSequence``:  Iterate the ``Jump`` function as in 
 ``PrintStrangeSequence``.  Instead of printing each number in the sequence,
