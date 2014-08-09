@@ -108,6 +108,10 @@ explored further in :ref:`bisection-exercise`.  The more
 advanced version illustrates with the function in the initial version and
 several others, all using the same bisection function.
 
+.. index:: exercise; savings
+
+.. _savings_exercise:
+
 Savings Exercise
 ~~~~~~~~~~~~~~~~
 
@@ -133,7 +137,8 @@ a target of $550, the program prints::
    540.80
    563.42
    
-   
+.. index:: exercise; strange sequence
+  
 .. _Strange-Seq-Ex:   
 
 Strange Sequence Exercise

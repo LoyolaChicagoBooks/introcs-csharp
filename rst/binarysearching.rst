@@ -17,10 +17,10 @@ Suppose we have the following array data shown under the array indices:
    10  20  30  40  50  60  70  80  90  100 115 125 135 145 155 178 198
 
 Binary search works by keeping track of the midpoint (mid) and the minimum (min) and 
-maximum (max) positions where the item *might be*.
+maximum (max) index positions where the item *might be*.
 
 If we are looking for a number, say, 115, here is a visual on how we might go about it.
-We start with the indices over the data being considered.
+We display the indices over the data being considered.
 Here min and max are the smallest and largest index to still consider.
 A textual explanation follows the visual:
 
@@ -50,7 +50,8 @@ during each pass in half. If you think about how it's working here with 17 items
 there is integer division here, the interval will not always be precisely half. it is the
 floor of dividing by 2 (integer division, that is).
 
-You can see that the above determined the item within 3 steps. To reduce to one element
+With the data above, you see that the algorithm determined the item within 3 steps.
+To reduce to one element
 to consider, it could be 4 or 5 steps.  Note that :math:`4 < log_2 17 < 5`.
 
 Now that we've seen how the method works, here is the code that does the work:
@@ -62,23 +63,20 @@ Now that we've seen how the method works, here is the code that does the work:
 
 Here's a quick explanation, because it largely follows from the above explanation.
 
-- Line 5-6: Initially item could be anywhere in the array, 
+- Line 5: Initially item could be anywhere in the array, 
   so minimum is at position 0 and maximum is at position 
   N-1 (data.Length - 1).
-- The loop to make repeated passes over the array begins on line 7. We use a bottom-tested
-  do-while loop, 
-  because we know that we need to enter this loop at least once, no matter what,
-  to determine whether the item is in the middle or not.
-- Line 8 does just what we expect: 
+- The loop to make repeated passes over the array begins on line 6.  
+  We can only continue searching if there is some data left to consider 
+  (``min <= max``).
+- Line 7 does just what we expect: 
   It calculates the median position (mid).
-- It is always possible that we've found the item, which is what we test on line 9,
+- It is always possible that we've found the item, which is what we test on line 8,
   and return with our answer if we found it.
-- Lines 11-14: If not, we continue.  If the item is greater than the value
+- Lines 10-13: If not, we continue.  If the item is greater than the value
   at this mid position, we know it is in the "upper half". 
   Otherwise, it's in the "lower half".
-- Line 15: We can only continue searching if there is some data left to consider 
-  (``min <= max``).   
-- Line 16: Otherwise the binary search loop terminates, and we 
+- Line 15: Otherwise the binary search loop terminates, and we 
   return -1 (to indicate not found). 
   The -1 value is a commonly-returned indicator of failure in search operations
   (especially on arrays, lists, and strings), 
@@ -87,11 +85,16 @@ Here's a quick explanation, because it largely follows from the above explanatio
   because -1 is not within the *index set* of the array (which starts
   at 0 in C# and ends at ``data.Length - 1``. 
 
+Of course we generally would be searching in an array with multiple elements.
+It is still important to check *edge cases*:  Check that the code correctly 
+returns -1 if the array has length 0 (a legal length).
+
 Similar to linear searching, we provide a main program that tests it out.  The whole code
 is in :repsrc:`binary_searching/binary_searching.cs`.  It uses 
 an elaboration of binary search that prints
 out the steps visually, as in the introduction to this section. 
-It also references functions from the example projects searching and sorting.
+It also references previous example projects: functions from files 
+:repsrc:`searching/searching.cs` and :repsrc:`sorting/sorting.cs`.
 
 .. literalinclude:: ../source/examples/binary_searching/binary_searching.cs
    :start-after: chunk-driver-begin
@@ -114,4 +117,5 @@ Instead of just returning -1 if ``item`` is not in the array, return
 Modify :repsrc:`binary_searching/binary_searching.cs` into 
 :file:`binary_searching2.cs` so this extra information is returned
 (and indicated clearly in the main testing program).
-This should *not* require an extra loop or test in the binary search. 
+This should *not* require a change to the ``while`` loop, *nor* 
+require any added loop. 

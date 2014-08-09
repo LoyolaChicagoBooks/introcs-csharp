@@ -29,7 +29,7 @@ declares ``a`` to refer to an array containing ``int`` elements.  You do *not*
 know how many elements will be allowed in this array from this declaration.  
 We must give further information to create the corresponding array object.  
 A new object can be created using the ``new`` syntax.  An array must get a definite
-length, which can be a literal integer of any integer expression.  For example ::
+length, which can be a literal integer or any integer expression.  For example ::
 
    int[] a;
    a = new int[4];
@@ -101,7 +101,7 @@ same final data could be created with the single declaration::
    :width: 433.5 pt
 
 The list in braces ONLY is allowed as an initialization of a variable
-in a declaration, not in a later assignment statement.  
+in a *declaration*, not in a later assignment statement.  
 Technically it is an initializer, not an array literal.
 
 Individual array elements can *both* be used in expressions, and be assigned to. 
@@ -117,8 +117,8 @@ Arrays, like strings, have a ``Length`` property::
     Console.WriteLine(b.Length); // prints 4
 
 Just as we saw that using a variable for an index was useful with
-strings, array elements are almost always referred to with an index
-variable in practice.  A very common pattern is to deal with each element in sequence,
+strings, in practice array elements are almost always referred to with an index
+variable.  A very common pattern is to deal with each element in sequence,
 and the syntax is the same as for a string.  Print all elements of array ``b``::
 
     for (int i= 0; i < b.Length, i++) { 
@@ -131,7 +131,7 @@ You could also use ``while`` syntax.  The ``foreach`` syntax would be::
       Console.WriteLine(x);
    }
 
-The int type for ``x`` matches the element type of the array ``b``.
+The ``int`` type for ``x`` matches the element type of the array ``b``.
 
 The shorter ``foreach`` syntax is not as general as the ``for`` syntax.  
 For example, to print only the first *3* elements of b::
@@ -150,8 +150,14 @@ rather than just use the values in expressions::
    }
    
 Now the array ``b`` of our earlier examples (of length 4) would contain 0, 5,
-10, and 15.  There is no analog of *changing* the value of ``b[i]`` with a
-``foreach`` loop.  We can only *use the value* of sequence elements.
+10, and 15.  
+
+.. warning::
+   There is no analog of *changing* the value of ``b[i]`` with a
+   ``foreach`` loop.  To change values in an array, we must
+   assign to each location in the array by *index*.
+   A ``foreach`` loop only provides the *value* of each sequence element
+   for us to read.
 
 We have had the array indices so far be given by a single symbol, 
 which is the most common case in practice, but in fact what appears
@@ -242,7 +248,34 @@ You can simulate command line parameters inside Xamarin Studio:
     "Run With >", you will see your custom mode name to select!
 
 Try it!
-        
+
+.. index:: Xamarin Studio; combined with command line execution
+   command line; execution combined with Xamarin Studio editing
+   
+An alternative when you want to use command line parameters repeatedly is 
+
+  #. Use Xamarin Studio for editing and compiling.
+     To compile but not run, the command is **Build** rather than **Run**.
+  #. Meanwhile keep a console/terminal 
+     window open in the :file:`Debug` directory, and enter execution
+     commands there, including the command line parameters 
+     actually on the command line!
+     Even if you have a long set of parameters, you can easily run your  
+     program multiple times with the same parameters by just pressing 
+     the up arrow key in the terminal when you see the next command line prompt, 
+     taking you back to the previous command
+     (or keep going back several commands).  This is also 
+     convenient if you want to slightly edit the parameters: you can
+     edit a line that you redisplay from your command history.
+  #. Do not close this window until you are done with your session of executing
+     from the command line.  By using the same terminal window, you also 
+     save the history of all your runs.  You can scroll the window up
+     to see past executions.
+     
+If one run leads you to go back and fix a bug, go back to step one to
+build the program again, and continue executing in the same terminal window.
+
+
 .. index:: string; Split
    Split method for strings
    
@@ -296,7 +329,7 @@ See the type returned.  It is an array ``int[]`` for the int results:
    :end-before: chunk
 
 In a call to ``IntsFromString("2 5 22")``,  ``integers`` would be 
-an array containing strings "2", "5", and "22".  
+an array containing strings ``"2"``, ``"5"``, and ``"22"``.  
 We need the conversions to ``int`` to go in a new array that we call ``data``.
 We must set its length, which will clearly be the same as for ``integers``,
 ``integers.Length``.
@@ -574,10 +607,13 @@ Write a program ``reverse_array.cs`` that includes and tests a
 function with heading::
 
 
-	// Reverse the order of array elements.
-	// {"aA", "bB", "cC"} -> {"cC", "bB", "aA"}
+	// Reverse the order of array elements
+	// If array a first contains "aA", "bB", "cC",
+	// than it ends up containing "cC", "bB", "aA".
 	public static void Reverse(string[] a)
 
+Do this *without* creating a second array.  (There is a
+trick here.)
    
 .. index:: exercise; Histogram
    Histogram exercise
@@ -638,28 +674,29 @@ result as ``HistogramIntervals(a, start, 1, end-start+1)``.
 
 Again, the only loop needed should be to process each element of ``a``.
 
-..  later
-    example `arraysFor <../examples/arraysForfiles.zip>`_, finish in class
+.. index:: exercise; power table 2
+
+.. _power_table_exercise2:
+
+Power Table Exercise 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-     loops project examples
-     bitsNeeded
-     final loops project example
-     loan table
-     work in class stub of example
-    `loopsArrays <../examples/loopsArraysfiles.zip>`_
-     Loops are the hardest topic for many people. For more practice, there
-    are many options:
-    
-    -  My extra loop and array exercises, with solutions, in the examples
-       `arrayLoopProblems.html <../examples/arrayLoopProblems.html>`_,
-       `array_loop_solutions.txt <../examples/array_loop_solutions.txt>`_,
-       moreLoopArrayProblems
-       (`.doc <../examples/moreLoopArrayProblems.doc>`_ or
-       `.pdf <../examples/moreLoopArrayProblems.pdf>`_) with solutions
-    -  Independent reviews of looping in
-       `Codingbat.com <http://codingbat.com>`_: `While and for
-       loops <http://javabat.com/doc/loop.html>`_ `Arrays and
-       loops <http://javabat.com/doc/array.html>`_, plus extensive
-       interactive problem sections of graded difficulty: String2, Array1,
-       Array2, String3, and the extra challenging Array3
-    
+Write a program :file:`power_table2.cs`` producing a table much 
+like :ref:`power_table_exercise`, with right-justified columns,
+but this time make each separate column have the minimum width
+necessary - so there is a single space (and no less)
+in front of some entry in
+*each* column, except the first.  
+Be careful: take the heading widths into account; the
+parameter limits are important, too; test them::
+
+   /// Print a table of powers of positive integers.  
+   /// Assume 1 <= nMax <= 14, 1 <= powerMax <= 10 
+   /// Example: output of PowerTable(4, 5)
+   /// n^1 n^2 n^3 n^4  n^5 
+   ///   1   1   1   1    1
+   ///   2   4   8  16   32
+   ///   3   9  27  81  243      
+   ///   4  16  64 256 1024
+   public static void PowerTable(int nMax, int powerMax) 
+

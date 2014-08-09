@@ -185,11 +185,11 @@ For example, in analogy with the other numeric types
 we may want a static ``Parse`` method
 to act on a string parameter and return a new Rational.
 
-The most obvious kind of string to parse would be one like "2/3" or "-10/77", 
-which we can split at the '/'.  
-Integers are also rational numbers, so we would like to parse "123".
+The most obvious kind of string to parse would be one like ``"2/3"`` or ``"-10/77"``, 
+which we can split at the ``'/'``.  
+Integers are also rational numbers, so we would like to parse ``"123"``.
 Finally decimal strings can be converted to rational numbers, 
-so we would like to parse "123.45".
+so we would like to parse ``"123.45"``.
 
 See how our ``Parse`` method below distinguishes and handles
 all the cases.  It constructs integer strings,
@@ -198,7 +198,7 @@ and then parses the integers.  Note that the method *is* ``static``.
 There is no Rational
 being referred to when it starts, but in this case the method *returns* one.
 
-That last case is the trickiest.  For example "123.45" becomes 12345/100 
+That last case is the trickiest.  For example ``"123.45"`` becomes 12345/100 
 (before being reduced to lowest terms).  
 Note that there were originally *two* digits after the decimal point 
 and then the denominator gets *two* zeroes to have the right power of 10:
@@ -340,7 +340,10 @@ initialization of ``h``::
 The ``WriteLine``
 statement after that needs to evaluate ``f.Add(h)``, generating a call to ``Add``.
 The next figure shows the two local variables in ``Main``, ``f`` and ``h``, each
-pointing to a ``Rational`` object.  The image shows the situation in the call to ``Add``.  
+pointing to a ``Rational`` object.  The image shows the situation 
+in the call to ``Add``, just before the end of the return statement,
+when the new Rational is being constructed.
+ 
 In the local variables for the method ``Add`` 
 see what the implicit ``this`` refers to, and what the 
 (local to ``Add``) variable ``f`` refer to.  As the figure shows, 
@@ -354,15 +357,14 @@ Since the return statement in ``Add`` creates a new object,
 the figure shows  a call to the
 constructor from inside ``Add``.  We do not go through the details of another
 constructor call, but
-``this`` in the constructor ends up pointing to the Rational shown.
-
-The ``this`` of the constructor ends up as the reference returned by ``Add``:
+``this`` in the constructor points to the Rational shown and returned by
+``Add``:
 
 .. image:: images/endAdd.png
    :width: 220.5 pt
 
 which gets sent to the ``WriteLine`` statement 
-and gets printed as in the earlier code.
+and gets printed in ``Main`` as in the earlier code.
 
 Make sure you see how the pictures reinforce these important ideas:
 
@@ -375,10 +377,12 @@ We have played computer before in procedural programming,
 following individually explicitly named
 variables.  This has allowed us to follow loops clearly after the code is
 written.  The pictorial version with multiple object references and method calls
-is also useful for checking on code that is written.  
+is also useful for checking on code that is written with many object
+references.  
 
-When first *writing* code, a picture of the setup
-of the references in your data is also helpful.  
+When first *writing* code with object references that you are manipulating, 
+a picture of the setup
+showing the references in your data is also helpful.  
 New object-oriented programmers often have a hard time referring to the
 data they want to work with. 
 If you have a picture of the data relationships

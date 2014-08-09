@@ -753,5 +753,31 @@ Predict what these code fragments print.  Then check yourself in csharp::
             Console.Write(s[i]);
         }
     }
+
+.. index:: exercise; power table
+
+.. _power_table_exercise:
+
+Power Table Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-    
+a.  Write a program :file:`power_table.cs`` that completes and tests 
+    the function with this heading.  Be sure your program tests 
+    with several values for each parameter::
+
+       /// Print a table of powers of positive integers.  
+       /// Assume 1 <= nMax <= 12, 1 <= powerMax <= 7. 
+       /// Example: output of PowerTable(3, 4)
+       ///       n^1       n^2      n^3      n^4
+       ///         1         1        1        1
+       ///         2         4        8       16
+       ///         3         9       27       81     
+       ///
+       public static void PowerTable(int nMax, int powerMax) 
+   
+    Make sure the table always ends up with right-justified columns.
+
+b.  Make the table have columns all the same width, but
+    make the width be as small as possible for the parameters
+    provided, leaving a minimal one space (but not less!) between columns
+    somewhere in the table. Consider heading widths, too.

@@ -12,7 +12,7 @@ Operator Overloading
 ----------------------------------------------------
 
 The Rational class is a fine example of a useful utility class.
-Still, to an experience user it has a striking deficiency:
+Still, to an experienced user, it has a striking deficiency:
 A Rational is a *number* and we are used to doing arithmetic with 
 standard operators.  We would like to replace the mouthful
 ``frac1.Multiply(frac2)`` by our common symbolism for multiplication,

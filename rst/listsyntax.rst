@@ -10,10 +10,10 @@ Arrays are fine if you know ahead of time how long your sequence of items is.
 Then you create your array with that length, and you are all set.
 
 If you want a variable sized container, you are likely to want a ``List``.  
-As with arrays, you might want a collection of any type. 
+As with arrays, you might want a collection of any particular type. 
 Unfortunately, you cannot use the simple notation of arrays to specify
-the type of element in a ``List``.  Arrays are *built into* the language, and they have
-their own special syntax.  Lists are handled in the *library* of types
+the type of element in a ``List``.  Array syntax is
+*built into* the language.  Lists are handled in the *library* of types
 provided by C# from the .Net framework.  There are all sorts of
 situations where you might want a general idea to have a version for each of
 many kinds of objects.  There is *not* a new syntax for *each* one.
@@ -59,9 +59,10 @@ List Constructors and Methods
 
 We can play with some ``List`` methods in csharp.  
 Note that csharp informally displays the
-value of a ``List`` with a list of elements inside braces.  This is *not* a legal
-way to assign values to lists.  Nor is it the *unhelpful* way
-C# would print out a string representation of a ``List`` with ``Console.WriteLine``.
+value of a ``List`` with a list of elements inside braces.  
+This is *not* a legal
+way to assign values to lists.   
+
 The blocks below are all from one csharp session, 
 with our comments breaking up the sequence.
 
@@ -91,7 +92,7 @@ as the size changes:
 	{ "up", "down", "over" }
 	csharp> words.Count;
 	3
-
+	
 .. index::  list; index [ ]
    single: [ ]; list index [ ]
    
@@ -117,8 +118,18 @@ You can use ``foreach`` like with arrays or other sequences:
 	UP
 	DOWN
 	ON
+
+.. index:: List; Console.WriteLine useless
 	
-Compare ``Remove``, which finds the first matching element and removes it,
+Note:  Unfortunately C# is not user-friendly if 
+you try to use ``Console.WriteLine`` to print a ``List`` *object*:
+
+..  code-block:: none
+
+    csharp> Console.WriteLine(words)
+    System.Collections.Generic.List`1[System.Int32]
+
+Next compare ``Remove``, which finds the first matching element and removes it,
 and ``RemoveAt``, which removes the element at a specified index.
 ``Remove`` returns whether the List has been changed:
 
@@ -171,7 +182,7 @@ You can also remove all elements at once:
 Here is a List containing ``int`` elements.
 Though more verbose than for an array, you can initialize a ``List``
 with another collection, including an anonymous array,
-specified with an explicit list in braces:
+specified with an explicit sequence in braces:
 
 ..  code-block:: none
 
@@ -185,11 +196,12 @@ so ``var`` is handy with them::
    var stuff = new List<string>();
 
 When initializing a generic object, you still need to remember both the angle braces 
-around the type and the parentheses for the parameter list after that.    
+around the type *and* the parentheses for the parameter list after that.    
 
 .. index:: side effect
 
-An aside on the ``Remove`` method:  It both causes a side effect, changing the list,
+An aside on the ``Remove`` method:  It both causes a side effect, 
+changing the list,
 *and* it returns a value.  If a function returns a value, 
 we typically use the function call as an 
 expression in a larger statement.  This is not necessary, as described in
@@ -217,9 +229,9 @@ Interactive List Example
 Lists are handy when you do not know how much data there will be.  
 A simple example would be reading in lines from the user interactively::
 
-    // Return a List of lines entered by the user in response
-    // to the prompt.  Lines in the List will be nonempty, since an
-    // empty line terminates the input. 
+    /// Return a List of lines entered by the user in response
+    /// to the prompt.  Lines in the List will be nonempty, since an
+    /// empty line terminates the input. 
     List<string> ReadLines(string prompt) 
     {
        List<string> lines = new List<string>();

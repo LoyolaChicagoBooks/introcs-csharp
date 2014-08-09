@@ -112,9 +112,11 @@ the empty line.  It is very important that you advance the reader
 to the right place, to be ready to read the next paragraph. 
 
 Be careful of a pitfall with files:  You can only read a given chunk once:  
-If you read again you get the *next* part.
+If you read again, with the exact same syntax,
+you get the *next* line of the file.  The ``ReadLine`` method
+has the *side effect* of advancing the reading position in the file.
 
-This first short ``ReadParagraph`` function should actually be most of 
+**Testing**: This first short ``ReadParagraph`` function should actually be most of 
 the code that you write for the lab!  The program is set up so you can immediately
 run the program and test ``ReadParagraph``:  It is called to read in the welcome string
 and the goodbye string for the program, so if those come correctly to the screen, you
@@ -140,7 +142,7 @@ This lab requires very few lines of code. Be sure to read the examples
 and instructions carefully (several times). A lot of ideas get packed
 into the few lines!
 
-As a test after writing ``GetParagraphs``, the random
+**Testing**: After writing ``GetParagraphs``, the random
 responses in the lab project program should work as the user enters lines in the program.
 
 GetDictionary
@@ -163,8 +165,12 @@ Here is the stub of the function to complete, reading such data:
    :start-after: GetDictionary chunk
    :end-before: chunk
 
-When you complete this function, the program should behave like the earlier
-verbose version with the hard-coded data.
+**Testing**: 
+When you complete this function, the program should behave 
+just like the earlier
+verbose version with the hard-coded data, using a dictionary value
+if it finds the right key, 
+or choosing a random response if there is no key match.
 
 Be careful to distinguish the data file 
 :repsrc:`help_not_responses.txt <dict_lab_stub/help_not_responses.txt>` 

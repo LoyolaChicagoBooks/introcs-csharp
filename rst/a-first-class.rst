@@ -448,7 +448,7 @@ we have this string, we can easily print it or write it to a file or ....
 Hence we want a method to generate a descriptive string.
 
 Think more generally about string representations:  
-All the built-in types can be concatenated into strings with the '+' operators,
+All the built-in types can be concatenated into strings with the '+' operator,
 or displayed with ``Console.Write``.  
 We would like that behavior with our custom types, too.  How can the compiler
 know how to handle types that were *not invented* when the compiler was written?

@@ -5,7 +5,8 @@
 Command Line Introduction
 ==========================
 
-We will be directing you to use a command window or terminal to compile and run
+Sometimes we will be directing you to use a command window or terminal to 
+compile and run
 C# programs. [#RYacobellis]_
 
 Reasons to use the command line:
@@ -33,7 +34,7 @@ Reasons to use the command line:
 
   + Serious software developers should be familiar with the command line.
 
-Accessing the command line (often called a *command shell*):
+The most direct way to access the command line (often called a *command shell*):
 
 - On Windows, to have easy access to Mono tools,  
   press the Windows key (lower left or lower right on the
@@ -66,8 +67,34 @@ In a command shell there is always a *current working directory*, usually
 shown in the prompt for the next command.  
 When you open a Mono Command Prompt or Terminal window you will see
 a prompt that tells you what folder or directory the command shell has
-started in: In Windows 7 this is typically C:\\Windows\\System32, and on
+started in: If you directly open a terminal as in the previous section,
+in Windows this is typically C:\\Windows\\System32, and on
 a Mac it is typically /Users/*yourLogin*.  
+
+Particularly on windows, this is an annoying folder.  There are several ways 
+to get to a better location.
+
+If you can get to a parent folder of a folder that you want in a Windows Explorer window 
+(by right clicking on Start) or Mac Finder, there are shortcuts to opening a terminal
+with the current directory being one shown in the graphical window:
+
+Windows
+   #. Note: this approach does *not* give your a Mono command prompt.
+   #. In Windows explorer navigate to the parent folder, 
+      showing the folder you want as a subfolder.
+   #. Hold down the shift key and *right* click on the desired folder.  
+      A popup menu appears.
+   #. Click on "Open a Command Window here".
+
+Mac
+   #. In the Finder navigate to the parent folder, 
+      showing the folder you want as a subfolder.
+   #. Hold down the control key and click on the desired folder.  
+      A popup menu appears.
+   #. Click on the bottom item Services, to get a submenu.
+   #. In the submenu click on "New Terminal at Folder" (likely the bottom entry).
+   
+
 
 .. index:: command line; dir and ls
    dir on Windows command line 
@@ -77,20 +104,22 @@ Files in the current working directory can to referred to by their simple names,
 e.g., *myfile.txt*.  You can list all the files in the directory with the simple
 command ``dir`` (short for directory) in Windows or ``ls`` (short for list) on a Mac.
 
-You will see below that you can change the current
-directory with the *cd* command.
-
 You need to refer to files not in the current directory via a relative or absolute
 path name.
+
+After starting in one folder, you may well want to change the current folder 
+without opening a new terminal window.  This is particularly true if you
+start with a Windows Mono command prompt.
+You will see below that you can change the current
+directory with the *cd* command.
 
 On a Mac, the file system is unified in 
 one hierarchy. On Windows there may be several drives, and you need to start a
 path reference with a drive, like C:, if it is not the current drive.
 
-When you open a new command window in Windows, the starting directory is unfortunate,
-``C:\windows\System32``.  
-You are likely to want to operate
-out of your home directory (where the Mac users start automatically).
+When you run cmd or start a Mono command prompt in Windows, 
+you are likely to want to get to
+your home directory (where the Mac users start automatically).
 
 Windows 7 or 8 users enter the command below (substituting your login ID)
 to get to your home directory:
@@ -131,34 +160,39 @@ The cd is short for "Change Directory", changing the current directory.
       
    then you change the current directory on E:, but *the current drive remains C:*.
       
-Suppose you don’t know the path to your *hello* directory on Windows, but can 
-you can find it in an Windows Explorer window (right clicking on Start); 
-here’s how to
-provide that path to the *cd* command:
+We described above how you can use a Windows Explorer/Finder folder to
+open a *new* terminal.   
+If you just want to change 
+directory in an existing terminal, there is also a shortcut to copy a long 
+folder name, given a Windows Explorer/Finder folder:
+
+Windows   
 
 - Depending on the setup of your options, in the address bar you may *not* see a clear
   path with a drive and backslashes.  In that case generally clicking to the right of any
   directory in the path converts the view to the version we use on the
   command line.
 - When you see a full absolute path, you can just note it and manually copy it,
-  or select it all and copy it, and follow the instructions in :ref:`copypaste` to later
+  or else select it all and copy it 
+  and follow the instructions in :ref:`copypaste` to later
   paste in the command window.
-- In any case click in the Mono Command Prompt window, type *cd* and a space, then
+- In any case click in the terminal window, type *cd* and a space, then
   type or paste the path.
 - Of course, you can also go the other way – if you see the current
   directory name in the Windows prompt, type that into an Explorer address
-  bar to see its contents in a GUI window
+  bar to see its contents in a GUI window.
 
 On a Mac there is an easier shortcut:
   
 - Type *cd* and a space to start the command in the terminal
-- Locate the directory you want in the Finder (not opening the directory).
+- Locate the directory you want as a subfolder in the Finder 
+  (not opening the directory).
 - Drag the directory icon to the terminal.  The path gets pasted! Press return.
 
 Common Commands
 ----------------
 
-The command shell is now waiting for you to type in a *command* (a
+The command shell waits for you to type in a *command* (a
 short name that the shell recognizes) followed by 0 or more *parameters*
 separated by spaces (and Enter).  
 Note that if a parameter contains spaces you must surround the
@@ -188,7 +222,7 @@ cd
   On Windows, suppose you created a directory C:\\COMP170\\hello; to
   change to that, type *cd C:\\COMP170\\hello* and press Enter – the shell
   prompt will change to show this new directory location and programs like
-  *mcs* and *mono* will be able to “see” (access) files there, directly
+  *mcs* and *mono* will be able to access files there, directly
   by name.  If the Comp170 directory was you current directory, it would
   be shorter to use relative paths and just ``cd hello``.  Remember if
   you want a different Windows drive, you must first use a 
@@ -202,7 +236,8 @@ cd
 
   Mac Note: if you type just *cd* and press Enter you will change back to
   your home directory.  There is also a shorthand name for your home
-  directory in command paths:  tilde (~), often shifted backquote. Sorry,
+  directory in command paths:  tilde (~), often shifted backquote on the
+  keyboard. Sorry,
   no such thing with Windows.
 
 .. index:: command line; mkdir
@@ -241,15 +276,16 @@ mcs
 csharp
   is the interactive C# statement testing program.
   
-Other useful commands with different names for Windows and Mac,
-listed by generic function, with general Windows syntax first and Mac second, and then
+Other useful commands, with different names for Windows and Mac,
+are listed next by generic function, 
+with general Windows syntax first and Mac second, and then
 often examples in the same order:
 
 .. index:: command line; display text file
    type on Windows command line 
    cat on Mac command line 
 
-Display the contents of a text file in the command window. Unix/Mac
+Display the contents of a text file in the command window. The Unix/Mac
 name origin:  a more complicated
 use of cat is to con\ **cat**\ enate files. 
 
@@ -270,8 +306,8 @@ you wipe out the original contents!
   | copy *originalFile*  *copyName*
   | cp *originalFile*  *copyName*
   
-  | copy prog1.cs prog2.cs
-  | cp prog1.cs prog2.cs
+  | copy prog.cs prog_bak.cs
+  | cp prog.cs prog_bak.cs
   
 
 .. index:: command line; delete a file

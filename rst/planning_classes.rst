@@ -8,7 +8,7 @@ Planning A Class Structure
 
 The Console input/output interchange below illustrates 
 an idea for a skeleton of a text (adventure?) game.  
-It could be the basic of a later group project. It does not
+It could be the basis of a later group project. It does not
 have much in it yet, but it can be planned in terms of classes.
 Classes with instances correspond to nouns you would be using, 
 particularly nouns used in more than one place with different 
@@ -74,7 +74,7 @@ for different parts to interact.
 
 As you think how to break this game into parts (classes), 
 also think how the parts interact (public methods).
-Maybe discuss ideas in class.
+This is a good place for the start of a class discussion.
 
 If the plan is to discuss it in class, *wait* before looking at 
 the code that generated the exchange above, in the 

@@ -8,9 +8,6 @@ In this section, we'll take a look at how to search for a value in an
 array.  Although a fairly straightforward topic, it is one that comes
 up repeatedly in programming.
 
-These examples make use of arrays and loops, not to mention functions
-(for putting it all together). 
-
 .. index:: algorithms; linear search
    search; linear
    linear search 

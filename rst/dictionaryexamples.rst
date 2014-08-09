@@ -38,7 +38,7 @@ changes the set:
 	true
 	csharp> set;
 	{ "hi", "up" }
-	csharp> set.Add("hi");         
+	csharp> set.Add("hi");  // already there       
 	false
 	csharp> set;
 	{ "hi", "up" }
