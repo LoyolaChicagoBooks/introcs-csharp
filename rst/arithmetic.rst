@@ -47,7 +47,7 @@ Play along with the examples here, entering what comes after the prompt:
 
 .. code-block:: none
  
-    csharp> 2 + 3;
+    csharp> 2 + 3
     5
 
 The csharp program just has a *read, evaluate, and print loop*: the acronym is 
@@ -65,22 +65,23 @@ Blanks are optional around symbols:
 
 .. code-block:: none
  
-    csharp> 10 - 3;
+    csharp> 10 - 3
     7
 
 For the binary arithmetic operators, 
 you are encouraged to add blanks to make the expression
 more easily readable by humans.
 
-The csharp program is not line-oriented.  The semicolon indicates that
-you are finished with an entry.  You can easily forget it.  
-If your statement is incomplete you get another ``>`` prompt (with no
-"csharp"), until you complete your entry with a ``;`` (semicolon).
+The csharp program is more line-oriented than the C# language.  
+If you press the return key when what you have entered is a complete expression
+you see the value as a response.
+If your expression is clearly incomplete you get another ``>`` prompt (with no
+"csharp"), until you have entered enough for a full expression.
 
 .. code-block:: none
  
-    csharp> 10-3
-          > ;
+    csharp> 10-
+          > 3
     7
 
 .. index::
@@ -91,7 +92,7 @@ In math class you could enter something like 4(10) for multiplication:
 
 .. code-block:: none
  
-    csharp> 4(10);
+    csharp> 4(10)
     {interactive}(1,2): error CS0119: Expression denotes a 'value', 
     where a 'method group' was expected
 
@@ -104,7 +105,7 @@ C#.  Recall that an asterisk is used as a multiplication operator:
 
 .. code-block:: none
  
-    csharp> 4 * 10;
+    csharp> 4 * 10
     40
 
 .. index::
@@ -117,8 +118,8 @@ will produce (and then check):
 
 .. code-block:: none
  
-    2*5; 
-    2 + 3 * 4; 
+    2*5 
+    2 + 3 * 4 
 
 If you expected the last answer to be 20, think again: C# uses
 the normal *precedence* of arithmetic operations: Multiplications
@@ -127,7 +128,7 @@ there are parentheses forcing the order:
 
 .. code-block:: none
  
-    csharp> -(2+3)*4; 
+    csharp> -(2+3)*4 
     -20 
 
 A sequence of operations with equal precedence also work like in math: 
@@ -135,7 +136,7 @@ left to right.
 
 .. code-block:: none
  
-    csharp> 10 - 3 + 2; 
+    csharp> 10 - 3 + 2 
     9 
 
 .. index:: 
@@ -170,7 +171,7 @@ So far so good.  Now consider:
 
 .. code-block:: none
 
-    csharp> 14/4;
+    csharp> 14/4
     3
 
 What?  Some explanation is in order.  All data has a *type* in C#.
@@ -187,7 +188,7 @@ Addition, subtraction, and multiplication work as you would expect for
 
 .. code-block:: none
 
-    csharp> 0.5 * (2.0 + 4.5);
+    csharp> 0.5 * (2.0 + 4.5)
     3.25
 
 If one or both
@@ -200,7 +201,7 @@ only approximate in general.  For example:
 
 .. code-block:: none
 
-    csharp> 1.0/3;
+    csharp> 1.0/3
     0.333333333333333
 
 Small errors are also possible with the ``double`` type 
@@ -235,9 +236,9 @@ Try in the csharp shell:
 
 .. code-block:: none
 
-    csharp> 14 / 4;
+    csharp> 14 / 4
     3
-    csharp> 14 % 4;
+    csharp> 14 % 4
     2
     
 You see that with the combination of the ``/`` operator and the ``%`` operator,
@@ -247,12 +248,12 @@ Now predict and then try each of these expression in csharp:
 
 .. code-block:: none
 
-    23/5; 
-    23%5; 
-    20%5; 
-    6/8; 
-    6%8; 
-    6.0/8;
+    23/5 
+    23%5
+    20%5 
+    6/8
+    6%8
+    6.0/8
 
 Finding remainders will prove more useful than you might think in
 the future!  Remember the strange ``%`` operator.
@@ -261,9 +262,9 @@ the future!  Remember the strange ``%`` operator.
    The precedence of ``%`` is the same as ``/`` and ``*``, and hence
    higher than addition and subtraction, ``+`` and ``-``. 
 
-When you are *done with csharp*, you can enter the special statement
+When you are *done with csharp*, you can enter the special expression
 
-    quit;
+    quit
 
 There are some more details about numeric types in :ref:`value-types`.
 
@@ -287,15 +288,15 @@ and *then* test, and write the correct answer afterward if you were wrong.
 Then go on to the next.... 
 For the ones you got wrong, can you explain the result after seeing it? ::
 
-    2 * 5 + 3;
-    2 + 5 * 3;
-    1.5 * 3;
-    7.0/2.0;
-    7.0/2;
-    7/2.0;
-    4.0 * 3 / 8;
-    4 * 3 / 8;
-    6 * (2.0/3);
-    6 * (2/3);
-    3 + 10 % 6;
-    10 % 6 + 3;
+    2 * 5 + 3
+    2 + 5 * 3
+    1.5 * 3
+    7.0/2.0
+    7.0/2
+    7/2.0
+    4.0 * 3 / 8
+    4 * 3 / 8
+    6 * (2.0/3)
+    6 * (2/3)
+    3 + 10 % 6
+    10 % 6 + 3

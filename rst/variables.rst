@@ -98,19 +98,22 @@ the value 35 is then assigned to the variable on the left, ``area``.
 .. _more-csharp:
    
 We continue introducing :ref:`csharp`:
-Remember that in csharp you can just give an expression (and a semicolon),
+Remember that in csharp you can just give an expression,
 and csharp responds with a value.  That syntax and reaction is special to 
 csharp.   In csharp you can also test regular C# statements, 
-like declarations and assignments.  As in a regular program, statements
+like declarations and assignments.  The most recent versions of csharp 
+do not require you to end a statement with a semicolon, though we tend to 
+put semicolons after statements in our illustrations.
+As in a regular program, statements
 do not give an immediate visible response in csharp.  Still in   
-csharp you still can display a variable value easily:
+csharp you can display a variable value easily:
 
 .. code-block:: none
 
     csharp> int width = 5, height, area;
     csharp> height = 7;
     csharp> area = width * height;
-    csharp> area;
+    csharp> area
     35
     
 In the last line, ``area`` is an expression, and csharp will give back its value,
@@ -126,7 +129,7 @@ You can start with the csharp special help command:
 
 .. code-block:: none
 
-    csharp> help;     
+    csharp> help     
     "Static methods:
       Describe (object)       - Describes the object's type
       LoadPackage (package);  - Loads the given Package (like -pkg:FILE)
@@ -166,10 +169,10 @@ and variables in C# is that C# values can *change*.  Follow this csharp sequence
 .. code-block:: none
 
     csharp> int n = 3;
-    csharp> n;
+    csharp> n
     3
     csharp> n = 7;
-    csharp> n;
+    csharp> n
     7
     
 showing we can change the value of a variable.  The most *recent* assignment is remembered
@@ -184,7 +187,7 @@ illustrating a difference between C# and math:
 .. code-block:: none
 
     csharp> n = n + 1;
-    csharp> n;
+    csharp> n
     8
 
 Clearly ``n = n + 1`` is not a true mathematical equation:  It *is* a C# assignment, 
@@ -242,10 +245,10 @@ expression, but would never start a regular statement:
 
     csharp> int width = 3;
     csharp> int height = 5;
-    csharp> width * height;
+    csharp> width * height
     {interactive}(1,2): error CS0246: The type or namespace name 'width' could 
     not be found. Are you missing a using directive or an assembly reference?
-    csharp> (width * height);
+    csharp> (width * height)
     15
 
 .. index:: literal, identifier
@@ -326,6 +329,6 @@ Assignment Exercise
    x = x + 1;
    x = x * 3;
    x = x * 5;
-   x;
+   x
    
 Write your prediction.  Then test.  Can you explain it if you got it wrong?
