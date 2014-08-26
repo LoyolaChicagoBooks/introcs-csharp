@@ -238,7 +238,7 @@ we get used to the idea of such a table following execution sequence.
 .. _playing-computer-exercise:
    
 Play Computer Exercise
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Here is a similar program,
 :repsrc:`update_vars2/update_vars2.cs`:
