@@ -18,4 +18,5 @@ Defining Functions of your Own
    notusereturn
    libraryclass
    funcsummary
+   reviewfunc
    
