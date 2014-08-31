@@ -119,6 +119,9 @@ That would have totally nailed the condition, but it is overly verbose in the
 Since you only get to consider a B as a grade if the grade was *not* already
 set to A, the second part of the compound condition above is redundant.  
 
+There are a couple more wrinkles with compound Boolean expressions introduced 
+later in :ref:`short-circuit`.
+
 .. _congressEx:
 
 Congress Exercise
