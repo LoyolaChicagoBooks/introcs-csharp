@@ -37,8 +37,9 @@ Chapter Review Questions
         Console.WriteLine(t.Trim().Replace(" ", "/")); 
         Console.WriteLine(s.StartsWith("is"));
         Console.WriteLine(s.ToLower().StartsWith("is"));
-        int i = s.IndexOf("co"), j = s.IndexOf("co", i+1);
-        Console.WriteLine(i + " " + j);
+        int i = s.IndexOf("co"), j = s.IndexOf("co", i+1),
+            k = s.IndexOf("co", j+1);
+        Console.WriteLine(i + " " + j + " " + k);
     
        
 
