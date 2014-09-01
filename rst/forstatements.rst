@@ -33,7 +33,7 @@ translates to
    | *initialization* ``;`` 
    | ``while (`` *condition* ``)`` {
    |    statement(s)
-   |    *update* 
+   |    *update* ``;``
    | ``}``
 
 In the example above, *initialization* is ``i=2``, *condition* is ``i <= n``,
