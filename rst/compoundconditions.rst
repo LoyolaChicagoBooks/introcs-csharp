@@ -106,7 +106,12 @@ parentheses are also needed:
 	``if (!(`` *condition* ``)) {`` 
 	
 We now have a lot of operators!  Most of those in appendix :ref:`precedence`
-have now been considered.
+have now been considered. There 
+you can see that ``!`` has the high precedence of unary arithmetic operators.
+The operators ``&&`` and ``||`` are almost at the bottom of the operators 
+considered in this book, just above the assignment operators, and below the
+relational operators, with ``&&`` above ``||`.  
+You are encourages to use parentheses to make sure.
 	
 **Compound Overkill**:  Look back to the code converting a score to a letter grade
 in :ref:`Multiple-Tests`.
