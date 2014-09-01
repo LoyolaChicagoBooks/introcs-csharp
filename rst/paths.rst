@@ -89,8 +89,13 @@ for sequential parts of a path, and creates a single string appropriate for the
 current operating system.  For example,
 ``Path.Combine("bin", "Debug")`` will return ``"bin\Debug"`` or ``"bin/debug"``
 as appropriate.
-``Path.Combine("..", "..", "numbers.txt")`` will return 
-``"..\..\numbers.txt"`` or ``"../../numbers.txt"``.
+``Path.Combine("..", "..", "numbers.txt")`` will return a string with characters
+``..\..\numbers.txt`` or ``../../numbers.txt``.  
+
+Even if you know you are going to be on Windows, file paths are a problem because
+``\`` is the string escape character.  To enter the Windows path above explicitly
+you would need to have ``"..\\..\\numbers.txt"``, or the raw string prefix,
+``@`` can come to the rescue:  ``@"..\..\numbers.txt"``.
 
 You can look at the ``Path`` class in the MSDN documentation 
 for many other operations with path strings.

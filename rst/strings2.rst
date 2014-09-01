@@ -61,11 +61,12 @@ Example:
 .. index::
    string; @
    @ string literal
+   verbatim string with @
 
 Literal strings that are simply delimited by quotes ``"`` 
 must start and end on the same line. 
 There is also a notation for *\ @-quoting*, with an at-sign ``@`` before the first
-quote.  In an @-quoted string, all characters are treated literally, including
+quote.  In an @-quoted string, all characters are treated verbatim, including
 all backslashes.  Also the string may go on for several lines, and all newlines
 are included literally.  (The csharp program does not recognize 
 multi-line @-quoted strings.)
@@ -83,6 +84,23 @@ left margin indentation.
 That is significant in a multiline @-quoted string.  
 A whole simple program with this code is in example 
 :repsrc:`at_sign_strings/at_sign_strings.cs`.
-   
+
+.. index:: csharp; verbatim string display
+  
+Caution:  When you give csharp an expression evaluating to a string at the
+prompt, you get back a verbatim string with *quotes added around it*, 
+but no ``@`` to remind you that it is verbatim:
+
+.. code-block:: none
+
+    csharp> "Windows path: c:\\Users\\aharrin"
+    "Windows path: c:\Users\aharrin"
+    csharp> "a\nbc\n\ndef"
+    "a
+    bc
+    
+    def"
+
+
 
 
