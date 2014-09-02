@@ -26,7 +26,7 @@ Chapter Review Questions
     meant "x could be either 2 or 3" and then
     "y is strictly between 1 and 10".
     
-#.  Add parentheses in ``2 < 3 || 4 < 3 && 4 < 5`` to get a different result. 
+#.  Add parentheses in ``2 < 3 || 4 < 5 && 4 < 3`` to get a different result. 
     
 #.  Suppose you have four possible distinct situations in your algorithm, 
     each requiring a totally
