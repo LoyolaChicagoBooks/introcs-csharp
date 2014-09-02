@@ -116,7 +116,7 @@ The two ``if`` statements would use opposite conditions, as in this variation:
    :linenos:
 
 
-Notie that in this variation we added an 
+Note that in this variation we added an 
 initialization for ``val`` to be 0, though the 
 value of the initialization is never used:  ``val`` is
 guaranteed to be assigned a value in one of the ``if`` statements
