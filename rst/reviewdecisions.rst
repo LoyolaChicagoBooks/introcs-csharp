@@ -20,7 +20,7 @@ Chapter Review Questions
         2 < 3 || 4 < 5
         2 < 3 || 4 < 3
         3 < 2 || 4 < 3
-        2 < 3 || 4 < 3 && 4 < 5
+        2 < 3 || 4 < 5 && 4 < 3
         
 #.  Correct the last two entries in the first problem, supposing the user
     meant "x could be either 2 or 3" and then
