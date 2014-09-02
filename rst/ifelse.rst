@@ -123,7 +123,7 @@ guaranteed to be assigned a value in one of the ``if`` statements
 before its value is used in the return statement.
 
 Open Xamarin Studio with the examples solution, and open 
-:repsrc:`ok_if_scope/`ok_if_scope.cs` in the edit window.  
+:repsrc:`ok_if_scope/ok_if_scope.cs` in the edit window.  
 The last function, ``OkScope2``, 
 is the one shown above.  Now *remove* the logically
 unnecessary ``= 0`` initialization for ``val`` so the line is just ``int val;``.  
