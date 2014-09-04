@@ -13,3 +13,4 @@ Dictionaries
    dictionaryefficiency
    dictionaryexamples
    lab-filedata
+   reviewdictionaries
