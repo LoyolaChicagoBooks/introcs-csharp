@@ -44,7 +44,7 @@ with two ways to get information in and out of functions:
 We have stored and passed around built-in types of object using this model.  
 
 We have alternatives for storing and accessing data in the methods within
-a new class we write.  
+a new class that we write.  
 Now we have the idea of an object that has *internal* state
 (like a contact with a name, phone, and email).  We shall see that
 this state is *not* 
@@ -98,7 +98,7 @@ When running this testing code, we would like the results:
 We are using the same object oriented notation that we have for many other classes:
 *Calls to instance methods are always attached to a specific object.*
 That has always been
-the object of
+the part through the ``.`` of
 
    *object*\ ``.``\ *method*\ ``(``  ... ``)``
    
@@ -530,7 +530,7 @@ even shorter, using the object ``this``::
          Console.WriteLine(this); 
       }
 
-When we ``Console.WriteLine`` this current object, which is not
+When we use ``Console.WriteLine`` on this current object, which is *not*
 already a string, there is an automatic call to ``ToString``.
 
 .. index:: redeclaring instance variables error
@@ -569,7 +569,9 @@ trigger a compiler error.
     just get the default initialization, ``null`` for an object
     or 0 for a number.
     
-There is a related strange compiler error.
+There is a related strange compiler error.  This is not likely to happen frequently, 
+but thinking through its logic (or illogic) could be helpful in understanding
+local and instance variables: 
 Generally when you get a compiler error, the error is at or *before* the location the
 error is referenced, but with local variables covering instance variables, 
 the real cause can come later in the text of the method.  Below, when you first
@@ -598,5 +600,6 @@ The error it sees is a local variable used before declaration.
 
 This is based on a real student example.  
 This example points to a second issue: using variable names that 
-that are too short and not descriptive of the variable meaning.
+that are too short and not descriptive of the variable meaning, and so may
+easily be the same name as something unrelated.
 
