@@ -450,6 +450,9 @@ a.  Would this code work?  If not, explain why not::
       {
          p = new Pair(x, y);
       }
+      
+    If you do not see it, 
+    do a graphical play-computer like in the last section.
 
 b.  Complete the body of ``ForceMatch`` correctly.    
       
