@@ -407,3 +407,49 @@ allows ``this.`` to be omitted.  And so on, for ``f.denom`` and ``denom``.
 Visually following such paths will be even more important later, when we construct
 more complex types of objects, and you need to follow
 a path through *several* references in sequence.
+
+.. index:: exercise; ForceMatch
+
+ForceMatch Exercise
+----------------------
+
+Suppose we have a class::
+
+   class Pair
+   {
+      private int x,y;
+      
+      public Pair(int x, int y)
+      {
+          this.x = x; this.y = y;
+      }
+      
+      ///Mutate the parameter so its instance variables match this object
+      public void ForceMatch(Pair p)
+      {
+         // need code ...
+      }
+      
+      public override string ToString()
+      {
+         return string.Format("({0}, {1})", x, y);
+      }
+   }
+    
+A test would be code in another class::
+
+    Pair first = new Pair(3, 7);
+    Pair second = new Pair(1, 9)
+    Console.WriteLine(second);  // prints (1, 9)
+    first.ForceMatch(second);
+    Console.WriteLine(second);  // prints (3, 7)
+    
+a.  Would this code work?  If not, explain why not::
+
+      public void ForceMatch(Pair p)
+      {
+         p = new Pair(x, y);
+      }
+
+b.  Complete the body of ``ForceMatch`` correctly.    
+      
