@@ -191,7 +191,8 @@ On a much smaller scale than the project, this exercise offers you
 experience 
 writing classes implementing and using an interface.
 
-1. Copy project stub :repsrc:`igame_stub` to your own project, and note the additions
+1. Copy project stub :repsrc:`igame_stub` to your own project, 
+   and modify it as
    discussed below.
 
 2. Look at the IGame interface in :repsrc:`i_game.cs <igame_stub/i_game.cs>`. 
@@ -222,13 +223,14 @@ writing classes implementing and using an interface.
 Bisection With Function Interface Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See :repsrc:`bisection_method/bisection_method.cs`. Identify the Interface.
-See how two new classes satisfy it.  Note that the rest of the
+See :repsrc:`bisection_method/bisection_method.cs`. Identify the interface.
+See how two new classes satisfy the interface, while the rest of the
 code in these classes is quite different:  One has an instance variable
 and an explicit constructor, while the other does not.  
 See that the ``Bisection`` function
 now has a parameter for an object containing the mathematical function to
-use for root finding.
+use for root finding:  ``Bisection`` is now a generally useful method,
+not just tied to one hard-coded function that might have a root.
 
 Add a new class satisfying the ``Function`` interface; add a test in ``Main``.
 Try a function with multiple roots in the original interval and see what happens.  

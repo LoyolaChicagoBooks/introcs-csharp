@@ -1,5 +1,6 @@
 .. index::  class; Contact
    Contact class 
+   instance of a class
    
 .. _class:
 
@@ -24,7 +25,8 @@ to have parts.
 In order to treat a contact as  *one* entity, we create a ``class``, 
 ``Contact``. 
 This way we can have a single
-variable refer to a ``Contact`` object.
+variable refer to a ``Contact`` object.  Such an object is an *instance* of the
+class.
 
 Later we will see an example, for rational
 numbers, :ref:`rational`, 
@@ -68,7 +70,8 @@ values for the three parts of the object state, so we can plan that ::
 
    Contact c = new Contact("Marie Ortiz", "773-508-7890", "mortiz2@luc.edu");
 
-would create a new Contact storing the data.
+would create a new Contact storing the data.  A Contact object, created with
+``new`` is an *instance* of the class Contact.
 
 Like with built-in types, we can have the natural operations on the
 type as *methods*.  For instance we can 
@@ -140,7 +143,8 @@ name, phone number and email address.
 
 We have used some static variables before in classes, with the keyword ``static``, 
 where there is just one copy for the whole class.  If we omit the ``static`` we get
-an *instance variable*, that is the particular data for an *individual* Contact.  
+an *instance variable*, that is the particular data for an *individual* Contact,
+for an individual instance of the class.  
 This is our new place to store data:
 
 We declare these *in* the class and *outside* any method declaration. 
