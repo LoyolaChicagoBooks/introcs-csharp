@@ -252,6 +252,11 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
+
+# This is the needed change to allow for printing our books on CreateSpace by Amazon.
+# For now, Andy, if you want to test this out locally, you can just copy this line into
+# the latex_elements dictinary (in your conf.py) and run locally.
+
 'preamble': r"""
     \usepackage[inner=1.25in,papersize={7.5in,9.25in}]{geometry}
     \setcounter{secnumdepth}{2}
