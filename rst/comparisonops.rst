@@ -146,3 +146,14 @@ Write a program, ``graduate.cs``, that prompts students for how
 many credits they have. Print whether of not they have enough
 credits for graduation. (At Loyola University Chicago 120 credits
 are needed for graduation.)
+
+Roundoff Exercise
+~~~~~~~~~~~~~~~~~
+
+In csharp declare and initialize  non-zero ``double`` variables
+``x`` and ``y``.  Experiment so, according to C# (and csharp):  ``x+y == x``.
+In other words, while ``y`` is not 0, adding it to  ``x`` does not
+change ``x``.  (Hints:  Note the approximate number of digits of accuracy
+of a ``double``, and remember the power of 10 notation with ``E``.)
+   
+

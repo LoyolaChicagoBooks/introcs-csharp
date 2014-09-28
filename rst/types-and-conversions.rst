@@ -13,6 +13,8 @@ Value Types and Conversions
    type; int
 
 
+.. _type-int:
+
 Type int
 --------
 
@@ -426,5 +428,16 @@ at the heart of the implementation of computer hardware.
    
 With quotes they would be of type string, not Boolean!
 
+Overflow to Positive Exercise
+-------------------------------
+
+We gave an example above in :ref:`type-int`,
+adding two positive ``int`` values and 
+clearly having an error, since the result was negative.  Declare
+and initialize two positive ``int`` variables ``x`` and ``y``.  Experiment
+with the initializations so
+
+i.  Their product is too big to fit in an ``int`` AND
+ii. The wrong overflow result for ``x*y`` is *positive*, not negative.
 
 
