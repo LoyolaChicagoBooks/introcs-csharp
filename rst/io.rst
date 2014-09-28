@@ -236,7 +236,9 @@ Exercise for Quotients
 
 Write a program, ``quotient.cs``, that
 prompts the user for two integers, and then prints them out in a
-sentence with an integer division problem like ::
+sentence with an integer division problem like 
+
+.. code-block:: none
 
    The quotient of 14 and 3 is 4 with a remainder of 2.
 

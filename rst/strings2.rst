@@ -101,6 +101,12 @@ but no ``@`` to remind you that it is verbatim:
     
     def"
 
+Multiline String Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
+a.  Write a statement that initializes a string ``s`` with a **single**
+    string literal that, when printed, shows something on one line then three 
+    empty lines, and then a final line with text.
+b.  Declare the same string with a different string literal expression, that
+    produces the same string.  (Just one of your literals should start
+    with ``@``.)

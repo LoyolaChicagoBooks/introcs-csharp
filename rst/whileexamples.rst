@@ -206,7 +206,27 @@ just count them, and return the count.
 		Starting from 4, Jump sequence length 3.
 		Starting from 5, Jump sequence length 6.
 		Starting from 6, Jump sequence length 9.
-	
+
+.. index:: exercise; roundoff II
+  
+.. _roundoff2:   
+
+Roundoff Exercise II
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program to complete and test the function with this heading
+and documentation::
+
+   /// Return the largest possible number y, so in C#: x+y = x
+   /// If x is Infinity return Infinity. 
+   /// If x is -Infinity, return double.MaxValue.
+   /// Assume x is not NaN (which is equal to nothing).
+   static double Epsilon(double x)	
+
+Hint:  The non-exceptional case can have some similarity 
+to the bisection in the best root approximation example:
+start with two endpoints, ``a`` and ``b``, where ``x+a = x`` and 
+``x+b > x``, and reduce the interval size by half....
 
 .. [#oddeven]
    If you divide an even number by 2, what is the remainder?  Use this idea

@@ -102,12 +102,12 @@ and see it print:
 
     7 plus 5 is 12; 7 times 5 is 35.
     
-Note the following features:
+Note the following features of the parameters after the first string:
 
-- Parameters can be any expression, 
+- These parameters can be any expression, 
   and the expressions get evaluated before printing.
-- Parameters to be substituted can be of any type. 
-- The parameters are automatically converted to a string form, just as in the
+- These parameters to be substituted can be of any type. 
+- These parameters are automatically converted to a string form, just as in the
   use of the string ``+`` operation.  
   
 In fact the simple use of format strings
