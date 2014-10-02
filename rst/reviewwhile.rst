@@ -19,15 +19,28 @@ Chapter Review Questions
 
 #.  In general, what causes an infinite ``while`` loop?
 
-#.  A ``while`` loop is generally terminated when the condition in its heading
-    becomes false.  How else can a program exit from a ``while`` loop?
+#.  What is wrong with this statement:  When the condition in a ``while`` loop
+    heading becomes false, the loop statement immediately terminates.
+    
+#.  A ``while`` loop will terminate when the program evaluates the
+    condition in its heading and the value becomes false.  
+    What is the important difference in this statement from the previous
+    incorrect statement?
+    
+#.  When does a program evaluate the condition in a ``while`` loop heading? 
+    (There are two situations.)
+
+#.  A ``while`` loop is generally terminated when the program evaluates the
+    condition in its heading and it becomes false.  
+    How else can a program exit from a ``while`` loop?
 
 #.  We generally construct a loop so its body is a compound statement,
-    composed of a sequence of statements inside.  Does it make sense for
-    a member of this sequence to be a return statement?
+    composed of a sequence of statements inside.  If this body is a sequence of
+    simple statements, does it make sense for
+    one of them to be a return statement?
     
 #.  When inside a loop,
-    a return statement should only appear as a sub-statement
+    a return statement should generally only appear as a *sub-statement*
     of what kind of statement?
     
 #.  Which of these conditions is safer in general, with *arbitrary* 
