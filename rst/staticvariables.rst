@@ -1,6 +1,8 @@
    
 .. index:: constant
    global constant
+   scope; class
+   class; scope
 
 .. _Static-Variables:
 

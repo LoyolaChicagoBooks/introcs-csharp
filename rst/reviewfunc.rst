@@ -19,7 +19,13 @@ Chapter Review Questions
         Console.WriteLine(Q1("2", "5"));
 
         Console.WriteLine(Q1(2.5, 5.5));
+        
+        Q1(10, 20);
 
+#.  Suppose ``Q1`` does nothing except produce the value to return, like
+    most functions returning a ``double``.  Which
+    line in the previous problem is legal, but has *no* effect?
+    
 #.  Write the function definition heading for a static function called
     ``Q4`` which
     has one ``string`` parameter, ``s``, and returns nothing.
@@ -45,7 +51,7 @@ Chapter Review Questions
 #.  What is a function/method signature?  
     Can you have more than one function/method declared in the same 
     class definition with the same signature?
-    
+        
 #.  In each part, 
     is this a legal program?  If so, what is printed?  If not, why not?
     
@@ -55,12 +61,12 @@ Chapter Review Questions
             using System;
             class Local1
             {
-               static int Q(int a)
-               {
-                  int x = 3;
-                  x = x + a;
-                  return x;
-               }
+               static int Q(int a)  // 1
+               {                    // 2
+                  int x = 3;        // 3
+                  x = x + a;        // 4
+                  return x;         // 5
+               }                    // 6
                
                static void Main()
                {
@@ -87,10 +93,20 @@ Chapter Review Questions
 
     c.  Insert instead::
         
-               static void Main()
-               {                 
-                  int x = 1, y = 2;
-                  y = Q(5);
-                  Console.WriteLine(x + " " + y);
-               }
+               static void Main()                   // 7
+               {                                    // 8
+                  int x = 1, y = 2;                 // 9
+                  y = Q(5);                         // 10
+                  Console.WriteLine(x + " " + y);   // 11
+               }                                    // 12
+   
+#.  Consider part c. of the previous problem.  Note the line numbers as comments.
+   
+    i.    In what line(s) is ``Q`` defined?
+    #.    In what line(s) is ``Q`` called?
+    #.    What is the return type of ``Q``?
+    #.    What is a formal parameter to ``Q``?
+    #.    What is used as an actual parameter to ``Q``?
+    #.    What is the scope of the ``x`` in line 3?
+    #.    What is the scope of the ``x`` in line 9?
                   
