@@ -18,6 +18,17 @@ Chapter Review Questions
     from the user.  Where do you generally put the code to get more data?
 
 #.  In general, what causes an infinite ``while`` loop?
+
+#.  A ``while`` loop is generally terminated when the condition in its heading
+    becomes false.  How else can a program exit from a ``while`` loop?
+
+#.  We generally construct a loop so its body is a compound statement,
+    composed of a sequence of statements inside.  Does it make sense for
+    a member of this sequence to be a return statement?
+    
+#.  When inside a loop,
+    a return statement should only appear as a sub-statement
+    of what kind of statement?
     
 #.  Which of these conditions is safer in general, with *arbitrary* 
     ``string`` ``s`` and 
