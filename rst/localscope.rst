@@ -58,3 +58,8 @@ The definition of ``F`` could just as well have been::
    and try to use it by name in a different function.  If you get
    an error about a variable not existing, look to see where it was
    declared (or if you remembered to declare it at all)!
+
+In general the *scope* of a variable is
+the places in the program where its value can be referenced and used.  
+The scope of a local variable is just inside
+the function where it is declared.  
