@@ -17,8 +17,8 @@ Example Source Code and Videos
     :header: "Format", "URL"
     :widths: 15, 30
 
-    "C# Examples (as pages)", "http://bitbucket.org/loyolachicagocs_books/introcs-csharp/"
-    "C# Examples (as ZIP)", "https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip"
+    "C# Examples (as pages)", "https://github.com/LoyolaChicagoBooks/introcs-csharp-examples"
+    "C# Examples (as ZIP)", "https://github.com/LoyolaChicagoBooks/introcs-csharp/archive/master.zip"
     "Videos", "https://luc.box.com/CSharpVideos"
 
 Primary Book Site (cs.luc.edu)
