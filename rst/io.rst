@@ -128,7 +128,7 @@ We have started to refer to whole programs that we have written.  You will
 want to have your own copies to test and modify for related work.
 
 All of our examples are set up in a Xamarin Studio solution in our 
-`zip file that you can download <https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip>`_.
+`zip file that you can download <https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/archive/master.zip>`_.
 
 The zip file and the folder it unzips to have a ridiculously long name 
 starting with "loyolachicagocs...".  We suggest you *rename the folder*

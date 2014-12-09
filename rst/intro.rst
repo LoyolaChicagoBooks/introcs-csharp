@@ -9,7 +9,7 @@ Here are some important web links:
    examples download
    source download
 
-*   `The course example file, <https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/get/default.zip>`_
+*   `The course example file, <https://github.com/LoyolaChicagoBooks/introcs-csharp/archive/master.zip>`_
     is the *essential resource* to download and unzip onto your machine.
     The zip file and the folder it unzips to have a ridiculously long name 
     starting with "loyolachicagocs...".  
@@ -88,9 +88,9 @@ In various formats, be aware of these helpful features:
   of the wide version can be accessed via the icon at the right side of 
   the banner.
 
-Her are further links that may be useful in our repository:
+Here are further links that may be useful in our repository:
 
-*   http://bitbucket.org/loyolachicagocs_books/introcs-csharp/
+*   https://github.com/LoyolaChicagoBooks/introcs-csharp/
     is the home page for the repository of all the sources for the book.
     To read this book, you do *not* need to go to that URL, but if you do, the home page
     gives you an idea of what *updates have been made recently* to the book or 
@@ -102,7 +102,7 @@ Her are further links that may be useful in our repository:
     set of sources in the repository.  The sources are
     largely plain text files.
     
-*   http://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
+*   https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/
     is another repository containing the *latest versions*
     of the source code files.  
     You can quickly browse and view individual files under the Source tab.
