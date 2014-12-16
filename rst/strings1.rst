@@ -10,8 +10,8 @@ important type in C#.
 
 A string in C# is a sequence of characters. For C# to
 recognize a literal sequence of characters, like ``hello``, as a string, it
-must be enclosed in quotes ``"`` to delimit the string.  Special cases
-are considered later in :ref:`strings2`.
+must be enclosed in quotes ``"`` to delimit the string: ``"hello"``.  
+Special cases are considered later in :ref:`strings2`.
 
 
 .. index:: string; concatenation with +
@@ -24,16 +24,17 @@ are considered later in :ref:`strings2`.
 String Concatenation
 --------------------
    
-We can operate on numbers with arithmetic operators, including ``+``.
 Because everything in C# is typed, C# can give a special meaning to
-operators depending on the types involved.  This means ``+`` can have
-a special meaning with a string. Look at the example
+operators depending on the types involved,
+as we saw with ``/``.
+We can operate on numbers with arithmetic operators, including ``+``.
+With strings ``+`` has a completely different meaning. Look at the example
 in csharp:
 
 .. code-block:: none
 
-    csharp> "very " + "hot";
-    "very hot"
+    csharp> "never" + "ending";
+    "neverending"
 
 The plus operation with strings means *concatenate* the strings: join them
 together end to end.
@@ -57,21 +58,25 @@ You can chain concatenations.  We could make a full sentence adding a period:
 
     csharp> "We get " + x + ".";
     "We get 42."
-    
+
+Note to Python programmers:  Unfortunately there is no ``*`` 
+multiplication operator for strings in C#.
+ 
 Four Copies Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 In csharp declare and initialize a string variable.  Write an expression that
-evaluates to four copies of the string, so it work no matter with value you
+evaluates to four copies of the string, so it works no matter what value you
 gave your string.
 
-Thirty-two Copies Exercise
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This is an extension of the previous exercise, except with 32 copies,
-but do not do it with one long
-expression.  Include some extra short *assignment statements* in the middle, 
-to shorten the overall 
-writing.  Hint:  32 was chosen since you can reach it by repeated *doubling*.
-To repeatedly double, you must save the result after each intermediate doubling.
+..  dump, like Conrad said
+    Thirty-two Copies Exercise
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    This is an extension of the previous exercise, except with 32 copies,
+    but do not do it with one long
+    expression.  Include some extra short *assignment statements* in the middle, 
+    to shorten the overall 
+    writing.  Hint:  32 was chosen since you can reach it by repeated *doubling*.
+    To repeatedly double, you must save the result after each intermediate doubling.
 
 Sum String Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -98,9 +103,10 @@ and put the right answer beside your answer if you were wrong::
 
    x + "??" + y;
    x + y + "??";
-   (x * y + "??");
+   (x * y + "??"); 
    "??" + x * y;
    "??" + x + y;
    x + "??" * y;
    
 Can you explain the ones you got wrong, after looking at the actual answer?
+Precedence and operation order is important.

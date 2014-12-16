@@ -71,7 +71,7 @@ or initializations and plain declarations can be mixed::
 
 Stylistically the example above is inconsistent, but it illustrates what is 
 possible.  Technically an initialization is not an assignment.  We will see
-some syntax that is legal in initializers, but not declarations.
+some syntax that is legal in initializers, but not in assignment statements.
 
 We could continue with a further assignment statement::
 
@@ -81,6 +81,8 @@ Look at this in detail.  The assignment statement starts by evaluating the
 expression on the right-hand side: ``width * height``.  When variables are
 used in an expression, their current values are substituted, 
 like in evaluating an expression in math, so the value is the same as
+
+.. code-block:: none
 
     5 * 7 
     
@@ -103,7 +105,8 @@ and csharp responds with a value.  That syntax and reaction is special to
 csharp.   In csharp you can also test regular C# statements, 
 like declarations and assignments.  The most recent versions of csharp 
 do not require you to end a statement with a semicolon, though we tend to 
-put semicolons after statements in our illustrations.
+put semicolons after statements in our illustrations (and no semicolon for just
+an expression).
 As in a regular program, statements
 do not give an immediate visible response in csharp.  Still in   
 csharp you can display a variable value easily:
@@ -260,7 +263,7 @@ Literals and Identifiers
    
 Expressions like ``27`` or ``32.5`` or ``"hello"`` are called *literals*,
 coming from the fact that they *literally* mean exactly what they
-say. They are distinguished from variables, who value the compiler *cannot* infer
+say. They are distinguished from variables, whose value the compiler *cannot* infer
 directly from the name alone.
 
 The sequence of characters used to form a variable name (and names
@@ -332,3 +335,15 @@ Assignment Exercise
    x
    
 Write your prediction.  Then test.  Can you explain it if you got it wrong?
+
+Another Assignment Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you had trouble with the last, one try this one, too::
+
+   int a = 5;
+   a = a/2;
+   a = a + 1;
+   a = a * 2;
+   a
+   

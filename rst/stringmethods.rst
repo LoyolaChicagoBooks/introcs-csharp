@@ -1,4 +1,5 @@
 .. index:: string; method
+   single: . ; object field reference
 
 Some Instance Methods and the Length Property
 =================================================
@@ -162,6 +163,30 @@ It is a silly assumption, but until we get to :ref:`If-Statements`,
 we will have to assume there *is*
 a parenthesized expression in the parameter string.
 
-Make sure you understand how the function works.  Perhaps play computer.
+
+String Methods Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+a.  What is printed by this fragment?  ::
+
+        string w = "quickly";
+        Console.WriteLine(w.Length);
+        Console.WriteLine(w[w.Length-2]);
+        Console.WriteLine(w.Substring(3, 2));
+        Console.WriteLine(w.Substring(2));
+        Console.WriteLine(s.IndexOf("ti"));
+        Console.WriteLine(s.IndexOf("ick"));
+        int k = s.IndexOf("c");
+        Console.WriteLine("{0} {1} {2} {3}", 
+           k, w[k], w[k-3], w.Substring(k));
+
+#.  What is printed by this fragment?  ::
+
+        string s = "HELLO!", t = s.ToLower();
+        Console.WriteLine(s+t);
+
+Play with csharp:  declare other strings and make up
+string expressions with these methods 
+for which you predict the value and then test.
 
 

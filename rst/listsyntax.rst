@@ -94,7 +94,7 @@ as the size changes:
 	3
 	
 .. index::  list; index [ ]
-   single: [ ]; list index [ ]
+   single: [ ]; list index
    
 You can reference and change elements by index, like with arrays:
 

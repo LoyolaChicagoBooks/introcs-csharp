@@ -54,7 +54,8 @@ condition is not true, then skip the statements in braces.  The
 indentation pattern is also illustrated.  Recall the compiler
 does not care about the amount of whitespace, but humans do.
 In general indent the statements inside a compound statement.
-We will see later that there is good reason to use this format 
+Later in:ref:`missing-braces` we will see 
+that there is good reason to use this format 
 with braces *even* if there is just one statement inside the braces.
 
 Another fragment as an example::
@@ -69,10 +70,35 @@ Another fragment as an example::
 The assumption
 in the example above is that if an account goes negative, it is
 brought back to 0 by transferring money from a backup account in
-several steps.
+*several* steps.
 
 In the examples above the choice is between doing something (if the
 condition is ``true``) or nothing (if the condition is ``false``).
 Often there is a choice of two possibilities, only one of which
 will be done, depending on the truth of a condition....
 
+Simple If Exercise
+~~~~~~~~~~~~~~~~~~~~
+
+Think of two different inputs you could give that would make the
+execution of the code fragment proceed differently.  What would happen in
+each case?  (Assume we have access to the class UIF.) 
+
+a. Consider::
+
+       string v = UIF.PromptLine("Enter a word: ");
+       if (v.Length > 3) {
+          v = v + v;
+       }
+       Console.WriteLine("Now we have " + v);
+
+#. Consider::
+
+       int x = UIF.PromptInt("Enter a integer: ");
+       Console.Write("The magnitude of " + x + " is ");
+       if (x < 0) {
+          x = -x;
+       }
+       Console.WriteLine(x);
+
+       

@@ -76,7 +76,8 @@ With programming, syntax details are like the details above: not the first thing
 and maybe not things that you have memorized.  What *is* important to break down a problem
 and plan a solution, is to know the basic *capacities* you have in programming.  As you get 
 into larger projects and have more experience, "basic capacities" will be bigger and bigger ideas.  
-For now, as beginners, it is important to know:
+For now, as beginners, based on the sections of the book so far, 
+it is important to know:
 
 - You can get information from a user and return information via keyboard and screen.
 - You can remember and recall and use information using variables.
@@ -85,7 +86,7 @@ For now, as beginners, it is important to know:
   converting between data types).
 - At a slightly higher level, you might already have the idea of basic recurring patterns,
   like solving a straightforward problem with **input-processing-output**.
-- You will shortly see that you have more tools:  decision, repetition, more built-in
+- You will see shortly that you have more tools:  decision, repetition, more built-in
   ways to deal with data (like more string operations shortly), creating your own data types....
 
 At slightly more detailed level, *after* thinking of overall plans:

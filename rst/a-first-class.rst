@@ -168,13 +168,18 @@ You also see that we are lazy in this example,
 and abbreviate the longer descriptions fullName, phoneNumber and
 emailAddress.  
 
+.. index:: lifetime
+
 It is important to distinguish *instance* variables of a class 
 and *local* variables.
-A local variable is only accessible inside the one method where it was declared,
-and is destroyed at the end of the method.  
+A local variable is only accessible inside the block (surrounded by braces)
+where it was declared,
+and is destroyed at the end of the execution of that block.  
 However the class fields  ``name``, ``phone`` and ``email`` are remembered by C# 
 as long as the Contact object is in use.  
-This is a totally new situation.  We repeat:
+
+The *lifetime* of a variable is from when it is first created until it is no 
+longer accessible by the program.  We repeat:
 
 .. note::
    *Instance* variable have a completely different lifetime and scope 
@@ -182,7 +187,7 @@ This is a totally new situation.  We repeat:
    An object and its instance variables, 
    persist from the time a new object is created
    with ``new`` for as long as the object
-   remains referenced in the program.
+   remains referenced in the program. 
    
 We need to get values into our field variables.  
 They describe the state of our Contact.
@@ -607,3 +612,13 @@ This example points to a second issue: using variable names that
 that are too short and not descriptive of the variable meaning, and so may
 easily be the same name as something unrelated.
 
+.. index:: lifetime; vs. scope
+   scope; vs. lifetime
+   
+Lifetime and Scope Exercise/Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Be careful to distinguish lifetime and scope.  Either a local variable or
+an instance variable can be temporarily out of scope, but still be alive.
+Can you construct an example to illustrate that?  One of ours is
+:repsrc:`lifetime_scope/lifetime_scope.cs`.

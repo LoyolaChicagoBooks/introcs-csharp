@@ -130,7 +130,7 @@ used in the match of the first two e's.
    
 .. _safe-input-number:
 
-Safe PromptInt and PromptDouble Exercise
+Safer PromptInt and PromptDouble Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Save the example :repsrc:`safe_number_input_stub/safe_number_input.cs` 
@@ -160,7 +160,8 @@ place.  The suggestion is to confirm that these other characters appear in
 legal places, remove them, and see that what is left is digits. 
 The recently introduced string methods should help....
 
-Develop the functions in order and test after each one:
+Using the ideas above, 
+develop the functions in order and test after each one:
 write ``IsIntString``, revise ``PromptInt``, 
 write ``IsDecimalString``, and revise ``PromptDouble``.
 
@@ -168,6 +169,9 @@ Be sure to test carefully.  Not only confirm that all
 appropriate strings return ``true``:
 Also be sure to test that you return ``false"`` 
 for *all* sorts of bad strings.  
+
+There is still one issue with ``IsIntString`` not considered yet:  see
+the next exercise for the final improvement.
 
 Hopefully
 you learned something from writing the earlier PromptWhole.
@@ -178,3 +182,54 @@ restrict to many ranges with PromptIntInRange.
 
 We will arrange for these functions to be a library class later.
 For now just develop and test them in this one class. 
+
+.. _safest-input-int:
+
+Safest PromptInt Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+With the suggestions so far the in the previous exercise,
+``IsIntString`` will catch a strange stray character, and be
+sure that the string for an *integer* is entered, but an ``int`` is
+not an arbitrary integer:  it has limited range, between
+``int.MinValue`` =  -2147483648 and ``int.MaxValue`` = 2147483647.
+
+Revise the ``IsIntString`` function of the previous
+exercise so that it checks that the result is in range, too, allowing
+the PromptInt function to be totally reliable.
+
+There is a problem:  your current version of IsIntString is likely
+to accept a string like ``"9876543210"``, and you cannot convert it to an 
+``int`` to do the comparison to see that it is in fact 
+too large for an ``int``!  Catch 22?
+
+There is an alternate approach involving comparing strings, not numbers.  
+
+There is a string instance method::
+
+    public int CompareTo(string t)
+    
+It does roughly lexicographical string comparisons, so  ::
+
+    s.CompareTo(t) <= 0
+    
+is true when s "comes before" t or is equal to t.  This works with 
+alphabetizing letter strings:  "at" comes before "ate" which comes before
+"attention" which comes before "eat".  It also works with digit strings
+*of the same length* 
+to give the same relationship as the corresponding numbers::
+
+    "123456890".CompareTo("2147483647") <= 0
+
+is true, and ::
+
+    "9876543210".CompareTo("2147483647") <= 0
+
+is false.  
+
+This idea can be leveraged into a completely reliable version of IsIntString.
+(With this approach you could also create an IsLongString very similarly,
+but we skip it since it teaches you nothing new.)
+
+The idea of a ``CompareTo`` method is much more general 
+and is used much later in :ref:`rationals-revisited`.

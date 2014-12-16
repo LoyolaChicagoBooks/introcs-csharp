@@ -101,7 +101,7 @@ for each of the categories. These weights will be entered
 as integers, which must add up to 100. 
 
 If the weights do not add up to 100, print a message and 
-end the program. You can use an ``if-else`` construction
+end the program. You can use an |if-else| construction
 here.  An alternative is an ``if`` statement to test for a bad sum.
 In the block of statements that go with the ``if`` statement,
 you can put not only the message to the user, but also a 

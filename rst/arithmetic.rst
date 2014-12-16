@@ -132,7 +132,7 @@ there are parentheses forcing the order:
     -20 
 
 A sequence of operations with equal precedence also work like in math: 
-left to right.
+left to right in most cases, like for combinations of addition and subtraction:
 
 .. code-block:: none
  
@@ -263,6 +263,8 @@ the future!  Remember the strange ``%`` operator.
    higher than addition and subtraction, ``+`` and ``-``. 
 
 When you are *done with csharp*, you can enter the special expression
+
+.. code-block:: none
 
     quit
 

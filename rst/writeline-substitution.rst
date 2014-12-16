@@ -132,7 +132,16 @@ produces
 .. code-block:: none
 
     The set is {2, 3}.
-    
+
+Format Reading Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+What is printed?  ::
+
+        Console.WriteLine("{0}{1}{1}{2}", "Mi", "ssi", "ppi");
+        
+Check yourself.
+   
 .. _QuotientFormat:
 
 Exercise for Format
@@ -141,6 +150,22 @@ Exercise for Format
 Write a program, ``quotient_format.cs``, that behaves like
 :ref:`QuotientProblem`, but generate the sentence using 
 ``Console.WriteLine`` with a format string and no ``+`` operator.
+
+
+Madlib Exercise 
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program, ``my_mad_lib.cs``, that prompts the user for
+words that fit specified gramatical patterns ( a noun, a verb, a color,
+a city....) and plug them into a multiline format string so they fit
+grammatically, and
+print the usually silly result.  
+If you are not used to mad libs, try running (not 
+looking at the source code) the example project mad_lib, and then try it 
+again with different data.
+If this exercise seems like too big of a challenge yet,
+see our example source code, 
+:repsrc:`mad_lib/mad_lib.cs`, and then *start over* on your own.
 
 
 .. index:: method; overloading

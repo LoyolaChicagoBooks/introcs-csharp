@@ -14,15 +14,19 @@ condition is not true.
 
 More syntax for conditions will be introduced later,
 but for now consider simple arithmetic comparisons that directly
-translate from math into C#. Try each line separately in csharp ::
+translate from math into C#. First start csharp an enter::
 
-    2 < 5; 
-    3 > 7; 
     int x = 11; 
-    x > 10; 
-    2 * x < x; 
 
-You see that conditions are either ``true`` or ``false`` (with no
+Now think of which of these expressions below are true and which false, 
+and then enter each one into your csharp session to test::
+
+    2 < 5
+    3 > 7
+    x > 10 
+    2*x < x 
+
+You see the C# values, either ``true`` or ``false`` (with no
 quotes!). These are the only possible *Boolean* values (named after
 19th century mathematician George Boole). You can also use the
 abbreviation for the type ``bool``.  It is the type of the

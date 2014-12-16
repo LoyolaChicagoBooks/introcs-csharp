@@ -32,7 +32,7 @@ extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax', 'sphinx.ext.extlinks' ]
 todo_include_todos = True
 
 extlinks = {'repsrc': 
-              ('https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples/src/default/%s','')
+              ('https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/%s','')
            }
 
 # Add any paths that contain templates here, relative to this directory.

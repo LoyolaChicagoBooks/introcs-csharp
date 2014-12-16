@@ -313,9 +313,11 @@ a function ``PromptWhole``, as described below.
 There is an issue with reading in numbers with the PromptInt function.
 If you make a typo and enter something that cannot be converted from a
 string to the right kind of number, a naive program will bomb.
-This is avoidable if you test the string and repeat the input if the string is illegal.
+This is avoidable if you test the string and repeat the input 
+if the string is illegal.
 Places where more complicated tests for illegality are needed are
-considered in :ref:`safe-input-number`.  For now we just consider
+considered in :ref:`safe-input-number` and 
+:ref:`safest-input-int`.  For now we just consider
 reading in whole numbers (integers greater than or equal to 0).  
 Note that such
 a number is written as just a sequence of digits.   
@@ -324,4 +326,3 @@ the user enters something that is legal: in this case, all digits.
 
 The stub code already includes the earlier function ``IsDigits``.
 
-	

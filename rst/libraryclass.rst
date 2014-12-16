@@ -11,14 +11,19 @@ Library Classes
    
 In :ref:`Returned-Function-Values`, the suggestion was made to look at 
 the Painter class and split out repeated ideas into functions, leading to
-a function to prompt the user and return a double value.  The same section included
-the example program :repsrc:`addition2/addition2.cs`.  In that case there were repeated prompts for 
-integers.  Clearly another common situation is to prompt for a string.  We can create 
-functions to do all these things and more, and embed them into a class for an
+a function to prompt the user and return a double value.  
+The same section included
+the example program :repsrc:`addition2/addition2.cs`.  
+In that case there were repeated prompts for 
+integers.  Clearly another common situation is to prompt for a string.  
+We can create 
+functions to do all these things and more, and embed them into a class 
+specially written for a new
 interactive program.  
 
 A neater thing is to put them as a class in a separate library
-that can be used directly for multiple programs.  We can create functions ``PromptLine``,
+that can be used directly for multiple programs.  We can create functions 
+``PromptLine``,
 ``PromptInt``, and  ``PromptDouble``, and put them in their own class, ``UIF`` 
 (for User Input First version)
 in project ui's file :repsrc:`uif.cs <ui/uif.cs>`.  
@@ -73,7 +78,8 @@ the class ``UIF``.
    In Xamarin Studio, if you use a file from a library project (without
    just copying the present version of that file into the current project), 
    be sure that the current project includes 
-   a *reference* to the library project. If you expand the references in the Xamarin Studio 
+   a *reference* to the library project. 
+   If you expand the references in the Xamarin Studio 
    project addition3, by clicking on the References line in the solution pad, 
    you should see the project ui.  
 

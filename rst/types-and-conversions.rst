@@ -11,6 +11,7 @@ Value Types and Conversions
 .. index::
    int; value range
    type; int
+   overflow
 
 
 .. _type-int:
@@ -28,7 +29,7 @@ arbitrary integer of an enormous size.  In fact an ``int`` variable can only hol
 an integer in a specific range.  See :ref:`data-representation` for the 
 general format of the underlying encoding in bits.
 
-An `int` is held in a memory space of 32 bits, so it can have at
+An ``int`` is held in a memory space of 32 bits, so it can have at
 most :math:`2^{32}` values, and the encoding is chosen so about half are positive and 
 half are negative: An ``int`` has maximum value :math:`2^{31} - 1 = 2147483647` and
 a minimum value of :math:`-2^{31} = -2147483648`.  The extreme values are also 
@@ -45,9 +46,13 @@ it fails *silently*:
     csharp> i + 5;
     -2147483644
 
-Add two positive numbers and get a negative number!  This is called *overflow*.
+Add two positive numbers and get a negative number!  Getting such a wrong
+answer is called *overflow*.
 Be very careful if you are
-going to be using big numbers!
+going to be using big numbers!  Note: with addition, 
+overflow will give the wrong sign, 
+but the sign may not give such a clue 
+if another operation overflows, like multiplication.
 
 .. index:: type; long
    long type
@@ -98,7 +103,8 @@ half of the space of a ``double``, and has a smaller range and less accuracy.  T
 least gives a reason for the name ``double``:  double the storage space of a ``float``.
 
 To avoid a ridiculously large number of
-trailing 0's, a big double is expressed using a variant of scientific notation:
+trailing 0's, a big double literal can be 
+expressed using a variant of scientific notation:
 
    ``1.79769313486232E+308`` means :math:`1.7976931348623157(10^{308})`
 
@@ -110,12 +116,11 @@ The whole double literal may not contain any embedded blanks.  Internally
 these numbers are stored with powers of 2, not 10:  See 
 :ref:`data-representation`.
 
-The lack of error handling with type ``int`` is not repeated with doubles. 
-We show behavior that could be important if you do scientific computing
-with enormous numbers:
 Arithmetic with the ``double`` type does not overflow silently as with 
-the integral types.  There are values for infinity and minus infinity and
-Not a Number (NaN): 
+the integral types.  
+We show behavior that could be important if you do scientific computing
+with enormous numbers:  There are values for Infinity and Not a Number,
+abbreviated NaN.  See them used in csharp: 
 
 .. code-block:: none
 
@@ -148,9 +153,15 @@ Once a result turns into ``NaN``, no arithmetic operations change
 further results away from ``NaN``, 
 so there is a lasting record of a big error!
 
-There is no such neat system for showing off small inaccuracies in ``double``
-arithmetic accumulating 
-due to limited precision.  These inaccuracies *still* happen silently.
+Note that Infinity, -Infinity and NaN are just representations when displayed
+as strings.  The numerical constants are 
+``Double.PositiveInfinity``, ``Double.NegativeInfinity``, and ``Double.NaN``.
+
+..  warning::
+
+    There is no such neat system for showing off small inaccuracies in ``double``
+    arithmetic accumulating 
+    due to limited precision.  These inaccuracies *still* happen silently.
 
 .. index::  numeric type range
    range of numeric types
@@ -184,7 +195,7 @@ double
    about 15 digits of accuracy
    
 float
-   32 bits; maximum value: :math:`3.402823(10^{38})`; about 7 digits of accuracy
+   32 bits; maximum magnitude: :math:`3.402823(10^{38})`; about 7 digits of accuracy
 
 decimal     
    128 bits; maximum value: 79228162514264337593543950335; 
@@ -250,6 +261,8 @@ fails if the the ``double`` happens to have an integer value:
     csharp> int i = d;
     {interactive}(1,4): error CS0266: Cannot implicitly convert type 'double' to 'int'. 
     An explicit conversion exists (are you missing a cast?)
+
+.. index:: truncate in cast
     
 If you really want to possibly lose precision and convert a ``double`` to 
 an ``int`` result, you *can* do it, but you must be explicit, using a *cast*
@@ -328,7 +341,7 @@ See the appendix :ref:`precedence`, listing all C# operations discussed in this 
 
 .. index:: type; char
    char
-   single: \; for char literal code
+   single: \; char literal escape
    
 .. _type-char:
 
