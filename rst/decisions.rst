@@ -16,4 +16,5 @@ Decisions
    ifelsechained
    ifpitfalls
    compoundconditions
+   ifnested
    reviewdecisions

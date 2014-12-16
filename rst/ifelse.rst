@@ -28,14 +28,20 @@ executed when the original condition is *false*. In an |if-else|
 statement exactly one of two possible parts in braces is executed.
 
 A final line is also shown that is not indented, about getting exercise.
-The `if` and `else` clauses each only embed a single (possibly compound) statement
+The ``if`` and ``else`` clauses each 
+only embed a *single* (possibly compound) statement
 as option, so the last statement is not part of the |if-else|
-statement.  Instead it is a part of the normal sequential
-flow of statements.  It is *always* executed after the
-|if-else| statement, no matter what happens inside the
-|if-else| statement.  Again:  inside the |if-else| there is a
-choice made, but the whole |if-else| construction is a single
-larger statement, which exists in the normal sequential flow.
+statement.  It is beyond the |if-else| statement; it is
+just a part of the normal sequential
+flow of statements.  We repeat:
+
+..  note::
+    Inside an |if-else| there is a
+    choice made of which clause to execute and which clause to skip, 
+    but the whole |if-else| construction is a *single*
+    larger statement, which exists in the normal *sequential* flow
+    of execution.
+    
 The compiler does not require the indentation of the if-true-statement
 and the if-false-statement, but it is a standard style convention. 
 
@@ -154,3 +160,33 @@ Having
 the error caught quickly by the compiler is very handy, offsetting the extra work
 when the compiler gives this error unnecessarily.
 
+If-else Exercise
+~~~~~~~~~~~~~~~~~~~~
+
+Think of two different inputs you could give that would make the
+execution of the code fragment proceed differently.  What would happen in
+each case?  (Assume we have access to the class UIF.) 
+
+a. Consider::
+
+       string v = UIF.PromptLine("Enter a word: ");
+       if (v.Length > 3) {
+          v = v + v;
+          Console.WriteLine("Now we have " + v);
+       }
+       else {
+          Console.WriteLine("We still have " + v);
+       }
+
+#. Consider::
+
+       int x = UIF.PromptInt("Enter a integer: ");
+       Console.Write("The magnitude of " + x + " is ");
+       if (x < 0) {
+          Console.WriteLine(-x);
+       }
+       else {
+          Console.WriteLine(x);
+       }
+
+       

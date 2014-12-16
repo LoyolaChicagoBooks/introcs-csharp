@@ -67,7 +67,9 @@ programming:
 * A named sub-problem: your recipe may include the instruction
   "Beat 4 eggs."  The recipe probably says no more about it, but this is
   *shorthand*, a name for a simpler sequence of steps, an
-  algorithm like::
+  algorithm like:
+  
+  .. code-block:: none
   
      Beating Any Number of Eggs
      ---------------------------    
@@ -91,6 +93,8 @@ programming:
   when to stop repeating step 3.
 
 .. index:: data representation
+   Jaquard loom
+   Pascaline
 
 .. _data-representation:
 
@@ -146,16 +150,17 @@ For example -3 is represented like unsigned 256 - 3 = 253: 11111101 in binary.
 .. index:: mantissa and exponent
 
 Limited precision approximation of real numbers are stored in something like
-scientific notation, except in binary,  roughly :math:`(m)2^e`,
-with a mantissa m and exponent e (and a sign). Both e and m have
+scientific notation, except in binary,  roughly :math:`\pm(m)2^e`,
+with a sign, mantissa m and exponent e. Both e and m have
 fixed numbers of bits, so the limited options for the 
 mantissa restricts the *precision* of the numbers, and the limited options
 for the exponent restricts the *range*. Data on these limits for 
 different sized numeric codes is in :ref:`value-types`.  
 
-Once you have numbers, all sorts of other kinds of data can be encoded:  Characters
-like on your keyboard each have a numerical code associated with it.  For
-example the ASCII code for the letter A is 65.  Images are often 
+Once you have numbers, all sorts of other kinds of data can be encoded:  
+Characters
+like on your keyboard each have a numerical code associated with each one.  For
+example the unicode for the letter A is 65.  Images are often 
 represented as a sequence of colored pixels.  Since the human eye is only 
 sensitive to three specific colors, red, green, and blue, 
 a pixel is represented by a numerical intensity
@@ -199,7 +204,9 @@ was an *assembler*, a program that took easier to understand instructions
 and automatically translated them into machine language.  An example 
 assembler instruction would be like
 
-    MOV 13, X
+.. code-block:: none
+
+   MOV 13, X
     
 to move the value 13 to a storage location identified by the name X.
 
@@ -211,6 +218,8 @@ The next big step past assembler was the advent of
 *high level* languages, with instructions more like normal mathematical or 
 English expressions.  Examples are Fortran (1954) and Cobol (1959).  
 A Fortran statement for calculating a slope like
+
+.. code-block:: none
 
    S=(Y-V)/(X-U)
 
@@ -265,7 +274,7 @@ sequence:
    seeing the latest version leads both sides to have a clearer vision.
    Then the previous process steps are repeated, iteratively refining
    the product.
-#. After a production version is out there may be later versions and error
+#. After a production version is out, there may be later versions and error
    fixes, again cycling back to the earlier steps.
  
 Note that very important parts of this process are not centered on coding, 

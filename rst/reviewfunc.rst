@@ -100,9 +100,10 @@ Chapter Review Questions
                   Console.WriteLine(x + " " + y);   // 11
                }                                    // 12
    
-#.  Consider part c. of the previous problem.  Note the line numbers as comments.
+#.  In the previous problem consider the common code with part c.  
+    Note the line numbers as comments.
    
-    i.    In what line(s) is ``Q`` defined?
+    i.    In what line(s) is ``Q`` being defined?
     #.    In what line(s) is ``Q`` called?
     #.    What is the return type of ``Q``?
     #.    What is a formal parameter to ``Q``?

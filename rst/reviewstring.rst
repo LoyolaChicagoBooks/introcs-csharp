@@ -24,7 +24,7 @@ Chapter Review Questions
         string a = "hi", b = a.ToUpper();
         Console.WriteLine(a+b);
 
-#.  Are string mutable or immutable: which?
+#.  Are strings mutable or immutable: which?
 
 #.  What is the distinction syntactically between the use of a
     method and a property?

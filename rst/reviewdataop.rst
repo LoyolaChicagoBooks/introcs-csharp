@@ -33,7 +33,7 @@ Chapter Review Questions
 #.  For the legal pairs above, what could the type of the variable have been
     declared?  You can check them in csharp, giving the declaration first.
 
-#.  What are the final values of ``x`` and ``y``?  after this fragment? ::
+#.  What are the final values of ``x`` and ``y``  after this fragment? ::
 
         int x = 3
         int y = x + 2;

@@ -252,6 +252,8 @@ The symbol used for multiplication in C# is ``*`` an asterisk.  The ``+``
 and parentheses serve their normal mathematical purpose.  In the sample run,
 the value of ``2 * (length + width) * HEIGHT`` is 
 
+.. code-block:: none
+
    2 * (20.5 + 10) * 8
    
 which simplifies to 488.
@@ -275,8 +277,8 @@ it has a special string meaning:  It converts the next part
 in a manner appropriate for strings, *concatenating* them.  That means joining
 them together, end to end.  
 
-The ``+ " square feet."`` then tacks on the last string.  In the sample output
-you see what is printed:
+The ``+ " square feet."`` then tacks on the last part to the string.  
+In the sample output you see what is printed:
 
 .. code-block:: none
 
@@ -319,7 +321,9 @@ where every character is important.
 Also the compiler does not require whitespace around special symbols
 like ``{};().=*+,``.  Hence  
 the :repsrc:`painting/painting.cs` program above would be just as well translated 
-by the compiler if it were written as::
+by the compiler if it were written as:
+
+.. code-block:: none
 
     using System;class Painting{static void Main(){double width,length
     ,wallArea,ceilingArea;string widthString,lengthString;double HEIGHT 

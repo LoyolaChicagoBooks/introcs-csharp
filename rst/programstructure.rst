@@ -116,8 +116,8 @@ the squiggle is just because you are in the middle of something, but if it
 is still there after you complete a whole statement, there may well
 be an issue to look at.  Sometimes fixing the issue makes the annotation
 go away, but sometimes your program may really be fixed, 
-and the error annotation
-does not go away until you formally compile/build the whole program.
+even though the error annotation
+does not go away *until you formally compile/build the whole program*.
 This annoying ambiguity leads some people to turn off error annotations,
 and just let
 the system note errors after a complete compile cycle.
@@ -136,10 +136,10 @@ examples.
 
 Another important way to learn about the error messages is to leverage your
 experience:  After 
-you have eventually found how to fix your error, *take the extra time* to
+you have eventually found how to fix your error, *allow the extra time* to
 use your new knowledge,
-look back at the original error message,
-and see if the error description text makes more sense.  
+look *back* at the original error message,
+and see if the error description text makes more sense now.  
 That should help next time,
 (and there usually is a next time). Even when the error description still 
 makes no particular sense, you may well get into the same situation again,
@@ -197,9 +197,9 @@ variable is not defined. For instance after line 7 is executed, a
 value is given to x, but y is still undefined. Then y gets a value
 in line 8. 
 The comment space can be used any time
-it is helpful.  If should be used in particular when something
+it is helpful.  In particular it should be used  when something
 is printed, since this
-important action does not affect the variable list.
+important action does *not* affect the variable list.
 
 ====  ==  ==  =======================================
 Line  x   y   Comment
@@ -207,9 +207,9 @@ Line  x   y   Comment
 5     \-  \-  Start at beginning of Main
 7     3   \-  initialize x
 8     3   5   5=3+2, using the value of x from the previous line
-9     3   10  10=2*5 on the right, use the value of y from the
+9     3   10  10=2*5 on the right; use the value of y from the
               previous line
-10    7   10  7=10-3 on the right, use the value of x and y from the
+10    7   10  7=10-3 on the right; use the value of x and y from the
               previous line
 11    7   10  print: 7 10
 ====  ==  ==  =======================================
@@ -259,4 +259,27 @@ Line  a   b   Comment
 11    
 12    
 ====  ==  ==  =======================================
+
+Another Play Computer Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A silly one on the same line:
+:repsrc:`update_vars3/update_vars3.cs`:
+ 
+.. literalinclude:: ../source/examples/update_vars3/update_vars3.cs
+   :linenos:
+
+Play computer, completing the table
+
+====  ========  ======  =============================
+Line  s         t       Comment
+====  ========  ======  =============================
+5     \-        \-      Start at beginning of Main
+7      
+8     
+9     
+10    
+11    
+12  
+====  ========  ======  =============================
 

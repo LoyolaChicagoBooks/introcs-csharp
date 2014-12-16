@@ -133,6 +133,8 @@ printed will be true: ``x`` is not positive, and the test of ``y`` was skipped.
    if; need braces
    braces needed with if
 
+.. _missing-braces:
+
 Missing Braces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

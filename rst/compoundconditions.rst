@@ -150,3 +150,39 @@ possible combinations of age and citizenship.  Try to avoid that.
 Caution:  be sure to do exhaustive testing.  It is easy to write code
 that is correct for *some* inputs, but not all.
 
+.. index:: implication operator
+
+Implication Exercise
+~~~~~~~~~~~~~~~~~~~~~~~
+
+We have introduced C# Boolean operators for AND, OR, and NOT. 
+There are other Boolean operators important in logic, 
+that are not directly given as a C# operator.  
+One example is "implies", also expressed
+in a logical if-then statement:  If I am expecting rain, then I am carrying an
+umbrella.  Otherwise put:  "I am expecting rain" *implies* 
+"I am carrying an umbrella". The first part is a Boolean expression called the
+*hypothesis*, and the second part is called the *conclusion*.  In general, when
+A and B are Boolean expressions, "A implies B" is also a Boolean expression.  
+
+Just as the truth of a compound Boolean expression like "A and B" depends on the
+truth value of the two parts, so with *implies*:
+If you are using good logic, and you start with a true assertion, 
+you should only be able to conclude something else true, so it is true that 
+"true implies true".  If you start with garbage you can use that false statement
+in a logical argument and end up with something either false or true:
+"false implies false" and "false implies true" are both true. The only thing
+that should not work is to start with something true and conclude 
+something false.  If that were the case, logical arguments would be useless,
+so "true implies false" is false.  There is no C# operator for "implies", but
+you can check all four cases of Boolean values for A and B to see that 
+"A implies B" is true exactly when "not A or B" is true.  We can 
+express this in C# as ``!A || B``.  
+
+So here is a silly little exercise illustrating both implication and using
+the C# Boolean operators:  Ask the user whether "I am expecting rain" is true.
+(We have the UI function Agree.)  Then check with the user whether 
+"I am carrying an umbrella."  Then conclude and print out 
+whether the implication "If I am expecting rain, then I am carrying an
+umbrella." is true or not in this situation.
+

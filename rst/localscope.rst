@@ -23,8 +23,9 @@ like ``"\n"``. They would not conflict. They would be
 independent. This avoids lots of errors!
 
 For example, the following code in the example program
-:repsrc:`bad_scope/bad_scope.cs` causes a compilation error. 
-Read it and try to run it, and see:
+:repsrc:`bad_scope/bad_scope.cs` causes a compilation error
+if the last line is uncommented. 
+Read it, uncomment the line, and try to run it, and see:
 
 .. literalinclude:: ../source/examples/bad_scope/bad_scope.cs
 

@@ -122,9 +122,9 @@ Compare :repsrc:`return2/return2.cs` and :repsrc:`addition1/addition1.cs`,
 from the previous
 section. Both use functions. Both print, but where the printing *is
 done* differs. The function ``SumProblem`` prints directly inside
-the function and returns nothing explicitly. On the other hand
+the function and returns nothing. On the other hand
 ``LastFirst`` does not print anything but returns a string. The
-caller gets to decide what to do with the string, and above it is
+caller gets to decide what to do with the returned string, and above it is
 printed in ``Main``.
 
 .. index:: example; addition2.cs
@@ -137,7 +137,7 @@ if each does just one unified thing.  The function
 SumProblem in :repsrc:`addition1/addition1.cs` does two thing:  
 It creates a sentence,
 and prints it.  If that is all you have, you are out of luck if you want
-to do something different with the sentence string.  A better way is
+to do something different with the sentence string.  A better approach is
 to have a function that just creates the sentence, and returns it for
 whatever further use you want.  After returning that value,
 printing is one possibility, done in
@@ -156,7 +156,11 @@ and not remember it for later arbitrary use.
 
 .. _string-format:
    
-We introduce 
+It is common to want to construct and immediately print a string,
+so having ``Console.Write`` is definitely handy when we want it.,
+However it is an example of combining two separate steps!  Sometimes
+(like here) we just want to have the resulting string, and do something else
+with it.  We introduce 
 the C# library function  ``string.Format``, which does just what we want:  
 The parameters
 have the same form as for ``Console.Write``, but the formatted string is
@@ -173,12 +177,37 @@ The only caveat with ``string.Format`` is that
 there is *no* special function corresponding to ``Console.WriteLine``,
 with an automatic terminating newline.
 You can generate a newline with string.Format:  Remember the
-escape code ``"\n"``.  Put it at the end to go on to a newline.
+escape code ``"\n"``.  Put it at the end to go on to a new line.
 
 
 **In class recommendation**:  Improve example :repsrc:`painting/painting.cs`
-with functions.  Copy it to a file :file:`painting_input.cs` in your
+with a function used for repeated similar operations.  
+Copy it to a file :file:`painting_input.cs` in your
 own project and modify it.
+
+.. _InterviewStringEx:
+	
+Interview String Return Exercise/Example
+------------------------------------------
+
+Write a program by that accomplishes the same thing as
+:ref:`InterviewProblem`, but introduce a function 
+``InterviewSentence`` that takes name
+and time strings as parameters and returns the interview sentence string.
+For practice use ``string.Format`` in the function.  
+With this setup you can manage input from the user and output to the
+screen entirely in ``Main``, while using ``InterviewSentence`` to generate
+the sentence that you want to *later* print. 
+
+(Here we are having you work on getting used to 
+function syntax while keeping the
+body of your new function very simple.  Combining that with longer, more
+realistic function bodies is coming!)
+
+If you want a further example on this idea of returning 
+something first and then using the result, 
+or if you want to compare your work to ours,
+see our solution, :repsrc:`interview2/interview2.cs`.
 	
 .. _QuotientStringEx:
 	

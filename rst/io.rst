@@ -130,8 +130,8 @@ want to have your own copies to test and modify for related work.
 All of our examples are set up in a Xamarin Studio solution in our 
 `zip file that you can download <https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/archive/master.zip>`_.
 
-The zip file and the folder it unzips to have a ridiculously long name 
-starting with "loyolachicagocs...".  We suggest you *rename the folder*
+The zip file and the folder it unzips to have the long name 
+introcs-csharp-examples-master.  We suggest you *rename the folder* simply
 ``examples`` to match the name of the Xamarin Studio solution it contains.  
 
 There are various way to access our files.  
@@ -213,11 +213,39 @@ solution ("work", discussed in the first lab in the :ref:`steps`).
    right beside your work folder.)
 #. A further dialog window pops up, with the choice **Copy** selected.
    Click to approve copy (as opposed to move or link).  
-#. Now the desired files should appear in your project.  
-   If you intended to copy everything for a project, test by running the project.
+#. Now the desired files should appear in your project, 
+   along with the unfortunate default Program.cs.  If you have not already 
+   deleted Program.cs, as described in :ref:`steps`, do it now.
+#. If you intended to copy everything for a project, test by running the project.
    Even our stub projects should compile, though a stub project may not do anything
    when you run it until you add your own code to it.  To make successful incremental
    additions, it is always good to start from something that compiles!
+
+When creating modifications of previous examples, like the exercise below,
+you can often save time by copying in the related example, particularly avoiding
+retyping the standard boiler plate code at the top.  However, when you are first
+learning and getting used to new syntax, typing reinforces learning.
+Perhaps after looking over the related example, you are encouraged to write your 
+version from scratch, to get used to all the parts of the code.  Later, when 
+you can produce such text automatically, feel free to switch to just
+copying from a place that you had it before.
+
+
+.. _InterviewProblem:
+
+Interview Exercise/Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that prompts the user for a name (like Elliot)  and a time
+(like 10AM) and prints out a sentence like:  
+
+.. code-block:: none 
+
+   Elliot has an interview at 10AM.
+
+If you are having a hard time and want a further example, 
+or want to compare to your work,
+see our solution, :repsrc:`interview/interview.cs`.
 
 .. _AdditionProblem:
 

@@ -6,16 +6,17 @@ String Special Cases
 
 .. index::
    escape code \
-   single: \; escape code
+   single: \; character escape code
+   character escape code; \
    
 There are some special cases for creating literal strings.  
 For instance you might want quotes
 as characters inside your string.  In this case you need special 
-symbolism using a string *escape code*, starting with  ``\`` backslash.
+symbolism using a character *escape code*, starting with  ``\`` backslash.
 Then the character after the backslash has a special meaning.
 
 For instance a quote character after a backslash, ``\"``,
-does not mean the end of the string.  It means a quote character
+does not mean the end of a string literal.  It means a quote character
 is literally used *in* the string:  ``"He said, \"Hello!\", over and over."``
 
 We can illustrate with csharp, first with a simple string:
@@ -30,17 +31,19 @@ We can illustrate with csharp, first with a simple string:
 There are many other special cases of escape code.  The main ones
 you are likely to use are:
 
-+-------------+-------------------+
-| Escape code | Meaning           |
-+=============+===================+
-| ``\"``      | ``"`` (quote)     |
-+-------------+-------------------+
-| ``\\``      | ``\`` (backslash) |
-+-------------+-------------------+
-| ``\n``      | newline           |
-+-------------+-------------------+
++-------------+---------------------------------------+
+| Escape code | Meaning                               |
++=============+=======================================+
+| ``\"``      | ``"`` (quote)                         |
++-------------+---------------------------------------+
+| ``\'``      | ``'`` ( single quote in char literal) |
++-------------+---------------------------------------+
+| ``\\``      | ``\`` (backslash)                     |
++-------------+---------------------------------------+
+| ``\n``      | newline                               |
++-------------+---------------------------------------+
 
-Hence if you really want a backslash character in a literal string, 
+Hence if you really want a backslash character in a literal, 
 you need to write two of them.
 
 The newline character indicates further text will appear on the next line down
