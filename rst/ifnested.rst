@@ -71,7 +71,8 @@ nesting ``if`` statements, thinking about the two aspects separately::
 
 The outer |if-else| determines whether the action is important, so the inner
 conditions only need to deal with urgency.  Also note that in executing
-this version there are never mor than two short conditions.  In the first version,
+this version there are never more than two short conditions evaluated.  
+In the first version,
 you may have to go through all three conditions.  Both approaches work.  
 Which is clearer to you?
      
