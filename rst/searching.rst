@@ -52,16 +52,18 @@ Here's what it does:
    :end-before: chunk
    :linenos:
 
-The following code shows how to use the linear search: 
+The following code in ``Main`` of :repsrc:`searching/searching_demo.cs`
+demonstrates how to use the linear search: 
 
-.. literalinclude:: ../source/examples/searching/searching.cs
-   :start-after: chunk-driver-begin
+.. literalinclude:: ../source/examples/searching/searching_demo.cs
+   :start-after: chunk
    :end-before: chunk
    :linenos:
 
-In this example, we ask the user to enter an array of data by entering
-the values space separated on a line. To convert to an int array we
-use the function ``IntsFromString`` discussed in :ref:`split`.
+In this example, we ask the user to enter all the data for the array
+on one line. To convert the string to an int array we
+use the result of the :ref:`intsfromstring_exercise` that we put in
+:repsrc:`searching/extract_from_string.cs`.
 
 To allow easy termination of the testing loop, we do not use ``PromptInt``
 for ``searchItem``, because any
