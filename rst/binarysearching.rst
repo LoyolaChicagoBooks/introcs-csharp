@@ -54,7 +54,8 @@ With the data above, you see that the algorithm determined the item within 3 ste
 To reduce to one element
 to consider, it could be 4 or 5 steps.  Note that :math:`4 < log_2 17 < 5`.
 
-Now that we've seen how the method works, here is the code that does the work:
+Now that we've seen how the method works, here is the code 
+in :repsrc:`binary_searching/binary_searching.cs` that does the work:
 
 .. literalinclude:: ../source/examples/binary_searching/binary_searching.cs
    :start-after: chunk-binarysearch-begin
@@ -89,15 +90,15 @@ Of course we generally would be searching in an array with multiple elements.
 It is still important to check *edge cases*:  Check that the code correctly 
 returns -1 if the array has length 0 (a legal length).
 
-Similar to linear searching, we provide a main program that tests it out.  The whole code
-is in :repsrc:`binary_searching/binary_searching.cs`.  It uses 
+Similar to linear searching, we provide a main program that tests it out.  
+in :repsrc:`binary_searching/binary_searching_demo.cs`.  It uses 
 an elaboration of binary search that prints
 out the steps visually, as in the introduction to this section. 
 It also references previous example projects: functions from files 
-:repsrc:`searching/searching.cs` and :repsrc:`sorting/sorting.cs`.
+:repsrc:`searching/extract_from_string.cs` and :repsrc:`sorting/sorting.cs`.
 
-.. literalinclude:: ../source/examples/binary_searching/binary_searching.cs
-   :start-after: chunk-driver-begin
+.. literalinclude:: ../source/examples/binary_searching/binary_searching_demo.cs
+   :start-after: chunk
    :end-before: chunk
    :linenos:
 
@@ -116,6 +117,7 @@ Instead of just returning -1 if ``item`` is not in the array, return
 
 Modify :repsrc:`binary_searching/binary_searching.cs` into 
 :file:`binary_searching2.cs` so this extra information is returned
-(and indicated clearly in the main testing program).
+(and indicated clearly in a main testing program derived from
+:repsrc:`binary_searching/binary_searching_demo.cs`).
 This should *not* require a change to the ``while`` loop, *nor* 
 require any added loop. 

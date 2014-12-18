@@ -26,6 +26,10 @@ by Niklaus Wirth [WirthADP]_, who invented the Pascal language. (We have also ad
 some examples from Thomas W. Christopher's [TCSortingJava]_ animated sorting algorithms
 page.
 
+The sorts and supporting functions are all in 
+:repsrc:`sorting/sorting.cs`, but we start one bit at a time: 
+
+
 .. index:: exchanging array elements
    array; exchange elements
    
@@ -553,6 +557,8 @@ There are a few things to note in this code:
    Hence we specify the same seed each time.
    (We could also copy the data, but it is kind of a waste of memory.)
 
+This completes the discussion of the ``Sorting`` class in 
+:repsrc:`sorting/sorting.cs`.
 
 .. index:: Stopwatch
    performance - Stopwatch and TimeSpan
@@ -560,6 +566,10 @@ There are a few things to note in this code:
    
 Timing
 -------
+
+Separate from the basic sorts is the idea of checking their performance.
+The rest of the code is in the driver class in
+:repsrc:`sorting/sorting_demo.cs`. 
 
 We need the ability to time the various sorting algorithms. Luckily, the 
 .Net framework/library gives us a
@@ -581,7 +591,7 @@ of each of the sorting algorithms.
 As all of the tests follow the same pattern, 
 we're going to look at the basic variable setup first, and then one test.
 
-.. literalinclude:: ../source/examples/sorting/sorting.cs
+.. literalinclude:: ../source/examples/sorting/sorting_demo.cs
    :start-after: chunk-drivervars-begin
    :end-before: chunk
 
@@ -600,7 +610,7 @@ The variables declared here are to set up the apparatus:
 
 - ``data``:  The array to be sorted.
 
-.. literalinclude:: ../source/examples/sorting/sorting.cs
+.. literalinclude:: ../source/examples/sorting/sorting_demo.cs
    :start-after: chunk-driverparameters-begin
    :end-before: chunk
 
@@ -610,7 +620,7 @@ often try to make it possible to run them with minimal user interaction. For the
 of teaching, we wanted to make it possible to run it with or without command-line parameters.
 
 
-.. literalinclude:: ../source/examples/sorting/sorting.cs
+.. literalinclude:: ../source/examples/sorting/sorting_demo.cs
    :start-after: chunk-driverapparatus-begin
    :end-before: chunk
 
@@ -619,7 +629,7 @@ for timing first, run the desired sorting algorithm (bubble sort in this case),
 and report the timing results.  Since the timing setup and reporting is 
 always done the same way, they actions are placed in helping methods:
 
-.. literalinclude:: ../source/examples/sorting/sorting.cs
+.. literalinclude:: ../source/examples/sorting/sorting_demo.cs
    :start-after: chunk timing
    :end-before: chunk
 
@@ -638,7 +648,7 @@ After the sort, ``TimeResult``:
 #. Prints the performance results in seconds.
 
 
-You can find the whole program in :repsrc:`sorting/sorting.cs`. 
+You can see all of the tests in :repsrc:`sorting/sorting_demo.cs`. 
 
 Running the Code
 ----------------------

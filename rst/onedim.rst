@@ -309,7 +309,7 @@ sequences for the user.  There is no corresponding string displayed by C# Write 
 Also see that the string is split at *each* ``separator``, 
 even if that produces empty strings.
 
-.. index:: IntsFromString
+.. index:: IntsFromString1
 
 Split is useful for parsing a line with several parts.  You might get a group of 
 integers on a line of text, for instance from::
@@ -322,13 +322,19 @@ with ``Split``, *and* you probably want further processing:
 If you want them as integers, not strings, you must convert each one separately.  
 
 It is useful to put this idea in a function.
-See the type returned.  It is an array ``int[]`` for the int results:
+See the type returned.  It is an array ``int[]`` for the int results::
 
-.. literalinclude:: ../source/examples/searching/searching.cs
-   :start-after: IntsFromString chunk
-   :end-before: chunk
-
-In a call to ``IntsFromString("2 5 22")``,  ``integers`` would be 
+      /// Return ints taken from space separated integers in a string.
+      public static int[] IntsFromString1(string input)
+      {
+         string[] integers = input.Split(' ');
+         int[] data = new int[integers.Length];
+         for (int i=0; i < data.Length; i++)
+            data[i] = int.Parse(integers[i]);
+         return data;
+      }
+      
+In a call to ``IntsFromString1("2 5 22")``,  ``integers`` would be 
 an array containing strings ``"2"``, ``"5"``, and ``"22"``.  
 We need the conversions to ``int`` to go in a new array that we call ``data``.
 We must set its length, which will clearly be the same as for ``integers``,
@@ -348,27 +354,54 @@ Remember some patterns illustrated here,
 * The use of the same index variable in more than one array is a standard way to have 
   related entries in corresponding positions of the arrays.
   
-We will use this function for testing in :ref:`searching`.
-
-.. index:: exercise; GetToken
-   GetToken exercise
+.. index:: exercise; ExtractItems
+   ExtractItems exercise
    
-GetTokens Exercise
+ExtractItems Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+A string intended to indicate a sequence of items could be like in the 
+discussion  above of ``IntsFromString1``.  As illustrated there, individual items
+are separated out neatly with ``Split``.  If you want to act on a user-generated
+string, it is probably better to allow more leeway:  
+Commas are often used to separate items or comma with blank, or several blanks.
+
+In this exercise write a version that will accept all those variations
+and return an array of non-empty strings, without the commas or blanks.
 Complete this function::
 
-   ///Return an array with the string split at blanks
-   /// into positive length tokens.
-   /// Example:  GetTokens("  extra  spaces ") returns an
-   /// array containing {"extra", "spaces"} 
-   public static string[] GetTokens(string s)
+   /// Return an array of non-empty strings that are separated
+   /// in the original string by any combination of commas and blanks.
+   /// Example:  ExtractItems("  extra  spaces,plus,  more, ") returns an
+   /// array containing {"extra", "spaces", "plus", "more"} 
+   public static string[] ExtractItems(string s)
    
-Hint: It is harder now to get the right length for your new array:
-After splitting at ``' '``, you can count the non-empty strings in the result.
-Then create your new array and copy only non-empty strings.
-Handling the indices for the new array also gets more complicated.
-     
+Hints: It is possible to deal with more than one separator character, but
+the simplest thing likely is to use string method ``Replace`` 
+and just replace all the
+commas by spaces.  If you then ``Split`` on spaces you get all the non-empty
+strings that you want *and* maybe a number of
+empty strings.  You need to create a final array with just the nonempty
+strings from the split.  Since you need to create the array to be returned,
+you need to calculate its size, create it, and then populate it
+with just the nonempty string pieces.
+Handling the indices for the new array also adds complication.
+
+.. _intsfromstring_exercise:
+
+IntsFromString Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a function
+``IntsFromString`` with a corresponding signature and intent
+like ``IntsFromString1``, above, but make it
+more robust by allowing all the separator combinations of 
+``ExtractItems`` from the last exercise, so
+``IntsFromString(" 2, 33  4,55 6 77  ") returns an array containing ``int``
+values 2, 33, 4, 55, 6, 77.  (Don't reinvent the wheel: call ``ExtractItems``.)
+Also write a ``Main`` function so you can demonstrate the use of 
+``IntsFromString``.
+       
 .. index:: alias
 
 .. _alias:
