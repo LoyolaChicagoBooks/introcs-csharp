@@ -3,5 +3,5 @@
 BUILDDIR=$1
 
 if [ -d "$BUILDDIR" ]; then
-   find $BUILDDIR -name bootstrap.min.css -exec ./cssFix.py {} \; -print
+   find $BUILDDIR -name bootstrap.min.css -exec ./cssFix.py {} \; 
 fi

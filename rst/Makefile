@@ -54,7 +54,6 @@ html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	./cssFix.sh $(BUILDDIR)
-	@echo css index fix done
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 #html2:
