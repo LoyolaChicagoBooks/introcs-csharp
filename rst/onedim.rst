@@ -72,7 +72,8 @@ of the array - this length is unchangeable after creation.
 .. index::
    single: [ ]; array indexing
    array; indexing [ ]
-
+   index; array
+   
 The elements inside an array can to referenced with the same index notation used
 earlier for strings. :: 
 
@@ -185,6 +186,59 @@ This should be clear.  Now think first, what should ``a[i+1]`` be?
 In steps:  ``a[i+1]`` is ``a[2+1]`` is ``a[3]`` is -4. Be careful,
 ``a[i+1]`` is *NOT* ``a[i] + 1`` (which would be 16). 
 
+
+.. index:: array; as parameter
+   example; PrintStrings
+
+.. _printstrings:
+
+The code above to print each element of an array performs a 
+unified and possibly useful operation, so it would make sense to
+encapsulate it into a function.  A function can take any type as a
+parameter, so an array type is perfectly reasonable!  Above we
+printed each element of an array of integers.  This time lets choose strings,
+so the formal parameter is an array of strings:  ``string[]``.
+
+.. literalinclude:: ../source/examples/string_array/string_array.cs
+   :start-after: chunk PrintStrings
+   :end-before: chunk
+   :linenos:
+
+With this definition, the code fragment  ::
+
+     string[] hamlet = {"To be", "or not", "to be!"};
+     PrintStrings(hamlet);
+     
+would print:
+
+..  code-block:: none
+
+    To be
+    or not
+    to be!
+
+Here we are just reading the data from the array parameter.  
+We will see that there are more wrinkles to array parameters in :ref:`alias`.
+
+.. index:: function; return array
+   array; returned by method
+  
+An array type can also be
+returned like any other type.  Examine the function definition:
+  
+.. literalinclude:: ../source/examples/string_array/string_array.cs
+   :start-after: chunk InputNStrings
+   :end-before: chunk
+
+This code follows a standard pattern for functions returning an array:
+  
+* In order to return an array, we must *first create* a new array
+  with the ``new`` syntax.  We must set the proper length (``n`` here).  
+* And we are not done with one line of creation:  Since the array has 
+  multiple parts, we need a loop to assign all the values.  We have a simple
+  ``for`` loop to assign to each element in turn.
+* Finally we must return the array that we created!
+
 .. index::
    command line; parameter
    parameter; command line to Main
@@ -275,6 +329,46 @@ An alternative when you want to use command line parameters repeatedly is
 If one run leads you to go back and fix a bug, go back to step one to
 build the program again, and continue executing in the same terminal window.
 
+Modified Parameter Print Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Modify a copy of :repsrc:`print_param/print_param.cs` to contain the earlier
+example function :ref:`PrintStrings <printstrings>`, and call it.
+
+.. index:: exercise; command line adder
+   command line adder exercise
+   Main; parameter exercise
+   parameter; for Main exercise
+
+.. _command-line-adder-exercise:
+
+Command Line Adder Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program ``adder.cs`` that calculates and prints the sum of 
+command line parameters, so if you make the command line parameters
+in Xamarin Studio be 
+
+..  code-block:: none
+
+    2 5 22
+
+then the program prints 29.
+
+Do try running from the command line:  If you compiled with
+Xamarin Studio, that means going down to the bin/Debug directory.
+Recall Xamarin Studio for Windows produces a Windows executable,
+not a Mono file, so you can run
+    
+..  code-block:: none
+
+    adder 2 5 22
+    
+but on a Mac you need to run with mono:
+
+..  code-block:: none
+
+    mono adder.exe 2 5 22
 
 .. index:: string; Split
    Split method for strings
@@ -310,8 +404,11 @@ Also see that the string is split at *each* ``separator``,
 even if that produces empty strings.
 
 .. index:: IntsFromString1
+   index; parallel arrays
 
-Split is useful for parsing a line with several parts.  You might get a group of 
+.. _ints_from_string1:
+
+``Split`` is useful for parsing a line with several parts.  You might get a group of 
 integers on a line of text, for instance from::
 
          string input = UI.PromptLine(
@@ -319,7 +416,7 @@ integers on a line of text, for instance from::
 
 To extract the numbers, you want to the separate the entries in the string
 with ``Split``, *and* you probably want further processing: 
-If you want them as integers, not strings, you must convert each one separately.  
+If you want them as integers, not strings, you must convert each one separately.
 
 It is useful to put this idea in a function.
 See the type returned.  It is an array ``int[]`` for the int results::
@@ -345,63 +442,43 @@ string in ``integers`` into an ``int``,
 and place the ``int`` in the corresponding location in ``data``.  We need to return
 ``data`` at the end to make it accessible to the caller.
 
-Remember some patterns illustrated here,
-*that you will use over and over*:
+Again we use the basic pattern for returning an array.  
 
-* You can return any type, including an array type.
-* If you want to return a new array, you must first create an array of the proper 
-  length before you can make assignments to individual elements.
-* The use of the same index variable in more than one array is a standard way to have 
-  related entries in corresponding positions of the arrays.
+Dealing with arrays is hard for many students for several reasons:
+
+*  You have new array declaration and creation syntax.
+*  Array are compound objects, so there is a lot to think about.
+*  Loops are hard for many people, and you almost always deal with loops.
+*  You usually must deal with index variables, and there are many 
+   patterns.
+
+The last point is significant, 
+so it is important to note the special pattern in the example above:
+
+.. note::
+   The use of the same index variable for more than one array is 
+   a standard way to have 
+   *related* entries in *corresponding* positions in the arrays.
+
+We will introduce a refinement of this function in the
+:ref:`intsfromstring_exercise`.  It will rely on a more complicated
+index-handling pattern.
+
+.. _new_upper:
+
+NewUpper Exercise
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete the definition for
+
+.. literalinclude:: ../source/examples/string_array/string_array.cs
+   :start-after: chunk NewUpper
+   :end-before: {
+
+and write a ``Main`` driver to demonstrate it.  Use the example function
+:ref:`PrintStrings <printstrings>` in your demonstration.
+
   
-.. index:: exercise; ExtractItems
-   ExtractItems exercise
-   
-ExtractItems Exercise
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-A string intended to indicate a sequence of items could be like in the 
-discussion  above of ``IntsFromString1``.  As illustrated there, individual items
-are separated out neatly with ``Split``.  If you want to act on a user-generated
-string, it is probably better to allow more leeway:  
-Commas are often used to separate items or comma with blank, or several blanks.
-
-In this exercise write a version that will accept all those variations
-and return an array of non-empty strings, without the commas or blanks.
-Complete this function::
-
-   /// Return an array of non-empty strings that are separated
-   /// in the original string by any combination of commas and blanks.
-   /// Example:  ExtractItems("  extra  spaces,plus,  more, ") returns an
-   /// array containing {"extra", "spaces", "plus", "more"} 
-   public static string[] ExtractItems(string s)
-   
-Hints: It is possible to deal with more than one separator character, but
-the simplest thing likely is to use string method ``Replace`` 
-and just replace all the
-commas by spaces.  If you then ``Split`` on spaces you get all the non-empty
-strings that you want *and* maybe a number of
-empty strings.  You need to create a final array with just the nonempty
-strings from the split.  Since you need to create the array to be returned,
-you need to calculate its size, create it, and then populate it
-with just the nonempty string pieces.
-Handling the indices for the new array also adds complication.
-
-.. _intsfromstring_exercise:
-
-IntsFromString Exercise
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Write a function
-``IntsFromString`` with a corresponding signature and intent
-like ``IntsFromString1``, above, but make it
-more robust by allowing all the separator combinations of 
-``ExtractItems`` from the last exercise, so
-``IntsFromString(" 2, 33  4,55 6 77  ") returns an array containing ``int``
-values 2, 33, 4, 55, 6, 77.  (Don't reinvent the wheel: call ``ExtractItems``.)
-Also write a ``Main`` function so you can demonstrate the use of 
-``IntsFromString``.
-       
 .. index:: alias
 
 .. _alias:
@@ -409,7 +486,8 @@ Also write a ``Main`` function so you can demonstrate the use of
 References and Aliases
 -------------------------
 
-Object variables, like arrays, are references, and this has important implications for
+Object variables, like arrays, are references, 
+and this has important implications for
 assignment.
 
 With a primitive type like an ``int``, an assignment copies the data:
@@ -449,7 +527,8 @@ the formal parameter name is an **alias** for the actual parameter name.
 .. note::
    If an array passed as a parameter to a method has elements changed in the
    method, then the change affects the actual parameter array.
-   The change *remains* in the actual parameter array *after* the method has terminated.
+   The change *remains* in the actual parameter array *after* 
+   the method has terminated.
 
 .. index:: example; Scale
    Scale example
@@ -471,6 +550,22 @@ The fragment::
    Scale(nums, 5);
    
 would *change* nums, so it ends up containing elements 10, 20, and 5.
+
+
+.. _all_to_upper:
+
+AllToUpper Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Complete the function with this heading:
+
+.. literalinclude:: ../source/examples/string_array/string_array.cs
+   :start-after: chunk AllToUpper
+   :end-before: {
+
+Write a ``Main`` method to demonstrate it.  Use the example function
+:ref:`PrintStrings <printstrings>` to show off your result.
+
 
 .. index::
    single: array; anonymous initialization
@@ -496,16 +591,28 @@ last example could be shortened to  ::
 
     SomeFunc(new[] {3, 1, 7});
 
-It is essential to include the ``new int[]`` or ``new[]``, not just the ``{3, 1, 7}``.
-
+It is essential to include the ``new int[]`` or ``new[]``
+*in addition to*  the ``{3, 1, 7}``.
 
 Such an approach could also be used if you want to return a fixed
 length array, where you have values for each parts, as in::
     
     int minVal = ...
     int maxVal = ...
-    
+    // ...
     return new[] {minVal, maxVal};
+
+
+Testing NewUpper Exercise/Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Elaborate :ref:`new_upper` so your ``Main`` method calls
+``NewUpper`` with an anonymous array as part of the demonstration. 
+
+
+You can see our code for all the string array exercises in example project
+:repsrc:`string_array/string_array.cs`, and with the ``Main`` 
+demonstration method in :repsrc:`string_array/string_array_demo.cs`.
     
 .. index:: OOP; default value
    default value in instance 
@@ -535,47 +642,150 @@ of objects always get a specific value, not random data.  Here are the defaults:
     
    The error is because ``null`` is not an object - it does not have a ``Length``
    property.  If, for example, 
-   you want an array of empty strings you would need a loop::
+   you want an array of empty strings you would need to initialize it with
+   a loop::
     
        string[] words = new string[10];
        for (int i = 0; i < words.Length; i++) {
           words[i] = "";
        }
-        
-.. index:: exercise; command line adder
-   command line adder exercise
-   Main; parameter exercise
-   parameter; for Main exercise
 
-.. _command-line-adder-exercise:
+Array Examples and Exercises
+------------------------------
+
+.. index:: index; variable not in loop heading
+   example; remove_zeros.cs
    
-Command Line Adder Exercise
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We have been using array index variables all though this chapter.  
+We have been getting you started in situations where
+they all just advanced continually in a 
+``for`` loop heading.  The fanciest situations have been where the same index
+is used to reference more than one array in parallel.
 
-Write a program ``adder.cs`` that calculates and prints the sum of 
-command line parameters, so if you make the command line parameters
-in Xamarin Studio be 
+Now that you have some experience, 
+this section will include a variety of exercises where array index
+variables need to be manipulated in fancier ways.  Consider this heading:
 
-..  code-block:: none
+.. literalinclude:: ../source/examples/remove_zeros/remove_zeros.cs
+   :start-after: chunk
+   :end-before: {
 
-    2 5 22
+We have a starting array ``data`` and we need to create an ending array, 
+but the corresponding nonzero data is *not*
+at corresponding index values in ``data``!
 
-then the program prints 29.
+Since we are returning a new array, we need to create it, and for that
+we need a length.  How would you do that by hand?
+Go through the original array, look at individual elements, and count the nonzero
+ones.  We can do a counting loop, say putting our count into the variable 
+``countNonZero``. Then create a new array, say ``notzero``,  with the 
+proper length.
 
-Do try running from the command line:  If you compiled with
-Xamarin Studio, that means going down to the bin/Debug directory.
-Recall Xamarin Studio for Windows produces a Windows executable,
-not a Mono file, so you can run
-    
-..  code-block:: none
+The next part is new.  Clearly we need to get non-zero values from the original array 
+``data`` and put them in the other array, ``notzero``.  
+As we said the array indices are 
+not in sync.  That means we are going to need to deal with their indices
+separately.  The index in ``data`` is not going to relate directly to the 
+index in ``notzero``.
 
-    adder 2 5 22
-    
-while on a Mac you need to run with mono:
+We could just have an index variable for each array.  Think about ``data``:
+we do want to go through it sequentially, and we are only reading the
+sequential values, so we can actually use a ``foreach`` loop and not
+keep track of that index directly at all!  
 
-..  code-block:: none
+On the other hand we need to assign values *into* ``notzero``, and hence we will
+need to refer to an index variable for ``notzero``, 
+say ``i``.
 
-    mono adder.exe 2 5 22
+However, we cannot just assign the index values in a 
+``for`` loop heading as we have been before! 
+We have to be more careful and think when and how does ``i`` change?
+
+This might be a good place to do this by hand, for instance with the sample
+data in the function documentation.  Keep track of what ``i`` 
+should be as you iterate through the elements of ``data``, one step at a time:  
+How do you change
+``i`` and when?  You are *encouraged* to stop and actually do this manually 
+and think before going on....
+
+You should see that:
+
+*  We start by being ready to fill the place at index 0 in ``notzero``.
+*  We only copy a non-zero element of ``data``, so we need an ``if`` 
+   statement in the body again.
+*  Each such non-zero number
+   is placed after the last number we copied into ``notzero``.
+*  This means that each time we copy an element to ``notzero`` we advance ``i``!
+
+If you get those ideas together, hopefully you can write the needed code.  
+Our version is:
+
+.. literalinclude:: ../source/examples/remove_zeros/remove_zeros.cs
+   :start-after: chunk
+   :end-before: chunk
+
+Adding a ``Main`` demostration method, you get our full example
+:repsrc:`remove_zeros/remove_zeros.cs`.
+
+Initialization Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+In the :ref:`new_upper`  or our version of ``NewUpper``in
+:repsrc:`string_array/string_array_demo.cs`
+look in the ``NewUpper`` function immediately after you first create
+the string array that you are going to later return.  Right then, what are the
+element values in that array?
+
+
+.. index:: exercise; ExtractItems
+   ExtractItems exercise
+   
+ExtractItems Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A string intended to indicate a sequence of items could be like in the 
+discussion  above of :ref:`IntsFromString1 <ints_from_string1>`.  
+As illustrated there, individual items
+are separated out neatly with ``Split``.  If you want to act on a user-generated
+string, it is probably better to allow more leeway:  
+Commas are often used to separate items or comma with blank, or several blanks.
+
+In this exercise write a version that will accept all those variations
+and return an array of non-empty strings, without the commas or blanks.
+Complete this function::
+
+   /// Return an array of non-empty strings that are separated
+   /// in the original string by any combination of commas and blanks.
+   /// Example:  ExtractItems("  extra  spaces,plus,  more, ") returns an
+   /// array containing {"extra", "spaces", "plus", "more"} 
+   public static string[] ExtractItems(string s)
+   
+Hints: It is possible to deal with more than one separator character, but
+the simplest thing likely is to use string method ``Replace`` 
+and just replace all the
+commas by spaces.  If you then ``Split`` on each space you get all the non-empty
+strings that you want *and* maybe a number of
+empty strings.  You need to create a final array with just the nonempty
+strings from the split.  When you create the array to be returned,
+you need know its size.  Then populate it
+with just the nonempty string pieces.
+Handling the indices for the new array also adds complication.
+
+.. _intsfromstring_exercise:
+
+IntsFromString Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a function
+``IntsFromString`` with a corresponding signature and intent
+like :ref:`IntsFromString1 <ints_from_string1>`, but make it
+more robust by allowing all the separator combinations of 
+``ExtractItems`` from the last exercise, so
+``IntsFromString(" 2, 33  4,55 6 77  ")`` returns an array containing ``int``
+values 2, 33, 4, 55, 6, 77.  (Don't reinvent the wheel: call ``ExtractItems``.)
+Also write a ``Main`` function so you can demonstrate the use of 
+``IntsFromString``.
+       
+  
     
 .. index:: exercise; TrimAll for arrays
    TrimAll exercise

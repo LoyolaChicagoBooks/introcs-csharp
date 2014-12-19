@@ -1,7 +1,7 @@
 
 
 .. index::
-   function; summary
+   function; summary of syntax
 
 .. _static-Function-summary:
 
@@ -14,7 +14,7 @@ implement object-oriented programming.
 
 References in square brackets link to fully discussions of summary items below.
 
-.. index::  function syntax
+.. index::  
    ( ); function definition
 
 
