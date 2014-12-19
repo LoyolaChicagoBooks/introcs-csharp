@@ -622,13 +622,17 @@ demonstration method in :repsrc:`string_array/string_array_demo.cs`.
 Default Initializations
 -------------------------
 
-You should have notice that when the first example array of integers was created,   
-it was filled with zeros.  It is a safety feature of C# that the internal fields 
+Did you notice that when the first example array of integers was created,   
+it was filled with zeros?  It is a safety feature of C# that the internal fields 
 of objects always get a specific value, not random data.  Here are the defaults:
 
-   | primitive numeric types: zero
-   | bool: false
-   | all object types:  null
+.. csv-table:: Default Values
+    :header: "Type", "Value"
+    :widths: 30, 10
+
+    "primitive numeric types", "0"
+    "bool", "false"
+    "all object types", "null"
 
 .. warning::
 
@@ -729,7 +733,7 @@ Adding a ``Main`` demostration method, you get our full example
 
 Initialization Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-In the :ref:`new_upper`  or our version of ``NewUpper``in
+In the :ref:`new_upper`  or our version of ``NewUpper`` in
 :repsrc:`string_array/string_array_demo.cs`
 look in the ``NewUpper`` function immediately after you first create
 the string array that you are going to later return.  Right then, what are the
