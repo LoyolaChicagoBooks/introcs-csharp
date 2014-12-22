@@ -5,7 +5,10 @@ total_checked=0
 for dir in . source/*/
 do
 	pushd $dir > /dev/null
-	this_changed=$(git pull | head -1 | grep -v ^Already | wc -l)
+	TMPFILE=/tmp/git-pull-$$.out
+	git pull > $TMPFILE
+	this_changed=$(head -1 $TMPFILE | grep -v ^Already | wc -l)
+	rm -f $TMPFILE
 	num_changes=$((num_changes + this_changed))
 	total_checked=$((total_checked + 1))
 	popd > /dev/null
