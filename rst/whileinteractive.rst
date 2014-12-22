@@ -47,9 +47,9 @@ includes a prompt and low and high limits of the allowed range:
    :end-before: {
 
 For example to generate
-sequence above, the call would be: 
+sequence above, the call would be:: 
 
-   ``PromptIntInRange("Enter a score: (0 through 100) ", 0, 100)``
+   PromptIntInRange("Enter a score: (0 through 100) ", 0, 100)
 
 .. index:: concrete example; splitting a loop
    loop; splitting concrete example
@@ -61,15 +61,16 @@ C# loops have a sequence of statements with a definite beginning and end.
 
 Consider the sequence above in pseudocode.  
 
-   | Input a number with prompt (233)
-   | Print error message
-   | Input a number with prompt (101)
-   | Print error message
-   | Input a number (-1)
-   | Print error message
-   | Input a number with prompt (100)
-   | Return 100
+..  code-block:: none
 
+    Input a number with prompt (233)
+    Print error message
+    Input a number with prompt (101)
+    Print error message
+    Input a number (-1)
+    Print error message
+    Input a number with prompt (100)
+    Return 100
 
 We can break this into a repeating
 pattern in two ways.  The most obvious is the following, 
@@ -77,35 +78,38 @@ with three repetitions of a basic pattern,
 with the last two line not in the same pattern 
 (so they would go after the loop).  :
 
-   | Input a number with prompt (233)
-   | Print error message
-   |
-   | Input a number with prompt (101)
-   | Print error message
-   |
-   | Input a number (-1)
-   | Print error message
-   |
-   | Input a number with prompt (100)
-   | Return 100
+..  code-block:: none
 
+    Input a number with prompt (233)
+    Print error message
+   
+    Input a number with prompt (101)
+    Print error message
+   
+    Input a number (-1)
+    Print error message
+   
+    Input a number with prompt (100)
+    Return 100
 
 Another choice, since  
 you can split a loop at any point, would be the following, with the first and
 last lines not in the  pattern that repeats three times in the middle:
 
-   | Input a number with prompt (233)
-   |
-   | Print error message
-   | Input a number with prompt (101)
-   |
-   | Print error message
-   | Input a number (-1)
-   |
-   | Print error message
-   | Input a number with prompt (100)
-   |
-   | Return 100
+..  code-block:: none
+
+    Input a number with prompt (233)
+   
+    Print error message
+    Input a number with prompt (101)
+   
+    Print error message
+    Input a number (-1)
+   
+    Print error message
+    Input a number with prompt (100)
+   
+    Return 100
 
 When you consider ``while`` loops, there is a problem with the first version:
 Before the first pass through the loop and at the end of the block of code
@@ -165,7 +169,7 @@ the input from the user is *before* the loop.  C# execution approaches the
 test in the ``while`` headings from *two* places at different times: 
 the initialization *and* coming back
 from the bottom of the loop.  To get a *new* value to test, we must
-*repeat* getting input from the user at the bottom of the loop body.  
+*repeat* getting input from the user at the *bottom of the loop body*.  
 
 .. index:: compiler error; declaration repeat
    declaration repeat error

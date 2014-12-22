@@ -63,14 +63,12 @@ It is extremely important to totally understand how the flow of
 execution works with loops.  One way to follow it
 closely is to make a table with a line for each instruction
 executed, keeping track of all the variables, playing computer.  
-This will be different than when playing computer in
-:ref:`sequential-execution`, since lines will be repeated in the loop, 
-with different
-variable values each time.  The
-sequence of executed lines in the table will *not* be totally in 
-source code *textual* order!
-
-
+as with ``if`` statements, the executed lines that you show in your table
+will not be in textual order, as in
+:ref:`sequential-execution`.  
+While ``if`` statements merely altered execution order 
+by skipping some lines, loops allow the same line in the text of your program
+to be executed repeatedly, and show up in multiple places in your table.
 
 .. index:: 
    double: while; execution sequence
@@ -98,7 +96,7 @@ Line  temperature  Comment
 ====  ===========  =======
 
 Each time the end of the loop body block is reached, execution
-returns to the ``while`` loop heading for another test. When the
+*goes back* to the ``while`` loop heading for another test. When the
 test is finally false, execution jumps past the indented body of
 the ``while`` loop to the next sequential statement.
 
@@ -197,17 +195,19 @@ is an important skill.
 
 **Problem**:  Write a program with a ``while`` loop to print:
 
-    | 10
-    | 9
-    | 8
-    | 7
-    | 6
-    | 5
-    | 4
-    | 3
-    | 2
-    | 1
-    | Blastoff!
+..  code-block:: none
+
+     10
+     9
+     8
+     7
+     6
+     5
+     4
+     3
+     2
+     1
+     Blastoff!
 
 **Analysis**:  
 We have seen that we can produce a regular sequence of numbers in a loop.
@@ -250,8 +250,10 @@ There are many different (and more exciting) patterns of change coming
 for loops, 
 but the simple examples so far get us started.
 
-.. index:: while; questions for planning
-   loop; questions for planning
+.. index:: while; rubric for planning
+   loop; rubric for planning
+
+.. _loop-rubric:
 
 .. rubric:: Loop Planning Rubric
    
@@ -259,15 +261,15 @@ Looking ahead to more complicated and interesting problems,
 here is a more complete list of questions to ask yourself when
 designing a function with a ``while`` loop:
 
--  What data is involved? Make sure you give good variable names.?
+-  What data is involved? Make sure you give good variable names.
 -  What needs to be initialized and how? This certainly includes any
    variable tested in the condition.
 -  What is the condition that will allow the loop to *continue*?  It
    may be easier to think of the condition that will *stop* the loop.
    That is fine - but remember to *negate* it (with ``!``) to turn it
    into a proper *continuation* condition.
--  What is the code that should only be executed once? What action do I want to
-   repeat? 
+-  Distinguish: What is the code that should only be executed once? 
+   What action do I want to repeat? 
 -  How do I write the repeating action so I can modify it for the next time
    through the loop to work with new data?
 -  What code is needed to do modifications to make the same code work
@@ -276,7 +278,7 @@ designing a function with a ``while`` loop:
    do other things need initialization?
 -  Will the continuation condition eventually fail?  
    *Be sure to think about this!*
--  Separate actions to be done once before the repetition (code before the
+-  Separate the actions to be done once before the repetition (code before the
    loop) from repetitive actions (in the loop) from actions not repeated, but
    done after the loop (code after the loop). Missing this distinction
    is a *common error*!
@@ -304,7 +306,9 @@ so quick at this that you just see it all at once, with the answer.
 
 In fact, you and the computer need to do this in steps.  To help see, let
 us take a concrete example like the one above for SumToN(5), and write out a 
-detailed sequence of steps like::
+detailed sequence of steps like:
+
+..  code-block:: none
 
     3 = 1 + 2
     6 = 3 + 3 
@@ -334,7 +338,7 @@ This will work.  We can go through the ``while`` loop rubric:
     
 The variables are ``sum``, ``newSum`` and ``i``.
     
-To evaluate 
+To evaluate  ::
 
     newSum = sum + i;
 
@@ -549,9 +553,11 @@ is an integer when *adding* integers, but splitting it according to
 Gauss's motivation can put a mathematical non-integer in the middle.
 
 The C# fix: The final answer is clearly an integer, so if we do the division
-last, when we know the answer will be an integer, things should be better::
+last, when we know the answer will be an integer (assuming a ``long`` integer), 
+things should be better::
 
-   return n*(n+1)/2;
+   long sum = n*(n+1)/2;
+   return sum;
 
 .. index:: cast
    

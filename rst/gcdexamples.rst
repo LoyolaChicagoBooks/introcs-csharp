@@ -17,7 +17,8 @@ example to illustrate the power of loops. Everyone learns about the
 is not in *reduced* form.
 
 Consider the fraction :math:`\frac{2}{4}`, which is the same as
-:math:`\frac{1}{2}`. This fraction can be reduced, because the
+:math:`\frac{1}{2}`. The fraction :math:`\frac{2}{4}` 
+can be reduced, because the
 numerator and denominator both have greatest common factor of 2. That
 is, :math:`\frac{2}{4} = \frac{1 \cdot 2}{2 \cdot 2}`. So the factor of 2 can
 be canceled from both the numerator and the denominator.
