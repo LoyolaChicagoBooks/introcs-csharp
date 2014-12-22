@@ -4,11 +4,11 @@ num_changes=0
 total_checked=0
 for dir in . source/*/
 do
-	pushd $dir
+	pushd $dir > /dev/null
 	this_changed=$(git pull | head -1 | grep -v ^Already | wc -l)
 	num_changes=$((num_changes + this_changed))
 	total_checked=$((total_checked + 1))
-	popd
+	popd > /dev/null
 done
 
 
