@@ -1,4 +1,4 @@
-foreach Examples
+``foreach`` Examples
 =====================
 
 .. index::    char; underlying numeric code

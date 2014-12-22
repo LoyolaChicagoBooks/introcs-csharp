@@ -505,7 +505,7 @@ Thinking ahead, we will leave that expression unsimplified.
 We have done most of the work for the rows of the body of the table in the simpler
 version.  We just 
 have a bit of printing for the initial row label.
-Where does the code go?  It is repeated for each row, soi it is inside
+Where does the code go?  It is repeated for each row, so it is inside
 the outer loop, but it is just printed once per row, so it comes *before* the 
 inner column loop.  The row label is r.  
 The whole code is in example :repsrc:`mod7_table/mod7_table.cs` and below:
@@ -570,6 +570,96 @@ and in example program
 ..  literalinclude:: ../source/examples/mod_mult_table/mod_mult_table.cs
     :start-after: chunk
     :end-before: chunk
+
+.. index:: string; reverse
+   reverse string example; 
+
+.. _reverse-string-returned:
+  
+Reversed String Returned
+----------------------------
+
+In :ref:`reversed-print-example` we discuss iterating through a string's
+indices and characters to print the string reversed.  That might be useful,
+but it logically the joining of two separate ideas:  reversing a string and
+printing it.  We already know how to print a string as a step.  Now consider 
+the first part as its own function:
+
+..  literalinclude:: ../source/examples/reversed_string/reversed_string.cs
+    :start-after: chunk
+    :end-before: {
+
+To go along with this chapter, we will use a ``for`` loop heading rather 
+a ``while`` loop as in :repsrc:`reversed_print/reversed_print.cs`::
+
+    for (int i = s.Length - 1; i >= 0; i--) {   
+
+A more significant difference is that in 
+the previous example we immediately printed,
+individually, each letter that we wanted.  Now we need to create a single
+string, with all the characters, before returning the result.
+
+Let us think of the example in the documentation:  If we start with
+``s`` as ``"drab"``, and we go through the letters one at a time in 
+reverse order, b a r d, we build up successively:
+
+..  code-block:: none
+
+    b
+    ba
+    bar
+    bard
+
+We need a loop with variables and operations.  The sequence
+of reversed letters, ``s[i]``, are the 
+last character on the end of each line above.
+
+At least lines after the first are constructed from previous parts,
+so, for instance,  ``"bar"``  comes from combining the initial part ``"ba"`` 
+with the latest character ``'r'`` (``s[i]``).
+We need a name for the initial part.  
+I used the name ``rev``.  
+Combining with a string is done with the ``+`` operator. 
+Then when ``rev`` is ``"ba"`` and ``s[i]`` is ``'r'``, the combination, 
+using the variable names, is   ::
+
+    rev + s[i]
+
+We want this in our loop, so we must be able to use 
+that expression *each* time through the loop, 
+so ``rev``  changes each time through the loop.  In the next iteration ``rev``
+is the *result* of the previous expression.  The assignment statement 
+to give us the next version of ``rev`` can just be::
+
+     rev = rev + s[i];
+     
+That gives us the general rule.  Pay attention now to the beginning and end:
+The end is simple:  The last value for ``rev`` is the complete reversed string,
+so that is what we return.
+
+How do we initialize ``rev``?  You could imagine ``rev`` starting as ``"b"``,
+but the the first character that we add is ``'a'``, and we would not be going
+through all the characters in our loop.  It is better to go all the way
+back to the beginning:  If we use the general form with the first letter in the
+reversed sequence, ::
+
+    rev = rev + s[i];
+
+then the result of the initial ``rev`` +  ``'b'`` should just be ``"b"``.  
+So what would ``rev`` be?
+
+Remember the empty string:  initialize ``rev`` to be ``""``.
+
+The result is:
+
+..  literalinclude:: ../source/examples/reversed_string/reversed_string.cs
+    :start-after: chunk
+    :end-before: chunk
+
+We used our new operator ``+=`` to be more concise.
+
+This function and a ``Main`` used to demonstrate it are in 
+:repsrc:`reversed_string/reversed_string.cs`.
 
 
 Exercises
@@ -675,23 +765,20 @@ The output from the previous exercise would be produced by the call::
 
     GroupFlips(10, 1);
     
-.. index:: exercise; reverse string
-   reverse string exercise; 
+.. index:: exercise; reverse string foreach
 
-.. _reverse-string-ex:
+.. _reverse-string-foreach:
   
-Reverse String Exercise
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Reverse String ``foreach`` Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a program ``string_reverse.cs``. It should include a function with
-description and heading::
+We already have discussed :ref:`reverse-string-returned`.
+It used a ``for`` loop to go through the characters in
+reverse order.  Write a version with the only loop heading::
 
-    /// Return the reverse of s.
-    /// For example Reverse("hello") returns "olleh".
-    static string Reverse(string s)
-
-    
-In your ``Main`` method call Reverse several times to test.
+   foreach(char ch in s) {
+   
+and no reference to indices in s.
 
 
 .. index:: exercise; only letters
@@ -761,7 +848,7 @@ Predict what these code fragments print.  Then check yourself in csharp::
 Power Table Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-a.  Write a program :file:`power_table.cs`` that completes and tests 
+a.  Write a program :file:`power_table.cs` that completes and tests 
     the function with this heading.  Be sure your program tests 
     with several values for each parameter::
 

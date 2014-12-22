@@ -681,19 +681,20 @@ at corresponding index values in ``data``!
 Since we are returning a new array, we need to create it, and for that
 we need a length.  How would you do that by hand?
 Go through the original array, look at individual elements, and count the nonzero
-ones.  We can do a counting loop, say putting our count into the variable 
-``countNonZero``. Then create a new array, say ``notzero``,  with the 
+ones.  We can do a counting loop Say we put our count into the variable 
+``countNonZero``. Then create a new ``int`` array, say ``notzero``,  with the 
 proper length.
 
 The next part is new.  Clearly we need to get non-zero values from the original array 
 ``data`` and put them in the other array, ``notzero``.  
-As we said the array indices are 
+As we said, the array indices are 
 not in sync.  That means we are going to need to deal with their indices
-separately.  The index in ``data`` is not going to relate directly to the 
+separately: The index in ``data`` is not going to relate directly to the 
 index in ``notzero``.
 
-We could just have an index variable for each array.  Think about ``data``:
-we do want to go through it sequentially, and we are only reading the
+We could just have a separate index variable for each array.  
+Think about ``data``:
+We do want to go through it sequentially, and we are only *reading* the
 sequential values, so we can actually use a ``foreach`` loop and not
 keep track of that index directly at all!  
 
@@ -709,8 +710,8 @@ This might be a good place to do this by hand, for instance with the sample
 data in the function documentation.  Keep track of what ``i`` 
 should be as you iterate through the elements of ``data``, one step at a time:  
 How do you change
-``i`` and when?  You are *encouraged* to stop and actually do this manually 
-and think before going on....
+``i`` and when?  You are *encouraged* to stop and actually do this manually,
+on paper, and think before going on....
 
 You should see that:
 
@@ -727,17 +728,24 @@ Our version is:
 .. literalinclude:: ../source/examples/remove_zeros/remove_zeros.cs
    :start-after: chunk
    :end-before: chunk
+   :linenos:
 
 Adding a ``Main`` demostration method, you get our full example
 :repsrc:`remove_zeros/remove_zeros.cs`.
 
 Initialization Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-In the :ref:`new_upper`  or our version of ``NewUpper`` in
-:repsrc:`string_array/string_array_demo.cs`
-look in the ``NewUpper`` function immediately after you first create
-the string array that you are going to later return.  Right then, what are the
-element values in that array?
+
+a.  In the ``NoZeros` function above,
+    what are the values in the array ``notzero`` just after
+    line 12 is executed?
+
+#.  In the :ref:`new_upper`  or our version of ``NewUpper`` in
+    :repsrc:`string_array/string_array_demo.cs`
+    consider the execution of the ``NewUpper`` function 
+    immediately after you first create
+    the string array that you are going to later return.  
+    Right then, what are the element values in that array?
 
 
 .. index:: exercise; ExtractItems

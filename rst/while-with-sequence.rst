@@ -8,6 +8,9 @@
 While-Statements with Sequences
 ================================= 
 
+One Character Per Line
+-----------------------
+
 We will process many sequences or collections.  At this point
 the only collection we have discussed is a string - a sequence of
 characters that we can index.
@@ -25,9 +28,11 @@ Consider the following silly function description and heading as a start:
  
 ``OneCharPerLine("bug")`` would print:
 
-  | b
-  | u
-  | g
+..  code-block:: none
+
+       b
+       u
+       g
 
 We are accessing one character at a time.  We can do that with
 the indexing notation.  Thinking concretely about the example above,
@@ -36,8 +41,9 @@ we knew we would always have three characters, we could do this
 with three explicit print statements, but we are looking to write a general
 definition for an arbitrary length string:
 This requires a loop.  
-For now our only option is a ``while`` loop.  We can follow 
-our basic rubric, one step at a time:
+For now our only option is a ``while`` loop.  We can follow our basic 
+:ref:`loop planning rubric <loop-rubric>`, 
+one step at a time:
 The index is changing in a simple repetitive sequence.  
 We can call the
 index ``i``.  Its initial value is clearly 0. 
@@ -89,23 +95,40 @@ This is a very common pattern.
 We could do anything we want with each individual character, 
 not just print it.
 
-..  later maybe
-	.. rubric:: Print Backwards
+.. index:: ReversedPrint example
+   
+.. _reversed-print-example:
+   
+String Backwards Exercise/Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 	
-	Here is a variation, print backward on one line:
-	There are a few changes:
-	
-	- You do not want to go on to the next line, so use ``Write``, 
-	  not ``WriteLine``.
-	- It is still a regular sequence of character indices, but
-	  everything needs to be reworked.
+Here is a variation:
+
+.. literalinclude:: ../source/examples/reversed_print/reversed_print.cs
+   :start-after: chunk
+   :end-before: {
+
+There are a few changes:
+
+- You do not want to go on to the next line, so use ``Write``, 
+  not ``WriteLine``.
+- It is still a regular sequence of character indices, but
+  we are working backwards through the string.  We have created
+  a decreasing sequence before.  Where do
+  you start?  Where do you stop?  What is the condition? How do you
+  get ready for the next time through the loop? (Remember our newest
+  notation.)
+  
+Our code with driver is in
+:repsrc:`reversed_print/reversed_print.cs`.
 
 .. index:: string; PrintVowels
    PrintVowels example
    
 .. _PrintVowels:
    
-.. rubric:: PrintVowels
+Print Vowels Function
+------------------------
 
 Let us get more complicated.  Consider the function described:
 
@@ -115,9 +138,11 @@ Let us get more complicated.  Consider the function described:
 
 For instance PrintVowels("computer") would print:
 
-    | o
-    | u
-    | e
+..  code-block:: none
+
+     o
+     u
+     e
 
 We have seen that we can go through the whole string and do the same
 thing each time through the loop, using ``s[i]`` in some specific way.
@@ -192,7 +217,8 @@ This variation is in example :repsrc:`vowels2/vowels2.cs`.
    
 .. _IsDigits:
 
-.. rubric:: IsDigits
+IsDigits Function
+---------------------
 
 Consider a variation, determining if *all* the characters
 in a string are vowels.  We could work on that, but it is 
@@ -391,7 +417,8 @@ and you know the final answer for your function as soon as you find it.
 .. index:: playing computer; loop
    loop; playing computer
    
-.. rubric:: Play Computer With a Loop
+Play Computer With a Loop
+------------------------------
 
 We have not given you a chance to play computer with a loop.  Here is
 some simple silly code,
@@ -458,9 +485,6 @@ Line  i   Comment
    This way, once ``allDigitsSoFar`` is ``false``, it stays ``false``.
 
 
-Exercise
------------
-
 Duplicate Character Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -473,5 +497,6 @@ and write and test a function with the documentation and heading below::
    /// HasDoubleChar("treated") and HasDoubleChar("haha!") are false.
    static bool HasDoubleChar(string s)
    
-   
+You may want to play computer on a short example - there is an easy mistake
+to make.  
    
