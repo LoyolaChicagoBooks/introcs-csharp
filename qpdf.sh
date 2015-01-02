@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 [ -f ~/.env/sphinx/bin/activate ] && . ~/.env/sphinx/bin/activate
 

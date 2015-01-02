@@ -4,7 +4,7 @@ num_changes=0
 total_checked=0
 for dir in . source/*/
 do
-	this_changed=$(sh git-pull-status.sh $dir)
+	this_changed=$(./git-pull-status.sh $dir)
 	num_changes=$((num_changes + this_changed))
 	total_checked=$((total_checked + 1))
 done
@@ -13,4 +13,4 @@ done
 	&& echo "$num_changes of $total_checked IntroCS repositories changed" \
 	&& echo "git log for $(date)" \
 	&& git --no-pager log -5 --pretty=oneline \
-	&& sh ./deploy-introcs.sh
+	&& ./deploy-introcs.sh
