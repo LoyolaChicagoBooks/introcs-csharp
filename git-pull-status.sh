@@ -2,8 +2,12 @@
 
 repo_dir=$1
 cd $repo_dir
-TMPFILE=/tmp/git-pull-$$.out
-git pull > $TMPFILE
-repo_changed=$(head -1 $TMPFILE | grep -v ^Already | wc -l)
-rm -f $TMPFILE
+BEFORE=/tmp/git-before-pull-$$.out
+AFTER=/tmp/git-after-pull-$$.out
+git log > $BEFORE
+git pull > /dev/null
+git log > $AFTER
+diff $BEFORE $AFTER > /dev/null
+repo_changed=$?
+rm -f $BEFORE $AFTER
 exit $repo_changed
