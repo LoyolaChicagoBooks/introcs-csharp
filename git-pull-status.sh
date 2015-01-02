@@ -5,4 +5,5 @@ cd $repo_dir
 TMPFILE=/tmp/git-pull-$$.out
 git pull > $TMPFILE
 repo_changed=$(head -1 $TMPFILE | grep -v ^Already | wc -l)
+rm -f $TMPFILE
 exit $repo_changed
