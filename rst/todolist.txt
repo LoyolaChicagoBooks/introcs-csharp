@@ -5,19 +5,16 @@ TODO's
 
 ? change comment at end of computerscience.rst about MS, now that it owns Xamarin?
 
-update io.html for copying cs source from the git repository
-
 Xamarin
   change Xamarin s copy projects first, rather than files.
   show how to get output in project folder
-dump fio
+dump fio later
 ? video for if nested?
 
 cmdline:  mono dll library manipulation?
 
 
 examples:
-   early IO:  =stringplay/StringPlay.java
    old complex if play computer
    concise polynomial print
    sum command line
@@ -28,7 +25,7 @@ examples:
      ints string to array (allowing multiple blanks and commas?)
      count in range
    countMAtches?  many forms
-   moreLoopArrayProblemms.doc
+   moreLoopArrayProblemms.doc   !! good
    files:  .cs source to sphinx script
    in classes:  playComp/objectChange.java
                  toString/MailItem.java
