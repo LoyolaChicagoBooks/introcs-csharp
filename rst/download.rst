@@ -18,7 +18,7 @@ Example Source Code and Videos
     :widths: 15, 30
 
     "C# Examples (as pages)", "https://github.com/LoyolaChicagoBooks/introcs-csharp-examples"
-    "C# Examples (as ZIP)", "https://github.com/LoyolaChicagoBooks/introcs-csharp/archive/master.zip"
+    "C# Examples (as ZIP)", "https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/archive/master.zip"
     "Videos", "https://luc.box.com/CSharpVideos"
 
 Primary Book Site (cs.luc.edu)

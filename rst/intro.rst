@@ -9,10 +9,10 @@ Here are some important web links:
    examples download
    source download
 
-*   `The course example file, <https://github.com/LoyolaChicagoBooks/introcs-csharp/archive/master.zip>`_
+*   `The course example file, <https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/archive/master.zip>`_
     is the *essential resource* to download and unzip onto your machine.
     The zip file and the folder it unzips to have a long name,
-    introcs-csharp-master.  
+    introcs-csharp-master-examples.  
     We suggest you *rename the unzipped folder*
     ``examples`` to match later references.  
     
