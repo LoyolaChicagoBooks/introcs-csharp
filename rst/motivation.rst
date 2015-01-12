@@ -17,18 +17,36 @@ C# is an object-oriented language.  There is the ongoing argument about when to 
 details of object-oriented programming.  We last taught Java, objects first.  Students
 dutifully followed our lead.  Later, we saw quick programs that students wanted 
 to write for themselves, 
-that were layered with totally unnecessary and distracting instances.
+that were layered with totally unnecessary and distracting instances of objects.
 
-We have seen less problem with the claimed opposite issue:  
-starting with basically procedural programming, and then
-some time after starting OOP, still not seeing where design with objects is useful.
-
-In any event, we start off with more procedural programming, then introduce the use of
+We have seen less problem with the opposite order, which we use:
+start off with more procedural programming, then introduce the use of
 instances of existing classes of objects, and then move to designing
-classes with instance variables, constructors, and instance methods.
+classes with instance variables, constructors, and instance methods,
+and see where they are truly useful.  If you prefer, 
+after the chapter on functions you can read the first couple
+of sections in :ref:`Classes`, that 
+cover defining your own simple objects.
 
 We tend to introduce examples first, and then the general syntax, 
-and then more examples and exercises.
+and then more examples and exercises. Later examples 
+on a subject are sometimes essentially 
+links to documented code that is both directly visible on the web and
+in the separate download of all of the example source code. 
+
+There are review questions at the end of most chapters.  
+The review questions may seem to be in a strange order: Often we invite students
+to consider a general overarching theme in an early question.  In case that
+was too much to bite off, later questions often explicitly address a specific
+point that would have been an implicit part of an earlier general question.
+Sometimes a later more pointed question even gives an answer to part of 
+an earlier question.
+
+Labs are intended as early practice on a subject, with generally small 
+bits requested at a time.  They are usually included in the main body 
+of the book soon after the needed
+background is introduced.  
+There are also larger assignments as some of the appendix sections.
 
 C# and Mono
 ------------
