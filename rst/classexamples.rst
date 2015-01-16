@@ -33,6 +33,7 @@ Check this by running the program!
 
 Make sure you can follow the code and the output from running.  
 
+.. index:: class; convert static game to instance
 
 Converting A Static Game To A Game Instance
 ----------------------------------------------
@@ -194,4 +195,195 @@ Then modify the two files as discussed below.
     
        "Animal: Froggy ate nothing"  
        
+
+.. index:: class; user class as instance
+   example; clock
+
+.. _clock:
+
+Clock Example
+----------------------------------------------
+
+Consider the logic for a digital 24 hour clock object,
+type ``Clock``, that shows hours and minutes,
+so 03:45 would be three forty-five.
+Note that there is no AM or PM:  The hours go from 00, starting at midnight,
+through hour 23, the 11PM hour, so 23:59 would be a minute before midnight,
+and 13:00 would be 1PM. 
+
+Assume there is some attached circuit to signal when a new minute starts.
+
+This class could have just a few methods:  ``Tick``, 
+called when a new minute is signaled,
+and ``GetTimeString`` to return the time in the format illustrated above,
+and ``SetTime`` to set a new time, from specified hours and minutes.  
+We can start
+from a constructor that just sets the clock's time to midnight.  
+
+We can imagine a demonstration class ``ClockDemo`` with a ``Main`` method
+containing
+
+.. literalinclude:: ../source/examples/clock/clock_demo.cs
+   :start-after:  chunk
+   :end-before: chunk
+
+It should print
+
+..  code-block:: none
+
+    Midnight 00:00
+    Before midnight 23:58
+    Tick 23:59
+    Tick 00:00
+    Tick 00:01
+    Tick 00:02
+
+
+A ``Clock`` object will need instance variables.  
+One obvious approach would be to have ``int``
+instance variables for the hours and minutes. Both can be set and can advance.
+These actions are common to both the hours and minutes, 
+so we might think how we can avoid writing some things twice. 
+There is one main difference:  The minutes roll over at 60 
+while the hours roll over at 24.  Though the limits are different, 
+they are both numbers, so we can store the limits for each, 60 and 24, and
+then the same code could be used to advance each, just using a different value
+for the rollover limit.  
+
+How would we neatly code this in a way that reuses code?  The most significant
+thing to notice is that dealing with minutes involves data (the current count
+and the limit 60) and associated actions:  being set and advanced (and read).  
+The same is true for the hours.
+The combination of *data and tightly associated actions*, particularly used
+in more than one place, 
+suggests a new class of objects, say ``RolloverCounter``.
+
+Notice the shift in this approach:  The instance variables for hours and minutes
+would become instances of the ``RolloverCounter`` class.  The logic for advancing
+and sometimes rolling over would be not directly in the ``Clock`` class,
+but in the ``RolloverCounter`` class.
+
+So let's think more about what we would want in the ``RolloverCounter`` class.
+What instance variables?  Of course we have the current count, 
+and since we want the same class to work for both minutes and hours, we
+also need to have the rollover limit. They are both integers.  
+
+The limit should just be set once for a particular counter, 
+presumably when the object is created.  At the beginning, for simplicity,
+we can just assume the count is 0.  Of course we must let the count
+advance, rolling over back to 0 when the limit it reached.  
+
+Throw in a getter and a setter for the count and we can have the following
+class:
+
+.. literalinclude:: ../source/examples/clock/rollover_counter.cs
+
+Note how concise the ``Advance`` method is!  With the remainder operation,
+we do not need an ``if`` statement.
+
+.. index:: format; 0-pad
+   zero pad format
+
+Finally we introduce the ``Clock`` class itself.  
+We display the entire code first, and follow it with comments about a number
+of new features.
+
+.. literalinclude:: ../source/examples/clock/clock.cs
+
+#.  First the principal reason for this example:  we illustrate 
+    writing a class where the instance variables are objects of a different
+    user-defined type.  Because the instance variables ``hours`` and 
+    ``minutes`` are objects, we must give them values
+    using the ``new`` syntax.
+#.  Skip the *second* constructor for now, and see the ``SetTime`` method,
+    where we call the appropriate method for the individual
+    ``RolloverCounter`` instances.
+#.  Now go back to the second constructor.  This is not really necessary:
+    with the first constructor, it just takes one more ``SetTime``
+    line in the calling
+    code to create a clock with a time other than midnight.  
+    We can make a case for
+    this being common, so having a constructor that sets a specified time
+    in a single line *might* be reasonable.  
+    The main excuse was really to illustrate that,
+    like methods, constructors can be *overloaded*:  you can have separate 
+    constructors with distinct signatures.  In this case no parameters vs.
+    two ``int`` parameters.
+#.  The ``Tick`` method has a bit of logic to it:  while the minutes always
+    advance, the hours only advance when the minutes roll over to 0.
+#.  Finally the ``GetTimeString`` method illustrates a new integer string 
+    formatting mode:  The D2 format applies to an integer, and displays it
+    as a minimum of 2 digits, padding on the left with 0's as necessary.
+    This is just what we want.  In general the 2 could be replaced by another
+    literal integer, so D6 would force at least 6 digits:  With the D6 format
+    12 would be 
+    formatted as 000012. 
+
+The code for all the classes is in project :repsrc:`clock`.
+
+Admittedly, with this exact functionality and such a concise line to
+advance a count, it would actually have shorter to have done everything 
+inside the ``Clock`` class, with no ``RolloverCounter``, but we were looking
+for a simple illustration of combining user-defined types this way, 
+and a ``RolloverCounter`` is a clear unified
+concept that can be used in other situations.  See an upcoming exercise.
+
+Alternate Clock Constructor Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Make a small change to :repsrc:`clock/clock_demo.cs`, so the second
+constructor is tested.
+
+Clock With Seconds Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Modify the project :repsrc:`clock`, assuming the Tick is for each second, and
+the time also show the seconds, like 55 seconds before midnight would be
+23:59:05.
+
+.. index:: model-view-controller pattern
+
+Twelve Hour Time Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Modify the project :repsrc:`clock` so a ``GetTimeString12`` method returns
+the 12 hour time with AM or PM, like 11:056PM or 3:45AM. (The hours do
+not have a leading 0 in this format.) 
+This could be done modifying a lot of things:
+keeping the actual hours and minutes that you will display 
+and remembering AM or PM (with the hours 
+being more complicated, not starting at 0).  We suggest something else instead:
+
+This is a good place to note a very useful pattern for programming, called
+*model-view-controller*.  The *model* is the way chosen to store the state internally.
+The *controller* has the logic to modify the model as it needs to evolve.  
+A *view* of a part of
+the model is something shown to the user that 
+does not need to be in the exact same form as the model itself:  
+A view just needs to be something that can be *easily calculated* 
+from the model, and presumably is desired by the user.
+
+In this case a simple (and already coded!) way to store and control 
+the time model data
+is the 24 hours and minutes that do happen to directly correspond 
+to the 24 hour view. 
+
+The main control is to advance the time, 
+and with just two 0-based numbers we have the
+very simple remainder formulas.
+
+So the suggestion is to keep the internal data that way.  Only in the 
+specific method providing the AM-PM view, have the logic to do the conversion
+to the desired view.
+
+You could leave in the method to provide the time in the
+24 hour format, giving the ``Clock`` class user the option to use either view
+of the shared model data.
+To be symmetrical, you might change the original name ``GetTimeString`` to 
+``GetTimeString24``.
+
+
+
+
+
 
