@@ -73,7 +73,7 @@ is the same as  ::
    power_table.cs example
    right justification
    justification; right
-   single: {}; format field width and precision
+   single: { }; format field width and precision
 
 .. _tables:
 
