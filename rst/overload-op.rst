@@ -4,7 +4,7 @@ Defining Operators (Optional)
 ==============================
 
 .. index:: operator; overload in user class
-   overloading operators
+   overloading; operators
    
 .. _overloading_operators:
 
@@ -66,7 +66,7 @@ and :ref:`overloading-operator-exercise`
 invites you to add further operator overloads.
 
 .. index:: precedence; with operator overloading
-   operator; overloading precedence 
+   operator;  precedence with overloading
 
 **Precedence**:  Note that the operator overloading method definitions include
 nothing about :ref:`precedence`. That is because the precedence of operators
@@ -172,7 +172,7 @@ has **m** for money appended, like  ``5.99m``, representing the mathematical
 quantity 5.99 *exactly*.) 
 
 .. index:: exercise; overloading operators
-   overloading operators; exercise      
+   overloading; exercise for operators       
    
 .. _overloading-operator-exercise:
 

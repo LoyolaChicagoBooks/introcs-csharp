@@ -1,4 +1,5 @@
 .. index:: precedence
+   operator; precedence
 
 .. _precedence:
 

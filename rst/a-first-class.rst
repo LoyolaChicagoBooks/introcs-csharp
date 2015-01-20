@@ -243,7 +243,6 @@ C# allows this shorthand notation without ``someObject.``.
 
 .. index::  OOP; instance method
    instance method
-   private; helping function
    method
 
 .. _instance-methods:
