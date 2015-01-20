@@ -14,7 +14,7 @@ Goals for this lab:
 #. Write conditional statements.
 #. Think about problem solving.
 
-This lab depends on the introductory material in earlier in this
+This lab depends on the introductory material earlier in this
 chapter, particularly keep handy :ref:`string-methods-length`. 
 Be mindful of the processes developed in class filling in
 :ref:`solve-string-replace`.

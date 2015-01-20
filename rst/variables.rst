@@ -215,7 +215,7 @@ Assignment syntax does have two strikes against it:
 Still this usage is common to many programming languages.  
 
 ..  warning::
-    Remember in an assignent that the sides of the equal sign have totally 
+    Remember in an assignment that the sides of the equal sign have totally 
     different meanings.  You assign to a variable on the left side *after*
     evaluating the expression on the right.
     

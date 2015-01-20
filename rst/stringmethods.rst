@@ -19,8 +19,10 @@ a dot as in::
    csharp> s.ToUpper();
    "HELLO"
 
-``ToUpper`` (converting to upper case) is particular action that makes sense
-with strings.  It take s (the string object reference before the dot in this example)
+``ToUpper`` (the method converting to upper case) 
+does a particular action that makes sense
+with strings.  It takes ``s`` 
+(the string object reference before the dot in this example)
 and returns a *new* string in upper case, based on ``s``.  Since this action
 depends only on the string itself, no further parameters are necessary,
 and the parentheses after the method name are empty.  The general method syntax is
