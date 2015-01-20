@@ -169,7 +169,7 @@ see our example source code,
 
 
 .. index:: method; overloading
-   overloading a method
+   overloading; methods
 
 .. _overloading:
 

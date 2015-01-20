@@ -341,7 +341,6 @@ See the appendix :ref:`precedence`, listing all C# operations discussed in this 
 
 .. index:: type; char
    char
-   single: \; char literal escape
    
 .. _type-char:
 

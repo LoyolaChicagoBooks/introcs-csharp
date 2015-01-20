@@ -216,7 +216,7 @@ Assume there is some attached circuit to signal when a new minute starts.
 This class could have just a few methods:  ``Tick``, 
 called when a new minute is signaled,
 and ``GetTimeString`` to return the time in the format illustrated above,
-and ``SetTime`` to set a new time, from specified hours and minutes.  
+and ``SetTime`` specifying new values for the hours and minutes.  
 We can start
 from a constructor that just sets the clock's time to midnight.  
 
@@ -241,27 +241,30 @@ It should print
 
 A ``Clock`` object will need instance variables.  
 One obvious approach would be to have ``int``
-instance variables for the hours and minutes. Both can be set and can advance.
+instance variables for the hours and minutes. Both can be set and can advance
+and will need ot be read.
+
 These actions are common to both the hours and minutes, 
 so we might think how we can avoid writing some things twice. 
 There is one main difference:  The minutes roll over at 60 
 while the hours roll over at 24.  Though the limits are different, 
-they are both numbers, so we can store the limits for each, 60 and 24, and
-then the same code could be used to advance each, just using a different value
+they are both numbers, so we can store the limit for each, 60 or 24.
+Then the same code could be used to advance each one, just using a different value
 for the rollover limit.  
 
 How would we neatly code this in a way that reuses code?  The most significant
 thing to notice is that dealing with minutes involves data (the current count
-and the limit 60) and associated actions:  being set and advanced (and read).  
+and the limit 60) and associated actions:  being set, advanced and read.  
 The same is true for the hours.
 The combination of *data and tightly associated actions*, particularly used
-in more than one place, 
+in more than one situation, 
 suggests a new class of objects, say ``RolloverCounter``.
 
 Notice the shift in this approach:  The instance variables for hours and minutes
-would become instances of the ``RolloverCounter`` class.  The logic for advancing
-and sometimes rolling over would be not directly in the ``Clock`` class,
-but in the ``RolloverCounter`` class.
+would become instances of the ``RolloverCounter`` class.  A ``RolloverCounter``
+should know how to advance itself.  Hence the logic for advancing a counter, 
+sometimes rolling it over, would not be directly in the ``Clock`` class,
+but in the ``RolloverCounter`` class.  
 
 So let's think more about what we would want in the ``RolloverCounter`` class.
 What instance variables?  Of course we have the current count, 
@@ -269,8 +272,9 @@ and since we want the same class to work for both minutes and hours, we
 also need to have the rollover limit. They are both integers.  
 
 The limit should just be set once for a particular counter, 
-presumably when the object is created.  At the beginning, for simplicity,
-we can just assume the count is 0.  Of course we must let the count
+presumably when the object is created.  For simplicity 
+we can just assume the count is 0 when a ``RolloverCounter``
+is first created.  Of course we must have a method to let the count
 advance, rolling over back to 0 when the limit it reached.  
 
 Throw in a getter and a setter for the count and we can have the following
@@ -279,10 +283,12 @@ class:
 .. literalinclude:: ../source/examples/clock/rollover_counter.cs
 
 Note how concise the ``Advance`` method is!  With the remainder operation,
-we do not need an ``if`` statement.
+we do not need an ``if`` statement.  
+Check examples by hand if this seems strange.
 
 .. index:: format; 0-pad
    zero pad format
+   overloading; constructors
 
 Finally we introduce the ``Clock`` class itself.  
 We display the entire code first, and follow it with comments about a number
@@ -290,34 +296,34 @@ of new features.
 
 .. literalinclude:: ../source/examples/clock/clock.cs
 
-#.  First the principal reason for this example:  we illustrate 
+#.  First the principal reason for this example:  We illustrate 
     writing a class where the instance variables are objects of a different
     user-defined type.  Because the instance variables ``hours`` and 
-    ``minutes`` are objects, we must give them values
+    ``minutes`` are objects, we must initialize them
     using the ``new`` syntax.
-#.  Skip the *second* constructor for now, and see the ``SetTime`` method,
-    where we call the appropriate method for the individual
+#.  Skip over the *second* constructor for now, and see the ``SetTime`` method:
+    We call the appropriate method to update the individual
     ``RolloverCounter`` instances.
 #.  Now go back to the second constructor.  This is not really necessary:
-    with the first constructor, it just takes one more ``SetTime``
-    line in the calling
-    code to create a clock with a time other than midnight.  
+    With the first constructor the calling code could just have one more 
+    ``SetTime`` line any time you want to
+    to create a clock with a time other than midnight.  
     We can make a case for
-    this being common, so having a constructor that sets a specified time
-    in a single line *might* be reasonable.  
-    The main excuse was really to illustrate that,
-    like methods, constructors can be *overloaded*:  you can have separate 
-    constructors with distinct signatures.  In this case no parameters vs.
-    two ``int`` parameters.
+    this being so common, that we want to do it in just one line,
+    with a constructor that sets a specified time.  
+    However, the main excuse was really to illustrate that
+    constructors can be *overloaded*, like methods:  You can have separate 
+    constructors with distinct signatures.  
+    In this case versions with no parameters vs. two ``int`` parameters.
 #.  The ``Tick`` method has a bit of logic to it:  while the minutes always
     advance, the hours only advance when the minutes roll over to 0.
 #.  Finally the ``GetTimeString`` method illustrates a new integer string 
-    formatting mode:  The D2 format applies to an integer, and displays it
+    formatting mode:  The D2 format specifier applies to an integer, and displays it
     as a minimum of 2 digits, padding on the left with 0's as necessary.
-    This is just what we want.  In general the 2 could be replaced by another
+    This is just what we want here.  In general the 2 could be replaced by another
     literal integer, so D6 would force at least 6 digits:  With the D6 format
-    12 would be 
-    formatted as 000012. 
+    specifier 12 would be formatted as 000012, 
+    and the longer 1234567 would add no extra 0's: still 1234567.
 
 The code for all the classes is in project :repsrc:`clock`.
 
@@ -347,7 +353,7 @@ Twelve Hour Time Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Modify the project :repsrc:`clock` so a ``GetTimeString12`` method returns
-the 12 hour time with AM or PM, like 11:056PM or 3:45AM. (The hours do
+the 12 hour time with AM or PM, like 11:05PM or 3:45AM. (The hours do
 not have a leading 0 in this format.) 
 This could be done modifying a lot of things:
 keeping the actual hours and minutes that you will display 
@@ -365,21 +371,21 @@ from the model, and presumably is desired by the user.
 
 In this case a simple (and already coded!) way to store and control 
 the time model data
-is the 24 hours and minutes that do happen to directly correspond 
-to the 24 hour view. 
+is the minutes and up to 23 hours that do happen to directly correspond 
+to the 24 hour clock view. 
 
 The main control is to advance the time, 
-and with just two 0-based numbers we have the
+and with just two 0-based counts we have the
 very simple remainder formulas.
 
-So the suggestion is to keep the internal data that way.  Only in the 
-specific method providing the AM-PM view, have the logic to do the conversion
-to the desired view.
+So the suggestion is to keep the *internal* data the same way as before.  
+Just in the method to create the desire 12-hour view have the logic to do the 
+*conversion* of the internal 24-hour model data.
 
 You could leave in the method to provide the time in the
 24 hour format, giving the ``Clock`` class user the option to use either view
 of the shared model data.
-To be symmetrical, you might change the original name ``GetTimeString`` to 
+To be symmetrical in the naming, you might change the original name ``GetTimeString`` to 
 ``GetTimeString24``.
 
 
