@@ -28,9 +28,16 @@ This way we can have a single
 variable refer to a ``Contact`` object.  Such an object is an *instance* of the
 class.
 
-Later we will see an example, for rational
+It is important to distinguish between a class and an instance of a class:
+A class provides a template or instructions to make new instance objects.  A 
+common comparison is that a class is like a cookie cutter while an
+instance of the class is like a cookie.  
+You might consider constructor parameters as being for different decorations
+on different cookies, so not all cookies must end up completely the same.
+
+Later we will see an example for rational
 numbers, :ref:`rational`, 
-where the parts are more tightly integrated, but that is more
+where the parts of the class are more tightly integrated, but that is more
 complicated, so we defer it.
 
 We have already considered built-in types with internal state, like a ``List``:   
