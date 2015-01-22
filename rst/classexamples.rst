@@ -33,6 +33,185 @@ Check this by running the program!
 
 Make sure you can follow the code and the output from running.  
 
+.. index:: Averager Example
+
+
+.. _beyond-getters-and-setters:
+  
+.. rubric:: Beyond Getters and Setters
+
+Thus far we have had very simple classes with instance variables and
+getter and setter methods, and maybe a ToString method.  
+These classes were designed to introduce the basic syntax for
+classes with instances.  The classes have just been containers for data
+that we can read back, and change if there are setter methods - pretty
+boring and limited.  Many objects have more extensive behaviors, so we will
+take a small step and imagine a somewhat more complicated  ``Averager`` class:
+
+* A new ``Averager`` starts with no data acknowledged.
+* Be able to enter data values one at a time (method ``AddDatum``).  
+  We will use ``double`` values.
+* At any point be able to return the average of the numbers entered so far
+  (method ``GetAverage``).  
+  The average is the sum of all the values divided by number of values.
+  With ``double`` values we assume a ``double`` average.
+  This does not make sense if there
+  are no values so far, but with double type we can use the value
+  ``NaN`` (Not a Number) in this case.
+* Be able to return the number of data elements entered so far 
+  (method ``GetDataCount``)
+* Be able to clear the ``Averager``, going back to no data elements
+  considered yet, like in a new ``Averager`` (method ``Clear``)
+* It is good to have a ``ToString`` method.  We choose to have
+  it label the number of data items and the average of the items.
+
+The object starts from a fixed
+state (no data) so we do not need any constructor parameters.
+
+We can imagine a demonstration class ``AveragerDemo`` with a ``Main`` method
+containing
+
+.. literalinclude:: ../source/examples/averager/averager_demo.cs
+   :start-after:  chunk
+   :end-before: chunk
+
+It should print
+
+..  code-block:: none
+
+    New Averager: items: 0; average: NaN
+    Next datum 5.1
+    average 5.1 with 1 data values
+    Next datum -7.3
+    average -1.1 with 2 data values
+    Next datum 11
+    average 2.93333333333333 with 3 data values
+    Next datum 3.7
+    average 3.125 with 4 data values
+    After clearing:
+    average NaN with 0 data values
+
+Now that we have a clear idea of the proposed outward behavior, we
+can consider how to implement the ``Averager`` class.
+
+We could store a list of all the data values entered in any instance,
+requiring a large amount of memory for a long list. However, this
+functionality was built into early calculators, with very limited memory.
+How can we do it without remembering the whole list?  
+Consider a concrete example:
+
+If I have entered numbers 2.1, 4.5 and 5.4, and want the average, it is
+
+    :math:`(2.1+4.5+5.4)/3=12.0/3=4.0`
+    
+If I want to include a further number 5.0, the average becomes
+
+    :math:`(2.1+4.5+5.4+5.0)/4=17.0/4=4.25`
+    
+Note the relationship to the previous average expression:
+
+    :math:`=((2.1+4.5+5.4)+5.0)/4=(12.0+5.0)/(3+1)`
+
+In the numerator we have added the latest value to the previous sum, 
+and in the denominator the count of data items is increased by one.  
+All we need to remember to
+go on to include the next item is the sum of values so far and the 
+number of values so far.  We can just have instance variables
+``sum`` and ``dataCount``.
+
+You might think how to create this class....
+
+The full ``Averager`` code follows:
+
+.. literalinclude:: ../source/examples/averager/averager.cs
+
+Several things to note:
+
+* We show that a constructor, like an instance method, can include a call
+  to a further instance method.  Though we illustrate this idea, the 
+  constructor code is
+  actually unneeded.  See the :ref:`unneeded-constructor-code-exercise` below.
+* We have methods that are not ToString or mere getters or setters of instance
+  variables.  The logic of the class requires more. 
+* The ``GetAverage``
+  method does return data obtained by reading instance variable, but it does
+  a calculation using the instance variables first.  See
+  :ref:`alternate-internal-state-exercise`.
+
+The code for both classes is in project :repsrc:`averager`.
+
+Statistics Exercise
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Modify the project :repsrc:`averager` so the ``Averager`` class is
+converted to ``Statistics``.  Besides having methods to calculate the count
+of data items and average, also calculate the standard deviation with
+a method ``StandardDeviation``.  
+It turns out that the only other instance variable needed is
+the sum of the squares of the data items, call it ``sumOfSqr``. 
+Before calculating the standard deviation, suppose we
+assign the current average to  a local variable ``avg``.   
+Then the handiest form of expression for the standard deviation is  ::
+
+    Math.Sqrt((sumOfSqr - avg*avg)/dataCount)
+
+Modify the demonstration program to show the standard deviation, too.
+
+.. _unneeded-constructor-code-exercise:
+
+Unneeded Constructor Code Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Recall that objects are always initialized. Each instance variable
+has a default value assigned before a constructor is even run.  
+The default value for numeric instance variables is 0, so the
+call to ``Clear`` in the constructor could be left out, leaving the
+body of the constructor empty!  Try commenting that line out
+and test that the behavior of demo program is the same.
+
+Emphasizing the fact that you are thinking about the
+initial values of instance variables is not a bad idea.  Hence 
+a common practice is to
+explicitly assign even the default values in the constructor, as
+we did initially with the call to ``Clear`` inside the constructor.
+
+If no constructor definition is explicitly provided at all,
+the compiler implicitly creates one with no parameters and an empty body.  
+This means that the entire constructor in ``Averager`` could be omitted.
+Comment the whole constructor out and check.
+
+There is a defensive programming 
+reason to provide even the do-nothing constructor explicitly:
+If you use the implicit constructor and then decide to add a constructor 
+with parameters, the implicit constructor is no longer defined by the compiler,
+so any remaining call to it in your code becomes an error.
+
+.. _alternate-internal-state-exercise:
+
+Alternate Internal State Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The way we represent the internal state for an ``Averager`` is the
+best probably, but if it turns out that the ``GetAverage`` method
+is called a lot more often than a method that changes the state, 
+we could avoid repeated division by saving the average as an
+instance variable.  We could keep that *instead of* ``sum`` 
+(and still keep ``dataCount``).  We can manage to 
+keep the same public interface to the methods.  With these
+alternate instance variables how would you change 
+the implementation code and not change the method headings or meanings? 
+If we keep the assumption that the average of 0 
+items is
+``double.Nan``, you will need to treat adding the first datum as
+a special case.  The code is simpler if we change the outward assumptions
+enough to consider the average of 0 items
+to be 0.  Try it either way.
+
+In the version with NaN you can avoid testing for NaN, 
+but if you choose to test for
+NaN, you need the boolean ``Double.IsNaN`` function, because the expression
+``double.NaN == double.NaN`` is *false*!
+
 .. index:: class; convert static game to instance
 
 Converting A Static Game To A Game Instance
@@ -42,7 +221,7 @@ For a comparison of procedural and object-oriented coding,
 consider converting :ref:`lab-number-game` so that a GuessGame
 is an object, an instance of the GuessGame class.
 
-While our last example, Contact, is a simple but practical 
+While our earlier example, Contact, is a simple but practical 
 use of object-oriented programming, GuessGame is somewhat more artificial.  
 We create it hoping that highlighting the differences between procedural 
 and object-oriented presentation is informative.  Also, we will see 
@@ -385,7 +564,8 @@ Just in the method to create the desire 12-hour view have the logic to do the
 You could leave in the method to provide the time in the
 24 hour format, giving the ``Clock`` class user the option to use either view
 of the shared model data.
-To be symmetrical in the naming, you might change the original name ``GetTimeString`` to 
+To be symmetrical in the naming, 
+you might change the original name ``GetTimeString`` to 
 ``GetTimeString24``.
 
 
