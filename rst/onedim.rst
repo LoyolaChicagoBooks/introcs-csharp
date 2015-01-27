@@ -239,6 +239,61 @@ This code follows a standard pattern for functions returning an array:
   ``for`` loop to assign to each element in turn.
 * Finally we must return the array that we created!
 
+
+Follow Array Loop Exercise/Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+a.  What is printed by this program?  Play computer first
+    to figure out.  
+
+    .. literalinclude:: ../source/examples/array_loop1/array_loop1.cs
+       :linenos:
+
+    Then you can run example 
+    :repsrc:`array_loop1/array_loop1.cs` to check the results and see our 
+    table from playing computer included in the project,
+    :repsrc:`array_loop1/play_computer1.txt`.
+
+#.  What is printed by this program?  Play computer first
+    to figure out.  Be careful to keep the data current! 
+
+    .. literalinclude:: ../source/examples/array_loop2/array_loop2.cs
+       :linenos:
+
+    Then you can run example 
+    :repsrc:`array_loop2/array_loop2.cs` to check the results and see our 
+    table from playing computer included in the project,
+    :repsrc:`array_loop2/play_computer2.txt`.
+
+
+#.  What is printed by this program?  Play computer first
+    to figure out.   
+
+    .. literalinclude:: ../source/examples/array_loop3/array_loop3.cs
+       :linenos:
+
+    Then you can run example 
+    :repsrc:`array_loop3/array_loop3.cs` to check the results and see our 
+    table from playing computer included in the project,
+    :repsrc:`array_loop3/play_computer3.txt`.
+
+
+.. _sign-array-exercise:
+
+Sign Array Exercise/Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Complete the code for this function:
+
+.. literalinclude:: ../source/examples/sign_array1/sign_array1.cs
+   :start-after: chunk
+   :end-before: chunk
+
+and place it in a program with a main function that demonstrates it.
+
+You can compare your solution with ours in
+:repsrc:`sign_array1/sign_array1.cs`.
+
 .. index::
    command line; parameter
    parameter; command line to Main
@@ -567,6 +622,21 @@ Write a ``Main`` method to demonstrate it.  Use the example function
 :ref:`PrintStrings <printstrings>` to show off your result.
 
 
+Sign Array II Exercise/Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create a variation on :ref:`sign-array-exercise` with a function 
+with heading
+
+.. literalinclude:: ../source/examples/sign_array2/sign_array2.cs
+   :start-after: chunk
+   :end-before: chunk
+
+and a main function to demonstrate it.
+
+You can compare your solution with ours in
+:repsrc:`sign_array2/sign_array2.cs`.
+
 .. index::
    single: array; anonymous initialization
 
@@ -736,7 +806,7 @@ Adding a ``Main`` demostration method, you get our full example
 Initialization Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-a.  In the ``NoZeros` function above,
+a.  In the ``NoZeros`` function above,
     what are the values in the array ``notzero`` just after
     line 12 is executed?
 
