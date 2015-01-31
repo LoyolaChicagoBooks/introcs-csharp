@@ -119,3 +119,64 @@ Multiply method is legal, their declaration as only their interface type
     It is possible to deal with the actual underlying class type, but this gets 
     more complicated.  It is better discussed in a course that more fully
     explores *inheritance*. 
+
+.. index:: interface; syntax examples
+
+.. _interface-syntax-examples:
+
+Interface Syntax Examples
+--------------------------
+
+In the previous section we showed a realistic application of an existing
+interface.  It was in a fairly sophisticated class with a lot of other things
+included.  Now you can look at examples that are designed to highlight syntax 
+for interfaces without distractions.  They are very simple and artificial.
+
+There is a comment at the bottom of each file explaining the new
+features introduced.  Like all our other examples, they compile and
+run as given.  After running an example, see if the notes
+include instructions to delete or comment out parts or
+uncomment lines.  If so, follow instructions and try to compile again.  
+Check that the change causes a compiler error.  
+
+Look through and process these examples in order:
+
+:repsrc:`interface_syntax1/interface_demo1.cs`,
+:repsrc:`interface_syntax2/interface_demo2.cs`,
+:repsrc:`interface_syntax3/interface_demo3.cs`,
+:repsrc:`interface_syntax4/interface_demo4.cs`,
+:repsrc:`interface_syntax5/interface_demo5.cs`,
+:repsrc:`interface_syntax6/interface_demo6.cs`,
+:repsrc:`interface_syntax7/interface_demo7.cs`,
+:repsrc:`interface_syntax8/interface_demo8.cs`
+
+
+After looking at those simple bare examples illustrating the syntax, 
+go on to the next section :ref:`csproject-revisited`,
+where a useful, more sophisticated user-defined interface
+is introduced....
+
+Example Class Sorting - Worked Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In :ref:`more-getters-and-setters` we introduced example
+:repsrc:`example_class/example_class.cs`.
+
+Elaborate the code for the ``Example`` class, adding
+a ``CompareTo`` method. 
+The rules for comparison are:
+
+#.  An object
+    with a larger ``n`` value is considered larger.
+#.  If the ``n`` 
+    values are the same, then the object with the larger ``d`` 
+    value is considered larger.  
+#.  If they completely match, then they are equal, of course.
+
+Modify the ``Main`` driver to merely test sorting:
+create and sort a list of ``Example``
+elements.  Show the before and after sequence in the list.
+
+You can compare your solution to ours:
+:repsrc:`example_class2/example_class2.cs`.    
+

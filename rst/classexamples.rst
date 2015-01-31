@@ -1,7 +1,13 @@
+.. index:: class; instance examples
+
+.. _class-instance-examples:
+
 Class Instance Examples
 ========================
 
 .. index:: exercise; getters and setters
+
+.. _more-getters-and-setters:
 
 More Getters and Setters
 -------------------------
