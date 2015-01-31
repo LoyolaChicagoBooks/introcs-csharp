@@ -1,4 +1,6 @@
-csproject Revisited
+.. _csproject-revisited:
+
+Csproject Revisited
 =====================
 
 The :repsrc:`cs_project1` project skeleton was set up with the different commands
