@@ -98,8 +98,8 @@ declared to be of interface type the compiler no longer sees the attributes
 that are *not* common to the interface.  A silly example, legal as far
 as it goes::
 
-   IComparable<Rational> r1 - new Rational(2,5), 
-                          r2 - new Rational(1, 2);
+   IComparable<Rational> r1 = new Rational(2,5), 
+                         r2 = new Rational(1, 2);
    Console.WriteLine(r1.CompareTo(r2) > 0); // prints false
 
 The declarations are legal because a Rational does have interface type
