@@ -1,3 +1,12 @@
+commit 6c4b0890cf2c9e30d5c825633bb72d81fb840ae5
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Tue Jun 30 02:13:39 2015 +0000
+
+    Generated gh-pages for commit 39bedea
+    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    
+        add log
+
 commit 2bbdd6de12ec12eaac40bb2b5c9dac0eb5613a8e
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jun 30 02:08:57 2015 +0000
@@ -33,18 +42,3 @@ Date:   Tue Jun 30 01:45:25 2015 +0000
     Author: George K. Thiruvathukal <gkt@cs.luc.edu>
     
         fix build.sh
-
-commit 28e43bb3b45b0efeb780aa7c31a1b182a2fb182a
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jun 30 01:40:13 2015 +0000
-
-    Generated gh-pages for commit f984924
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-    
-        update token
-
-commit d99eaa78c985d042fed4b5effcfe62113fac6f2b
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Mon Jun 29 20:35:55 2015 -0500
-
-    gh-pages branch creation
