@@ -10,10 +10,11 @@ git reset HEAD
 rm -rf build
 ./build.sh
 mkdir -p download
-mv -fv build/html/* ./
-mv -fv build/latex/*.pdf ./download/
-mv -fv build/epub/*.epub ./download/
+cp -f build/html/* ./
+cp -f build/latex/*.pdf ./download/
+cp -f build/epub/*.epub ./download/
 touch .nojekyll
 git add -A
+git status
 git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push deploy HEAD:gh-pages
 
