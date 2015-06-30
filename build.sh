@@ -1,6 +1,7 @@
-#!/bin/bash
+#! /bin/bash
 
 [ -f ~/.env/sphinx/bin/activate ] && . ~/.env/sphinx/bin/activate
 
-./pull-examples.sh
-./sphinx-default.sh
+make html
+make epub
+make LATEXOPTS=' -interaction=batchmode ' latexpdf
