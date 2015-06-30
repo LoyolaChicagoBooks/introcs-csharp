@@ -14,7 +14,7 @@ mv -vf build/html/* ./
 mv -vf build/latex/*.pdf ./download/
 mv -vf build/epub/*.epub ./download/
 touch .nojekyll
-git log > COMMITS.txt
+git log -5 > COMMITS.txt
 git add -A
 git status
 git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push deploy HEAD:gh-pages
