@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5.7. Compound Boolean Expressions &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="index.html" />
+    <link rel="up" title="5. Decisions" href="decisions.html" />
+    <link rel="next" title="5.8. Nested if Statements" href="ifnested.html" />
+    <link rel="prev" title="5.6. If-statement Pitfalls" href="ifpitfalls.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">1.3. Downloading Text, Source Code, and Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="decisions.html">5. Decisions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">5.7. Compound Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#congress-exercise">5.7.1. Congress Exercise</a></li>
+<li><a class="reference internal" href="#implication-exercise">5.7.2. Implication Exercise</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="ifpitfalls.html" title="Previous Chapter: 5.6. If-statement Pitfalls">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="ifnested.html" title="Next Chapter: 5.8. Nested if Statements">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/compoundconditions.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="compound-boolean-expressions">
+<span id="index-0"></span><span id="id1"></span><h1>5.7. Compound Boolean Expressions<a class="headerlink" href="#compound-boolean-expressions" title="Permalink to this headline">¶</a></h1>
+<p>To be eligible to graduate from Loyola University Chicago, you must
+have 120 credits <em>and</em> a GPA of at least 2.0. C# does not use the
+word <em>and</em>.  Instead it uses <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> (inherited from the C language).
+Then the requirement
+translates directly into C# as a <em>compound condition</em>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">credits</span> <span class="p">&gt;=</span> <span class="m">120</span> <span class="p">&amp;&amp;</span> <span class="n">GPA</span> <span class="p">&gt;=</span><span class="m">2.0</span>
+</pre></div>
+</div>
+<p>This is true if both <code class="docutils literal"><span class="pre">credits</span> <span class="pre">&gt;=</span> <span class="pre">120</span></code> is true and
+<code class="docutils literal"><span class="pre">GPA</span> <span class="pre">&gt;=</span> <span class="pre">2.0</span></code> is
+true. A short example function using this would be:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">checkGraduation</span><span class="p">(</span><span class="kt">int</span> <span class="n">credits</span><span class="p">,</span> <span class="kt">double</span> <span class="n">GPA</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">credits</span> <span class="p">&gt;=</span> <span class="m">120</span> <span class="p">&amp;&amp;</span> <span class="n">GPA</span> <span class="p">&gt;=</span><span class="m">2.0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;You are eligible to graduate!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;You are not eligible to graduate.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The new C# syntax for the operator <code class="docutils literal"><span class="pre">&amp;&amp;</span></code>:</p>
+<blockquote>
+<div><em>condition1</em> <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> <em>condition2</em></div></blockquote>
+<p>The compound condition is true if both of the component conditions
+are true. It is false if at least one of the conditions is false.</p>
+<p>Suppose we want a C# condition that is true in the same situations as the mathematical
+expression: low &lt; val &lt; high.  Unfortunately the math is not a
+C# expression.  The C# operator <code class="docutils literal"><span class="pre">&lt;</span></code> is binary.  In C# the statement above is
+equivalent to</p>
+<blockquote>
+<div>(low &lt; val) &lt; high</div></blockquote>
+<p>comparing a Boolean result to high, and causing a compiler error.
+There is a C# version.  Be sure to use this pattern:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">low</span> <span class="p">&lt;</span> <span class="n">val</span> <span class="p">&amp;&amp;</span> <span class="n">val</span> <span class="p">&lt;</span> <span class="n">high</span>
+</pre></div>
+</div>
+<p id="index-1">Now suppose we want the opposite condition:  that val is <em>not</em>
+strictly between low and high.
+There are several approaches.
+One is that <code class="docutils literal"><span class="pre">val</span></code> would be less than or equal to low
+<em>or</em> greater than or equal to <code class="docutils literal"><span class="pre">high</span></code>.  C# translate <em>or</em> into <code class="docutils literal"><span class="pre">||</span></code>,
+so a C# expression would be:</p>
+<blockquote>
+<div>val &lt;= low || val &gt;= high</div></blockquote>
+<p>The new C# syntax for the operator <code class="docutils literal"><span class="pre">||</span></code>:</p>
+<blockquote>
+<div><em>condition1</em> <code class="docutils literal"><span class="pre">||</span></code> <em>condition2</em></div></blockquote>
+<p>The compound condition is true if at least one of the component conditions
+are true. It is false if both conditions are false.</p>
+<p id="index-2">Another logical way to express the opposite of the condition low &lt; val &lt; high
+is that it is <em>not</em> the case
+that low &lt; val &amp;&amp; val &lt;&lt; high.  C# translates <em>not</em> as <code class="docutils literal"><span class="pre">!</span></code>.  Another way
+to state the condition would be</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="p">!(</span><span class="n">low</span> <span class="p">&lt;</span> <span class="n">val</span> <span class="p">&amp;&amp;</span> <span class="n">val</span> <span class="p">&lt;</span> <span class="n">high</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The parentheses are needed because the <code class="docutils literal"><span class="pre">!</span></code>
+operator has higher precedence than
+<code class="docutils literal"><span class="pre">&lt;</span></code>.</p>
+<p>A way to remember this strange <em>not</em> operator is to think of the use of <code class="docutils literal"><span class="pre">!</span></code>
+in the not-equal operator: <code class="docutils literal"><span class="pre">!=</span></code></p>
+<p>The new C# syntax for the operator <code class="docutils literal"><span class="pre">!</span></code>:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">!</span></code> <em>condition</em></div></blockquote>
+<p>This whole expression is true when <em>condition</em> is false,
+and false when <em>condition</em> is true.</p>
+<p>Because of the precedence of <code class="docutils literal"><span class="pre">!</span></code>, you are often going to write:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">!(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">)</span></code></div></blockquote>
+<p>Remember when such a condition is used in an <code class="docutils literal"><span class="pre">if</span></code> statement, <em>outer</em>
+parentheses are also needed:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">if</span> <span class="pre">(!(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">))</span> <span class="pre">{</span></code></div></blockquote>
+<p>We now have a lot of operators!  Most of those in appendix <a class="reference internal" href="precedence.html#precedence"><span>Precedence of Operators</span></a>
+have now been considered. There
+you can see that <code class="docutils literal"><span class="pre">!</span></code> has the high precedence of unary arithmetic operators.
+The operators <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> and <code class="docutils literal"><span class="pre">||</span></code> are almost at the bottom of the operators
+considered in this book, just above the assignment operators, and below the
+relational operators, with <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> above <code class="docutils literal"><span class="pre">||</span></code>.
+You are encourages to use parentheses to make sure.</p>
+<p><strong>Compound Overkill</strong>:  Look back to the code converting a score to a letter grade
+in <a class="reference internal" href="ifelsechained.html#multiple-tests"><span>Multiple Tests and if-else Statements</span></a>.
+The condition before assigning the B grade could have been:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">80</span> <span class="p">&amp;&amp;</span> <span class="n">score</span> <span class="p">&lt;</span> <span class="m">90</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>That would have totally nailed the condition, but it is overly verbose in the
+<code class="docutils literal"><span class="pre">if</span></code> .. <code class="docutils literal"><span class="pre">else</span> <span class="pre">if</span></code> ... code where it appeared:
+Since you only get to consider a B as a grade if the grade was <em>not</em> already
+set to A, the second part of the compound condition above is redundant.</p>
+<p>There are a couple more wrinkles with compound Boolean expressions introduced
+later in <a class="reference internal" href="condition-short-circuit.html#short-circuit"><span>Short-Circuiting &amp;&amp; and ||</span></a>.</p>
+<div class="section" id="congress-exercise">
+<span id="congressex"></span><h2>5.7.1. Congress Exercise<a class="headerlink" href="#congress-exercise" title="Permalink to this headline">¶</a></h2>
+<p>A person is eligible to be a US Senator who is at least 30 years
+old and has been a US citizen for at least 9 years. Write a version
+of a program <code class="docutils literal"><span class="pre">congress.cs</span></code> to obtain age and length of
+citizenship from the user and print out if a person is eligible to
+be a Senator or not. A person is eligible to be a US Representative
+who is at least 25 years old and has been a US citizen for at least
+7 years. Elaborate your program <code class="docutils literal"><span class="pre">congress.cs</span></code> so it obtains age
+and length of citizenship and prints whether a person is eligible
+to be a US Representative only, or is eligible for both offices, or
+is eligible for neither.</p>
+<p>This exercise could be done by making an exhaustive treatment of all
+possible combinations of age and citizenship.  Try to avoid that.
+(Note the paragraph just before this exercise.)</p>
+<p>Caution:  be sure to do exhaustive testing.  It is easy to write code
+that is correct for <em>some</em> inputs, but not all.</p>
+</div>
+<div class="section" id="implication-exercise">
+<span id="index-3"></span><h2>5.7.2. Implication Exercise<a class="headerlink" href="#implication-exercise" title="Permalink to this headline">¶</a></h2>
+<p>We have introduced C# Boolean operators for AND, OR, and NOT.
+There are other Boolean operators important in logic,
+that are not directly given as a C# operator.
+One example is &#8220;implies&#8221;, also expressed
+in a logical if-then statement:  If I am expecting rain, then I am carrying an
+umbrella.  Otherwise put:  &#8220;I am expecting rain&#8221; <em>implies</em>
+&#8220;I am carrying an umbrella&#8221;. The first part is a Boolean expression called the
+<em>hypothesis</em>, and the second part is called the <em>conclusion</em>.  In general, when
+A and B are Boolean expressions, &#8220;A implies B&#8221; is also a Boolean expression.</p>
+<p>Just as the truth of a compound Boolean expression like &#8220;A and B&#8221; depends on the
+truth value of the two parts, so with <em>implies</em>:
+If you are using good logic, and you start with a true assertion,
+you should only be able to conclude something else true, so it is true that
+&#8220;true implies true&#8221;.  If you start with garbage you can use that false statement
+in a logical argument and end up with something either false or true:
+&#8220;false implies false&#8221; and &#8220;false implies true&#8221; are both true. The only thing
+that should not work is to start with something true and conclude
+something false.  If that were the case, logical arguments would be useless,
+so &#8220;true implies false&#8221; is false.  There is no C# operator for &#8220;implies&#8221;, but
+you can check all four cases of Boolean values for A and B to see that
+&#8220;A implies B&#8221; is true exactly when &#8220;not A or B&#8221; is true.  We can
+express this in C# as <code class="docutils literal"><span class="pre">!A</span> <span class="pre">||</span> <span class="pre">B</span></code>.</p>
+<p>So here is a silly little exercise illustrating both implication and using
+the C# Boolean operators:  Ask the user whether &#8220;I am expecting rain&#8221; is true.
+(We have the UI function Agree.)  Then check with the user whether
+&#8220;I am carrying an umbrella.&#8221;  Then conclude and print out
+whether the implication &#8220;If I am expecting rain, then I am carrying an
+umbrella.&#8221; is true or not in this situation.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 30-June-2015 01:44:49.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

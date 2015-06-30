@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>6.1. While-Statements &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="index.html" />
+    <link rel="up" title="6. While Loops" href="while.html" />
+    <link rel="next" title="6.2. While-Statements with Sequences" href="while-with-sequence.html" />
+    <link rel="prev" title="6. While Loops" href="while.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">1.3. Downloading Text, Source Code, and Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="while.html">6. While Loops</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">6.1. While-Statements</a><ul>
+<li><a class="reference internal" href="#sum-to-n">6.1.1. Sum To <code class="docutils literal"><span class="pre">n</span></code></a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="while.html" title="Previous Chapter: 6. While Loops">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="while-with-sequence.html" title="Next Chapter: 6.2. While-Statements with Sequences">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/whilestatements.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="while-statements">
+<span id="index-0"></span><span id="id1"></span><h1>6.1. While-Statements<a class="headerlink" href="#while-statements" title="Permalink to this headline">¶</a></h1>
+<p>We have seen that the sequential flow of a program
+can be altered with function calls
+and decisions.  The last important pattern is <em>repetition</em> or <em>loops</em>.
+There are several varieties.  The simplest place to start is with
+<code class="docutils literal"><span class="pre">while</span></code> loops.</p>
+<p>A C#
+<code class="docutils literal"><span class="pre">while</span></code> loop behaves quite similarly to common English usage. If
+you hear</p>
+<blockquote>
+<div>While your tea is too hot, add a chip of ice.</div></blockquote>
+<p>Presumably you would test your tea. If it were too hot, you would
+add a little ice. If you test again and it is still too hot, you
+would add ice again. <em>As long as</em> you tested and found it was true
+that your tea was too hot, you would go back and add more ice.
+C# has a similar syntax:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">)</span></code></div>
+<div class="line-block">
+<div class="line">statement</div>
+</div>
+</div>
+</div></blockquote>
+<p>As with an <code class="docutils literal"><span class="pre">if</span></code> statement we will generally assume a compound statement,
+after the condition, so the syntax will actually be:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">)</span> <span class="pre">{</span></code></div>
+<div class="line-block">
+<div class="line">statement(s)</div>
+</div>
+<div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
+</div>
+</div></blockquote>
+<p>Setting up the English example as pseudocode in a similar format would be:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">while ( <em>your tea is too hot</em> ) {</div>
+<div class="line-block">
+<div class="line">add a chip of ice</div>
+</div>
+<div class="line">}</div>
+</div>
+</div></blockquote>
+<p id="index-1">To make things concrete and numerical, suppose the following: The
+tea starts at 115 degrees Fahrenheit. You want it at 112 degrees. A
+chip of ice turns out to lower the temperature one degree each
+time. You test the temperature each time, and also print out the
+temperature before reducing the temperature. In C# you could
+write and run the code below, saved in example program
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/cool/cool.cs">cool/cool.cs</a>:</p>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="kt">int</span> <span class="n">temperature</span> <span class="p">=</span> <span class="m">115</span><span class="p">;</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">temperature</span> <span class="p">&gt;</span> <span class="m">112</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// first while loop code</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
+         <span class="n">temperature</span> <span class="p">=</span> <span class="n">temperature</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The tea is cool enough.&quot;</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>We added a final line after the <code class="docutils literal"><span class="pre">while</span></code> loop to remind you that
+execution follows sequentially after a loop completes.</p>
+<p>It is extremely important to totally understand how the flow of
+execution works with loops.  One way to follow it
+closely is to make a table with a line for each instruction
+executed, keeping track of all the variables, playing computer.
+as with <code class="docutils literal"><span class="pre">if</span></code> statements, the executed lines that you show in your table
+will not be in textual order, as in
+<a class="reference internal" href="programstructure.html#sequential-execution"><span>Sequential Execution</span></a>.
+While <code class="docutils literal"><span class="pre">if</span></code> statements merely altered execution order
+by skipping some lines, loops allow the same line in the text of your program
+to be executed repeatedly, and show up in multiple places in your table.</p>
+<p id="index-2">If you play computer and follow the path of execution, you could
+generate the following table. Remember, that each time you reach
+the end of the block after the <code class="docutils literal"><span class="pre">while</span></code> heading,
+execution returns to the <code class="docutils literal"><span class="pre">while</span></code> heading for another test:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="25%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Line</th>
+<th class="head">temperature</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>115</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>&nbsp;</td>
+<td>115 &gt; 112 is true, do loop</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>&nbsp;</td>
+<td>prints 115</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>114</td>
+<td>115 - 1 is 114, loop back</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>&nbsp;</td>
+<td>114 &gt; 112 is true, do loop</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>&nbsp;</td>
+<td>prints 114</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>113</td>
+<td>114 - 1 is 113, loop back</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>&nbsp;</td>
+<td>113 &gt; 112 is true, do loop</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>&nbsp;</td>
+<td>prints 113</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>112</td>
+<td>113 - 1 is 112, loop back</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>&nbsp;</td>
+<td>112 &gt; 112 is false, skip loop</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>&nbsp;</td>
+<td>prints that the tea is cool</td>
+</tr>
+</tbody>
+</table>
+<p>Each time the end of the loop body block is reached, execution
+<em>goes back</em> to the <code class="docutils literal"><span class="pre">while</span></code> loop heading for another test. When the
+test is finally false, execution jumps past the indented body of
+the <code class="docutils literal"><span class="pre">while</span></code> loop to the next sequential statement.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Unless a program is purely sequential,
+the numbers under the <strong>Line</strong> column are <em>not</em> just in textual, sequential
+order.  The order of the numbers is the order of <em>execution</em>.
+Each line number in the &#8220;playing computer&#8221; table is the
+line <em>number label</em> for the next particular line <em>getting executed</em>.
+Since in decisions, loops, and function calls, lines may be reordered
+or repeated, the corresponding line numbers may be skipped, repeated,
+or otherwise out of numerical order.</p>
+</div>
+<p id="index-3">The biggest trick with a loop is to make the same code do the next
+thing you want each time through.  That generally involves
+the use of variables that are modified for each successive time through
+the loop.  Here is a general pattern:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">initialization</div>
+<div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>continuationCondition</em> <code class="docutils literal"><span class="pre">)</span> <span class="pre">{</span></code></div>
+<div class="line-block">
+<div class="line">do main action to be repeated</div>
+<div class="line">prepare variables for the next time through the loop</div>
+</div>
+<div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
+</div>
+</div></blockquote>
+<p>The simple first example follows this pattern directly.  Note
+that the variables needed for the test of the condition must be
+set up <em>both</em> in the initialization <em>and</em> inside the loop
+(often at the very end).  Without a change inside the loop, the loop would
+run forever!</p>
+<p>How to manage all of this in general is a big deal for beginning students.
+We will see a number of common patterns in lots of practice.  We will use
+the term <em>successive modification loop</em> for loops following the pattern
+above.</p>
+<p>Test yourself: Follow the code.  Figure out what is printed.
+If it helps, get detailed and play computer:</p>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">9</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+         <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Check yourself by running the example program <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_while1/test_while1.cs">test_while1/test_while1.cs</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In C#, <code class="docutils literal"><span class="pre">while</span></code> is not used <em>quite</em> like in English. In
+English you could mean to stop <em>as soon as</em> the condition you want
+to test becomes false. In C# the test is <em>only</em> made when
+execution for the loop starts (or starts again),
+<em>not</em> in the middle of the loop.</p>
+</div>
+<p><em>Predict</em> what will happen with this slight variation on the
+previous example, switching the order in the loop body. Follow it
+carefully, one step at a time.</p>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span> <span class="c1">//variation on TestWhile1.cs</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">9</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+      <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Check yourself by running the example program
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_while2/test_while2.cs">test_while2/test_while2.cs</a>.</p>
+<p>The line sequence is important. The variable <code class="docutils literal"><span class="pre">i</span></code> is increased before
+it is printed, so the first number printed is 6. Another common
+error is to assume that 10 will <em>not</em> be printed, since 10 is
+<em>past</em> 9, but the test that may stop the loop is <em>not</em> made in the
+middle of the loop. Once the body of the loop is started, it
+continues to the end, even when <code class="docutils literal"><span class="pre">i</span></code> becomes 10.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="6%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Line</th>
+<th class="head">i</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>4</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>&nbsp;</td>
+<td>4 &lt; 9 is true, do loop</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>6</td>
+<td>4+2=6</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>&nbsp;</td>
+<td>print 6</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>&nbsp;</td>
+<td>6 &lt; 9 is true, do loop</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>8</td>
+<td>6+2= 8</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>&nbsp;</td>
+<td>print 8</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>&nbsp;</td>
+<td>8 &lt; 9 is true, do loop</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>10</td>
+<td>8+2=10  <em>No test here</em></td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>&nbsp;</td>
+<td>print 10</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>&nbsp;</td>
+<td>10 &lt; 9 is false, skip loop</td>
+</tr>
+</tbody>
+</table>
+<p>You should be able to generate a table like the one above, following
+the execution of one statement at a time.  You are playing through the role
+of the computer in detail.
+As code gets more complicated, particularly with loops, this &#8220;playing computer&#8221;
+is an important skill.</p>
+<p><strong>Problem</strong>:  Write a program with a <code class="docutils literal"><span class="pre">while</span></code> loop to print:</p>
+<div class="highlight-none"><div class="highlight"><pre>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Blastoff!
+</pre></div>
+</div>
+<p><strong>Analysis</strong>:
+We have seen that we can produce a regular sequence of numbers in a loop.
+The &#8220;Blastoff!&#8221; part does not fit the pattern, so it is logically a <em>separate</em>
+part after the loop.  We need a name for the number that decreases.  It can
+be <code class="docutils literal"><span class="pre">time</span></code>.  Remember the general rubric for a <code class="docutils literal"><span class="pre">while</span></code> loop:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">initialization</div>
+<div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>continuationCondition</em> <code class="docutils literal"><span class="pre">)</span> <span class="pre">{</span></code></div>
+<div class="line-block">
+<div class="line">do main action to be repeated</div>
+<div class="line">prepare variables for the next time through the loop</div>
+</div>
+<div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
+</div>
+</div></blockquote>
+<p>You can consider each part separately.  Where to start is partly a
+matter of taste.</p>
+<p>The main thing to do is print the time over and over.
+The initial value of the time is 10.  We are going to want to keep printing
+until the time is down to 1, so we <em>continue</em> while the time is at least 1,
+meaning the continuationCondition can be <code class="docutils literal"><span class="pre">time</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>,
+or we could use <code class="docutils literal"><span class="pre">time</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, since <code class="docutils literal"><span class="pre">time</span></code> is an integer here.</p>
+<p>Finally we need to get ready to print a different time in
+the next pass through the loop.
+Since each successive time is one less than the previous one, the
+preparation for the next value of time is:  <code class="docutils literal"><span class="pre">time</span> <span class="pre">=</span> <span class="pre">time</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p>
+<p>Putting that all together, and remembering the one thing we noted
+to do after the loop,
+we get <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/blastoff/blastoff.cs">blastoff/blastoff.cs</a>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Blastoff</span>
+<span class="p">{</span>
+   <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+   <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">time</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">time</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">time</span><span class="p">);</span>
+         <span class="n">time</span> <span class="p">=</span> <span class="n">time</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Blastoff!&quot;</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Look back and see how we fit the general rubric.
+There are a bunch of things to think about with a while loop, so
+it helps to go one step at a time, thinking of the rubric and the specific
+needs of the current problem.</p>
+<p>There are many different (and more exciting) patterns of change coming
+for loops,
+but the simple examples so far get us started.</p>
+<p class="rubric" id="loop-rubric"><span id="index-4"></span>Loop Planning Rubric</p>
+<p>Looking ahead to more complicated and interesting problems,
+here is a more complete list of questions to ask yourself when
+designing a function with a <code class="docutils literal"><span class="pre">while</span></code> loop:</p>
+<ul class="simple">
+<li>What data is involved? Make sure you give good variable names.</li>
+<li>What needs to be initialized and how? This certainly includes any
+variable tested in the condition.</li>
+<li>What is the condition that will allow the loop to <em>continue</em>?  It
+may be easier to think of the condition that will <em>stop</em> the loop.
+That is fine - but remember to <em>negate</em> it (with <code class="docutils literal"><span class="pre">!</span></code>) to turn it
+into a proper <em>continuation</em> condition.</li>
+<li>Distinguish: What is the code that should only be executed once?
+What action do I want to repeat?</li>
+<li>How do I write the repeating action so I can modify it for the next time
+through the loop to work with new data?</li>
+<li>What code is needed to do modifications to make the same code work
+the next time through the loop?</li>
+<li>Have I thought of variables needed in the middle and declared them;
+do other things need initialization?</li>
+<li>Will the continuation condition eventually fail?
+<em>Be sure to think about this!</em></li>
+<li>Separate the actions to be done once before the repetition (code before the
+loop) from repetitive actions (in the loop) from actions not repeated, but
+done after the loop (code after the loop). Missing this distinction
+is a <em>common error</em>!</li>
+</ul>
+<div class="section" id="sum-to-n">
+<span id="sumton"></span><h2>6.1.1. Sum To <code class="docutils literal"><span class="pre">n</span></code><a class="headerlink" href="#sum-to-n" title="Permalink to this headline">¶</a></h2>
+<p>Let us write a function to sum the numbers from 1 to <code class="docutils literal"><span class="pre">n</span></code>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For instance SumToN(5) calculates 1 + 2 + 3 + 4 + 5 and returns 15.
+We know how to generate a sequence of integers, but this is a place
+that a programmer gets tripped up by the speed of the human mind.
+You are likely
+so quick at this that you just see it all at once, with the answer.</p>
+<p id="index-5">In fact, you and the computer need to do this in steps.  To help see, let
+us take a concrete example like the one above for SumToN(5), and write out a
+detailed sequence of steps like:</p>
+<div class="highlight-none"><div class="highlight"><pre>3 = 1 + 2
+6 = 3 + 3
+10 = 6 + 4
+15 = 10 + 5
+</pre></div>
+</div>
+<p>You could put this in code directly for a specific sum, but if <code class="docutils literal"><span class="pre">n</span></code> is general,
+we need a loop, and hence we must see a <em>pattern</em> in code that we can repeat.</p>
+<p>In each calculation the second term in the additions is a successive integer,
+that we can generate.  Starting in the second line, the first number
+in each addition
+is the sum from the previous line.  Of course the next integer and the next
+partial sum change from step to step, so in order to use the same code over and
+over we will need changeable variables, with names.  We can make the partial
+sum be <code class="docutils literal"><span class="pre">sum</span></code> and we can call the next integer <code class="docutils literal"><span class="pre">i</span></code>.  Each addition can be
+in the form:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">sum</span> <span class="p">+</span> <span class="n">i</span>
+</pre></div>
+</div>
+<p>We need to remember that result, the new sum.  You might first think to introduce
+such a name:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">newSum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This will work.  We can go through the <code class="docutils literal"><span class="pre">while</span></code> loop rubric:</p>
+<p>The variables are <code class="docutils literal"><span class="pre">sum</span></code>, <code class="docutils literal"><span class="pre">newSum</span></code> and <code class="docutils literal"><span class="pre">i</span></code>.</p>
+<p>To evaluate</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">newSum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>the first time in the loop, we need <em>initial</em> values for sum and i.
+Our concrete example leads the way:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>We need a <code class="docutils literal"><span class="pre">while</span></code> loop heading with a continuation condition.  How
+long do we want to add the next <code class="docutils literal"><span class="pre">i</span></code>?  That is for all the value up to and
+including n:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</div>
+<p>There is one more important piece - making sure the same code</p>
+<blockquote>
+<div>newSum = sum + i;</div></blockquote>
+<p>works for the <em>next</em> time through the loop.  We have dealt before with
+the idea of the next number in sequence:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>What about <code class="docutils literal"><span class="pre">sum</span></code>?  What was the <code class="docutils literal"><span class="pre">newSum</span></code>
+on <em>one</em> time through the loop becomes the old or
+just plain <code class="docutils literal"><span class="pre">sum</span></code> the <em>next</em> time through, so we can make an assignment:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">sum</span> <span class="p">=</span> <span class="n">newSum</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>All together we calculate the sum with:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">newSum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
+   <span class="n">sum</span> <span class="p">=</span> <span class="n">newSum</span><span class="p">:</span>
+   <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This exactly follows our general rubric, with preparation for the next time
+through the loop at the end of the loop.
+We can condense it in this case: Since <code class="docutils literal"><span class="pre">newSum</span></code> is only used
+once, we can do away with this extra variable name,
+and directly change the value of sum:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
+   <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Finally this was supposed to fit in a function.  The ultimate purpose
+was to <em>return</em> the sum, which is the final value of the
+variable <code class="docutils literal"><span class="pre">sum</span></code>, so the whole function is:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>     <span class="c1">// line 1</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>       <span class="c1">// 2</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>          <span class="c1">// 3</span>
+      <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>         <span class="c1">// 4</span>
+      <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>             <span class="c1">// 5</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>               <span class="c1">// 6</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p id="index-6">The comment before the function definition does not give a clear idea of the
+range of possible values for <code class="docutils literal"><span class="pre">n</span></code>.  How small makes sense for the comment?
+What actually works in the function?  The smallest expression
+starting with 1 would just be 1: (<code class="docutils literal"><span class="pre">n</span></code> is 1).  Does that work in the function?
+You were probably not thinking of that when developing the function!
+Now look back now at this <em>edge case</em>.  You can play computer on the code
+or directly test it.  In this case the initialization of <code class="docutils literal"><span class="pre">sum</span></code> is 1,
+and the body of the loop <em>never</em> runs (2 &lt;= 1 is false).  The function
+execution jumps right to the return statement, and
+does return 1, and everything is fine.</p>
+<p>Also you should check the program in a more general situation, say with <code class="docutils literal"><span class="pre">n</span></code>
+being 4.  You should be able to play computer and generate this table,
+using the line numbers shown in comments at the end of lines,
+and following one statement of execution at a time.  We only
+make entries where variables change value.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="6%" />
+<col width="12%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Line</th>
+<th class="head">i</th>
+<th class="head">sum</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>assume 4 is passed for n</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>2</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2&lt;=4: true, enter loop</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>1+2=3</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>3</td>
+<td>&nbsp;</td>
+<td>2+1=3, bottom of loop</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>3&lt;=4: true</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>3+3=6</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>4</td>
+<td>&nbsp;</td>
+<td>3+1=4, bottom of loop</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>4&lt;=4: true</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>6+4=10</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>5</td>
+<td>&nbsp;</td>
+<td>4+1=5, bottom of loop</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5&lt;=4: false, skip loop</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>return 10</td>
+</tr>
+</tbody>
+</table>
+<p>The return only happens once, so it is not in the loop.  You get <em>a</em> value
+for a sum each time through, but not the final one.  A common beginner
+error is to put the return statement inside the loop, like</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">// 1   BAD VERSION!!!</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>    <span class="c1">// 2</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 3</span>
+      <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>      <span class="c1">// 4</span>
+      <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>          <span class="c1">// 5</span>
+      <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>         <span class="c1">// 6  WRONG!</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Recall that <em>when a return statement is reached, function execution ends</em>,
+<em>no matter what comes next in the code</em>.
+(This is a way to break out of a <code class="docutils literal"><span class="pre">while</span></code> loop that we will find useful
+later.)  In this case however, it is not what we want at all.  The first sum
+is calculated in line 4, so <code class="docutils literal"><span class="pre">sum</span></code> becomes 2 + 1, but when you get to line
+6, the function terminates and never loops back, returning 3.</p>
+<p>Now about large n....</p>
+<p id="index-7">With loops we can make programs run for a long time.
+The time taken becomes an issue.  In this case we go though the loop
+n-1 times, so the total time is approximately proportional to n.
+We write that the time is O(n), spoken &#8220;oh of n&#8221;, or &#8220;big oh of n&#8221; or
+&#8220;order of n&#8221;.</p>
+<p id="index-8">Computers are pretty fast, so you can try the testing program
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_test/sum_to_n_test.cs">sum_to_n_test/sum_to_n_test.cs</a>
+and it will go by so fast, that you will hardly notice.  Try these specific
+numbers in tests: 5, 6, 1000, 10000, 98765.  All look OK?  Now try 66000.
+On many systems you will get quite a surprise!
+This is the first place we have to deal with the limited
+size of the <code class="docutils literal"><span class="pre">int</span></code> type.
+On many systems the limit is a bit over 2 billion.
+You can check out the size of <code class="docutils literal"><span class="pre">int.MaxValue</span></code> in csharp.
+The answer for 66000,
+and <em>also</em> 98765, is bigger than the upper limit.
+Luckily the obviously wrong negative answer
+for 66000 pops out at you.  Did you guess before you saw the answer for
+66000, that there was an issue for
+98765?  It is a good thing that no safety component in a big bridge was being
+calculated!  It is a big deal that the system fails <em>silently</em>
+in such situations.  <em>Think</em> how large the data may be that you deal with!</p>
+<p>Now look at and run <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_long/sum_to_n_long.cs">sum_to_n_long/sum_to_n_long.cs</a>.  The sum is
+a <code class="docutils literal"><span class="pre">long</span></code> integer here. Check out in csharp how big
+a <code class="docutils literal"><span class="pre">long</span></code> can be (<code class="docutils literal"><span class="pre">long.MaxValue</span></code>).  This version of the program
+works for 100000 and for 98765.  We can get correct
+answers for things that will take perceptible time.  Try working up to
+1 billion (1000000000, nine 0&#8217;s).  It takes a while: O(n) can be slow!</p>
+<p>By hand it is a lot slower, unless you totally change the algorithm:
+There is a classic story about how a calculation like this
+was done in grade school (n=100) by the famous
+mathematician Gauss. His teacher was trying to keep him busy.
+Gauss discovered the general, exact, mathematical formula:</p>
+<blockquote>
+<div>1 + 2 + 3 + ... + n = n(n+1)/2.</div></blockquote>
+<p>That is the number of terms (n), times the average term (n+1)/2.</p>
+<p id="index-9">Our loop was instructive, but not the fastest approach.  The simple exact
+formula takes about the same time for any n.
+(That is as long as the result fits in
+a standard type of computer integer!)
+This is basically constant time.  In discussing
+how the speed relates to the size of n, we say it is O(1).
+The point is here that 1 is a constant.  The time is of <em>constant order</em>.</p>
+<p id="index-10">We can write a ridiculously short
+function following Gauss&#8217;s model.  Here we introduce the variable average,
+as in the motivation for Gauss&#8217;s answer:</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+      <span class="k">static</span> <span class="kt">long</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">//CHANGED:  quick and WRONG</span>
+      <span class="p">{</span>
+         <span class="kt">int</span> <span class="n">average</span> <span class="p">=</span> <span class="p">(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>    <span class="c1">//from Gausse&#39;s motivation</span>
+         <span class="k">return</span> <span class="n">n</span><span class="p">*</span><span class="n">average</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+<p>Run the example program containing it: <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_long_bad/sum_to_n_long_bad.cs">sum_to_n_long_bad/sum_to_n_long_bad.cs</a>.</p>
+<p>Test it with 5, and then try 6. ???</p>
+<p>&#8220;Ridiculously short&#8221; does not imply correct!  The problem goes back
+to the fact that Gauss was in <em>math class</em> and you are doing
+Computer Science.  Think of a subtle difference that might come in here:
+Though (n+1)/2 is fine as math, recall the division operator does not
+always give correct answers in C#.  You get an integer answer from the
+integer (or long) operands.  Of course the exact mathematical final answer
+is an integer when <em>adding</em> integers, but splitting it according to
+Gauss&#8217;s motivation can put a mathematical non-integer in the middle.</p>
+<p>The C# fix: The final answer is clearly an integer, so if we do the division
+last, when we know the answer will be an integer (assuming a <code class="docutils literal"><span class="pre">long</span></code> integer),
+things should be better:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">long</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>
+<span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+</pre></div>
+</div>
+<p id="index-11">Here is a shot at the whole function:</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+      <span class="k">static</span> <span class="kt">long</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">//CHANGED:  quick and still WRONG</span>
+      <span class="p">{</span>
+         <span class="kt">long</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>  <span class="c1">// final division will produce an integer</span>
+         <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+<p>Run the example program containing it: <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_long_bad2/sum_to_n_long_bad2.cs">sum_to_n_long_bad2/sum_to_n_long_bad2.cs</a>.</p>
+<p>Test it with 5, and then try 6. Ok so far, but go on to long integer range:
+try 66000 that messed us up before.  ??? You get an answer that is not
+a multiple of 1000: not what we got before!  What other issues do we have
+between math and C#?</p>
+<p>Further analysis:  To make sure the function always worked, it made sense
+to leave the parameter <code class="docutils literal"><span class="pre">n</span></code> an <code class="docutils literal"><span class="pre">int</span></code>.  The function would not work
+with <code class="docutils literal"><span class="pre">n</span></code> as the largest <code class="docutils literal"><span class="pre">long</span></code>.  The result can still be big enough
+to only fit in a <code class="docutils literal"><span class="pre">long</span></code>, so the return value is a <code class="docutils literal"><span class="pre">long</span></code>.  All
+this is reasonable but the C# result is still wrong!  Look deeper.
+While the result of <code class="docutils literal"><span class="pre">n*(n+1)/2</span></code> is <em>assigned</em> to a <code class="docutils literal"><span class="pre">long</span></code> variable,
+the <em>calculation</em> <code class="docutils literal"><span class="pre">n*(n+1)/2</span></code> is done with <code class="docutils literal"><span class="pre">int</span></code>s not mathematical
+integers.  By the same general type rule that led to the (n+1)/2 error
+earlier, these operations on <code class="docutils literal"><span class="pre">int</span></code>s produce an <code class="docutils literal"><span class="pre">int</span></code> result, even
+when wrong.</p>
+<p>We need to force the <em>calculation</em> to produce a <code class="docutils literal"><span class="pre">long</span></code>.
+In the correct looping version <code class="docutils literal"><span class="pre">sum</span></code> was a <code class="docutils literal"><span class="pre">long</span></code>, and that
+forced all the later arithmetic to be with longs.  Here are two variations
+that work:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">long</span> <span class="n">nLong</span> <span class="p">=</span> <span class="n">n</span><span class="p">;</span>
+<span class="k">return</span> <span class="n">nLong</span><span class="p">*(</span><span class="n">nLong</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>or we can avoid a new variable name by <a class="reference internal" href="types-and-conversions.html#cast"><span>Casting</span></a> to <code class="docutils literal"><span class="pre">long</span></code>, converting
+the first (left) operand to <code class="docutils literal"><span class="pre">long</span></code>, so all the later left-to-right
+operations are forced to be <code class="docutils literal"><span class="pre">long</span></code>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>You can try example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_long_quick/sum_to_n_long_quick.cs">sum_to_n_long_quick/sum_to_n_long_quick.cs</a>
+to finally get a result that is dependably fast and correct.</p>
+<p>Important lessons from this humble summation problem:</p>
+<ul class="simple">
+<li><em>Working</em> and being <em>efficient</em> are two different things in general.</li>
+<li><em>Math</em> operations and C# operations are not always the same.
+Knowing this in theory is not the same as remembering it in practice!</li>
+</ul>
+<p>Further special syntax that only makes sense in any kind of loop is discussed in
+<a class="reference internal" href="forstatements.html#break-continue"><span>Break and Continue</span></a>, after we introduce the last kind of loop.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 30-June-2015 01:44:49.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

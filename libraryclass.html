@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3.10. Library Classes &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="index.html" />
+    <link rel="up" title="3. Defining Functions of your Own" href="functions.html" />
+    <link rel="next" title="3.11. Static Function Summary" href="funcsummary.html" />
+    <link rel="prev" title="3.9. Not using Return Values" href="notusereturn.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">1.3. Downloading Text, Source Code, and Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="functions.html">3. Defining Functions of your Own</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">3.10. Library Classes</a><ul>
+<li><a class="reference internal" href="#function-documentation">3.10.1. Function Documentation</a></li>
+<li><a class="reference internal" href="#library-projects-in-xamarin-studio-optional">3.10.2. Library Projects in Xamarin Studio (Optional)</a></li>
+<li><a class="reference internal" href="#quotient-ui-exercise">3.10.3. Quotient UI Exercise</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="notusereturn.html" title="Previous Chapter: 3.9. Not using Return Values">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="funcsummary.html" title="Next Chapter: 3.11. Static Function Summary">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/libraryclass.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="library-classes">
+<span id="index-0"></span><span id="id1"></span><h1>3.10. Library Classes<a class="headerlink" href="#library-classes" title="Permalink to this headline">¶</a></h1>
+<p id="index-1">In <a class="reference internal" href="funcreturn.html#returned-function-values"><span>Returned Function Values</span></a>, the suggestion was made to look at
+the Painter class and split out repeated ideas into functions, leading to
+a function to prompt the user and return a double value.
+The same section included
+the example program <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/addition2/addition2.cs">addition2/addition2.cs</a>.
+In that case there were repeated prompts for
+integers.  Clearly another common situation is to prompt for a string.
+We can create
+functions to do all these things and more, and embed them into a class
+specially written for a new
+interactive program.</p>
+<p>A neater thing is to put them as a class in a separate library
+that can be used directly for multiple programs.  We can create functions
+<code class="docutils literal"><span class="pre">PromptLine</span></code>,
+<code class="docutils literal"><span class="pre">PromptInt</span></code>, and  <code class="docutils literal"><span class="pre">PromptDouble</span></code>, and put them in their own class, <code class="docutils literal"><span class="pre">UIF</span></code>
+(for User Input First version)
+in project ui&#8217;s file <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/ui/uif.cs">uif.cs</a>.
+We explain the namespace line after the code:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="c1">/// User Input First version (bombs in Parse with mistyping)</span>
+   <span class="k">public</span> <span class="k">class</span> <span class="nc">UIF</span>  
+   <span class="p">{</span>
+      <span class="c1">/// After displaying the prompt, return a line from the keyboard.</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">PromptLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
+         <span class="k">return</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="c1">/// After displaying the prompt, </span>
+      <span class="c1">/// return an integer entered from the keyboard.</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">PromptInt</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">PromptLine</span><span class="p">(</span><span class="n">prompt</span><span class="p">));</span>
+      <span class="p">}</span>
+
+      <span class="c1">/// After displaying the prompt, </span>
+      <span class="c1">/// return a double entered from the keyboard.</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="kt">double</span> <span class="nf">PromptDouble</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="kt">double</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">PromptLine</span><span class="p">(</span><span class="n">prompt</span><span class="p">));</span>
+      <span class="p">}</span>
+
+      <span class="c1">/// After displaying the prompt, </span>
+      <span class="c1">/// return  true if &#39;y&#39; is entered from the keyboard</span>
+      <span class="c1">/// and false otherwise.</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">Agree</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="s">&quot;y&quot;</span> <span class="p">==</span> <span class="n">PromptLine</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
+      <span class="p">}</span> 
+   <span class="p">}</span> 
+<span class="p">}</span>
+   
+</pre></div>
+</div>
+<p id="index-2">We have been <code class="docutils literal"><span class="pre">using</span> <span class="pre">System</span></code> in every program.  <code class="docutils literal"><span class="pre">System</span></code> is a <em>namespace</em> that
+collects a particular group of class names, making them available to the program,
+and distinguishes them form any classes in a different namespace that might have the
+same class names.</p>
+<p>Once we start writing and using multiple classes at once, it is a good idea for us to
+specify our own namespace.  We will consistently use <code class="docutils literal"><span class="pre">IntroCS</span></code> in our multi-file
+examples in this book.</p>
+<p id="index-3">Specifying a namespace makes it possible for all other classes in the
+same namespace to reference <em>public</em> parts of the current class, and vice-versa.</p>
+<p>Public classes and functions start their heading with <code class="docutils literal"><span class="pre">public</span></code>.</p>
+<p>The code included in a namespace is enclosed in braces, so the general syntax is</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">namespace</span></code> <em>name</em></div>
+<div class="line"><code class="docutils literal"><span class="pre">{</span></code></div>
+<div class="line-block">
+<div class="line">class definition(s)...</div>
+</div>
+<div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
+</div>
+</div></blockquote>
+<p>We will keep user input library classes like this one, <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/ui/uif.cs">uif.cs</a>,
+in a project ui.</p>
+<p>Notice that the functions we want accessible in <code class="docutils literal"><span class="pre">UIF</span></code>
+are all marked <code class="docutils literal"><span class="pre">public</span></code>, so that any class can use them.</p>
+<p>We can write a modified example addition program, <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/addition3/addition3.cs">addition3/addition3.cs</a>,
+as an example of using <code class="docutils literal"><span class="pre">UIF</span></code>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="k">class</span> <span class="nc">Addition3</span> <span class="c1">// using UIF</span>
+   <span class="p">{</span>
+      <span class="c1">/// Return a sentence stating the sum of x and y.</span>
+      <span class="k">static</span> <span class="kt">string</span> <span class="nf">SumProblemString</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span><span class="p">;</span>
+         <span class="kt">string</span> <span class="n">sentence</span> <span class="p">=</span> <span class="s">&quot;The sum of &quot;</span> <span class="p">+</span> <span class="n">x</span> <span class="p">+</span> <span class="s">&quot; and &quot;</span> <span class="p">+</span> <span class="n">y</span> <span class="p">+</span> <span class="s">&quot; is &quot;</span> <span class="p">+</span> <span class="n">sum</span> <span class="p">+</span> <span class="s">&quot;.&quot;</span><span class="p">;</span>
+         <span class="k">return</span> <span class="n">sentence</span><span class="p">;</span>
+      <span class="p">}</span>
+      
+      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">SumProblemString</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">));</span> 
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">SumProblemString</span><span class="p">(</span><span class="m">12345</span><span class="p">,</span> <span class="m">53579</span><span class="p">));</span>
+         <span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Enter an integer: &quot;</span><span class="p">);</span>      <span class="c1">//NEW</span>
+         <span class="kt">int</span> <span class="n">b</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Enter another integer: &quot;</span><span class="p">);</span> <span class="c1">//NEW</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">SumProblemString</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">));</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To allow access to UIF, we have added the IntroCS namespace for the class.
+To reference the static functions in the different class <code class="docutils literal"><span class="pre">UIF</span></code>, we put <code class="docutils literal"><span class="pre">UIF.</span></code>
+(with the dot) at the start of each reference to a static function in
+the class <code class="docutils literal"><span class="pre">UIF</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In Xamarin Studio, if you use a file from a library project (without
+just copying the present version of that file into the current project),
+be sure that the current project includes
+a <em>reference</em> to the library project.
+If you expand the references in the Xamarin Studio
+project addition3, by clicking on the References line in the solution pad,
+you should see the project ui.</p>
+</div>
+<p>Shortly you will see the optional section for making your own
+<a class="reference internal" href="#library-projects-in-xamarinstudio"><span>Library Projects in Xamarin Studio (Optional)</span></a>.</p>
+<p>Though we have not discussed all the C# syntax needed yet, there is also an
+improved class <code class="docutils literal"><span class="pre">UI</span></code> in the ui project that we discuss later.
+It includes all the function
+names in <code class="docutils literal"><span class="pre">UIF</span></code>, and keeps your program from bombing out
+if the user enters an illegal format for a number.</p>
+<div class="section" id="function-documentation">
+<span id="index-4"></span><span id="id2"></span><h2>3.10.1. Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
+<p>In keeping with <a class="reference internal" href="writerconsumer.html#two-roles"><span>Two Roles: Writer and Consumer of Functions</span></a>, in future you will be a <em>consumer</em> of the library
+classes.  It is particularly important to document library classes with the
+interface information users will need.
+Documentation could be written in a separate document, but much developer history has
+shown that such documentation does not tend to either get written in the first place,
+or not updated well to stay consistent with updates in the code.
+Inconsistent documentation is useless.  Documentation is much more
+likely to be seen and maintained by the implementers if it sits right with the
+code, like our comments before the class and function headings.</p>
+<p>You will note that instead of the usual line comment syntax <code class="docutils literal"><span class="pre">//</span></code>, we have added
+an extra <code class="docutils literal"><span class="pre">/</span></code>, making <code class="docutils literal"><span class="pre">///</span></code>.  That will also start a comment.  (The third <code class="docutils literal"><span class="pre">/</span></code>
+is technically just a part of the comment.)  There is a special reason for the
+notation:  Though it is convenient for the <em>implementer</em> of code to have the documentation
+right with the code, a <em>user</em> of the functions only needs the interface information
+found in good documentation.  The <code class="docutils literal"><span class="pre">///</span></code> lines before heading are specially recognized
+by <em>separate</em> automatic documentation generating programs.</p>
+<p>There are many documentation
+generating programs and conventions.
+For now we will just use plain text in the <code class="docutils literal"><span class="pre">///</span></code> lines.
+This is recognized by the Xamarin Studio system. If you open our <code class="docutils literal"><span class="pre">examples</span></code> solution,
+in Xamarin Studio, and edit window for
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/addition3/addition3.cs">addition3/addition3.cs</a>,
+you can place your mouse over <code class="docutils literal"><span class="pre">UIF</span></code> and a popup window shows the <code class="docutils literal"><span class="pre">UIF</span></code> class heading
+documentation.</p>
+<p>If you move the mouse over <code class="docutils literal"><span class="pre">PromptInt</span></code>, you should see the popup label showing
+the function signature and the function documentation.
+If you change the two <code class="docutils literal"><span class="pre">///</span></code> lines
+in <code class="docutils literal"><span class="pre">uif.cs</span></code> above the <code class="docutils literal"><span class="pre">PromptInt</span></code> heading to start with just <code class="docutils literal"><span class="pre">//</span></code>.
+you should no longer be able to see the documentation part of the popup for
+<code class="docutils literal"><span class="pre">PromptInt</span></code> in the <code class="docutils literal"><span class="pre">addition3.cs</span></code> edit window. (Be sure to change back to <code class="docutils literal"><span class="pre">///</span></code>.)</p>
+<p>There are more elaborate documentation conventions that can be used for
+Xamarin Studio and other documentation generation programs, not discussed here.</p>
+<p>This documentation also works inside a single program file.  If you have a long
+program with lots of functions defined, this can also be helpful when calling
+one of your own functions.  You can avoid jumping
+around to be reminded of the signature and use of your functions.</p>
+</div>
+<div class="section" id="library-projects-in-xamarin-studio-optional">
+<span id="library-projects-in-xamarinstudio"></span><h2>3.10.2. Library Projects in Xamarin Studio (Optional)<a class="headerlink" href="#library-projects-in-xamarin-studio-optional" title="Permalink to this headline">¶</a></h2>
+<p>Xamarin Studio has a multi-step process for
+creating a library project and for separately
+referencing it in other projects.  The <em>advantage</em> of this approach is when you
+want to change the implementation but not the interface to library functions,
+you just do it once, in the library project.
+Other projects reference that project.</p>
+<p>Some students find the Xamarin Studion overhead of setting up and referencing
+library projects onerous.
+As a  practical matter with files that you want to reuse but are not likely to change,
+you can just copy the source file into the new project, and avoid the
+Xamarin Studio library setup overhead.
+Many of our already created example projects use a library version
+of UIF and several other utility files.  You can do the same with your solutions,
+following the instructions below, or you can just copy in the needed utility
+files for each project.</p>
+<p>Hence the rest of the section here is <em>optional</em>:</p>
+<p>Try adding a reference yourself.  Follow these instructions:</p>
+<ol class="arabic">
+<li><p class="first">In your own Xamarin Studio solution, start to add a project,
+but <em>instead</em> of leaving
+Console Project selected in the dialog window, select <strong>Library Project</strong>.</p>
+</li>
+<li><p class="first">Then add the project name ui, and continue like when starting
+previous projects.</p>
+</li>
+<li><p class="first">Copy in the <code class="docutils literal"><span class="pre">.cs</span></code> files from
+our ui project, <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/ui/uif.cs">uif.cs</a> and <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/ui/ui.cs">ui.cs</a>.
+Now you have your library project.</p>
+</li>
+<li><p class="first">Create another regular Console project, addition3, in your <em>same</em> solution,
+and copy in our <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/addition3/addition3.cs">addition3/addition3.cs</a>, so that is the only file.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Xamarin Studio remembers the last kind of project you created.
+That is fine when you are creating a sequence of Console projects.
+However, if you have just explicitly chosen to create a library
+project, the default for your next project will also be library,
+and really mess up your next Console project.  Fix such an error
+after the fact as in the first
+entry in <a class="reference internal" href="lab-division-sentences.html#xamarinstudio-reminders"><span>Xamarin Studio Reminders and Fixes</span></a>.</p>
+</div>
+</li>
+<li><p class="first">In the Solutions pad, in your addition3 project,
+click on the References entry just inside the project.
+You should see that the project is automatically set up to reference System.</p>
+</li>
+<li><p class="first">Open the local menu for the References, and select Edit References.</p>
+</li>
+<li><p class="first">Click the Projects tab in the window that pops up.  This limits the length
+of the list that you search.</p>
+</li>
+<li><p class="first">Possibly after scrolling down, find the recently made ui project and
+check the box beside it.</p>
+</li>
+<li><p class="first">Click OK in the bottom right corner of the window.
+Now look at the References again.  You should see ui listed!</p>
+</li>
+<li><p class="first">Run your addition3 project.</p>
+</li>
+</ol>
+<p>You only need to add a library project once,
+but every further project that needs it,
+must have a <em>reference</em> to the library project added.
+You might try another for yourself
+with the next exercise!</p>
+<p>Again this approach allows you to change the implementation of
+your library class in just one copy in one project,
+which can be referenced from many places.
+If you copy the file into different projects, and then decide the code
+needs to be updated, you are stuck <em>finding</em> and editing <em>all</em> the copies!
+Not good.  Our library files uif.cs, ui.cs, and later fio.cs,
+should not be moving targets, so copying should not cause a problem.  This
+may simplify your life, but the tradeoff is not getting used to using
+library references, which are useful in the larger scheme of things.</p>
+</div>
+<div class="section" id="quotient-ui-exercise">
+<span id="quotientuiex"></span><h2>3.10.3. Quotient UI Exercise<a class="headerlink" href="#quotient-ui-exercise" title="Permalink to this headline">¶</a></h2>
+<p>Create <code class="file docutils literal"><span class="pre">quotient_u_i.cs</span></code> by modifying <code class="file docutils literal"><span class="pre">quotient_return.cs</span></code> in
+<a class="reference internal" href="funcreturn.html#quotientstringex"><span>Quotient String Return Exercise</span></a> so that the program accomplishes the same
+thing, but use the UIF class for all user input.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 30-June-2015 01:44:49.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

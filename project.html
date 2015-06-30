@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>18.9. Group Project &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="index.html" />
+    <link rel="up" title="18. Appendix" href="appendix.html" />
+    <link rel="next" title="18.10. Lab: Version Control" href="lab-versioncontrol.html" />
+    <link rel="prev" title="18.8. Homework: Book List" href="hw-booklist.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">1.3. Downloading Text, Source Code, and Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="appendix.html">18. Appendix</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">18.9. Group Project</a><ul>
+<li><a class="reference internal" href="#objectives">18.9.1. Objectives</a></li>
+<li><a class="reference internal" href="#overview">18.9.2. Overview</a></li>
+<li><a class="reference internal" href="#your-team">18.9.3. Your Team</a></li>
+<li><a class="reference internal" href="#roles">18.9.4. Roles</a></li>
+<li><a class="reference internal" href="#the-process">18.9.5. The process</a></li>
+<li><a class="reference internal" href="#splitting-up-the-coding">18.9.6. Splitting Up The Coding</a></li>
+<li><a class="reference internal" href="#weekly-reports">18.9.7. Weekly reports</a></li>
+<li><a class="reference internal" href="#intermediate-deliverables">18.9.8. Intermediate deliverables</a></li>
+<li><a class="reference internal" href="#final-deliverables">18.9.9. Final Deliverables</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="hw-booklist.html" title="Previous Chapter: 18.8. Homework: Book List">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="lab-versioncontrol.html" title="Next Chapter: 18.10. Lab: Version Control">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/project.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="group-project">
+<span id="id1"></span><h1>18.9. Group Project<a class="headerlink" href="#group-project" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objectives">
+<h2>18.9.1. Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Being creative, imagining and describing a program, and working it
+through to completion</li>
+<li>Working in a team:<ul>
+<li>Communicating to each other</li>
+<li>Dividing responsibilities</li>
+<li>Helping each other</li>
+<li>Finding consensus</li>
+<li>Dealing with conflict</li>
+<li>Providing process feedback</li>
+<li>Integrating parts created by several people</li>
+</ul>
+</li>
+<li>Developing new classes to fit your needs</li>
+<li>Using the .Net API library</li>
+<li>Designing a program for refinement</li>
+<li>Testing</li>
+<li>Evolving a program</li>
+<li>Creating documentation for user and implementers</li>
+<li>Programming in the large &#8211; not a small predefined problem</li>
+<li>Make something that is fun</li>
+</ul>
+<p>See the project <code class="file docutils literal"><span class="pre">csproject_stub</span></code>, already discussed in class.</p>
+<p><strong>What to turn in:</strong></p>
+<ul class="simple">
+<li>Periodic reports</li>
+<li>intermediate implementation</li>
+<li>a final presentation</li>
+<li>a final implementation
+including user and programmer documentation and process documentation</li>
+<li>individual evaluations</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>18.9.2. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>You will be assigned to groups of 3-4 people to work on a project that
+will extend until the end of the semester, with only a little other work
+introduced in class, and of course your last exam. This leaves a month
+of course time (in a regular semester)
+for the project (classes, labs, dedicated homework time),
+ending with presentations in final exam period. Your group will be
+designing and implementing a project of your choosing.  You could
+choose to make a text based game, starting from our game skeleton or not,
+or something completely different, started from scratch.
+The project should have some clear focus or aim,
+For instance a game should be able to be won.</p>
+<p>Start by brainstorming and listing ideas &#8211; do not criticize ideas at
+this point. That is what is meant by brainstorming - having your internal critic
+going inhibits creativity. After you have a large list from
+brainstorming, it is time to think more practically and settle on one
+basic situation, and think of a considerable list of features you would
+like it to have. Order the features, considering importance, apparent ease of
+development, and what depends on what else. Get something simple
+working, and then add a few features at a time, testing the pieces added
+and the whole project so far. Test, debug, and make sure the program
+works completely before using your past experience to decide what to add
+next. This may different than what you imagined before the work on your
+first stage! Like the provided project, early stages do not need
+to be full featured, but make sure that you are building up to a version
+with an aim, and which includes interesting features. You should
+end with a program that has enough instructions provided for the user, so
+someone who knows <em>nothing</em> of your implementation process or intentions
+can use the program successfully. Your implementation should also be
+documented, imagining that a new team of programmers is about to take
+over after your departure, looking to create yet another version.</p>
+</div>
+<div class="section" id="your-team">
+<h2>18.9.3. Your Team<a class="headerlink" href="#your-team" title="Permalink to this headline">¶</a></h2>
+<p>Your instructor will tell you about team makeup.</p>
+<p>There are a number of roles
+that must be filled by team members. Some will be shared between all
+members, like coder, but for each role there should be a lead person who
+makes sure all the contributions come together. Each person will have
+more than one role. All members are expected to pull their own weight,
+though not all in exactly the same roles. Everyone should make sustained
+contributions, every week, documented in the weekly reports. Understand
+that this project will be the major course commitment for the rest of
+the semester.  These roles vary from rather small to central.
+Not all are important immediately.</p>
+</div>
+<div class="section" id="roles">
+<h2>18.9.4. Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Leader: Makes sure the team is coordinated, encourage consensus on
+the overall plan, oversee that the agreements are carried through, be
+available as contact person for the team and the TA and your instructor.</li>
+<li>Lead programmer: Keep track of different people&#8217;s parts to make sure
+they fit together.</li>
+<li>Coder/unit tester: <em>Everyone</em> must have a significant but not
+necessarily equal part in this job. Each person should have primary
+responsibility for one or more cohesive substantive units, and code
+and test and be particularly familiar with those parts. Do your best
+to make individual parts be cohesive and loosely coupled with other
+people&#8217;s work, to save a lot of pain in the testing and debugging
+phase. When coding you are still encouraged to do pair programming,
+though what pair from the team is working together at different times
+may be fluid. The lead programmer might be involved in pairs more
+often than others, but be sure the other coders get to drive often.</li>
+<li>Librarian/version coordinator: The default should be for you to have a
+box.com folder shared with your whole team and me and your TA, with all
+as editors.  Your folder should have the name of your team.
+You should always have a folder that contains the latest working version
+of the project.  You should also keep old versions, for instance copied into
+numbered version folders.
+Box does not handle successive versions automatically.
+You can choose
+to use the more capable professional combination of
+Bitbucket and <a class="reference internal" href="hgteamwork.html#hg-and-teamwork"><span>Mercurial and Teamwork</span></a>.
+The latter will have a learning curve, and in that case this person
+should be the best informed on Mercurial, and help
+the other team members.</li>
+<li>Report coordinator: Gather the contributions for reports from team
+members and make sure the whole reports get to posted on schedule.
+Your instructor needs
+a clear idea of the contributions of each member each week. If a team
+member is not clear on this to the report writer,
+<em>the report writer needs to be insistent</em>.</li>
+<li>Instruction coordinator: Make sure there are clear written documents
+and help within the program for the user, who you assume is not a
+C# programmer and knows nothing about your program at the start.</li>
+<li>Documentation coordinator: Make sure the documentation
+is clear for method users/consumers.
+This includes the documentation for programmers
+before the headings of methods and classes.
+This is for any time someone wants to use (not rewrite) a class or
+method you wrote.
+Also have implementer documentation, for someone who will
+want to modify or debug your code and needs to understand the
+details of your internal implementations.  The extent of this
+can be greatly minimized by good naming.</li>
+<li>Quality manager: Take charge of integrated tests of the whole program
+(following coder&#8217;s unit tests). Make sure deficiencies are addressed.</li>
+</ol>
+<p>Conflict resolution: You will certainly have disagreements and possibly
+conflicts. Try to resolve them within the team. When that is not
+working, anyone can go to the instructor with a problem.  Do not delay
+coming to me if things are clearly not working with the team.</p>
+</div>
+<div class="section" id="the-process">
+<h2>18.9.5. The process<a class="headerlink" href="#the-process" title="Permalink to this headline">¶</a></h2>
+<p>Initial:</p>
+<ol class="arabic simple">
+<li>Agree on roles. These roles can change if necessary, but you are
+encouraged to stick with them for simplicity and consistency.</li>
+<li>Agree on a team name and a short no-space abbreviation if necessary,
+and let me know it.</li>
+<li>Brainstorm about the project. Distill the ideas into a direction and
+overall goals.</li>
+</ol>
+<p>On individual versions (Two formal versions will be required):</p>
+<ol class="arabic simple">
+<li>Break out specific goals for the version. How are you heading for
+your overall goals? Are you biting off a significant and manageable
+amount? You are expected to check in with me on this part and 2 and 3
+before moving very far. This will be new for most of you.</li>
+<li>Plan and organize the necessary parts and the interfaces between the
+parts.</li>
+<li>Write the interface documentation for consumers of the code
+for the parts you plan to write.
+Agree on them. You need to do this eventually anyway. Agreement up
+front can save you an enormous amount of time! Do not let the gung-ho
+hackers take off before you agree on documented interfaces.
+We have seen it happen:  If you do not put your foot down,
+you are stuck with a bad plan that will complicate things.  Otherwise lots
+of code needs to be rethought and rewritten.</li>
+<li>If more than one person is working on the same class, plan the names,
+meanings, and restrictions on the private instance variables &#8211; all
+coders should be assuming the same things about the instance
+variables! Also agree on documentation for any private helping methods you
+share.</li>
+<li>Code to match the agreed consumer interface and class implementation
+designs.</li>
+<li>Check each other&#8217;s code.</li>
+<li>Do unit tests on your own work, and fix them and test again...</li>
+<li>Do overall tests of everything together, and fix and test again...</li>
+<li>Look back at what you did, how it went, what you could do better, and
+what to change in your process for the next version.</li>
+</ol>
+<p>You are strongly encouraged to follow modern programming practice which
+involves splitting each of these formal versions into much smaller steps
+that can be completed and tested following a similar process. Order
+pieces so you only need to code a little bit more before testing and
+combining with pieces that already work. This is enormously helpful in
+isolating bugs! This is really important. If you thought you spent a
+long while fighting bugs in your small homework assignment, that is
+nothing compared to the time you can spend with a large project,
+particularly if you make a lot of haphazard changes all at once.</p>
+</div>
+<div class="section" id="splitting-up-the-coding">
+<h2>18.9.6. Splitting Up The Coding<a class="headerlink" href="#splitting-up-the-coding" title="Permalink to this headline">¶</a></h2>
+<p>Make good use of the
+separation of public interface and detailed implementation.
+If your project has loosely coupled class, the main part of the
+public interface should be limited and easy to comprehend.</p>
+<p>Ideally have one individual
+(or pair) assigned a whole class. One useful feature for allowing
+compiling is to first generate a stub file like we have given you for
+homework, that includes the public interface documentation,
+headings, and dummy return values
+and compiles but does nothing.
+<em>Post this under a box folder for the current version number.</em>
+You will then provide your team members
+with something that tells them what they can use and allows them to
+compile their own part. Then later substitute more functional classes.</p>
+<p>Your instructor and you will want to review your code. We do not want to have to
+reread almost the same thing over and over: Use the editor copy command
+with extreme caution. If you are considering making an exact copy,
+clearly use a common method instead. If you copy and then make
+substitutions in the same places, you are likely better off
+with a method with the common parts and with parameters inserted where there
+are differences.  You can make a quick test with a
+couple of copied portions, but then
+<em>convert to using a method with parameters for the substitutions</em>.
+Besides being a waste of effort to define seven methods each
+defining a tool, with just a few strings differing from one method to
+the next, we will require you to rewrite it, with one method with
+parameters, and just seven different calls to the method with different
+parameters. Save yourself trouble and do it that way the first time, or
+at least after you code a second method and see how much it is like the
+first one you coded....</p>
+<p>If you are making many substitutions
+of static textual data, put the data into a resource file in a variation
+of the Fake Advise Lab.</p>
+<p>You only want to commit working code into the shared current version folder.
+Comment out incomplete additions that you want to show to everyone,
+or comment out the call to a method that compiles but does not yet
+function logically.  An alternative is to have a separate folder for
+in-process code to share for comment,
+so you will not try to compile it with the current working version.</p>
+</div>
+<div class="section" id="weekly-reports">
+<h2>18.9.7. Weekly reports<a class="headerlink" href="#weekly-reports" title="Permalink to this headline">¶</a></h2>
+<p>Reports are due from the report writer each Tuesday.</p>
+<ol class="arabic simple">
+<li>Inside your team&#8217;s box folder have a subfolder called WeeklyReports.
+A sample stub form to fill out on the computer is in
+<a class="reference external" href="http://anh.cs.luc.edu/170/examples/Weekly-Report.rtf">Weekly-Report.rtf</a>.
+Make the name of each weekly
+report document be the date it was due, like Mar26.rtf.
+It is easy
+to copy the table from this week to last week and edit it to show
+how much your plans matched reality.
+You should post a version for your team to look at first.  Please distinguish
+drafts from the final version for me to look at.   You might have a separate
+folder Drafts, and move the report into the WeeklyReport folder when
+it is final. Box easily allows moving files, but not renaming them.</li>
+<li>Only one report should be generated each week, with the person in the role of
+report writer making sure a complete version is produced and placed in the
+WeeklyReport folder.</li>
+<li>Under plans for the next week, include concrete tasks planned to be
+completed, and who will do them, with an informative
+explanation.  The content and depth of the person&#8217;s work should be clear.
+If you can state that clearly and be brief, great.
+The tasks do not only include coding: they can be any of the
+parts listed above, and for any particular part of the project, where
+that makes sense.  <em>If individuals cannot state clearly what they are working on,</em>
+<em>then the team leader and lead coder have a significant issue in their leadership</em>
+<em>that needs to be addressed.</em></li>
+<li>In the review of the last week (after the first week) include the
+last week&#8217;s plans and what actually happened, task by task,
+concretely, with enough detail to give an idea on the magnitude
+of the work. This can include the portion completed and/or changes in
+the plans and their reasons. &#8220;Still working on X&#8221; is not useful: Who
+was doing what? What methods, doing what, were completed? Which are
+in process? Which are being debugged? What part remains to be done,
+and who is it assigned to? The report writer is responsible to get a
+clear statement from each team member.</li>
+</ol>
+</div>
+<div class="section" id="intermediate-deliverables">
+<h2>18.9.8. Intermediate deliverables<a class="headerlink" href="#intermediate-deliverables" title="Permalink to this headline">¶</a></h2>
+<p>These materials should be placed in a subfolder <strong>Intermediate</strong>
+of your team project folder.
+See the due date in the schedule.</p>
+<ul class="simple">
+<li>Copy the linked stub of
+<a class="reference external" href="http://anh.cs.luc.edu/170/examples/projectPlans.rtf">projectPlans.rtf</a> document.
+Then complete it:<ul>
+<li>List the project roles again, and who ended up filling them. For
+coding, say who was the person primarily responsible for each
+part.</li>
+<li>If you used old classes, like those from the skeleton project or a lab or
+somewhere else, say which ones are included <em>unchanged</em> or give a
+summary of changes.</li>
+<li>If your documentation of methods is not generally done,
+say what classes got clear documentation (or individual methods if only
+some were done).</li>
+<li>Where are you planning to go from here, and who you envision being
+primarily responsible for different parts?</li>
+</ul>
+</li>
+<li>Include parts 2-4 listed below under Final Deliverables, but for an
+intermediate version that runs, and does <em>not</em> need to have the goal
+working yet. Have documentation of your methods, including summary description
+and description of parameters and return values.
+If for some reason you do not have all the documentation that you were encouraged
+to write <em>first</em>, at least be sure to have and point out significant examples of your
+clear documentation of purpose, parameters, and return values.
+This allows instructor feedback
+for completing the rest.</li>
+<li>The idea is to have everyone get an idea of what is expected, so we
+have no misunderstandings about the final version. We will give you
+feedback from this version to incorporate in the final version. We do
+not want to have to say anyone did anything &#8220;wrong&#8221; on the final
+version. We want to be able to concentrate on your creative
+accomplishments.</li>
+<li>Look through the list of deliverables again and make sure your collection is complete.</li>
+</ul>
+</div>
+<div class="section" id="final-deliverables">
+<h2>18.9.9. Final Deliverables<a class="headerlink" href="#final-deliverables" title="Permalink to this headline">¶</a></h2>
+<p><strong>Group Submission</strong>:</p>
+<p>One submission of the group work is due one hour before the final presentations.</p>
+<ol class="arabic simple">
+<li>All files listed in parts 2-5.
+Also include a zip file, named with your team abbreviation,
+containing a Windows executable with (a separate copy of) any other
+image and data files needed.  Test to make sure you can
+unzip and run the executable.
+The final submissions will be accessible to the whole class
+&#8211; so we can all play them!</li>
+<li>Source code. You can name the classes appropriately
+for the content of your game.</li>
+<li>User instructions. These should be partly built into the program. The
+most extensive documentation may be in a document file separate from
+the program, if you like. (Plain text, MS Word, Rich text (rtf), or
+PDF, please.) The starting message built into the beginning of the
+game should mention the file name of such external documentation, if
+you have it.</li>
+<li>Programmer documentation. Document the public interface for all
+methods in comments directly before the method heading.
+Add implementation comments
+embedded in the code where they add clarity (not just verbosity). You
+may have a separate overview document.  Include &#8220;Overview&#8221; in the
+file name</li>
+<li>Overall project and process review in a document named like the linked stub,
+<a class="reference external" href="http://anh.cs.luc.edu/170/examples/projectReview.rtf">projectReview.rtf</a>.<ul>
+<li>The first section should be Changes. So the instructor does not
+duplicate effort, please give an overview of the changes from the
+intermediate version. What classes are the same? What features
+were added? What classes are new? Which classes or methods were
+given major rewrites? What classes had only a few changes? (In
+this case try to list what to look for.)</li>
+<li>List again the roles, and who filled them. For coding, say who was
+the person primarily responsible for each part.</li>
+<li>What did you learn? What were the biggest challenges? What would
+you do differently the next time? What are you most proud of?</li>
+<li>How could we administer this project better? What particularly
+worked about the structure we set up?</li>
+</ul>
+</li>
+<li>A 10-15 minute presentation of your work to the class in final exam
+period. What would you want to hear about other projects? (Say it
+about yours.) What was the overall idea? What was the overall
+organization? What did you learn that was beyond the regular class
+topics that others might find useful to know? What were your biggest
+challenges? Do not show off all your code just because it is there.
+Show specific bits that gave you trouble or otherwise are
+instructive, if you like.</li>
+</ol>
+<p>Look through the list of deliverables again, before sending files,
+and check with the whole team to make sure your collection is complete.</p>
+<p><strong>Your Assessment of Individuals in the Group</strong>:</p>
+<p>This is due electronically 10 minutes after the final class presentation period,
+from each team member, <em>independently</em>, turned in a manner specified by your
+instructor, like other homework assignments.</p>
+<p>Change the name of the linked stub file
+<a class="reference external" href="http://anh.cs.luc.edu/170/examples/Indiv-Mem-Assessment.rtf">Indiv-Mem-Assessment.rtf</a>
+to your
+teamAbbreviation-yourName.rtf.
+You may want to tweak it after the
+group presentation, but have it essentially done beforehand.</p>
+<p>Writing this is NOT a part of your
+collective group deliberations. It is individual in two senses: both
+in being about individual team members and in being the view of <em>one</em>
+individual, you. For this document only, everyone should be writing
+separately, privately, and independently from individual experience.
+If you lack data on some point, say so, rather than using what others are saying.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 30-June-2015 01:44:49.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

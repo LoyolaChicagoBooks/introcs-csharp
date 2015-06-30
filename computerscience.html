@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.4. Computer Science, Broadly &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="index.html" />
+    <link rel="up" title="1. Context" href="context.html" />
+    <link rel="next" title="1.5. Chapter Review Questions" href="reviewcontext.html" />
+    <link rel="prev" title="1.3. Downloading Text, Source Code, and Videos" href="download.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="context.html">1. Context</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">1.3. Downloading Text, Source Code, and Videos</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.4. Computer Science, Broadly</a><ul>
+<li><a class="reference internal" href="#information-processing">1.4.1. Information Processing</a></li>
+<li><a class="reference internal" href="#algorithms">1.4.2. Algorithms</a></li>
+<li><a class="reference internal" href="#data-representation">1.4.3. Data Representation</a></li>
+<li><a class="reference internal" href="#instruction-representation">1.4.4. Instruction Representation</a></li>
+<li><a class="reference internal" href="#program-development-cycle">1.4.5. Program Development Cycle</a></li>
+<li><a class="reference internal" href="#key-computer-science-areas">1.4.6. Key Computer Science Areas</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="download.html" title="Previous Chapter: 1.3. Downloading Text, Source Code, and Videos">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="reviewcontext.html" title="Next Chapter: 1.5. Chapter Review Questions">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/computerscience.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="computer-science-broadly">
+<span id="computer-science"></span><span id="index-0"></span><h1>1.4. Computer Science, Broadly<a class="headerlink" href="#computer-science-broadly" title="Permalink to this headline">¶</a></h1>
+<p>We intend this book as an introduction to computer science, with a focus on
+creating problem solutions in the C# programming language.
+We should not jump in too quickly.  You can get lost in our details and
+miss an idea of the much larger breadth of computer science.</p>
+<div class="section" id="information-processing">
+<span id="index-1"></span><h2>1.4.1. Information Processing<a class="headerlink" href="#information-processing" title="Permalink to this headline">¶</a></h2>
+<p>Computer Science is the study and practice of information processing.
+This can take many forms.  Many forms appear in electronic computers,
+but information processing takes place in many other contexts, too:</p>
+<p>In the early days of electronic computers,
+the information was largely numerical, calculating mathematical functions.</p>
+<p>Later analyzing textual information
+has become much more important, for instance:
+What can you tell about the severity of the current flu outbreak by
+analyzing the phrasing in Google searches?</p>
+<p>Images are analyzed:  What can a satellite image tell you about the
+distribution of drought?</p>
+<p>Sounds:  how do you convert verbal speech accurately
+into written sentences?</p>
+<p>DNA holds information that our bodies process into proteins.</p>
+<p>Our brain chemicals and
+electronic signals process information.  There is  rich interplay
+between cognitive scientists and computer scientists modeling
+problem solving in the brain with <em>neural nets</em> on a computer,
+sometimes to better understand brains and
+sometimes to
+better solve problems on an electronic computer.</p>
+<p>Economic systems are becoming better understood in terms of the
+flow of information.</p>
+<p>The <em>computer</em> doing computations and processing can be a familiar <em>electronic</em>
+computer, but it can be genes or brain chemicals,
+or a whole society as its economy adapts.</p>
+</div>
+<div class="section" id="algorithms">
+<span id="index-2"></span><h2>1.4.2. Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this headline">¶</a></h2>
+<p>Algorithms are at the heart of traditional problem solving .  An <em>algorithm</em>
+is a clearly expressed sequence of steps leading to a result in a
+finite amount of time.</p>
+<p>A recipe for baking a pound cake is an algorithm.</p>
+<p>Such an algorithm has useful concepts that we use later in computer
+programming:</p>
+<ul>
+<li><p class="first">A named sub-problem: your recipe may include the instruction
+&#8220;Beat 4 eggs.&#8221;  The recipe probably says no more about it, but this is
+<em>shorthand</em>, a name for a simpler sequence of steps, an
+algorithm like:</p>
+<div class="highlight-none"><div class="highlight"><pre>Beating Any Number of Eggs
+---------------------------
+1. Get a bowl large enough for the eggs.
+2. For each egg:
+   a. Crack its shell on the edge of the bowl.
+   b. Add the contents of the shell to the bowl.
+3. Mix the eggs with a whisk.
+4. Continue with step 3 until you cannot
+   distinguish the white and yolks.
+</pre></div>
+</div>
+</li>
+<li><p class="first">Parameters: The egg beating instructions work, in general, for any number
+of eggs.  To use these instructions for a <em>particular</em> pound cake,
+you must supply a specific value to use to make the general instructions
+become clear.  The pound cake recipe that uses
+the egg beating instructions, uses the number <strong>4</strong> as the actual data.</p>
+</li>
+<li><p class="first">Repetition: The instructions for cracking an egg are not <em>written</em> repeatedly,
+for every egg.  The instruction is stated once, and we are told how
+long to go on: for each egg in step 2.  Step 4 says
+when to stop repeating step 3.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="data-representation">
+<span id="index-3"></span><span id="id1"></span><h2>1.4.3. Data Representation<a class="headerlink" href="#data-representation" title="Permalink to this headline">¶</a></h2>
+<p>A recipe represents data by words that get processed by a human reader.
+Machines have used different representations.  One of the earliest
+adding machines, the Pascaline,
+<a class="reference external" href="http://en.wikipedia.org/wiki/Pascal's_calculator">http://en.wikipedia.org/wiki/Pascal&#8217;s_calculator</a>,
+represented numbers by the angle of
+rotation of interlocked gears.
+An abacus uses the positions of groups of sliding beads to represent digits.
+The Jacquard loom,
+<a class="reference external" href="http://en.wikipedia.org/wiki/Jacquard_weaving">http://en.wikipedia.org/wiki/Jacquard_weaving</a>,
+used cards with each row of holes punched in them
+indicating which warp threads are raised and which lowered when a cross
+thread is woven in.</p>
+<p id="index-4">In modern electronic computers the most basic bit of data
+(actually called a <em>bit</em>) is held by two-state switches, often
+in the form of a higher voltage vs. a grounded state.  The symbolic representation
+is often 0 vs. 1.  This symbolism comes from the representation of integers
+in <em>binary notation</em>, also called <em>base 2</em>:
+It is a place value system, but where each place
+in a numeral is a 0 or a 1 and represents a power of two, so 1101 in binary
+can be viewed in our decimal system as
+<span class="math">\((1)2^3+(1)2^2+(0)2^1+(1)2^0=8+4+0+1=13\)</span>.</p>
+<p>Computer hardware can only handle a limited number of bits at a time,
+and memory space is limited, so usually integers are stored in a limited
+space, like 8, 16, 32 or 64 bits.
+We illustrate with the smallest, 8 bits, called a <em>byte</em>.  Since
+each bit has two possible states, 8 bits have <span class="math">\(2^8=256\)</span> possible states.
+Directly considered as binary numerals, they represent 0 through
+<span class="math">\(2^8-1=255\)</span>.</p>
+<p>We also want to represent negative numbers, and have about half of the available
+codes for them.  An 8-bit signed integer in <em>twos complement</em> notation
+represents 0 through <span class="math">\(2^7-1\)</span>
+just as the unsigned numbers do.  These are all the 8-bit codes with a leading 0.
+A negative number <span class="math">\(n\)</span> in the range <span class="math">\(-2^7=-128\)</span> through -1,
+is represented by what would be
+the unsigned notation for <span class="math">\(n+2^8\)</span>.  These will be all the
+8-bit codes with a leading 1.
+For example -3 is represented like unsigned 256 - 3 = 253: 11111101 in binary.</p>
+<p id="index-5">Limited precision approximation of real numbers are stored in something like
+scientific notation, except in binary,  roughly <span class="math">\(\pm(m)2^e\)</span>,
+with a sign, mantissa m and exponent e. Both e and m have
+fixed numbers of bits, so the limited options for the
+mantissa restricts the <em>precision</em> of the numbers, and the limited options
+for the exponent restricts the <em>range</em>. Data on these limits for
+different sized numeric codes is in <a class="reference internal" href="types-and-conversions.html#value-types"><span>Value Types and Conversions</span></a>.</p>
+<p>Once you have numbers, all sorts of other kinds of data can be encoded:
+Characters
+like on your keyboard each have a numerical code associated with each one.  For
+example the unicode for the letter A is 65.  Images are often
+represented as a sequence of colored pixels.  Since the human eye is only
+sensitive to three specific colors, red, green, and blue,
+a pixel is represented by a numerical intensity
+for each of the three colors.</p>
+</div>
+<div class="section" id="instruction-representation">
+<span id="index-6"></span><h2>1.4.4. Instruction Representation<a class="headerlink" href="#instruction-representation" title="Permalink to this headline">¶</a></h2>
+<p>Besides the data, instructions need a representation too, and an agent to
+interpret them.  In the earliest electronic computers the two-state switches
+were relays or later vacuum tubes, and the machine was <em>manually rewired</em> when a
+new set of instructions/program was needed.  It was a great advance in the 1940&#8217;s
+when the instructions also became symbolic,
+represented by binary codes that the computer
+could recognize and act on,
+<a class="reference external" href="http://en.wikipedia.org/wiki/Von_Neumann_architecture">http://en.wikipedia.org/wiki/Von_Neumann_architecture</a>.
+This code is called <em>machine language</em>.
+With machine language the instructions became a form of data that could be stored
+in computer memory.  We distinguish the <em>hardware</em> on which programs are run
+from the stored programs, the <em>software</em>.  The <em>architecture</em> of the
+hardware determines the form and capacities of the machine language, so
+machines with a different hardware architecture are likely to have distinct
+machine languages.</p>
+<p>Biologists have a fair idea of how protein sequence data is encoded in DNA,
+but they are still working on how the DNA instructions are encoded
+controlling which proteins should be made when.</p>
+<p>In this book we will not be writing instructions shown as
+sequences of 0&#8217;s and 1&#8217;s!
+Some of the earliest programs were to help programmers
+work with more human-friendly tools, and an early one
+was an <em>assembler</em>, a program that took easier to understand instructions
+and automatically translated them into machine language.  An example
+assembler instruction would be like</p>
+<div class="highlight-none"><div class="highlight"><pre>MOV 13, X
+</pre></div>
+</div>
+<p>to move the value 13 to a storage location identified by the name X.</p>
+<p>Machine instructions are very elementary, so programming
+was still tedious, and code could not be reused on a
+machine with a different architecture.</p>
+<p>The next big step past assembler was the advent of
+<em>high level</em> languages, with instructions more like normal mathematical or
+English expressions.  Examples are Fortran (1954) and Cobol (1959).
+A Fortran statement for calculating a slope like</p>
+<div class="highlight-none"><div class="highlight"><pre>S=(Y-V)/(X-U)
+</pre></div>
+</div>
+<p>might require seven or or more machine code instructions.</p>
+<p>To use a Fortran program required three steps: write it (onto punch cards
+originally), compile it to machine code, and execute the machine code.
+The compiler would still be architecture specific, but the compiler for
+an architecture would only need to be written once, and then any number of
+programs could be compiled and run.</p>
+<p>A later variant for executing a high-level language is
+an <em>interpreter</em>.  An interpreter translates the high-level language
+into machine code, and immediately executes it, not storing the
+machine code for later
+use, so every time a statement in the code is executed again,
+the translation needs to be redone.  Interpreters are also
+machine-specific.</p>
+<p>Some later languages like Java and C# use a hybrid approach: A compiler,
+that can run on any machine, does most of the work by
+translating the high-level language program
+into a low-level <em>virtual machine</em>
+language called a <em>bytecode</em>.  This is not the machine language for any real machine,
+but the bytecode is simple
+enough that writing an interpreter for it is very easy.
+Again the interpreter for the bytecode must be machine-specific.
+In this approach:</p>
+<p>Program source =&gt; COMPILER =&gt; bytecode =&gt; INTERPRETER =&gt; execution</p>
+</div>
+<div class="section" id="program-development-cycle">
+<span id="index-7"></span><h2>1.4.5. Program Development Cycle<a class="headerlink" href="#program-development-cycle" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to check your understanding of small new pieces of C# is to write
+a highly specified small program that will be sure to test the new ideas.
+That is totally unlike the real world of programming.  Here is a more realistic
+sequence:</p>
+<ol class="arabic simple">
+<li>Clients have a problem that they want solved.</li>
+<li>They connect with software developers.</li>
+<li>The clients discuss the needs of their users.</li>
+<li>The software developers work with them to make sure they
+understand the desired deliverables, and work through the
+design decisions and their tradeoffs.</li>
+<li>Software developers start building and testing and showing off the
+core pieces of the software, and build on out.</li>
+<li>The clients may not have a full idea of what they want and the
+software developers may not have a full idea of what is feasible, and
+seeing the latest version leads both sides to have a clearer vision.
+Then the previous process steps are repeated, iteratively refining
+the product.</li>
+<li>After a production version is out, there may be later versions and error
+fixes, again cycling back to the earlier steps.</li>
+</ol>
+<p>Note that very important parts of this process are not centered on coding,
+but on communicating clearly with a possibly non-technical client.
+Communication skills are critical.</p>
+</div>
+<div class="section" id="key-computer-science-areas">
+<span id="index-8"></span><h2>1.4.6. Key Computer Science Areas<a class="headerlink" href="#key-computer-science-areas" title="Permalink to this headline">¶</a></h2>
+<p>Most of the introduction so far has been about key concepts that underlie
+basic programming. Most of the parts so far about electronic computers
+could have been written decades ago.  Much has emerged since then,</p>
+<ul class="simple">
+<li>the Internet</li>
+<li>the development of economical multi-processor machines
+distributing computation into many parallel parts</li>
+<li>the massive explosion of the amount of information to be stored
+from diverse parts of life</li>
+<li>the coming <em>Internet of things</em>, where sensors are coming to all
+sorts of previously &#8220;dumb&#8221; parts of the world, that now can be tracked
+by GPS and reacted to in real time.</li>
+<li>Computers are now embedded in all sorts of devices:  toasters, thermostats,....
+Automobiles of today have more computing power embedded in various devices
+than early mainframe computers.</li>
+</ul>
+<p>We conclude with a brief discussion of some of the other organizing
+principles of
+computer science.</p>
+<dl class="docutils">
+<dt>Communication</dt>
+<dd>As the world is criss-crossed with media transmitting gigabytes of
+data per second, how do we keep the communication reliable and secure?</dd>
+<dt>Coordination</dt>
+<dd>With multiple networked entities, how do we
+enhance cooperation, so more work is done in parallel?</dd>
+<dt>Recollection</dt>
+<dd>As the amount of data stored skyrockets, how do we effectively store
+and efficiently retrieve information?</dd>
+<dt>Evaluation</dt>
+<dd>How do we predict the performance and plan the necessary capacity
+for computer systems?  The most spectacular recent public failure
+in this area was the rollout of the federal Affordable Care
+website.</dd>
+<dt>Design</dt>
+<dd><p class="first">How do we design better/faster/cheaper/reliable hardware and software systems?
+What new programming languages will be more expressive, lead to fewer
+time-consuming errors, or be useful in proving that a major program never
+makes a mistake?  Errors in programs controlling machines delivering
+radiation for cancer treatment have had errors and led to patient death.</p>
+<p class="last">Hardware changes can be evolutionary or revolutionary:
+Instead of electric circuits can we use light, quantum particles, DNA...?</p>
+</dd>
+<dt>Computation and Automation</dt>
+<dd>What can we compute and automate?  Some useful
+sounding problems have been proven to be unsolvable.  What are the limits?</dd>
+</dl>
+<p id="index-9">A detailed discussion of these principles and the breadth of
+importance of computer science can be found at
+<a class="reference external" href="http://denninginstitute.com/pjd/GP/GP-site/welcome.html">http://denninginstitute.com/pjd/GP/GP-site/welcome.html</a>.</p>
+<p>For an alternate general introduction to programming and the context of C# in particular,
+there is another free online source,
+Rob Miles&#8217;
+C# Yellow Book, available at
+<a class="reference external" href="http://www.csharpcourse.com">http://www.csharpcourse.com</a>.
+Note that it is written specifically for Microsoft Windows use, using
+Visual Studio software development environment, which works only on Windows machines,
+and costs a lot if you are not a student.</p>
+<p>The <a class="reference internal" href="lab-edit-compile-run.html#lab-edit-compile-run"><span>Lab: Editing, Compiling, and Running with Xamarin Studio</span></a> will introduce an alternative to the
+Microsoft environment: Xamarin Studio and Mono, which are free,
+open-source software projects that make C# available for multiple platforms:
+Windows, Mac, or Linux machines.  With a substantial fraction of students having their own
+machine that does  <em>not</em> run Windows, this flexibility is important.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 30-June-2015 01:44:49.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

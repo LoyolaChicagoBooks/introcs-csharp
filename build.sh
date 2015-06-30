@@ -1,7 +1,10 @@
-#! /bin/bash
+#!/bin/bash
 
 [ -f ~/.env/sphinx/bin/activate ] && . ~/.env/sphinx/bin/activate
 
-make html
-make epub
-make LATEXOPTS=' -interaction=batchmode ' latexpdf
+rm -rf build/
+pushd rst
+make CONFIG=bootstrap html
+make CONFIG=bootstrap epub
+make CONFIG=bootstrap LATEXOPTS=' -interaction=batchmode ' latexpdf
+popd

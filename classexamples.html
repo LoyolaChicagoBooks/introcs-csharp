@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>13.2. Class Instance Examples &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="index.html" />
+    <link rel="up" title="13. Classes and Object-Oriented Programming" href="classes.html" />
+    <link rel="next" title="13.3. The Rational Class" href="rational.html" />
+    <link rel="prev" title="13.1. A First Example of Class Instances: Contact" href="a-first-class.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">1.3. Downloading Text, Source Code, and Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">13.2. Class Instance Examples</a><ul>
+<li><a class="reference internal" href="#more-getters-and-setters">13.2.1. More Getters and Setters</a><ul>
+<li><a class="reference internal" href="#statistics-exercise">13.2.1.1. Statistics Exercise</a></li>
+<li><a class="reference internal" href="#unneeded-constructor-code-exercise">13.2.1.2. Unneeded Constructor Code Exercise</a></li>
+<li><a class="reference internal" href="#alternate-internal-state-exercise">13.2.1.3. Alternate Internal State Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#converting-a-static-game-to-a-game-instance">13.2.2. Converting A Static Game To A Game Instance</a></li>
+<li><a class="reference internal" href="#animal-class-lab">13.2.3. Animal Class Lab</a></li>
+<li><a class="reference internal" href="#clock-example">13.2.4. Clock Example</a><ul>
+<li><a class="reference internal" href="#alternate-clock-constructor-exercise">13.2.4.1. Alternate Clock Constructor Exercise</a></li>
+<li><a class="reference internal" href="#clock-with-seconds-exercise">13.2.4.2. Clock With Seconds Exercise</a></li>
+<li><a class="reference internal" href="#twelve-hour-time-exercise">13.2.4.3. Twelve Hour Time Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="a-first-class.html" title="Previous Chapter: 13.1. A First Example of Class Instances: Contact">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="rational.html" title="Next Chapter: 13.3. The Rational Class">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/classexamples.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="class-instance-examples">
+<span id="index-0"></span><span id="id1"></span><h1>13.2. Class Instance Examples<a class="headerlink" href="#class-instance-examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="more-getters-and-setters">
+<span id="index-1"></span><span id="id2"></span><h2>13.2.1. More Getters and Setters<a class="headerlink" href="#more-getters-and-setters" title="Permalink to this headline">¶</a></h2>
+<p>As an exercise you could write a simple class Example, with</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">int</span></code> instance variable <code class="docutils literal"><span class="pre">n</span></code> and <code class="docutils literal"><span class="pre">double</span></code> instance variable <code class="docutils literal"><span class="pre">d</span></code></li>
+<li>a simple constructor with parameters to set instance variables
+<code class="docutils literal"><span class="pre">n</span></code> and <code class="docutils literal"><span class="pre">d</span></code></li>
+<li>getters and setters for both instance variables (4 methods in all)</li>
+<li>a ToString that prints a line with both instance variables labeled.</li>
+</ol>
+<p>Compare yours to
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/example_class/example_class.cs">example_class/example_class.cs</a>.</p>
+<p>We include a testing class at the end of this file.</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ExampleTest</span>
+<span class="p">{</span>
+   <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+   <span class="p">{</span>
+      <span class="n">Example</span> <span class="n">e</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Example</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2.5</span><span class="p">);</span> <span class="c1">// use constructor</span>
+      <span class="c1">// this creates the first Example object with reference e</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;e.n = {0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">GetN</span><span class="p">());</span> <span class="c1">// prints 1</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;e.d = {0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">GetD</span><span class="p">());</span> <span class="c1">// prints 2.5</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 1, d = 2.5</span>
+      
+      <span class="n">e</span><span class="p">.</span><span class="n">SetN</span><span class="p">(</span><span class="m">25</span><span class="p">);</span>
+      <span class="n">e</span><span class="p">.</span><span class="n">SetD</span><span class="p">(</span><span class="m">3.14159</span><span class="p">);</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;e.n = {0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">GetN</span><span class="p">());</span> <span class="c1">// prints 25</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;e.d = {0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">GetD</span><span class="p">());</span> <span class="c1">// prints 3.14159</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 25, d = 3.14159</span>
+      
+      <span class="n">Example</span> <span class="n">e2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Example</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">10.5</span><span class="p">);</span> 
+      <span class="c1">// this creates the second Example object with reference e2</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e2</span><span class="p">);</span> <span class="c1">// prints Example: n = 3, d = 10.5</span>
+      
+      <span class="n">e</span> <span class="p">=</span> <span class="n">e2</span><span class="p">;</span> <span class="c1">// now both e and e2 reference the second object</span>
+      <span class="c1">// the first Example object is now no longer referenced</span>
+      <span class="c1">// and its memory can be reclaimed at runtime if necessary</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 3, d = 10.5</span>
+
+      <span class="n">e2</span><span class="p">.</span><span class="n">SetN</span><span class="p">(</span><span class="m">77</span><span class="p">);</span>  <span class="c1">// symbolism uses e2, not e</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e2</span><span class="p">);</span> <span class="c1">// prints Example: n = 77, d = 10.5 </span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 77, d = 10.5 </span>
+      <span class="c1">// but e is the same object - so its fields are changed </span>
+   <span class="p">}</span>
+<span class="p">}</span> <span class="c1">// end of class ExampleTest</span>
+</pre></div>
+</div>
+<p>Besides the obvious tests, we also use
+the fact that an Example object is mutable to play with  <a class="reference internal" href="onedim.html#alias"><span>References and Aliases</span></a>:
+In the
+last few lines of <code class="docutils literal"><span class="pre">Main</span></code>, after <code class="docutils literal"><span class="pre">e</span></code> becomes an alias for <code class="docutils literal"><span class="pre">e2</span></code>,
+we change
+an object under one name, and it affect the alias the same way.
+Check this by running the program!</p>
+<p>Make sure you can follow the code and the output from running.</p>
+<p class="rubric" id="beyond-getters-and-setters"><span id="index-2"></span>Beyond Getters and Setters</p>
+<p>Thus far we have had very simple classes with instance variables and
+getter and setter methods, and maybe a ToString method.
+These classes were designed to introduce the basic syntax for
+classes with instances.  The classes have just been containers for data
+that we can read back, and change if there are setter methods - pretty
+boring and limited.  Many objects have more extensive behaviors, so we will
+take a small step and imagine a somewhat more complicated  <code class="docutils literal"><span class="pre">Averager</span></code> class:</p>
+<ul class="simple">
+<li>A new <code class="docutils literal"><span class="pre">Averager</span></code> starts with no data acknowledged.</li>
+<li>Be able to enter data values one at a time (method <code class="docutils literal"><span class="pre">AddDatum</span></code>).
+We will use <code class="docutils literal"><span class="pre">double</span></code> values.</li>
+<li>At any point be able to return the average of the numbers entered so far
+(method <code class="docutils literal"><span class="pre">GetAverage</span></code>).
+The average is the sum of all the values divided by number of values.
+With <code class="docutils literal"><span class="pre">double</span></code> values we assume a <code class="docutils literal"><span class="pre">double</span></code> average.
+This does not make sense if there
+are no values so far, but with double type we can use the value
+<code class="docutils literal"><span class="pre">NaN</span></code> (Not a Number) in this case.</li>
+<li>Be able to return the number of data elements entered so far
+(method <code class="docutils literal"><span class="pre">GetDataCount</span></code>)</li>
+<li>Be able to clear the <code class="docutils literal"><span class="pre">Averager</span></code>, going back to no data elements
+considered yet, like in a new <code class="docutils literal"><span class="pre">Averager</span></code> (method <code class="docutils literal"><span class="pre">Clear</span></code>)</li>
+<li>It is good to have a <code class="docutils literal"><span class="pre">ToString</span></code> method.  We choose to have
+it label the number of data items and the average of the items.</li>
+</ul>
+<p>The object starts from a fixed
+state (no data) so we do not need any constructor parameters.</p>
+<p>We can imagine a demonstration class <code class="docutils literal"><span class="pre">AveragerDemo</span></code> with a <code class="docutils literal"><span class="pre">Main</span></code> method
+containing</p>
+<div class="highlight-csharp"><div class="highlight"><pre>         <span class="n">Averager</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Averager</span><span class="p">();</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;New Averager: &quot;</span> <span class="p">+</span> <span class="n">a</span><span class="p">);</span>
+         <span class="k">foreach</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x</span> <span class="k">in</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span><span class="m">5.1</span><span class="p">,</span> <span class="p">-</span><span class="m">7.3</span><span class="p">,</span> <span class="m">11.0</span><span class="p">,</span> <span class="m">3.7</span><span class="p">})</span> <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Next datum &quot;</span> <span class="p">+</span> <span class="n">x</span><span class="p">);</span>
+            <span class="n">a</span><span class="p">.</span><span class="n">AddDatum</span> <span class="p">(</span><span class="n">x</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;average {0} with {1} data values&quot;</span><span class="p">,</span> 
+               <span class="n">a</span><span class="p">.</span><span class="n">GetAverage</span><span class="p">(),</span> <span class="n">a</span><span class="p">.</span><span class="n">GetDataCount</span><span class="p">());</span>
+         <span class="p">}</span>
+         <span class="n">a</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;After clearing:&quot;</span><span class="p">);</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;average {0} with {1} data values&quot;</span><span class="p">,</span> 
+            <span class="n">a</span><span class="p">.</span><span class="n">GetAverage</span><span class="p">(),</span> <span class="n">a</span><span class="p">.</span><span class="n">GetDataCount</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>It should print</p>
+<div class="highlight-none"><div class="highlight"><pre>New Averager: items: 0; average: NaN
+Next datum 5.1
+average 5.1 with 1 data values
+Next datum -7.3
+average -1.1 with 2 data values
+Next datum 11
+average 2.93333333333333 with 3 data values
+Next datum 3.7
+average 3.125 with 4 data values
+After clearing:
+average NaN with 0 data values
+</pre></div>
+</div>
+<p>Now that we have a clear idea of the proposed outward behavior, we
+can consider how to implement the <code class="docutils literal"><span class="pre">Averager</span></code> class.</p>
+<p>We could store a list of all the data values entered in any instance,
+requiring a large amount of memory for a long list. However, this
+functionality was built into early calculators, with very limited memory.
+How can we do it without remembering the whole list?
+Consider a concrete example:</p>
+<p>If I have entered numbers 2.1, 4.5 and 5.4, and want the average, it is</p>
+<blockquote>
+<div><span class="math">\((2.1+4.5+5.4)/3=12.0/3=4.0\)</span></div></blockquote>
+<p>If I want to include a further number 5.0, the average becomes</p>
+<blockquote>
+<div><span class="math">\((2.1+4.5+5.4+5.0)/4=17.0/4=4.25\)</span></div></blockquote>
+<p>Note the relationship to the previous average expression:</p>
+<blockquote>
+<div><span class="math">\(=((2.1+4.5+5.4)+5.0)/4=(12.0+5.0)/(3+1)\)</span></div></blockquote>
+<p>In the numerator we have added the latest value to the previous sum,
+and in the denominator the count of data items is increased by one.
+All we need to remember to
+go on to include the next item is the sum of values so far and the
+number of values so far.  We can just have instance variables
+<code class="docutils literal"><span class="pre">sum</span></code> and <code class="docutils literal"><span class="pre">dataCount</span></code>.</p>
+<p>You might think how to create this class....</p>
+<p>The full <code class="docutils literal"><span class="pre">Averager</span></code> code follows:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="c1">/// a class that is more than a container</span>
+   <span class="k">class</span> <span class="nc">Averager</span>
+   <span class="p">{</span>
+      <span class="k">private</span> <span class="kt">int</span> <span class="n">dataCount</span><span class="p">;</span>
+      <span class="k">private</span> <span class="kt">double</span> <span class="n">sum</span><span class="p">;</span>
+
+      <span class="c1">/// new Averager with no data</span>
+      <span class="k">public</span> <span class="nf">Averager</span><span class="p">()</span> 
+      <span class="p">{</span>
+         <span class="n">Clear</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">AddDatum</span><span class="p">(</span><span class="kt">double</span> <span class="k">value</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="n">sum</span> <span class="p">+=</span> <span class="k">value</span><span class="p">;</span>
+         <span class="n">dataCount</span><span class="p">++;</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetDataCount</span><span class="p">()</span> 
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="n">dataCount</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="c1">/// Gets the average of the data</span>
+      <span class="c1">///   or NaN if no data.</span>
+      <span class="k">public</span> <span class="kt">double</span> <span class="nf">GetAverage</span><span class="p">()</span> 
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="n">sum</span><span class="p">/</span><span class="n">dataCount</span><span class="p">;</span>  <span class="c1">// is NaN if dataCount is 0</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">Clear</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="n">sum</span> <span class="p">=</span> <span class="m">0.0</span><span class="p">;</span>
+         <span class="n">dataCount</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span> <span class="p">()</span>
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;items: {0}; average: {1}&quot;</span><span class="p">,</span> 
+            <span class="n">GetDataCount</span><span class="p">(),</span> <span class="n">GetAverage</span><span class="p">());</span>
+      <span class="p">}</span> 
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Several things to note:</p>
+<ul class="simple">
+<li>We show that a constructor, like an instance method, can include a call
+to a further instance method.  Though we illustrate this idea, the
+constructor code is
+actually unneeded.  See the <a class="reference internal" href="#unneeded-constructor-code-exercise"><span>Unneeded Constructor Code Exercise</span></a> below.</li>
+<li>We have methods that are not ToString or mere getters or setters of instance
+variables.  The logic of the class requires more.</li>
+<li>The <code class="docutils literal"><span class="pre">GetAverage</span></code>
+method does return data obtained by reading instance variable, but it does
+a calculation using the instance variables first.  See
+<a class="reference internal" href="#alternate-internal-state-exercise"><span>Alternate Internal State Exercise</span></a>.</li>
+</ul>
+<p>The code for both classes is in project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/averager">averager</a>.</p>
+<div class="section" id="statistics-exercise">
+<h3>13.2.1.1. Statistics Exercise<a class="headerlink" href="#statistics-exercise" title="Permalink to this headline">¶</a></h3>
+<p>Modify the project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/averager">averager</a> so the <code class="docutils literal"><span class="pre">Averager</span></code> class is
+converted to <code class="docutils literal"><span class="pre">Statistics</span></code>.  Besides having methods to calculate the count
+of data items and average, also calculate the standard deviation with
+a method <code class="docutils literal"><span class="pre">StandardDeviation</span></code>.
+It turns out that the only other instance variable needed is
+the sum of the squares of the data items, call it <code class="docutils literal"><span class="pre">sumOfSqr</span></code>.
+Before calculating the standard deviation, suppose we
+assign the current average to  a local variable <code class="docutils literal"><span class="pre">avg</span></code>.
+Then the handiest form of expression for the standard deviation is</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">((</span><span class="n">sumOfSqr</span> <span class="p">-</span> <span class="n">avg</span><span class="p">*</span><span class="n">avg</span><span class="p">)/</span><span class="n">dataCount</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Modify the demonstration program to show the standard deviation, too.</p>
+</div>
+<div class="section" id="unneeded-constructor-code-exercise">
+<span id="id3"></span><h3>13.2.1.2. Unneeded Constructor Code Exercise<a class="headerlink" href="#unneeded-constructor-code-exercise" title="Permalink to this headline">¶</a></h3>
+<p>Recall that objects are always initialized. Each instance variable
+has a default value assigned before a constructor is even run.
+The default value for numeric instance variables is 0, so the
+call to <code class="docutils literal"><span class="pre">Clear</span></code> in the constructor could be left out, leaving the
+body of the constructor empty!  Try commenting that line out
+and test that the behavior of demo program is the same.</p>
+<p>Emphasizing the fact that you are thinking about the
+initial values of instance variables is not a bad idea.  Hence
+a common practice is to
+explicitly assign even the default values in the constructor, as
+we did initially with the call to <code class="docutils literal"><span class="pre">Clear</span></code> inside the constructor.</p>
+<p>If no constructor definition is explicitly provided at all,
+the compiler implicitly creates one with no parameters and an empty body.
+This means that the entire constructor in <code class="docutils literal"><span class="pre">Averager</span></code> could be omitted.
+Comment the whole constructor out and check.</p>
+<p>There is a defensive programming
+reason to provide even the do-nothing constructor explicitly:
+If you use the implicit constructor and then decide to add a constructor
+with parameters, the implicit constructor is no longer defined by the compiler,
+so any remaining call to it in your code becomes an error.</p>
+</div>
+<div class="section" id="alternate-internal-state-exercise">
+<span id="id4"></span><h3>13.2.1.3. Alternate Internal State Exercise<a class="headerlink" href="#alternate-internal-state-exercise" title="Permalink to this headline">¶</a></h3>
+<p>The way we represent the internal state for an <code class="docutils literal"><span class="pre">Averager</span></code> is the
+best probably, but if it turns out that the <code class="docutils literal"><span class="pre">GetAverage</span></code> method
+is called a lot more often than a method that changes the state,
+we could avoid repeated division by saving the average as an
+instance variable.  We could keep that <em>instead of</em> <code class="docutils literal"><span class="pre">sum</span></code>
+(and still keep <code class="docutils literal"><span class="pre">dataCount</span></code>).  We can manage to
+keep the same public interface to the methods.  With these
+alternate instance variables how would you change
+the implementation code and not change the method headings or meanings?
+If we keep the assumption that the average of 0
+items is
+<code class="docutils literal"><span class="pre">double.Nan</span></code>, you will need to treat adding the first datum as
+a special case.  The code is simpler if we change the outward assumptions
+enough to consider the average of 0 items
+to be 0.  Try it either way.</p>
+<p>In the version with NaN you can avoid testing for NaN,
+but if you choose to test for
+NaN, you need the boolean <code class="docutils literal"><span class="pre">Double.IsNaN</span></code> function, because the expression
+<code class="docutils literal"><span class="pre">double.NaN</span> <span class="pre">==</span> <span class="pre">double.NaN</span></code> is <em>false</em>!</p>
+</div>
+</div>
+<div class="section" id="converting-a-static-game-to-a-game-instance">
+<span id="index-3"></span><h2>13.2.2. Converting A Static Game To A Game Instance<a class="headerlink" href="#converting-a-static-game-to-a-game-instance" title="Permalink to this headline">¶</a></h2>
+<p>For a comparison of procedural and object-oriented coding,
+consider converting <a class="reference internal" href="lab-number-game.html#lab-number-game"><span>Number Guessing Game Lab</span></a> so that a GuessGame
+is an object, an instance of the GuessGame class.</p>
+<p>While our earlier example, Contact, is a simple but practical
+use of object-oriented programming, GuessGame is somewhat more artificial.
+We create it hoping that highlighting the differences between procedural
+and object-oriented presentation is informative.  Also, we will see
+with <a class="reference internal" href="interfaces.html#interface"><span>Interfaces</span></a> that
+there are C# language features that require an
+object rather than just a function and data.
+In <a class="reference internal" href="csproj-revisited.html#igame-interface-exercise"><span>IGame Interface Exercise</span></a> you can use a Game object.</p>
+<p>Here is a procedural game version, example file
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/static_version/static_version.cs">static_version/static_version.cs</a></p>
+<div class="highlight-csharp"><div class="highlight"><pre>   <span class="k">public</span> <span class="k">class</span> <span class="nc">Game</span>
+   <span class="p">{</span>
+      <span class="k">private</span> <span class="k">static</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
+      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="kt">int</span> <span class="n">big</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Enter a secret number bound: &quot;</span><span class="p">);</span>
+         <span class="n">Play</span><span class="p">(</span><span class="n">big</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Play</span><span class="p">(</span><span class="kt">int</span> <span class="n">big</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="kt">int</span> <span class="n">secret</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="n">big</span><span class="p">);</span>
+         <span class="kt">int</span> <span class="n">guesses</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Guess a number less than {0}.&quot;</span><span class="p">,</span> <span class="n">big</span><span class="p">);</span>
+         <span class="kt">int</span> <span class="n">guess</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Next guess: &quot;</span><span class="p">);</span>
+         <span class="k">while</span> <span class="p">(</span><span class="n">secret</span> <span class="p">!=</span> <span class="n">guess</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="p">&lt;</span> <span class="n">secret</span><span class="p">)</span> <span class="p">{</span>
+               <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Too small!&quot;</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+               <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Too big!&quot;</span><span class="p">);</span>
+
+            <span class="p">}</span>
+            <span class="n">guess</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Next guess: &quot;</span><span class="p">);</span>
+            <span class="n">guesses</span><span class="p">++;</span>
+         <span class="p">}</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;You won on guess {0}!&quot;</span><span class="p">,</span> <span class="n">guesses</span><span class="p">);</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+</pre></div>
+</div>
+<p>The project also refers to the library class UI,
+with the functions we use for safe
+keyboard input.  It is all static methods.</p>
+<p>Is there any reason to make this UI class have its own own instances?</p>
+<p><strong>No</strong>.  There is no state to remember between UI method calls.
+What comes in through
+the keyboard goes out through a return value,
+and then you are completely done with it.
+A simple static function works fine each time.
+<em>Do not get fancy for nothing</em>.</p>
+<p>What state would a game hold?  We might set it up so the user
+chooses the size of the range of choices just once, and remember it
+for possibly multiple plays of the GuessGame.  The variable was
+<code class="docutils literal"><span class="pre">big</span></code> before, we can keep the name.
+If we are going to remember it inside our GuessGame instance,
+then <code class="docutils literal"><span class="pre">big</span></code> needs to become an instance variable, and it will be something
+we can set in a constructor.</p>
+<p>What actions/methods will this object have?  Only one - playing a GuessGame.
+The GuessGame could be played multiple times, and that action, play,
+makes sense as a method, Play, which will look a lot like the current
+static function.</p>
+<p>In the procedural version there are several other important variables:</p>
+<ul class="simple">
+<li>Random rand:  That was static before, for good reason:
+We only need one Random number generator for the whole
+time the program is running, so one static variable makes sense.</li>
+<li>The central number in the procedural Game
+and our future Play method is <code class="docutils literal"><span class="pre">secret</span></code>.
+Should that be an instance variable?  It would work, but it would
+be unhelpful and misleading:  Secret is reset every time the game is played,
+and it has no meaning after a Play function would be finished.
+There is nothing to
+remember <em>between</em> time you Play.  This is the
+perfect place for a local variable <em>as we have now</em>.</li>
+</ul>
+<p>A common newbie error is to make things
+into instance variables, just because you can, when an old-fashioned
+local variable is all that you need.  It is good to have variables leave the
+programmer&#8217;s consciousness when they are no longer needed,
+as a local variable does.
+An instance variable lingers on, leaving extra places to make errors.</p>
+<p>This introductory discussion could get you going, making a transformation.
+Go ahead and make the changes as far as you can:
+create project GuessGame inside the current solution.
+Have a class GuessGame for the GuessGame instance,
+with instance variable <code class="docutils literal"><span class="pre">big</span></code> and method <code class="docutils literal"><span class="pre">Play</span></code>.</p>
+<p>You still need a static <code class="docutils literal"><span class="pre">Main</span></code> method to first create the GuessGame object.
+You could prompt the user for the value for <code class="docutils literal"><span class="pre">big</span></code> to send to the constructor.
+Once you have an object, you can call <em>instance method</em> <code class="docutils literal"><span class="pre">Play</span></code>.
+What about parameters? What needs to change from the procedural version?</p>
+<p>There is also a video for this section that
+follows all the way through the steps.
+A possible final result is in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/instance_version/guess_game.cs">instance_version/guess_game.cs</a>.</p>
+</div>
+<div class="section" id="animal-class-lab">
+<span id="animal-lab"></span><h2>13.2.3. Animal Class Lab<a class="headerlink" href="#animal-class-lab" title="Permalink to this headline">¶</a></h2>
+<p><strong>Objectives</strong>:
+Complete a simple (silly) class, with constructor and methods,
+including a <code class="docutils literal"><span class="pre">ToString</span></code> method, and a separate testing class.</p>
+<p>Make an animal_lab project in your solution,
+and copy in the files from the example
+project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/animal_lab_stub">animal_lab_stub</a>.
+Then modify the two files as discussed below.</p>
+<ol class="arabic">
+<li><p class="first">Complete the simple class Animal in your copy of the file
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/animal_lab_stub/animal.cs">animal.cs</a>.
+The bullets below
+name and describe the instance variables, constructor,
+and methods you need to write:</p>
+<ul>
+<li><p class="first">An Animal has a <code class="docutils literal"><span class="pre">name</span></code> and a <code class="docutils literal"><span class="pre">gut</span></code>.
+In our version the <code class="docutils literal"><span class="pre">gut</span></code> is a List of strings
+describing the contents, in the order eaten.
+A newly created Animal gets a <code class="docutils literal"><span class="pre">name</span></code> from a parameter
+passed to the constructor, while the <code class="docutils literal"><span class="pre">gut</span></code> always starts off <em>empty</em>.</p>
+</li>
+<li><p class="first">An Animal has a <code class="docutils literal"><span class="pre">Greet</span></code> method, so an animal named &#8220;Froggy&#8221; would say
+(that is, print)</p>
+<blockquote>
+<div><p>Hello, my name is Froggy.</p>
+</div></blockquote>
+</li>
+<li><p class="first">An Animal can <code class="docutils literal"><span class="pre">Eat</span></code> a string naming the food,
+adding the food to the <code class="docutils literal"><span class="pre">gut</span></code>.
+If Froggy eats &#8220;worm&#8221; and then &#8220;fly&#8221;, its <code class="docutils literal"><span class="pre">gut</span></code> list contains
+&#8220;worm&#8221; and &#8220;fly&#8221;.</p>
+</li>
+<li><p class="first">An Animal can <code class="docutils literal"><span class="pre">Excrete</span></code>
+(removing and printing what was <em>first</em> in the gut List).
+Recall the method <code class="docutils literal"><span class="pre">RemoveAt</span></code> in <a class="reference internal" href="listsyntax.html#listsyntax"><span>List Syntax</span></a>.  Print the
+empty string, &#8220;&#8221;, if the <code class="docutils literal"><span class="pre">gut</span></code>
+<em>was already empty</em>.  Following the
+Froggy example above, Froggy could <code class="docutils literal"><span class="pre">Excrete</span></code>,
+and &#8220;worm&#8221; would be printed.
+Then its <code class="docutils literal"><span class="pre">gut</span></code> would contain only &#8220;fly&#8221;.</p>
+</li>
+<li><p class="first">A <code class="docutils literal"><span class="pre">ToString</span></code> method:
+Remember the <code class="docutils literal"><span class="pre">override</span></code> keyword.  Make it return a string in the format
+shown below for Froggy, including the Animal&#8217;s name:</p>
+<blockquote>
+<div><p>&#8220;Animal: Froggy&#8221;</p>
+</div></blockquote>
+<p>Try this first, and note the extra credit version below.</p>
+</li>
+<li><p class="first">All the methods that print should be void.
+Which need a parameter, of what type?</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Complete the file <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/animal_lab_stub/test_animal.cs">test_animal.cs</a>
+with its class <code class="docutils literal"><span class="pre">TestAnimal</span></code> containing the
+<code class="docutils literal"><span class="pre">Main</span></code> method, testing the class Animal:
+Create a couple of Animals and visibly test all the methods,
+with enough explanation that someone running the test program,
+but <em>not</em> looking at the code of either file, can see that everything works.</p>
+</li>
+<li><p class="first">20% EXTRA CREDIT:  Elaborate <code class="docutils literal"><span class="pre">ToString</span></code> so if Froggy had &#8220;worm&#8221;, &#8220;fly&#8221;
+and &#8220;bug&#8221; in the gut, the string would be:</p>
+<blockquote>
+<div><p>&#8220;Animal: Froggy ate worm, fly and bug&#8221;</p>
+</div></blockquote>
+<p>with a comma separated list of the gut contents, except use proper English,
+so the last separator
+is &#8221; and &#8221;, not &#8221;, &#8221;.
+If the gut has nothing in it, list the contents as &#8220;nothing&#8221;:</p>
+<blockquote>
+<div><p>&#8220;Animal: Froggy ate nothing&#8221;</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="clock-example">
+<span id="clock"></span><span id="index-4"></span><h2>13.2.4. Clock Example<a class="headerlink" href="#clock-example" title="Permalink to this headline">¶</a></h2>
+<p>Consider the logic for a digital 24 hour clock object,
+type <code class="docutils literal"><span class="pre">Clock</span></code>, that shows hours and minutes,
+so 03:45 would be three forty-five.
+Note that there is no AM or PM:  The hours go from 00, starting at midnight,
+through hour 23, the 11PM hour, so 23:59 would be a minute before midnight,
+and 13:00 would be 1PM.</p>
+<p>Assume there is some attached circuit to signal when a new minute starts.</p>
+<p>This class could have just a few methods:  <code class="docutils literal"><span class="pre">Tick</span></code>,
+called when a new minute is signaled,
+and <code class="docutils literal"><span class="pre">GetTimeString</span></code> to return the time in the format illustrated above,
+and <code class="docutils literal"><span class="pre">SetTime</span></code> specifying new values for the hours and minutes.
+We can start
+from a constructor that just sets the clock&#8217;s time to midnight.</p>
+<p>We can imagine a demonstration class <code class="docutils literal"><span class="pre">ClockDemo</span></code> with a <code class="docutils literal"><span class="pre">Main</span></code> method
+containing</p>
+<div class="highlight-csharp"><div class="highlight"><pre>         <span class="n">Clock</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Clock</span><span class="p">();</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Midnight &quot;</span> <span class="p">+</span> <span class="n">c</span><span class="p">.</span><span class="n">GetTimeString</span><span class="p">());</span>
+         <span class="n">c</span><span class="p">.</span><span class="n">SetTime</span><span class="p">(</span><span class="m">23</span><span class="p">,</span> <span class="m">58</span><span class="p">);</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Before midnight &quot;</span> <span class="p">+</span> <span class="n">c</span><span class="p">.</span><span class="n">GetTimeString</span><span class="p">());</span>
+         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">4</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+            <span class="n">c</span><span class="p">.</span><span class="n">Tick</span> <span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Tick &quot;</span> <span class="p">+</span> <span class="n">c</span><span class="p">.</span><span class="n">GetTimeString</span><span class="p">());</span>
+         <span class="p">}</span>
+</pre></div>
+</div>
+<p>It should print</p>
+<div class="highlight-none"><div class="highlight"><pre>Midnight 00:00
+Before midnight 23:58
+Tick 23:59
+Tick 00:00
+Tick 00:01
+Tick 00:02
+</pre></div>
+</div>
+<p>A <code class="docutils literal"><span class="pre">Clock</span></code> object will need instance variables.
+One obvious approach would be to have <code class="docutils literal"><span class="pre">int</span></code>
+instance variables for the hours and minutes. Both can be set and can advance
+and will need ot be read.</p>
+<p>These actions are common to both the hours and minutes,
+so we might think how we can avoid writing some things twice.
+There is one main difference:  The minutes roll over at 60
+while the hours roll over at 24.  Though the limits are different,
+they are both numbers, so we can store the limit for each, 60 or 24.
+Then the same code could be used to advance each one, just using a different value
+for the rollover limit.</p>
+<p>How would we neatly code this in a way that reuses code?  The most significant
+thing to notice is that dealing with minutes involves data (the current count
+and the limit 60) and associated actions:  being set, advanced and read.
+The same is true for the hours.
+The combination of <em>data and tightly associated actions</em>, particularly used
+in more than one situation,
+suggests a new class of objects, say <code class="docutils literal"><span class="pre">RolloverCounter</span></code>.</p>
+<p>Notice the shift in this approach:  The instance variables for hours and minutes
+would become instances of the <code class="docutils literal"><span class="pre">RolloverCounter</span></code> class.  A <code class="docutils literal"><span class="pre">RolloverCounter</span></code>
+should know how to advance itself.  Hence the logic for advancing a counter,
+sometimes rolling it over, would not be directly in the <code class="docutils literal"><span class="pre">Clock</span></code> class,
+but in the <code class="docutils literal"><span class="pre">RolloverCounter</span></code> class.</p>
+<p>So let&#8217;s think more about what we would want in the <code class="docutils literal"><span class="pre">RolloverCounter</span></code> class.
+What instance variables?  Of course we have the current count,
+and since we want the same class to work for both minutes and hours, we
+also need to have the rollover limit. They are both integers.</p>
+<p>The limit should just be set once for a particular counter,
+presumably when the object is created.  For simplicity
+we can just assume the count is 0 when a <code class="docutils literal"><span class="pre">RolloverCounter</span></code>
+is first created.  Of course we must have a method to let the count
+advance, rolling over back to 0 when the limit it reached.</p>
+<p>Throw in a getter and a setter for the count and we can have the following
+class:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="c1">/// class used twice in Clock</span>
+   <span class="k">class</span> <span class="nc">RolloverCounter</span> 
+   <span class="p">{</span>
+      <span class="k">private</span> <span class="kt">int</span> <span class="n">limit</span><span class="p">,</span> <span class="n">count</span><span class="p">;</span>
+
+      <span class="k">public</span> <span class="nf">RolloverCounter</span><span class="p">(</span><span class="kt">int</span> <span class="n">limit</span><span class="p">)</span> 
+      <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="n">limit</span> <span class="p">=</span> <span class="n">limit</span><span class="p">;</span>
+         <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>  <span class="c1">//for clarity - this is the default value</span>
+      <span class="p">}</span>
+                               
+      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetCount</span><span class="p">()</span> 
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetCount</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span><span class="p">)</span> 
+      <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="n">count</span> <span class="p">=</span> <span class="n">count</span><span class="p">;</span>
+      <span class="p">}</span>
+                               
+      <span class="c1">/// advance by one time tick </span>
+      <span class="c1">/// eventually roll over at limit                        </span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">Advance</span><span class="p">()</span> 
+      <span class="p">{</span>
+         <span class="n">count</span> <span class="p">=</span> <span class="p">(</span><span class="n">count</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span> <span class="p">%</span> <span class="n">limit</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>                           
+<span class="p">}</span>
+  
+</pre></div>
+</div>
+<p>Note how concise the <code class="docutils literal"><span class="pre">Advance</span></code> method is!  With the remainder operation,
+we do not need an <code class="docutils literal"><span class="pre">if</span></code> statement.
+Check examples by hand if this seems strange.</p>
+<p id="index-5">Finally we introduce the <code class="docutils literal"><span class="pre">Clock</span></code> class itself.
+We display the entire code first, and follow it with comments about a number
+of new features.</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="c1">/// class with instance variables of another user class</span>
+   <span class="k">class</span> <span class="nc">Clock</span> 
+   <span class="p">{</span>
+      <span class="k">private</span> <span class="n">RolloverCounter</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">;</span>
+
+      <span class="c1">/// new Clock set to midnight</span>
+      <span class="k">public</span> <span class="nf">Clock</span><span class="p">()</span> 
+      <span class="p">{</span>
+         <span class="n">hours</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RolloverCounter</span><span class="p">(</span><span class="m">24</span><span class="p">);</span>
+         <span class="n">minutes</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RolloverCounter</span><span class="p">(</span><span class="m">60</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="c1">///  new Clock set to specified time</span>
+      <span class="k">public</span> <span class="nf">Clock</span><span class="p">(</span><span class="kt">int</span> <span class="n">nHours</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nMinutes</span><span class="p">)</span> 
+      <span class="p">{</span>
+         <span class="n">hours</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RolloverCounter</span><span class="p">(</span><span class="m">24</span><span class="p">);</span>
+         <span class="n">minutes</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RolloverCounter</span><span class="p">(</span><span class="m">60</span><span class="p">);</span>
+         <span class="n">SetTime</span> <span class="p">(</span><span class="n">nHours</span><span class="p">,</span> <span class="n">nMinutes</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetTime</span><span class="p">(</span><span class="kt">int</span> <span class="n">nHours</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nMinutes</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="n">hours</span><span class="p">.</span><span class="n">SetCount</span><span class="p">(</span><span class="n">nHours</span><span class="p">);</span>
+         <span class="n">minutes</span><span class="p">.</span><span class="n">SetCount</span><span class="p">(</span><span class="n">nMinutes</span><span class="p">);</span>
+      <span class="p">}</span>
+         
+      <span class="c1">/// advance by one time tick                         </span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">Tick</span><span class="p">()</span> 
+      <span class="p">{</span>
+         <span class="n">minutes</span><span class="p">.</span><span class="n">Advance</span><span class="p">();</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">minutes</span><span class="p">.</span><span class="n">GetCount</span><span class="p">()</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">hours</span><span class="p">.</span><span class="n">Advance</span><span class="p">();</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="c1">/// Always 2 digits for both hours and minute with colon in middle</span>
+      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetTimeString</span><span class="p">()</span> 
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0:D2}:{1:D2}&quot;</span><span class="p">,</span> <span class="n">hours</span><span class="p">.</span><span class="n">GetCount</span><span class="p">(),</span> <span class="n">minutes</span><span class="p">.</span><span class="n">GetCount</span><span class="p">());</span>
+      <span class="p">}</span>  <span class="c1">// D2 format: always at least 2 digits, padding as needed with leading 0&#39;s</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>First the principal reason for this example:  We illustrate
+writing a class where the instance variables are objects of a different
+user-defined type.  Because the instance variables <code class="docutils literal"><span class="pre">hours</span></code> and
+<code class="docutils literal"><span class="pre">minutes</span></code> are objects, we must initialize them
+using the <code class="docutils literal"><span class="pre">new</span></code> syntax.</li>
+<li>Skip over the <em>second</em> constructor for now, and see the <code class="docutils literal"><span class="pre">SetTime</span></code> method:
+We call the appropriate method to update the individual
+<code class="docutils literal"><span class="pre">RolloverCounter</span></code> instances.</li>
+<li>Now go back to the second constructor.  This is not really necessary:
+With the first constructor the calling code could just have one more
+<code class="docutils literal"><span class="pre">SetTime</span></code> line any time you want to
+to create a clock with a time other than midnight.
+We can make a case for
+this being so common, that we want to do it in just one line,
+with a constructor that sets a specified time.
+However, the main excuse was really to illustrate that
+constructors can be <em>overloaded</em>, like methods:  You can have separate
+constructors with distinct signatures.
+In this case versions with no parameters vs. two <code class="docutils literal"><span class="pre">int</span></code> parameters.</li>
+<li>The <code class="docutils literal"><span class="pre">Tick</span></code> method has a bit of logic to it:  while the minutes always
+advance, the hours only advance when the minutes roll over to 0.</li>
+<li>Finally the <code class="docutils literal"><span class="pre">GetTimeString</span></code> method illustrates a new integer string
+formatting mode:  The D2 format specifier applies to an integer, and displays it
+as a minimum of 2 digits, padding on the left with 0&#8217;s as necessary.
+This is just what we want here.  In general the 2 could be replaced by another
+literal integer, so D6 would force at least 6 digits:  With the D6 format
+specifier 12 would be formatted as 000012,
+and the longer 1234567 would add no extra 0&#8217;s: still 1234567.</li>
+</ol>
+<p>The code for all the classes is in project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/clock">clock</a>.</p>
+<p>Admittedly, with this exact functionality and such a concise line to
+advance a count, it would actually have shorter to have done everything
+inside the <code class="docutils literal"><span class="pre">Clock</span></code> class, with no <code class="docutils literal"><span class="pre">RolloverCounter</span></code>, but we were looking
+for a simple illustration of combining user-defined types this way,
+and a <code class="docutils literal"><span class="pre">RolloverCounter</span></code> is a clear unified
+concept that can be used in other situations.  See an upcoming exercise.</p>
+<div class="section" id="alternate-clock-constructor-exercise">
+<h3>13.2.4.1. Alternate Clock Constructor Exercise<a class="headerlink" href="#alternate-clock-constructor-exercise" title="Permalink to this headline">¶</a></h3>
+<p>Make a small change to <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/clock/clock_demo.cs">clock/clock_demo.cs</a>, so the second
+constructor is tested.</p>
+</div>
+<div class="section" id="clock-with-seconds-exercise">
+<h3>13.2.4.2. Clock With Seconds Exercise<a class="headerlink" href="#clock-with-seconds-exercise" title="Permalink to this headline">¶</a></h3>
+<p>Modify the project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/clock">clock</a>, assuming the Tick is for each second, and
+the time also show the seconds, like 55 seconds before midnight would be
+23:59:05.</p>
+</div>
+<div class="section" id="twelve-hour-time-exercise">
+<span id="index-6"></span><h3>13.2.4.3. Twelve Hour Time Exercise<a class="headerlink" href="#twelve-hour-time-exercise" title="Permalink to this headline">¶</a></h3>
+<p>Modify the project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/clock">clock</a> so a <code class="docutils literal"><span class="pre">GetTimeString12</span></code> method returns
+the 12 hour time with AM or PM, like 11:05PM or 3:45AM. (The hours do
+not have a leading 0 in this format.)
+This could be done modifying a lot of things:
+keeping the actual hours and minutes that you will display
+and remembering AM or PM (with the hours
+being more complicated, not starting at 0).  We suggest something else instead:</p>
+<p>This is a good place to note a very useful pattern for programming, called
+<em>model-view-controller</em>.  The <em>model</em> is the way chosen to store the state internally.
+The <em>controller</em> has the logic to modify the model as it needs to evolve.
+A <em>view</em> of a part of
+the model is something shown to the user that
+does not need to be in the exact same form as the model itself:
+A view just needs to be something that can be <em>easily calculated</em>
+from the model, and presumably is desired by the user.</p>
+<p>In this case a simple (and already coded!) way to store and control
+the time model data
+is the minutes and up to 23 hours that do happen to directly correspond
+to the 24 hour clock view.</p>
+<p>The main control is to advance the time,
+and with just two 0-based counts we have the
+very simple remainder formulas.</p>
+<p>So the suggestion is to keep the <em>internal</em> data the same way as before.
+Just in the method to create the desire 12-hour view have the logic to do the
+<em>conversion</em> of the internal 24-hour model data.</p>
+<p>You could leave in the method to provide the time in the
+24 hour format, giving the <code class="docutils literal"><span class="pre">Clock</span></code> class user the option to use either view
+of the shared model data.
+To be symmetrical in the naming,
+you might change the original name <code class="docutils literal"><span class="pre">GetTimeString</span></code> to
+<code class="docutils literal"><span class="pre">GetTimeString24</span></code>.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 30-June-2015 01:44:49.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

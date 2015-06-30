@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2.4. Variables and Assignment &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="index.html" />
+    <link rel="up" title="2. C# Data and Operations" href="data.html" />
+    <link rel="next" title="2.5. Syntax Template Typography" href="typography.html" />
+    <link rel="prev" title="2.3. Arithmetic" href="arithmetic.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">1.3. Downloading Text, Source Code, and Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">2.4. Variables and Assignment</a><ul>
+<li><a class="reference internal" href="#literals-and-identifiers">2.4.1. Literals and Identifiers</a><ul>
+<li><a class="reference internal" href="#assignment-exercise">2.4.1.1. Assignment Exercise</a></li>
+<li><a class="reference internal" href="#another-assignment-exercise">2.4.1.2. Another Assignment Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="arithmetic.html" title="Previous Chapter: 2.3. Arithmetic">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="typography.html" title="Next Chapter: 2.5. Syntax Template Typography">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/variables.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="variables-and-assignment">
+<span id="index-0"></span><span id="id1"></span><h1>2.4. Variables and Assignment<a class="headerlink" href="#variables-and-assignment" title="Permalink to this headline">¶</a></h1>
+<p>Each piece of data in a C# program has a <em>type</em>.  Several types have been introduced:
+<code class="docutils literal"><span class="pre">int</span></code> for integers, <code class="docutils literal"><span class="pre">double</span></code> for numbers allowing a fractional part,
+approximating more general real numbers.
+There are many other numeric types and also non-numeric types, but we can use <code class="docutils literal"><span class="pre">int</span></code>
+and <code class="docutils literal"><span class="pre">double</span></code> for examples now.  Data gets stored in computer memory.  Specific
+locations in memory are associated with the type of data stored there
+and with a name to refer to it.</p>
+<p>A program allocates a named storage spot for a particular type of data with a
+<em>declaration statement</em>, like:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Each declaration must specify a type for the data to be stored and give a name to
+refer to it.  These names associated with a data storage location are called
+<em>variables</em>.</p>
+<p>The declaration statement above sets aside a location to store an <code class="docutils literal"><span class="pre">int</span></code>, and names
+the location <code class="docutils literal"><span class="pre">width</span></code>.  Several variables of the same type can be
+listed together, like:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>identifying three storage locations for variables of type <code class="docutils literal"><span class="pre">double</span></code>.</p>
+<p>To be useful, data needs to be stored in these locations.  This is done with
+an <em>assignment statement</em>.
+For example:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>A simple schematic diagram with a name for a location in memory (the box):</p>
+<a class="reference internal image-reference" href="_images/variableDeclaration.png"><img alt="_images/variableDeclaration.png" src="_images/variableDeclaration.png" style="width: 72pt;" /></a>
+<p>Although we are used to reading left to right, an assignment statement works
+<em>right to left</em>.  The value on the right side of the equal sign is calculated
+and then placed in the memory location associated with the variable on the left
+side of the equal sign, either giving an initial value or
+<em>overwriting</em> any previous value stored there.</p>
+<a class="reference internal image-reference" href="_images/variableAssignment.png"><img alt="_images/variableAssignment.png" src="_images/variableAssignment.png" style="width: 72pt;" /></a>
+<p id="index-1">Variables can also be initialized as they are declared:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">x</span> <span class="p">=</span> <span class="m">12.5</span><span class="p">,</span> <span class="n">y</span> <span class="p">=</span> <span class="m">27</span><span class="p">,</span> <span class="n">z</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>or initializations and plain declarations can be mixed:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
+<span class="n">height</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Stylistically the example above is inconsistent, but it illustrates what is
+possible.  Technically an initialization is not an assignment.  We will see
+some syntax that is legal in initializers, but not in assignment statements.</p>
+<p>We could continue with a further assignment statement:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">area</span> <span class="p">=</span> <span class="n">width</span> <span class="p">*</span> <span class="n">height</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Look at this in detail.  The assignment statement starts by evaluating the
+expression on the right-hand side: <code class="docutils literal"><span class="pre">width</span> <span class="pre">*</span> <span class="pre">height</span></code>.  When variables are
+used in an expression, their current values are substituted,
+like in evaluating an expression in math, so the value is the same as</p>
+<div class="highlight-none"><div class="highlight"><pre>5 * 7
+</pre></div>
+</div>
+<p>which finally evaluates to 35.  In the last step of the assignment statement,
+the value 35 is then assigned to the variable on the left, <code class="docutils literal"><span class="pre">area</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You want <em>one</em> spot in memory prepared for <em>each</em> variable.  This happens
+with declaration, not assignment:  Assignment just changes the value
+at the current location.  Do not <em>declare</em> the same variable more than once.
+You will get an error.  More on the fine points around that in <a class="reference internal" href="localscope.html#local-scope"><span>Local Scope</span></a>.</p>
+</div>
+<p id="more-csharp"><span id="index-2"></span>We continue introducing <a class="reference internal" href="arithmetic.html#csharp"><span>Csharp</span></a>:
+Remember that in csharp you can just give an expression,
+and csharp responds with a value.  That syntax and reaction is special to
+csharp.   In csharp you can also test regular C# statements,
+like declarations and assignments.  The most recent versions of csharp
+do not require you to end a statement with a semicolon, though we tend to
+put semicolons after statements in our illustrations (and no semicolon for just
+an expression).
+As in a regular program, statements
+do not give an immediate visible response in csharp.  Still in
+csharp you can display a variable value easily:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int width = 5, height, area;
+csharp&gt; height = 7;
+csharp&gt; area = width * height;
+csharp&gt; area
+35
+</pre></div>
+</div>
+<p>In the last line, <code class="docutils literal"><span class="pre">area</span></code> is an expression, and csharp will give back its value,
+which is just the current value of the variable.</p>
+<p id="index-3">At this point you should be able to make sense of some more features of csharp.
+You can start with the csharp special help command:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; help
+&quot;Static methods:
+  Describe (object)       - Describes the object&#39;s type
+  LoadPackage (package);  - Loads the given Package (like -pkg:FILE)
+  LoadAssembly (assembly) - Loads the given assembly (like -r:ASSEMBLY)
+  ShowVars ();            - Shows defined local variables.
+  ShowUsing ();           - Show active using declarations.
+  Prompt                  - The prompt used by the C# shell
+  ContinuationPrompt      - The prompt for partial input
+  Time(() -&gt; { })         - Times the specified code
+  print (obj)             - Shorthand for Console.WriteLine
+  quit;                   - You&#39;ll never believe it - this quits the repl!
+  help;                   - This help text
+  TabAtStartCompletes - Whether tab will complete even on empty lines
+</pre></div>
+</div>
+<p>A lot of this is still beyond us but these parts are useful:</p>
+<div class="highlight-none"><div class="highlight"><pre>ShowVars ();            - Shows defined local variables.
+quit;                   - You&#39;ll never believe it - this quits the repl!
+help;                   - This help text
+</pre></div>
+</div>
+<p>We can continue the csharp session above and illustrate ShowVars():</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; ShowVars();
+int width = 5
+int height = 7
+int area = 35
+</pre></div>
+</div>
+<p>displaying all the variables currently known to csharp, plus their current values.</p>
+<p>We refer to &#8220;current values&#8221;.  An important distinction between variables in math
+and variables in C# is that C# values can <em>change</em>.  Follow this csharp sequence:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int n = 3;
+csharp&gt; n
+3
+csharp&gt; n = 7;
+csharp&gt; n
+7
+</pre></div>
+</div>
+<p>showing we can change the value of a variable.  The most <em>recent</em> assignment is remembered
+(until the next assignment....)  We can imagine a schematic diagram:</p>
+<a class="reference internal image-reference" href="_images/variableChange.png"><img alt="_images/variableChange.png" src="_images/variableChange.png" style="width: 43.5pt;" /></a>
+<p>We can carry this csharp session one step further,
+illustrating a difference between C# and math:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; n = n + 1;
+csharp&gt; n
+8
+</pre></div>
+</div>
+<p>Clearly <code class="docutils literal"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">+</span> <span class="pre">1</span></code> is not a true mathematical equation:  It <em>is</em> a C# assignment,
+executing with a
+specific sequence of steps.</p>
+<ol class="arabic simple">
+<li>First the right hand side expression
+is evaluated, <code class="docutils literal"><span class="pre">n</span> <span class="pre">+</span> <span class="pre">1</span></code>.</li>
+<li>This involves looking up the current value of <code class="docutils literal"><span class="pre">n</span></code>,
+which we set to 7, so the expression is the same as <code class="docutils literal"><span class="pre">7</span> <span class="pre">+</span> <span class="pre">1</span></code> which is 8.</li>
+<li><em>After</em> this evaluation, an assignment is made to the left hand variable,
+which happens to be <code class="docutils literal"><span class="pre">n</span></code> again.</li>
+<li>Then the <em>new</em> value of <code class="docutils literal"><span class="pre">n</span></code> is 8, replacing the old 7.</li>
+</ol>
+<p>There are many occasions in which such an operation will be useful.</p>
+<p>Assignment syntax does have two strikes against it:</p>
+<ol class="arabic simple">
+<li>It appropriates math&#8217;s equal sign to mean something quite different.</li>
+<li>The right to left operation is counter to the English reading direction.</li>
+</ol>
+<p>Still this usage is common to many programming languages.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Remember in an assignment that the sides of the equal sign have totally
+different meanings.  You assign to a variable on the left side <em>after</em>
+evaluating the expression on the right.</p>
+</div>
+<p>We can illustrate a likely mistake in csharp:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 3 = n;
+{interactive}(1,2): error CS0131: The left-hand side of an assignment
+must be a variable, a property or an indexer
+</pre></div>
+</div>
+<p>Students commonly try to assign left to right.  At least in this case you get
+an error message so you see a mistake.  If you mean to assign the value of
+x to y, and write:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">x</span> <span class="p">=</span> <span class="n">y</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>you get the opposite effect, changing x rather than y, with <em>no</em> error statement.
+Be careful!</p>
+<p>There is some weirdness in csharp because it adds special syntax for expressions
+which does not appear in regular programs, but it also wants to allow syntax
+of regular programs.  Some conflict can occur when trying to display
+an expression, sometimes leading to csharp giving
+a strange error for apparently no reason.  In that case,
+try putting <em>parentheses</em> around the expression, which is always legal for an
+expression, but would never start a regular statement:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int width = 3;
+csharp&gt; int height = 5;
+csharp&gt; width * height
+{interactive}(1,2): error CS0246: The type or namespace name &#39;width&#39; could
+not be found. Are you missing a using directive or an assembly reference?
+csharp&gt; (width * height)
+15
+</pre></div>
+</div>
+<div class="section" id="literals-and-identifiers">
+<span id="index-4"></span><span id="id2"></span><h2>2.4.1. Literals and Identifiers<a class="headerlink" href="#literals-and-identifiers" title="Permalink to this headline">¶</a></h2>
+<p>Expressions like <code class="docutils literal"><span class="pre">27</span></code> or <code class="docutils literal"><span class="pre">32.5</span></code> or <code class="docutils literal"><span class="pre">&quot;hello&quot;</span></code> are called <em>literals</em>,
+coming from the fact that they <em>literally</em> mean exactly what they
+say. They are distinguished from variables, whose value the compiler <em>cannot</em> infer
+directly from the name alone.</p>
+<p>The sequence of characters used to form a variable name (and names
+for other C# entities later) is called an <em>identifier</em>. It
+identifies a C# variable or other entity.</p>
+<p id="index-5">There are some restrictions on the character sequence that make up
+an identifier:</p>
+<ul class="simple">
+<li>The characters must all be letters, digits, or underscores <code class="docutils literal"><span class="pre">_</span></code>,
+and must start with a letter. In particular, punctuation and blanks
+are not allowed.</li>
+<li>There are some words that are <em>keywords</em> for special use in
+C#. You may not use these words as your own identifiers. They
+are easy to recognize in editors like in Xamarin Studio,
+that know about C# syntax:  They are colored differently.</li>
+</ul>
+<p>We will only discuss a small fraction of the keywords in this course, but the curious
+may look at the
+<a class="reference external" href="http://msdn.microsoft.com/en-us/library/x53a06bb.aspx">full list</a>.</p>
+<p id="index-6">C# is case sensitive: The identifiers <code class="docutils literal"><span class="pre">last</span></code>, <code class="docutils literal"><span class="pre">LAST</span></code>, and
+<code class="docutils literal"><span class="pre">LaSt</span></code> are all different. Be sure to be consistent. The compiler
+can usually catch these errors, since it is the version used in the <em>one</em>
+declaration that matters.</p>
+<p id="index-7">What is legal is distinct from what is conventional or good
+practice or recommended. Meaningful names for variables are
+important for the humans who are looking at programs, understanding
+them, and revising them. That sometimes means you would like to use
+a name that is more than one word long, like <code class="docutils literal"><span class="pre">price</span> <span class="pre">at</span> <span class="pre">opening</span></code>,
+but blanks are illegal! One poor option is just leaving out the
+blanks, like <code class="docutils literal"><span class="pre">priceatopening</span></code>. Then it may be hard to figure out
+where words split. Two practical options are</p>
+<ul class="simple">
+<li>underscore separated: putting underscores (which are legal) in
+place of the blanks, like <code class="docutils literal"><span class="pre">price_at_opening</span></code>.</li>
+<li>using <em>camel-case</em>: omitting spaces and using all lowercase,
+except capitalizing all words after the first, like
+<code class="docutils literal"><span class="pre">priceAtOpening</span></code></li>
+</ul>
+<p>Use the choice that fits your taste (or the taste or convention of
+the people you are working with).  We will tend to use
+camel-case for variable inside programs, while we use underscores in
+program file names (since different operating systems deal with case
+differently).</p>
+<div class="section" id="assignment-exercise">
+<h3>2.4.1.1. Assignment Exercise<a class="headerlink" href="#assignment-exercise" title="Permalink to this headline">¶</a></h3>
+<p><em>Think</em> what the result would be in csharp:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+<span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">*</span> <span class="m">3</span><span class="p">;</span>
+<span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">*</span> <span class="m">5</span><span class="p">;</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+<p>Write your prediction.  Then test.  Can you explain it if you got it wrong?</p>
+</div>
+<div class="section" id="another-assignment-exercise">
+<h3>2.4.1.2. Another Assignment Exercise<a class="headerlink" href="#another-assignment-exercise" title="Permalink to this headline">¶</a></h3>
+<p>If you had trouble with the last, one try this one, too:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<span class="n">a</span> <span class="p">=</span> <span class="n">a</span><span class="p">/</span><span class="m">2</span><span class="p">;</span>
+<span class="n">a</span> <span class="p">=</span> <span class="n">a</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+<span class="n">a</span> <span class="p">=</span> <span class="n">a</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 30-June-2015 01:44:49.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
