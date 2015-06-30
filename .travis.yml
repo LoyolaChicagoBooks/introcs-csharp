@@ -1,0 +1,22 @@
+sudo: false
+language: python
+python:
+- '3.4'
+addons:
+  apt:
+    packages:
+    - texlive-latex-base
+    - texlive-latex-recommended
+    - texlive-latex-extra
+    - texlive-fonts-recommended
+    - texinfo
+    - mercurial
+install:
+- pip install sphinx
+- pip install sphinx_bootstrap_theme
+script:
+- ./pull-examples.sh
+- GH_USER=LoyolaChicagoBooks GH_REPO=introcs-csharp "./gh-pages.sh"
+env:
+  global:
+    secure: dkFfyV6WWweME127p6PU44QTggJSBkHAVwcEM15BbEkKtRMbFVrI4ndJsvbxEapZ9jklmUTtAlXsaa3P/h9wV92EgKV6fiD3PmNtAATsashgGcuts25ih8a5qM0lkX8HnGyUrAvud94w2A/3bGZZIpRCku0CPEY6beIkhqE6+hM=
