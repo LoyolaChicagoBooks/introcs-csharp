@@ -10,9 +10,9 @@ git reset HEAD
 rm -rf build
 ./build.sh
 mkdir -p download
-cp -f build/html/* ./
-cp -f build/latex/*.pdf ./download/
-cp -f build/epub/*.epub ./download/
+mv -vf build/html/* ./
+mv -vf build/latex/*.pdf ./download/
+mv -vf build/epub/*.epub ./download/
 touch .nojekyll
 git add -A
 git status
