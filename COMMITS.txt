@@ -1,3 +1,11 @@
+commit c25b4a0cefdfd080fc19b6c34bb26f15f5db09e7
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 4 14:38:30 2015 -0500
+
+    make git add even more silent (no -q so go to /dev/null)
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 0169b841b04155f66093a6b7f8f25bc94eb0fe13
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 14:33:47 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 14:01:13 2015 -0500
 
     update to books.cs.luc.edu/GitHub Pages
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 9c75a324a90f0e3912fab78a2ebb4e23d132ca05
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 11:00:14 2015 -0500
-
-    add zip to download
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
