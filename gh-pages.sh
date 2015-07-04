@@ -6,7 +6,7 @@ git remote add deploy "https://$GH_TOKEN@github.com/$GH_USER/$GH_REPO.git"
 git fetch deploy
 git reset -q deploy/gh-pages
 git checkout master source Makefile build.sh
-git reset HEAD
+git reset -q HEAD
 rm -rf build
 ./build.sh
 ./htmlzip.sh
@@ -18,6 +18,5 @@ mv -f build/dist/*.zip ./download/
 touch .nojekyll
 git log master -5 > COMMITS.txt
 git add -A
-git status
 git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push deploy HEAD:gh-pages
 

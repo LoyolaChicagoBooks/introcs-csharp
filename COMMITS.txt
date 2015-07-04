@@ -1,3 +1,11 @@
+commit 0169b841b04155f66093a6b7f8f25bc94eb0fe13
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 4 14:33:47 2015 -0500
+
+    ...and even quieter
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit e9f54ddf36ef7ed0152e591d1b18ac984dc5a65c
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 14:30:49 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 11:00:14 2015 -0500
 
     add zip to download
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit ad7c7e01a4f330f836763a0851499f99f5849e40
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 10:37:28 2015 -0500
-
-    replace access
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
