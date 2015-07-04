@@ -9,10 +9,12 @@ git checkout master source Makefile build.sh
 git reset HEAD
 rm -rf build
 ./build.sh
+./htmlzip.sh
 mkdir -p download
 mv -vf build/html/* ./
 mv -vf build/latex/*.pdf ./download/
 mv -vf build/epub/*.epub ./download/
+mv -vf build/dist/*.zip ./download/
 touch .nojekyll
 git log -5 > COMMITS.txt
 git add -A
