@@ -2,5 +2,5 @@
 
 pushd build
 mkdir -p dist
-zip -r dist/html.zip html/
+zip -qr dist/html.zip html/
 popd
