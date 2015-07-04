@@ -8,3 +8,8 @@ make CONFIG=bootstrap html
 make CONFIG=bootstrap epub
 make CONFIG=bootstrap LATEXOPTS=' -interaction=batchmode ' latexpdf
 popd
+mv -f build/latex build/letterpdf
+pushd rst
+make CONFIG=createspace LATEXOPTS=' -interaction=batchmode ' latexpdf
+popd
+mv -f build/latex build/bookpdf
