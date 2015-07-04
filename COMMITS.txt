@@ -1,44 +1,39 @@
-commit 6b5e8feb127547f52291c980c6fe42fab7800c83
+commit 1752be3673c619926d0447bdcebd48dcc5c8fc53
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 16:02:27 2015 +0000
+Date:   Sat Jul 4 14:10:11 2015 -0500
 
-    Generated gh-pages for commit 9c75a32
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    git log should report master not gh-pages
     
-        add zip to download
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
 
-commit 7e7e652f438389971af9ddf06819c5f454307f0c
+commit c396c4207e936cd84c10599f26f7dc9c13931b72
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 15:39:12 2015 +0000
+Date:   Sat Jul 4 14:01:13 2015 -0500
 
-    Generated gh-pages for commit ad7c7e0
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    update to books.cs.luc.edu/GitHub Pages
     
-        replace access
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
 
-commit 128660d66e6328bc50238956c803dd303bde73e2
+commit 9c75a324a90f0e3912fab78a2ebb4e23d132ca05
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jun 30 02:17:52 2015 +0000
+Date:   Sat Jul 4 11:00:14 2015 -0500
 
-    Generated gh-pages for commit 22dcb89
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    add zip to download
     
-        just show last 5 commits
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
 
-commit 6c4b0890cf2c9e30d5c825633bb72d81fb840ae5
+commit ad7c7e01a4f330f836763a0851499f99f5849e40
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jun 30 02:13:39 2015 +0000
+Date:   Sat Jul 4 10:37:28 2015 -0500
 
-    Generated gh-pages for commit 39bedea
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    replace access
     
-        add log
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
 
-commit 2bbdd6de12ec12eaac40bb2b5c9dac0eb5613a8e
+commit 22dcb8927107d835086d7545eafec44c7176e357
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jun 30 02:08:57 2015 +0000
+Date:   Mon Jun 29 21:15:32 2015 -0500
 
-    Generated gh-pages for commit 9830966
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    just show last 5 commits
     
-        revert to mv from cp; turned out to be a .gitignore problem
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
