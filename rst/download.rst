@@ -30,6 +30,7 @@ Alternate Reading Formats
 
     "Web Pages", "http://books.cs.luc.edu/introcs-csharp/"
     "Web Pages (offline ZIP)", "http://books.cs.luc.edu/introcs-csharp/download/html.zip"
-    "PDF", "http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf"
+    "PDF (US Letter)", "http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf"
+    "PDF (7x9 Book)", "http://books.cs.luc.edu/introcs-csharp/download/comp170book.pdf"
     "ePub (Experimental)", "http://books.cs.luc.edu/introcs-csharp/download/comp170.epub"
 
