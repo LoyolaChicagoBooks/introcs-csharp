@@ -19,4 +19,4 @@ script:
 - GH_USER=LoyolaChicagoBooks GH_REPO=introcs-csharp "./gh-pages.sh"
 env:
   global:
-    secure: gsP8Qz/BVIPULPvDlb6wuMAnQzujILBcw6BBVQhh7mSu/Rqkw3Y2fsnYJld9gKcpx2v54rousDq/+UH2Rljz2irLUEr1bPCt20yEiWZQSzX2rkWVXIelyeOhMc3TJG7m06LO8BpY1L3QziTUCLcaEDMCrKocKJ/GooSOvtnbrNY=
+    secure: Gi/sb53XMBl0lkZNLbTfXMX1v3xlsPmMVgadDO7cIrp4MjFYsDy/Ym+0pxxkgnLhdCRz6VSvMAVchsIHMOEDAz3n4nVtJxFAkzhoXEjJELpzA0bsV/Lkohqw0gA4QPpl4aUH8mSYZYpeITRCKNfWVaaVG2qQHrC1HFroaXniGP0=
