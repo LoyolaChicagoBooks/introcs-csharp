@@ -1,3 +1,12 @@
+commit 6b5e8feb127547f52291c980c6fe42fab7800c83
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 4 16:02:27 2015 +0000
+
+    Generated gh-pages for commit 9c75a32
+    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    
+        add zip to download
+
 commit 7e7e652f438389971af9ddf06819c5f454307f0c
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 15:39:12 2015 +0000
@@ -33,12 +42,3 @@ Date:   Tue Jun 30 02:08:57 2015 +0000
     Author: George K. Thiruvathukal <gkt@cs.luc.edu>
     
         revert to mv from cp; turned out to be a .gitignore problem
-
-commit ab7d3b518d78128ef9f54256199e41c9c69b2775
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jun 30 02:03:16 2015 +0000
-
-    Generated gh-pages for commit d4a6e99
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-    
-        remove index.html from .gitignore
