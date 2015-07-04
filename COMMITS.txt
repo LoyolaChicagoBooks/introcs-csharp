@@ -1,3 +1,12 @@
+commit 128660d66e6328bc50238956c803dd303bde73e2
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Tue Jun 30 02:17:52 2015 +0000
+
+    Generated gh-pages for commit 22dcb89
+    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    
+        just show last 5 commits
+
 commit 6c4b0890cf2c9e30d5c825633bb72d81fb840ae5
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jun 30 02:13:39 2015 +0000
@@ -33,12 +42,3 @@ Date:   Tue Jun 30 01:57:38 2015 +0000
     Author: George K. Thiruvathukal <gkt@cs.luc.edu>
     
         trying cp instead of mv
-
-commit ccf4c10d8e7e3de33f377376c1324c5913b1658b
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jun 30 01:45:25 2015 +0000
-
-    Generated gh-pages for commit 0a7ea17
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-    
-        fix build.sh
