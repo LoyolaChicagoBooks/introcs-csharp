@@ -21,28 +21,15 @@ Example Source Code and Videos
     "C# Examples (as ZIP)", "https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/archive/master.zip"
     "Videos", "https://luc.box.com/CSharpVideos"
 
-Primary Book Site (cs.luc.edu)
+Alternate Reading Formats
 ---------------------------------
 
 .. csv-table:: Available Book Formats (Primary Site)
     :header: "Format", "URL"
     :widths: 15, 30
 
-    "Web Pages", "http://introcs.cs.luc.edu/html/"
-    "Web Pages (offline ZIP)", "http://introcs.cs.luc.edu/dist/html.zip"
-    "PDF", "http://introcs.cs.luc.edu/latex/comp170.pdf"
-    "ePub (Experimental)", "http://introcs.cs.luc.edu/epub/comp170.epub"
-
-Mirror Book Site (courseclouds.com)
-------------------------------------
-
-.. csv-table:: Available Book Formats (Mirror Site)
-    :header: "Format", "URL"
-    :widths: 15, 30
-
-    "Web Pages", "http://introcs.cs.courseclouds.com/html/"
-    "Web Pages (offline ZIP)", "http://introcs.cs.courseclouds.com/dist/html.zip"
-    "PDF", "http://introcs.cs.courseclouds.com/latex/comp170.pdf"
-    "ePub (Experimental)", "http://introcs.cs.courseclouds.com/epub/comp170.epub"
-
+    "Web Pages", "http://books.cs.luc.edu/introcs-csharp/"
+    "Web Pages (offline ZIP)", "http://books.cs.luc.edu/introcs-csharp/download/html.zip"
+    "PDF", "http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf"
+    "ePub (Experimental)", "http://books.cs.luc.edu/introcs-csharp/download/comp170.epub"
 
