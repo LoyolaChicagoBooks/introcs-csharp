@@ -1,3 +1,11 @@
+commit 4f032692549a843d83afce5218b53f0be9d81c2f
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 4 14:41:45 2015 -0500
+
+    make zip more quiet, too
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit c25b4a0cefdfd080fc19b6c34bb26f15f5db09e7
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 14:38:30 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 14:10:11 2015 -0500
 
     git log should report master not gh-pages
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit c396c4207e936cd84c10599f26f7dc9c13931b72
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 14:01:13 2015 -0500
-
-    update to books.cs.luc.edu/GitHub Pages
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
