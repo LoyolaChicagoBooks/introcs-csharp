@@ -1,3 +1,12 @@
+commit 7e7e652f438389971af9ddf06819c5f454307f0c
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 4 15:39:12 2015 +0000
+
+    Generated gh-pages for commit ad7c7e0
+    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+    
+        replace access
+
 commit 128660d66e6328bc50238956c803dd303bde73e2
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jun 30 02:17:52 2015 +0000
@@ -33,12 +42,3 @@ Date:   Tue Jun 30 02:03:16 2015 +0000
     Author: George K. Thiruvathukal <gkt@cs.luc.edu>
     
         remove index.html from .gitignore
-
-commit d39d52677fbdb8b0a6ed5c254b16e6c0ed0dd0a0
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jun 30 01:57:38 2015 +0000
-
-    Generated gh-pages for commit 1dfb536
-    Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-    
-        trying cp instead of mv
