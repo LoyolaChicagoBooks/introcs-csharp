@@ -1,3 +1,18 @@
+commit ace40ea237746b5a15f807af0ea744eb9197fa41
+Merge: 9ac6666 b4c428c
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 5 12:34:28 2015 -0500
+
+    Merge branch 'master' of github.com:LoyolaChicagoBooks/introcs-csharp
+
+commit 9ac6666fe68926cb7e90e6173b1a68d696758ac7
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 5 12:33:25 2015 -0500
+
+    add astyle support
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit b4c428c059c3ff50a891942cf89d2c15173b448f
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 23:06:51 2015 -0500
@@ -19,21 +34,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 22:44:21 2015 -0500
 
     use standard margins for 7x9 book
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 5e728388f84b39e0c12542e5ca84effb48209467
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 22:16:43 2015 -0500
-
-    minor improvements in presentation of index.rst
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit e3702002a84b028f734a06d5303c094d717f9dbc
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 20:52:05 2015 -0500
-
-    add logo and authors
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

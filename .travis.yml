@@ -11,6 +11,7 @@ addons:
     - texlive-fonts-recommended
     - texinfo
     - mercurial
+    - astyle
 install:
 - pip install sphinx
 - pip install sphinx_bootstrap_theme
