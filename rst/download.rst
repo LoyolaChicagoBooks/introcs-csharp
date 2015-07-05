@@ -2,34 +2,44 @@
 
 .. _alt-formats:
     
-Downloading Text, Source Code, and Videos
-==========================================
+Downloading and Reading Options
+==================================
 
-Here are tables that summarize the links already described more fully in the 
-last section, plus several further versions.  The book has a primary site and a mirror,
-in case the first is down.
-The examples and videos are not mirrored.
+Most readers will want to download the C# examples in ZIP format. More experienced readers (with 
+previous background) may prefer using GitHub. ()
 
-Example Source Code and Videos
----------------------------------
-
-.. csv-table:: Source Code and Videos
-    :header: "Format", "URL"
+.. csv-table:: Example Source Code and Videos
+    :header: "Description", "URL"
     :widths: 15, 30
 
-    "C# Examples (as pages)", "https://github.com/LoyolaChicagoBooks/introcs-csharp-examples"
     "C# Examples (as ZIP)", "https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/archive/master.zip"
     "Videos", "https://luc.box.com/CSharpVideos"
 
-Alternate Reading Formats
----------------------------------
 
-.. csv-table:: Available Book Formats (Primary Site)
+We offer the book in HTML, PDF, and EPUB formats. Kindle users should use EPUB, which can be converted
+to MOBI format. (We plan to offer it soon through our main site.)
+
+.. csv-table:: Alternate Book Formats
     :header: "Format", "URL"
     :widths: 15, 30
 
-    "Web Pages", "http://books.cs.luc.edu/introcs-csharp/"
-    "Web Pages (offline ZIP)", "http://books.cs.luc.edu/introcs-csharp/download/html.zip"
-    "PDF", "http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf"
-    "ePub (Experimental)", "http://books.cs.luc.edu/introcs-csharp/download/comp170.epub"
+    "Web Site", "http://books.cs.luc.edu/introcs-csharp/"
+    "Web Site (offline ZIP)", "http://books.cs.luc.edu/introcs-csharp/download/html.zip"
+    "PDF (US Letter)", "http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf"
+    "PDF (7x9 Book)", "http://books.cs.luc.edu/introcs-csharp/download/comp170book.pdf"
+    "EPUB (Experimental)", "http://books.cs.luc.edu/introcs-csharp/download/comp170.epub"
+
+.. warning:: 
+
+   The following is for developers only!
+
+The book source code and examples are all maintained on GitHub. We welcome pull requests and
+will acknowledge any helpful and constructive contributions.
+
+.. csv-table:: GitHub
+    :header: "Description", "URL"
+    :widths: 15, 30
+
+    "C# Examples", "https://github.com/LoyolaChicagoBooks/introcs-csharp-examples"
+    "Book Source", "https://github.com/LoyolaChicagoBooks/introcs-csharp"
 

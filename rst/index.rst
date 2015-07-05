@@ -1,12 +1,17 @@
-.. Introductory Programming in C# documentation master file, created by
-   sphinx-quickstart on Tue Dec  6 14:14:02 2011.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Introduction to Computer Science
+=================================
 
+*a first programming course featuring C# and Mono*
 
+| **Andrew N. Harrington**
+| **George K. Thiruvathukal**
+| Loyola University Chicago
+| Department of Computer Science
+| Chicago, Illinois, USA
 
-Introduction to Computer Science in C#
-=======================================
+Available in `PDF <http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf>`_ or `EPUB <http://books.cs.luc.edu/introcs-csharp/download/comp170.epub>`_.
+
+**Table of Contents**
 
 .. toctree::
    :maxdepth: 2
