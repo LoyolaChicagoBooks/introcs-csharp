@@ -4,9 +4,17 @@
    contain the root `toctree` directive.
 
 
+.. image:: figures/monologo.png
 
-Introduction to Computer Science in C#
-=======================================
+Introduction to Computer Science in C# and Mono
+=================================================
+
+| **Andrew N. Harrington and George K. Thiruvathukal**
+| Loyola University Chicago
+| Department of Computer Science
+
+Table of Contents
+------------------
 
 .. toctree::
    :maxdepth: 2
