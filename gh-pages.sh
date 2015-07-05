@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Note: This script is NOT intended to be run in your checkout directory. It is only run on the Travis CI
+# system (ephemeral instances) to push to the gh-pages branch. Use build.sh instead.
 
 git config --global user.email "gkt@cs.luc.edu"
 git config --global user.name "George K. Thiruvathukal"
