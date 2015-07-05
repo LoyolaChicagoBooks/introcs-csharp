@@ -1,3 +1,11 @@
+commit 9b5d494ee1421fed8706db3109c077961e36f9fc
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 4 22:44:21 2015 -0500
+
+    use standard margins for 7x9 book
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 5e728388f84b39e0c12542e5ca84effb48209467
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 22:16:43 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 18:18:33 2015 -0500
 
     changes for Amazon CreateSpace publication
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 4f032692549a843d83afce5218b53f0be9d81c2f
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 14:41:45 2015 -0500
-
-    make zip more quiet, too
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

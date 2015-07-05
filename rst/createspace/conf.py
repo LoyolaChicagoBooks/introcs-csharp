@@ -251,8 +251,9 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
+# NB: geometry accepts inner and outer parameters.
 'preamble': r"""
-    \usepackage[inner=1.25in,papersize={7.5in,9.25in}]{geometry}
+    \usepackage[papersize={7.5in,9.25in}]{geometry}
     \setcounter{secnumdepth}{2}
   """,
 }
