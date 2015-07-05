@@ -1,3 +1,11 @@
+commit 8073c3179c56535212f5118597418c806fac83d7
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 5 14:21:49 2015 -0500
+
+    add dedent support for sample program
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit dde0de25f7a4d85894c65e1b171b809edceabbb6
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 5 14:08:26 2015 -0500
@@ -26,13 +34,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 23:06:51 2015 -0500
 
     add important note to gh-pages.sh
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 530458e87321a1979baf792238c63da975037da4
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 22:55:34 2015 -0500
-
-    make download page a bit more human-friendly
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

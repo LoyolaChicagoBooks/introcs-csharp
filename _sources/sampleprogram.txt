@@ -84,6 +84,8 @@ by the closing brace ``}`` on the last line of the program.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 5-6
+   :dedent: 3
+
 
 A class is broken up with chunks called *functions* or *methods*.  Each has
 a *heading*.  C# allows the currently popular programming paradigm called 
@@ -116,6 +118,7 @@ brace on the second to last line of the program.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 7
+   :dedent: 6
    
 A program works with data of many different possible types.  One type
 is ``double``.  A ``double`` can hold an approximate numerical value, 
@@ -132,6 +135,8 @@ Most statements in C#, like this one, end with ``;`` - a semicolon.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 8
+   :dedent: 6
+
 
 This is another declaration.  This time the type of the variables is
 ``string``, which means a sequence of characters, like a line you
@@ -139,6 +144,8 @@ might type at the keyboard.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 9
+   :dedent: 6
+
 
 Here is another declaration for a ``double``, looking slightly different.
 In this case we follow a convention, using all capital letters, to
@@ -149,6 +156,8 @@ strictly necessary, but it makes the program's intention easier to follow.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 11
+   :dedent: 6
+
 
 ``Console`` refers to the terminal or console window where text output 
 appears for the program.  One of the things you can do with the Console
@@ -166,6 +175,7 @@ displayed for this program.  The program did **write** this **line**.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 12
+   :dedent: 6
 
 This statement is similar to the last one, except that it uses ``Write``
 rather than ``WriteLine``.  The ``WriteLine`` function wrote a whole line -
@@ -179,6 +189,8 @@ requested (a room length).
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 13
+   :dedent: 6
+
 
 Here is where the program takes in the information requested from the user.
 Its action is actually right to left:  ``Console.ReadLine`` is another
@@ -206,6 +218,8 @@ as a *string* type.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 14
+   :dedent: 6
+
 
 Of course we want to interpret the user's input as a number in order to do
 our arithmetic.  This line makes the conversion between the types.
@@ -221,6 +235,8 @@ the sample run that assigns to ``length`` the value 20.5.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 15-17
+   :dedent: 6
+
 
 These lines are analogous to the previous three lines:  
 give a prompt for the user;
@@ -236,6 +252,8 @@ the brief calculations of results:
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 19-20
+   :dedent: 6
+
 
 At the end of the first line is a *comment*.  It starts with ``//`` and ends
 at the end of the same line.  It is ignored by the compiler.  It is there for humans,
@@ -262,6 +280,8 @@ With the sample run, ``ceilingArea`` would get the value 20.5 * 10, or 205.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 22-23
+   :dedent: 6
+
 
 This is a single statement.  Line endings act just like a space in C#.
 The statement ends with the semicolon on the second line.
@@ -289,6 +309,8 @@ two literal string, given in quotes.
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 24-25
+   :dedent: 6
+
  
 This statement behave like the previous one, except with different
 quoted strings and the value of a different variable.  See the sample output.
