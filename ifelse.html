@@ -413,9 +413,9 @@ declared before the compound statements that are parts of the
 <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statement.   A local variable in a function declared before a nested compound
 statement is still visible (in scope) <em>inside</em>  that compound statement.
 The following would work:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> 
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
       <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>  
+         <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
          <span class="p">}</span>
@@ -441,10 +441,10 @@ The two <code class="docutils literal"><span class="pre">if</span></code> statem
  9
 10
 11
-12</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope2</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> 
+12</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope2</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="c1">// without the = 0: Unassigned local variable error</span>
-         <span class="kt">int</span> <span class="n">val</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>  
+         <span class="kt">int</span> <span class="n">val</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
          <span class="p">}</span>
@@ -535,7 +535,7 @@ each case?  (Assume we have access to the class UIF.)</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

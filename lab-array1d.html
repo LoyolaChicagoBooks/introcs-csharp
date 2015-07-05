@@ -364,7 +364,7 @@ values. The second will be convenient to set up tests for this lab.</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Print label and then each element preceeded by a space,</span>
       <span class="c1">///  all across one line.  Example:</span>
       <span class="c1">///  If a contains {3, -1, 5} and label is &quot;Nums:&quot;,</span>
-      <span class="c1">///  print:   Nums: 3 -1 5                   </span>
+      <span class="c1">///  print:   Nums: 3 -1 5</span>
       <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintInts</span><span class="p">(</span><span class="kt">string</span> <span class="n">label</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
       <span class="p">{</span>
 
@@ -384,7 +384,7 @@ to advance to the next line.</p>
       <span class="c1">///      1: 5</span>
       <span class="c1">///      2: 7</span>
       <span class="c1">///      3: -1</span>
-      <span class="c1">///  and the function would return an array containing {5, 7, -1}. </span>
+      <span class="c1">///  and the function would return an array containing {5, 7, -1}.</span>
       <span class="c1">///  Note the format of the prompts for individual elements.</span>
       <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">ReadInts</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
       <span class="p">{</span>
@@ -397,7 +397,7 @@ are included at the end of the class.</p>
 </li>
 <li><p class="first">Complete and test the function with documentation and heading:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Return the minimum value in a.</span>
-      <span class="c1">///  Example: If a contains {5, 7, 4, 9}, return 4. </span>
+      <span class="c1">///  Example: If a contains {5, 7, 4, 9}, return 4.</span>
       <span class="c1">///  Assume a contains at least one value.</span>
       <span class="k">static</span> <span class="kt">int</span> <span class="nf">Minimum</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
       <span class="p">{</span>
@@ -408,7 +408,7 @@ are included at the end of the class.</p>
 </li>
 <li><p class="first">Complete and test the function with documentation and heading:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Return the number of even values in a.</span>
-      <span class="c1">///  Example: If a contains {-4, 7, 6, 12, 9}, return 3. </span>
+      <span class="c1">///  Example: If a contains {-4, 7, 6, 12, 9}, return 3.</span>
       <span class="k">static</span> <span class="kt">int</span> <span class="nf">CountEven</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="m">0</span><span class="p">;</span> <span class="c1">// so stub compiles</span>
@@ -420,7 +420,7 @@ are included at the end of the class.</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Add corresponding elements of a and b and place them in sum.</span>
       <span class="c1">///  Assume all arrays have the same Length.</span>
       <span class="c1">///  Example: If a contains {2, 4, 6} and b contains {7, -1, 8}</span>
-      <span class="c1">///  then at the end sum should contain {9, 3, 14}. </span>
+      <span class="c1">///  then at the end sum should contain {9, 3, 14}.</span>
       <span class="k">static</span> <span class="k">void</span> <span class="nf">PairwiseAdd</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">sum</span><span class="p">)</span>
       <span class="p">{</span>
 
@@ -439,7 +439,7 @@ if you do the next one:</p>
       <span class="c1">///  corresponding elements of a and b.</span>
       <span class="c1">///  Assume a and b have the same Length.</span>
       <span class="c1">///  Example: If a contains {2, 4, 6} and b contains {3, -1, 5}</span>
-      <span class="c1">///  then return an array containing {5, 3, 11}. </span>
+      <span class="c1">///  then return an array containing {5, 3, 11}.</span>
       <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">NewPairwiseAdd</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">b</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">0</span><span class="p">];</span> <span class="c1">// so stub compiles</span>
@@ -455,7 +455,7 @@ if you do the next one:</p>
       <span class="c1">///  Return false otherwise.  Assume an array with fewer than</span>
       <span class="c1">///  two elements is ascending.</span>
       <span class="c1">///  Examples: If a contains {2, 5, 5, 8}, return true;</span>
-      <span class="c1">///  if a contains {2, 5, 3, 8}, return false. </span>
+      <span class="c1">///  if a contains {2, 5, 3, 8}, return false.</span>
       <span class="k">static</span> <span class="kt">bool</span> <span class="nf">IsAscending</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="k">false</span><span class="p">;</span> <span class="c1">// so stub compiles</span>
@@ -474,7 +474,7 @@ Complete and test the function with documentation and heading:</p>
       <span class="c1">///  the next number after the previous number</span>
       <span class="c1">///  that is at least as large as the previous one printed.</span>
       <span class="c1">///  Example: If a contains {5, 2, 8, 4, 8, 11, 6, 7, 10},</span>
-      <span class="c1">///  print:  5 8 8 11      </span>
+      <span class="c1">///  print:  5 8 8 11</span>
       <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintAscendingValues</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
       <span class="p">{</span>
 
@@ -488,11 +488,11 @@ Complete and test the function with documentation and heading:</p>
       <span class="c1">///  Example: If a contains {2, 5, 8, 3, 9, 9, 8}, print</span>
       <span class="c1">///  2 5 8</span>
       <span class="c1">///  3 9 9</span>
-      <span class="c1">///  8          </span>
+      <span class="c1">///  8</span>
       <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintRuns</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
       <span class="p">{</span>
 
-      <span class="p">}</span>                                             
+      <span class="p">}</span>
 </pre></div>
 </div>
 </li>
@@ -570,7 +570,7 @@ is returned. Base 2 is central to computer hardware.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

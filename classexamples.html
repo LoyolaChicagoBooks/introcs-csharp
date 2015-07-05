@@ -345,26 +345,26 @@
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;e.n = {0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">GetN</span><span class="p">());</span> <span class="c1">// prints 1</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;e.d = {0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">GetD</span><span class="p">());</span> <span class="c1">// prints 2.5</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 1, d = 2.5</span>
-      
+
       <span class="n">e</span><span class="p">.</span><span class="n">SetN</span><span class="p">(</span><span class="m">25</span><span class="p">);</span>
       <span class="n">e</span><span class="p">.</span><span class="n">SetD</span><span class="p">(</span><span class="m">3.14159</span><span class="p">);</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;e.n = {0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">GetN</span><span class="p">());</span> <span class="c1">// prints 25</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;e.d = {0}&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">GetD</span><span class="p">());</span> <span class="c1">// prints 3.14159</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 25, d = 3.14159</span>
-      
-      <span class="n">Example</span> <span class="n">e2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Example</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">10.5</span><span class="p">);</span> 
+
+      <span class="n">Example</span> <span class="n">e2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Example</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">10.5</span><span class="p">);</span>
       <span class="c1">// this creates the second Example object with reference e2</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e2</span><span class="p">);</span> <span class="c1">// prints Example: n = 3, d = 10.5</span>
-      
+
       <span class="n">e</span> <span class="p">=</span> <span class="n">e2</span><span class="p">;</span> <span class="c1">// now both e and e2 reference the second object</span>
       <span class="c1">// the first Example object is now no longer referenced</span>
       <span class="c1">// and its memory can be reclaimed at runtime if necessary</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 3, d = 10.5</span>
 
       <span class="n">e2</span><span class="p">.</span><span class="n">SetN</span><span class="p">(</span><span class="m">77</span><span class="p">);</span>  <span class="c1">// symbolism uses e2, not e</span>
-      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e2</span><span class="p">);</span> <span class="c1">// prints Example: n = 77, d = 10.5 </span>
-      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 77, d = 10.5 </span>
-      <span class="c1">// but e is the same object - so its fields are changed </span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e2</span><span class="p">);</span> <span class="c1">// prints Example: n = 77, d = 10.5</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="c1">// prints Example: n = 77, d = 10.5</span>
+      <span class="c1">// but e is the same object - so its fields are changed</span>
    <span class="p">}</span>
 <span class="p">}</span> <span class="c1">// end of class ExampleTest</span>
 </pre></div>
@@ -412,13 +412,13 @@ containing</p>
          <span class="k">foreach</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x</span> <span class="k">in</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span><span class="m">5.1</span><span class="p">,</span> <span class="p">-</span><span class="m">7.3</span><span class="p">,</span> <span class="m">11.0</span><span class="p">,</span> <span class="m">3.7</span><span class="p">})</span> <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Next datum &quot;</span> <span class="p">+</span> <span class="n">x</span><span class="p">);</span>
             <span class="n">a</span><span class="p">.</span><span class="n">AddDatum</span> <span class="p">(</span><span class="n">x</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;average {0} with {1} data values&quot;</span><span class="p">,</span> 
-               <span class="n">a</span><span class="p">.</span><span class="n">GetAverage</span><span class="p">(),</span> <span class="n">a</span><span class="p">.</span><span class="n">GetDataCount</span><span class="p">());</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;average {0} with {1} data values&quot;</span><span class="p">,</span>
+                              <span class="n">a</span><span class="p">.</span><span class="n">GetAverage</span><span class="p">(),</span> <span class="n">a</span><span class="p">.</span><span class="n">GetDataCount</span><span class="p">());</span>
          <span class="p">}</span>
          <span class="n">a</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;After clearing:&quot;</span><span class="p">);</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;average {0} with {1} data values&quot;</span><span class="p">,</span> 
-            <span class="n">a</span><span class="p">.</span><span class="n">GetAverage</span><span class="p">(),</span> <span class="n">a</span><span class="p">.</span><span class="n">GetDataCount</span><span class="p">());</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;average {0} with {1} data values&quot;</span><span class="p">,</span>
+                           <span class="n">a</span><span class="p">.</span><span class="n">GetAverage</span><span class="p">(),</span> <span class="n">a</span><span class="p">.</span><span class="n">GetDataCount</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>It should print</p>
@@ -462,14 +462,14 @@ number of values so far.  We can just have instance variables
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
-   <span class="c1">/// a class that is more than a container</span>
+<span class="c1">/// a class that is more than a container</span>
    <span class="k">class</span> <span class="nc">Averager</span>
    <span class="p">{</span>
       <span class="k">private</span> <span class="kt">int</span> <span class="n">dataCount</span><span class="p">;</span>
       <span class="k">private</span> <span class="kt">double</span> <span class="n">sum</span><span class="p">;</span>
 
       <span class="c1">/// new Averager with no data</span>
-      <span class="k">public</span> <span class="nf">Averager</span><span class="p">()</span> 
+      <span class="k">public</span> <span class="nf">Averager</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="n">Clear</span><span class="p">();</span>
       <span class="p">}</span>
@@ -480,14 +480,14 @@ number of values so far.  We can just have instance variables
          <span class="n">dataCount</span><span class="p">++;</span>
       <span class="p">}</span>
 
-      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetDataCount</span><span class="p">()</span> 
+      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetDataCount</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">dataCount</span><span class="p">;</span>
       <span class="p">}</span>
 
       <span class="c1">/// Gets the average of the data</span>
       <span class="c1">///   or NaN if no data.</span>
-      <span class="k">public</span> <span class="kt">double</span> <span class="nf">GetAverage</span><span class="p">()</span> 
+      <span class="k">public</span> <span class="kt">double</span> <span class="nf">GetAverage</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">sum</span><span class="p">/</span><span class="n">dataCount</span><span class="p">;</span>  <span class="c1">// is NaN if dataCount is 0</span>
       <span class="p">}</span>
@@ -500,9 +500,9 @@ number of values so far.  We can just have instance variables
 
       <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span> <span class="p">()</span>
       <span class="p">{</span>
-         <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;items: {0}; average: {1}&quot;</span><span class="p">,</span> 
-            <span class="n">GetDataCount</span><span class="p">(),</span> <span class="n">GetAverage</span><span class="p">());</span>
-      <span class="p">}</span> 
+         <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;items: {0}; average: {1}&quot;</span><span class="p">,</span>
+                              <span class="n">GetDataCount</span><span class="p">(),</span> <span class="n">GetAverage</span><span class="p">());</span>
+      <span class="p">}</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -833,36 +833,35 @@ class:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
-   <span class="c1">/// class used twice in Clock</span>
-   <span class="k">class</span> <span class="nc">RolloverCounter</span> 
+<span class="c1">/// class used twice in Clock</span>
+   <span class="k">class</span> <span class="nc">RolloverCounter</span>
    <span class="p">{</span>
       <span class="k">private</span> <span class="kt">int</span> <span class="n">limit</span><span class="p">,</span> <span class="n">count</span><span class="p">;</span>
 
-      <span class="k">public</span> <span class="nf">RolloverCounter</span><span class="p">(</span><span class="kt">int</span> <span class="n">limit</span><span class="p">)</span> 
+      <span class="k">public</span> <span class="nf">RolloverCounter</span><span class="p">(</span><span class="kt">int</span> <span class="n">limit</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">this</span><span class="p">.</span><span class="n">limit</span> <span class="p">=</span> <span class="n">limit</span><span class="p">;</span>
          <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>  <span class="c1">//for clarity - this is the default value</span>
       <span class="p">}</span>
-                               
-      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetCount</span><span class="p">()</span> 
+
+      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetCount</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
       <span class="p">}</span>
 
-      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetCount</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span><span class="p">)</span> 
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetCount</span><span class="p">(</span><span class="kt">int</span> <span class="n">count</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">this</span><span class="p">.</span><span class="n">count</span> <span class="p">=</span> <span class="n">count</span><span class="p">;</span>
       <span class="p">}</span>
-                               
-      <span class="c1">/// advance by one time tick </span>
-      <span class="c1">/// eventually roll over at limit                        </span>
-      <span class="k">public</span> <span class="k">void</span> <span class="nf">Advance</span><span class="p">()</span> 
+
+      <span class="c1">/// advance by one time tick</span>
+      <span class="c1">/// eventually roll over at limit</span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">Advance</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="n">count</span> <span class="p">=</span> <span class="p">(</span><span class="n">count</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span> <span class="p">%</span> <span class="n">limit</span><span class="p">;</span>
       <span class="p">}</span>
-   <span class="p">}</span>                           
+   <span class="p">}</span>
 <span class="p">}</span>
-  
 </pre></div>
 </div>
 <p>Note how concise the <code class="docutils literal"><span class="pre">Advance</span></code> method is!  With the remainder operation,
@@ -874,20 +873,20 @@ of new features.</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
-   <span class="c1">/// class with instance variables of another user class</span>
-   <span class="k">class</span> <span class="nc">Clock</span> 
+<span class="c1">/// class with instance variables of another user class</span>
+   <span class="k">class</span> <span class="nc">Clock</span>
    <span class="p">{</span>
       <span class="k">private</span> <span class="n">RolloverCounter</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">;</span>
 
       <span class="c1">/// new Clock set to midnight</span>
-      <span class="k">public</span> <span class="nf">Clock</span><span class="p">()</span> 
+      <span class="k">public</span> <span class="nf">Clock</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="n">hours</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RolloverCounter</span><span class="p">(</span><span class="m">24</span><span class="p">);</span>
          <span class="n">minutes</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RolloverCounter</span><span class="p">(</span><span class="m">60</span><span class="p">);</span>
       <span class="p">}</span>
 
       <span class="c1">///  new Clock set to specified time</span>
-      <span class="k">public</span> <span class="nf">Clock</span><span class="p">(</span><span class="kt">int</span> <span class="n">nHours</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nMinutes</span><span class="p">)</span> 
+      <span class="k">public</span> <span class="nf">Clock</span><span class="p">(</span><span class="kt">int</span> <span class="n">nHours</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nMinutes</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">hours</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RolloverCounter</span><span class="p">(</span><span class="m">24</span><span class="p">);</span>
          <span class="n">minutes</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RolloverCounter</span><span class="p">(</span><span class="m">60</span><span class="p">);</span>
@@ -899,9 +898,9 @@ of new features.</p>
          <span class="n">hours</span><span class="p">.</span><span class="n">SetCount</span><span class="p">(</span><span class="n">nHours</span><span class="p">);</span>
          <span class="n">minutes</span><span class="p">.</span><span class="n">SetCount</span><span class="p">(</span><span class="n">nMinutes</span><span class="p">);</span>
       <span class="p">}</span>
-         
-      <span class="c1">/// advance by one time tick                         </span>
-      <span class="k">public</span> <span class="k">void</span> <span class="nf">Tick</span><span class="p">()</span> 
+
+      <span class="c1">/// advance by one time tick</span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">Tick</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="n">minutes</span><span class="p">.</span><span class="n">Advance</span><span class="p">();</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">minutes</span><span class="p">.</span><span class="n">GetCount</span><span class="p">()</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
@@ -910,7 +909,7 @@ of new features.</p>
       <span class="p">}</span>
 
       <span class="c1">/// Always 2 digits for both hours and minute with colon in middle</span>
-      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetTimeString</span><span class="p">()</span> 
+      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetTimeString</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0:D2}:{1:D2}&quot;</span><span class="p">,</span> <span class="n">hours</span><span class="p">.</span><span class="n">GetCount</span><span class="p">(),</span> <span class="n">minutes</span><span class="p">.</span><span class="n">GetCount</span><span class="p">());</span>
       <span class="p">}</span>  <span class="c1">// D2 format: always at least 2 digits, padding as needed with leading 0&#39;s</span>
@@ -1016,7 +1015,7 @@ you might change the original name <code class="docutils literal"><span class="p
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

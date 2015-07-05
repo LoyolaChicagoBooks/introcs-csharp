@@ -407,8 +407,8 @@ for the week, taking into account overtime. Hours worked over 40
 are overtime, paid at 1.5 times the normal rate. This is a natural
 place for a function enclosing the calculation.</p>
 <p><em>Read</em> the setup for the function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return the total weekly wages for a worker working </span>
-      <span class="c1">/// totalHours with a given regular hourlyWage.  </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return the total weekly wages for a worker working</span>
+      <span class="c1">/// totalHours with a given regular hourlyWage.</span>
       <span class="c1">/// Include overtime for hours over 40.</span>
       <span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
 </pre></div>
@@ -455,12 +455,12 @@ also shown below.</p>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
    <span class="k">class</span> <span class="nc">Wages</span>
-   <span class="p">{</span>                                                   <span class="c1">//heading chunk</span>
-      <span class="c1">/// Return the total weekly wages for a worker working </span>
-      <span class="c1">/// totalHours with a given regular hourlyWage.  </span>
+   <span class="p">{</span>  <span class="c1">//heading chunk</span>
+      <span class="c1">/// Return the total weekly wages for a worker working</span>
+      <span class="c1">/// totalHours with a given regular hourlyWage.</span>
       <span class="c1">/// Include overtime for hours over 40.</span>
       <span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
-      <span class="p">{</span>                                                
+      <span class="p">{</span>
          <span class="kt">double</span> <span class="n">totalWages</span><span class="p">;</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">totalHours</span> <span class="p">&lt;=</span> <span class="m">40</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">totalWages</span> <span class="p">=</span> <span class="n">hourlyWage</span><span class="p">*</span><span class="n">totalHours</span><span class="p">;</span>
@@ -617,7 +617,7 @@ solve the same problem!</p>
 11
 12
 13</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
-      <span class="p">{</span>                       
+      <span class="p">{</span>
          <span class="kt">double</span> <span class="n">regularHours</span><span class="p">,</span> <span class="n">overtime</span><span class="p">;</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">totalHours</span> <span class="p">&lt;=</span> <span class="m">40</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">regularHours</span> <span class="p">=</span> <span class="n">totalHours</span><span class="p">;</span>
@@ -628,7 +628,7 @@ solve the same problem!</p>
             <span class="n">overtime</span> <span class="p">=</span> <span class="n">totalHours</span> <span class="p">-</span> <span class="m">40</span><span class="p">;</span>
          <span class="p">}</span>
          <span class="k">return</span> <span class="n">hourlyWage</span><span class="p">*</span><span class="n">regularHours</span> <span class="p">+</span> <span class="p">(</span><span class="m">1.5</span><span class="p">*</span><span class="n">hourlyWage</span><span class="p">)*</span><span class="n">overtime</span><span class="p">;</span>
-      <span class="p">}</span>                      
+      <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="wages-play-computer-exercise">
@@ -753,7 +753,7 @@ after it.)</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

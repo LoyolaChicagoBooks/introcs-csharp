@@ -1,3 +1,11 @@
+commit dde0de25f7a4d85894c65e1b171b809edceabbb6
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 5 14:08:26 2015 -0500
+
+    remove astyle / not a whitelisted package on Travis
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit ace40ea237746b5a15f807af0ea744eb9197fa41
 Merge: 9ac6666 b4c428c
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
@@ -26,13 +34,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 22:55:34 2015 -0500
 
     make download page a bit more human-friendly
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 9b5d494ee1421fed8706db3109c077961e36f9fc
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 22:44:21 2015 -0500
-
-    use standard margins for 7x9 book
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

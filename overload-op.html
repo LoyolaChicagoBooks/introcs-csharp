@@ -328,9 +328,9 @@ variant of the Rational class in
 discussed in the
 next section, <a class="reference internal" href="#casts-in-user-classes"><span>Casts in User-Defined Classes</span></a>.
 Here are operator overload declarations for <code class="docutils literal"><span class="pre">*</span></code> and others:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// * binary multiplication operator </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// * binary multiplication operator</span>
       <span class="k">public</span> <span class="k">static</span> <span class="n">Rational</span> <span class="k">operator</span> <span class="p">*(</span><span class="n">Rational</span> <span class="n">f1</span><span class="p">,</span> <span class="n">Rational</span> <span class="n">f2</span><span class="p">)</span>
-      <span class="p">{</span>                          
+      <span class="p">{</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">f1</span><span class="p">.</span><span class="n">num</span><span class="p">*</span><span class="n">f2</span><span class="p">.</span><span class="n">num</span><span class="p">,</span> <span class="n">f1</span><span class="p">.</span><span class="n">denom</span><span class="p">*</span><span class="n">f2</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
       <span class="p">}</span>
 
@@ -405,7 +405,7 @@ We bridge this difference by defining an implicit cast of an <code class="docuti
 so  the compiler will take <code class="docutils literal"><span class="pre">f</span> <span class="pre">*</span> <span class="pre">n</span></code> and see the need to implicitly cast
 <code class="docutils literal"><span class="pre">n</span></code> to a Rational.  The definition below will also allow explicit casts
 if you choose, like <code class="docutils literal"><span class="pre">f</span> <span class="pre">*</span> <span class="pre">(Rational)</span> <span class="pre">n</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Code to cast an int to a Rational implicitly when needed. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Code to cast an int to a Rational implicitly when needed.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="k">implicit</span> <span class="k">operator</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
@@ -428,7 +428,7 @@ a <code class="docutils literal"><span class="pre">double</span></code> is only 
 it would not be wise to implicitly convert
 a <code class="docutils literal"><span class="pre">double</span></code> to a Rational, but it does make sense to approximate a Rational
 by a <code class="docutils literal"><span class="pre">double</span></code> before use with a <code class="docutils literal"><span class="pre">double</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Code to cast to a double implicitly when needed. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Code to cast to a double implicitly when needed.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="k">implicit</span> <span class="k">operator</span> <span class="nf">double</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">/</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
@@ -449,7 +449,7 @@ You are
 we have already seen these required for a cast from <code class="docutils literal"><span class="pre">double</span></code> to <code class="docutils literal"><span class="pre">int</span></code>.
 To only allow an explicit cast with your type,
 replace <code class="docutils literal"><span class="pre">implicit</span></code> by <code class="docutils literal"><span class="pre">explicit</span></code> in the cast method heading.</p>
-<div class="highlight-csharp" id="decimal-type"><span id="index-3"></span><div class="highlight"><pre>      <span class="c1">/// Code to cast to a decimal with an explicit cast. </span>
+<div class="highlight-csharp" id="decimal-type"><span id="index-3"></span><div class="highlight"><pre>      <span class="c1">/// Code to cast to a decimal with an explicit cast.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="k">explicit</span> <span class="k">operator</span> <span class="nf">decimal</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">/</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
@@ -496,7 +496,7 @@ and extend the TestOps class to test them.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

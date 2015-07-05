@@ -476,7 +476,7 @@ These may not be evocative phrases for you.  Find your own.</p>
 <span class="k">class</span> <span class="nc">Parenthesized</span>
 <span class="p">{</span>
    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-   <span class="p">{</span> 
+   <span class="p">{</span>
       <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;What (really) happened?&quot;</span><span class="p">;</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Original: &quot;</span> <span class="p">+</span> <span class="n">s</span><span class="p">);</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;In parentheses: &quot;</span> <span class="p">+</span> <span class="n">InsideParen</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
@@ -486,7 +486,7 @@ These may not be evocative phrases for you.  Find your own.</p>
    <span class="c1">/// Return the substring between the first parentheses.</span>
    <span class="k">static</span> <span class="kt">string</span> <span class="nf">InsideParen</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
    <span class="p">{</span>
-      <span class="kt">int</span> <span class="n">first</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="sc">&#39;(&#39;</span><span class="p">)</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>  
+      <span class="kt">int</span> <span class="n">first</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="sc">&#39;(&#39;</span><span class="p">)</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
       <span class="kt">int</span> <span class="n">past</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="sc">&#39;)&#39;</span><span class="p">);</span>
       <span class="kt">int</span> <span class="n">len</span> <span class="p">=</span> <span class="n">past</span> <span class="p">-</span> <span class="n">first</span><span class="p">;</span>
       <span class="k">return</span> <span class="n">s</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">len</span><span class="p">);</span>
@@ -541,7 +541,7 @@ for which you predict the value and then test.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

@@ -530,7 +530,7 @@ returned like any other type.  Examine the function definition:</p>
       <span class="c1">/// The length of the array and the number of entries to</span>
       <span class="c1">///   prompt the user for is n.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span><span class="p">[]</span> <span class="nf">InputNStrings</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
-      <span class="p">{</span>                         
+      <span class="p">{</span>
          <span class="kt">string</span><span class="p">[]</span> <span class="n">lines</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Enter {0} string(s).&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
          <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
@@ -579,18 +579,18 @@ to figure out.</p>
 
 <span class="k">class</span> <span class="nc">ArrayLoop1</span>
 <span class="p">{</span>  <span class="c1">//Play computer on this code and then test</span>
-   <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> 
+   <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
    <span class="p">{</span>
       <span class="kt">int</span><span class="p">[]</span> <span class="n">a</span> <span class="p">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">},</span> <span class="n">b</span> <span class="p">=</span> <span class="p">{</span><span class="m">7</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">},</span>
-            <span class="n">c</span> <span class="p">=</span> <span class="p">{</span><span class="m">7</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="p">};</span>  
+            <span class="n">c</span> <span class="p">=</span> <span class="p">{</span><span class="m">7</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="p">};</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="m">2</span><span class="p">));</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="m">4</span><span class="p">));</span>
    <span class="p">}</span>
 
-   <span class="k">static</span> <span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> 
+   <span class="k">static</span> <span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
    <span class="p">{</span>
       <span class="kt">int</span> <span class="n">k</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> 
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
             <span class="n">k</span><span class="p">++;</span>
          <span class="p">}</span>
@@ -625,13 +625,13 @@ to figure out.  Be careful to keep the data current!</p>
 
 <span class="k">class</span> <span class="nc">ArrayLoop2</span>
 <span class="p">{</span>  <span class="c1">//Play computer on this code first and then test</span>
-   <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> 
+   <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
    <span class="p">{</span>
-      <span class="kt">int</span><span class="p">[]</span> <span class="n">a</span> <span class="p">=</span>  <span class="p">{</span><span class="m">5</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">6</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">8</span><span class="p">};</span>          
-      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>         
-         <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">+</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>            
+      <span class="kt">int</span><span class="p">[]</span> <span class="n">a</span> <span class="p">=</span>  <span class="p">{</span><span class="m">5</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">6</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">8</span><span class="p">};</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+         <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">+</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
       <span class="p">}</span>
-      <span class="k">foreach</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="k">in</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>   
+      <span class="k">foreach</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="k">in</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
       <span class="p">}</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
@@ -664,14 +664,14 @@ to figure out.</p>
 
 <span class="k">class</span> <span class="nc">ArrayLoop3</span>
 <span class="p">{</span>  <span class="c1">//Play computer on this code first and then test</span>
-   <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> 
+   <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
    <span class="p">{</span>
-      <span class="kt">string</span><span class="p">[]</span> <span class="n">strArray</span> <span class="p">=</span> <span class="p">{</span><span class="s">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s">&quot;wxyz&quot;</span><span class="p">};</span>          
+      <span class="kt">string</span><span class="p">[]</span> <span class="n">strArray</span> <span class="p">=</span> <span class="p">{</span><span class="s">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s">&quot;wxyz&quot;</span><span class="p">};</span>
       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">4</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
-         <span class="k">foreach</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span> <span class="k">in</span> <span class="n">strArray</span><span class="p">)</span> <span class="p">{</span>                               
+         <span class="k">foreach</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span> <span class="k">in</span> <span class="n">strArray</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">/</span><span class="n">i</span><span class="p">)</span> <span class="p">+</span> <span class="s">&quot;/&quot;</span><span class="p">);</span>
          <span class="p">}</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>                                
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
       <span class="p">}</span>
    <span class="p">}</span>
 <span class="p">}</span>
@@ -691,7 +691,7 @@ table from playing computer included in the project,
    <span class="c1">/// of each element of x.</span>
    <span class="c1">/// For example if x contains elements 2, -5, 0, 7,</span>
    <span class="c1">/// then return a new array containing 1, -1, 0, 1.</span>
-   <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">Signs1</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">x</span><span class="p">)</span> 
+   <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">Signs1</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and place it in a program with a main function that demonstrates it.</p>
@@ -703,7 +703,7 @@ table from playing computer included in the project,
 <span id="command-line-param"></span><span id="index-5"></span><h2>10.1.2. Parameters to Main<a class="headerlink" href="#parameters-to-main" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">Main</span></code> function may take an array of strings as parameter, as in example
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_param/print_param.cs">print_param/print_param.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>   <span class="c1">/// Demonstrate the use of command line parameters. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>   <span class="c1">/// Demonstrate the use of command line parameters.</span>
    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
    <span class="p">{</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;There are {0} command line parameters.&quot;</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
@@ -960,7 +960,7 @@ with heading</p>
    <span class="c1">/// its sign (1, -1 or 0)</span>
    <span class="c1">/// For example if array a contains elements  2, -5, 0, 7,</span>
    <span class="c1">/// then after the call Signs2(a), a contains 1, -1, 0, 1.</span>
-   <span class="k">static</span> <span class="k">void</span> <span class="nf">Signs2</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">x</span><span class="p">)</span> 
+   <span class="k">static</span> <span class="k">void</span> <span class="nf">Signs2</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and a main function to demonstrate it.</p>
@@ -1067,7 +1067,7 @@ this section will include a variety of exercises where array index
 variables need to be manipulated in fancier ways.  Consider this heading:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new array with all the 0&#39;s that are in</span>
       <span class="c1">/// data removed.  If data contains 0, 3, 0, 0, 5, 9</span>
-      <span class="c1">/// then an array containing 3, 5, 9 is returned. </span>
+      <span class="c1">/// then an array containing 3, 5, 9 is returned.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">NoZeros</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1136,7 +1136,7 @@ Our version is:</p>
 20
 21</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="c1">/// Return a new array with all the 0&#39;s that are in</span>
       <span class="c1">/// data removed.  If data contains 0, 3, 0, 0, 5, 9</span>
-      <span class="c1">/// then an array containing 3, 5, 9 is returned. </span>
+      <span class="c1">/// then an array containing 3, 5, 9 is returned.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">NoZeros</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="kt">int</span> <span class="n">countNonZero</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -1147,7 +1147,7 @@ Our version is:</p>
          <span class="p">}</span>
          <span class="kt">int</span><span class="p">[]</span> <span class="n">notzero</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">countNonZero</span><span class="p">];</span>
          <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>  <span class="c1">// index where to put the next value</span>
-         <span class="k">foreach</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="k">in</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span> 
+         <span class="k">foreach</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="k">in</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">!=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// copy non-zero elements</span>
                <span class="n">notzero</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="n">n</span><span class="p">;</span>
                <span class="n">i</span><span class="p">++;</span>
@@ -1346,7 +1346,7 @@ parameter limits are important, too; test them:</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

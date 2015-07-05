@@ -364,17 +364,19 @@ together.  Since each is a response to a command, we will call our interface
 Response:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
-   <span class="c1">/// Object that responds to a command</span>
+<span class="c1">/// Object that responds to a command</span>
    <span class="k">public</span> <span class="k">interface</span> <span class="n">Response</span>
    <span class="p">{</span>
       <span class="c1">/// Execute cmd.</span>
-      <span class="c1">/// Return true if the game is over; false otherwise </span>
+      <span class="c1">/// Return true if the game is over; false otherwise</span>
       <span class="kt">bool</span> <span class="nf">Execute</span><span class="p">(</span><span class="n">Command</span> <span class="n">cmd</span><span class="p">);</span>
 
-      <span class="c1">/// Return a Help string for the command </span>
+      <span class="c1">/// Return a Help string for the command</span>
       <span class="kt">string</span> <span class="nf">Help</span><span class="p">();</span>
 
-      <span class="kt">string</span> <span class="n">CommandName</span> <span class="p">{</span><span class="k">get</span><span class="p">;}</span>
+      <span class="kt">string</span> <span class="n">CommandName</span> <span class="p">{</span>
+         <span class="k">get</span><span class="p">;</span>
+      <span class="p">}</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -413,13 +415,16 @@ ResponseMapper, taking advantage of the Dictionary in other methods, too.</p>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
-   
-   <span class="c1">/// Map commands names to commands.</span>
+
+<span class="c1">/// Map commands names to commands.</span>
    <span class="k">public</span> <span class="k">class</span> <span class="nc">CommandMapper</span>
    <span class="p">{</span>
-      <span class="k">public</span> <span class="kt">string</span> <span class="n">AllCommands</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;}</span>
+      <span class="k">public</span> <span class="kt">string</span> <span class="n">AllCommands</span> <span class="p">{</span>
+         <span class="k">get</span><span class="p">;</span>
+         <span class="k">private</span> <span class="k">set</span><span class="p">;</span>
+      <span class="p">}</span>
       <span class="k">private</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">Response</span><span class="p">&gt;</span> <span class="n">responses</span><span class="p">;</span> <span class="c1">//responses to commands</span>
-       
+
       <span class="c1">/// Initialize the command response mapping</span>
       <span class="c1">///  game The game being played.</span>
       <span class="k">public</span> <span class="nf">CommandMapper</span><span class="p">(</span><span class="n">Game</span> <span class="n">game</span><span class="p">)</span>
@@ -437,14 +442,14 @@ ResponseMapper, taking advantage of the Dictionary in other methods, too.</p>
             <span class="n">AllCommands</span> <span class="p">+=</span> <span class="n">r</span><span class="p">.</span><span class="n">CommandName</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
          <span class="p">}</span>
       <span class="p">}</span>
-   
-      <span class="c1">/// Check whether aString is a valid command word. </span>
+
+      <span class="c1">/// Check whether aString is a valid command word.</span>
       <span class="c1">/// Return true if it is, false if it isn&#39;t.</span>
       <span class="k">public</span> <span class="kt">bool</span> <span class="nf">isCommand</span><span class="p">(</span><span class="kt">string</span> <span class="n">aString</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">responses</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="n">aString</span><span class="p">);</span>
       <span class="p">}</span>
-   
+
       <span class="c1">/// Return the command associated with a command word.</span>
       <span class="c1">///  cmdWord The command word.</span>
       <span class="c1">/// Return the Response for the command.</span>
@@ -581,7 +586,7 @@ find different roots of the same function.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

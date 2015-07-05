@@ -315,8 +315,10 @@ ivory (white) keys.</p>
 <p>The following declaration shows how to initialize an array consisting
 of the twelve tones of the chromatic scale, starting from the C note.</p>
 <div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">tones</span> <span class="p">=</span> <span class="p">{</span> <span class="s">&quot;C&quot;</span><span class="p">,</span> <span class="s">&quot;C#&quot;</span><span class="p">,</span> <span class="s">&quot;D&quot;</span><span class="p">,</span> <span class="s">&quot;D#&quot;</span><span class="p">,</span> <span class="s">&quot;E&quot;</span><span class="p">,</span> <span class="s">&quot;F&quot;</span><span class="p">,</span>
-         <span class="s">&quot;F#&quot;</span><span class="p">,</span> <span class="s">&quot;G&quot;</span><span class="p">,</span> <span class="s">&quot;G#&quot;</span><span class="p">,</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;A#&quot;</span><span class="p">,</span> <span class="s">&quot;B&quot;</span> <span class="p">};</span>
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">tones</span> <span class="p">=</span> <span class="p">{</span> <span class="s">&quot;C&quot;</span><span class="p">,</span> <span class="s">&quot;C#&quot;</span><span class="p">,</span> <span class="s">&quot;D&quot;</span><span class="p">,</span> <span class="s">&quot;D#&quot;</span><span class="p">,</span> <span class="s">&quot;E&quot;</span><span class="p">,</span> <span class="s">&quot;F&quot;</span><span class="p">,</span>
+                                <span class="s">&quot;F#&quot;</span><span class="p">,</span> <span class="s">&quot;G&quot;</span><span class="p">,</span> <span class="s">&quot;G#&quot;</span><span class="p">,</span> <span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;A#&quot;</span><span class="p">,</span> <span class="s">&quot;B&quot;</span>
+                              <span class="p">};</span>
 </pre></div>
 </td></tr></table></div>
 <p>Even if you&#8217;re not a musician, learning the basic principles is fairly
@@ -487,9 +489,9 @@ number of flats/sharps each scale has.</p>
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> 
+14</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
       <span class="p">{</span>
-         <span class="kt">int</span><span class="p">[]</span> <span class="n">scale</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">8</span><span class="p">];</span> 
+         <span class="kt">int</span><span class="p">[]</span> <span class="n">scale</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">8</span><span class="p">];</span>
          <span class="kt">int</span><span class="p">[]</span> <span class="n">major</span> <span class="p">=</span> <span class="p">{</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span> <span class="p">};</span>
          <span class="kt">int</span><span class="p">[]</span> <span class="n">minor</span> <span class="p">=</span> <span class="p">{</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span> <span class="p">};</span>
 
@@ -523,7 +525,7 @@ semitone (a single step), which gives us a different pattern.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

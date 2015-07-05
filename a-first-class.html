@@ -396,15 +396,15 @@ the testing code of <a class="reference external" href="https://github.com/Loyol
    <span class="p">{</span>
       <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
       <span class="p">{</span>
-         <span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span> 
+         <span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span>
                                   <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
-         <span class="n">Contact</span> <span class="n">c2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Otto Heinz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-9999&quot;</span><span class="p">,</span> 
+         <span class="n">Contact</span> <span class="n">c2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Otto Heinz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-9999&quot;</span><span class="p">,</span>
                                   <span class="s">&quot;oheinz@luc.edu&quot;</span><span class="p">);</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Marie&#39;s full name: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetName</span><span class="p">());</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her phone number: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetPhone</span><span class="p">());</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her email: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetEmail</span><span class="p">());</span>         
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her email: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetEmail</span><span class="p">());</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;\nFull contact info for Otto:&quot;</span><span class="p">);</span>
-         <span class="n">c2</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span> 
+         <span class="n">c2</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span>
       <span class="p">}</span>
    <span class="p">}</span>
 <span class="p">}</span>
@@ -513,7 +513,7 @@ The constructor can have parameters like a regular method.  We will certainly
 want to give a state to our new object.
 That means giving values to its fields.  Recall we are want to
 store this state in instance variables <code class="docutils literal"><span class="pre">name</span></code>, <code class="docutils literal"><span class="pre">phone</span></code> and <code class="docutils literal"><span class="pre">email</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span> 
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">name</span> <span class="p">=</span> <span class="n">fullName</span><span class="p">;</span>
          <span class="n">phone</span> <span class="p">=</span> <span class="n">phoneNumber</span><span class="p">;</span>
@@ -586,17 +586,17 @@ others to be able to <em>inspect</em> the name, phone and email,
 so how do we do that?  Use <strong>public methods</strong>.</p>
 <p>Since the fields are accessible anywhere <em>inside</em> the class&#8217;s instance methods,
 and public methods can be used from <em>outside</em> the class, we can simply code</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetName</span><span class="p">()</span> 
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetName</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
       <span class="p">}</span>
 
-      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetPhone</span><span class="p">()</span> 
+      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetPhone</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">phone</span><span class="p">;</span>
       <span class="p">}</span>
-                             
-      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetEmail</span><span class="p">()</span> 
+
+      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetEmail</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">email</span><span class="p">;</span>
       <span class="p">}</span>
@@ -619,7 +619,7 @@ print all the contact information with labels.</p>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">@&quot;Name:  {0}</span>
 <span class="s">Phone: {1}</span>
 <span class="s">Email: {2}&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span><span class="p">,</span> <span class="n">email</span><span class="p">);</span>
-      <span class="p">}</span> 
+      <span class="p">}</span>
 </pre></div>
 </div>
 <p>Again, we use the instance variable names, plugging them into a format string.
@@ -646,7 +646,7 @@ use it explicitly, but you could.   For example the current <code class="docutil
 In our next version of the Contact class we will see several places where
 an explicit <code class="docutils literal"><span class="pre">this</span></code> is useful.</p>
 <p>In the first version of the constructor, repeated here,</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span> 
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">name</span> <span class="p">=</span> <span class="n">fullName</span><span class="p">;</span>
          <span class="n">phone</span> <span class="p">=</span> <span class="n">phoneNumber</span><span class="p">;</span>
@@ -679,7 +679,7 @@ identifier.  We have to do something else to refer to the instance variable.
 The explicit <code class="docutils literal"><span class="pre">this</span></code> object comes to the rescue:  <code class="docutils literal"><span class="pre">this.name</span></code> refers to
 a part of this object.  It must refer to the
 instance variable, not the local variable.  Our alternate constructor is:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">,</span> <span class="kt">string</span> <span class="n">email</span><span class="p">)</span> 
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">,</span> <span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
          <span class="k">this</span><span class="p">.</span><span class="n">phone</span> <span class="p">=</span> <span class="n">phone</span><span class="p">;</span>
@@ -699,7 +699,7 @@ with our Contact objects.  Users can read the data in a Contact with the
 <em>getter</em> methods.  Now we need <em>setter</em> methods.  The naming conventions
 are similar:  start with &#8220;Set&#8221;.  In this case we must supply the new data,
 so setter methods need a parameter:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetPhone</span><span class="p">(</span><span class="kt">string</span> <span class="n">newPhone</span><span class="p">)</span> 
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetPhone</span><span class="p">(</span><span class="kt">string</span> <span class="n">newPhone</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">phone</span> <span class="p">=</span> <span class="n">newPhone</span><span class="p">;</span>
       <span class="p">}</span>
@@ -709,7 +709,7 @@ so setter methods need a parameter:</p>
 <em>new</em> name for the parameter that sets the instance variable.  For
 comparison we use the alternate identifier matching approach in the
 other setter:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">email</span><span class="p">)</span> 
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">this</span><span class="p">.</span><span class="n">email</span> <span class="p">=</span> <span class="n">email</span><span class="p">;</span>
       <span class="p">}</span>
@@ -761,7 +761,7 @@ in meaning, the word <code class="docutils literal"><span class="pre">override</
          <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span> <span class="p">(</span><span class="s">@&quot;Name:  {0}</span>
 <span class="s">Phone: {1}</span>
 <span class="s">Email: {2}&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span><span class="p">,</span> <span class="n">email</span><span class="p">);</span>
-      <span class="p">}</span> 
+      <span class="p">}</span>
 </pre></div>
 </div>
 <p>See what the method does:  it uses the object state to create and
@@ -798,21 +798,22 @@ and check that it does what you would expect.  There are several new
 features illustrated in the testing code:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
       <span class="p">{</span>
-         <span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span> 
+         <span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span>
                                   <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
-         <span class="n">Contact</span> <span class="n">c2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Otto Heinz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-9999&quot;</span><span class="p">,</span> 
+         <span class="n">Contact</span> <span class="n">c2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Otto Heinz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-9999&quot;</span><span class="p">,</span>
                                   <span class="s">&quot;oheinz@luc.edu&quot;</span><span class="p">);</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Marie&#39;s full name: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetName</span><span class="p">());</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her phone number: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetPhone</span><span class="p">());</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her email: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetEmail</span><span class="p">());</span>         
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;All together:\n{0}&quot;</span><span class="p">,</span> <span class="n">c1</span><span class="p">);</span> 
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her email: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetEmail</span><span class="p">());</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;All together:\n{0}&quot;</span><span class="p">,</span> <span class="n">c1</span><span class="p">);</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Full contact info for Otto:&quot;</span><span class="p">);</span>
-         <span class="n">c2</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span> 
+         <span class="n">c2</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span>
          <span class="n">c1</span><span class="p">.</span><span class="n">SetEmail</span><span class="p">(</span><span class="s">&quot;maria.ortiz@gmail.com&quot;</span><span class="p">);</span>
          <span class="n">c2</span><span class="p">.</span><span class="n">SetPhone</span><span class="p">(</span><span class="s">&quot;123-456-7890&quot;</span><span class="p">);</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;With changes and added contact:&quot;</span><span class="p">);</span>
-         <span class="kt">var</span> <span class="n">allc</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Contact</span><span class="p">&gt;(</span><span class="k">new</span> <span class="n">Contact</span><span class="p">[]</span> <span class="p">{</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> 
-            <span class="k">new</span> <span class="nf">Contact</span><span class="p">(</span><span class="s">&quot;Amy Li&quot;</span><span class="p">,</span> <span class="s">&quot;847-111-2222&quot;</span><span class="p">,</span> <span class="s">&quot;amy.li22@yahoo.com&quot;</span><span class="p">)});</span>
+         <span class="kt">var</span> <span class="n">allc</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Contact</span><span class="p">&gt;(</span><span class="k">new</span> <span class="n">Contact</span><span class="p">[]</span> <span class="p">{</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span>
+                                      <span class="k">new</span> <span class="nf">Contact</span><span class="p">(</span><span class="s">&quot;Amy Li&quot;</span><span class="p">,</span> <span class="s">&quot;847-111-2222&quot;</span><span class="p">,</span> <span class="s">&quot;amy.li22@yahoo.com&quot;</span><span class="p">)</span>
+                                                    <span class="p">});</span>
          <span class="k">foreach</span><span class="p">(</span><span class="n">Contact</span> <span class="n">c</span> <span class="k">in</span> <span class="n">allc</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">+</span><span class="n">c</span><span class="p">);</span>
          <span class="p">}</span>
@@ -920,7 +921,7 @@ Can you construct an example to illustrate that?  One of ours is
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

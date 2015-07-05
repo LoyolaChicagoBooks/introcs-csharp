@@ -353,7 +353,7 @@ and parse string literals.  The code is from
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} as a decimal is {1}&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">.</span><span class="n">ToDecimal</span><span class="p">());</span>
          <span class="k">foreach</span> <span class="p">(</span><span class="kt">string</span> <span class="n">s</span> <span class="k">in</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span><span class="s">&quot;-12/30&quot;</span><span class="p">,</span> <span class="s">&quot;123&quot;</span><span class="p">,</span> <span class="s">&quot;1.125&quot;</span><span class="p">})</span> <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Parse \&quot;{0}\&quot; to Rational: {1}&quot;</span><span class="p">,</span>
-                                        <span class="n">s</span><span class="p">,</span> <span class="n">Rational</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
+                              <span class="n">s</span><span class="p">,</span> <span class="n">Rational</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
          <span class="p">}</span>
       <span class="p">}</span>
    <span class="p">}</span>
@@ -403,7 +403,7 @@ and make the adjustment to lowest terms in a helping method, <code class="docuti
 that is called by the constructor:</p>
 <div class="highlight-csharp" id="index-1"><div class="highlight"><pre>      <span class="c1">/// Force the invarient: in lowest terms with a positive denominator.</span>
       <span class="k">private</span> <span class="k">void</span> <span class="nf">Normalize</span><span class="p">()</span>
-      <span class="p">{</span>                           
+      <span class="p">{</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">denom</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// We *should* force an Exception, but we won&#39;t.</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Zero denominator changed to 1!&quot;</span><span class="p">);</span>
             <span class="n">denom</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
@@ -441,7 +441,7 @@ its parameters.</li>
 Note that by the time we
 are done constructing a new Rational, it is in this normalized form:  lowest
 terms and positive denominator:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Create a fraction given numerator and denominator. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Create a fraction given numerator and denominator.</span>
       <span class="k">public</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span> <span class="n">numerator</span><span class="p">,</span> <span class="kt">int</span> <span class="n">denominator</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">num</span> <span class="p">=</span> <span class="n">numerator</span><span class="p">;</span>
@@ -510,13 +510,13 @@ a negative Rational will always have a leading &#8220;-&#8221; as in &#8220;-5/9
 &#8220;5/-9&#8221;</p>
 <p>With a Rational, several other conversions make sense:  to <code class="docutils literal"><span class="pre">double</span></code>
 and <code class="docutils literal"><span class="pre">decimal</span></code> approximations.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a double approximation to the fraction. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a double approximation to the fraction.</span>
       <span class="k">public</span> <span class="kt">double</span> <span class="nf">ToDouble</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">num</span><span class="p">)/</span><span class="n">denom</span><span class="p">;</span>
       <span class="p">}</span>
-                                   
-      <span class="c1">/// Return a decimal approximation to the fraction. </span>
+
+      <span class="c1">/// Return a decimal approximation to the fraction.</span>
       <span class="k">public</span> <span class="kt">decimal</span> <span class="nf">ToDecimal</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="p">((</span><span class="kt">decimal</span><span class="p">)</span><span class="n">num</span><span class="p">)/</span><span class="n">denom</span><span class="p">;</span>
@@ -563,7 +563,7 @@ being referred to when it starts, but in this case the method <em>returns</em> o
 Note that there were originally <em>two</em> digits after the decimal point
 and then the denominator gets <em>two</em> zeroes to have the right power of 10:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Parse a string of an integer, fraction (with /) or decimal (with .)</span>
-      <span class="c1">///  and return the corresponding Rational. </span>
+      <span class="c1">///  and return the corresponding Rational.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="n">Rational</span> <span class="nf">Parse</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">s</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Trim</span><span class="p">();</span>      <span class="c1">// will adjust numerator and denominator parts</span>
@@ -573,11 +573,11 @@ and then the denominator gets <em>two</em> zeroes to have the right power of 10:
          <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">))</span> <span class="p">{</span>
             <span class="kt">string</span><span class="p">[]</span> <span class="n">intFrac</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39;.&#39;</span><span class="p">);</span> <span class="c1">// integer, fractional digits</span>
             <span class="n">parts</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="n">intFrac</span><span class="p">[</span><span class="m">0</span><span class="p">]+</span><span class="n">intFrac</span><span class="p">[</span><span class="m">1</span><span class="p">];</span>  <span class="c1">// &quot;shift&quot; decimal point</span>
-            <span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;1&quot;</span><span class="p">;</span>                 <span class="c1">// denom will have as many 0&#39;s </span>
+            <span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;1&quot;</span><span class="p">;</span>                 <span class="c1">// denom will have as many 0&#39;s</span>
             <span class="k">foreach</span><span class="p">(</span> <span class="kt">char</span> <span class="n">dig</span> <span class="k">in</span> <span class="n">intFrac</span><span class="p">[</span><span class="m">1</span><span class="p">])</span> <span class="p">{</span>  <span class="c1">//    as digits after &#39;.&#39;</span>
-               <span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">+=</span> <span class="s">&quot;0&quot;</span><span class="p">;</span>                 <span class="c1">//    to compensate </span>
+               <span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">+=</span> <span class="s">&quot;0&quot;</span><span class="p">;</span>                 <span class="c1">//    to compensate</span>
             <span class="p">}</span>
-         <span class="p">}</span> 
+         <span class="p">}</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Trim</span><span class="p">()),</span>
                              <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">].</span><span class="n">Trim</span><span class="p">()));</span>
       <span class="p">}</span>
@@ -588,7 +588,7 @@ and then the denominator gets <em>two</em> zeroes to have the right power of 10:
 <p>We can deal with the current object without using dot notation.  What if we are
 dealing with <em>more than one</em> Rational, the current one <em>and</em> another one,
 like the parameter in Multiply:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new Rational which is the product of this Rational and f. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
       <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -597,9 +597,9 @@ and dot notation for another
 <em>named</em> object:  <code class="docutils literal"><span class="pre">num</span></code> and <code class="docutils literal"><span class="pre">denom</span></code> refer to the fields in the <em>current</em> object, and
 <code class="docutils literal"><span class="pre">f.num</span></code> and <code class="docutils literal"><span class="pre">f.denom</span></code> refer to fields for the other
 <code class="docutils literal"><span class="pre">Rational</span></code>, the parameter <code class="docutils literal"><span class="pre">f</span></code>.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new Rational which is the product of this Rational and f. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
       <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
-      <span class="p">{</span>                           <span class="c1">// end Multiply heading chunk</span>
+      <span class="p">{</span>  <span class="c1">// end Multiply heading chunk</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">num</span><span class="p">*</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="p">*</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
       <span class="p">}</span>
 </pre></div>
@@ -806,7 +806,7 @@ do a graphical play-computer like in the last section.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

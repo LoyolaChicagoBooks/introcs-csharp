@@ -375,9 +375,9 @@ as well as a blank.</p>
 a table.  To reduce the amount of clutter in the <code class="docutils literal"><span class="pre">Dictionary</span></code>, the function
 <code class="docutils literal"><span class="pre">GetCounts</span></code> takes as a parameter a set of words to ignore.</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a Dictionary of word:count pairs from parsing s,</span>
-      <span class="c1">///  excluding all strings in ignore. </span>
+      <span class="c1">///  excluding all strings in ignore.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;</span> <span class="n">GetCounts</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span>
-                                                      <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">ignore</span><span class="p">)</span>
+            <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">ignore</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="kt">char</span><span class="p">[]</span> <span class="n">sep</span> <span class="p">=</span> <span class="s">&quot;\n\t !@#$%^&amp;*()_+{}|[]\\:\&quot;;&lt;&gt;?,./&quot;</span><span class="p">.</span><span class="n">ToCharArray</span><span class="p">();</span>
          <span class="kt">string</span><span class="p">[]</span> <span class="n">words</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">ToLower</span><span class="p">().</span><span class="n">Split</span><span class="p">(</span><span class="n">sep</span><span class="p">);</span>
@@ -396,7 +396,7 @@ a table.  To reduce the amount of clutter in the <code class="docutils literal">
          <span class="k">return</span> <span class="n">wc</span><span class="p">;</span>
       <span class="p">}</span>
 
-      <span class="c1">/// Print each word and its count, if the count is at least minCount. </span>
+      <span class="c1">/// Print each word and its count, if the count is at least minCount.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintCounts</span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;</span> <span class="n">wc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">minCount</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="n">wc</span><span class="p">.</span><span class="n">Keys</span><span class="p">);</span>
@@ -427,7 +427,7 @@ Gettysburg Address.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

@@ -340,31 +340,31 @@ static function to generate the new string.</p>
 the first occurrence, and for now we will assume the
 replacement makes sense.  The following heading
 (with documentation) should work:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>    <span class="c1">/// Return s with the first occurence of target</span>
-    <span class="c1">/// replaced by replacement.</span>
-    <span class="k">static</span> <span class="kt">string</span> <span class="nf">replaceFirst</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">string</span> <span class="n">target</span><span class="p">,</span>
-                               <span class="kt">string</span> <span class="n">replacement</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre>   <span class="c1">/// Return s with the first occurence of target</span>
+   <span class="c1">/// replaced by replacement.</span>
+   <span class="k">static</span> <span class="kt">string</span> <span class="nf">replaceFirst</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">string</span> <span class="n">target</span><span class="p">,</span>
+                              <span class="kt">string</span> <span class="n">replacement</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>As soon as we have the calling interface, it is good to be thinking
 of the tests it should pass.  Here is a Main program written
 to test the function in different ways and display the results:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">()</span>
-    <span class="p">{</span>
-        <span class="kt">string</span> <span class="n">str1</span> <span class="p">=</span> <span class="s">&quot;It was the best of times.&quot;</span><span class="p">;</span>
-        <span class="kt">string</span> <span class="n">str2</span> <span class="p">=</span> <span class="s">&quot;Of times it was the best.&quot;</span><span class="p">;</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str1=&quot;</span> <span class="p">+</span> <span class="n">str1</span><span class="p">);</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str2=&quot;</span> <span class="p">+</span> <span class="n">str2</span><span class="p">);</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
-        <span class="c1">// to embed a quote inside a string constant, precede it by backslash(\).</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Let us do some \&quot;cutting and pasting\&quot; of strings!&quot;</span><span class="p">);</span>
-        <span class="kt">string</span> <span class="n">str3</span> <span class="p">=</span> <span class="n">replaceFirst</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="s">&quot;best&quot;</span><span class="p">,</span> <span class="s">&quot;worst&quot;</span><span class="p">);</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str3 = str1 with best =&gt; worst: &quot;</span> <span class="p">+</span> <span class="n">str3</span><span class="p">);</span>
-        <span class="kt">string</span> <span class="n">str4</span> <span class="p">=</span> <span class="n">replaceFirst</span><span class="p">(</span><span class="n">str2</span><span class="p">,</span> <span class="s">&quot;best&quot;</span><span class="p">,</span> <span class="s">&quot;worst&quot;</span><span class="p">);</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str2 with best =&gt; worst: &quot;</span> <span class="p">+</span> <span class="n">str4</span><span class="p">);</span>
-        <span class="kt">string</span> <span class="n">str5</span> <span class="p">=</span> <span class="n">replaceFirst</span><span class="p">(</span><span class="n">str3</span><span class="p">,</span> <span class="s">&quot;worst&quot;</span><span class="p">,</span> <span class="s">&quot;best&quot;</span><span class="p">);</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str3 with worst =&gt; best: &quot;</span> <span class="p">+</span> <span class="n">str5</span><span class="p">);</span>
-    <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre>   <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">()</span>
+   <span class="p">{</span>
+      <span class="kt">string</span> <span class="n">str1</span> <span class="p">=</span> <span class="s">&quot;It was the best of times.&quot;</span><span class="p">;</span>
+      <span class="kt">string</span> <span class="n">str2</span> <span class="p">=</span> <span class="s">&quot;Of times it was the best.&quot;</span><span class="p">;</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str1=&quot;</span> <span class="p">+</span> <span class="n">str1</span><span class="p">);</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str2=&quot;</span> <span class="p">+</span> <span class="n">str2</span><span class="p">);</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+      <span class="c1">// to embed a quote inside a string constant, precede it by backslash(\).</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Let us do some \&quot;cutting and pasting\&quot; of strings!&quot;</span><span class="p">);</span>
+      <span class="kt">string</span> <span class="n">str3</span> <span class="p">=</span> <span class="n">replaceFirst</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="s">&quot;best&quot;</span><span class="p">,</span> <span class="s">&quot;worst&quot;</span><span class="p">);</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str3 = str1 with best =&gt; worst: &quot;</span> <span class="p">+</span> <span class="n">str3</span><span class="p">);</span>
+      <span class="kt">string</span> <span class="n">str4</span> <span class="p">=</span> <span class="n">replaceFirst</span><span class="p">(</span><span class="n">str2</span><span class="p">,</span> <span class="s">&quot;best&quot;</span><span class="p">,</span> <span class="s">&quot;worst&quot;</span><span class="p">);</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str2 with best =&gt; worst: &quot;</span> <span class="p">+</span> <span class="n">str4</span><span class="p">);</span>
+      <span class="kt">string</span> <span class="n">str5</span> <span class="p">=</span> <span class="n">replaceFirst</span><span class="p">(</span><span class="n">str3</span><span class="p">,</span> <span class="s">&quot;worst&quot;</span><span class="p">,</span> <span class="s">&quot;best&quot;</span><span class="p">);</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;str3 with worst =&gt; best: &quot;</span> <span class="p">+</span> <span class="n">str5</span><span class="p">);</span>
+   <span class="p">}</span>
 </pre></div>
 </div>
 <p>Writing tests <em>first</em> is a good idea to focus you on what really
@@ -477,7 +477,7 @@ That name gives you an idea of the newness at the time.</td></tr>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

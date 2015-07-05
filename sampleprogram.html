@@ -362,16 +362,16 @@ Here is the text of the program:</p>
 24
 25
 26
-27</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span> 
+27</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
-<span class="k">class</span> <span class="nc">Painting</span> 
+<span class="k">class</span> <span class="nc">Painting</span>
 <span class="p">{</span>
    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
    <span class="p">{</span>
       <span class="kt">double</span> <span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">wallArea</span><span class="p">,</span> <span class="n">ceilingArea</span><span class="p">;</span>
       <span class="kt">string</span> <span class="n">widthString</span><span class="p">,</span> <span class="n">lengthString</span><span class="p">;</span>
       <span class="kt">double</span> <span class="n">HEIGHT</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>
-      
+
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span> <span class="s">&quot;Calculation of Room Paint Requirements&quot;</span><span class="p">);</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">Write</span> <span class="p">(</span> <span class="s">&quot;Enter room length: &quot;</span><span class="p">);</span>
       <span class="n">lengthString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
@@ -379,14 +379,14 @@ Here is the text of the program:</p>
       <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span> <span class="s">&quot;Enter room width: &quot;</span><span class="p">);</span>
       <span class="n">widthString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
       <span class="n">width</span> <span class="p">=</span> <span class="kt">double</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">widthString</span><span class="p">);</span>
-      
+
       <span class="n">wallArea</span> <span class="p">=</span> <span class="m">2</span> <span class="p">*</span> <span class="p">(</span><span class="n">length</span> <span class="p">+</span> <span class="n">width</span><span class="p">)</span> <span class="p">*</span> <span class="n">HEIGHT</span><span class="p">;</span> <span class="c1">// ignore doors</span>
       <span class="n">ceilingArea</span> <span class="p">=</span> <span class="n">length</span> <span class="p">*</span> <span class="n">width</span><span class="p">;</span>
-      
-      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The wall area is &quot;</span> <span class="p">+</span> <span class="n">wallArea</span> 
-                          <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
-      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The ceiling area is &quot;</span> <span class="p">+</span> <span class="n">ceilingArea</span> 
-                          <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
+
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The wall area is &quot;</span> <span class="p">+</span> <span class="n">wallArea</span>
+                        <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The ceiling area is &quot;</span> <span class="p">+</span> <span class="n">ceilingArea</span>
+                        <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -400,7 +400,7 @@ explanations! Try to get the gist now and the details later.</p>
 <p>The different colors are used in modern program editors to
 emphasize the different uses of the parts of the program.</p>
 <p>We give a line by line explanation:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span> 
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The C# environment supplies an enormous number of parts that you can
@@ -414,7 +414,7 @@ standard namespace is <code class="docutils literal"><span class="pre">System</s
 <p>Lines 2, 10, 18, and 21 are blank.
 This is merely for the human reader to separate sections visually.  The computer
 ignores them.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Painting</span> 
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Painting</span>
 <span class="p">{</span>
 </pre></div>
 </div>
@@ -576,8 +576,8 @@ the value of <code class="docutils literal"><span class="pre">2</span> <span cla
 </div>
 <p>which simplifies to 488.</p>
 <p>With the sample run, <code class="docutils literal"><span class="pre">ceilingArea</span></code> would get the value 20.5 * 10, or 205.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The wall area is &quot;</span> <span class="p">+</span> <span class="n">wallArea</span> 
-                          <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The wall area is &quot;</span> <span class="p">+</span> <span class="n">wallArea</span>
+                        <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This is a single statement.  Line endings act just like a space in C#.
@@ -599,8 +599,8 @@ In the sample output you see what is printed:</p>
 </div>
 <p>sandwiching the value taken from the variable <code class="docutils literal"><span class="pre">wallArea</span></code> between
 two literal string, given in quotes.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The ceiling area is &quot;</span> <span class="p">+</span> <span class="n">ceilingArea</span> 
-                          <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The ceiling area is &quot;</span> <span class="p">+</span> <span class="n">ceilingArea</span>
+                        <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This statement behave like the previous one, except with different
@@ -662,7 +662,7 @@ that we return to how you can get the painting program to run on your computer.<
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

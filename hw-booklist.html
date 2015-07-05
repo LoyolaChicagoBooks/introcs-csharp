@@ -398,7 +398,7 @@ to a string.</p>
 </div>
 <p>It should have public methods:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Add book to the list.</span>
-      <span class="c1">// The regular assignment version always returns true. </span>
+      <span class="c1">// The regular assignment version always returns true.</span>
       <span class="k">public</span> <span class="kt">bool</span> <span class="nf">Addbook</span><span class="p">(</span><span class="n">Book</span> <span class="n">book</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -406,18 +406,18 @@ to a string.</p>
 The extra credit version is more elaborate.</p>
 <p>Further methods:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// List the full descriptions of each book,</span>
-      <span class="c1">/// with each book separated by a blank line. </span>
-      <span class="k">public</span> <span class="k">void</span> <span class="nf">PrintList</span><span class="p">()</span> <span class="c1">// </span>
+      <span class="c1">/// with each book separated by a blank line.</span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">PrintList</span><span class="p">()</span> <span class="c1">//</span>
 </pre></div>
 </div>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// List the titles (only!), one per line, of each book </span>
-      <span class="c1">// in the list that is by the specified author. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// List the titles (only!), one per line, of each book</span>
+      <span class="c1">// in the list that is by the specified author.</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">PrintTitlesByAuthor</span><span class="p">(</span><span class="kt">string</span> <span class="n">author</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-csharp"><div class="highlight"><pre>     <span class="c1">// List the full descriptions of each book printed</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// List the full descriptions of each book printed</span>
       <span class="c1">// in the range of years specified,</span>
-      <span class="c1">// with each book separated by a blank line. </span>
+      <span class="c1">// with each book separated by a blank line.</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">PrintBooksInYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">firstYear</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lastYear</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -479,7 +479,7 @@ requires you to do the previous one first.</p>
 <em>fully integrated</em> into TestBookList!</p>
 <ol class="arabic">
 <li><p class="first">[2 points] Complete</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a single string containing the same data as </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a single string containing the same data as</span>
       <span class="c1">/// printed by PrintList, including a final newline.</span>
       <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
 </pre></div>
@@ -503,7 +503,7 @@ the <code class="docutils literal"><span class="pre">PrintList</span></code> met
       <span class="c1">/// title, author, and year of publication, respectively.</span>
       <span class="c1">/// There may be an extra blank line at the beginning.</span>
       <span class="c1">/// If so ignore it.</span>
-      <span class="c1">/// Nothing beyond the line with the year is read. </span>
+      <span class="c1">/// Nothing beyond the line with the year is read.</span>
       <span class="k">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">StreamReader</span> <span class="n">reader</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -512,7 +512,7 @@ the <code class="docutils literal"><span class="pre">PrintList</span></code> met
       <span class="c1">// reader.  The data coming from reader will contain groups</span>
       <span class="c1">// of three line descriptions useful for the Book constructor</span>
       <span class="c1">// that reads from a stream.  Each three-line book description</span>
-      <span class="c1">// *may or may not* be preceded by an empty line. </span>
+      <span class="c1">// *may or may not* be preceded by an empty line.</span>
       <span class="k">public</span> <span class="nf">BookList</span><span class="p">(</span><span class="n">StreamReader</span> <span class="n">reader</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -523,10 +523,10 @@ easy to find.</p>
 </li>
 <li><p class="first">[4 points]</p>
 <p>In class Book:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>     <span class="c1">// Return true if all the corresponding fields in this Book</span>
-      <span class="c1">// and in aBook are equal.  Return false otherwise.  </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Return true if all the corresponding fields in this Book</span>
+      <span class="c1">// and in aBook are equal.  Return false otherwise.</span>
       <span class="k">public</span> <span class="kt">bool</span> <span class="nf">IsEqual</span><span class="p">(</span><span class="n">Book</span> <span class="n">aBook</span><span class="p">)</span>
-      <span class="p">{</span><span class="c1">// code for extra credit</span>
+      <span class="p">{</span>  <span class="c1">// code for extra credit</span>
 
          <span class="k">return</span> <span class="k">true</span><span class="p">;</span> <span class="c1">//so skeleton compiles</span>
       <span class="p">}</span>
@@ -544,7 +544,7 @@ skills from Comp 271 you you be able to write the <code class="docutils literal"
 <p>In class BookList:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Test if aBook is contained in this BookList.</span>
       <span class="c1">// Return true if book IsEqual to a Book in the list,</span>
-      <span class="c1">// false otherwise. </span>
+      <span class="c1">// false otherwise.</span>
       <span class="k">public</span> <span class="kt">bool</span> <span class="nf">Contains</span><span class="p">(</span><span class="n">Book</span> <span class="n">book</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -554,11 +554,10 @@ method <code class="docutils literal"><span class="pre">Contains</span></code> w
 work and write your own version with a loop.</p>
 <p>Change the <code class="docutils literal"><span class="pre">AddBook</span></code> method from the regular assignment, so it
 satisfies this documentation:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>     
-     <span class="c1">/// Adds aBook to the list if aBook is</span>
-     <span class="c1">/// not already in the list.</span>
-     <span class="c1">/// Return true if aBook is added,</span>
-     <span class="c1">/// and false if it was already in the list. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Adds aBook to the list if aBook is</span>
+      <span class="c1">/// not already in the list.</span>
+      <span class="c1">/// Return true if aBook is added,</span>
+      <span class="c1">/// and false if it was already in the list.</span>
 </pre></div>
 </div>
 <p>In TestBookList you need to react to the return value, too.</p>
@@ -569,7 +568,7 @@ In BookList:</p>
       <span class="c1">// if it is not already contained in this BookList.</span>
       <span class="c1">// Return true if the current list was changed.</span>
       <span class="c1">// Return false if each Book in books is a</span>
-      <span class="c1">// duplicate of a Book in the current list. </span>
+      <span class="c1">// duplicate of a Book in the current list.</span>
       <span class="k">public</span> <span class="kt">bool</span> <span class="nf">AddAll</span><span class="p">(</span><span class="n">BookList</span> <span class="n">books</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -596,7 +595,7 @@ others!</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

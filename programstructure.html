@@ -346,7 +346,7 @@ is the boilerplate code.  We will make additions as necessary.  We choose not to
 clutter up the basic setup with features that we are not about to use and discuss.</p>
 <p>Here is a silly little test illustrating the difference between <code class="docutils literal"><span class="pre">Console.WriteLine</span></code>
 and <code class="docutils literal"><span class="pre">Console.Write</span></code>, in example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/write_test/write_test.cs">write_test/write_test.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span> 
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">WriteTest</span>
 <span class="p">{</span>
@@ -495,11 +495,11 @@ emphasizing the ability to <em>reassign</em> variable values.</p>
 <span class="k">class</span> <span class="nc">UpdateVars</span>
 <span class="p">{</span>
    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-   <span class="p">{</span> <span class="c1">// simple sequential code updating two variables</span>
-      <span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>     
+   <span class="p">{</span>  <span class="c1">// simple sequential code updating two variables</span>
+      <span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
       <span class="kt">int</span> <span class="n">y</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
-      <span class="n">y</span> <span class="p">=</span> <span class="m">2</span> <span class="p">*</span> <span class="n">y</span><span class="p">;</span>       
-      <span class="n">x</span> <span class="p">=</span> <span class="n">y</span> <span class="p">-</span> <span class="n">x</span><span class="p">;</span>      
+      <span class="n">y</span> <span class="p">=</span> <span class="m">2</span> <span class="p">*</span> <span class="n">y</span><span class="p">;</span>
+      <span class="n">x</span> <span class="p">=</span> <span class="n">y</span> <span class="p">-</span> <span class="n">x</span><span class="p">;</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="n">x</span> <span class="p">+</span> <span class="s">&quot; &quot;</span> <span class="p">+</span> <span class="n">y</span><span class="p">);</span>
    <span class="p">}</span>
 <span class="p">}</span>
@@ -604,11 +604,11 @@ we get used to the idea of such a table following execution sequence.</p>
 <span class="k">class</span> <span class="nc">UpdateVars2</span>
 <span class="p">{</span>
    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-   <span class="p">{</span> <span class="c1">// for first Playing Computer Exercise</span>
-      <span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>     
+   <span class="p">{</span>  <span class="c1">// for first Playing Computer Exercise</span>
+      <span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
       <span class="kt">int</span> <span class="n">b</span> <span class="p">=</span> <span class="m">2</span> <span class="p">*</span> <span class="n">a</span><span class="p">;</span>
-      <span class="n">a</span> <span class="p">=</span> <span class="n">a</span> <span class="p">*</span> <span class="n">b</span><span class="p">;</span>       
-      <span class="n">b</span> <span class="p">=</span> <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>  
+      <span class="n">a</span> <span class="p">=</span> <span class="n">a</span> <span class="p">*</span> <span class="n">b</span><span class="p">;</span>
+      <span class="n">b</span> <span class="p">=</span> <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>
       <span class="n">a</span> <span class="p">=</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">;</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="n">a</span> <span class="p">+</span> <span class="s">&quot;:&quot;</span> <span class="p">+</span> <span class="n">b</span><span class="p">);</span>
    <span class="p">}</span>
@@ -691,11 +691,11 @@ we get used to the idea of such a table following execution sequence.</p>
 <span class="k">class</span> <span class="nc">UpdateVars3</span>
 <span class="p">{</span>
    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-   <span class="p">{</span> <span class="c1">// another sequentail Playing Computer Exercise</span>
-      <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;a&quot;</span><span class="p">;</span>     
+   <span class="p">{</span>  <span class="c1">// another sequentail Playing Computer Exercise</span>
+      <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;a&quot;</span><span class="p">;</span>
       <span class="kt">string</span> <span class="n">t</span> <span class="p">=</span> <span class="n">s</span> <span class="p">+</span> <span class="s">&quot;n&quot;</span><span class="p">;</span>
-      <span class="n">s</span> <span class="p">=</span> <span class="n">t</span> <span class="p">+</span> <span class="n">s</span><span class="p">;</span>       
-      <span class="n">t</span> <span class="p">=</span> <span class="s">&quot;b&quot;</span> <span class="p">+</span> <span class="n">t</span><span class="p">;</span>  
+      <span class="n">s</span> <span class="p">=</span> <span class="n">t</span> <span class="p">+</span> <span class="n">s</span><span class="p">;</span>
+      <span class="n">t</span> <span class="p">=</span> <span class="s">&quot;b&quot;</span> <span class="p">+</span> <span class="n">t</span><span class="p">;</span>
       <span class="n">s</span> <span class="p">=</span> <span class="n">t</span> <span class="p">+</span> <span class="n">s</span><span class="p">;</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="n">s</span> <span class="p">+</span> <span class="s">&quot; &quot;</span> <span class="p">+</span> <span class="n">t</span><span class="p">);</span>
    <span class="p">}</span>
@@ -772,7 +772,7 @@ we get used to the idea of such a table following execution sequence.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

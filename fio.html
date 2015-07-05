@@ -334,7 +334,7 @@ it is visible in all the functions in the class.</p>
 <p>Then the sequence <code class="docutils literal"><span class="pre">paths</span></code>
 can be used in the <code class="docutils literal"><span class="pre">foreach</span></code> loop:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Find a directory containing the filename</span>
-      <span class="c1">/// and return the full file path, if it exists. </span>
+      <span class="c1">/// and return the full file path, if it exists.</span>
       <span class="c1">/// Otherwise return null.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">GetPath</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
       <span class="p">{</span>
@@ -356,8 +356,8 @@ that directly opens the file to read:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Find a directory containing filename;</span>
       <span class="c1">/// return a new StreamReader to the file</span>
       <span class="c1">/// or null if the file does not exist.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="n">StreamReader</span> <span class="nf">OpenReader</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span> 
-      <span class="p">{</span>                                
+      <span class="k">public</span> <span class="k">static</span> <span class="n">StreamReader</span> <span class="nf">OpenReader</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+      <span class="p">{</span>
          <span class="kt">string</span> <span class="n">filePath</span> <span class="p">=</span> <span class="n">GetPath</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">filePath</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
             <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
@@ -368,7 +368,7 @@ that directly opens the file to read:</p>
 </div>
 <p>We have a variation on <code class="docutils literal"><span class="pre">GetPath</span></code> that just return the path to the
 directory containing the file.  Here is the heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a directory conaining the filename, if it exists. </span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a directory conaining the filename, if it exists.</span>
       <span class="c1">/// Otherwise return null.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">GetLocation</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
 </pre></div>
@@ -378,9 +378,9 @@ that you read from.  You can get a location from <code class="docutils literal">
 write to the same directory, creating a <code class="docutils literal"><span class="pre">StreamWriter</span></code>. Use the convenience
 function:</p>
 <div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Join the location directory and filename;</span>
-      <span class="c1">/// open and return a StreamWriter to the file. </span>
-      <span class="k">public</span> <span class="k">static</span> <span class="n">StreamWriter</span> <span class="nf">OpenWriter</span><span class="p">(</span><span class="kt">string</span> <span class="n">location</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span> 
-      <span class="p">{</span>           
+      <span class="c1">/// open and return a StreamWriter to the file.</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="n">StreamWriter</span> <span class="nf">OpenWriter</span><span class="p">(</span><span class="kt">string</span> <span class="n">location</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+      <span class="p">{</span>
          <span class="kt">string</span> <span class="n">filePath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">StreamWriter</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
       <span class="p">}</span>
@@ -401,9 +401,9 @@ function:</p>
       <span class="p">{</span>
          <span class="kt">string</span> <span class="n">sample</span> <span class="p">=</span> <span class="s">&quot;sample.txt&quot;</span><span class="p">;</span>
          <span class="kt">string</span> <span class="n">output</span> <span class="p">=</span> <span class="s">&quot;output.txt&quot;</span><span class="p">;</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Directory of {0}: {1}&quot;</span><span class="p">,</span> 
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Directory of {0}: {1}&quot;</span><span class="p">,</span>
                            <span class="n">sample</span><span class="p">,</span> <span class="n">FIO</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">(</span><span class="n">sample</span><span class="p">));</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Path to  {0}: {1}&quot;</span><span class="p">,</span> 
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Path to  {0}: {1}&quot;</span><span class="p">,</span>
                            <span class="n">sample</span><span class="p">,</span> <span class="n">FIO</span><span class="p">.</span><span class="n">GetPath</span><span class="p">(</span><span class="n">sample</span><span class="p">));</span>
          <span class="n">StreamReader</span> <span class="n">reader1</span> <span class="p">=</span> <span class="n">FIO</span><span class="p">.</span><span class="n">OpenReader</span><span class="p">(</span><span class="n">sample</span><span class="p">);</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">reader1</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
@@ -412,18 +412,18 @@ function:</p>
             <span class="n">reader1</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
          <span class="p">}</span>
 
-         <span class="n">StreamReader</span> <span class="n">reader2</span> <span class="p">=</span> <span class="n">FIO</span><span class="p">.</span><span class="n">OpenReader</span><span class="p">(</span><span class="n">FIO</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">(</span><span class="n">sample</span><span class="p">),</span> 
+         <span class="n">StreamReader</span> <span class="n">reader2</span> <span class="p">=</span> <span class="n">FIO</span><span class="p">.</span><span class="n">OpenReader</span><span class="p">(</span><span class="n">FIO</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">(</span><span class="n">sample</span><span class="p">),</span>
                                                <span class="n">sample</span><span class="p">);</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">reader2</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Second reader test passed.&quot;</span><span class="p">);</span>
             <span class="n">reader2</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
          <span class="p">}</span>
 
-         <span class="n">StreamWriter</span> <span class="n">writer1</span> <span class="p">=</span> <span class="n">FIO</span><span class="p">.</span><span class="n">OpenWriter</span><span class="p">(</span><span class="n">FIO</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">(</span><span class="n">sample</span><span class="p">),</span> 
+         <span class="n">StreamWriter</span> <span class="n">writer1</span> <span class="p">=</span> <span class="n">FIO</span><span class="p">.</span><span class="n">OpenWriter</span><span class="p">(</span><span class="n">FIO</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">(</span><span class="n">sample</span><span class="p">),</span>
                                                <span class="n">output</span><span class="p">);</span>
          <span class="n">writer1</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;File in the same directory as {0}.&quot;</span><span class="p">,</span> <span class="n">sample</span><span class="p">);</span>
          <span class="n">writer1</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Writer test passed; file written at \n {0}&quot;</span><span class="p">,</span> 
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Writer test passed; file written at \n {0}&quot;</span><span class="p">,</span>
                            <span class="n">FIO</span><span class="p">.</span><span class="n">GetPath</span><span class="p">(</span><span class="n">output</span><span class="p">));</span>
       <span class="p">}</span>
    <span class="p">}</span>
@@ -475,7 +475,7 @@ to the writer.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>

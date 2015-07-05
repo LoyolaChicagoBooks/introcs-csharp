@@ -368,17 +368,17 @@ midpoint.  In each iteration the value of <code class="docutils literal"><span c
 previous midpoint value <code class="docutils literal"><span class="pre">c</span></code>.
 Of course a production version would not print out all the intermediate data,
 as the interval shrinks, but we do for illustration:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">static</span> <span class="kt">double</span> <span class="nf">Bisection</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">,</span> 
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">static</span> <span class="kt">double</span> <span class="nf">Bisection</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">,</span>
                                      <span class="kt">double</span> <span class="n">tolerance</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iterations</span><span class="p">)</span> <span class="p">{</span>
          <span class="c1">// check the preconditions for the method to work</span>
-         <span class="c1">// a must be less than b so we can do the interval search </span>
+         <span class="c1">// a must be less than b so we can do the interval search</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="p">&gt;=</span> <span class="n">b</span><span class="p">)</span>
             <span class="k">return</span> <span class="kt">double</span><span class="p">.</span><span class="n">NaN</span><span class="p">;</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;a &gt;= b ok&quot;</span><span class="p">);</span>
          <span class="kt">bool</span> <span class="n">ok</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
 
-         <span class="c1">// The function must cross the x-axis between the endpoints, </span>
-         <span class="c1">//   meaning its sign changes. </span>
+         <span class="c1">// The function must cross the x-axis between the endpoints,</span>
+         <span class="c1">//   meaning its sign changes.</span>
          <span class="k">if</span> <span class="p">((</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">))</span> <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Test 1 passed&quot;</span><span class="p">);</span>
             <span class="n">ok</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
@@ -416,18 +416,18 @@ is <em>exactly</em> the same as <code class="docutils literal"><span class="pre"
       <span class="c1">/// to a root of f.  Returns double.NaN if the f(a)*f(b) &gt; 0.</span>
       <span class="c1">/// Does not require a &lt; b.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="kt">double</span> <span class="nf">Bisection</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> 
+         <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> 
+         <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Sign</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="p">==</span> <span class="n">Math</span><span class="p">.</span><span class="n">Sign</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)))</span>  <span class="c1">//or f(a)*f(b)&gt;0</span>
             <span class="k">return</span> <span class="kt">double</span><span class="p">.</span><span class="n">NaN</span><span class="p">;</span>
          <span class="kt">double</span> <span class="n">c</span> <span class="p">=</span> <span class="p">(</span><span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span><span class="p">;</span>
-         <span class="c1">// If no f(c) is exactly 0, iterate until the smallest possible </span>
+         <span class="c1">// If no f(c) is exactly 0, iterate until the smallest possible</span>
          <span class="c1">// double interval, when there is no distinct double midpoint.</span>
-         <span class="k">while</span> <span class="p">(</span><span class="n">c</span> <span class="p">!=</span> <span class="n">a</span> <span class="p">&amp;&amp;</span> <span class="n">c</span> <span class="p">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> 
+         <span class="k">while</span> <span class="p">(</span><span class="n">c</span> <span class="p">!=</span> <span class="n">a</span> <span class="p">&amp;&amp;</span> <span class="n">c</span> <span class="p">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;a = {0}  b= {1}, diff = {2}&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">-</span><span class="n">a</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> 
+            <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
                <span class="k">return</span> <span class="n">c</span><span class="p">;</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Sign</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="p">==</span> <span class="n">Math</span><span class="p">.</span><span class="n">Sign</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)))</span>
                <span class="n">a</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
@@ -556,7 +556,7 @@ in your <code class="docutils literal"><span class="pre">if</span></code> condit
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 17:36:31.<br/>
+      Last updated on 05-July-2015 19:09:47.<br/>
     </p>
   </div>
 </footer>
