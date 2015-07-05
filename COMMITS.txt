@@ -1,3 +1,11 @@
+commit 530458e87321a1979baf792238c63da975037da4
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 4 22:55:34 2015 -0500
+
+    make download page a bit more human-friendly
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 9b5d494ee1421fed8706db3109c077961e36f9fc
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 22:44:21 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 18:23:14 2015 -0500
 
     support for both US Letter and Amazon CreateSpace printing
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 3075403ce551a16e109218a492b5f27a9404e551
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 18:18:33 2015 -0500
-
-    changes for Amazon CreateSpace publication
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
