@@ -1,3 +1,11 @@
+commit 5e728388f84b39e0c12542e5ca84effb48209467
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 4 22:16:43 2015 -0500
+
+    minor improvements in presentation of index.rst
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit e3702002a84b028f734a06d5303c094d717f9dbc
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 20:52:05 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 4 14:41:45 2015 -0500
 
     make zip more quiet, too
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit c25b4a0cefdfd080fc19b6c34bb26f15f5db09e7
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 14:38:30 2015 -0500
-
-    make git add even more silent (no -q so go to /dev/null)
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
