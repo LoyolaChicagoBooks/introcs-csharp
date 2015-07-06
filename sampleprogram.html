@@ -423,8 +423,8 @@ has a <em>heading</em> with <code class="docutils literal"><span class="pre">cla
 This class is <code class="docutils literal"><span class="pre">Painting</span></code>.  After the heading comes
 a <em>body</em> delimited by braces.  The opening brace <code class="docutils literal"><span class="pre">{</span></code> in line 4, is matched
 by the closing brace <code class="docutils literal"><span class="pre">}</span></code> on the last line of the program.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-<span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre>   <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+   <span class="p">{</span>
 </pre></div>
 </div>
 <p>A class is broken up with chunks called <em>functions</em> or <em>methods</em>.  Each has
@@ -451,7 +451,7 @@ C# must be followed by parentheses <code class="docutils literal"><span class="p
 <p>After the function heading comes a <em>body</em>.  Like with a class, a function body
 is delimited by braces.  The opening brace here is matched by the closing
 brace on the second to last line of the program.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">double</span> <span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">wallArea</span><span class="p">,</span> <span class="n">ceilingArea</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="kt">double</span> <span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">wallArea</span><span class="p">,</span> <span class="n">ceilingArea</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>A program works with data of many different possible types.  One type
@@ -464,13 +464,13 @@ the names for variables that can hold a <code class="docutils literal"><span cla
 values to these variables later.</p>
 <p>This line is a <em>declaration</em> statement.
 Most statements in C#, like this one, end with <code class="docutils literal"><span class="pre">;</span></code> - a semicolon.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">widthString</span><span class="p">,</span> <span class="n">lengthString</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="kt">string</span> <span class="n">widthString</span><span class="p">,</span> <span class="n">lengthString</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This is another declaration.  This time the type of the variables is
 <code class="docutils literal"><span class="pre">string</span></code>, which means a sequence of characters, like a line you
 might type at the keyboard.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">double</span> <span class="n">HEIGHT</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="kt">double</span> <span class="n">HEIGHT</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Here is another declaration for a <code class="docutils literal"><span class="pre">double</span></code>, looking slightly different.
@@ -479,7 +479,7 @@ suggest that the value of <code class="docutils literal"><span class="pre">HEIGH
 and we assign its value at the same time with <code class="docutils literal"><span class="pre">=</span> <span class="pre">8</span></code>.  This naming of
 constants is not
 strictly necessary, but it makes the program&#8217;s intention easier to follow.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span> <span class="s">&quot;Calculation of Room Paint Requirements&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span> <span class="s">&quot;Calculation of Room Paint Requirements&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">Console</span></code> refers to the terminal or console window where text output
@@ -495,7 +495,7 @@ Here the parameter is a string,
 delimited by the quotes at either end.  Notice that the contents
 of this string appear at the start of the screen output
 displayed for this program.  The program did <strong>write</strong> this <strong>line</strong>.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">Write</span> <span class="p">(</span> <span class="s">&quot;Enter room length: &quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">Write</span> <span class="p">(</span> <span class="s">&quot;Enter room length: &quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This statement is similar to the last one, except that it uses <code class="docutils literal"><span class="pre">Write</span></code>
@@ -506,7 +506,7 @@ Here <code class="docutils literal"><span class="pre">Write</span></code> does n
 after it.</p>
 <p>This statement serves as a <em>prompt</em>: letting the user know that information is being
 requested (a room length).</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">lengthString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">lengthString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Here is where the program takes in the information requested from the user.
@@ -530,7 +530,7 @@ characters happen  to look like a number,
 any sequence of characters can be typed.
 The <code class="docutils literal"><span class="pre">Console.ReadLine()</span></code> function produces this sequence of characters
 as a <em>string</em> type.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">length</span> <span class="p">=</span> <span class="kt">double</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">lengthString</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">length</span> <span class="p">=</span> <span class="kt">double</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">lengthString</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Of course we want to interpret the user&#8217;s input as a number in order to do
@@ -543,9 +543,9 @@ The function <code class="docutils literal"><span class="pre">double.Parse</span
 <code class="docutils literal"><span class="pre">lengthString</span></code> containing the string from the user input,
 and the value produced is the corresponding <code class="docutils literal"><span class="pre">double</span></code> number.  In
 the sample run that assigns to <code class="docutils literal"><span class="pre">length</span></code> the value 20.5.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span> <span class="s">&quot;Enter room width: &quot;</span><span class="p">);</span>
-<span class="n">widthString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-<span class="n">width</span> <span class="p">=</span> <span class="kt">double</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">widthString</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span> <span class="s">&quot;Enter room width: &quot;</span><span class="p">);</span>
+      <span class="n">widthString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+      <span class="n">width</span> <span class="p">=</span> <span class="kt">double</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">widthString</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>These lines are analogous to the previous three lines:
@@ -555,8 +555,8 @@ get the user response; convert it to a <code class="docutils literal"><span clas
 the value 10.</p>
 <p id="index-1">At this point we have all the data we need from the user.  The next part is
 the brief calculations of results:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">wallArea</span> <span class="p">=</span> <span class="m">2</span> <span class="p">*</span> <span class="p">(</span><span class="n">length</span> <span class="p">+</span> <span class="n">width</span><span class="p">)</span> <span class="p">*</span> <span class="n">HEIGHT</span><span class="p">;</span> <span class="c1">// ignore doors</span>
-<span class="n">ceilingArea</span> <span class="p">=</span> <span class="n">length</span> <span class="p">*</span> <span class="n">width</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">wallArea</span> <span class="p">=</span> <span class="m">2</span> <span class="p">*</span> <span class="p">(</span><span class="n">length</span> <span class="p">+</span> <span class="n">width</span><span class="p">)</span> <span class="p">*</span> <span class="n">HEIGHT</span><span class="p">;</span> <span class="c1">// ignore doors</span>
+      <span class="n">ceilingArea</span> <span class="p">=</span> <span class="n">length</span> <span class="p">*</span> <span class="n">width</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>At the end of the first line is a <em>comment</em>.  It starts with <code class="docutils literal"><span class="pre">//</span></code> and ends
@@ -576,8 +576,8 @@ the value of <code class="docutils literal"><span class="pre">2</span> <span cla
 </div>
 <p>which simplifies to 488.</p>
 <p>With the sample run, <code class="docutils literal"><span class="pre">ceilingArea</span></code> would get the value 20.5 * 10, or 205.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The wall area is &quot;</span> <span class="p">+</span> <span class="n">wallArea</span>
-                  <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The wall area is &quot;</span> <span class="p">+</span> <span class="n">wallArea</span>
+                        <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This is a single statement.  Line endings act just like a space in C#.
@@ -599,8 +599,8 @@ In the sample output you see what is printed:</p>
 </div>
 <p>sandwiching the value taken from the variable <code class="docutils literal"><span class="pre">wallArea</span></code> between
 two literal string, given in quotes.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The ceiling area is &quot;</span> <span class="p">+</span> <span class="n">ceilingArea</span>
-                  <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The ceiling area is &quot;</span> <span class="p">+</span> <span class="n">ceilingArea</span>
+                        <span class="p">+</span> <span class="s">&quot; square feet.&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This statement behave like the previous one, except with different
@@ -662,7 +662,7 @@ that we return to how you can get the painting program to run on your computer.<
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 05-July-2015 19:23:03.<br/>
+      Last updated on 06-July-2015 00:15:25.<br/>
     </p>
   </div>
 </footer>
