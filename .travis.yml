@@ -14,6 +14,7 @@ addons:
 install:
 - pip install git+https://github.com/sphinx-doc/sphinx
 - pip install sphinx_bootstrap_theme
+- pip list
 script:
 - "./pull-examples.sh"
 - GH_USER=LoyolaChicagoBooks GH_REPO=introcs-csharp "./gh-pages.sh"
