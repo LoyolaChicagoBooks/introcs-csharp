@@ -1,3 +1,19 @@
+commit 74368464d920c203a4117f2a9ec117f1c1054deb
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Fri Jul 10 21:06:51 2015 -0500
+
+    oops: forgot to use pip\!
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
+commit 89f6d386a1b8a88e96b686b5488326e2fb3d8db6
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Fri Jul 10 21:04:59 2015 -0500
+
+    try using Sphinx latest/dev
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 8073c3179c56535212f5118597418c806fac83d7
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 5 14:21:49 2015 -0500
@@ -20,19 +36,3 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 5 12:34:28 2015 -0500
 
     Merge branch 'master' of github.com:LoyolaChicagoBooks/introcs-csharp
-
-commit 9ac6666fe68926cb7e90e6173b1a68d696758ac7
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 5 12:33:25 2015 -0500
-
-    add astyle support
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit b4c428c059c3ff50a891942cf89d2c15173b448f
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 4 23:06:51 2015 -0500
-
-    add important note to gh-pages.sh
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
