@@ -12,7 +12,7 @@ addons:
     - texinfo
     - mercurial
 install:
-- git+https://github.com/sphinx-doc/sphinx
+- pip install git+https://github.com/sphinx-doc/sphinx
 - pip install sphinx_bootstrap_theme
 script:
 - "./pull-examples.sh"
