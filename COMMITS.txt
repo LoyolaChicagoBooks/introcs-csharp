@@ -1,3 +1,11 @@
+commit a5cf4fb4fcd6e8936eca9f7b592bdf5500801b25
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 11 20:44:38 2015 -0500
+
+    use stable Sphinx release
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit e3c9cd5fbf5d33d916bd658b8b0f7e37c122c46c
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Fri Jul 10 21:09:05 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 5 14:21:49 2015 -0500
 
     add dedent support for sample program
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit dde0de25f7a4d85894c65e1b171b809edceabbb6
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 5 14:08:26 2015 -0500
-
-    remove astyle / not a whitelisted package on Travis
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
