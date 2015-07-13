@@ -1,3 +1,9 @@
+commit 7e123e172c21e3ce0fee83534657f895cfb09a07
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Mon Jul 13 00:29:04 2015 -0400
+
+    shrunk some lab-wdit pics - first iteration
+
 commit 07df1e075d45c058420fc60ceba3e316e453a433
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sun Jul 12 23:31:54 2015 -0400
@@ -25,13 +31,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Fri Jul 10 21:06:51 2015 -0500
 
     oops: forgot to use pip\!
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 89f6d386a1b8a88e96b686b5488326e2fb3d8db6
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Fri Jul 10 21:04:59 2015 -0500
-
-    try using Sphinx latest/dev
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

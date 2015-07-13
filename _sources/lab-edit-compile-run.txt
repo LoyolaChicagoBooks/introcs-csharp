@@ -98,14 +98,14 @@ a Mac.  Windows versions should be similar.
     ..  image:: images/lab-edit/newProjectTemplateApp.png
         :alt: Xamarin Studio Project Template Image - App
         :align: center
-        :width: 227.25 pt
+        :width: 150 pt
    
     Make sure the template selection gets set to .NET (under Other) as in:
 
     ..  image:: images/lab-edit/newProjectTemplateNet.png
         :alt: Xamarin Studio Project Template Image - .NET
         :align: center
-        :width: 550 pt
+        :width: 360 pt
 
    The center part of the screen then shows further choices appropriate to
    a .NET project.  Make sure **Console Project** is selected, and the language
@@ -119,7 +119,7 @@ a Mac.  Windows versions should be similar.
    .. image:: images/lab-edit/configureProjectForm.png
       :alt: Xamarin Studio Dialog Image
       :align: center
-      :width: 489.3 pt
+      :width: 350 pt
 
    Follow the order below to modify the form.  
    Later parts may not be visible until you do the previous parts.  The 
@@ -128,7 +128,7 @@ a Mac.  Windows versions should be similar.
    .. image:: images/lab-edit/configureCreate.png
       :alt: Xamarin Studio Dialog Image
       :align: center
-      :width: 489.3 pt
+      :width: 360 pt
 
    - Enter **hello** in the Project Name field, for the name of the project.
    - If you want to keep all your work together, we suggest that you
@@ -167,7 +167,7 @@ a Mac.  Windows versions should be similar.
    .. image:: images/lab-edit/Program.png
       :alt: Xamarin Studio Program.cs Image
       :align: center
-      :width: 485.25 pt
+      :width: 300 pt
    
 #. Program.cs should be selected in the Solution Pad, as shown above.  
    Change the selection by clicking on hello. 
@@ -183,7 +183,7 @@ a Mac.  Windows versions should be similar.
    .. image:: images/lab-edit/runMainMenu.png
       :alt: Xamarin Studio Run Program.cs Image
       :align: center
-      :width: 389.25 pt
+      :width: 290 pt
    
     
 #.  Here Xamarin Studio combines several steps: saving the file,
@@ -237,7 +237,7 @@ a Mac.  Windows versions should be similar.
         ..  image:: images/lab-edit/menuRemoveMain.png
             :alt: Xamarin Studio Remove Program.cs Image
             :align: center
-            :width: 326.25 pt
+            :width: 280 pt
    
     -   You get another popup, with the *wrong* (rightmost) button selected,
         Remove From Project.
@@ -264,7 +264,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/addNewFileMenu.png
         :alt: Xamarin Studio Add new file Image
         :align: center
-        :width: 468.75 pt
+        :width: 350 pt
 
 #. In the popup New File Dialog Window, it is likely that the wrong kind of file is 
    highlighted (likely Empty Class). 
@@ -272,7 +272,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/makeEmptyFileDialog.png
         :alt: Xamarin Studio Add empty file Image
         :align: center
-        :width: 427.5 pt
+        :width: 350 pt
 
    Click on **Empty File** instead.  
    Change the Name field from EmptyCSharpFile to hello.cs.  
@@ -285,7 +285,7 @@ a Mac.  Windows versions should be similar.
    ..   image:: images/lab-edit/editEmptyHello.png
         :alt: Xamarin Studio edit empty file Image
         :align: center
-        :width: 272.25 pt 
+        :width: 220 pt 
    
    If it does have text, delete this file, too, and
    go back to the previous step and be sure to select **Empty File**, not Empty Class.
