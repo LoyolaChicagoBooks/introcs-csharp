@@ -383,7 +383,7 @@ actual place where the data for the array is stored.
 In actual compiler implementation this reference is an address in memory.
 In diagrams we will illustrate object references with an arrow <em>pointing</em> to the actual
 location for the object&#8217;s data.  For example after <code class="docutils literal"><span class="pre">a</span></code> is initialized:</p>
-<a class="reference internal image-reference" href="_images/newArray1.png"><img alt="new array" class="align-center" src="_images/newArray1.png" style="width: 437.25pt;" /></a>
+<a class="reference internal image-reference" href="_images/newArray1.png"><img alt="new array" class="align-center" src="_images/newArray1.png" style="width: 300pt;" /></a>
 <p>The small box beside <code class="docutils literal"><span class="pre">a</span></code> is meant to indicate the memory space allocated when <code class="docutils literal"><span class="pre">a</span></code> is
 declared.  As you can see that space does not actually contain the array, but only a
 <em>reference</em> to the array, pointing to the actual sequence of data for the array.
@@ -414,7 +414,7 @@ same final data could be created with the single declaration:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">b</span> <span class="p">=</span> <span class="p">{</span><span class="m">7</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">6</span><span class="p">};</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/newArray2.png"><img alt="new array initialized with braces" class="align-center" src="_images/newArray2.png" style="width: 433.5pt;" /></a>
+<a class="reference internal image-reference" href="_images/newArray2.png"><img alt="new array initialized with braces" class="align-center" src="_images/newArray2.png" style="width: 300pt;" /></a>
 <p>The list in braces ONLY is allowed as an initialization of a variable
 in a <em>declaration</em>, not in a later assignment statement.
 Technically it is an initializer, not an array literal.</p>
@@ -898,13 +898,13 @@ index-handling pattern.</p>
 and this has important implications for
 assignment.</p>
 <p>With a primitive type like an <code class="docutils literal"><span class="pre">int</span></code>, an assignment copies the data:</p>
-<a class="reference internal image-reference" href="_images/intCopy.png"><img alt="copying an int" class="align-center" src="_images/intCopy.png" style="width: 132.75pt;" /></a>
+<a class="reference internal image-reference" href="_images/intCopy.png"><img alt="copying an int" class="align-center" src="_images/intCopy.png" style="width: 90pt;" /></a>
 <p>In the diagram, the contents of the memory box labeled <code class="docutils literal"><span class="pre">b</span></code> is copied to the
 memory box labeled <code class="docutils literal"><span class="pre">d</span></code>. The value of <code class="docutils literal"><span class="pre">d</span></code> starts off equal to the value of <code class="docutils literal"><span class="pre">b</span></code>,
 but can later be changed independently.</p>
 <p>Contrast an assignment with arrays.  The value that is copied is the <em>reference</em>,
 not the array data itself, so both end up pointing at the <em>same</em>  actual array:</p>
-<a class="reference internal image-reference" href="_images/arrayAlias.png"><img alt="copying an array reference" class="align-center" src="_images/arrayAlias.png" style="width: 433.5pt;" /></a>
+<a class="reference internal image-reference" href="_images/arrayAlias.png"><img alt="copying an array reference" class="align-center" src="_images/arrayAlias.png" style="width: 300pt;" /></a>
 <p>Hereafter, array assignments like:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">b</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="p">-</span><span class="m">10</span><span class="p">;</span>
 <span class="n">d</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="m">55</span><span class="p">;</span>
@@ -1346,7 +1346,7 @@ parameter limits are important, too; test them:</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 13-July-2015 04:30:44.<br/>
+      Last updated on 13-July-2015 15:00:00.<br/>
     </p>
   </div>
 </footer>

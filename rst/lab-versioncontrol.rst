@@ -112,7 +112,7 @@ Go to ``Repositories -> Create Repository`` (the option is at the bottom
 of the list of menu options). You'll see this screen:
 
 .. image:: images/lab-hg/hgcreaterepository.png
-   :height: 300 pt
+   :width: 350 pt
    :alt: Xamarin Studio Image
    :align: center
 
@@ -147,7 +147,7 @@ create more of them later.
 Here is an example of a filled out form:
 
 .. image:: images/lab-hg/hgcreaterepository2.png
-   :height: 300 pt
+   :width: 350 pt
    :alt: Xamarin Studio Image
    :align: center
 
@@ -347,7 +347,9 @@ Now do the following steps:
       -rwxrwxr-x 1 gkt gkt 3072 2012-02-20 20:05 hello.exe
 			
 
-#. Check the status::
+#. Check the status:
+
+   .. code-block:: none
 	
       gkt@gkt-mini:~/gkt170/labs$ hg status
       ? .hgignore
@@ -361,10 +363,12 @@ Now do the following steps:
    control if we want to use it wherever we happen to be working with our
    stuff (i.e. when we're not in the computer lab but, say, at home). 
 
-#. Add the file to version control::
+#. Add the file to version control:
+
+   ..  code-block:: none
 
        gkt@gkt-mini:~/gkt170$ hg add .hgignore 
-       
+
        gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 
 #. Commit the changes, and then see the log entry
@@ -379,7 +383,9 @@ Now do the following steps:
        hg commit -u gkt -m "adding an .hgignore file and Hello, World to the project"
    
    It is Ok if your message wraps to a new line.  You can check the log entry created
-   by your commit::
+   by your commit:
+
+   ..  code-block:: none
 
        gkt@gkt-mini:~/gkt170$ hg log
        changeset:   0:9fe6ee1bf907
@@ -389,11 +395,15 @@ Now do the following steps:
        summary:     adding an .hgignore file and Hello, World to the project
 
 #. Push the changes to Bitbucket with the following command. 
-   (You'll be prompted for user/password not shown here)::
+   (You'll be prompted for user/password not shown here):
+
+   ..  code-block:: none
 
        hg push 
        
-   You should get a response like::
+   You should get a response like:
+
+   ..  code-block:: none
    
        pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
        searching for changes
@@ -414,7 +424,9 @@ So let's do it:
 
 #. Make sure you are in the checkout directory, or ``cd`` to it.
    
-#. Create directories::
+#. Create directories:
+
+   ..  code-block:: none
 
        mkdir hw
        mkdir labs
@@ -442,8 +454,10 @@ So let's do it:
     
     
     
-    #. Now let's do a status check::
-    
+    #. Now let's do a status check:
+
+       ..  code-block:: none
+   
            $ hg status
            ? labs/hello.cs
            ? labs/hello.exe
@@ -497,7 +511,9 @@ Create and Test Content
    can use the **hg rm** command to remove it. We have nothing at the moment that
    we want to remove, but want to make you aware that correcting mistakes is possible.
 
-#. As before, commit and push.  Here is a sequence from Dr. Thiruvathukal's Mac::
+#. As before, commit and push.  Here is a sequence from Dr. Thiruvathukal's Mac:
+
+   ..   code-block:: none
 
         gkt@gkt-mini:~/gkt170$ hg commit -m "adding hello program"
         gkt@gkt-mini:~/gkt170$ hg push
@@ -532,7 +548,7 @@ Do the following:
    source". So go to the *Source* tab.
 
    .. image:: images/lab-hg/bitbucket-source.png
-      :height: 290 pt
+      :width: 350 pt
       :alt: Xamarin Studio Image
       :align: center
 
@@ -589,9 +605,11 @@ Harrington and Thiruvathukal) are actually using the stuff we are teaching to wo
 a team on developing the book and examples. 
 
 #. Pick a different location (outside of your repository folder and its subfolders) 
-   to check out our stuff from Bitbucket::
+   to check out our stuff from Bitbucket:
 
-    hg clone https://gkthiruvathukal@bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
+   ..  code-block:: none
+
+       hg clone https://gkthiruvathukal@bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
 
 
 #. Don't worry about breaking anything. Because Bitbucket knows what users are allowed
@@ -611,7 +629,9 @@ a team on developing the book and examples.
 
 #. For example, if you performed a clone to introcs-csharp-examples, you should be able to change
    directory one starting with 
-   loyolachicagocs_books-introcs-csharp-examples-... to see all of our code examples::
+   loyolachicagocs_books-introcs-csharp-examples-... to see all of our code examples:
+
+   ..   code-block:: none
 
         gkt@gkt-mini:~/loyolachicagocs_books-introcs-csharp-examples-662ea45b9965$ ls
         addition1

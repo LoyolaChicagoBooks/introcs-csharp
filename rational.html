@@ -638,7 +638,7 @@ so immediately, there is a <code class="docutils literal"><span class="pre">this
 The parameters 6, and -10 are passed, initializing the explicit local
 variables <code class="docutils literal"><span class="pre">numerator</span></code> and <code class="docutils literal"><span class="pre">denominator</span></code>.
 The figure illustrates the memory state at the beginning of the constructor call:</p>
-<a class="reference internal image-reference" href="_images/callConstructor.png"><img alt="_images/callConstructor.png" src="_images/callConstructor.png" style="width: 207pt;" /></a>
+<a class="reference internal image-reference" href="_images/callConstructor.png"><img alt="_images/callConstructor.png" src="_images/callConstructor.png" style="width: 124pt;" /></a>
 <p>Note the immediate value assigned to the numeric instance variables is zero:  This is
 as discussed in <a class="reference internal" href="onedim.html#default-fields"><span>Default Initializations</span></a>.
 Of course we do not want to keep those default values:
@@ -648,27 +648,27 @@ first for a local variable <code class="docutils literal"><span class="pre">num<
 Then it looked <em>second</em> for an instance variable in the object pointed to
 by <code class="docutils literal"><span class="pre">this</span></code>.  It found <code class="docutils literal"><span class="pre">num</span></code> there.  Now it copies the 6 into that location.
 Similarly for <code class="docutils literal"><span class="pre">denominator</span></code> and <code class="docutils literal"><span class="pre">denom</span></code>:</p>
-<a class="reference internal image-reference" href="_images/callConstructorCopied.png"><img alt="_images/callConstructorCopied.png" src="_images/callConstructorCopied.png" style="width: 207pt;" /></a>
+<a class="reference internal image-reference" href="_images/callConstructorCopied.png"><img alt="_images/callConstructorCopied.png" src="_images/callConstructorCopied.png" style="width: 124pt;" /></a>
 <p>Then the constructor calls <code class="docutils literal"><span class="pre">Normalize</span></code>.
 Since <code class="docutils literal"><span class="pre">Normalize</span></code> is also an instance method,
 a reference to <code class="docutils literal"><span class="pre">this</span></code> is passed implicitly.
 While illustrating the memory state for more than one active method,
 we separate each one with a horizontal segment.</p>
-<img alt="_images/callNormalize.png" src="_images/callNormalize.png" />
+<a class="reference internal image-reference" href="_images/callNormalize.png"><img alt="_images/callNormalize.png" src="_images/callNormalize.png" style="width: 124pt;" /></a>
 <p>Later <code class="docutils literal"><span class="pre">Normalize</span></code> calls <code class="docutils literal"><span class="pre">GCD</span></code>.  Since <code class="docutils literal"><span class="pre">GCD</span></code> is static, note that the local
 variables for <code class="docutils literal"><span class="pre">GCD</span></code> do <em>not</em> contain a reference to <code class="docutils literal"><span class="pre">this</span></code>.</p>
-<a class="reference internal image-reference" href="_images/callGCD.png"><img alt="_images/callGCD.png" src="_images/callGCD.png" style="width: 207pt;" /></a>
+<a class="reference internal image-reference" href="_images/callGCD.png"><img alt="_images/callGCD.png" src="_images/callGCD.png" style="width: 124pt;" /></a>
 <p>At the end of <code class="docutils literal"><span class="pre">GCD</span></code> the <code class="docutils literal"><span class="pre">int</span></code> 2 is returned and initializes
 <code class="docutils literal"><span class="pre">n</span></code> in the calling method <code class="docutils literal"><span class="pre">Normalize</span></code>.
 Then <code class="docutils literal"><span class="pre">Normalize</span></code> modifies the instance variable pointed to by <code class="docutils literal"><span class="pre">this</span></code>,
 and finishes.</p>
-<a class="reference internal image-reference" href="_images/finishNormalize.png"><img alt="_images/finishNormalize.png" src="_images/finishNormalize.png" style="width: 207pt;" /></a>
+<a class="reference internal image-reference" href="_images/finishNormalize.png"><img alt="_images/finishNormalize.png" src="_images/finishNormalize.png" style="width: 124pt;" /></a>
 <p>That is the same object <code class="docutils literal"><span class="pre">this</span></code> in the constructor.
 Just before the constructor completes we have:</p>
-<a class="reference internal image-reference" href="_images/finishConstructor.png"><img alt="_images/finishConstructor.png" src="_images/finishConstructor.png" style="width: 207pt;" /></a>
+<a class="reference internal image-reference" href="_images/finishConstructor.png"><img alt="_images/finishConstructor.png" src="_images/finishConstructor.png" style="width: 124pt;" /></a>
 <p>Then in <code class="docutils literal"><span class="pre">Main</span></code> the constructor&#8217;s <code class="docutils literal"><span class="pre">this</span></code> is the reference to the new object
 initializing <code class="docutils literal"><span class="pre">f</span></code>.</p>
-<a class="reference internal image-reference" href="_images/setF.png"><img alt="_images/setF.png" src="_images/setF.png" style="width: 198pt;" /></a>
+<a class="reference internal image-reference" href="_images/setF.png"><img alt="_images/setF.png" src="_images/setF.png" style="width: 120pt;" /></a>
 <p>Consider the next line of <code class="docutils literal"><span class="pre">Main</span></code>:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
 </pre></div>
@@ -696,14 +696,14 @@ see what the implicit <code class="docutils literal"><span class="pre">this</spa
 (local to <code class="docutils literal"><span class="pre">Add</span></code>) variable <code class="docutils literal"><span class="pre">f</span></code> refer to.  As the figure shows,
 this use of a local variable
 <code class="docutils literal"><span class="pre">f</span></code> is independent of the <code class="docutils literal"><span class="pre">f</span></code> in <code class="docutils literal"><span class="pre">Main</span></code>:</p>
-<a class="reference internal image-reference" href="_images/callAdd.png"><img alt="_images/callAdd.png" src="_images/callAdd.png" style="width: 220.5pt;" /></a>
+<a class="reference internal image-reference" href="_images/callAdd.png"><img alt="_images/callAdd.png" src="_images/callAdd.png" style="width: 132pt;" /></a>
 <p>Since the return statement in <code class="docutils literal"><span class="pre">Add</span></code> creates a new object,
 the figure shows  a call to the
 constructor from inside <code class="docutils literal"><span class="pre">Add</span></code>.  We do not go through the details of another
 constructor call, but
 <code class="docutils literal"><span class="pre">this</span></code> in the constructor points to the Rational shown and returned by
 <code class="docutils literal"><span class="pre">Add</span></code>:</p>
-<a class="reference internal image-reference" href="_images/endAdd.png"><img alt="_images/endAdd.png" src="_images/endAdd.png" style="width: 220.5pt;" /></a>
+<a class="reference internal image-reference" href="_images/endAdd.png"><img alt="_images/endAdd.png" src="_images/endAdd.png" style="width: 132pt;" /></a>
 <p>which gets sent to the <code class="docutils literal"><span class="pre">WriteLine</span></code> statement
 and gets printed in <code class="docutils literal"><span class="pre">Main</span></code> as in the earlier code.</p>
 <p>Make sure you see how the pictures reinforce these important ideas:</p>
@@ -733,7 +733,7 @@ that <em>only local variables can be referenced directly</em>
 (including the implicit <code class="docutils literal"><span class="pre">this</span></code>).   If you want to refer to data that is not a local
 variable, you must follow the reference path arrow that leads <em>from a local variable</em> to
 an instance field that you want to reference.</p>
-<a class="reference internal image-reference" href="_images/pathToNum.png"><img alt="_images/pathToNum.png" src="_images/pathToNum.png" style="width: 220.5pt;" /></a>
+<a class="reference internal image-reference" href="_images/pathToNum.png"><img alt="_images/pathToNum.png" src="_images/pathToNum.png" style="width: 132pt;" /></a>
 <p>Then use the proper object-oriented notation to refer to the path.
 In the example, it takes one step,
 from local variable <code class="docutils literal"><span class="pre">f</span></code> to its field <code class="docutils literal"><span class="pre">num</span></code>, referred to as <code class="docutils literal"><span class="pre">f.num</span></code>.
@@ -806,7 +806,7 @@ do a graphical play-computer like in the last section.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 13-July-2015 04:30:44.<br/>
+      Last updated on 13-July-2015 15:00:00.<br/>
     </p>
   </div>
 </footer>

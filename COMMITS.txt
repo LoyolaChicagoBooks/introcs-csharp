@@ -1,3 +1,10 @@
+commit 858df069e828adafcf35f3a8569b1d69c7c456ad
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Mon Jul 13 10:31:37 2015 -0400
+
+    All pics reduced, though pic and text for Xamarin likely out of date past lab-edit.
+    Removed :: from bash setoff (which forced indent) - should be code block none
+
 commit 7e123e172c21e3ce0fee83534657f895cfb09a07
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Mon Jul 13 00:29:04 2015 -0400
@@ -23,13 +30,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Fri Jul 10 21:09:05 2015 -0500
 
     add pip list to ensure proper packages are present
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 74368464d920c203a4117f2a9ec117f1c1054deb
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Fri Jul 10 21:06:51 2015 -0500
-
-    oops: forgot to use pip\!
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

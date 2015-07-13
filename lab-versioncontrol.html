@@ -407,7 +407,7 @@ are good to go for the rest of this lab!</p>
 <p>Now we&#8217;ll create a first repository at Bitbucket.org.</p>
 <p>Go to <code class="docutils literal"><span class="pre">Repositories</span> <span class="pre">-&gt;</span> <span class="pre">Create</span> <span class="pre">Repository</span></code> (the option is at the bottom
 of the list of menu options). You&#8217;ll see this screen:</p>
-<a class="reference internal image-reference" href="_images/hgcreaterepository.png"><img alt="Xamarin Studio Image" class="align-center" src="_images/hgcreaterepository.png" style="height: 300pt;" /></a>
+<a class="reference internal image-reference" href="_images/hgcreaterepository.png"><img alt="Xamarin Studio Image" class="align-center" src="_images/hgcreaterepository.png" style="width: 350pt;" /></a>
 <p>You&#8217;ll need to fill in or select the following options:</p>
 <ul class="simple">
 <li>Name: A short name for your project. You are encouraged to keep this
@@ -431,7 +431,7 @@ in the description.</li>
 <p>So just go ahead and create your first repository. You can always
 create more of them later.</p>
 <p>Here is an example of a filled out form:</p>
-<a class="reference internal image-reference" href="_images/hgcreaterepository2.png"><img alt="Xamarin Studio Image" class="align-center" src="_images/hgcreaterepository2.png" style="height: 300pt;" /></a>
+<a class="reference internal image-reference" href="_images/hgcreaterepository2.png"><img alt="Xamarin Studio Image" class="align-center" src="_images/hgcreaterepository2.png" style="width: 350pt;" /></a>
 </div>
 <div class="section" id="set-up-your-mercurial-commit-username">
 <h3>18.10.2.3. Set up your Mercurial commit username<a class="headerlink" href="#set-up-your-mercurial-commit-username" title="Permalink to this headline">¶</a></h3>
@@ -611,7 +611,7 @@ total 8
 </div>
 </li>
 <li><p class="first">Check the status:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170/labs$ hg status
+<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170/labs$ hg status
 ? .hgignore
 ? labs/hello.cs
 </pre></div>
@@ -624,7 +624,7 @@ control if we want to use it wherever we happen to be working with our
 stuff (i.e. when we&#8217;re not in the computer lab but, say, at home).</p>
 </li>
 <li><p class="first">Add the file to version control:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg add .hgignore
+<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg add .hgignore
 
 gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 </pre></div>
@@ -643,7 +643,7 @@ with -u yourName after <code class="docutils literal"><span class="pre">commit</
 </div></blockquote>
 <p>It is Ok if your message wraps to a new line.  You can check the log entry created
 by your commit:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg log
+<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg log
 changeset:   0:9fe6ee1bf907
 tag:         tip
 user:        George K. Thiruvathukal &lt;gkt@cs.luc.edu&gt;
@@ -654,17 +654,17 @@ summary:     adding an .hgignore file and Hello, World to the project
 </li>
 <li><p class="first">Push the changes to Bitbucket with the following command.
 (You&#8217;ll be prompted for user/password not shown here):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">hg</span> <span class="n">push</span>
+<div class="highlight-none"><div class="highlight"><pre>hg push
 </pre></div>
 </div>
 <p>You should get a response like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">pushing</span> <span class="n">to</span> <span class="n">https</span><span class="p">:</span><span class="c1">//gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170</span>
-<span class="n">searching</span> <span class="k">for</span> <span class="n">changes</span>
-<span class="n">remote</span><span class="p">:</span> <span class="n">adding</span> <span class="n">changesets</span>
-<span class="n">remote</span><span class="p">:</span> <span class="n">adding</span> <span class="n">manifests</span>
-<span class="n">remote</span><span class="p">:</span> <span class="n">adding</span> <span class="n">file</span> <span class="n">changes</span>
-<span class="n">remote</span><span class="p">:</span> <span class="n">added</span> <span class="m">1</span> <span class="n">changesets</span> <span class="n">with</span> <span class="m">2</span> <span class="n">changes</span> <span class="n">to</span> <span class="m">2</span> <span class="n">files</span>
-<span class="n">remote</span><span class="p">:</span> <span class="n">bb</span><span class="p">/</span><span class="n">acl</span><span class="p">:</span> <span class="n">gkthiruvathukal</span> <span class="k">is</span> <span class="n">allowed</span><span class="p">.</span> <span class="n">accepted</span> <span class="n">payload</span><span class="p">.</span>
+<div class="highlight-none"><div class="highlight"><pre>pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
+searching for changes
+remote: adding changesets
+remote: adding manifests
+remote: adding file changes
+remote: added 1 changesets with 2 changes to 2 files
+remote: bb/acl: gkthiruvathukal is allowed. accepted payload.
 </pre></div>
 </div>
 </li>
@@ -680,8 +680,8 @@ one or more folders, like work, or homework and labs.</p>
 <li><p class="first">Make sure you are in the checkout directory, or <code class="docutils literal"><span class="pre">cd</span></code> to it.</p>
 </li>
 <li><p class="first">Create directories:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">mkdir</span> <span class="n">hw</span>
-<span class="n">mkdir</span> <span class="n">labs</span>
+<div class="highlight-none"><div class="highlight"><pre>mkdir hw
+mkdir labs
 </pre></div>
 </div>
 <p>We will be creating items in each one of these folders during the lab.</p>
@@ -736,7 +736,7 @@ can use the <strong>hg rm</strong> command to remove it. We have nothing at the 
 we want to remove, but want to make you aware that correcting mistakes is possible.</p>
 </li>
 <li><p class="first">As before, commit and push.  Here is a sequence from Dr. Thiruvathukal&#8217;s Mac:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg commit -m &quot;adding hello program&quot;
+<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg commit -m &quot;adding hello program&quot;
 gkt@gkt-mini:~/gkt170$ hg push
 pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170\
 searching for changes
@@ -769,7 +769,7 @@ of which likely happened just &#8220;minutes ago&#8221;.</p>
 <li><p class="first">You can click on any revision to see what changes were made. It is ok to do so at this
 time, but we&#8217;re going to take a look at the powerful capability of &#8220;looking at the
 source&#8221;. So go to the <em>Source</em> tab.</p>
-<a class="reference internal image-reference" href="_images/bitbucket-source.png"><img alt="Xamarin Studio Image" class="align-center" src="_images/bitbucket-source.png" style="height: 290pt;" /></a>
+<a class="reference internal image-reference" href="_images/bitbucket-source.png"><img alt="Xamarin Studio Image" class="align-center" src="_images/bitbucket-source.png" style="width: 350pt;" /></a>
 </li>
 <li><p class="first">If all was done properly, you will see .hgignore and labs. These
 were all the result of our earlier sequence of commit+push operations. You can click on
@@ -815,7 +815,7 @@ a team on developing the book and examples.</p>
 <ol class="arabic">
 <li><p class="first">Pick a different location (outside of your repository folder and its subfolders)
 to check out our stuff from Bitbucket:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//gkthiruvathukal@bitbucket.org/loyolachicagocs_books/introcs-csharp-examples</span>
+<div class="highlight-none"><div class="highlight"><pre>hg clone https://gkthiruvathukal@bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
 </pre></div>
 </div>
 </li>
@@ -827,7 +827,7 @@ to push changes to our repository, anything you change in your copy won&#8217;t 
 <li><p class="first">For example, if you performed a clone to introcs-csharp-examples, you should be able to change
 directory one starting with
 loyolachicagocs_books-introcs-csharp-examples-... to see all of our code examples:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>gkt@gkt-mini:~/loyolachicagocs_books-introcs-csharp-examples-662ea45b9965$ ls
+<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/loyolachicagocs_books-introcs-csharp-examples-662ea45b9965$ ls
 addition1
 ...
 write_test
@@ -855,7 +855,7 @@ write_test
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 13-July-2015 04:30:44.<br/>
+      Last updated on 13-July-2015 15:00:00.<br/>
     </p>
   </div>
 </footer>
