@@ -250,8 +250,10 @@ There are many different (and more exciting) patterns of change coming
 for loops, 
 but the simple examples so far get us started.
 
-.. index:: while; rubric for planning
-   loop; rubric for planning
+.. index:: while; planning rubric
+   loop; planning rubric
+   rubric; planning a loop
+   planning; loop rubric
 
 .. _loop-rubric:
 
@@ -259,7 +261,8 @@ but the simple examples so far get us started.
    
 Looking ahead to more complicated and interesting problems,
 here is a more complete list of questions to ask yourself when
-designing a function with a ``while`` loop:
+designing a function with a ``while`` loop (and most will apply to 
+later forms of loops, too):
 
 -  What data is involved? Make sure you give good variable names.
 -  What needs to be initialized and how? This certainly includes any
