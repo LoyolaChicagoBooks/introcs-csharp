@@ -37,7 +37,7 @@ and ``Console.Write``, in example :repsrc:`write_test/write_test.cs`:
 
 When run, the program prints:
 
-.. code-block:: none
+..  code-block:: none
 
     hellotherehello
     Another line
@@ -68,7 +68,7 @@ in a solution, like your work solution:
 #. Select Options.
    
    .. image:: images/select_options.png
-      :width: 332.25 pt
+      :width: 200 pt
    
 #. In the popup Solution Options Window, you will see "Code Formatting" 
    in the left column.  If you do not see "C# source code" and then "Text file"
@@ -76,7 +76,7 @@ in a solution, like your work solution:
    click on "Code Formatting" to expand the hierarchy.
   
    .. image:: images/set_indent.png 
-      :width: 351.75 pt
+      :width: 300 pt
    
 #. Click on Text file, and then the right side should show options.  
    Adjust them to look like the picture: tab and indent widths 3, 

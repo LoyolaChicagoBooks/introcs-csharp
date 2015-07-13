@@ -54,7 +54,7 @@ location for the object's data.  For example after ``a`` is initialized:
 .. image:: images/newArray1.png
    :alt: new array
    :align: center
-   :width: 437.25 pt
+   :width: 300 pt
 
 The small box beside ``a`` is meant to indicate the memory space allocated when ``a`` is
 declared.  As you can see that space does not actually contain the array, but only a 
@@ -99,7 +99,7 @@ same final data could be created with the single declaration::
 .. image:: images/newArray2.png
    :alt: new array initialized with braces
    :align: center
-   :width: 433.5 pt
+   :width: 300 pt
 
 The list in braces ONLY is allowed as an initialization of a variable
 in a *declaration*, not in a later assignment statement.  
@@ -550,7 +550,7 @@ With a primitive type like an ``int``, an assignment copies the data:
 .. image:: images/intCopy.png
    :alt: copying an int
    :align: center
-   :width: 132.75 pt
+   :width: 90 pt
 
 In the diagram, the contents of the memory box labeled ``b`` is copied to the
 memory box labeled ``d``. The value of ``d`` starts off equal to the value of ``b``, 
@@ -562,7 +562,7 @@ not the array data itself, so both end up pointing at the *same*  actual array:
 .. image:: images/arrayAlias.png
    :alt: copying an array reference
    :align: center
-   :width: 433.5 pt
+   :width: 300 pt
    
 Hereafter, array assignments like::
 

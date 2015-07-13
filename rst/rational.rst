@@ -268,7 +268,7 @@ variables ``numerator`` and ``denominator``.
 The figure illustrates the memory state at the beginning of the constructor call:
 
 .. image:: images/callConstructor.png
-   :width: 207 pt
+   :width: 124 pt
 
 Note the immediate value assigned to the numeric instance variables is zero:  This is 
 as discussed in :ref:`default-fields`.  
@@ -281,7 +281,7 @@ by ``this``.  It found ``num`` there.  Now it copies the 6 into that location.
 Similarly for ``denominator`` and ``denom``:
 
 .. image:: images/callConstructorCopied.png
-   :width: 207 pt
+   :width: 124 pt
 
 Then the constructor calls ``Normalize``.  
 Since ``Normalize`` is also an instance method,
@@ -290,12 +290,13 @@ While illustrating the memory state for more than one active method,
 we separate each one with a horizontal segment.
 
 .. image:: images/callNormalize.png
+   :width: 124 pt
 
 Later ``Normalize`` calls ``GCD``.  Since ``GCD`` is static, note that the local 
 variables for ``GCD`` do *not* contain a reference to ``this``.
 
 .. image:: images/callGCD.png
-   :width: 207 pt
+   :width: 124 pt
 
 At the end of ``GCD`` the ``int`` 2 is returned and initializes 
 ``n`` in the calling method ``Normalize``.
@@ -303,19 +304,19 @@ Then ``Normalize`` modifies the instance variable pointed to by ``this``,
 and finishes.
 
 .. image:: images/finishNormalize.png
-   :width: 207 pt
+   :width: 124 pt
 
 That is the same object ``this`` in the constructor.  
 Just before the constructor completes we have:
 
 .. image:: images/finishConstructor.png
-   :width: 207 pt
+   :width: 124 pt
 
 Then in ``Main`` the constructor's ``this`` is the reference to the new object 
 initializing ``f``.
 
 .. image:: images/setF.png
-   :width: 198 pt
+   :width: 120 pt
 
 Consider the next line of ``Main``::
 
@@ -351,7 +352,7 @@ this use of a local variable
 ``f`` is independent of the ``f`` in ``Main``:
 
 .. image:: images/callAdd.png
-   :width: 220.5 pt
+   :width: 132 pt
 
 Since the return statement in ``Add`` creates a new object, 
 the figure shows  a call to the
@@ -361,7 +362,7 @@ constructor call, but
 ``Add``:
 
 .. image:: images/endAdd.png
-   :width: 220.5 pt
+   :width: 132 pt
 
 which gets sent to the ``WriteLine`` statement 
 and gets printed in ``Main`` as in the earlier code.
@@ -396,7 +397,7 @@ variable, you must follow the reference path arrow that leads *from a local vari
 an instance field that you want to reference. 
 
 .. image:: images/pathToNum.png
-   :width: 220.5 pt
+   :width: 132 pt
 
 Then use the proper object-oriented notation to refer to the path.  
 In the example, it takes one step,
