@@ -55,7 +55,7 @@ explanations! Try to get the gist now and the details later.
 The different colors are used in modern program editors to
 emphasize the different uses of the parts of the program.
     
-We give a line by line explanation:
+We give a line by line explanation: 
 
 .. literalinclude:: ../source/examples/painting/painting.cs
    :lines: 1

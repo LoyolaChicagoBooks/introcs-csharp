@@ -25,7 +25,6 @@ examples:
      ints string to array (allowing multiple blanks and commas?)
      count in range
    countMAtches?  many forms
-   moreLoopArrayProblemms.doc   !! good
    files:  .cs source to sphinx script
    in classes:  playComp/objectChange.java
                  toString/MailItem.java
@@ -35,9 +34,6 @@ examples:
    
    sample exams
    exam solutions in appendix
-   
-   more classes examples/ex
-   more interface examples/ex
    
    delegates
    recursion

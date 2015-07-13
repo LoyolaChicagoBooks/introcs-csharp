@@ -11,7 +11,8 @@ Introduction to Computer Science
 
 Available in `PDF <http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf>`_ or `EPUB <http://books.cs.luc.edu/introcs-csharp/download/comp170.epub>`_.
 
-**Table of Contents**
+.. out of place in pdf
+   **Table of Contents**
 
 .. toctree::
    :maxdepth: 2
