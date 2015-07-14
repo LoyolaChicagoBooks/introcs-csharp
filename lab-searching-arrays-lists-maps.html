@@ -422,21 +422,21 @@ searching on integer arrays:</p>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">static</span> <span class="kt">long</span> <span class="nf">ExperimentIntArrayLinearSearch</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rep</span><span class="p">,</span> <span class="kt">int</span> <span class="n">seed</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="n">Stopwatch</span> <span class="n">watch</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Stopwatch</span> <span class="p">();</span>
-         <span class="kt">int</span><span class="p">[]</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
-         <span class="n">Sorting</span><span class="p">.</span><span class="n">IntArrayGenerate</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">seed</span><span class="p">);</span>
-         <span class="kt">int</span> <span class="n">m</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="n">Max</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">n</span><span class="p">/</span><span class="n">rep</span><span class="p">);</span>
-         <span class="n">watch</span><span class="p">.</span><span class="n">Reset</span> <span class="p">();</span>
-         <span class="n">watch</span><span class="p">.</span><span class="n">Start</span> <span class="p">();</span>
-         <span class="c1">// perform the rep lookups</span>
-         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">k</span> <span class="p">&lt;</span> <span class="n">rep</span><span class="p">;</span> <span class="n">k</span><span class="p">++,</span> <span class="n">i</span><span class="p">=(</span><span class="n">i</span><span class="p">+</span><span class="n">m</span><span class="p">)%</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Searching</span><span class="p">.</span><span class="n">IntArrayLinearSearch</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span> <span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-         <span class="p">}</span>
-         <span class="n">watch</span><span class="p">.</span><span class="n">Stop</span> <span class="p">();</span>
-         <span class="k">return</span> <span class="n">watch</span><span class="p">.</span><span class="n">ElapsedMilliseconds</span><span class="p">;</span>
-      <span class="p">}</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="kt">long</span> <span class="nf">ExperimentIntArrayLinearSearch</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rep</span><span class="p">,</span> <span class="kt">int</span> <span class="n">seed</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">Stopwatch</span> <span class="n">watch</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Stopwatch</span> <span class="p">();</span>
+   <span class="kt">int</span><span class="p">[]</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+   <span class="n">Sorting</span><span class="p">.</span><span class="n">IntArrayGenerate</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">seed</span><span class="p">);</span>
+   <span class="kt">int</span> <span class="n">m</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="n">Max</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">n</span><span class="p">/</span><span class="n">rep</span><span class="p">);</span>
+   <span class="n">watch</span><span class="p">.</span><span class="n">Reset</span> <span class="p">();</span>
+   <span class="n">watch</span><span class="p">.</span><span class="n">Start</span> <span class="p">();</span>
+   <span class="c1">// perform the rep lookups</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">k</span> <span class="p">&lt;</span> <span class="n">rep</span><span class="p">;</span> <span class="n">k</span><span class="p">++,</span> <span class="n">i</span><span class="p">=(</span><span class="n">i</span><span class="p">+</span><span class="n">m</span><span class="p">)%</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Searching</span><span class="p">.</span><span class="n">IntArrayLinearSearch</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span> <span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+   <span class="p">}</span>
+   <span class="n">watch</span><span class="p">.</span><span class="n">Stop</span> <span class="p">();</span>
+   <span class="k">return</span> <span class="n">watch</span><span class="p">.</span><span class="n">ElapsedMilliseconds</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>Let&#8217;s take a quick look at how this experiment is constructed. We&#8217;ll also take a
@@ -560,7 +560,7 @@ Keep <code class="docutils literal"><span class="pre">rep*n</span></code> small 
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 13-July-2015 15:00:00.<br/>
+      Last updated on 14-July-2015 21:15:19.<br/>
     </p>
   </div>
 </footer>

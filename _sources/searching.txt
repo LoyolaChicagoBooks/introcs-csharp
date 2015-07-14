@@ -27,6 +27,7 @@ array:
    :start-after: chunk-linearsearch-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 Here's what it does:
 
@@ -51,6 +52,7 @@ Here's what it does:
    :start-after: chunk-linearsearchfrom-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 The following code in ``Main`` of :repsrc:`searching/searching_demo.cs`
 demonstrates how to use the linear search: 
@@ -59,6 +61,7 @@ demonstrates how to use the linear search:
    :start-after: chunk
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 In this example, we ask the user to enter all the data for the array
 on one line. To convert the string to an int array we

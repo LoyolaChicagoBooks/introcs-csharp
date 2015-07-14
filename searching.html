@@ -332,18 +332,18 @@ array:</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="c1">/// Return the index of the first position in data</span>
-      <span class="c1">/// where item appears, or -1 if item does not appear.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">IntArrayLinearSearch</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">item</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">N</span><span class="p">=</span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
-         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
-               <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
-            <span class="p">}</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">/// Return the index of the first position in data</span>
+<span class="c1">/// where item appears, or -1 if item does not appear.</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">IntArrayLinearSearch</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">N</span><span class="p">=</span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
       <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>Here&#8217;s what it does:</p>
@@ -378,25 +378,21 @@ something like the following:</li>
 13
 14
 15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="c1">/// Return the first index &gt;= start in data where</span>
-      <span class="c1">/// item appears, or -1 if item does not appear there.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">IntArrayLinearSearch</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">item</span><span class="p">,</span>
-                                             <span class="kt">int</span> <span class="n">start</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">N</span><span class="p">=</span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">start</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="n">start</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
-               <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
-            <span class="p">}</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
+16</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">/// Return the first index &gt;= start in data where</span>
+<span class="c1">/// item appears, or -1 if item does not appear there.</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">IntArrayLinearSearch</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">item</span><span class="p">,</span>
+                                       <span class="kt">int</span> <span class="n">start</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">N</span><span class="p">=</span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">start</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="n">start</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
       <span class="p">}</span>
    <span class="p">}</span>
+   <span class="k">return</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
@@ -426,31 +422,31 @@ demonstrates how to use the linear search:</p>
 22
 23
 24
-25</pre></div></td><td class="code"><div class="highlight"><pre>         <span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
-                           <span class="s">&quot;Please enter integers, separated by spaces and/or comma: &quot;</span><span class="p">);</span>
-         <span class="kt">int</span><span class="p">[]</span> <span class="n">data</span> <span class="p">=</span> <span class="n">ExtractFromString</span><span class="p">.</span><span class="n">IntsFromString</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
-         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;data[{0}]={1}&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-         <span class="p">}</span>
-         <span class="kt">string</span> <span class="n">prompt</span> <span class="p">=</span>
-            <span class="s">&quot;Please enter a number to find (blank line to end): &quot;</span><span class="p">;</span>
-         <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
-         <span class="k">while</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">searchItem</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
-            <span class="kt">int</span> <span class="n">searchPos</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptIntInRange</span><span class="p">(</span>
-                               <span class="s">&quot;At what position should the search start? &quot;</span><span class="p">,</span>
-                               <span class="m">0</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
-            <span class="kt">int</span> <span class="n">foundPos</span> <span class="p">=</span>
-               <span class="n">Searching</span><span class="p">.</span><span class="n">IntArrayLinearSearch</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">searchItem</span><span class="p">,</span> <span class="n">searchPos</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">foundPos</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-               <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Item {0} not found&quot;</span><span class="p">,</span> <span class="n">searchItem</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="k">else</span> <span class="p">{</span>
-               <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Item {0} found at position {1}&quot;</span><span class="p">,</span>
-                                 <span class="n">searchItem</span><span class="p">,</span> <span class="n">foundPos</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
-         <span class="p">}</span>
+25</pre></div></td><td class="code"><div class="highlight"><pre>   <span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
+                     <span class="s">&quot;Please enter integers, separated by spaces and/or comma: &quot;</span><span class="p">);</span>
+   <span class="kt">int</span><span class="p">[]</span> <span class="n">data</span> <span class="p">=</span> <span class="n">ExtractFromString</span><span class="p">.</span><span class="n">IntsFromString</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;data[{0}]={1}&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+   <span class="p">}</span>
+   <span class="kt">string</span> <span class="n">prompt</span> <span class="p">=</span>
+      <span class="s">&quot;Please enter a number to find (blank line to end): &quot;</span><span class="p">;</span>
+   <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">searchItem</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+      <span class="kt">int</span> <span class="n">searchPos</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptIntInRange</span><span class="p">(</span>
+                         <span class="s">&quot;At what position should the search start? &quot;</span><span class="p">,</span>
+                         <span class="m">0</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+      <span class="kt">int</span> <span class="n">foundPos</span> <span class="p">=</span>
+         <span class="n">Searching</span><span class="p">.</span><span class="n">IntArrayLinearSearch</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">searchItem</span><span class="p">,</span> <span class="n">searchPos</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">foundPos</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Item {0} not found&quot;</span><span class="p">,</span> <span class="n">searchItem</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Item {0} found at position {1}&quot;</span><span class="p">,</span>
+                           <span class="n">searchItem</span><span class="p">,</span> <span class="n">foundPos</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
+   <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>In this example, we ask the user to enter all the data for the array
@@ -478,7 +474,7 @@ string as the response, and we test for that to terminate the loop.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 13-July-2015 15:00:00.<br/>
+      Last updated on 14-July-2015 21:15:19.<br/>
     </p>
   </div>
 </footer>

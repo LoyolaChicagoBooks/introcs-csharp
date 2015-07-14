@@ -164,6 +164,7 @@ Here is the stub of the function to complete, reading such data:
 .. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
    :start-after: GetDictionary chunk
    :end-before: chunk
+   :dedent: 6
 
 **Testing**: 
 When you complete this function, the program should behave 
@@ -203,6 +204,7 @@ Extra credit
     .. literalinclude:: ../source/examples/dict_lab_stub/help_not_responses2.txt
        :language: none
        :lines: 1-15
+       :dedent: 12
 
     The line that used to have one key now may have several blank-separated keys.
 

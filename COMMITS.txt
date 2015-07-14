@@ -1,3 +1,11 @@
+commit d144d71125f1e64ad5adcd89eb2bb19c6fde44b7
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Tue Jul 14 16:13:54 2015 -0500
+
+    a bunch of formatting changes for examples
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 858df069e828adafcf35f3a8569b1d69c7c456ad
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Mon Jul 13 10:31:37 2015 -0400
@@ -22,13 +30,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 11 20:44:38 2015 -0500
 
     use stable Sphinx release
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit e3c9cd5fbf5d33d916bd658b8b0f7e37c122c46c
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Fri Jul 10 21:09:05 2015 -0500
-
-    add pip list to ensure proper packages are present
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

@@ -113,6 +113,7 @@ searching on integer arrays:
    :start-after: chunk-experiment1-begin
    :end-before: chunk-experiment1-end
    :linenos:
+   :dedent: 6
 
 Let's take a quick look at how this experiment is constructed. We'll also take a
 look at the other experiments but these will likely be presented in a bit 
