@@ -248,7 +248,8 @@ The other direction for conversion is more problematic:
     csharp> double d= 2.7;
     csharp> int i;
     csharp> i = d;
-    {interactive}(1,4): error CS0266: Cannot implicitly convert type 'double' to 'int'. 
+    {interactive}(1,4): error CS0266: Cannot implicitly convert type
+       'double' to 'int'. 
     An explicit conversion exists (are you missing a cast?)
 
 The ``int`` ``i`` cannot accurately hold the value 2.7.  
@@ -259,7 +260,8 @@ fails if the the ``double`` happens to have an integer value:
 
     csharp> double d = 2.0;
     csharp> int i = d;
-    {interactive}(1,4): error CS0266: Cannot implicitly convert type 'double' to 'int'. 
+    {interactive}(1,4): error CS0266: Cannot implicitly convert type
+       'double' to 'int'. 
     An explicit conversion exists (are you missing a cast?)
 
 .. index:: truncate in cast
