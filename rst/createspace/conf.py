@@ -253,7 +253,7 @@ latex_elements = {
 # Additional stuff for the LaTeX preamble.
 # NB: geometry accepts inner and outer parameters.
 'preamble': r"""
-    \usepackage[papersize={7.5in,9.25in}]{geometry}
+    \usepackage[inner=1.2in,papersize={7.5in,9.25in}]{geometry}
     \setcounter{secnumdepth}{2}
   """,
 }

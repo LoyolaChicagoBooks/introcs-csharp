@@ -1,3 +1,11 @@
+commit e317a2707faddec926d7f119492960b0aa7987fc
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Tue Jul 14 16:42:27 2015 -0500
+
+    fix gutter issue for CreateSpace publishing
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 63be27db17454d62a08f15370f36b4320e087b29
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 14 16:23:56 2015 -0500
@@ -26,9 +34,3 @@ Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Mon Jul 13 00:29:04 2015 -0400
 
     shrunk some lab-wdit pics - first iteration
-
-commit 07df1e075d45c058420fc60ceba3e316e453a433
-Author: Andrew Harrington <aharrin@luc.edu>
-Date:   Sun Jul 12 23:31:54 2015 -0400
-
-    redid edit lab for Xamarin 4.0 - will adjust sizes next
