@@ -483,6 +483,7 @@ in meaning, the word ``override`` *must* be in the heading:
 .. literalinclude:: ../source/examples/contact2/contact2.cs
    :start-after: ToString chunk
    :end-before: chunk
+   :dedent: 6
 
 See what the method does:  it uses the object state to create and
 *return* a single string representation of the object.  
@@ -526,6 +527,7 @@ features illustrated in the testing code:
 .. literalinclude:: ../source/examples/contact2/test_contact2.cs
    :start-after: main chunk
    :end-before: chunk
+   :dedent: 6
 
 Contact is now a type we can use with other types.  ``Main`` ends creating
 a ``List<Contact>`` and an array of Contacts, and processes Contacts in the

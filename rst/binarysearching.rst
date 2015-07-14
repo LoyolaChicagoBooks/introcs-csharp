@@ -61,6 +61,7 @@ in :repsrc:`binary_searching/binary_searching.cs` that does the work:
    :start-after: chunk-binarysearch-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 Here's a quick explanation, because it largely follows from the above explanation.
 
@@ -101,6 +102,8 @@ It also references previous example projects: functions from files
    :start-after: chunk
    :end-before: chunk
    :linenos:
+   :dedent: 6 
+   
 
 Elaborated Binary Search Exercise
 ----------------------------------
