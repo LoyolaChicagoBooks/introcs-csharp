@@ -90,6 +90,7 @@ is useful by itself and later for use in the
 .. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
    :start-after: ReadParagraph chunk
    :end-before: chunk
+   :dedent: 6
 
 The first call to ``ReadParagraph``, using the file illustrated above, should
 return the following (showing the escape codes for the newlines)::
@@ -204,7 +205,6 @@ Extra credit
     .. literalinclude:: ../source/examples/dict_lab_stub/help_not_responses2.txt
        :language: none
        :lines: 1-15
-       :dedent: 12
 
     The line that used to have one key now may have several blank-separated keys.
 
@@ -213,6 +213,7 @@ Extra credit
     .. literalinclude:: ../source/examples/dict_lab_stub/file_util.cs
        :start-after: Extra credit documentation
        :end-before: }
+       :dedent: 6
 
     Modify the lab project to use this file effectively:  Find
     "help_not_responses.txt" on line 22 in ``Main``.  Change it to
