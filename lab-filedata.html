@@ -408,10 +408,10 @@ the text data needed.</p>
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/dict_lab_stub/file_util.cs">file_util.cs</a>
 is useful by itself and later for use in the
 <code class="docutils literal"><span class="pre">GetParagraphs</span></code> and <code class="docutils literal"><span class="pre">GetDictionary</span></code> that you will complete.  See the stub:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a string consisting of a sequence of nonempty lines read</span>
-      <span class="c1">/// from reader. All the newlines at the ends of these lines are included.</span>
-      <span class="c1">/// The function ends after reading (but not including) an empty line.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">ReadParagraph</span><span class="p">(</span><span class="n">StreamReader</span> <span class="n">reader</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a string consisting of a sequence of nonempty lines read</span>
+<span class="c1">/// from reader. All the newlines at the ends of these lines are included.</span>
+<span class="c1">/// The function ends after reading (but not including) an empty line.</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">ReadParagraph</span><span class="p">(</span><span class="n">StreamReader</span> <span class="n">reader</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The first call to <code class="docutils literal"><span class="pre">ReadParagraph</span></code>, using the file illustrated above, should
@@ -547,32 +547,32 @@ for each key variation, repeating the value paragraph.
 A concise approach is to use a data file
 like <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/dict_lab_stub/help_not_responses2.txt">help_not_responses2.txt</a>.
 Here are the first few lines:</p>
-<div class="highlight-none"><div class="highlight"><pre>s crashed
-er crashes on our system. 
- something to do with your system. 
- about your configuration.
+<div class="highlight-none"><div class="highlight"><pre>crash crashes crashed
+Well, it never crashes on our system. 
+It must have something to do with your system. 
+Tell me more about your configuration.
 
+slow slowly
+I think this has to do with your hardware. 
+Upgrading your processor should solve all 
+performance problems. 
+Have you got a problem with our software?
 
- has to do with your hardware. 
-ur processor should solve all 
-problems. 
- a problem with our software?
-
-
-was quite adequate in all our tests. 
-ing any other processes in the background?
+performance
+Performance was quite adequate in all our tests. 
+Are you running any other processes in the background?
 
 </pre></div>
 </div>
 <p>The line that used to have one key now may have several blank-separated keys.</p>
 <p>Here is how the documentation for <code class="docutils literal"><span class="pre">GetDictionary</span></code> should be changed:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new Dictionary, taking data for it from reader.</span>
-      <span class="c1">/// Reader generates key-value pairs, where one or more space</span>
-      <span class="c1">/// separated keys on a line are followed by a possibly multi-line</span>
-      <span class="c1">/// paragraph value that is terminated by an empty line.  Each</span>
-      <span class="c1">/// key on the line is mapped to the same paragraph that follows.</span>
-      <span class="c1">/// The file must end with two newlines in sequence:  one at the end</span>
-      <span class="c1">/// of the last nonempty line followed by one for the empty line.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a new Dictionary, taking data for it from reader.</span>
+<span class="c1">/// Reader generates key-value pairs, where one or more space</span>
+<span class="c1">/// separated keys on a line are followed by a possibly multi-line</span>
+<span class="c1">/// paragraph value that is terminated by an empty line.  Each</span>
+<span class="c1">/// key on the line is mapped to the same paragraph that follows.</span>
+<span class="c1">/// The file must end with two newlines in sequence:  one at the end</span>
+<span class="c1">/// of the last nonempty line followed by one for the empty line.</span>
 </pre></div>
 </div>
 <p>Modify the lab project to use this file effectively:  Find
@@ -599,7 +599,7 @@ same response, and show to your TA.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 14-July-2015 21:15:19.<br/>
+      Last updated on 14-July-2015 21:25:21.<br/>
     </p>
   </div>
 </footer>

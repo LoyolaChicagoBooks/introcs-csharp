@@ -1,3 +1,11 @@
+commit 63be27db17454d62a08f15370f36b4320e087b29
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Tue Jul 14 16:23:56 2015 -0500
+
+    another indentation issue
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit d144d71125f1e64ad5adcd89eb2bb19c6fde44b7
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 14 16:13:54 2015 -0500
@@ -24,11 +32,3 @@ Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sun Jul 12 23:31:54 2015 -0400
 
     redid edit lab for Xamarin 4.0 - will adjust sizes next
-
-commit a5cf4fb4fcd6e8936eca9f7b592bdf5500801b25
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 11 20:44:38 2015 -0500
-
-    use stable Sphinx release
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
