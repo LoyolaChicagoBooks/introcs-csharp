@@ -1,3 +1,19 @@
+commit b660db3b66227d1c67af62b65c89a23a9996fb65
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Wed Jul 15 10:29:34 2015 -0500
+
+    fix index to match title and remove redundant author info
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
+commit c92331aae90254c78c9892523804b6831073a778
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Tue Jul 14 16:42:42 2015 -0500
+
+    a few more bleeding examples
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit e317a2707faddec926d7f119492960b0aa7987fc
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 14 16:42:27 2015 -0500
@@ -21,16 +37,3 @@ Date:   Tue Jul 14 16:13:54 2015 -0500
     a bunch of formatting changes for examples
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 858df069e828adafcf35f3a8569b1d69c7c456ad
-Author: Andrew Harrington <aharrin@luc.edu>
-Date:   Mon Jul 13 10:31:37 2015 -0400
-
-    All pics reduced, though pic and text for Xamarin likely out of date past lab-edit.
-    Removed :: from bash setoff (which forced indent) - should be code block none
-
-commit 7e123e172c21e3ce0fee83534657f895cfb09a07
-Author: Andrew Harrington <aharrin@luc.edu>
-Date:   Mon Jul 13 00:29:04 2015 -0400
-
-    shrunk some lab-wdit pics - first iteration

@@ -609,7 +609,7 @@ a team on developing the book and examples.
 
    ..  code-block:: none
 
-       hg clone https://gkthiruvathukal@bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
+       hg clone https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
 
 
 #. Don't worry about breaking anything. Because Bitbucket knows what users are allowed
@@ -627,13 +627,12 @@ a team on developing the book and examples.
 
 #. Look under the source tab on the project page.
 
-#. For example, if you performed a clone to introcs-csharp-examples, you should be able to change
-   directory one starting with 
-   loyolachicagocs_books-introcs-csharp-examples-... to see all of our code examples:
+#. For example, if you performed a clone to introcs-csharp-examples, you should be able to change directory to introcs-csharp-examples:
 
    ..   code-block:: none
 
-        gkt@gkt-mini:~/loyolachicagocs_books-introcs-csharp-examples-662ea45b9965$ ls
+        gkt@gkt-mini:~$ cd introcs-csharp-examples
+        gkt@gkt-mini:~/introcs-csharp-examples$ ls
         addition1
         ...
         write_test

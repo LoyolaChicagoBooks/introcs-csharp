@@ -492,7 +492,8 @@ operation is done.</p>
 <div class="highlight-none"><div class="highlight"><pre>csharp&gt; double d= 2.7;
 csharp&gt; int i;
 csharp&gt; i = d;
-{interactive}(1,4): error CS0266: Cannot implicitly convert type &#39;double&#39; to &#39;int&#39;.
+{interactive}(1,4): error CS0266: Cannot implicitly convert type
+   &#39;double&#39; to &#39;int&#39;.
 An explicit conversion exists (are you missing a cast?)
 </pre></div>
 </div>
@@ -501,7 +502,8 @@ Since the compiler does this checking, looking only at types, not values, this e
 fails if the the <code class="docutils literal"><span class="pre">double</span></code> happens to have an integer value:</p>
 <div class="highlight-none"><div class="highlight"><pre>csharp&gt; double d = 2.0;
 csharp&gt; int i = d;
-{interactive}(1,4): error CS0266: Cannot implicitly convert type &#39;double&#39; to &#39;int&#39;.
+{interactive}(1,4): error CS0266: Cannot implicitly convert type
+   &#39;double&#39; to &#39;int&#39;.
 An explicit conversion exists (are you missing a cast?)
 </pre></div>
 </div>
@@ -664,7 +666,7 @@ with the initializations so</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 14-July-2015 21:43:41.<br/>
+      Last updated on 15-July-2015 15:31:17.<br/>
     </p>
   </div>
 </footer>
