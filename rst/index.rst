@@ -1,18 +1,5 @@
-Introduction to Computer Science
-=================================
-
-*a first programming course featuring C# and Mono*
-
-| **Andrew N. Harrington**
-| **George K. Thiruvathukal**
-| Loyola University Chicago
-| Department of Computer Science
-| Chicago, Illinois, USA
-
-Available in `PDF <http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf>`_ or `EPUB <http://books.cs.luc.edu/introcs-csharp/download/comp170.epub>`_.
-
-.. out of place in pdf
-   **Table of Contents**
+Introduction to Computer Science in C#
+======================================
 
 .. toctree::
    :maxdepth: 2
