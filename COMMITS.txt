@@ -1,3 +1,11 @@
+commit 9fe64c59f7a5471ae66c8a83527835551207d5c5
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Wed Jul 15 11:10:58 2015 -0500
+
+    fix to split the authors onto two lines in LaTeX 7x9 version
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit b660db3b66227d1c67af62b65c89a23a9996fb65
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Wed Jul 15 10:29:34 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 14 16:23:56 2015 -0500
 
     another indentation issue
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit d144d71125f1e64ad5adcd89eb2bb19c6fde44b7
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jul 14 16:13:54 2015 -0500
-
-    a bunch of formatting changes for examples
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
