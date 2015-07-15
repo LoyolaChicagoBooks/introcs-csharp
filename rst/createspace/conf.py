@@ -262,7 +262,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'comp170.tex', u'Introduction to Computer Science in C\\#',
-   u'Andrew N. Harrington and George K. Thiruvathukal', 'manual'),
+   u'Andrew N. Harrington\\\\George K. Thiruvathukal', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
