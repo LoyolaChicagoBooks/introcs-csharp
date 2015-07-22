@@ -1,2 +1,0 @@
-hg pull
-hg update
