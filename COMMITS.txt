@@ -1,3 +1,11 @@
+commit b206a0948ad295afd2bec32389a96f8846f29744
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Tue Jul 21 23:58:25 2015 -0500
+
+    more cleanup
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 268dd9e2da4328f67bc87e8d37e835194d5a5a47
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 21 23:55:46 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Wed Jul 15 10:29:34 2015 -0500
 
     fix index to match title and remove redundant author info
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit c92331aae90254c78c9892523804b6831073a778
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jul 14 16:42:42 2015 -0500
-
-    a few more bleeding examples
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
