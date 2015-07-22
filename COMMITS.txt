@@ -1,3 +1,11 @@
+commit 268dd9e2da4328f67bc87e8d37e835194d5a5a47
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Tue Jul 21 23:55:46 2015 -0500
+
+    replace top-level index.rst with NOTES.md to avoid confusion with actual book content
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 03ac218cb96e09ca67d855bbdf6c6911eeacc9cb
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 21 23:54:32 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 14 16:42:42 2015 -0500
 
     a few more bleeding examples
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit e317a2707faddec926d7f119492960b0aa7987fc
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jul 14 16:42:27 2015 -0500
-
-    fix gutter issue for CreateSpace publishing
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
