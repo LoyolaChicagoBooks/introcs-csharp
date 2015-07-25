@@ -365,27 +365,27 @@ Combine each <code class="docutils literal"><span class="pre">else</span></code>
 and note that the <code class="docutils literal"><span class="pre">if</span></code> part after each else is just a <em>single</em>
 (possibly very complicated) statement.  This allows the elimination of
 some of the braces:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return letter grade for score.</span>
-      <span class="k">static</span> <span class="kt">char</span> <span class="nf">letterGrade</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">char</span> <span class="n">letter</span><span class="p">;</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">90</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">80</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// grade must be B, C, D or F</span>
-            <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;B&#39;</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">70</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// grade must be C, D or F</span>
-            <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;C&#39;</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">60</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// grade must D or F</span>
-            <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;D&#39;</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">else</span> <span class="p">{</span>
-            <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;F&#39;</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="n">letter</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return letter grade for score.</span>
+<span class="k">static</span> <span class="kt">char</span> <span class="nf">letterGrade</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">char</span> <span class="n">letter</span><span class="p">;</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">90</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">80</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// grade must be B, C, D or F</span>
+      <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;B&#39;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">70</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// grade must be C, D or F</span>
+      <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;C&#39;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">60</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// grade must D or F</span>
+      <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;D&#39;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="p">{</span>
+      <span class="n">letter</span> <span class="p">=</span> <span class="sc">&#39;F&#39;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">letter</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>A program testing the letterGrade function is in
@@ -500,7 +500,7 @@ test with enough different data to check all lines of your program.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-July-2015 21:26:14.<br/>
+      Last updated on 25-July-2015 21:41:57.<br/>
     </p>
   </div>
 </footer>

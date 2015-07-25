@@ -1,3 +1,11 @@
+commit db7cd7047eff3e33e356adeb3709d48e6d8ed30d
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 25 16:40:53 2015 -0500
+
+    chapter 5 dedent fixes
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 625dbc5fa033e7e8e5f017c086919304e70da302
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 16:24:56 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 21 23:54:32 2015 -0500
 
     cleanup scripts no longer needed for build process
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 9fe64c59f7a5471ae66c8a83527835551207d5c5
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Wed Jul 15 11:10:58 2015 -0500
-
-    fix to split the authors onto two lines in LaTeX 7x9 version
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

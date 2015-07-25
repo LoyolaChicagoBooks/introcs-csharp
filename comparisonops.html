@@ -407,10 +407,10 @@ for the week, taking into account overtime. Hours worked over 40
 are overtime, paid at 1.5 times the normal rate. This is a natural
 place for a function enclosing the calculation.</p>
 <p><em>Read</em> the setup for the function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return the total weekly wages for a worker working</span>
-      <span class="c1">/// totalHours with a given regular hourlyWage.</span>
-      <span class="c1">/// Include overtime for hours over 40.</span>
-      <span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the total weekly wages for a worker working</span>
+<span class="c1">/// totalHours with a given regular hourlyWage.</span>
+<span class="c1">/// Include overtime for hours over 40.</span>
+<span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The problem clearly indicates two cases: when no more than 40
@@ -418,7 +418,7 @@ hours are worked or when more than 40 hours are worked. In case
 more than 40 hours are worked, it is convenient to introduce a
 variable overtimeHours. You are encouraged to think about a
 solution before going on and examining mine.</p>
-<p>You can try running my complete example program, <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/wages1/wages1.cs">wages1/wages1.cs</a>,
+<p>You can try running the complete example program, <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/wages1/wages1.cs">wages1/wages1.cs</a>,
 also shown below.</p>
 <div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -487,9 +487,9 @@ also shown below.</p>
 </td></tr></table></div>
 <p id="index-1">This program also introduces new notation for
 displaying decimal numbers:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span>
-            <span class="s">&quot;Wages for {0} hours at ${1:F2} per hour are ${2:F2}.&quot;</span><span class="p">,</span>
-            <span class="n">hours</span><span class="p">,</span> <span class="n">wage</span><span class="p">,</span> <span class="n">total</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span>
+   <span class="s">&quot;Wages for {0} hours at ${1:F2} per hour are ${2:F2}.&quot;</span><span class="p">,</span>
+   <span class="n">hours</span><span class="p">,</span> <span class="n">wage</span><span class="p">,</span> <span class="n">total</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In the format string are <code class="docutils literal"><span class="pre">{1:F2}</span></code> and <code class="docutils literal"><span class="pre">{2:F2}</span></code>:  Inside
@@ -616,19 +616,19 @@ solve the same problem!</p>
 10
 11
 12
-13</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">double</span> <span class="n">regularHours</span><span class="p">,</span> <span class="n">overtime</span><span class="p">;</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">totalHours</span> <span class="p">&lt;=</span> <span class="m">40</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">regularHours</span> <span class="p">=</span> <span class="n">totalHours</span><span class="p">;</span>
-            <span class="n">overtime</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">else</span> <span class="p">{</span>
-            <span class="n">regularHours</span> <span class="p">=</span> <span class="m">40</span><span class="p">;</span>
-            <span class="n">overtime</span> <span class="p">=</span> <span class="n">totalHours</span> <span class="p">-</span> <span class="m">40</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="n">hourlyWage</span><span class="p">*</span><span class="n">regularHours</span> <span class="p">+</span> <span class="p">(</span><span class="m">1.5</span><span class="p">*</span><span class="n">hourlyWage</span><span class="p">)*</span><span class="n">overtime</span><span class="p">;</span>
-      <span class="p">}</span>
+13</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">double</span> <span class="n">regularHours</span><span class="p">,</span> <span class="n">overtime</span><span class="p">;</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">totalHours</span> <span class="p">&lt;=</span> <span class="m">40</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">regularHours</span> <span class="p">=</span> <span class="n">totalHours</span><span class="p">;</span>
+      <span class="n">overtime</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="p">{</span>
+      <span class="n">regularHours</span> <span class="p">=</span> <span class="m">40</span><span class="p">;</span>
+      <span class="n">overtime</span> <span class="p">=</span> <span class="n">totalHours</span> <span class="p">-</span> <span class="m">40</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">hourlyWage</span><span class="p">*</span><span class="n">regularHours</span> <span class="p">+</span> <span class="p">(</span><span class="m">1.5</span><span class="p">*</span><span class="n">hourlyWage</span><span class="p">)*</span><span class="n">overtime</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="wages-play-computer-exercise">
@@ -753,7 +753,7 @@ after it.)</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-July-2015 21:26:14.<br/>
+      Last updated on 25-July-2015 21:41:57.<br/>
     </p>
   </div>
 </footer>

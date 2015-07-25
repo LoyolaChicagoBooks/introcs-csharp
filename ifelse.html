@@ -321,14 +321,14 @@ depending on the input. The main code of <a class="reference external" href="htt
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre>         <span class="kt">double</span> <span class="n">temperature</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;What is the temperature? &quot;</span><span class="p">);</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">temperature</span> <span class="p">&gt;</span> <span class="m">70</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Wear shorts.&quot;</span><span class="p">);</span>
-         <span class="p">}</span>
-         <span class="k">else</span> <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Wear long pants.&quot;</span><span class="p">);</span>
-         <span class="p">}</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Get some exercise outside.&quot;</span><span class="p">);</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">double</span> <span class="n">temperature</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;What is the temperature? &quot;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">temperature</span> <span class="p">&gt;</span> <span class="m">70</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Wear shorts.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Wear long pants.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Get some exercise outside.&quot;</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 <p>The lines labeled 2-7 are an <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statement. Again it is
@@ -413,17 +413,17 @@ declared before the compound statements that are parts of the
 <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statement.   A local variable in a function declared before a nested compound
 statement is still visible (in scope) <em>inside</em>  that compound statement.
 The following would work:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">else</span> <span class="p">{</span>
-            <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">-</span> <span class="m">2</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="n">val</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="p">{</span>
+      <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">-</span> <span class="m">2</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">val</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>There is even more subtlety here than meets the eye:
@@ -441,18 +441,18 @@ The two <code class="docutils literal"><span class="pre">if</span></code> statem
  9
 10
 11
-12</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope2</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="c1">// without the = 0: Unassigned local variable error</span>
-         <span class="kt">int</span> <span class="n">val</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;=</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">-</span> <span class="m">2</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="n">val</span><span class="p">;</span>
-      <span class="p">}</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope2</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="c1">// without the = 0: Unassigned local variable error</span>
+   <span class="kt">int</span> <span class="n">val</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;=</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">-</span> <span class="m">2</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">val</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>Note that in this variation we added an
@@ -535,7 +535,7 @@ each case?  (Assume we have access to the class UIF.)</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-July-2015 21:26:14.<br/>
+      Last updated on 25-July-2015 21:41:57.<br/>
     </p>
   </div>
 </footer>

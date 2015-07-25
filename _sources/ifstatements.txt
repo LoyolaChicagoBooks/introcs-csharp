@@ -12,6 +12,7 @@ depending on the input. The main code is:
    :start-after: chunk
    :end-before: chunk
    :linenos:
+   :dedent: 9
 
 The lines labeled 3-5 are an ``if`` statement. It reads pretty much
 like English. If it is true that the weight is greater than 50,

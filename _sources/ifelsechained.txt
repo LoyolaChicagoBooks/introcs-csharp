@@ -63,6 +63,7 @@ some of the braces:
 .. literalinclude:: ../source/examples/grade1/grade1.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 A program testing the letterGrade function is in
 example program :repsrc:`grade1/grade1.cs`.

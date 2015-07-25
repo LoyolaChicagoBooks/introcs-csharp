@@ -14,6 +14,7 @@ depending on the input. The main code of :repsrc:`clothes/clothes.cs` is:
    :start-after: chunk
    :end-before: chunk
    :linenos:
+   :dedent: 9
 
 The lines labeled 2-7 are an |if-else| statement. Again it is
 close to English, though you might say "otherwise" instead of
@@ -108,6 +109,7 @@ The following would work:
 .. literalinclude:: ../source/examples/ok_if_scope/ok_if_scope.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 There is even more subtlety here than meets the eye:
 An |if-else| statement can generally be rewritten as two simple
@@ -120,6 +122,7 @@ The two ``if`` statements would use opposite conditions, as in this variation:
    :start-after: past chunk
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 
 Note that in this variation we added an 

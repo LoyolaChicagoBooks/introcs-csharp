@@ -92,6 +92,7 @@ place for a function enclosing the calculation.
 .. literalinclude:: ../source/examples/wages1/wages1.cs
    :start-after: chunk
    :end-before: {
+   :dedent: 6
 
 The problem clearly indicates two cases: when no more than 40
 hours are worked or when more than 40 hours are worked. In case
@@ -99,7 +100,7 @@ more than 40 hours are worked, it is convenient to introduce a
 variable overtimeHours. You are encouraged to think about a
 solution before going on and examining mine.
 
-You can try running my complete example program, :repsrc:`wages1/wages1.cs`, 
+You can try running the complete example program, :repsrc:`wages1/wages1.cs`, 
 also shown below.  
 
 .. literalinclude:: ../source/examples/wages1/wages1.cs
@@ -117,6 +118,7 @@ displaying decimal numbers:
 .. literalinclude:: ../source/examples/wages1/wages1.cs
    :start-after: chunk2
    :end-before: chunk2
+   :dedent: 9
 
 In the format string are ``{1:F2}`` and ``{2:F2}``:  Inside 
 the braces, after the parameter index, you see a new part,
@@ -181,6 +183,7 @@ solve the same problem!
    :start-after: Include
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 Wages Play Computer Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
