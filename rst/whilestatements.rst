@@ -55,6 +55,7 @@ write and run the code below, saved in example program
    :start-after: chunk
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 We added a final line after the ``while`` loop to remind you that
 execution follows sequentially after a loop completes.
@@ -142,6 +143,7 @@ If it helps, get detailed and play computer:
    :start-after: chunk
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 Check yourself by running the example program :repsrc:`test_while1/test_while1.cs`.
 
@@ -160,6 +162,7 @@ carefully, one step at a time.
    :start-after: chunk
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 Check yourself by running the example program 
 :repsrc:`test_while2/test_while2.cs`.
@@ -541,6 +544,7 @@ as in the motivation for Gauss's answer:
 .. literalinclude:: ../source/examples/sum_to_n_long_bad/sum_to_n_long_bad.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 Run the example program containing it: :repsrc:`sum_to_n_long_bad/sum_to_n_long_bad.cs`.
 
@@ -569,6 +573,7 @@ Here is a shot at the whole function:
 .. literalinclude:: ../source/examples/sum_to_n_long_bad2/sum_to_n_long_bad2.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 Run the example program containing it: :repsrc:`sum_to_n_long_bad2/sum_to_n_long_bad2.cs`.
 

@@ -25,6 +25,7 @@ Consider the following silly function description and heading as a start:
 .. literalinclude:: ../source/examples/char_loop1/char_loop1.cs
    :start-after: chunk
    :end-before: {
+   :dedent: 6
  
 ``OneCharPerLine("bug")`` would print:
 
@@ -88,6 +89,7 @@ So all together:
 .. literalinclude:: ../source/examples/char_loop1/char_loop1.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
  
 You can test this with example :repsrc:`char_loop1/char_loop1.cs`.
 
@@ -107,6 +109,7 @@ Here is a variation:
 .. literalinclude:: ../source/examples/reversed_print/reversed_print.cs
    :start-after: chunk
    :end-before: {
+   :dedent: 6
 
 There are a few changes:
 
@@ -135,6 +138,7 @@ Let us get more complicated.  Consider the function described:
 .. literalinclude:: ../source/examples/vowels/vowels.cs
    :start-after: chunk
    :end-before: {
+   :dedent: 6
 
 For instance PrintVowels("computer") would print:
 
@@ -180,6 +184,7 @@ The letter can be a *or* e *or* i *or* o *or* u.  We get the code:
 .. literalinclude:: ../source/examples/vowels/vowels.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 That has a long condition!  Here is a nice trick to shorten that:
 We want to check if a character is in a group of letters.  We have
@@ -210,6 +215,7 @@ This variation is in example :repsrc:`vowels2/vowels2.cs`.
 .. literalinclude:: ../source/examples/vowels2/vowels2.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 
 .. index:: example; check_digits
@@ -331,6 +337,7 @@ The whole function would be:
 .. literalinclude:: ../source/examples/check_digits1/check_digits1.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 You can try this code in example :repsrc:`check_digits1/check_digits1.cs`.
 
@@ -406,6 +413,7 @@ code for the function:
 .. literalinclude:: ../source/examples/check_digits2/check_digits2.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 The full code with a ``Main`` testing program is in 
 example :repsrc:`check_digits2/check_digits2.cs`.
