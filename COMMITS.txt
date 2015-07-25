@@ -1,3 +1,11 @@
+commit df746fbf03f9151a164c920493984420ad182430
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 25 16:57:43 2015 -0500
+
+    while loops dedent fixes - batch 2
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 4bc182e250b95ca13d3b3bdae4c74c8625a74230
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 16:50:32 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 21 23:58:25 2015 -0500
 
     more cleanup
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 268dd9e2da4328f67bc87e8d37e835194d5a5a47
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jul 21 23:55:46 2015 -0500
-
-    replace top-level index.rst with NOTES.md to avoid confusion with actual book content
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

@@ -401,20 +401,20 @@ number would be the (non-zero) remainder.</p>
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="c1">/// Return the greatest common divisor of positive numbers.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="n">Min</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-         <span class="kt">int</span> <span class="n">gcd</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+14</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">/// Return the greatest common divisor of positive numbers.</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="n">Min</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+   <span class="kt">int</span> <span class="n">gcd</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
 
-         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="p">%</span> <span class="n">i</span> <span class="p">==</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">b</span> <span class="p">%</span> <span class="n">i</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-               <span class="n">gcd</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">i</span><span class="p">++;</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="n">gcd</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="p">%</span> <span class="n">i</span> <span class="p">==</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">b</span> <span class="p">%</span> <span class="n">i</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">gcd</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span>
       <span class="p">}</span>
+      <span class="n">i</span><span class="p">++;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">gcd</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>This code works as follows:</p>
@@ -499,21 +499,21 @@ have computed the GCD.</li>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">c</span><span class="p">;</span>
-         <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="p">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="p">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-               <span class="n">c</span> <span class="p">=</span> <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>
-               <span class="n">a</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="p">&gt;</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
-               <span class="n">c</span> <span class="p">=</span> <span class="n">b</span> <span class="p">-</span> <span class="n">a</span><span class="p">;</span>
-               <span class="n">b</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
-            <span class="p">}</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">c</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="p">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="p">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">c</span> <span class="p">=</span> <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>
+         <span class="n">a</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
       <span class="p">}</span>
+      <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="p">&gt;</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">c</span> <span class="p">=</span> <span class="n">b</span> <span class="p">-</span> <span class="n">a</span><span class="p">;</span>
+         <span class="n">b</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>A look at the source code more or less follows the above explanation.</p>
@@ -642,7 +642,7 @@ the real gcd is reached.  How can you arrange that?</td></tr>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-July-2015 21:51:45.<br/>
+      Last updated on 25-July-2015 21:59:07.<br/>
     </p>
   </div>
 </footer>
