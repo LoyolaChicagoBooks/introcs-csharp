@@ -366,12 +366,12 @@ write and run the code below, saved in example program
 3
 4
 5
-6</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="kt">int</span> <span class="n">temperature</span> <span class="p">=</span> <span class="m">115</span><span class="p">;</span>
-      <span class="k">while</span> <span class="p">(</span><span class="n">temperature</span> <span class="p">&gt;</span> <span class="m">112</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// first while loop code</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
-         <span class="n">temperature</span> <span class="p">=</span> <span class="n">temperature</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The tea is cool enough.&quot;</span><span class="p">);</span>
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">temperature</span> <span class="p">=</span> <span class="m">115</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">temperature</span> <span class="p">&gt;</span> <span class="m">112</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// first while loop code</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
+   <span class="n">temperature</span> <span class="p">=</span> <span class="n">temperature</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The tea is cool enough.&quot;</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 <p>We added a final line after the <code class="docutils literal"><span class="pre">while</span></code> loop to remind you that
@@ -498,11 +498,11 @@ If it helps, get detailed and play computer:</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
-      <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">9</span><span class="p">)</span> <span class="p">{</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-         <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
-      <span class="p">}</span>
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">9</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+   <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>Check yourself by running the example program <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_while1/test_while1.cs">test_while1/test_while1.cs</a>.</p>
@@ -521,11 +521,11 @@ carefully, one step at a time.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre>      <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span> <span class="c1">//variation on TestWhile1.cs</span>
-      <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">9</span><span class="p">)</span> <span class="p">{</span>
-         <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-      <span class="p">}</span>
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span> <span class="c1">//variation on TestWhile1.cs</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">9</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>Check yourself by running the example program
@@ -968,12 +968,12 @@ The point is here that 1 is a constant.  The time is of <em>constant order</em>.
 <p id="index-10">We can write a ridiculously short
 function following Gauss&#8217;s model.  Here we introduce the variable average,
 as in the motivation for Gauss&#8217;s answer:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return the sum of the numbers from 1 through n.</span>
-      <span class="k">static</span> <span class="kt">long</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">//CHANGED:  quick and WRONG</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">average</span> <span class="p">=</span> <span class="p">(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>    <span class="c1">//from Gausse&#39;s motivation</span>
-         <span class="k">return</span> <span class="n">n</span><span class="p">*</span><span class="n">average</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+<span class="k">static</span> <span class="kt">long</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">//CHANGED:  quick and WRONG</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">average</span> <span class="p">=</span> <span class="p">(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>    <span class="c1">//from Gausse&#39;s motivation</span>
+   <span class="k">return</span> <span class="n">n</span><span class="p">*</span><span class="n">average</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Run the example program containing it: <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_long_bad/sum_to_n_long_bad.cs">sum_to_n_long_bad/sum_to_n_long_bad.cs</a>.</p>
@@ -994,12 +994,12 @@ things should be better:</p>
 </pre></div>
 </div>
 <p id="index-11">Here is a shot at the whole function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return the sum of the numbers from 1 through n.</span>
-      <span class="k">static</span> <span class="kt">long</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">//CHANGED:  quick and still WRONG</span>
-      <span class="p">{</span>
-         <span class="kt">long</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>  <span class="c1">// final division will produce an integer</span>
-         <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+<span class="k">static</span> <span class="kt">long</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">//CHANGED:  quick and still WRONG</span>
+<span class="p">{</span>
+   <span class="kt">long</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>  <span class="c1">// final division will produce an integer</span>
+   <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Run the example program containing it: <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_long_bad2/sum_to_n_long_bad2.cs">sum_to_n_long_bad2/sum_to_n_long_bad2.cs</a>.</p>
@@ -1057,7 +1057,7 @@ Knowing this in theory is not the same as remembering it in practice!</li>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-July-2015 21:41:57.<br/>
+      Last updated on 25-July-2015 21:51:45.<br/>
     </p>
   </div>
 </footer>

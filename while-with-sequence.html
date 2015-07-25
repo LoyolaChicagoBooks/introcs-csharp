@@ -325,8 +325,8 @@
 the only collection we have discussed is a string - a sequence of
 characters that we can index.</p>
 <span class="target" id="onecharperline"></span><p id="index-1">Consider the following silly function description and heading as a start:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Print the characters of s, one per line.</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Print the characters of s, one per line.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">OneCharPerLine(&quot;bug&quot;)</span></code> would print:</p>
@@ -377,15 +377,15 @@ before.  We change <code class="docutils literal"><span class="pre">i</span></co
 <p>This increases the value of the numeric variable i by 1.
 (The reverse is <code class="docutils literal"><span class="pre">i--;</span></code>) <a class="footnote-reference" href="#plusplustype" id="id1">[1]</a></p>
 <p>So all together:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Print the characters of s, one per line.</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-            <span class="n">i</span><span class="p">++;</span>
-         <span class="p">}</span>
-      <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Print the characters of s, one per line.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+      <span class="n">i</span><span class="p">++;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>You can test this with example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/char_loop1/char_loop1.cs">char_loop1/char_loop1.cs</a>.</p>
@@ -395,8 +395,8 @@ not just print it.</p>
 <div class="section" id="string-backwards-exercise-example">
 <span id="reversed-print-example"></span><span id="index-3"></span><h3>6.2.1.1. String Backwards Exercise/Example<a class="headerlink" href="#string-backwards-exercise-example" title="Permalink to this headline">¶</a></h3>
 <p>Here is a variation:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Print s in reverse order; no extra newlines</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintReversed</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print s in reverse order; no extra newlines</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">PrintReversed</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>There are a few changes:</p>
@@ -417,8 +417,8 @@ notation.)</li>
 <div class="section" id="print-vowels-function">
 <span id="printvowels"></span><span id="index-4"></span><h2>6.2.2. Print Vowels Function<a class="headerlink" href="#print-vowels-function" title="Permalink to this headline">¶</a></h2>
 <p>Let us get more complicated.  Consider the function described:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>For instance PrintVowels(&#8220;computer&#8221;) would print:</p>
@@ -456,18 +456,18 @@ nose is just to consider all the cases where it is true:</p>
 </div>
 <p>How do you combine them into a condition?
 The letter can be a <em>or</em> e <em>or</em> i <em>or</em> o <em>or</em> u.  We get the code:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;a&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;e&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;i&#39;</span> <span class="p">||</span>
-                  <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;o&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;u&#39;</span><span class="p">)</span> <span class="p">{</span>
-               <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-            <span class="p">}</span>
-            <span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="m">1</span><span class="p">;</span>
-         <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;a&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;e&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;i&#39;</span> <span class="p">||</span>
+            <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;o&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;u&#39;</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
       <span class="p">}</span>
+      <span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="m">1</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>That has a long condition!  Here is a nice trick to shorten that:
@@ -489,18 +489,18 @@ the string version of <code class="docutils literal"><span class="pre">s[i]</spa
 Only lowercase vowels are listed.  We could do something with
 <code class="docutils literal"><span class="pre">ToLower</span></code>, or just use the condition: <code class="docutils literal"><span class="pre">&quot;aeiouAEIOU&quot;.Contains(&quot;&quot;+s[i])</span></code></p>
 <p>This variation is in example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/vowels2/vowels2.cs">vowels2/vowels2.cs</a>.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-         <span class="kt">string</span> <span class="n">vowels</span> <span class="p">=</span> <span class="s">&quot;aeiouAEIOU&quot;</span><span class="p">;</span>
-         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">vowels</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">+</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="p">{</span>
-               <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-            <span class="p">}</span>
-            <span class="n">i</span><span class="p">++;</span>
-         <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="kt">string</span> <span class="n">vowels</span> <span class="p">=</span> <span class="s">&quot;aeiouAEIOU&quot;</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">vowels</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">+</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
       <span class="p">}</span>
+      <span class="n">i</span><span class="p">++;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -607,20 +607,20 @@ very low, lower than the comparison <code class="docutils literal"><span class="
 so the parentheses could be omitted.  We think the
 code is easier to read with the parentheses left in, as written above.</p>
 <p>The whole function would be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return true if s contains one or more digits</span>
-      <span class="c1">/// and nothing else. Otherwise return false.</span>
-      <span class="k">static</span> <span class="n">Boolean</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="n">Boolean</span> <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">);</span>
-         <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
-               <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">i</span><span class="p">++;</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="n">allDigitsSoFar</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return true if s contains one or more digits</span>
+<span class="c1">/// and nothing else. Otherwise return false.</span>
+<span class="k">static</span> <span class="n">Boolean</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">Boolean</span> <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">);</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
       <span class="p">}</span>
+      <span class="n">i</span><span class="p">++;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">allDigitsSoFar</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>You can try this code in example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/check_digits1/check_digits1.cs">check_digits1/check_digits1.cs</a>.</p>
@@ -686,19 +686,19 @@ Again we do <em>not</em> need an <code class="docutils literal"><span class="pre
 set the Boolean result.
 Look in the full
 code for the function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return true if s contains one or more digits</span>
-      <span class="c1">/// and nothing else. Otherwise return false.</span>
-      <span class="k">static</span> <span class="n">Boolean</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
-               <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">i</span><span class="p">++;</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return true if s contains one or more digits</span>
+<span class="c1">/// and nothing else. Otherwise return false.</span>
+<span class="k">static</span> <span class="n">Boolean</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
       <span class="p">}</span>
+      <span class="n">i</span><span class="p">++;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The full code with a <code class="docutils literal"><span class="pre">Main</span></code> testing program is in
@@ -833,7 +833,7 @@ to make.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-July-2015 21:41:57.<br/>
+      Last updated on 25-July-2015 21:51:45.<br/>
     </p>
   </div>
 </footer>
