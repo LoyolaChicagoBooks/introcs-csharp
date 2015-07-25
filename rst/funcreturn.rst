@@ -172,6 +172,7 @@ from example :repsrc:`addition2a/addition2a.cs`:
 .. literalinclude:: ../source/examples/addition2a/addition2a.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 3
 
 The only caveat with ``string.Format`` is that
 there is *no* special function corresponding to ``Console.WriteLine``,
