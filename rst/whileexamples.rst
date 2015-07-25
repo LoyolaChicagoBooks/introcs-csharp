@@ -74,6 +74,7 @@ as the interval shrinks, but we do for illustration:
 .. literalinclude:: ../source/examples/bisection_method1/bisection_method1.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 Since the bisection method always homes in on a real root rapidly,
 an alternate version specifically for the bisection method
@@ -86,6 +87,7 @@ is *exactly* the same as ``a`` or ``b``:
 .. literalinclude:: ../source/examples/bisection_method1/bisection_method1.cs
    :start-after: end chunk
    :end-before: end chunk
+   :dedent: 6
 
 C# remembers ``double`` values to more decimal places than it will actually 
 display, so the second illustration also shows the difference between ``a`` and ``b``,

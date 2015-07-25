@@ -103,6 +103,7 @@ Now take a look at a basic version of GCD:
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:
+   :dedent: 6
 
 This code works as follows:
 
@@ -182,6 +183,8 @@ Greatest Common Divisor works as follows:
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:
+   :dedent: 6
+
 
 A look at the source code more or less follows the above explanation.
 

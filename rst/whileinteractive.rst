@@ -45,6 +45,7 @@ includes a prompt and low and high limits of the allowed range:
 .. literalinclude:: ../source/examples/input_in_range1/input_in_range1.cs
    :start-after: chunk
    :end-before: {
+   :dedent: 6
 
 For example to generate
 sequence above, the call would be:: 
@@ -199,6 +200,7 @@ Do not forget to return it at the end.
 .. literalinclude:: ../source/examples/input_in_range1/input_in_range1.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 You can try this full example, :repsrc:`input_in_range1/input_in_range1.cs`.  
 Look at it and then try compiling and running.  
@@ -227,6 +229,8 @@ without redundancy in the prompts in ``Main``:
 .. literalinclude:: ../source/examples/input_in_range2/input_in_range2.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
+
 
 This time around we did the user input correctly, with the 
 request for new input *repeated* at the end of the loop.
@@ -256,6 +260,8 @@ from example  :repsrc:`input_in_range2_bad/input_in_range2_bad.cs`:
 .. literalinclude:: ../source/examples/input_in_range2_bad/input_in_range2_bad.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 9
+
 
 You can run the program.  Remember :kbd:`Ctrl-C` !
 There are two tests in ``Main``.  
