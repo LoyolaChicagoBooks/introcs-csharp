@@ -1,3 +1,11 @@
+commit 625dbc5fa033e7e8e5f017c086919304e70da302
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 25 16:24:56 2015 -0500
+
+    add dedent from proofing
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit b206a0948ad295afd2bec32389a96f8846f29744
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Tue Jul 21 23:58:25 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Wed Jul 15 11:10:58 2015 -0500
 
     fix to split the authors onto two lines in LaTeX 7x9 version
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit b660db3b66227d1c67af62b65c89a23a9996fb65
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Wed Jul 15 10:29:34 2015 -0500
-
-    fix index to match title and remove redundant author info
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

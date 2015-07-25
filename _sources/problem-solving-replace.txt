@@ -48,6 +48,7 @@ replacement makes sense.  The following heading
 .. literalinclude:: ../source/examples/string_manip_stub/string_manip.cs
    :start-after: end main chunk
    :end-before: {
+   :dedent: 3
 
 
 As soon as we have the calling interface, it is good to be thinking
@@ -57,6 +58,7 @@ to test the function in different ways and display the results:
 .. literalinclude:: ../source/examples/string_manip_stub/string_manip.cs
    :start-after: main chunk
    :end-before: main chunk
+   :dedent: 3
 
 
 Writing tests *first* is a good idea to focus you on what really 

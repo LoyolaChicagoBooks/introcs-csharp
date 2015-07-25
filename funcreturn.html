@@ -503,11 +503,11 @@ have the same form as for <code class="docutils literal"><span class="pre">Conso
 <em>returned</em>.</p>
 <p>Here is a revised version of the function <code class="docutils literal"><span class="pre">SumProblemString</span></code>,
 from example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/addition2a/addition2a.cs">addition2a/addition2a.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>   <span class="k">static</span> <span class="kt">string</span> <span class="nf">SumProblemString</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// with string.Format</span>
-   <span class="p">{</span>
-      <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span><span class="p">;</span>
-      <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;The sum of {0} and {1} is {2}.&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
-   <span class="p">}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">string</span> <span class="nf">SumProblemString</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// with string.Format</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span><span class="p">;</span>
+   <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;The sum of {0} and {1} is {2}.&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The only caveat with <code class="docutils literal"><span class="pre">string.Format</span></code> is that
@@ -567,7 +567,7 @@ the result of each call to the <code class="docutils literal"><span class="pre">
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 22-July-2015 04:59:38.<br/>
+      Last updated on 25-July-2015 21:26:14.<br/>
     </p>
   </div>
 </footer>
