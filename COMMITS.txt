@@ -1,39 +1,39 @@
+commit 9a03fbe32186ed198748431ead6e7a9c4218ddea
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 15:45:21 2015 -0500
+
+    pull-examples.sh replacement: build.sh -g
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
+commit 013a62d5c44f1d932f91cf80c43637ef832242ae
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 15:44:34 2015 -0500
+
+    qpdf.sh replacement: build.sh -p
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
+commit 2d92d380bd18ac3f08fb008e629717acb21ab34b
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 15:44:17 2015 -0500
+
+    qhtml.sh replacement: build.sh -w
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
+commit a9692b3a1f09ee0502b506106f0e7b84902f1f78
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 15:44:01 2015 -0500
+
+    qboth.sh replacement: build.sh -w -p
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 58357dff3ea504ee7253a47578e4badac48ad1d4
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 15:38:47 2015 -0500
 
     add new and improved build.sh script (with options for quick building)
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 384ca3f0772e63f4e5b4c4ced1fe5f945e4bc3f3
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 25 22:43:02 2015 -0500
-
-    futurework contains some files to be revised/incorporated in later releases
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit b8747ab211c8d7046e88226f5e42edca08136140
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 25 22:36:12 2015 -0500
-
-    clean up Makefile and simplify fixgenindex.py invocation
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 6feb75541dfaa414c4e571c5fe2e9e6dbe0ecab6
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 25 22:29:48 2015 -0500
-
-    removing yet more files that are no longer needed
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit e379dab566396e0334d2d1a520cc28cb96300ee5
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 25 21:47:51 2015 -0500
-
-    reorganize book source (rst) into one chapter per subdirectory
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
