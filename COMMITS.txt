@@ -1,3 +1,11 @@
+commit b5324f38f5448da4a0263a8419ec89e52fb8f1ac
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 17:57:15 2015 -0500
+
+    fixed problem of not checking out correct files for gh-pages.sh
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit ac331d2745946bb66dc491d4f99dcfeabbc2ea59
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 17:54:07 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 15:45:21 2015 -0500
 
     pull-examples.sh replacement: build.sh -g
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 013a62d5c44f1d932f91cf80c43637ef832242ae
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 15:44:34 2015 -0500
-
-    qpdf.sh replacement: build.sh -p
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
