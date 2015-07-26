@@ -56,13 +56,6 @@ html:
 	./cssFix.sh $(BUILDDIR)
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-#html2:
-#	./togglesidebar.py
-#	$(SPHINXBUILD) -b html -D html_theme=bootstrap -D html_show_sphinx=0 $(ALLSPHINXOPTS) $(BUILDDIR)/html2
-#	./togglesidebar.py
-#	@echo
-#	@echo "Build finished. The bootstrap HTML pages are in $(BUILDDIR)/html2."
-
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo
@@ -124,10 +117,7 @@ latex:
 
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
-	# For Andy
-	-python2 ./fixgenindex.py $(BUILDDIR)/latex/comp170.tex
-	# For George (python2 broken on most systems)
-	-python2.7 ./fixgenindex.py $(BUILDDIR)/latex/comp170.tex
+	./fixgenindex.py $(BUILDDIR)/latex/comp170.tex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
