@@ -8,11 +8,7 @@ git config --global user.name "George K. Thiruvathukal"
 git remote add deploy "https://$GH_TOKEN@github.com/$GH_USER/$GH_REPO.git"
 git fetch deploy
 git reset -q deploy/gh-pages
-echo "directory listing before git checkout"
-ls
-echo "git checkout master source Makefile build.sh - begin"
-git checkout master source Makefile build.sh
-echo "git checkout master source Makefile build.sh - end"
+git checkout master rst build.sh htmlzip.sh
 git reset -q HEAD
 rm -rf build
 ./build.sh -a
