@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>14. Testing &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
+    <link rel="next" title="15. Interfaces" href="../interfaces/interfaces.html" />
+    <link rel="prev" title="13.7. Chapter Review Questions" href="../classes/reviewclasses.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">14. Testing</a><ul>
+<li><a class="reference internal" href="#assertions">14.1. Assertions</a></li>
+<li><a class="reference internal" href="#attributes">14.2. Attributes</a></li>
+<li><a class="reference internal" href="#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li><a class="reference internal" href="#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li><a class="reference internal" href="#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li><a class="reference internal" href="#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li><a class="reference internal" href="#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li><a class="reference internal" href="#running-the-nunit-tests">14.8. Running the NUnit Tests</a><ul>
+<li><a class="reference internal" href="#string-replace-nunit-test-exercise">14.8.1. String Replace NUnit Test Exercise</a></li>
+<li><a class="reference internal" href="#grade-file-nunit-test-exercise">14.8.2. Grade File NUnit Test Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../classes/reviewclasses.html" title="Previous Chapter: 13.7. Chapter Review Questions">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="../interfaces/interfaces.html" title="Next Chapter: 15. Interfaces">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/testing/testing.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="testing">
+<span id="index-0"></span><span id="id1"></span><h1>14. Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
+<p>Now that we have learned a bit about classes, we&#8217;re going to use the same feature
+to support <em>unit testing</em>. Unit testing is a concept that will become part of just
+about everything you do in future programming-focused courses, so we want to make sure
+that you understand the idea and begin to make use of it in all of your work.</p>
+<p>The notion of unit testing is straightforward in principle. When you write a program
+in general, the program comprises what are properly known as units of development.
+Each language has its own definition of what units are but most modern programming
+languages view the <em>class</em> concept as the core unit of testing. Once we have a class,
+we can test it and all of the parts associated with it, especially its methods.</p>
+<p>We will be introducing parts of file <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_nunit/rational_unit_tests.cs">rational_nunit/rational_unit_tests.cs</a>.</p>
+<div class="section" id="assertions">
+<span id="index-1"></span><h2>14.1. Assertions<a class="headerlink" href="#assertions" title="Permalink to this headline">¶</a></h2>
+<p>A key notion of testing is the ability to make a logical assertion about something
+that generally must hold <em>true</em> if the test is to pass.</p>
+<p>Assertions are not a standard language feature in C#. Instead, there are a number of
+classes that provide functions for assertion handling. In the framework we are using for
+unit testing (NUnit), a class named Assert supports assertion testing.</p>
+<p>In our tests, we make use of an assertion method, <code class="docutils literal"><span class="pre">Assert.IsTrue()</span></code> to determine
+whether an assertion is successful. If the variable or expression passed to this
+method is <em>false</em>, the assertion fails.</p>
+<p>Here are some examples of assertions:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Assert.IsTrue(true)</span></code>: The assertion is trivially successful,
+because the boolean value <code class="docutils literal"><span class="pre">true</span></code> is true.</li>
+<li><code class="docutils literal"><span class="pre">Assert.IsTrue(false)</span></code>: The assertion is not successful, because the boolean value
+<code class="docutils literal"><span class="pre">false</span></code> is not true!</li>
+<li><code class="docutils literal"><span class="pre">Assert.IsFalse(false)</span></code>: This assertion is successful, because
+<code class="docutils literal"><span class="pre">false</span></code> is, of course, false.</li>
+<li><code class="docutils literal"><span class="pre">Assert.IsTrue(5</span> <span class="pre">&gt;</span> <span class="pre">0)</span></code>: Success</li>
+<li><code class="docutils literal"><span class="pre">Assert.IsTrue(0</span> <span class="pre">&gt;</span> <span class="pre">5)</span></code>: Failure</li>
+</ul>
+<p>There are many available assertion methods. In our tests, we use <code class="docutils literal"><span class="pre">Assert.IsTrue()</span></code>,
+which works for everything we want to test. Other assertion methods do their magic
+rather similarly, because every assertion method ultimately must determine whether
+what is being tested is true or false.</p>
+</div>
+<div class="section" id="attributes">
+<span id="index-2"></span><h2>14.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>Besides assertions, a building block of testing (in C# and beyond) comes in the form
+of attributes. Attributes are an additional piece of information that can be attached
+to classes, variables, and methods in C#. There are two attributes of interest to us:</p>
+<ul class="simple">
+<li>[TestFixture]: This indicates that a class is being used for testing purposes.</li>
+<li>[Test]: This indicates that a method is one of the methods in a class being used
+for testing purposes.</li>
+</ul>
+<p>Without these annotations, classes and methods will <em>not</em> be used for testing purposes.
+This allows a class to have some methods that are used for testing while other methods
+are ignored.</p>
+<p>In the remainder of this section, we&#8217;re going to take a look at the strategy for testing
+the Rational class. In general, your goal is to ensure that the entire class is tested.
+It is easier said than done. In later courses (Software Engineering) you would learn about
+strategies for <em>coverage</em> testing.</p>
+<p>Our strategy will be as follows:</p>
+<ul class="simple">
+<li>Test the constructor and make sure the <em>representation</em> of the rational number is
+sound. If the constructor isn&#8217;t initializing an instance properly, it is likely
+that little else in the class will work properly.</li>
+<li>Then test the rest of the class. Whenever possible, group the tests in some logical
+way. In the case of the Rational class, there are three general categories (and one
+rather special one): arithmetic operations, comparisons, and conversions. In addition,
+there is the parsing test, which ensures that we can convert strings representing
+fractions into properly initialized (and reduced) rational numbers.</li>
+</ul>
+<p>Let&#8217;s get started.</p>
+</div>
+<div class="section" id="testing-the-constructor">
+<h2>14.3. Testing the Constructor<a class="headerlink" href="#testing-the-constructor" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">ConstructorTest</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="n">Rational</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetNumerator</span><span class="p">()</span> <span class="p">==</span> <span class="m">3</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetDenominator</span><span class="p">()</span> <span class="p">==</span> <span class="m">5</span><span class="p">);</span>
+         <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="p">-</span><span class="m">5</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetNumerator</span><span class="p">()</span> <span class="p">==</span> <span class="p">-</span><span class="m">3</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetDenominator</span><span class="p">()</span> <span class="p">==</span> <span class="m">5</span><span class="p">);</span>
+         <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="m">10</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetNumerator</span><span class="p">()</span> <span class="p">==</span> <span class="m">3</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetDenominator</span><span class="p">()</span> <span class="p">==</span> <span class="m">5</span><span class="p">);</span>
+         <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">125</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetNumerator</span><span class="p">()</span> <span class="p">==</span> <span class="m">125</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetDenominator</span><span class="p">()</span> <span class="p">==</span> <span class="m">1</span><span class="p">);</span>
+      <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Testing the constructor is fairly straightforward. We essentially test three basic
+cases:</p>
+<ul>
+<li><p class="first">Test whether a basic rational number can be constructed. In the above, we test for
+3/5, 3/-5, 6/10, and 125. Per the implementation of the Rational class (how we defined
+it), these should result in fractions with numerators of 3, -3, 3, and 12; and denominators
+of 5, 5, 5, and 1, respectively.</p>
+</li>
+<li><p class="first">As you can observe from the code, we perform basic assertion testing to ensure that
+the numerators and denominators are what we expect. For example:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetNumerator</span><span class="p">()</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Tests whether the newly minted rational number, Rational(3, 5), actually has the
+expected numerator of 3.</p>
+</li>
+<li><p class="first">If we are able to get through the entire code of the <code class="docutils literal"><span class="pre">ConstructorTest()</span></code> method,
+our constructor test is a success. Otherwise, it is a failure.</p>
+</li>
+</ul>
+<p>We&#8217;ll look at how to actually run our tests in a bit but let&#8217;s continue taking a look
+at how the rest of our testing is done.</p>
+</div>
+<div class="section" id="testing-rational-comparisons">
+<h2>14.4. Testing Rational Comparisons<a class="headerlink" href="#testing-rational-comparisons" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">BasicComparisonTests</span><span class="p">()</span> <span class="p">{</span>
+         <span class="n">Rational</span> <span class="n">r1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(-</span><span class="m">3</span><span class="p">,</span> <span class="m">6</span><span class="p">);</span>
+         <span class="n">Rational</span> <span class="n">r2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">);</span>
+         <span class="n">Rational</span> <span class="n">r3</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r1</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">r2</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r2</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r2</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">r3</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+      <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>It is pretty well established by now that the ability to compare is of fundamental importance
+whenever we are talking about data. Everything we do, especially when it comes to searching
+(finding a value) and sorting (putting values in order) depends on comparison.</p>
+<p>In this test, we construct a few Rational instances (r1, r2, and r3) and perform at least
+one test for each of the essential operators (&gt;, &lt;, and =). Recall from our earlier discussion
+of the Rational class that the CompareTo method return a value <code class="docutils literal"><span class="pre">&lt;</span> <span class="pre">0</span></code>
+when one Rational is <em>less than</em> another. It returns a number
+<code class="docutils literal"><span class="pre">&gt;</span> <span class="pre">0</span></code> for <em>greater than</em>, and <code class="docutils literal"><span class="pre">==</span> <span class="pre">0</span></code> for <em>equal to</em>.</p>
+<p>If any one of these comparisons fails, this means that we cannot rely on the ability to
+compare Rational numbers. This will likely prevent other tests from working, such as the
+arithmetic tests, which rely on the ability to test whether a <em>computed result</em> matches
+an <em>expected result</em> (e.g. 1/4 + 2/4 == 3/4).</p>
+</div>
+<div class="section" id="testing-rational-arithmetic">
+<h2>14.5. Testing Rational Arithmetic<a class="headerlink" href="#testing-rational-arithmetic" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">BasicArithmeticTests</span><span class="p">()</span> <span class="p">{</span>
+         <span class="n">Rational</span> <span class="n">r</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">;</span>
+         <span class="n">r1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">47</span><span class="p">,</span> <span class="m">64</span><span class="p">);</span>
+         <span class="n">r2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(-</span><span class="m">11</span><span class="p">,</span> <span class="m">64</span><span class="p">);</span>
+
+         <span class="n">r</span> <span class="p">=</span> <span class="n">r1</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">r2</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">36</span><span class="p">,</span> <span class="m">64</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+
+         <span class="n">r</span> <span class="p">=</span> <span class="n">r1</span><span class="p">.</span><span class="n">Subtract</span><span class="p">(</span><span class="n">r2</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">58</span><span class="p">,</span> <span class="m">64</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+
+         <span class="n">r</span> <span class="p">=</span> <span class="n">r1</span><span class="p">.</span><span class="n">Multiply</span><span class="p">(</span><span class="n">r2</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">47</span> <span class="p">*</span> <span class="p">-</span><span class="m">11</span><span class="p">,</span> <span class="m">64</span> <span class="p">*</span> <span class="m">64</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+
+         <span class="n">r</span> <span class="p">=</span> <span class="n">r1</span><span class="p">.</span><span class="n">Divide</span><span class="p">(</span><span class="n">r2</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">47</span><span class="p">,</span> <span class="p">-</span><span class="m">11</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+
+         <span class="n">r</span> <span class="p">=</span> <span class="n">r1</span><span class="p">.</span><span class="n">Reciprocal</span><span class="p">();</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">64</span><span class="p">,</span> <span class="m">47</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+
+         <span class="n">r</span> <span class="p">=</span> <span class="n">r1</span><span class="p">.</span><span class="n">Negate</span><span class="p">();</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(-</span><span class="m">47</span><span class="p">,</span> <span class="m">64</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+      <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Testing of arithmetic is a fairly straightforward idea. For all of these tests, we
+create a couple of rational numbers (47/64 and -11/64) and then call the various methods
+to perform addition, subtraction, multiplication, division, reciprocal, and negation.</p>
+<p>The key to testing arithmetic successfully in the case of a Rational number is to know
+know what the result <em>should be</em>. As a concrete example, the result of adding these
+two rational numbers should be 36/64. So the testing strategy is to use the <code class="docutils literal"><span class="pre">Add()</span></code>
+method to add the two rational numbers and then test whether the result of the addition
+is equal to the <em>known</em> answer of 36/64.</p>
+<p>As you can observe by looking at the code, the magic occurs by checking whether the
+<em>computed</em> result matches the <em>constructed</em> result:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">36</span><span class="p">,</span> <span class="m">64</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Because we have <em>separately</em> tested the constructor and comparison methods, we can
+assume that it is ok to rely upon comparison methods as part of this arithmetic test.</p>
+<p>And it is in this example where we begin to see the <em>art of testing</em>. You can write
+tests that assume that other tests of features you are using have <em>already passed</em>. In the
+event that your assumption is wrong, you&#8217;d be able to know that this is the case, because
+all of the tests you assumed to pass would not have passed.</p>
+<p>Again, to be clear, the arithmetic tests we have done here <em>assume</em> that we can rely on
+the constructor and the comparison operation to determine equality of two rational numbers.
+It is entirely possible that this is not true, so we&#8217;ll be able to determine this when
+examining the test output (we&#8217;d see that not only the arithmetic test fails but possibly the
+constructor and/or comparison tests as well).</p>
+<p>The remaining tests are fairly straightforward. We&#8217;ll more or less present them as is with
+minimal explanation as they are in many ways variations on the theme.</p>
+</div>
+<div class="section" id="testing-rational-conversions-to-other-types">
+<h2>14.6. Testing Rational Conversions (to other types)<a class="headerlink" href="#testing-rational-conversions-to-other-types" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">ConversionTests</span><span class="p">()</span> <span class="p">{</span>
+         <span class="n">Rational</span> <span class="n">r1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">6</span><span class="p">);</span>
+         <span class="n">Rational</span> <span class="n">r2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(-</span><span class="m">3</span><span class="p">,</span> <span class="m">6</span><span class="p">);</span>
+         <span class="n">Rational</span> <span class="n">r3</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="p">-</span><span class="m">2</span><span class="p">);</span>
+
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r1</span><span class="p">.</span><span class="n">ToDecimal</span><span class="p">()</span> <span class="p">==</span> <span class="m">0.5</span><span class="n">m</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r2</span><span class="p">.</span><span class="n">ToDecimal</span><span class="p">()</span> <span class="p">==</span> <span class="p">-</span><span class="m">0.5</span><span class="n">m</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r1</span><span class="p">.</span><span class="n">ToDouble</span><span class="p">()</span> <span class="p">==</span> <span class="m">0.5</span><span class="p">);</span> <span class="c1">//.5 is stored exactly</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r2</span><span class="p">.</span><span class="n">ToDouble</span><span class="p">()</span> <span class="p">==</span> <span class="p">-</span><span class="m">0.5</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r2</span><span class="p">.</span><span class="n">ToString</span><span class="p">()</span> <span class="p">==</span> <span class="s">&quot;-1/2&quot;</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="s">&quot;&quot;</span> <span class="p">+</span> <span class="n">r3</span> <span class="p">==</span> <span class="s">&quot;-5&quot;</span><span class="p">);</span>  <span class="c1">//implicit use of ToString</span>
+
+      <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>In this test, we want to make sure that Rational objects can be converted to floating point
+and decimal types (the built-in types of the C# language).</p>
+<p>For example, Rational(3/6) is 1/2, which is 0.5 (both in its floating-point and decimal
+representations.</p>
+</div>
+<div class="section" id="testing-the-parsing-feature">
+<h2>14.7. Testing the Parsing Feature<a class="headerlink" href="#testing-the-parsing-feature" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">ParseTest</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="n">Rational</span> <span class="n">r</span><span class="p">;</span>
+         <span class="n">r</span> <span class="p">=</span> <span class="n">Rational</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;-12/30&quot;</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(-</span><span class="m">12</span><span class="p">,</span> <span class="m">30</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+         <span class="n">r</span> <span class="p">=</span> <span class="n">Rational</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;123&quot;</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">123</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+         <span class="n">r</span> <span class="p">=</span> <span class="n">Rational</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;1.125&quot;</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="m">8</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">ToString</span><span class="p">().</span><span class="n">Equals</span><span class="p">(</span><span class="s">&quot;9/8&quot;</span><span class="p">));</span>
+      <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>The parsing test tests whether we can convert the string representation of a rational number
+into an actual (reduced) rational number. We test three general cases:</p>
+<ul class="simple">
+<li>The ability to take a fraction and convert it into a rational number. This fraction may
+or may not have a &#8220;-&#8221; sign in it. For example -12/30 should be equivalent to constructing
+a Rational(-12, 30).</li>
+<li>The ability to take a whole number and get a proper Rational, e.g. 123 is equal to
+Rational(123)</li>
+<li>The ability to take a textual representation (1.125) and get a proper Rational(9, 8)
+representation. In this case, we are also getting an extra test to ensure the result
+is reduced.</li>
+</ul>
+</div>
+<div class="section" id="running-the-nunit-tests">
+<span id="running-nunit-tests"></span><span id="index-3"></span><h2>14.8. Running the NUnit Tests<a class="headerlink" href="#running-the-nunit-tests" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>In Xamarin Studio, select the rational_nunit project.</li>
+<li>In the main Xamarin Studio menu click &#8220;Run&#8221; and select &#8220;Run Unit Tests&#8221;</li>
+</ol>
+<p>A test pad should appear and show something like</p>
+<a class="reference internal image-reference" href="../_images/NUnitTestXamarinInit.png"><img alt="../_images/NUnitTestXamarinInit.png" src="../_images/NUnitTestXamarinInit.png" style="width: 350pt;" /></a>
+<p>This likely just shows the overall results in the summary line at the bottom.
+You can show details by clicking on one or more of headings at the
+top of the pad.  In particular, if you click Successful Test, Failed Tests,
+and Output (and likely drag the top of the pad to make
+it large enough to see everything), you should see something like</p>
+<a class="reference internal image-reference" href="../_images/NUnitTestXamarinDetails.png"><img alt="../_images/NUnitTestXamarinDetails.png" src="../_images/NUnitTestXamarinDetails.png" style="width: 350pt;" /></a>
+<p>As you can see in the above displays, all of the tests in <code class="docutils literal"><span class="pre">RationalTests</span></code>
+get executed, and they all pass.
+There are no failed tests to see,
+but that part would be the most important details if any were there!
+The output just details the sequence of execution.</p>
+<p>Xamarin Studio remembers the headings selected, so next time you run tests,
+the same details will show.</p>
+<p>The testing file is using NUnit.Framework.  There is a little more to this.
+If you edit the references, selecting All sources, and entering nunit
+in the search box, you see</p>
+<a class="reference internal image-reference" href="../_images/NUnitReferencesXamarin.png"><img alt="../_images/NUnitReferencesXamarin.png" src="../_images/NUnitReferencesXamarin.png" style="width: 350pt;" /></a>
+<p>Note there are more than one version of nunit.framework. On a Mac,
+the selected version worked directly, but the logical looking one, provided
+by Xamarin, did <em>not</em> work directly.  Either worked if we select the context
+menu in the Solutions pad for the nunit.framework version added to the references,
+and make it look like</p>
+<a class="reference internal image-reference" href="../_images/NUnitNotSpecificVersion.png"><img alt="../_images/NUnitNotSpecificVersion.png" src="../_images/NUnitNotSpecificVersion.png" style="width: 200pt;" /></a>
+<p>with the &#8220;Require Specific Version&#8221; item toggled so it is <em>not</em> checked.</p>
+<p>We waited until now to discuss unit testing, because the test classes are coded with
+<em>instance</em> methods,
+unlike the static methods that we started out with.</p>
+<p>A test can also call <code class="docutils literal"><span class="pre">Main</span></code> of a program, with specified parameters that
+would normally come from the command line.  See the small project
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/cmdline_to_file">cmdline_to_file</a>.</p>
+<div class="section" id="string-replace-nunit-test-exercise">
+<span id="index-4"></span><h3>14.8.1. String Replace NUnit Test Exercise<a class="headerlink" href="#string-replace-nunit-test-exercise" title="Permalink to this headline">¶</a></h3>
+<p>If you completed the program from the stub
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/string_manip_stub/string_manip.cs">string_manip_stub/string_manip.cs</a>,
+then add a testing class using NUnit that tests <code class="docutils literal"><span class="pre">ReplaceFirst</span></code>
+with the same parameters as used in the original file&#8217;s <code class="docutils literal"><span class="pre">Main</span></code>.
+If you did the elaboration of <code class="docutils literal"><span class="pre">ReplaceFirst</span></code> that just returns the original
+string when the target is not found, then add tests for that, too.
+Remember the necessary library reference and try it out.</p>
+</div>
+<div class="section" id="grade-file-nunit-test-exercise">
+<span id="index-5"></span><h3>14.8.2. Grade File NUnit Test Exercise<a class="headerlink" href="#grade-file-nunit-test-exercise" title="Permalink to this headline">¶</a></h3>
+<p>Add a testing class using NUnit to <a class="reference internal" href="../appendix/hw-gradefiles.html#hw-gradefiles"><span>Homework: Grade File</span></a>.
+Remember the necessary library reference.
+Sample data files and files for testing the results
+are included in the project.  Just test
+using command line parameters (so there is no Console input).
+Test with both comp170 and comp150.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 26-July-2015 02:50:13.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

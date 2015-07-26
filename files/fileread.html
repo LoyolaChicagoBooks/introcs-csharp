@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>9.3. Reading Files &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
+    <link rel="up" title="9. Files, Paths, and Directories" href="files.html" />
+    <link rel="next" title="9.4. Path Strings" href="paths.html" />
+    <link rel="prev" title="9.2. Writing Files" href="filewrite.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">9.3. Reading Files</a><ul>
+<li><a class="reference internal" href="#reading-to-end-of-stream">9.3.1. Reading to End of Stream</a></li>
+<li><a class="reference internal" href="#example-sum-numbers-in-file">9.3.2. Example: Sum Numbers in File</a><ul>
+<li><a class="reference internal" href="#safe-sum-file-exercise">9.3.2.1. Safe Sum File Exercise</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example-copy-to-upper-case">9.3.3. Example Copy to Upper Case</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="filewrite.html" title="Previous Chapter: 9.2. Writing Files">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="paths.html" title="Next Chapter: 9.4. Path Strings">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/files/fileread.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="reading-files">
+<span id="fileread"></span><span id="index-0"></span><h1>9.3. Reading Files<a class="headerlink" href="#reading-files" title="Permalink to this headline">¶</a></h1>
+<p>In Xamarin Studio, go to project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_first_file">print_first_file</a>.
+Right click on the project in the Solution pad, and select Open Containing Folder.
+Drill down two folders through <code class="file docutils literal"><span class="pre">bin</span></code> to <code class="file docutils literal"><span class="pre">Debug</span></code>.
+You should find a copy of the <code class="docutils literal"><span class="pre">sample.txt</span></code> that we stored there.  You can open it and
+look at it if you like.</p>
+<p>Run the example program
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_first_file/print_first_file.cs">print_first_file/print_first_file.cs</a>, shown below:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="k">class</span> <span class="nc">PrintFirstFile</span>  <span class="c1">// basics of reading file lines</span>
+   <span class="p">{</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="n">StreamReader</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="s">&quot;sample.txt&quot;</span><span class="p">);</span>
+         <span class="kt">string</span> <span class="n">line</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>  <span class="c1">// first line</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+         <span class="n">line</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>         <span class="c1">// second line</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+         <span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now you have read a file and used it in a program.</p>
+<p>In the first line of <code class="docutils literal"><span class="pre">Main</span></code> the operating system file (<code class="docutils literal"><span class="pre">sample.txt</span></code>) is
+associated again with a C# variable name (<code class="docutils literal"><span class="pre">reader</span></code>),
+this time for reading as a <code class="docutils literal"><span class="pre">StreamReader</span></code> object.
+A <code class="docutils literal"><span class="pre">StreamReader</span></code> can only open an existing file, so
+<code class="docutils literal"><span class="pre">sample.txt</span></code> must already exist.</p>
+<p>Again we have parallel names to those used with <code class="docutils literal"><span class="pre">Console</span></code>,
+but in this case the <code class="docutils literal"><span class="pre">ReadLine</span></code> method returns the next line from the file.
+Here the string from the file line is assigned to
+the variable <code class="docutils literal"><span class="pre">line</span></code>. Each call the ReadLine reads the
+next line of the file.</p>
+<p>Using the <code class="docutils literal"><span class="pre">Close</span></code> method is
+generally optional with files being read. There is nothing to lose
+if a program ends without closing a file that was being read. <a class="footnote-reference" href="#readclose" id="id1">[1]</a></p>
+<div class="section" id="reading-to-end-of-stream">
+<span id="endofstream"></span><span id="index-1"></span><h2>9.3.1. Reading to End of Stream<a class="headerlink" href="#reading-to-end-of-stream" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal"><span class="pre">first_file.cs</span></code>, we explicitly coded reading two lines.  You will often
+want to process each line in a file, without knowing the total number of
+lines while programming.  This means that files provide us with our
+second kind of a sequence:  this time the sequence of lines in the file!
+To process all of them will require a loop and a new test to make sure that you
+have not yet come to the end of the file&#8217;s stream: You can use the <code class="docutils literal"><span class="pre">EndOfStream</span></code>
+property. It has the wrong sense (true at the end of the file), so we negate it,
+testing for <code class="docutils literal"><span class="pre">!reader.EndOfStream</span></code> in the example program <code class="docutils literal"><span class="pre">print_file_lines.cs</span></code>.
+This little program reads and prints the contents of a file specified by the
+user, one line at a time:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="k">class</span> <span class="nc">PrintFileLines</span>  <span class="c1">// demo of using EndOfStream test</span>
+   <span class="p">{</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="kt">string</span> <span class="n">userFileName</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="s">&quot;Enter name of file to print: &quot;</span><span class="p">);</span>
+         <span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">userFileName</span><span class="p">);</span>
+         <span class="k">while</span> <span class="p">(!</span><span class="n">reader</span><span class="p">.</span><span class="n">EndOfStream</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">line</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+         <span class="p">}</span>
+         <span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="docutils" id="index-2">
+<dt><code class="docutils literal"><span class="pre">var</span></code></dt>
+<dd><p class="first">For conciseness (and variety) we declared <code class="docutils literal"><span class="pre">reader</span></code>
+using the more compact syntax with <code class="docutils literal"><span class="pre">var</span></code>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">userFileName</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You can use <code class="docutils literal"><span class="pre">var</span></code> in place of a declared type to shorten your code
+with a couple of restrictions:</p>
+<ul class="simple">
+<li>Use an initializer, from which the type of the variable can be inferred.</li>
+<li>Declare a local variable inside a method body or in a loop heading.</li>
+<li>Declare only a single variable in the statement.</li>
+</ul>
+<p class="last">We could have used this syntax long ago, but as the type names become longer,
+it is more useful!</p>
+</dd>
+</dl>
+<p>Things to note about reading from files:</p>
+<ul class="simple" id="index-3">
+<li>Reading from a file returns the part read, of course.  Never forget the
+<em>side effect</em>:  The location in the file advances past the part just read.
+The next read does <em>not</em> return the <em>same</em> thing as last time.  It returns
+the <em>next</em> part of the file.</li>
+<li>Our <code class="docutils literal"><span class="pre">while</span></code> test conditions so far have been in a sense &#8220;backward looking&#8221;:
+We have tested a variable that has <em>already been set</em>.
+The test with <code class="docutils literal"><span class="pre">EndOfStream</span></code> is
+<em>forward looking</em>:  looking at what has not been processed yet.  Other than
+making sure the file is opened, there is no variable that needs to be set
+before a <code class="docutils literal"><span class="pre">while</span></code> loop testing for <code class="docutils literal"><span class="pre">EndOfStream</span></code>.</li>
+<li>If you use ReadLine at the end of the file, the special value <code class="docutils literal"><span class="pre">null</span></code> (no object)
+is returned.  <em>This</em> is not an error, but if you try to apply any string methods
+to the <code class="docutils literal"><span class="pre">null</span></code> value returned, <em>then</em> you get an error!</li>
+</ul>
+<p id="readtoend"><span id="index-4"></span>Though <code class="docutils literal"><span class="pre">print_file_lines.cs</span></code> was a nice simple illustration of a loop reading
+lines, it was very verbose considering the final effect of the program,
+just to print the whole file.
+You can read the entire remaining contents of a file
+as a single (multiline) string, using the
+<code class="docutils literal"><span class="pre">StreamReader</span></code> method <code class="docutils literal"><span class="pre">ReadToEnd</span></code>.  In place of the reading and printing
+loop we could have just had:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">wholeFile</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">wholeFile</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">ReadToEnd</span></code> does not strip off a newline, like <code class="docutils literal"><span class="pre">ReadLine</span></code> does,
+so we do not want to add an extra newline
+when writing.  We use the <code class="docutils literal"><span class="pre">Write</span></code> method instead of <code class="docutils literal"><span class="pre">WriteLine</span></code>.</p>
+</div>
+<div class="section" id="example-sum-numbers-in-file">
+<span id="index-5"></span><h2>9.3.2. Example: Sum Numbers in File<a class="headerlink" href="#example-sum-numbers-in-file" title="Permalink to this headline">¶</a></h2>
+<p>We have summed the numbers from 1 to <code class="docutils literal"><span class="pre">n</span></code>.  In that case we generated
+the next number <code class="docutils literal"><span class="pre">i</span></code> automatically using i++.  We could also read numbers
+from a file containing one number per line (plus possible white space):</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">CalcSum</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+   <span class="k">while</span> <span class="p">(!</span><span class="n">reader</span><span class="p">.</span><span class="n">EndOfStream</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kt">string</span> <span class="n">sVal</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">().</span><span class="n">Trim</span><span class="p">();</span>
+      <span class="n">sum</span> <span class="p">+=</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">sVal</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+   <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p id="index-6">Below and in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_file/sum_file.cs">sum_file/sum_file.cs</a> is a more elaborate, complete example,
+that also exits gracefully if you give a bad file name.
+If you give a good file name, it skips lines that contain only whitespace.</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="k">class</span> <span class="nc">SumFile</span>  <span class="c1">// sum a file integers, one per line</span>
+   <span class="p">{</span>
+      <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="kt">string</span> <span class="n">filename</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
+                              <span class="s">&quot;Enter the name of a file of integers: &quot;</span><span class="p">);</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The sum is {0}&quot;</span><span class="p">,</span> <span class="n">CalcSum</span><span class="p">(</span><span class="n">filename</span><span class="p">));</span>
+         <span class="p">}</span>
+         <span class="k">else</span> <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Bad file name {0}&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="c1">/// Read the named file and</span>
+      <span class="c1">/// return the sum of an int</span>
+      <span class="c1">/// from each line that is not just white space.</span>
+      <span class="k">static</span> <span class="kt">int</span> <span class="nf">CalcSum</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+         <span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+         <span class="k">while</span> <span class="p">(!</span><span class="n">reader</span><span class="p">.</span><span class="n">EndOfStream</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">sVal</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">().</span><span class="n">Trim</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">sVal</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+               <span class="n">sum</span> <span class="p">+=</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">sVal</span><span class="p">);</span>
+            <span class="p">}</span>
+         <span class="p">}</span>
+         <span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+         <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A useful function used in <code class="docutils literal"><span class="pre">Main</span></code> for avoiding filename typo errors
+is <code class="docutils literal"><span class="pre">File.Exists</span></code> in the <code class="docutils literal"><span class="pre">System.IO</span></code> namespace</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">bool</span> <span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="kt">string</span> <span class="n">filenamePath</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is true if the named files exists in the operating system&#8217;s file structure.</p>
+<p>You should see the file <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_file/numbers.txt">sum_file/numbers.txt</a> in the Xamarin Studio project.
+It is in the right form for the program.  If you run the program and enter the
+response:</p>
+<div class="highlight-none"><div class="highlight"><pre>numbers.txt
+</pre></div>
+</div>
+<p>you should be told that the file does not exist.  Recall that the executable
+created by Xamarin Studio is two directories down through <code class="file docutils literal"><span class="pre">bin</span></code>
+to <code class="file docutils literal"><span class="pre">Debug</span></code>.  This is the default
+<em>current directory</em> when Xamarin Studio runs the program.
+You can refer to
+a file that is not in the current directory.
+A full description is in the next section, but briefly, what we need now:
+The symbol for the parent directory is <code class="docutils literal"><span class="pre">..</span></code>.
+The hierarchy of folders and files are separated by
+<code class="docutils literal"><span class="pre">\</span></code> in Windows and <code class="docutils literal"><span class="pre">/</span></code> on a Mac,  so you can test the program successfully
+if you use the file name:
+<code class="docutils literal"><span class="pre">..\..\numbers.txt</span></code> in Windows and <code class="docutils literal"><span class="pre">../../numbers.txt</span></code> on a Mac.  On a Mac, running
+the program looks like:</p>
+<div class="highlight-none"><div class="highlight"><pre>Enter the name of a file of integers: ../../numbers.txt
+The sum is 16
+</pre></div>
+</div>
+<p>In <a class="reference internal" href="fio.html#fio"><span>FIO Helper Class</span></a> we will discuss a more flexible way of finding files to open,
+that works well in Xamarin Studio and many other situations.</p>
+<div class="section" id="safe-sum-file-exercise">
+<span id="index-7"></span><h3>9.3.2.1. Safe Sum File Exercise<a class="headerlink" href="#safe-sum-file-exercise" title="Permalink to this headline">¶</a></h3>
+<ol class="loweralpha">
+<li><p class="first">Copy <code class="file docutils literal"><span class="pre">sum_file.cs</span></code> to a file <code class="file docutils literal"><span class="pre">safe_sum_file.cs</span></code> in a new project of yours.
+Modify the program: Write
+a new function with the heading below.  Use it in <code class="docutils literal"><span class="pre">Main</span></code>, in place of the <code class="docutils literal"><span class="pre">if</span></code>
+statement that checks (only once) for a legal file:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Prompt the user to enter a file name to open for reading.</span>
+<span class="c1">// Repeat until the name of an existing file is given.</span>
+<span class="c1">// Open and return the file.</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">StreamReader</span> <span class="nf">PromptFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">A user who forgot the file name woud be stuck!
+Elaborate the function and program, so that an empty line entered means
+&#8220;give up&#8221;, and <code class="docutils literal"><span class="pre">null</span></code> (no object) should be returned.  The main program needs to
+test for this and quit gracefully in that case.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="example-copy-to-upper-case">
+<h2>9.3.3. Example Copy to Upper Case<a class="headerlink" href="#example-copy-to-upper-case" title="Permalink to this headline">¶</a></h2>
+<p>Here is a simple fragment from example file <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/copy_upper/copy_upper.cs">copy_upper/copy_upper.cs</a>.
+It copies a file line by line to a new file in upper case:</p>
+<div class="highlight-csharp"><div class="highlight"><pre>         <span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="s">&quot;text.txt&quot;</span><span class="p">);</span>
+         <span class="kt">var</span> <span class="n">writer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamWriter</span><span class="p">(</span><span class="s">&quot;upper_text.txt&quot;</span><span class="p">);</span>
+         <span class="k">while</span> <span class="p">(!</span><span class="n">reader</span><span class="p">.</span><span class="n">EndOfStream</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">line</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+            <span class="n">writer</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">());</span>
+         <span class="p">}</span>
+         <span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+         <span class="n">writer</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>You may test this in the Xamarin Studio example project copy_upper:</p>
+<ol class="arabic simple">
+<li>Expand the copy_upper project in the Solution pad.  The project
+includes the input file.  You may not see it at first.  You need to expand the folder
+for <code class="file docutils literal"><span class="pre">bin</span></code> and then <code class="file docutils literal"><span class="pre">Debug</span></code>.  You see <code class="file docutils literal"><span class="pre">text.txt</span></code>.</li>
+<li>To see
+what else is in the file system directory,
+you can select the Debug folder and right click and select
+Open Containing Folder.
+You should see <code class="file docutils literal"><span class="pre">text.txt</span></code> but not <code class="file docutils literal"><span class="pre">upper_text.txt</span></code>.
+Leave that operating system file folder open.</li>
+<li>Go back to Xamarin Studio and run the project.  Now look at the
+operating system <code class="file docutils literal"><span class="pre">Debug</span></code> folder again.  You should see <code class="file docutils literal"><span class="pre">upper_text.txt</span></code>.
+You can open it and see that it holds an upper case version of the contents
+of <code class="file docutils literal"><span class="pre">text.txt</span></code>.</li>
+</ol>
+<p>This is another case where the <code class="docutils literal"><span class="pre">ReadToEnd</span></code> function could have eliminated the loop.
+<a class="footnote-reference" href="#finalnewline" id="id2">[2]</a></p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
+<span class="n">writer</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">contents</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">());</span>
+</pre></div>
+</div>
+<table class="docutils footnote" frame="void" id="readclose" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>If, for some reason, you want to reread this same file while the
+same program is running, you need to close it and reopen it.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="finalnewline" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Besides the speed and efficiency of this second approach,
+there is also a technical improvement:  There may or may not be
+a newline at the end of the very last line of the file.  The <code class="docutils literal"><span class="pre">ReadLine</span></code>
+method works either way, but does not let you know the difference.
+In the line-by-line version, there is always a newline after the
+final line written with <code class="docutils literal"><span class="pre">WriteLine</span></code>.
+The <code class="docutils literal"><span class="pre">ReadToEnd</span></code> version will have newlines exactly matching the input.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 26-July-2015 02:50:13.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,3 +1,11 @@
+commit e379dab566396e0334d2d1a520cc28cb96300ee5
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 25 21:47:51 2015 -0500
+
+    reorganize book source (rst) into one chapter per subdirectory
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit df746fbf03f9151a164c920493984420ad182430
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 16:57:43 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 16:24:56 2015 -0500
 
     add dedent from proofing
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit b206a0948ad295afd2bec32389a96f8846f29744
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Tue Jul 21 23:58:25 2015 -0500
-
-    more cleanup
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

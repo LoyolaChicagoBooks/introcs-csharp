@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2.12. Value Types and Conversions &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
+    <link rel="up" title="2. C# Data and Operations" href="data.html" />
+    <link rel="next" title="2.13. Learning to Solve Problems" href="learning-to-problem-solve.html" />
+    <link rel="prev" title="2.11. Substitutions in Console.WriteLine" href="writeline-substitution.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">2.12. Value Types and Conversions</a><ul>
+<li><a class="reference internal" href="#type-int">2.12.1. Type int</a></li>
+<li><a class="reference internal" href="#type-long">2.12.2. Type long</a></li>
+<li><a class="reference internal" href="#type-double">2.12.3. Type double</a></li>
+<li><a class="reference internal" href="#numeric-types-and-limits">2.12.4. Numeric Types and  Limits</a></li>
+<li><a class="reference internal" href="#casting">2.12.5. Casting</a></li>
+<li><a class="reference internal" href="#type-char">2.12.6. Type char</a></li>
+<li><a class="reference internal" href="#type-boolean-or-bool">2.12.7. Type Boolean or bool</a></li>
+<li><a class="reference internal" href="#overflow-to-positive-exercise">2.12.8. Overflow to Positive Exercise</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="writeline-substitution.html" title="Previous Chapter: 2.11. Substitutions in Console.WriteLine">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="learning-to-problem-solve.html" title="Next Chapter: 2.13. Learning to Solve Problems">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/data/types-and-conversions.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="value-types-and-conversions">
+<span id="value-types"></span><span id="index-0"></span><h1>2.12. Value Types and Conversions<a class="headerlink" href="#value-types-and-conversions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="type-int">
+<span id="index-1"></span><span id="id1"></span><h2>2.12.1. Type int<a class="headerlink" href="#type-int" title="Permalink to this headline">¶</a></h2>
+<p>A variable is
+associated with a space in memory.  This space has a fixed size associated with the type
+of data.
+The <code class="docutils literal"><span class="pre">int</span></code> and <code class="docutils literal"><span class="pre">double</span></code> types are examples of <em>value types</em>,
+which means that this memory space holds an encoding of the complete data for the
+value of the variable.  The fixed space means that an <code class="docutils literal"><span class="pre">int</span></code> cannot be a totally
+arbitrary integer of an enormous size.  In fact an <code class="docutils literal"><span class="pre">int</span></code> variable can only hold
+an integer in a specific range.  See <a class="reference internal" href="../context/computerscience.html#data-representation"><span>Data Representation</span></a> for the
+general format of the underlying encoding in bits.</p>
+<p>An <code class="docutils literal"><span class="pre">int</span></code> is held in a memory space of 32 bits, so it can have at
+most <span class="math">\(2^{32}\)</span> values, and the encoding is chosen so about half are positive and
+half are negative: An <code class="docutils literal"><span class="pre">int</span></code> has maximum value <span class="math">\(2^{31} - 1 = 2147483647\)</span> and
+a minimum value of <span class="math">\(-2^{31} = -2147483648\)</span>.  The extreme values are also
+named constants in C#, <code class="docutils literal"><span class="pre">int.MaxValue</span></code> and <code class="docutils literal"><span class="pre">int.MinValue</span></code>.</p>
+<p>In particular this means <code class="docutils literal"><span class="pre">int</span></code> arithmetic does not always work.  What is worse,
+it fails <em>silently</em>:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int i = int.MaxValue;
+csharp&gt; i;
+2147483647
+csharp&gt; i + 5;
+-2147483644
+</pre></div>
+</div>
+<p>Add two positive numbers and get a negative number!  Getting such a wrong
+answer is called <em>overflow</em>.
+Be very careful if you are
+going to be using big numbers!  Note: with addition,
+overflow will give the wrong sign,
+but the sign may not give such a clue
+if another operation overflows, like multiplication.</p>
+</div>
+<div class="section" id="type-long">
+<span id="index-2"></span><span id="id2"></span><h2>2.12.2. Type long<a class="headerlink" href="#type-long" title="Permalink to this headline">¶</a></h2>
+<p>Most everyday uses of integers fit in this range of an <code class="docutils literal"><span class="pre">int</span></code>,
+and many modern computers are designed
+to operate on an <code class="docutils literal"><span class="pre">int</span></code> very efficiently, but sometimes you need a
+larger range.  Type <cite>long</cite> uses twice as much space.</p>
+<p>The same kind of silent overflow errors happen with <code class="docutils literal"><span class="pre">long</span></code> arithmetic, but only
+with much larger numbers.</p>
+<p>When we get to <a class="reference internal" href="../arrays/arrays.html#array"><span>Arrays</span></a>, you will see that a program may store
+an enormous number of integers, and then the total space may be an
+issue.  If some numbers fit in a <code class="docutils literal"><span class="pre">long</span></code>, but not an <code class="docutils literal"><span class="pre">int</span></code>,
+<code class="docutils literal"><span class="pre">long</span></code> must be used, taking us twice the space of an array of <code class="docutils literal"><span class="pre">int</span></code>
+elements.  If all the integers have even more limited ranges,
+they might be stored in the smaller space of a <code class="docutils literal"><span class="pre">short</span></code>
+or a <code class="docutils literal"><span class="pre">byte</span></code>.
+We will not further discuss or use types <code class="docutils literal"><span class="pre">short</span></code> or <code class="docutils literal"><span class="pre">byte</span></code> in this book.
+Here we will only use the integral types <code class="docutils literal"><span class="pre">int</span></code> and <code class="docutils literal"><span class="pre">long</span></code>.</p>
+</div>
+<div class="section" id="type-double">
+<span id="index-3"></span><span id="id3"></span><h2>2.12.3. Type double<a class="headerlink" href="#type-double" title="Permalink to this headline">¶</a></h2>
+<p>A <code class="docutils literal"><span class="pre">double</span></code> is also a value type, stored in a fixed sized space.  There are
+even more issues with <code class="docutils literal"><span class="pre">double</span></code> storage than with an <code class="docutils literal"><span class="pre">int</span></code>:  Not only do you need
+to worry about the total magnitude of the number, you also need to choose
+a <em>precision</em>:  There are an infinite number of real values, just between 0 and 1.
+Clearly we cannot encode for all of them!  As a result a <code class="docutils literal"><span class="pre">double</span></code> has a limited
+number of digits of accuracy.  There is also an older type <code class="docutils literal"><span class="pre">float</span></code> that takes up
+half of the space of a <code class="docutils literal"><span class="pre">double</span></code>, and has a smaller range and less accuracy.  This at
+least gives a reason for the name <code class="docutils literal"><span class="pre">double</span></code>:  double the storage space of a <code class="docutils literal"><span class="pre">float</span></code>.</p>
+<p>To avoid a ridiculously large number of
+trailing 0&#8217;s, a big double literal can be
+expressed using a variant of scientific notation:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">1.79769313486232E+308</span></code> means <span class="math">\(1.7976931348623157(10^{308})\)</span></div></blockquote>
+<p>C# does not have the typography for raised exponents.  Instead
+literal values can use the E to mean
+&#8220;times 10 to the power&#8221;, and the E is followed by and exponent integer
+that can be positive or negative.
+The whole double literal may not contain any embedded blanks.  Internally
+these numbers are stored with powers of 2, not 10:  See
+<a class="reference internal" href="../context/computerscience.html#data-representation"><span>Data Representation</span></a>.</p>
+<p>Arithmetic with the <code class="docutils literal"><span class="pre">double</span></code> type does not overflow silently as with
+the integral types.
+We show behavior that could be important if you do scientific computing
+with enormous numbers:  There are values for Infinity and Not a Number,
+abbreviated NaN.  See them used in csharp:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; double x = double.MaxValue;
+csharp&gt; x;
+1.79769313486232E+308
+csharp&gt; double y = 10 * x;
+csharp&gt; y;
+Infinity
+csharp&gt; y  + 1000;
+Infinity
+csharp&gt; y  - 1000;
+Infinity
+csharp&gt; 1000/y;
+0
+csharp&gt; double z = 10 - y;
+csharp&gt; z;
+-Infinity
+csharp&gt; double sum = y + z;
+csharp&gt; sum;
+NaN
+csharp&gt; sum/1000;
+NaN
+</pre></div>
+</div>
+<p>Once a result gets too big, it gets listed as infinity.
+As you can see,
+there is some arithmetic allowed with a finite number and infinity!
+Still some operations are not legal.
+Once a result turns into <code class="docutils literal"><span class="pre">NaN</span></code>, no arithmetic operations change
+further results away from <code class="docutils literal"><span class="pre">NaN</span></code>,
+so there is a lasting record of a big error!</p>
+<p>Note that Infinity, -Infinity and NaN are just representations when displayed
+as strings.  The numerical constants are
+<code class="docutils literal"><span class="pre">Double.PositiveInfinity</span></code>, <code class="docutils literal"><span class="pre">Double.NegativeInfinity</span></code>, and <code class="docutils literal"><span class="pre">Double.NaN</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">There is no such neat system for showing off small inaccuracies in <code class="docutils literal"><span class="pre">double</span></code>
+arithmetic accumulating
+due to limited precision.  These inaccuracies <em>still</em> happen silently.</p>
+</div>
+</div>
+<div class="section" id="numeric-types-and-limits">
+<span id="numeric-type-limits"></span><span id="index-4"></span><h2>2.12.4. Numeric Types and  Limits<a class="headerlink" href="#numeric-types-and-limits" title="Permalink to this headline">¶</a></h2>
+<p>The listing below shows how the storage size in bits translates into the limits
+for various numerical types.  We will not discuss or use <code class="docutils literal"><span class="pre">short</span></code>,
+<code class="docutils literal"><span class="pre">byte</span></code> or <code class="docutils literal"><span class="pre">float</span></code> further.</p>
+<dl class="docutils">
+<dt>long</dt>
+<dd>64 bits; range -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</dd>
+<dt>int</dt>
+<dd>32 bits; range -2,147,483,648 to 2,147,483,647</dd>
+<dt>short</dt>
+<dd>16 bits; range -32,768 to 32,767</dd>
+<dt>byte</dt>
+<dd>8 bits; range 0 to 255 (no negative values)</dd>
+<dt>double</dt>
+<dd>64 bits; maximum magnitude: <span class="math">\(1.7976931348623157(10^{308})\)</span>;
+about 15 digits of accuracy</dd>
+<dt>float</dt>
+<dd>32 bits; maximum magnitude: <span class="math">\(3.402823(10^{38})\)</span>; about 7 digits of accuracy</dd>
+<dt>decimal</dt>
+<dd>128 bits; maximum value: 79228162514264337593543950335;
+28 digits of accuracy;  can exactly represents decimal values
+for financial operations; briefly discussed in <em>optional</em>
+<a class="reference internal" href="../classes/overload-op.html#decimal-type"><span>Decimal Type</span></a>.</dd>
+<dt>char</dt>
+<dd>See <a class="reference internal" href="#integer-char"><span>char as integer</span></a>.</dd>
+</dl>
+</div>
+<div class="section" id="casting">
+<span id="cast"></span><span id="index-5"></span><h2>2.12.5. Casting<a class="headerlink" href="#casting" title="Permalink to this headline">¶</a></h2>
+<p>While the mathematical ideas of 42 and 42.0 are the same, C# has specific types.
+There are various places where numerical types get converted automatically by C#
+or explicitly by the programmer.
+A major issue is whether the new type can accurately represent the original value.</p>
+<p>Going from <code class="docutils literal"><span class="pre">int</span></code> to <code class="docutils literal"><span class="pre">double</span></code> has no issue:  Any <code class="docutils literal"><span class="pre">int</span></code> can be exactly
+represented as a <code class="docutils literal"><span class="pre">double</span></code>.  Code like the following is fine:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int i = 33;
+csharp&gt; double d = i;
+csharp&gt; double x;
+csharp&gt; x = 11;
+csharp&gt; double z = i + 2.5;
+csharp&gt; ShowVars();
+int i = 33
+double d = 33
+double x = 11
+double z = 35.5
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">double</span></code> variable <code class="docutils literal"><span class="pre">d</span></code> is initialized with the value of an <code class="docutils literal"><span class="pre">int</span></code> variable.
+The <code class="docutils literal"><span class="pre">double</span></code> variable <code class="docutils literal"><span class="pre">x</span></code> is assigned a value using an <code class="docutils literal"><span class="pre">int</span></code> literal.
+The <code class="docutils literal"><span class="pre">double</span></code> variable <code class="docutils literal"><span class="pre">z</span></code> is initialized with the value of a sum involving
+both an <code class="docutils literal"><span class="pre">int</span></code> variable and a <code class="docutils literal"><span class="pre">double</span></code> literal.  As we have discussed before in
+<a class="reference internal" href="arithmetic.html#arithmetic"><span>Arithmetic</span></a>, the <code class="docutils literal"><span class="pre">int</span></code> is converted to a <code class="docutils literal"><span class="pre">double</span></code> before the addition
+operation is done.</p>
+<p>The other direction for conversion is more problematic:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; double d= 2.7;
+csharp&gt; int i;
+csharp&gt; i = d;
+{interactive}(1,4): error CS0266: Cannot implicitly convert type
+   &#39;double&#39; to &#39;int&#39;.
+An explicit conversion exists (are you missing a cast?)
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">int</span></code> <code class="docutils literal"><span class="pre">i</span></code> cannot accurately hold the value 2.7.
+Since the compiler does this checking, looking only at types, not values, this even
+fails if the the <code class="docutils literal"><span class="pre">double</span></code> happens to have an integer value:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; double d = 2.0;
+csharp&gt; int i = d;
+{interactive}(1,4): error CS0266: Cannot implicitly convert type
+   &#39;double&#39; to &#39;int&#39;.
+An explicit conversion exists (are you missing a cast?)
+</pre></div>
+</div>
+<p id="index-6">If you really want to possibly lose precision and convert a <code class="docutils literal"><span class="pre">double</span></code> to
+an <code class="docutils literal"><span class="pre">int</span></code> result, you <em>can</em> do it, but you must be explicit, using a <em>cast</em>
+as the csharp error messages suggest.</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; double d= 2.7;
+csharp&gt; int i;
+csharp&gt; i = (int)d;
+csharp&gt; i;
+2
+</pre></div>
+</div>
+<p>The desired result type name in parentheses <code class="docutils literal"><span class="pre">(int)</span></code> is a <em>cast</em>, telling the compiler
+you really intend the conversion.  Look what is lost!  The cast does not
+<em>round</em> to the nearest integer, it <em>truncates</em> toward 0, dropping the fractional
+part, .7 here.</p>
+<p id="index-7">Rounding is possible, but if you really want the <code class="docutils literal"><span class="pre">int</span></code> type, it takes two steps,
+because the function <code class="docutils literal"><span class="pre">Math.Round</span></code> does round to a mathematical integer, but leaves
+the type as <code class="docutils literal"><span class="pre">double</span></code>!  To round <code class="docutils literal"><span class="pre">d</span></code> to an <code class="docutils literal"><span class="pre">int</span></code> result we could use:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; i = (int)Math.Round(d);
+csharp&gt; i;
+3
+</pre></div>
+</div>
+<p>You can also use an explicit cast from int to double.  This is generally not needed,
+because of the automatic conversions, but there is one place where it is
+important:  if you want <code class="docutils literal"><span class="pre">double</span></code> division but have <code class="docutils literal"><span class="pre">int</span></code> parts.  Here is a
+quick artificial test:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int sum = 14;
+csharp&gt; int n = 4;
+csharp&gt; double avg = sum/n;
+csharp&gt; avg;
+3
+</pre></div>
+</div>
+<p>Oops, integer division.  Instead, continue with:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; avg = (double)sum/n;
+csharp&gt; avg;
+3.5
+</pre></div>
+</div>
+<p>We get the right decimal answer.</p>
+<p>This is a bit more subtle than it may appear:
+The cast to double, <code class="docutils literal"><span class="pre">(double)</span></code>
+is an operation in C# and so it has a <em>precedence</em> like all operations.  Casting
+happens to have precedence higher than any arithmetic operation, so the expression is
+equivalent to:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">avg</span> <span class="p">=</span> <span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">sum</span><span class="p">)/</span><span class="n">n</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>On the other hand, if we switch the order the other way with parentheses around the
+division:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; avg = (double)(sum/n);
+csharp&gt; avg;
+3
+</pre></div>
+</div>
+<p>then working <em>one</em> step at a time, <code class="docutils literal"><span class="pre">(sum/n)</span></code> is <em>integer</em> division,
+with result 3.  It is the 3 that is then cast to a double (too late)!</p>
+<p>See the appendix <a class="reference internal" href="../appendix/precedence.html#precedence"><span>Precedence of Operators</span></a>, listing all C# operations discussed in this book.</p>
+</div>
+<div class="section" id="type-char">
+<span id="index-8"></span><span id="id4"></span><h2>2.12.6. Type char<a class="headerlink" href="#type-char" title="Permalink to this headline">¶</a></h2>
+<p>The type for an individual character is <code class="docutils literal"><span class="pre">char</span></code>.  A <code class="docutils literal"><span class="pre">char</span></code> literal value is
+a <em>single</em> character enclosed in <em>single</em> quotes, like <code class="docutils literal"><span class="pre">'a'</span></code> or <code class="docutils literal"><span class="pre">'$'</span></code>.
+The literal for a
+single quote character itself and the literal for a newline use
+<em>escape codes</em>, like in <a class="reference internal" href="strings2.html#strings2"><span>String Special Cases</span></a>:
+The literals are <code class="docutils literal"><span class="pre">'\''</span></code> and <code class="docutils literal"><span class="pre">'\n'</span></code> respectively.</p>
+<p>Be careful to distinguish a <code class="docutils literal"><span class="pre">char</span></code> literal like <code class="docutils literal"><span class="pre">'A'</span></code>
+from a string literal <code class="docutils literal"><span class="pre">&quot;A&quot;</span></code>.</p>
+<p id="integer-char"><span id="index-9"></span><strong>Char as integer</strong>:  Though the <code class="docutils literal"><span class="pre">char</span></code> type has character literals
+and prints as a character,
+internally a <code class="docutils literal"><span class="pre">char</span></code> is a <em>type of integer</em>, stored in 16 bits,
+with the correspondence
+between numeric codes and characters given by the <em>Unicode</em> standard.
+Unicode allows special symbol characters and alphabets of many languages.
+We will stick to the standard American keyboard for these characters.</p>
+<p>Besides different alphabets, Unicode also has characters for all sorts of
+symbols: emoticons, chess pieces, advanced math....  See
+<a class="reference external" href="http://www.unicode.org/charts">http://www.unicode.org/charts</a>.  All the symbols can be represented as escape
+codes in C#, starting with <code class="docutils literal"><span class="pre">\u</span></code> followed by 4 hexadecimal digits.  For example
+<code class="docutils literal"><span class="pre">\u262F</span></code> produces a yin-yang symbol.</p>
+<p>We mention the <code class="docutils literal"><span class="pre">char</span></code> type being numeric mostly because of errors
+that you can make that would otherwise be hard to figure out.  This code does
+not concatenate the <code class="docutils literal"><span class="pre">char</span></code> symbols:</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; Console.WriteLine(&#39;A&#39; + &#39;-&#39;);
+110
+</pre></div>
+</div>
+<p>What?
+We mentioned that modern computers are set up to easily work with the <code class="docutils literal"><span class="pre">int</span></code>
+type.  In arithmetic with <em>smaller</em> integral types the operands are first
+automatically converted to type <code class="docutils literal"><span class="pre">int</span></code>.
+An <code class="docutils literal"><span class="pre">int</span></code> sum is an <code class="docutils literal"><span class="pre">int</span></code>, and that is
+what is printed.</p>
+<p>You can look at the numeric values inside a <code class="docutils literal"><span class="pre">char</span></code> with a cast!</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; (int)&#39;A&#39;;
+65
+csharp&gt; (int)&#39;-&#39;;
+45
+</pre></div>
+</div>
+<p>So the earlier 110 is correct:  65 + 45 = 110.</p>
+<p>For completeness:
+It is also possible to cast from small <code class="docutils literal"><span class="pre">int</span></code> back to <code class="docutils literal"><span class="pre">char</span></code>.
+This may be useful for dealing with the alphabet
+in sequence (or simple classical cryptographic codes):</p>
+<div class="highlight-none"><div class="highlight"><pre>csharp&gt; &#39;A&#39; + 1;
+66
+csharp&gt; (char)(&#39;A&#39; + 1);
+&#39;B&#39;
+</pre></div>
+</div>
+<p>The capital letter one place after A is B.</p>
+</div>
+<div class="section" id="type-boolean-or-bool">
+<span id="type-boolean"></span><span id="index-10"></span><h2>2.12.7. Type Boolean or bool<a class="headerlink" href="#type-boolean-or-bool" title="Permalink to this headline">¶</a></h2>
+<p>There is one more very important value type, that we introduce here
+for completeness, though we will not use it until
+<a class="reference internal" href="../decisions/decisions.html#if-statements"><span>Decisions</span></a>.
+Logical conditions are either true or false.  The type with just these
+two values is <em>Boolean</em>, or <em>bool</em> for short.  The
+type is named after George Boole, who invented what we now call
+<em>Boolean algebra</em>.  Though it seemed like a useless mathematical curiosity
+when Boole invented it, a century later Boolean algebra turned out to be
+at the heart of the implementation of computer hardware.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Boolean literals are <code class="docutils literal"><span class="pre">true</span></code> and <code class="docutils literal"><span class="pre">false</span></code>, with <em>no</em> quotes
+around them.</p>
+</div>
+<p>With quotes they would be of type string, not Boolean!</p>
+</div>
+<div class="section" id="overflow-to-positive-exercise">
+<h2>2.12.8. Overflow to Positive Exercise<a class="headerlink" href="#overflow-to-positive-exercise" title="Permalink to this headline">¶</a></h2>
+<p>We gave an example above in <a class="reference internal" href="#type-int"><span>Type int</span></a>,
+adding two positive <code class="docutils literal"><span class="pre">int</span></code> values and
+clearly having an error, since the result was negative.  Declare
+and initialize two positive <code class="docutils literal"><span class="pre">int</span></code> variables <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code>.  Experiment
+with the initializations so</p>
+<ol class="lowerroman simple">
+<li>Their product is too big to fit in an <code class="docutils literal"><span class="pre">int</span></code> AND</li>
+<li>The wrong overflow result for <code class="docutils literal"><span class="pre">x*y</span></code> is <em>positive</em>, not negative.</li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 26-July-2015 02:50:13.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

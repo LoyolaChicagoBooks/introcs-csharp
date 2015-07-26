@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2.2. Lab: Editing, Compiling, and Running with Xamarin Studio &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
+    <link rel="up" title="2. C# Data and Operations" href="data.html" />
+    <link rel="next" title="2.3. Arithmetic" href="arithmetic.html" />
+    <link rel="prev" title="2.1. A Sample C# Program" href="sampleprogram.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a><ul>
+<li><a class="reference internal" href="#goals">2.2.1. Goals</a></li>
+<li><a class="reference internal" href="#steps">2.2.2. Steps</a><ul>
+<li><a class="reference internal" href="#for-further-reinforcement">2.2.2.1. For further reinforcement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="sampleprogram.html" title="Previous Chapter: 2.1. A Sample C# Program">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="arithmetic.html" title="Next Chapter: 2.3. Arithmetic">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/data/lab-edit-compile-run.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="lab-editing-compiling-and-running-with-xamarin-studio">
+<span id="lab-edit-compile-run"></span><span id="index-0"></span><h1>2.2. Lab: Editing, Compiling, and Running with Xamarin Studio<a class="headerlink" href="#lab-editing-compiling-and-running-with-xamarin-studio" title="Permalink to this headline">¶</a></h1>
+<p>This first lab is aimed at taking you through the end-to-end process of
+writing and running a basic computer program with the Xamarin Studio
+environment. As with all things in
+life, we will learn in this lab that becoming a programmer requires you
+to learn a number of other things along the way.</p>
+<p>In software development/engineering parlance, we typically describe a
+scenario as a <em>workflow</em>, which can be thought of as a series of steps
+that are possibly repeated. The workflow of programming can loosely be
+defined as follows:</p>
+<ol class="arabic simple">
+<li>Use a text editor to write your source code (human readable).</li>
+<li>Compile your code using the Software Development Kit (SDK) into
+object code.</li>
+<li>Link your object code to create an executable. (There are other
+kinds of results to produce, but we will start with the idea of an
+executable program to keep things simple.)  The default is to have
+an executable program created with compilation, automatically.</li>
+<li>Run your program. Even for the most seasoned developers, your
+program may not work entirely right the first time, so you may end
+up repeating these steps (debugging).</li>
+</ol>
+<p>These steps can all be done with different tools.  Many find it simpler to have
+an integrated tool, like Xamarin Studio, that does them all in the same place,
+and automates the steps that do not need human interaction!</p>
+<p>If you are doing this on your own
+machine, make sure you have Mono and Xamarin Studio installed as in
+<a class="reference internal" href="../appendix/monotools.html#development-tools"><span>Development Tools</span></a>.</p>
+<p>Other tools are available, like
+the development environment
+Visual Studio (from Microsoft, focused on Windows).</p>
+<p>Understanding the lower level tools that accomplish each step is important,
+but we defer
+a discussion to get you going with Xamarin Studio.</p>
+<div class="section" id="goals">
+<h2>2.2.1. Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<p>Our primary goal to create and understand an Xamarin Studio setup
+that you can use to do all of
+the remaining homework assignments and labs for this course.</p>
+</div>
+<div class="section" id="steps">
+<span id="id1"></span><h2>2.2.2. Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
+<p>Xamarin Studio files and interactions
+are organized hierarchically.  At a low level are
+individual C# source code files.  One, or possibly more, are used for a
+particular <em>project</em>.  Multiple projects are gathered together under a single
+<em>solution</em>.  Xamarin Studio deals with one solution at a time, though you can
+separately create multiple solutions.  The simplest thing is to create
+a <em>single solution for this course</em>,
+and put each of the projects that you create in that one solution.
+You can keep adding onto previous efforts without having to start over
+with a new solution each time.</p>
+<p>We start by creating a <em>solution</em> with a <em>project</em> in it.  The images are from
+a Mac.  Windows versions should be similar.</p>
+<ol class="arabic">
+<li><p class="first">Open Xamarin Studio, in the appropriate way for an application in your
+operating system.  It should be in the Start menu for Windows.
+Using Spotlight is quick on a Mac.</p>
+</li>
+<li><p class="first">You get a Welcome screen.  Toward the upper left corner is a link for
+New Solution.  Click on it.  Alternately you can follow the path through the menus:
+File -&gt; New -&gt; Solution...</p>
+<a class="reference internal image-reference" href="../_images/newSolution.png"><img alt="Xamarin Studio Welcome Image" class="align-center" src="../_images/newSolution.png" style="width: 150pt;" /></a>
+<p>You should get a popup New Project Window, with a banner.
+&#8220;Choose a template for your new project&#8221;.  It may initially show the
+wrong template choice, like in the left column shown here:</p>
+<a class="reference internal image-reference" href="../_images/newProjectTemplateApp.png"><img alt="Xamarin Studio Project Template Image - App" class="align-center" src="../_images/newProjectTemplateApp.png" style="width: 110pt;" /></a>
+<p>Make sure the template selection gets set to .NET (under Other) as in:</p>
+<a class="reference internal image-reference" href="../_images/newProjectTemplateNet.png"><img alt="Xamarin Studio Project Template Image - .NET" class="align-center" src="../_images/newProjectTemplateNet.png" style="width: 350pt;" /></a>
+<p>The center part of the screen then shows further choices appropriate to
+a .NET project.  Make sure <strong>Console Project</strong> is selected, and the language
+shown in the highlighted line should be set to C#.</p>
+<p>Then click Next.</p>
+</li>
+<li><p class="first">The banner on the next form is &#8220;Configure your new project&#8221;. The
+image shows the initial state for the author:</p>
+<a class="reference internal image-reference" href="../_images/configureProjectForm.png"><img alt="Xamarin Studio Dialog Image" class="align-center" src="../_images/configureProjectForm.png" style="width: 350pt;" /></a>
+<p>Follow the order below to modify the form.
+Later parts may not be visible until you do the previous parts.  The
+image shows the final form as filled out by Dr. Harrington.</p>
+<a class="reference internal image-reference" href="../_images/configureCreate.png"><img alt="Xamarin Studio Dialog Image" class="align-center" src="../_images/configureCreate.png" style="width: 360pt;" /></a>
+<ul class="simple">
+<li>Enter <strong>hello</strong> in the Project Name field, for the name of the project.</li>
+<li>If you want to keep all your work together, we suggest that you
+change the name of the solution from the copied &#8220;hello&#8221; and
+enter any name you like:  We recommend <strong>work</strong>, which will make
+sense for all your work for the course.</li>
+<li>On <em>your</em> computer the Location field should start off showing a
+Projects folder under <em>your</em> home folder,
+(not the author&#8217;s home folder as in the image).  You can leave
+it as is or change it if you like.</li>
+<li>Make sure <em>Create a project within the solution directory</em> is checked
+in the box under the Location.</li>
+<li>You may skip version control for now, though it is very handy.</li>
+<li>After the three fields are filled in, the Create button in the lower right
+should become active.  After checking your entires, click on Create.</li>
+</ul>
+<p>You now have created a solution in Xamarin Studio, with one project
+inside it. Later we can add further <em>projects</em> to <em>this solution</em>.</p>
+</li>
+<li><p class="first">Look at the Xamarin Studio window that appears.  It should have two main sub-windows or
+&#8220;Pads&#8221; as Xamarin Studio calls them.  A narrow one on the left is the Solution Pad,
+containing a hierarchical view of the solution.  If you somehow close a pad,
+you can recover it going to the main Xamarin menu: View =&gt; Pads =&gt; Solution.</p>
+<p>In the Solution Pad you should see your solution name
+at the top and the hello project under that.
+Folders have a little triangle shown to their
+left.  You can click on the triangle.  A triangle pointing down
+means the inside of the folder is displayed.  A triangle pointing to the right
+means the contents are not being displayed. Listed under hello are References,
+Packages and
+Properties, that we will ignore for now.  Below them is the line for the automatically
+generated sample code file Program.cs.
+The file should also appear in the Edit Pad to the right.</p>
+<a class="reference internal image-reference" href="../_images/Program.png"><img alt="Xamarin Studio Program.cs Image" class="align-center" src="../_images/Program.png" style="width: 300pt;" /></a>
+</li>
+<li><p class="first">Program.cs should be selected in the Solution Pad, as shown above.
+Change the selection by clicking on hello.
+At the right end of the
+highlighted hello entry you should see an icon with a small gear and a triangle.
+Click on it to get the context sensitive popup window.
+When selected, most entries in the Solution Pad should show this icon,
+allowing you to open its context sensitive menu.</p>
+</li>
+<li><p class="first">Bring up the context menu on the hello project in the Solution Pad.
+Select Run Item.</p>
+<a class="reference internal image-reference" href="../_images/runMainMenu.png"><img alt="Xamarin Studio Run Program.cs Image" class="align-center" src="../_images/runMainMenu.png" style="width: 250pt;" /></a>
+</li>
+<li><p class="first">Here Xamarin Studio combines several steps: saving the file,
+compiling it into an executable program,
+and starting running it if compilation succeeded.
+With the canned file it should succeed!  You see a Console window
+something like</p>
+<a class="reference internal image-reference" href="../_images/pressKey.png"><img alt="Xamarin Studio Press Key to close Image" class="align-center" src="../_images/pressKey.png" style="width: 283.5pt;" /></a>
+<p>Here you see the output of this simple program.
+On Windows you can follow the instructions and press the space or Enter key.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This console window must be closed before you can run a program again.
+If you go to run a program and the Run Item line is grayed out,
+look for the unclosed terminal window you still have!</p>
+</div>
+</li>
+<li><p class="first">On Microsoft Windows, pressing spacebar or Enter kills the window.
+<strong>On a Mac only, this makes the window gets two more lines, but still be visible:</strong></p>
+<a class="reference internal image-reference" href="../_images/processComplete.png"><img alt="Xamarin Studio Process Complete Image" class="align-center" src="../_images/processComplete.png" style="width: 198.75pt;" /></a>
+<p>You have to actively close the Mac terminal window by clicking the
+red window closing button, or using the keyboard, with Command-W.  You
+can either do that now, or replace the previous spacebar/Enter
+step with this action.</p>
+</li>
+<li><p class="first">This one time it is convenient to get the immediate practice of running
+this automatically generated program
+file, <code class="docutils literal"><span class="pre">Program.cs</span></code>.  Hereafter this file is an annoyance.
+The file name and contents are always the same, and not useful.
+You would need to redo the whole
+code for your own program.  A general approach for all your projects
+is to <em>delete</em> this
+file and put in a file of your own:</p>
+<ul>
+<li><p class="first">Make sure Program.cs is selected in the Solution Pad.
+You save a step by closing the Edit Pad for Program.cs,
+clicking on the X in the Program.cs tab at the top of the Edit Pad.</p>
+</li>
+<li><p class="first">In the Solution Pad open the context sensitive menu for Program.cs, and select
+Remove.</p>
+<a class="reference internal image-reference" href="../_images/menuRemoveMain.png"><img alt="Xamarin Studio Remove Program.cs Image" class="align-center" src="../_images/menuRemoveMain.png" style="width: 200pt;" /></a>
+</li>
+<li><p class="first">You get another popup, with the <em>wrong</em> (rightmost) button selected,
+Remove From Project.
+Instead select the <em>left</em> button, <strong>Delete</strong>, as in
+the image below.
+Otherwise the file is left in the hello
+folder, but it is just not listed as being in the project.
+Each project is associated with a folder, but not everything
+in the folder may be cataloged by Xamarin as part of the project.</p>
+<a class="reference internal image-reference" href="../_images/sureRemove.png"><img alt="Xamarin Studio Delete Program.cs Image" class="align-center" src="../_images/sureRemove.png" style="width: 360pt;" /></a>
+</li>
+<li><p class="first">If you forgot to close the Edit Pad tab containing Program.cs earlier,
+you can still do it &#8211; just say not to save changes to the file when asked.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">To get in code that you want, there are several approaches.  The one we take
+now is to start from a completely
+new empty file:  Pop up the context sensitive menu for the hello project.
+Select the submenu Add...  and  then New File....</p>
+<a class="reference internal image-reference" href="../_images/addNewFileMenu.png"><img alt="Xamarin Studio Add new file Image" class="align-center" src="../_images/addNewFileMenu.png" style="width: 340pt;" /></a>
+</li>
+<li><p class="first">In the popup New File Dialog Window, it is likely that the wrong kind of file is
+highlighted (likely Empty Class).</p>
+<a class="reference internal image-reference" href="../_images/makeEmptyFileDialog.png"><img alt="Xamarin Studio Add empty file Image" class="align-center" src="../_images/makeEmptyFileDialog.png" style="width: 350pt;" /></a>
+<p>Click on <strong>Empty File</strong> instead.
+Change the Name field from EmptyCSharpFile to hello.cs.
+Always remember the &#8221;.cs&#8221;.
+Click the New button.</p>
+</li>
+<li><p class="first">This should add hello.cs to the hello project and open an editing window for hello.cs.
+The file should have no text.</p>
+<a class="reference internal image-reference" href="../_images/editEmptyHello.png"><img alt="Xamarin Studio edit empty file Image" class="align-center" src="../_images/editEmptyHello.png" style="width: 180pt;" /></a>
+<p>If it does have text, delete this file, too, and
+go back to the previous step and be sure to select <strong>Empty File</strong>, not Empty Class.</p>
+<p>Much like in most word processors type in (or paste)
+the following code.  This is actually an equivalent
+<em>Hello, World!</em> program to the automatically generated one,
+but it is a bit shorter.
+It only introduces the syntax we actually <em>need</em> at the beginning,
+and will be discussing more shortly.  The automatically generate line numbers
+are not a part of the text:</p>
+<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Hello</span>
+<span class="p">{</span>
+   <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+   <span class="p">{</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>This program is deliberately simple, so you can type it into the text
+editor quickly and become familiar with how
+to create, edit, and save a program.  Here is how it looks pasted or typed
+into the editor pad:</p>
+<a class="reference internal image-reference" href="../_images/pasteHello.png"><img alt="Xamarin Studio Edited new file Image" class="align-center" src="../_images/pasteHello.png" style="width: 230pt;" /></a>
+</li>
+<li><p class="first">You can run the project just as before.  You should ge the same result, unless
+you made a typing error.  In that case look for what does not match,
+fix it, and try again.  Remember to close the
+execution Console Window.</p>
+</li>
+<li><p class="first">Now try a bit of editing:  Look at the program to see where output came
+from.  Change what is printed and run it, but don&#8217;t eliminate the
+output console
+window for now (so you can show it off).</p>
+</li>
+<li><p class="first">Now grab the instructor or teaching assistant so
+they can perform a quick inspection of your work and check it off
+(including the varied message printed).</p>
+</li>
+</ol>
+<p>Labs need to be completed to receive
+credit. If you are unable to make class on a lab day, please make sure
+that you complete the work and demonstrate it by the beginning of the
+next lab.</p>
+<p>At this point, you have accomplished the major objective for this
+introductory lab: to create a Xamarin Studio project, and
+enter, compile, and run a C# program.</p>
+<div class="section" id="for-further-reinforcement">
+<h3>2.2.2.1. For further reinforcement<a class="headerlink" href="#for-further-reinforcement" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Can you make a new program variant print out two <em>separate</em> lines?
+This is possible with an added statement.  It is also possible
+changing one statement, but not adding an additional statement.</p>
+</li>
+<li><p class="first">Download and install Mono Software Development Kit and Xamarin Studio on
+your home computer or laptop.</p>
+</li>
+<li><p class="first">You can now add further projects to your <em>current</em> solution.
+To add a new project in your solution, in the Solution Pad open the context
+sensitive menu for the whole solution (top line), select Add,
+and in the submenu select New project, and you go to the Project Template form.
+It should remember your last settings, but do check:  Later we will
+sometimes want a Library instead of a Console project.</p>
+<p>Complete the remaining parts in the same
+way as before, giving a new name for the project.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 26-July-2015 02:50:13.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

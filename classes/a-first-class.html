@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>13.1. A First Example of Class Instances: Contact &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
+    <link rel="up" title="13. Classes and Object-Oriented Programming" href="classes.html" />
+    <link rel="next" title="13.2. Class Instance Examples" href="classexamples.html" />
+    <link rel="prev" title="13. Classes and Object-Oriented Programming" href="classes.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">13.1. A First Example of Class Instances: Contact</a><ul>
+<li><a class="reference internal" href="#making-a-datatype">13.1.1. Making a Datatype</a></li>
+<li><a class="reference internal" href="#class-syntax">13.1.2. Class Syntax</a></li>
+<li><a class="reference internal" href="#instance-variables">13.1.3. Instance Variables</a></li>
+<li><a class="reference internal" href="#constructors">13.1.4. Constructors</a></li>
+<li><a class="reference internal" href="#instance-methods">13.1.5. Instance Methods</a></li>
+<li><a class="reference internal" href="#getters">13.1.6. Getters</a></li>
+<li><a class="reference internal" href="#this-object">13.1.7. This Object</a></li>
+<li><a class="reference internal" href="#setters">13.1.8. Setters</a></li>
+<li><a class="reference internal" href="#tostring-override">13.1.9. ToString Override</a></li>
+<li><a class="reference internal" href="#local-variables-hiding-instance-variables">13.1.10. Local Variables Hiding Instance Variables</a><ul>
+<li><a class="reference internal" href="#lifetime-and-scope-exercise-example">13.1.10.1. Lifetime and Scope Exercise/Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="classes.html" title="Previous Chapter: 13. Classes and Object-Oriented Programming">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="classexamples.html" title="Next Chapter: 13.2. Class Instance Examples">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/classes/a-first-class.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="a-first-example-of-class-instances-contact">
+<span id="class"></span><span id="index-0"></span><h1>13.1. A First Example of Class Instances: Contact<a class="headerlink" href="#a-first-example-of-class-instances-contact" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="making-a-datatype">
+<h2>13.1.1. Making a Datatype<a class="headerlink" href="#making-a-datatype" title="Permalink to this headline">¶</a></h2>
+<p>C# comes with lots of built-in datatypes, but not
+everything we might want to use.  We start with a very simple example of
+building your own new type of object:  Contact information for a person
+involves several pieces of data, and they are all unified by the fact
+that they are for one person, so we would like to store them together
+as a unit.  For simplicity, let us just consider the contact information to be
+name, phone number, and email address.</p>
+<p>You could always keep three independent string variables,
+but conceptually the main idea is <em>the</em> contact.  It just happens
+to have parts.</p>
+<p>In order to treat a contact as  <em>one</em> entity, we create a <code class="docutils literal"><span class="pre">class</span></code>,
+<code class="docutils literal"><span class="pre">Contact</span></code>.
+This way we can have a single
+variable refer to a <code class="docutils literal"><span class="pre">Contact</span></code> object.  Such an object is an <em>instance</em> of the
+class.</p>
+<p>It is important to distinguish between a class and an instance of a class:
+A class provides a template or instructions to make new instance objects.  A
+common comparison is that a class is like a cookie cutter while an
+instance of the class is like a cookie.
+You might consider constructor parameters as being for different decorations
+on different cookies, so not all cookies must end up completely the same.</p>
+<p>Later we will see an example for rational
+numbers, <a class="reference internal" href="rational.html#rational"><span>The Rational Class</span></a>,
+where the parts of the class are more tightly integrated, but that is more
+complicated, so we defer it.</p>
+<p>We have already considered built-in types with internal state, like a <code class="docutils literal"><span class="pre">List</span></code>:
+Each <code class="docutils literal"><span class="pre">List</span></code> can contain different data, and the internal data can be changed.</p>
+<p>The idea of creating a new type of object opens new ground for managing data.
+Thus far we have stored data as local variables, and we have called functions,
+with two ways to get information in and out of functions:</p>
+<ol class="arabic simple">
+<li>In through parameters and out through returned data.</li>
+<li>Directly via the user: in through the keyboard and out to the screen.</li>
+</ol>
+<p>We have stored and passed around built-in types of object using this model.</p>
+<p>We have alternatives for storing and accessing data in the methods within
+a new class that we write.
+Now we have the idea of an object that has <em>internal</em> state
+(like a contact with a name, phone, and email).  We shall see that
+this state is <em>not</em>
+stored in local variables and does <em>not</em> need to be passed through parameters for
+methods <em>within</em> the class.
+Pay careful attention as we introduce this new location for data and the new ways
+of interacting with it.</p>
+<p>This is quite a shift.
+<em>Do not take it lightly.</em></p>
+<p id="index-1">We can create a new object with the <code class="docutils literal"><span class="pre">new</span></code> syntax.
+We can give parameters defining the initial state of the new object.
+In our example the obvious thing to do is supply parameters giving
+values for the three parts of the object state, so we can plan that</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Contact</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span> <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>would create a new Contact storing the data.  A Contact object, created with
+<code class="docutils literal"><span class="pre">new</span></code> is an <em>instance</em> of the class Contact.</p>
+<p>Like with built-in types, we can have the natural operations on the
+type as <em>methods</em>.  For instance we can</p>
+<ul class="simple">
+<li>look up individual pieces of the contact data with methods
+<code class="docutils literal"><span class="pre">GetName</span></code>, <code class="docutils literal"><span class="pre">GetPhone</span></code> and <code class="docutils literal"><span class="pre">GetEmail</span></code></li>
+<li>print it all out together, labeled, with method <code class="docutils literal"><span class="pre">Print</span></code>.</li>
+</ul>
+<p>Thinking ahead to what we would like for our Contact objects, here is
+the testing code of <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/contact1/test_contact1.cs">contact1/test_contact1.cs</a>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="p">{</span>
+   <span class="k">public</span> <span class="k">class</span> <span class="nc">TestContact</span>
+   <span class="p">{</span>
+      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span>
+                                  <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
+         <span class="n">Contact</span> <span class="n">c2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Otto Heinz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-9999&quot;</span><span class="p">,</span>
+                                  <span class="s">&quot;oheinz@luc.edu&quot;</span><span class="p">);</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Marie&#39;s full name: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetName</span><span class="p">());</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her phone number: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetPhone</span><span class="p">());</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her email: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetEmail</span><span class="p">());</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;\nFull contact info for Otto:&quot;</span><span class="p">);</span>
+         <span class="n">c2</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When running this testing code, we would like the results:</p>
+<div class="highlight-none"><div class="highlight"><pre>Marie&#39;s full name: Marie Ortiz
+Her phone number: 773-508-7890
+Her email: mortiz2@luc.edu
+
+Full contact info for Otto:
+Name:  Otto Heinz
+Phone: 773-508-9999
+Email: oheinz@luc.edu
+</pre></div>
+</div>
+<p>We are using the same object oriented notation that we have for many other classes:
+<em>Calls to instance methods are always attached to a specific object.</em>
+That has always been
+the part through the <code class="docutils literal"><span class="pre">.</span></code> of</p>
+<blockquote>
+<div><em>object</em><code class="docutils literal"><span class="pre">.</span></code><em>method</em><code class="docutils literal"><span class="pre">(</span></code>  ... <code class="docutils literal"><span class="pre">)</span></code></div></blockquote>
+<p>So far we have been thinking and illustrating how we would like objects in this
+Contact class to look like and behave from the <em>outside</em>.  We could be
+describing another library class.  Now, for the first time,
+we start to delve inside,
+to the code and concepts needed to make this happen.
+We start with the most basic parts.  First we need a <code class="docutils literal"><span class="pre">class</span></code>:</p>
+</div>
+<div class="section" id="class-syntax">
+<h2>13.1.2. Class Syntax<a class="headerlink" href="#class-syntax" title="Permalink to this headline">¶</a></h2>
+<p>Our code is nested inside</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Contact</span>
+<span class="p">{</span>
+
+   <span class="c1">// ... fields, constructor, code for Contact omitted</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is the same sort of wrapper we have used for our Main programs!
+<em>Before</em>, everything inside was
+labeled <code class="docutils literal"><span class="pre">static</span></code>.  Now we see what happens with the <code class="docutils literal"><span class="pre">static</span></code> keyword
+<em>omitted</em>....</p>
+</div>
+<div class="section" id="instance-variables">
+<span id="index-2"></span><h2>13.1.3. Instance Variables<a class="headerlink" href="#instance-variables" title="Permalink to this headline">¶</a></h2>
+<p>A Contact has a name, phone number and email address.  We must remember that data.
+Each individual Contact that we use will have its own
+name, phone number and email address.</p>
+<p>We have used some static variables before in classes, with the keyword <code class="docutils literal"><span class="pre">static</span></code>,
+where there is just one copy for the whole class.  If we omit the <code class="docutils literal"><span class="pre">static</span></code> we get
+an <em>instance variable</em>, that is the particular data for an <em>individual</em> Contact,
+for an individual instance of the class.
+This is our new place to store data:</p>
+<p>We declare these <em>in</em> the class and <em>outside</em> any method declaration.
+(This is in the same place as we would store <a class="reference internal" href="../functions/staticvariables.html#static-variables"><span>Static Variables</span></a>).</p>
+<p>They are <em>fields</em> of the class.  As we will
+discuss more in terms of safety and security,
+we add the word &#8220;private&#8221; at the beginning:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Contact</span>
+<span class="p">{</span>
+   <span class="k">private</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+   <span class="k">private</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">;</span>
+   <span class="k">private</span> <span class="kt">string</span> <span class="n">email</span><span class="p">;</span>
+
+   <span class="c1">// ... constructor, code for Contact omitted</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You also see that we are lazy in this example,
+and abbreviate the longer descriptions fullName, phoneNumber and
+emailAddress.</p>
+<p id="index-3">It is important to distinguish <em>instance</em> variables of a class
+and <em>local</em> variables.
+A local variable is only accessible inside the block (surrounded by braces)
+where it was declared,
+and is destroyed at the end of the execution of that block.
+However the class fields  <code class="docutils literal"><span class="pre">name</span></code>, <code class="docutils literal"><span class="pre">phone</span></code> and <code class="docutils literal"><span class="pre">email</span></code> are remembered by C#
+as long as the Contact object is in use.</p>
+<p>The <em>lifetime</em> of a variable is from when it is first created until it is no
+longer accessible by the program.  We repeat:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Instance</em> variable have a completely different lifetime and scope
+from <em>local</em> variables.
+An object and its instance variables,
+persist from the time a new object is created
+with <code class="docutils literal"><span class="pre">new</span></code> for as long as the object
+remains referenced in the program.</p>
+</div>
+<p>We need to get values into our field variables.
+They describe the state of our Contact.</p>
+<p>We have <em>used</em> constructors for built-in types.
+Now for the first time we <em>create</em> one.</p>
+</div>
+<div class="section" id="constructors">
+<span id="index-4"></span><h2>13.1.4. Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<p>The constructor is a slight variation on a regular method:
+Its name is the same as the
+kind of object constructed, so here it is the class name, Contact.
+It has <em>no return type</em> (and <em>no</em> <code class="docutils literal"><span class="pre">static</span></code>).  Implicitly you
+are creating the kind of object named, a <strong>Contact</strong> in this case.
+The constructor can have parameters like a regular method.  We will certainly
+want to give a state to our new object.
+That means giving values to its fields.  Recall we are want to
+store this state in instance variables <code class="docutils literal"><span class="pre">name</span></code>, <code class="docutils literal"><span class="pre">phone</span></code> and <code class="docutils literal"><span class="pre">email</span></code>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="n">name</span> <span class="p">=</span> <span class="n">fullName</span><span class="p">;</span>
+         <span class="n">phone</span> <span class="p">=</span> <span class="n">phoneNumber</span><span class="p">;</span>
+         <span class="n">email</span> <span class="p">=</span> <span class="n">emailAddress</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+<p>While the local variables in the formal parameters
+disappear after the constructor terminates,
+we want the data to live on as the state of the object.
+In order to remember state after the constructor terminates,
+we must <em>make sure the information gets into the instance variables</em>
+for the object.
+This is the basic operation of most constructors:  Copy desired formal
+parameters in to initialize the state in the fields.  That is all our simple
+code above does.</p>
+<p>Note that <code class="docutils literal"><span class="pre">name</span></code>, <code class="docutils literal"><span class="pre">phone</span></code> and <code class="docutils literal"><span class="pre">email</span></code> are <em>not</em> declared as
+local variables.  They refer to the <em>instance</em> variables, but we are <em>not</em> using
+full object notation: an object reference and a
+dot, followed by the field.</p>
+<p>So far always we have always been referring to a built-in type of object
+defined in a different class, like <code class="docutils literal"><span class="pre">arrayObject.Length</span></code>.
+The constructor is <em>creating</em> an object,
+and the use of the bare instance variable names is understood to be giving
+values to the instance variables in this Contact object
+that is being constructed.
+Inside a constructor
+and also inside an instance method
+(discussed below)
+C# allows this shorthand notation without <code class="docutils literal"><span class="pre">someObject.</span></code>.</p>
+</div>
+<div class="section" id="instance-methods">
+<span id="index-5"></span><span id="id1"></span><h2>13.1.5. Instance Methods<a class="headerlink" href="#instance-methods" title="Permalink to this headline">¶</a></h2>
+<p>The instance variable names and method names
+used without an object reference and dot refer to the
+<em>current</em> instance.  Whenever a constructor or non-static method in the class is called,
+there is <em>always</em> a current object:</p>
+<ol class="arabic simple">
+<li>In a constructor, referring to the object being created.  In execution,
+a static method like <code class="docutils literal"><span class="pre">Main</span></code> must create the first object.</li>
+<li>When some instance method <code class="docutils literal"><span class="pre">methodName</span></code> is called with explicit dot notation,
+<code class="docutils literal"><span class="pre">someObject.methodName()</span></code>,
+then it is acting on the current object <code class="docutils literal"><span class="pre">someObject</span></code>.  In any program&#8217;s
+execution the first call to an instance method must either be in this explicit
+form or from within a constructor for a new object.</li>
+<li>If that constructor or instance method calls a
+further instance method inside the same class, without using dot notation,
+then the further method has the <em>same</em> current object....
+We will see examples of this as we go along.</li>
+</ol>
+<p>Again, this means that in execution, whenever an instance method is called,
+there <em>is</em> a <em>current specific object</em>.  This is the object associated
+with any instance variable or method referred to in that method,
+if there is not an explicit prefix in the <code class="docutils literal"><span class="pre">someObject.</span></code> form.  This will
+take practice to get used to.</p>
+</div>
+<div class="section" id="getters">
+<span id="index-6"></span><span id="id2"></span><h2>13.1.6. Getters<a class="headerlink" href="#getters" title="Permalink to this headline">¶</a></h2>
+<p>In instance methods
+you have an extra way of getting
+data in and out of the method:  Reading or setting instance variables.
+(As we have just pointed out, in execution there will always be a current object
+with its specific state.)
+The simplest methods do nothing but reading or setting instance variables.
+We start with those:</p>
+<p>The <code class="docutils literal"><span class="pre">private</span></code> in front
+of the field declarations was important to keep code outside the
+class from messing with the values.  On the other hand we do want
+others to be able to <em>inspect</em> the name, phone and email,
+so how do we do that?  Use <strong>public methods</strong>.</p>
+<p>Since the fields are accessible anywhere <em>inside</em> the class&#8217;s instance methods,
+and public methods can be used from <em>outside</em> the class, we can simply code</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetName</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetPhone</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="n">phone</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetEmail</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="k">return</span> <span class="n">email</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+<p>These methods allow one-way communication of the name, phone and email
+values out from the object.
+These are examples
+of a simple category of methods:  A <em>getter</em> simply returns the value of a part
+of the object&#8217;s state, without changing the object at all.</p>
+<p>Note again that there is no <code class="docutils literal"><span class="pre">static</span></code> in the method heading.
+The field value for the <em>current</em> Contact is returned.</p>
+<p>A standard convention that we are following:
+Have getter methods names start with &#8220;Get&#8221;,
+followed by the name of the data to be returned.</p>
+<p>In this first simple version of Contact we add one further method, to
+print all the contact information with labels.</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
+      <span class="p">{</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">@&quot;Name:  {0}</span>
+<span class="s">Phone: {1}</span>
+<span class="s">Email: {2}&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span><span class="p">,</span> <span class="n">email</span><span class="p">);</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+<p>Again, we use the instance variable names, plugging them into a format string.
+Remember the <code class="docutils literal"><span class="pre">&#64;</span></code> syntax
+for multiline strings from <a class="reference internal" href="../data/strings2.html#strings2"><span>String Special Cases</span></a>.</p>
+<p>You can see and see the entire Contact class
+in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/contact1/contact1.cs">contact1/contact1.cs</a>.</p>
+<p>This is our first complete class defining a new type of object.
+Look carefully to get used to the features introduced, before we add
+more ideas:</p>
+<span class="target" id="index-7"></span></div>
+<div class="section" id="this-object">
+<span id="index-8"></span><h2>13.1.7. This Object<a class="headerlink" href="#this-object" title="Permalink to this headline">¶</a></h2>
+<p>We will be making an elaboration on the Contact class from here on.  We introduce
+new parts individually, but the whole code is in
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/contact2/contact2.cs">contact2/contact2.cs</a>.</p>
+<p>The current object is <em>implicit</em> inside a constructor or instance method definition,
+but it can be referred to <em>explicitly</em>.  It is called <code class="docutils literal"><span class="pre">this</span></code>.
+In a constructor or instance method, <code class="docutils literal"><span class="pre">this</span></code> is automatically a legal
+local variable to reference.
+You usually do not need to
+use it explicitly, but you could.   For example the current <code class="docutils literal"><span class="pre">Contact</span></code> object&#8217;s
+<code class="docutils literal"><span class="pre">name</span></code> field could be referred to as either <code class="docutils literal"><span class="pre">this.name</span></code> or the shorter plain <code class="docutils literal"><span class="pre">name</span></code>.
+In our next version of the Contact class we will see several places where
+an explicit <code class="docutils literal"><span class="pre">this</span></code> is useful.</p>
+<p>In the first version of the constructor, repeated here,</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="n">name</span> <span class="p">=</span> <span class="n">fullName</span><span class="p">;</span>
+         <span class="n">phone</span> <span class="p">=</span> <span class="n">phoneNumber</span><span class="p">;</span>
+         <span class="n">email</span> <span class="p">=</span> <span class="n">emailAddress</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+<p>we used different names for the instance variables and the formal
+parameter names that we used to initialize the instance variables.  We
+chose reasonable names, but we are adding extra names that we are not going
+to use later, and it can be confusing.  The most obvious names for the formal
+parameters that will initialize the instance variables are the <em>same</em> names.</p>
+<p>If we are not careful, there is a problem with that.  An instance variable,
+however named, and a local variable are not the same.  This is
+nonsensical:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">,</span> <span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span> <span class="c1">// ????</span>
+   <span class="p">...</span>
+</pre></div>
+</div>
+<p>Logically we want this pseudo-code in the constructor:</p>
+<blockquote>
+<div>instance variable <code class="docutils literal"><span class="pre">name</span></code>  <code class="docutils literal"><span class="pre">=</span></code> local variable <code class="docutils literal"><span class="pre">name</span></code></div></blockquote>
+<p>We have to disambiguate the two uses.  The compiler always looks for
+<em>local</em> variable identifiers <em>first</em>, so plain <code class="docutils literal"><span class="pre">name</span></code> will refer to the local
+variable <code class="docutils literal"><span class="pre">name</span></code> declared in the formal parameter list.
+This local variable identifier  <em>hides</em> the matching instance variable
+identifier.  We have to do something else to refer to the instance variable.
+The explicit <code class="docutils literal"><span class="pre">this</span></code> object comes to the rescue:  <code class="docutils literal"><span class="pre">this.name</span></code> refers to
+a part of this object.  It must refer to the
+instance variable, not the local variable.  Our alternate constructor is:</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">,</span> <span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
+         <span class="k">this</span><span class="p">.</span><span class="n">phone</span> <span class="p">=</span> <span class="n">phone</span><span class="p">;</span>
+         <span class="k">this</span><span class="p">.</span><span class="n">email</span> <span class="p">=</span> <span class="n">email</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setters">
+<h2>13.1.8. Setters<a class="headerlink" href="#setters" title="Permalink to this headline">¶</a></h2>
+<p>The original version of Contact makes a Contact object be
+<em>immutable</em>:  Once it is created with the constructor, there is no way
+to change its internal state.  The only assignments to the private
+instance variables are the ones in the constructor.  In real life
+people can change their email address.  We might like to allow that
+with our Contact objects.  Users can read the data in a Contact with the
+<em>getter</em> methods.  Now we need <em>setter</em> methods.  The naming conventions
+are similar:  start with &#8220;Set&#8221;.  In this case we must supply the new data,
+so setter methods need a parameter:</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetPhone</span><span class="p">(</span><span class="kt">string</span> <span class="n">newPhone</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="n">phone</span> <span class="p">=</span> <span class="n">newPhone</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+<p>In <code class="docutils literal"><span class="pre">SetPhone</span></code>, like in our original constructor, we illustrate using a
+<em>new</em> name for the parameter that sets the instance variable.  For
+comparison we use the alternate identifier matching approach in the
+other setter:</p>
+<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="n">email</span> <span class="p">=</span> <span class="n">email</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+<p>Now we can alter the contents of a Contact:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span> <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
+<span class="n">c1</span><span class="p">.</span><span class="n">SetEmail</span> <span class="p">(</span><span class="s">&quot;maria.ortiz@gmail.com&quot;</span><span class="p">);</span>
+<span class="n">c1</span><span class="p">.</span><span class="n">SetPhone</span><span class="p">(</span><span class="s">&quot;555-555-5555&quot;</span><span class="p">);</span>
+<span class="n">c1</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>would print</p>
+<div class="highlight-none"><div class="highlight"><pre>Name:  Marie Ortiz
+Phone: 555-555-5555
+Email: maria.ortiz@gmail.com
+</pre></div>
+</div>
+</div>
+<div class="section" id="tostring-override">
+<span id="index-9"></span><h2>13.1.9. ToString Override<a class="headerlink" href="#tostring-override" title="Permalink to this headline">¶</a></h2>
+<p>We created the <code class="docutils literal"><span class="pre">Print</span></code> method for a Contact, and it is helpful to
+assemble all the data for display <em>and</em> print it.   The issue there is that
+the method does two <em>separate</em> clear things:  combining the string data
+and printing it.  You might want the same string but put in a file or
+used some other way.  Our <code class="docutils literal"><span class="pre">Print</span></code> method will not help.</p>
+<p>A good design decision is to separate the different actions:  the first is
+to generate the 3-line string showing the full state of the object.  Once
+we have this string, we can easily print it or write it to a file or ....
+Hence we want a method to generate a descriptive string.</p>
+<p>Think more generally about string representations:
+All the built-in types can be concatenated into strings with the &#8216;+&#8217; operator,
+or displayed with <code class="docutils literal"><span class="pre">Console.Write</span></code>.
+We would like that behavior with our custom types, too.  How can the compiler
+know how to handle types that were <em>not invented</em> when the compiler was written?</p>
+<p>The answer is to have common features among all objects.
+Any object has a <code class="docutils literal"><span class="pre">ToString</span></code>
+method, and that method is used implicitly when an object is used with
+string concatenation, and also for <code class="docutils literal"><span class="pre">Write</span></code>.
+The default version supplied by the system is not very useful for an object
+that it knows nothing about!  You need to define your own version,
+one that knows how you have defined
+your type, with its own specific instance variables.
+You need to have that version used <em>in place of</em> the default:
+You need to <em>override</em> the default.  To emphasize the <em>change</em>
+in meaning, the word <code class="docutils literal"><span class="pre">override</span></code> <em>must</em> be in the heading:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span> <span class="p">(</span><span class="s">@&quot;Name:  {0}</span>
+<span class="s"> {1}</span>
+<span class="s"> {2}&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span><span class="p">,</span> <span class="n">email</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>See what the method does:  it uses the object state to create and
+<em>return</em> a single string representation of the object.</p>
+<p>For any kind of new object that you create and want to be able to implicitly convert to
+a string, you need a <code class="docutils literal"><span class="pre">ToString</span></code> method with the <em>exact</em> same heading
+as the <code class="docutils literal"><span class="pre">ToString</span></code> for a Contact.</p>
+<p>A more complete discussion of <code class="docutils literal"><span class="pre">override</span></code>
+would lead us into class hierarchies and
+inheritance, which we are not emphasizing in this book.</p>
+<p>We still might like to have a convenience method <code class="docutils literal"><span class="pre">Print</span></code>.  It now can
+be written much more easily, using our latest <code class="docutils literal"><span class="pre">ToString</span></code>.</p>
+<p>We want one instance method,
+<code class="docutils literal"><span class="pre">Print</span></code> to call another instance method <code class="docutils literal"><span class="pre">ToString</span></code> for the <em>same</em> object.
+How does this work?  It is like when instance method <code class="docutils literal"><span class="pre">GetName</span></code>
+refers to an instance variable
+<code class="docutils literal"><span class="pre">name</span></code> without using dot notation.  Then <code class="docutils literal"><span class="pre">name</span></code> is assumed to refer to
+this object associated with the call to <code class="docutils literal"><span class="pre">GetName</span></code>.  We can change our
+<code class="docutils literal"><span class="pre">Print</span></code> definition to:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ToString</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal"><span class="pre">ToString()</span></code> is a method called without dot notation explicitly
+attaching it to an object.
+As with instance variables, it is implicitly attached to this object, the one
+attached to the call to <code class="docutils literal"><span class="pre">Print</span></code>.</p>
+<p>Again, the whole code for the elaborated Contact is in example
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/contact2/contact2.cs">contact2/contact2.cs</a>.</p>
+<p>New testing code is in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/contact2/test_contact2.cs">contact2/test_contact2.cs</a>.  Run the project
+and check that it does what you would expect.  There are several new
+features illustrated in the testing code:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
+   <span class="n">Contact</span> <span class="n">c2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Otto Heinz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-9999&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;oheinz@luc.edu&quot;</span><span class="p">);</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Marie&#39;s full name: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetName</span><span class="p">());</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her phone number: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetPhone</span><span class="p">());</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Her email: &quot;</span> <span class="p">+</span> <span class="n">c1</span><span class="p">.</span><span class="n">GetEmail</span><span class="p">());</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;All together:\n{0}&quot;</span><span class="p">,</span> <span class="n">c1</span><span class="p">);</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Full contact info for Otto:&quot;</span><span class="p">);</span>
+   <span class="n">c2</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span>
+   <span class="n">c1</span><span class="p">.</span><span class="n">SetEmail</span><span class="p">(</span><span class="s">&quot;maria.ortiz@gmail.com&quot;</span><span class="p">);</span>
+   <span class="n">c2</span><span class="p">.</span><span class="n">SetPhone</span><span class="p">(</span><span class="s">&quot;123-456-7890&quot;</span><span class="p">);</span>
+   <span class="n">Contact</span> <span class="n">c3</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Amy Li&quot;</span><span class="p">,</span> <span class="s">&quot;847-111-2222&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;amy.li22@yahoo.com&quot;</span><span class="p">);</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;With changes and added contact:&quot;</span><span class="p">);</span>
+   <span class="kt">var</span> <span class="n">allc</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Contact</span><span class="p">&gt;(</span><span class="k">new</span> <span class="n">Contact</span><span class="p">[]</span> <span class="p">{</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">});</span>
+   <span class="k">foreach</span><span class="p">(</span><span class="n">Contact</span> <span class="n">c</span> <span class="k">in</span> <span class="n">allc</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">+</span><span class="n">c</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Contact is now a type we can use with other types.  <code class="docutils literal"><span class="pre">Main</span></code> ends creating
+a <code class="docutils literal"><span class="pre">List&lt;Contact&gt;</span></code> and an array of Contacts, and processes Contacts in the
+<code class="docutils literal"><span class="pre">List</span></code> with a <code class="docutils literal"><span class="pre">foreach</span></code> loop.</p>
+<p>We mentioned that this particular signature in the
+<code class="docutils literal"><span class="pre">ToString</span></code> heading means that the system recognizes it in string
+concatenation and in substitutions into a <code class="docutils literal"><span class="pre">Write</span></code> or <code class="docutils literal"><span class="pre">WriteLine</span></code>
+format string.  Find both in <code class="docutils literal"><span class="pre">Main</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">ToString</span></code> override also means that the body of our <code class="docutils literal"><span class="pre">Print</span></code>
+definition in the Contact class could have been
+even shorter, using the object <code class="docutils literal"><span class="pre">this</span></code>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When we use <code class="docutils literal"><span class="pre">Console.WriteLine</span></code> on this current object, which is <em>not</em>
+already a string, there is an automatic call to <code class="docutils literal"><span class="pre">ToString</span></code>.</p>
+</div>
+<div class="section" id="local-variables-hiding-instance-variables">
+<span id="index-10"></span><span id="id3"></span><h2>13.1.10. Local Variables Hiding Instance Variables<a class="headerlink" href="#local-variables-hiding-instance-variables" title="Permalink to this headline">¶</a></h2>
+<p>A common error is for students to try to declare the instance variables twice,
+once in the regular instance variable declarations,
+<em>outside of any constructor or method</em> and then again <em>inside</em> a
+constructor, like:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="n">fullName</span><span class="p">;</span>      <span class="c1">// LOGICAL ERROR!</span>
+   <span class="kt">string</span> <span class="n">phone</span> <span class="p">=</span> <span class="n">phoneNumber</span><span class="p">;</span>  <span class="c1">// LOGICAL ERROR!</span>
+   <span class="kt">string</span> <span class="n">email</span> <span class="p">=</span> <span class="n">emailAddress</span><span class="p">;</span> <span class="c1">// LOGICAL ERROR</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is deadly.  It is worse than redeclaring a local variable, which at least will
+trigger a compiler error.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Instance variable <em>only</em> get declared outside of all
+functions and constructors.  Same-name
+local variable declarations hide the
+instance variables, but <em>compile just fine</em>.  The local variables disappear
+after the constructor ends, leaving the instance variables
+<em>without</em> your desired initialization. Instead the hidden instance variables
+just get the default initialization, <code class="docutils literal"><span class="pre">null</span></code> for an object
+or 0 for a number.</p>
+</div>
+<p>There is a related strange compiler error.  This is not likely to happen frequently,
+but thinking through its logic (or illogic) could be helpful in understanding
+local and instance variables:
+Generally when you get a compiler error, the error is at or <em>before</em> the location the
+error is referenced, but with local variables covering instance variables,
+the real cause can come later in the text of the method.  Below, when you first
+refer to <code class="docutils literal"><span class="pre">r</span></code> in <code class="docutils literal"><span class="pre">Badnames</span></code>, it appears to be correctly referring to the
+instance variable <code class="docutils literal"><span class="pre">r</span></code>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ForwardError</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+
+    <span class="c1">// ...</span>
+
+    <span class="k">void</span> <span class="nf">BadNames</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">a</span><span class="p">*</span><span class="n">r</span> <span class="p">+</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// legal in text *just* to here; instance field r</span>
+        <span class="c1">//...</span>
+        <span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="n">a</span> <span class="p">%</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// r declaration makes *earlier* line wrong</span>
+        <span class="c1">//...</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>The compiler scans through <em>all</em> of <code class="docutils literal"><span class="pre">BadNames</span></code>, and sees the <code class="docutils literal"><span class="pre">r</span></code> declared locally
+in its scope.
+The error may be marked on the earlier line, where the compiler then assumes
+<code class="docutils literal"><span class="pre">r</span></code> is the later declared local <code class="docutils literal"><span class="pre">int</span></code> variable, not the instance variable.
+The error it sees is a local variable used before declaration.</p>
+<p>This is based on a real student example.
+This example points to a second issue: using variable names that
+that are too short and not descriptive of the variable meaning, and so may
+easily be the same name as something unrelated.</p>
+<div class="section" id="lifetime-and-scope-exercise-example">
+<span id="index-11"></span><h3>13.1.10.1. Lifetime and Scope Exercise/Example<a class="headerlink" href="#lifetime-and-scope-exercise-example" title="Permalink to this headline">¶</a></h3>
+<p>Be careful to distinguish lifetime and scope.  Either a local variable or
+an instance variable can be temporarily out of scope, but still be alive.
+Can you construct an example to illustrate that?  One of ours is
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/lifetime_scope/lifetime_scope.cs">lifetime_scope/lifetime_scope.cs</a>.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 26-July-2015 02:50:13.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

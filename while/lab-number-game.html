@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>6.10. Number Guessing Game Lab &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
+    <link rel="up" title="6. While Loops" href="while.html" />
+    <link rel="next" title="6.11. Chapter Review Questions" href="reviewwhile.html" />
+    <link rel="prev" title="6.9. Do-While Loops" href="do-while.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+  
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          COMP 170</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="while.html">6. While Loops</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">6.10. Number Guessing Game Lab</a><ul>
+<li><a class="reference internal" href="#part-1-no-hints-fixed-secret-number">6.10.1. Part 1: No Hints; Fixed Secret Number</a></li>
+<li><a class="reference internal" href="#part-2-add-hints">6.10.2. Part 2: Add Hints</a></li>
+<li><a class="reference internal" href="#part-3-add-a-random-secret-number">6.10.3. Part 3:  Add a Random Secret Number</a></li>
+<li><a class="reference internal" href="#part-4-let-the-player-set-the-range-of-values">6.10.4. Part 4:  Let the Player Set the Range of Values</a></li>
+<li><a class="reference internal" href="#part-5-count-the-guesses">6.10.5. Part 5:  Count the Guesses</a></li>
+<li><a class="reference internal" href="#possible-extra-credit-improvements-or-variations">6.10.6. Possible Extra Credit Improvements or Variations</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="do-while.html" title="Previous Chapter: 6.9. Do-While Loops">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </li>
+  <li>
+    <a href="reviewwhile.html" title="Next Chapter: 6.11. Chapter Review Questions">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/while/lab-number-game.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="number-guessing-game-lab">
+<span id="lab-number-game"></span><span id="index-0"></span><h1>6.10. Number Guessing Game Lab<a class="headerlink" href="#number-guessing-game-lab" title="Permalink to this headline">¶</a></h1>
+<p><strong>Objectives</strong>:</p>
+<ul class="simple">
+<li>Work with functions</li>
+<li>Work with interactive while loops</li>
+<li>Use decisions</li>
+<li>Introduce random values</li>
+</ul>
+<p>This lab is inspired by a famous children&#8217;s game
+known as the number-guessing game. We suppose two people are playing.</p>
+<p>The rules are:</p>
+<ul class="simple">
+<li>Person A chooses a positive integer less than N and keeps it in his or
+her head.</li>
+<li>Person B makes repeated guesses to determine the number. Person A
+must indicate whether the guess is higher or lower.</li>
+<li>Person A must tell the truth.</li>
+</ul>
+<p>So as an example:</p>
+<ul class="simple">
+<li>George and Andy play the game.</li>
+<li>George chooses a positive number less than 100 (29) and puts it in his
+head.</li>
+<li>Andy guesses 50. George says &#8220;Lower&#8221;. Andy now knows that
+<span class="math">\(1 \leq number &lt; 50\)</span>.</li>
+<li>Andy guesses 25. George says &#8220;Higher&#8221;. Andy now knows that
+<span class="math">\(26 \leq number &lt; 50\)</span>.</li>
+<li>Andy guesses 30. George says &#8220;Lower&#8221;. Andy now knows that the
+<span class="math">\(26 \leq number &lt; 30\)</span>.</li>
+<li>Andy starts thinking that he is close to knowing the correct answer. He
+decides to guess 29. Andy guesses the correct number. So George
+says, &#8220;Good job! You win.&#8221;</li>
+</ul>
+<p>We are going to elaborate this game in small steps.  You might save
+the intermediate versions under new names.</p>
+<p>The computer code for the
+game is going to be acting like Player A.</p>
+<div class="section" id="part-1-no-hints-fixed-secret-number">
+<h2>6.10.1. Part 1: No Hints; Fixed Secret Number<a class="headerlink" href="#part-1-no-hints-fixed-secret-number" title="Permalink to this headline">¶</a></h2>
+<p>You will want to use the UI class, so either copy ui.cs into your project, or
+(for Xamarin Studio) create a new project in a solution
+in which you already have added the ui library project, and add the ui project
+as a <em>reference</em> for the lab project.
+Make sure your program has <code class="docutils literal"><span class="pre">namespace</span> <span class="pre">IntroCS;</span></code> to match the UI class.</p>
+<p>You are going to play a game, and later may repeat it, so put the code
+for playing the number game in a function called <code class="docutils literal"><span class="pre">Game</span></code>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">Game</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>For now your write a <code class="docutils literal"><span class="pre">Main</span></code> function to just call <code class="docutils literal"><span class="pre">Game()</span></code>.</p>
+<p>In <code class="docutils literal"><span class="pre">Game</span></code>:</p>
+<ol class="arabic simple">
+<li>For the simplest versions, which help testing, have the
+program assign a specific
+secret number (like 29), and call it <code class="docutils literal"><span class="pre">secret</span></code>.
+Admittedly, this is not much fun for the player the second time!</li>
+<li>Prompt the player for a guess.
+Use <code class="docutils literal"><span class="pre">UI.PromptInt</span></code>.
+Every time the player guesses wrong,
+print &#8220;Wrong!&#8221;.  A later version will give clues.  Keep
+prompting for another number until the player guesses correctly.
+(Since you, the programmer, knows the secret number, this need not go
+on forever.)</li>
+<li>When the player guesses the right number, print &#8220;Correct!  You win!&#8221;</li>
+</ol>
+<p>Sample play could look like:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Guess the number: <strong>55</strong></div>
+<div class="line">Wrong!</div>
+<div class="line">Guess the number: <strong>12</strong></div>
+<div class="line">Wrong!</div>
+<div class="line">Guess the number:  <strong>29</strong></div>
+<div class="line">Good job!  You win!</div>
+</div>
+</div></blockquote>
+<p>You could also make the game stop immediately,
+(since you know the secret number):</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Guess the number:  <strong>29</strong></div>
+<div class="line">Good job!  You win!</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="part-2-add-hints">
+<h2>6.10.2. Part 2: Add Hints<a class="headerlink" href="#part-2-add-hints" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal"><span class="pre">Game</span></code>:
+Instead of just printing &#8220;Wrong!&#8221; when the player is incorrect,
+print &#8220;Lower!&#8221; or &#8220;Higher!&#8221;  as appropriate.  For example:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Guess the number: <strong>55</strong></div>
+<div class="line">Lower!</div>
+<div class="line">Guess the number: <strong>12</strong></div>
+<div class="line">Higher!</div>
+<div class="line">Guess the number: <strong>25</strong></div>
+<div class="line">Higher!</div>
+<div class="line">Guess the number:  <strong>29</strong></div>
+<div class="line">Good job!  You win!</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="part-3-add-a-random-secret-number">
+<h2>6.10.3. Part 3:  Add a Random Secret Number<a class="headerlink" href="#part-3-add-a-random-secret-number" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal"><span class="pre">Game</span></code>, make the following alterations and additions:</p>
+<ol class="arabic simple">
+<li>For now set an <code class="docutils literal"><span class="pre">int</span></code> variable <code class="docutils literal"><span class="pre">big</span></code> to 100.  We will make sure
+the secret number is less than <code class="docutils literal"><span class="pre">big</span></code>.</li>
+<li>Have the Game function print
+&#8220;In this game you guess a positive number less than 100.&#8221;
+For future use it is best if you have the printing statement
+reference the variable <code class="docutils literal"><span class="pre">big</span></code>, rather than the literal <code class="docutils literal"><span class="pre">100</span></code>.</li>
+</ol>
+<ol class="arabic" id="index-1">
+<li><p class="first">Thus far the secret number was fixed in the program.  Now we are
+going to let it vary, by having the game generate a <em>random</em> number.
+For your convenience, we are going to give you the C#
+code to compute the random number.  Assuming we want a secret number
+so <span class="math">\(1 \leq secret &lt; big\)</span>, we can use the code:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">secret</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">big</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In case you are wondering, we are creating a <em>new object</em>
+of the <em>class</em> <code class="docutils literal"><span class="pre">Random</span></code> which serves as the
+random number generator. We&#8217;ll cover this in more detail when we
+get to the <a class="reference internal" href="../classes/classes.html#classes"><span>Classes and Object-Oriented Programming</span></a> chapter. Here is some illustration using a <code class="docutils literal"><span class="pre">Random</span></code>
+object in csharp.  Your answers will not be the same!</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+<span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
+<span class="m">55</span>
+<span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
+<span class="m">31</span>
+<span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
+<span class="m">79</span>
+<span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+<span class="m">2</span>
+<span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+<span class="m">4</span>
+<span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+<span class="m">3</span>
+<span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
+<span class="m">3</span>
+</pre></div>
+</div>
+<p>In general the minimum possible value of the number returned by <code class="docutils literal"><span class="pre">r.Next</span></code>
+is the first parameter, and the value returned is always <em>less</em> than
+the second parameter, <em>never equal</em>.</p>
+<p>You can see that <code class="docutils literal"><span class="pre">r.Next()</span></code> is smart enough to give what appears to
+be a randomly chosen number every time.</p>
+<p>Example (where <code class="docutils literal"><span class="pre">secret</span></code> ended up as 68):</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Guess a number less than 100!</div>
+<div class="line">Guess the number: <strong>60</strong></div>
+<div class="line">Higher!</div>
+<div class="line">Guess the number: <strong>72</strong></div>
+<div class="line">Lower!</div>
+<div class="line">Guess the number: <strong>66</strong></div>
+<div class="line">Higher!</div>
+<div class="line">Guess the number: <strong>68</strong></div>
+<div class="line">Good job!  You win!</div>
+</div>
+</div></blockquote>
+<p>For debugging purposes, you might want to have <code class="docutils literal"><span class="pre">secret</span></code>
+be printed out right away.
+(Eliminate that part when everything works!)</p>
+</li>
+</ol>
+</div>
+<div class="section" id="part-4-let-the-player-set-the-range-of-values">
+<h2>6.10.4. Part 4:  Let the Player Set the Range of Values<a class="headerlink" href="#part-4-let-the-player-set-the-range-of-values" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal"><span class="pre">Game</span></code>:
+Instead of declaring <code class="docutils literal"><span class="pre">big</span></code> and  automatically initializing it to 100,
+make <code class="docutils literal"><span class="pre">big</span></code> be a parameter, so the heading looks like:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">Game</span><span class="p">(</span><span class="kt">int</span> <span class="n">big</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In <code class="docutils literal"><span class="pre">Main</span></code>:</p>
+<ol class="arabic">
+<li><p class="first">Prompt the player for the limit on the secret number.
+An exchange might look like:</p>
+<blockquote>
+<div><p>Enter a secret number bound: <strong>10</strong></p>
+</div></blockquote>
+</li>
+<li><p class="first">Pass the value given by the player to the <code class="docutils literal"><span class="pre">Game</span></code> function
+(so it will be <code class="docutils literal"><span class="pre">big</span></code> inside <code class="docutils literal"><span class="pre">Game</span></code>).</p>
+</li>
+</ol>
+<p>Hence the program might start with:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Enter a secret number bound: <strong>10</strong></div>
+<div class="line">In this game you guess a number less than 10!</div>
+<div class="line">Guess the number: <strong>5</strong></div>
+<div class="line">Higher!</div>
+<div class="line">Guess the number: <strong>7</strong></div>
+<div class="line">Lower!</div>
+<div class="line">Guess the number: <strong>6</strong></div>
+<div class="line">Good job!  You win!</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="part-5-count-the-guesses">
+<h2>6.10.5. Part 5:  Count the Guesses<a class="headerlink" href="#part-5-count-the-guesses" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal"><span class="pre">Game</span></code>: When the player finally wins, print the number of guesses
+the player made.  For example, for the game sequence shown above,
+the last line would become:</p>
+<blockquote>
+<div>Good job!  You win on guess 3!</div></blockquote>
+<p>You need to keep a count, adding 1 with each guess.</p>
+</div>
+<div class="section" id="possible-extra-credit-improvements-or-variations">
+<h2>6.10.6. Possible Extra Credit Improvements or Variations<a class="headerlink" href="#possible-extra-credit-improvements-or-variations" title="Permalink to this headline">¶</a></h2>
+<p>Should you finish everything early, try the following:</p>
+<ol class="arabic">
+<li><p class="first"><strong>(20% extra credit)</strong>  In <code class="docutils literal"><span class="pre">Main</span></code>:</p>
+<p>Use an outer <code class="docutils literal"><span class="pre">while</span></code> loop to allow the game to be played
+repeatedly. Change the prompt for the bound in <code class="docutils literal"><span class="pre">Main</span></code> to:</p>
+<blockquote>
+<div><p>Enter a secret number bound (or 0 to quit):</p>
+</div></blockquote>
+<p>Continue to play games until the player enters 0 for the bound.</p>
+</li>
+<li><p class="first"><strong>(40% extra credit)</strong>
+In <code class="docutils literal"><span class="pre">Main</span></code> prompt users to see if they want to guess numbers or reverse roles and
+choose
+the secret number.  In the first case, just call the existing Game function.
+In the second case you need a new function,
+where the user is the one who knows the secret
+number and the computer guesses numbers until the answer
+is obtained. Write and use a new function</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">GameReversed</span><span class="p">(</span><span class="kt">int</span> <span class="n">big</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pass it the parameter <code class="docutils literal"><span class="pre">big</span></code>, still set in <code class="docutils literal"><span class="pre">Main</span></code>.
+The new <code class="docutils literal"><span class="pre">GameReversed</span></code> will tell the user to put a number in
+his/her head, and press return to continue.
+(You can throw away the string entered - this is just to cause a pause.)
+Then the computer guesses.
+For simplicity let the human enter &#8220;L&#8221; for lower, &#8220;H&#8221; for higher, and
+&#8220;E&#8221; for equal (when the computer wins).
+As you saw in the initial example with George and Andy,
+each hint reduces the range of the possible secret numbers.
+Have the computer guess a <em>random</em> number in the <em>exact</em> range that
+remains possible.</p>
+<p>To do this you must note the asymmetry of the parameters for the method
+<code class="docutils literal"><span class="pre">Next</span></code>:  suppose <code class="docutils literal"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">r.Next(low,</span> <span class="pre">higher)</span></code>, then</p>
+<blockquote>
+<div><p><span class="math">\(low \leq number &lt; higher\)</span></p>
+</div></blockquote>
+<p>The first parameter <em>may</em> be returned, but second
+parameter is <em>never</em> returned.</p>
+<p>You will need two variables <code class="docutils literal"><span class="pre">low</span></code> and <code class="docutils literal"><span class="pre">higher</span></code> that keep
+bracketing the allowed range.  The simplest thing is to set them so they
+will be the parameters for the following call to <code class="docutils literal"><span class="pre">Next</span></code>.</p>
+<p>That would mean initially <code class="docutils literal"><span class="pre">low</span></code>
+is 1 and <code class="docutils literal"><span class="pre">higher</span></code> is equal to <code class="docutils literal"><span class="pre">big</span></code>.
+With each hint you adjust one or the other of <code class="docutils literal"><span class="pre">low</span></code> and <code class="docutils literal"><span class="pre">higher</span></code> so they
+get closer together.
+The game ends after the human enters &#8220;E&#8221;.</p>
+<p>Have the computer complain that the human is cheating (and stop the game)
+if the computer
+guesses the only possible value, and the human does <em>not</em> respond with &#8220;E&#8221;.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
+      Last updated on 26-July-2015 02:50:13.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
