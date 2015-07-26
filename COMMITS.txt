@@ -1,3 +1,11 @@
+commit ac331d2745946bb66dc491d4f99dcfeabbc2ea59
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 17:54:07 2015 -0500
+
+    a bit more output for testing whether we need this checkout
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 6c8e866243da9346989b664a06b16bd2ea7781ef
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 17:52:08 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 15:44:34 2015 -0500
 
     qpdf.sh replacement: build.sh -p
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 2d92d380bd18ac3f08fb008e629717acb21ab34b
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 15:44:17 2015 -0500
-
-    qhtml.sh replacement: build.sh -w
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
