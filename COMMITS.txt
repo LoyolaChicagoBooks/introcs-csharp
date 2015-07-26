@@ -1,3 +1,11 @@
+commit b8747ab211c8d7046e88226f5e42edca08136140
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 25 22:36:12 2015 -0500
+
+    clean up Makefile and simplify fixgenindex.py invocation
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 6feb75541dfaa414c4e571c5fe2e9e6dbe0ecab6
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 22:29:48 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 16:50:32 2015 -0500
 
     while loops dedent fixes - batch 1
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit db7cd7047eff3e33e356adeb3709d48e6d8ed30d
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 25 16:40:53 2015 -0500
-
-    chapter 5 dedent fixes
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
