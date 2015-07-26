@@ -1,6 +1,0 @@
-{%- if show_source and has_source and sourcename %}
-  <li><a href="{{ pathto('_sources/' + sourcename, true)|e }}"
-         rel="nofollow">{{ _('Source') }}</a></li>
-  <li class="divider-vertical"></li>
-  <li><a href="{{ pathto('genindex.html',true)|e }}"> {{_('Index') }} </a></li>
-{%- endif %}
