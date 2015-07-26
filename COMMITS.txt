@@ -1,3 +1,11 @@
+commit 6c8e866243da9346989b664a06b16bd2ea7781ef
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 17:52:08 2015 -0500
+
+    debug gh-pages.sh
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit b1fb2d207e34054ab540a29ae9d7b3b121aa2808
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 17:42:07 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 15:44:17 2015 -0500
 
     qhtml.sh replacement: build.sh -w
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit a9692b3a1f09ee0502b506106f0e7b84902f1f78
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 15:44:01 2015 -0500
-
-    qboth.sh replacement: build.sh -w -p
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
