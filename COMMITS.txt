@@ -1,3 +1,11 @@
+commit 58357dff3ea504ee7253a47578e4badac48ad1d4
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 15:38:47 2015 -0500
+
+    add new and improved build.sh script (with options for quick building)
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 384ca3f0772e63f4e5b4c4ced1fe5f945e4bc3f3
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 22:43:02 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 21:47:51 2015 -0500
 
     reorganize book source (rst) into one chapter per subdirectory
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit df746fbf03f9151a164c920493984420ad182430
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 25 16:57:43 2015 -0500
-
-    while loops dedent fixes - batch 2
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
