@@ -1,3 +1,11 @@
+commit 384ca3f0772e63f4e5b4c4ced1fe5f945e4bc3f3
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 25 22:43:02 2015 -0500
+
+    futurework contains some files to be revised/incorporated in later releases
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit b8747ab211c8d7046e88226f5e42edca08136140
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 22:36:12 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 16:57:43 2015 -0500
 
     while loops dedent fixes - batch 2
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 4bc182e250b95ca13d3b3bdae4c74c8625a74230
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 25 16:50:32 2015 -0500
-
-    while loops dedent fixes - batch 1
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
