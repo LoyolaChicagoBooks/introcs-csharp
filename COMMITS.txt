@@ -1,3 +1,11 @@
+commit 6feb75541dfaa414c4e571c5fe2e9e6dbe0ecab6
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sat Jul 25 22:29:48 2015 -0500
+
+    removing yet more files that are no longer needed
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit e379dab566396e0334d2d1a520cc28cb96300ee5
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 21:47:51 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sat Jul 25 16:40:53 2015 -0500
 
     chapter 5 dedent fixes
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 625dbc5fa033e7e8e5f017c086919304e70da302
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sat Jul 25 16:24:56 2015 -0500
-
-    add dedent from proofing
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
