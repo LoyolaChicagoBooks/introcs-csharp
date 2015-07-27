@@ -50,6 +50,7 @@ function bootstrap_pdf {
    pushd rst
    make CONFIG=bootstrap LATEXOPTS=' -interaction=batchmode ' latexpdf
    popd
+   rm -rf build/letterpdf
    mv -f build/latex build/letterpdf
 }
 
@@ -60,6 +61,7 @@ function createspace_pdf {
    pushd rst
    make CONFIG=createspace LATEXOPTS=' -interaction=batchmode ' latexpdf
    popd
+   rm -rf build/bookpdf
    mv -f build/latex build/bookpdf
 }
 
@@ -69,6 +71,7 @@ function createspace_pdf {
 function htmlzip {
    pushd build
    mkdir -p dist
+   rm -rf dist/html.zip
    zip -qr dist/html.zip html/
    popd
 }
