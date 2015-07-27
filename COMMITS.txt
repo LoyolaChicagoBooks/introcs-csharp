@@ -1,3 +1,19 @@
+commit 31aa64469ef45e09b8092ad1105ae2c1576a1a3e
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 23:49:18 2015 -0500
+
+    move NOTES.md to README.md
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
+commit 947a84102af37632746beaf5cb6703b781d3402b
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 23:49:01 2015 -0500
+
+    update build instructions
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit b1de6282c18223c7067c58cb944e4b97abb80754
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:36:06 2015 -0500
@@ -19,21 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:11:08 2015 -0500
 
     add dedent to examples in for and foreach chapters
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit b5324f38f5448da4a0263a8419ec89e52fb8f1ac
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 17:57:15 2015 -0500
-
-    fixed problem of not checking out correct files for gh-pages.sh
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit ac331d2745946bb66dc491d4f99dcfeabbc2ea59
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 17:54:07 2015 -0500
-
-    a bit more output for testing whether we need this checkout
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
