@@ -1,31 +1,35 @@
-C\# Notes for Comp 170
-======================
+Introduction to Computer Science in C\#
+===========================================
 
-By Drs. Andrew N. Harrington and George K. Thiruvathukal
---------------------------------------------------------
+Build Status
+-------------
 
-You may use any of the C\# Notes formats:
+introcs-csharp (the book) - [![Build Status](https://travis-ci.org/LoyolaChicagoBooks/introcs-csharp.svg?branch=master)](https://travis-ci.org/LoyolaChicagoBooks/introcs-csharp)
 
--   As web pages
-    -   [Browse the notes online](CSharpHtml/index.html). Html format
-        flows to fit the width of your window.
-    -   Download the [zip file to view locally](CSharpHtml.zip): The web
-        page to open after expanding the zip file
-        is CSharpHtml/index.html.
--   [PDF file](ProgrammingInCSharp.pdf) in fixed paged format for
-    printing and for somewhat prettier computer viewing if your screen
-    is wide enough.
+introcs-csharp-examples (the code) - [![Build Status](https://travis-ci.org/LoyolaChicagoBooks/introcs-csharp-examples.svg?branch=master)](https://travis-ci.org/LoyolaChicagoBooks/introcs-csharp-examples) 
 
-In any case be sure to download the simple [examples zip
-file](examples.zip) and the [monodevelop projects zip
-file](projects.zip) then expand each to have all the C\# example
-programs and projects that go with the notes.
+Viewing and Downloading
+---------------------------
 
-To quickly browse and download individual files in the examples and
-projects folders, go to:
+Web Site - http://books.cs.luc.edu/introcs-csharp/
+Web Site (offline ZIP) - http://books.cs.luc.edu/introcs-csharp/download/html.zip
+PDF (US Letter) - http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf
+PDF (7x9 Book) - http://books.cs.luc.edu/introcs-csharp/download/comp170book.pdf
+EPUB (Experimental) - http://books.cs.luc.edu/introcs-csharp/download/comp170.epub
 
-> <http://bitbucket.org/gkthiruvathukal/introcs-csharp/src>.
 
-The change history is at
+Building the Book
+--------------------
 
-> <http://bitbucket.org/gkthiruvathukal/introcs-csharp/changesets>
+#. pip install sphinx sphinx_bootstrap_theme
+
+#. ./build.sh -h (to see help and the various options)
+
+#. ./build.sh -a (to build HTML, PDF, 7x9 PDF, and EPUB)
+
+
+
+
+
+
+
