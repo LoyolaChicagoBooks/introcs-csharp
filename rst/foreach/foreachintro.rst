@@ -35,6 +35,7 @@ Examples have been in :ref:`While-Sequence`, like
 .. literalinclude:: ../../source/examples/char_loop1/char_loop1.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
  
 In this example we really only care about the characters, not the indices.
 Managing the indices is just a way to get at the 
