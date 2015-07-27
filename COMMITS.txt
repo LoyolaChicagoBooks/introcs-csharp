@@ -1,3 +1,11 @@
+commit a0608a620e0799fd3647571e528526e530b8baef
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 23:29:35 2015 -0500
+
+    add a bit more cleanup to build.sh
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 192bc8ffd8b0f76114b4df172f4b175a667f9c7a
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:11:08 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 17:52:08 2015 -0500
 
     debug gh-pages.sh
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit b1fb2d207e34054ab540a29ae9d7b3b121aa2808
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 17:42:07 2015 -0500
-
-    add clean/zip options + documentation for build.sh
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
