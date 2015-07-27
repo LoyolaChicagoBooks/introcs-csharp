@@ -1,3 +1,11 @@
+commit b1de6282c18223c7067c58cb944e4b97abb80754
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 23:36:06 2015 -0500
+
+    remove htmlzip.sh; now part of build.sh as a function
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit a0608a620e0799fd3647571e528526e530b8baef
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:29:35 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 17:54:07 2015 -0500
 
     a bit more output for testing whether we need this checkout
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 6c8e866243da9346989b664a06b16bd2ea7781ef
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 17:52:08 2015 -0500
-
-    debug gh-pages.sh
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
