@@ -8,7 +8,7 @@ git config --global user.name "George K. Thiruvathukal"
 git remote add deploy "https://$GH_TOKEN@github.com/$GH_USER/$GH_REPO.git"
 git fetch deploy
 git reset -q deploy/gh-pages
-git checkout master rst build.sh htmlzip.sh
+git checkout master rst build.sh
 git reset -q HEAD
 rm -rf build
 ./build.sh -a
