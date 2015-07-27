@@ -20,6 +20,7 @@ and fill in function bodies for each part below:
     .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: PrintReps chunk
        :end-before: body
+       :dedent: 6
 
     Hint:  How would you do something like the example
     ``PrintReps("Ok", 9)`` or with a higher count by hand?  
@@ -39,6 +40,7 @@ and fill in function bodies for each part below:
     .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: StringOfReps chunk
        :end-before: body
+       :dedent: 6
 
     Note the distinction from the previous part:  Here the function prints nothing.
     Its work is *returned* as a single string.  You have to build up the final
@@ -52,6 +54,7 @@ and fill in function bodies for each part below:
     .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: Factorial chunk
        :end-before: body
+       :dedent: 6
     
     It is useful to think of the sequence of steps to calculate a 
     concrete example of a factorial, say 6!:
@@ -85,6 +88,7 @@ and fill in function bodies for each part below:
     .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: PrintRectangle chunk
        :end-before: body
+       :dedent: 6
     
     Here are further examples::
         
@@ -107,11 +111,12 @@ and fill in function bodies for each part below:
     incrementally.
     You might start by just creating the inner rectangle, without the border.
 
-#.  **40% Extra Credit** Complete the method below.  
+#.  Complete the method below.  
 
     .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
        :start-after: PrintTableBorders chunk
        :end-before: body
+       :dedent: 6
     
     Here is further example::
         

@@ -1,3 +1,11 @@
+commit 192bc8ffd8b0f76114b4df172f4b175a667f9c7a
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 23:11:08 2015 -0500
+
+    add dedent to examples in for and foreach chapters
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit b5324f38f5448da4a0263a8419ec89e52fb8f1ac
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 17:57:15 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 17:42:07 2015 -0500
 
     add clean/zip options + documentation for build.sh
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 9a03fbe32186ed198748431ead6e7a9c4218ddea
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 15:45:21 2015 -0500
-
-    pull-examples.sh replacement: build.sh -g
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

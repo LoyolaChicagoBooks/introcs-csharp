@@ -191,6 +191,7 @@ we can expand the columns, with code in example
 .. literalinclude:: ../../source/examples/power_table/power_table.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 6
 
 generating:
 
@@ -515,6 +516,7 @@ The whole code is in example :repsrc:`mod7_table/mod7_table.cs` and below:
 ..  literalinclude:: ../../source/examples/mod7_table/mod7_table.cs
     :start-after: chunk
     :end-before: chunk
+    :dedent: 6
       
 Besides the 0 row and 0 column in the mod 7 table,
 note that in each line the products are a permutation of all the numbers 1-6.  
@@ -571,6 +573,7 @@ and in example program
 ..  literalinclude:: ../../source/examples/mod_mult_table/mod_mult_table.cs
     :start-after: chunk
     :end-before: chunk
+    :dedent: 6
 
 .. index:: string; reverse
    reverse string example; 
@@ -656,6 +659,7 @@ The result is:
 ..  literalinclude:: ../../source/examples/reversed_string/reversed_string.cs
     :start-after: chunk
     :end-before: chunk
+    :dedent: 6
 
 We used our new operator ``+=`` to be more concise.
 

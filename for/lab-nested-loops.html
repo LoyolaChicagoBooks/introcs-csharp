@@ -316,9 +316,9 @@
 and fill in function bodies for each part below:</p>
 <ol class="arabic" id="index-1">
 <li><p class="first">Complete</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Print n copies of s, end to end.</span>
-      <span class="c1">/// For example PrintReps(&quot;Ok&quot;, 9) prints: OkOkOkOkOkOkOkOkOk</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintReps</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print n copies of s, end to end.</span>
+<span class="c1">/// For example PrintReps(&quot;Ok&quot;, 9) prints: OkOkOkOkOkOkOkOkOk</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">PrintReps</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Hint:  How would you do something like the example
@@ -331,9 +331,9 @@ OkOkOkOkOkOkOkOkOk
 <p>This is a counting loop.</p>
 </li>
 <li id="index-2"><p class="first">Complete</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a string containing n copies of s, end to end.</span>
-      <span class="c1">/// For example StringOfReps(&quot;Ok&quot;, 9) returns: &quot;OkOkOkOkOkOkOkOkOk&quot;</span>
-      <span class="k">static</span> <span class="kt">string</span> <span class="nf">StringOfReps</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a string containing n copies of s, end to end.</span>
+<span class="c1">/// For example StringOfReps(&quot;Ok&quot;, 9) returns: &quot;OkOkOkOkOkOkOkOkOk&quot;</span>
+<span class="k">static</span> <span class="kt">string</span> <span class="nf">StringOfReps</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note the distinction from the previous part:  Here the function prints nothing.
@@ -342,9 +342,9 @@ string.</p>
 </li>
 <li id="index-3"><p class="first">Complete <code class="docutils literal"><span class="pre">Factorial</span></code>, in a format much like SumToN in example
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_test/sum_to_n_test.cs">sum_to_n_test/sum_to_n_test.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return n! (n factorial: 1*2*3 *...* n if n &gt;=1;</span>
-      <span class="c1">/// 0! is 1.).  For example Factorial(4) returns 1*2*3*4 = 24.</span>
-      <span class="k">static</span> <span class="kt">int</span> <span class="nf">Factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return n! (n factorial: 1*2*3 *...* n if n &gt;=1;</span>
+<span class="c1">/// 0! is 1.).  For example Factorial(4) returns 1*2*3*4 = 24.</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">Factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It is useful to think of the sequence of steps to calculate a
@@ -370,16 +370,16 @@ Then what is the largest value of <code class="docutils literal"><span class="pr
 <em>to tell the TA&#8217;s checking out your work.</em></p>
 </li>
 <li id="index-4"><p class="first">Complete the method</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Print a filled rectange, where the filling is</span>
-      <span class="c1">// the specified number of columns and rows of the character inChar,</span>
-      <span class="c1">// surrounded by a border made of the character edgeChar.</span>
-      <span class="c1">// For example printRectangle(3, 2, &#39;i&#39;, &#39;e&#39;) prints</span>
-      <span class="c1">//    eeeee</span>
-      <span class="c1">//    eiiie</span>
-      <span class="c1">//    eiiie</span>
-      <span class="c1">//    eeeee</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintRectangle</span><span class="p">(</span><span class="kt">int</span> <span class="n">columns</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rows</span><span class="p">,</span>
-                                 <span class="kt">char</span> <span class="n">inChar</span><span class="p">,</span> <span class="kt">char</span> <span class="n">edgeChar</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Print a filled rectange, where the filling is</span>
+<span class="c1">// the specified number of columns and rows of the character inChar,</span>
+<span class="c1">// surrounded by a border made of the character edgeChar.</span>
+<span class="c1">// For example printRectangle(3, 2, &#39;i&#39;, &#39;e&#39;) prints</span>
+<span class="c1">//    eeeee</span>
+<span class="c1">//    eiiie</span>
+<span class="c1">//    eiiie</span>
+<span class="c1">//    eeeee</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">PrintRectangle</span><span class="p">(</span><span class="kt">int</span> <span class="n">columns</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rows</span><span class="p">,</span>
+                           <span class="kt">char</span> <span class="n">inChar</span><span class="p">,</span> <span class="kt">char</span> <span class="n">edgeChar</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Here are further examples:</p>
@@ -401,21 +401,21 @@ BBBBBBB
 incrementally.
 You might start by just creating the inner rectangle, without the border.</p>
 </li>
-<li><p class="first"><strong>40% Extra Credit</strong> Complete the method below.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Print the borders of the cells of a table.</span>
-      <span class="c1">/// The borders divide the table into rows and columns.</span>
-      <span class="c1">/// The blank space within a cell is width characters wide</span>
-      <span class="c1">/// and continues down for height lines.</span>
-      <span class="c1">/// The horizontal borders are dashes &#39;-&#39; and the vertical borders</span>
-      <span class="c1">/// are vertical bars, &#39;|&#39;, except that all intersections are &#39;+&#39;.</span>
-      <span class="c1">/// For example PrintTableBorders(3, 2, 4, 1) prints</span>
-      <span class="c1">///    +----+----+----+</span>
-      <span class="c1">///    |    |    |    |</span>
-      <span class="c1">///    +----+----+----+</span>
-      <span class="c1">///    |    |    |    |</span>
-      <span class="c1">///    +----+----+----+</span>
-      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintTableBorders</span><span class="p">(</span><span class="kt">int</span> <span class="n">columns</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rows</span><span class="p">,</span>
-                                    <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span>
+<li><p class="first">Complete the method below.</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print the borders of the cells of a table.</span>
+<span class="c1">/// The borders divide the table into rows and columns.</span>
+<span class="c1">/// The blank space within a cell is width characters wide</span>
+<span class="c1">/// and continues down for height lines.</span>
+<span class="c1">/// The horizontal borders are dashes &#39;-&#39; and the vertical borders</span>
+<span class="c1">/// are vertical bars, &#39;|&#39;, except that all intersections are &#39;+&#39;.</span>
+<span class="c1">/// For example PrintTableBorders(3, 2, 4, 1) prints</span>
+<span class="c1">///    +----+----+----+</span>
+<span class="c1">///    |    |    |    |</span>
+<span class="c1">///    +----+----+----+</span>
+<span class="c1">///    |    |    |    |</span>
+<span class="c1">///    +----+----+----+</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">PrintTableBorders</span><span class="p">(</span><span class="kt">int</span> <span class="n">columns</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rows</span><span class="p">,</span>
+                              <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Here is further example:</p>
@@ -456,7 +456,7 @@ as content is added inside the cells!</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 26-July-2015 22:58:47.<br/>
+      Last updated on 27-July-2015 04:12:14.<br/>
     </p>
   </div>
 </footer>
