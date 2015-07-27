@@ -12,20 +12,24 @@ Viewing and Downloading
 ---------------------------
 
 Web Site - http://books.cs.luc.edu/introcs-csharp/
+
 Web Site (offline ZIP) - http://books.cs.luc.edu/introcs-csharp/download/html.zip
+
 PDF (US Letter) - http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf
+
 PDF (7x9 Book) - http://books.cs.luc.edu/introcs-csharp/download/comp170book.pdf
+
 EPUB (Experimental) - http://books.cs.luc.edu/introcs-csharp/download/comp170.epub
 
 
 Building the Book
 --------------------
 
-#. pip install sphinx sphinx_bootstrap_theme
+- pip install sphinx sphinx_bootstrap_theme
 
-#. ./build.sh -h (to see help and the various options)
+- build.sh -h (to see help and the various options)
 
-#. ./build.sh -a (to build HTML, PDF, 7x9 PDF, and EPUB)
+- build.sh -a (to build HTML, PDF, 7x9 PDF, and EPUB)
 
 
 
