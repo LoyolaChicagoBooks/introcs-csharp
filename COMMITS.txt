@@ -1,3 +1,11 @@
+commit 331f4aef51b79857f2832172f41d0978d9c1076b
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Jul 26 23:51:12 2015 -0500
+
+    correct minor formatting issue in README
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 31aa64469ef45e09b8092ad1105ae2c1576a1a3e
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:49:18 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:29:35 2015 -0500
 
     add a bit more cleanup to build.sh
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 192bc8ffd8b0f76114b4df172f4b175a667f9c7a
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 23:11:08 2015 -0500
-
-    add dedent to examples in for and foreach chapters
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
