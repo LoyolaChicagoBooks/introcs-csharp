@@ -1,3 +1,11 @@
+commit 22423fc49382334e0ddd9869dce56733c6622a80
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Aug 2 23:46:04 2015 -0500
+
+    don't include cached sources for literalinclude
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 331f4aef51b79857f2832172f41d0978d9c1076b
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:51:12 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:36:06 2015 -0500
 
     remove htmlzip.sh; now part of build.sh as a function
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit a0608a620e0799fd3647571e528526e530b8baef
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 23:29:35 2015 -0500
-
-    add a bit more cleanup to build.sh
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
