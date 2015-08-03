@@ -12,6 +12,7 @@ git checkout master rst build.sh
 git reset -q HEAD
 rm -rf build
 ./build.sh -a
+rm -rf source/*
 mkdir -p download
 mv -f build/html/* ./
 mv -f build/letterpdf/*.pdf ./download/
