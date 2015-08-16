@@ -106,16 +106,16 @@ uses the library class UIF.  Continue with the same terminal/console window:
 
     .. code-block:: none
        
-        mono addition3.exe
+       mono addition3.exe
 
-#. Now let us try a project where we read a file.  Enter commands
+#.  Now let us try a project where we read a file.  Enter commands
 
     .. code-block:: none
        
        cd ../sum_file
        mcs sum_file.cs
        mono sum_file.exe
-       
+
    We ran this program earlier through Xamarin Studio.  Recall that that
    entering the file name ``numbers.txt`` failed, and to refer to the right 
    place for the ``numbers.txt`` file, we needed to use ``..\..\numbers.txt``

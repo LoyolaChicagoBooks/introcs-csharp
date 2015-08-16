@@ -38,6 +38,7 @@ can be used in the ``foreach`` loop:
 .. literalinclude:: ../../source/examples/fio/fio.cs
    :start-after: GetPath chunk
    :end-before:  chunk
+   :dedent: 6
 
 For each directory path in ``paths``, we create a ``filePath`` as if the
 file were in that directory.  We return the first path that actually exists.
@@ -50,6 +51,7 @@ that directly opens the file to read:
 .. literalinclude:: ../../source/examples/fio/fio.cs
    :start-after: OpenReader chunk
    :end-before:  chunk
+   :dedent: 6
 
 We have a variation on ``GetPath`` that just return the path to the 
 directory containing the file.  Here is the heading:
@@ -57,6 +59,8 @@ directory containing the file.  Here is the heading:
 .. literalinclude:: ../../source/examples/fio/fio.cs
    :start-after: GetLocation chunk
    :end-before:  chunk
+   :dedent: 6
+
 
 This is useful in case you want to later write into the same directory 
 that you read from.  You can get a location from ``GetLocation`` and then
@@ -66,6 +70,7 @@ function:
 .. literalinclude:: ../../source/examples/fio/fio.cs
    :start-after: OpenWriter chunk
    :end-before:  chunk
+   :dedent: 6
 
 The entire ``FIO`` class is in 
 :repsrc:`fio/fio.cs`
