@@ -216,6 +216,7 @@ It copies a file line by line to a new file in upper case:
 .. literalinclude:: ../../source/examples/copy_upper/copy_upper.cs
    :start-after: chunk
    :end-before:  chunk
+   :dedent: 9
 
 You may test this in the Xamarin Studio example project copy_upper:  
 

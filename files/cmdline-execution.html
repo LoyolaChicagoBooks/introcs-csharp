@@ -406,20 +406,19 @@ does not know about the information Xamarin Studio keeps in its references.</p>
 </div>
 </li>
 <li><p class="first">Now let us try a project where we read a file.  Enter commands</p>
-<blockquote>
-<div><div class="highlight-none"><div class="highlight"><pre>cd ../sum_file
+<div class="highlight-none"><div class="highlight"><pre>cd ../sum_file
 mcs sum_file.cs
 mono sum_file.exe
 </pre></div>
 </div>
-</div></blockquote>
-<p>We ran this program earlier through Xamarin Studio.  Recall that that
+</li>
+</ol>
+<blockquote>
+<div>We ran this program earlier through Xamarin Studio.  Recall that that
 entering the file name <code class="docutils literal"><span class="pre">numbers.txt</span></code> failed, and to refer to the right
 place for the <code class="docutils literal"><span class="pre">numbers.txt</span></code> file, we needed to use <code class="docutils literal"><span class="pre">..\..\numbers.txt</span></code>
 or <code class="docutils literal"><span class="pre">../../numbers.txt</span></code>.  This time <em>just enter</em> <code class="docutils literal"><span class="pre">numbers.txt</span></code>.  The
-program should work, giving the answer 16.</p>
-</li>
-</ol>
+program should work, giving the answer 16.</div></blockquote>
 <p>By default mcs and mono read from and write to the current directory of the
 terminal/console.  In the situation above, <code class="docutils literal"><span class="pre">sum_file.cs</span></code> and <code class="docutils literal"><span class="pre">numbers.txt</span></code>
 were in the project directory, which is the current directory.
@@ -451,7 +450,7 @@ One example is NAnt, which comes with Mono.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 03-August-2015 04:47:23.<br/>
+      Last updated on 16-August-2015 16:29:28.<br/>
     </p>
   </div>
 </footer>

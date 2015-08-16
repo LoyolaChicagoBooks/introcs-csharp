@@ -1,3 +1,11 @@
+commit 016e86286d928188117d3b50143970666bb9ddbf
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Aug 16 12:28:08 2015 -0400
+
+    files chapter dedent fixes
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 22423fc49382334e0ddd9869dce56733c6622a80
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Aug 2 23:46:04 2015 -0500
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:49:01 2015 -0500
 
     update build instructions
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit b1de6282c18223c7067c58cb944e4b97abb80754
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 23:36:06 2015 -0500
-
-    remove htmlzip.sh; now part of build.sh as a function
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

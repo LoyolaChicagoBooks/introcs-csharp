@@ -555,14 +555,14 @@ test for this and quit gracefully in that case.</p>
 <h2>9.3.3. Example Copy to Upper Case<a class="headerlink" href="#example-copy-to-upper-case" title="Permalink to this headline">¶</a></h2>
 <p>Here is a simple fragment from example file <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/copy_upper/copy_upper.cs">copy_upper/copy_upper.cs</a>.
 It copies a file line by line to a new file in upper case:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>         <span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="s">&quot;text.txt&quot;</span><span class="p">);</span>
-         <span class="kt">var</span> <span class="n">writer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamWriter</span><span class="p">(</span><span class="s">&quot;upper_text.txt&quot;</span><span class="p">);</span>
-         <span class="k">while</span> <span class="p">(!</span><span class="n">reader</span><span class="p">.</span><span class="n">EndOfStream</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">string</span> <span class="n">line</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-            <span class="n">writer</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">());</span>
-         <span class="p">}</span>
-         <span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
-         <span class="n">writer</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="s">&quot;text.txt&quot;</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">writer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamWriter</span><span class="p">(</span><span class="s">&quot;upper_text.txt&quot;</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(!</span><span class="n">reader</span><span class="p">.</span><span class="n">EndOfStream</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">string</span> <span class="n">line</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+   <span class="n">writer</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="n">writer</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>You may test this in the Xamarin Studio example project copy_upper:</p>
@@ -622,7 +622,7 @@ The <code class="docutils literal"><span class="pre">ReadToEnd</span></code> ver
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 03-August-2015 04:47:23.<br/>
+      Last updated on 16-August-2015 16:29:28.<br/>
     </p>
   </div>
 </footer>
