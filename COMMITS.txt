@@ -1,3 +1,11 @@
+commit d3edcc1a875379e2c115d62c5c82d7bf0d2eebc0
+Author: George K. Thiruvathukal <gkt@cs.luc.edu>
+Date:   Sun Aug 16 23:24:46 2015 -0400
+
+    formatting fixes in arrays chapter
+    
+    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
+
 commit 016e86286d928188117d3b50143970666bb9ddbf
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Aug 16 12:28:08 2015 -0400
@@ -27,13 +35,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:49:18 2015 -0500
 
     move NOTES.md to README.md
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 947a84102af37632746beaf5cb6703b781d3402b
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 23:49:01 2015 -0500
-
-    update build instructions
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

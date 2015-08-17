@@ -196,13 +196,14 @@ The code above to print each element of an array performs a
 unified and possibly useful operation, so it would make sense to
 encapsulate it into a function.  A function can take any type as a
 parameter, so an array type is perfectly reasonable!  Above we
-printed each element of an array of integers.  This time lets choose strings,
+printed each element of an array of integers.  This time let's choose strings,
 so the formal parameter is an array of strings:  ``string[]``.
 
 .. literalinclude:: ../../source/examples/string_array/string_array.cs
    :start-after: chunk PrintStrings
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 With this definition, the code fragment  ::
 
@@ -229,6 +230,7 @@ returned like any other type.  Examine the function definition:
 .. literalinclude:: ../../source/examples/string_array/string_array.cs
    :start-after: chunk InputNStrings
    :end-before: chunk
+   :dedent: 6
 
 This code follows a standard pattern for functions returning an array:
   
@@ -288,6 +290,8 @@ Complete the code for this function:
 .. literalinclude:: ../../source/examples/sign_array1/sign_array1.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 3
+
 
 and place it in a program with a main function that demonstrates it.
 
@@ -310,6 +314,8 @@ The ``Main`` function may take an array of strings as parameter, as in example
 .. literalinclude:: ../../source/examples/print_param/print_param.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 3
+
 
 By convention, the formal parameter for ``Main`` is called ``args``, 
 short for arguments.  
@@ -529,6 +535,8 @@ Complete the definition for
 .. literalinclude:: ../../source/examples/string_array/string_array.cs
    :start-after: chunk NewUpper
    :end-before: {
+   :dedent: 6
+
 
 and write a ``Main`` driver to demonstrate it.  Use the example function
 :ref:`PrintStrings <printstrings>` in your demonstration.
@@ -617,6 +625,8 @@ Complete the function with this heading:
 .. literalinclude:: ../../source/examples/string_array/string_array.cs
    :start-after: chunk AllToUpper
    :end-before: {
+   :dedent: 6
+
 
 Write a ``Main`` method to demonstrate it.  Use the example function
 :ref:`PrintStrings <printstrings>` to show off your result.
@@ -631,6 +641,8 @@ with heading
 .. literalinclude:: ../../source/examples/sign_array2/sign_array2.cs
    :start-after: chunk
    :end-before: chunk
+   :dedent: 3
+
 
 and a main function to demonstrate it.
 
@@ -799,6 +811,7 @@ Our version is:
    :start-after: chunk
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 Adding a ``Main`` demostration method, you get our full example
 :repsrc:`remove_zeros/remove_zeros.cs`.
