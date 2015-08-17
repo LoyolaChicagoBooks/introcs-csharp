@@ -61,7 +61,7 @@ demonstrates how to use the linear search:
    :start-after: chunk
    :end-before: chunk
    :linenos:
-   :dedent: 6
+   :dedent: 9
 
 In this example, we ask the user to enter all the data for the array
 on one line. To convert the string to an int array we

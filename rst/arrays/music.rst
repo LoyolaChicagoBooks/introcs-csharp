@@ -14,6 +14,8 @@ of the twelve tones of the chromatic scale, starting from the C note.
    :start-after: chunk-tones-begin
    :end-before: chunk-tones-end
    :linenos:
+   :dedent: 6
+
 
 Even if you're not a musician, learning the basic principles is fairly
 straightforward.
@@ -69,6 +71,8 @@ Then we can use this position to compute the scale given the major
    :start-after: chunk-findtone-begin
    :end-before: chunk-findtone-end
    :linenos:
+   :dedent: 6
+
 
 To see what this function does, pick your favorite key (C and G are very
 common for beginners). 
@@ -90,6 +94,8 @@ array to be used repeatedly for calculating other scales.
    :start-after: chunk-compute-begin
    :end-before: chunk-compute-end
    :linenos:
+   :dedent: 6
+
 
 #. The first thing to note is the *setup* of this code. We're going to
    keep the ``startTone`` (obtained by calling ``FindTone()``) and 
@@ -138,6 +144,8 @@ printing the notes from our existing ``tones`` array.
    :start-after: chunk-write-begin
    :end-before: chunk-write-end
    :linenos:
+   :dedent: 6
+
 
 We say that the output is *naive* because any musician will tell you
 that a scale should be printed in a normalized way. For example, the F-major
@@ -156,6 +164,8 @@ Lastly, we put this all together.
    :start-after: chunk-main-begin
    :end-before: chunk-main-end
    :linenos:
+   :dedent: 6
+
 
 This ``Main()`` method shows how to set up the steps for both major
 and minor scales. We've already explained how to express the steps of

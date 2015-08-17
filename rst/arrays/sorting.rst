@@ -43,6 +43,7 @@ swap two data values at positions ``m`` and ``n`` in a given integer array:
    :start-after: chunk-exchange-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 For example if we have an array nums, shown with indices:
 
@@ -133,6 +134,7 @@ Bubble Sort requires :math:`O(N^2)` exchanges.
    :start-after: chunk-bubblesort-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 
 .. index:: sorting; selection sort
@@ -150,6 +152,8 @@ hence the number of ``Exchange()`` calls.
    :start-after: chunk-selectionsort-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
+
 
 It's a remarkably simple algorithm to explain. As shown in the code, the
 actual sorting is done by a function, ``IntArraySelectionSort()``, which 
@@ -286,6 +290,8 @@ into the sorted part of the array by sliding it down (using our familiar
    :start-after: chunk-insertionsort-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
+
 
 Consider the earlier example array as we illustrate some of the steps.   
 I use the symbol '-' for an element that we know to 
@@ -407,11 +413,15 @@ method works--not how the method works *best*.
    :start-after: chunk-shellsort-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
+
+
 
 .. literalinclude:: ../../source/examples/sorting/sorting.cs
    :start-after: chunk-shellsort-naive-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
 
 
 In general, shell sort with sequences of jump sizes that
@@ -466,6 +476,8 @@ the intervals based on the first suggestion of Knuth:
    :start-after: chunk-shellsort-better-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
+
 
 Shell sort is a complex sorting algorithm to make "work well", which is why it is not
 seen often in practice. It is, however, making a bit of a comeback in embedded systems.
@@ -497,6 +509,8 @@ behavior, it has a worst case performance of :math:`O(N ^2)`.
    :start-after: chunk-quicksort-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
+
 
 Though the initial call is to sort an entire array, this is accomplished by
 dealing with sections, so the main work is done in the version with the
@@ -543,6 +557,8 @@ The following code generates a random array:
    :start-after: chunk-random-begin
    :end-before: chunk
    :linenos:
+   :dedent: 6
+
 
 There are a few things to note in this code:
 
@@ -594,6 +610,8 @@ we're going to look at the basic variable setup first, and then one test.
 .. literalinclude:: ../../source/examples/sorting/sorting_demo.cs
    :start-after: chunk-drivervars-begin
    :end-before: chunk
+   :dedent: 6
+
 
 The variables declared here are to set up the apparatus:
 
@@ -623,6 +641,8 @@ of teaching, we wanted to make it possible to run it with or without command-lin
 .. literalinclude:: ../../source/examples/sorting/sorting_demo.cs
    :start-after: chunk-driverapparatus-begin
    :end-before: chunk
+   :dedent: 6
+
 
 This code fragment is one of the tests in ``Main``.  All of the tests set up 
 for timing first, run the desired sorting algorithm (bubble sort in this case),
@@ -632,6 +652,8 @@ always done the same way, they actions are placed in helping methods:
 .. literalinclude:: ../../source/examples/sorting/sorting_demo.cs
    :start-after: chunk timing
    :end-before: chunk
+   :dedent: 6
+ 
 
 ``TimeSetup``:
 
