@@ -108,8 +108,12 @@ your own and replace the comments with your code to complete it:
      
 Be sure to run it and test it thoroughly. Show your output to a TA.
 
-.. index:: Xamarin Studio; empty project - no console error
+.. index:: Xamarin Studio; empty project - input not allowed error
    Xamarin Studio; file not in project error 
+   Xamarin Studio; solution pad missing
+   solution pad in Xamarin missing
+   input not allowed in Xamarin
+   Main not found in Xamarin
 
 .. _xamarinstudio-reminders:
 
@@ -147,29 +151,33 @@ mess up here.  We emphasize them and mention fixes if you make the easy mistakes
       necessary.
       
 #.  Another common error is to proceed like with most text processors, 
-    and open the top File menu,  
-    and choose to open and edit a new file for your program.  
-    *You cannot** *run* **this program from Xamarin Studio.**  
-    The file you edit must show in the solution pad in Xamarain Studio, as
+    and go to the the top Xamarin Studio menu (not in the the Solution apd) 
+    and open a file using the application's File menu item,  
+    and choose to open and edit a new file for your program. 
+    This *does not put the file in your Xamarin project.* Hence 
+    **you cannot** *run* **this program from Xamarin Studio.**  
+    The file you edit must show in the *solution pad* in Xamarain Studio, as
     a source file in your project.  If you have a separate project set up, 
     but without this file or any other showing in the Solutions pad, an attempt to
-    run the project with say no ``Main`` method (in fact no program at all). 
+    run the project will say no ``Main`` method (in fact no program at all). 
     The fix:
     
     - You will shortly need to navigate in an operating system open file dialog to where 
       you put the file created from the File menu.  If you do not
       remember where that was, a good trick is to click in the edit window of the file
-      and then go to the File menu and select Save As.  The dialog should
-      show where the file currently is.  Cancel the dialog.   
-    
-    - Right click on the project in the Solution pad, and choose Add and then 
-      Add Files....  Browse to where the file is and select it; click Open.
+      and then go to the File menu and select Save As (not Save).  The dialog should
+      show where the file currently is.  Cancel the dialog.      
+    - Right click on the project in the Solution pad where you *do* wnat the program. 
+      Choose Add and then 
+      Add Files....  Browse to where the file is, and select it; click Open.
       Unless you have some
       reason to keep a copy in the original place, select Move, and Ok.
       Now the orphaned file is moved into your project.  You should see it list 
       under the project in the Solution pad. 
       You can proceed to edit and run it.
-      
+
+    *Always use the Solution pad to add files to your project and open them to edit.*
+
 #.  If you lose the display of the Solution pad somehow, you can go to the View menu, 
     select Pads, and then select Solution.    
     

@@ -182,10 +182,13 @@ Running our Xamarin Studio Examples Solution
 
 If you are just starting Xamarin Studio, and you have *not* run our solution before:
 
-#.  On the Welcome screen select the button Open Solution or File.
-#.  You get an open-file dialog.  Navigate to our example solution.
-    (It must be unzipped already!  We assume you renamed the folder `examples`.)
-#.  Select :file:`examples/examples.sln`.
+#.  Make sure you have downloaded and unzipped our  
+    `examples <https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/archive/master.zip>`_.
+    You get a folder with a mouythfull of a name :file:`introcs-csharp-examples-master`.  We will
+    assume you reduce the name of the folder to the much shorter :file:`examples`.
+#.  On the Xamarin Studio Welcome screen select the button Open....
+#.  You get an open-file dialog.  Navigate to our :file:`examples` solution.
+#.  Select :file:`examples/examples.sln`.  The sln is short for solution.
 
 The next time you come to the Welcome screen, our examples should be listed in the
 Recent Projects, and you can click to open it directly.
@@ -205,12 +208,13 @@ solution ("work", discussed in the first lab in the :ref:`steps`).
 #. Open your solution.
 #. Create a new project, maybe with the same name as the one we had.  If it was a
    "_stub" project, remove the "_stub" from your project's name.
-#. In the Solution Pad open the menu on the new project, select, Add, and then in the
+#. In the Solution Pad open the menu on your new project
+   (*not* the whole solution), select, Add, and then in the
    further submenu, select Add Files....
 #. This brings up an operating system open-file dialog.  Switch folders into our
    example projects.  Select the files you want to copy.  
    (It makes things easier if you put the examples folder 
-   right beside your work folder.)
+   in the same parent folder as your work folder.)
 #. A further dialog window pops up, with the choice **Copy** selected.
    Click to approve copy (as opposed to move or link).  
 #. Now the desired files should appear in your project, 
@@ -226,7 +230,7 @@ you can often save time by copying in the related example, particularly avoiding
 retyping the standard boiler plate code at the top.  However, when you are first
 learning and getting used to new syntax, typing reinforces learning.
 Perhaps after looking over the related example, you are encouraged to write your 
-version from scratch, to get used to all the parts of the code.  Later, when 
+version *from scratch*, to get used to all the parts of the code.  Later, when 
 you can produce such text automatically, feel free to switch to just
 copying from a place that you had it before.
 

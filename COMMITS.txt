@@ -1,3 +1,9 @@
+commit 9cdf70aa76daab436b97dead9bcd942ed3dfb02c
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Sun Aug 23 21:33:15 2015 -0500
+
+    Xamarin updates through programstructure
+
 commit d3edcc1a875379e2c115d62c5c82d7bf0d2eebc0
 Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Aug 16 23:24:46 2015 -0400
@@ -27,13 +33,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Jul 26 23:51:12 2015 -0500
 
     correct minor formatting issue in README
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 31aa64469ef45e09b8092ad1105ae2c1576a1a3e
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 23:49:18 2015 -0500
-
-    move NOTES.md to README.md
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

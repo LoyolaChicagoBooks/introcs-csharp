@@ -64,7 +64,7 @@ indentation of the next line.  The exact reaction can be set in the *options*.
 The simplest approach is to set these options *once* for all new files 
 in a solution, like your work solution:
 
-#. Access the context menu for the whole solution (not one project).
+#. Access the context menu for the *whole solution* (not one project).
 #. Select Options.
    
    .. image:: ../images/select_options.png
@@ -78,12 +78,16 @@ in a solution, like your work solution:
    .. image:: ../images/set_indent.png 
       :width: 300 pt
    
-#. Click on Text file, and then the right side should show options.  
+#. Click on **C# source code**, and then the right side should show options.  
    Adjust them to look like the picture: tab and indent widths 3, 
    first and last check boxes *checked* 
    (Convert tabs to spaces. Remove trailing spaces),
    and have the middle check box (Allow tabs after non-tabs) *unchecked*.
-#. Click OK.
+#. Click OK in the bottom right corner.
+ 
+.. note:
+   If you keep all your projects in one solution (like *work*), then you only need to make 
+   this setting once.  Otherwise you need to repeat it for each other solution.
 
 Tabs vs. spaces is not a significant issue inside a consistent environment,
 like Xamarin Studio, but if there are tab characters in a file, 
@@ -174,8 +178,9 @@ This is the same as the *textual order*, so it is easy to follow.  Later in
 we will see more complicated 
 execution orders that do *not* match textual order.
 Whatever the order of execution given by the program, it is important to
-always keep track of the current state of the program: where we are and
-what are the values of variables. 
+always keep track of the current state of the program, 
+one statement at a time: whhat statement was just executed,
+what are the values of variables, and what will be executed next. 
 
 For now consider a small, 
 artificial example program,
@@ -193,7 +198,7 @@ track of what changes to variables are made by each statement.
 In the table below, statements are referred to by the numbers labeling
 the lines in the code above. We can track the state of each
 variable after each line is executed. A dash is shown where a
-variable is not defined. For instance after line 7 is executed, a
+variable is not yet defined. For instance after line 7 is executed, a
 value is given to x, but y is still undefined. Then y gets a value
 in line 8. 
 The comment space can be used any time
@@ -215,7 +220,7 @@ Line  x   y   Comment
 ====  ==  ==  =======================================
 
 The critical point here is to always use the most recently assigned value
-of each variable.
+of each variable.  Unlike in math, symbol values change!
 
 The order of execution will always be the order of the lines in our
 table. In this simple *sequential* code, that *also* follows the
