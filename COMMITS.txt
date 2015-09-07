@@ -1,3 +1,9 @@
+commit 926d4982490c33a8eb9285186c7596456dadc3b2
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Sun Sep 6 21:34:34 2015 -0500
+
+    student-found typo and Xamarin library fix
+
 commit 9cdf70aa76daab436b97dead9bcd942ed3dfb02c
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sun Aug 23 21:33:15 2015 -0500
@@ -25,13 +31,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Aug 2 23:46:04 2015 -0500
 
     don't include cached sources for literalinclude
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 331f4aef51b79857f2832172f41d0978d9c1076b
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Jul 26 23:51:12 2015 -0500
-
-    correct minor formatting issue in README
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

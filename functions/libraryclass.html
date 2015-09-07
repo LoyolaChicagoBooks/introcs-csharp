@@ -490,7 +490,7 @@ referencing it in other projects.  The <em>advantage</em> of this approach is wh
 want to change the implementation but not the interface to library functions,
 you just do it once, in the library project.
 Other projects reference that project.</p>
-<p>Some students find the Xamarin Studion overhead of setting up and referencing
+<p>Some students find the Xamarin Studio overhead of setting up and referencing
 library projects onerous.
 As a  practical matter with files that you want to reuse but are not likely to change,
 you can just copy the source file into the new project, and avoid the
@@ -521,10 +521,25 @@ and copy in our <a class="reference external" href="https://github.com/LoyolaChi
 That is fine when you are creating a sequence of Console projects.
 However, if you have just explicitly chosen to create a library
 project, the default for your next project will also be library,
-and really mess up your next Console project.  Fix such an error
-after the fact as in the first
-entry in <a class="reference internal" href="../data/lab-division-sentences.html#xamarinstudio-reminders"><span>Xamarin Studio Reminders and Fixes</span></a>.</p>
+and really mess up your next Console project.  You can fix such an error
+after the fact as described next.</p>
 </div>
+<p>If you created a Library project by mistake, you can either
+start over from scratch using the wizard again, but concentrating on
+making a <em>Console</em> project this time, or you can change the current
+project settings options manually:</p>
+<ul class="simple">
+<li>Double click on the project in the Solution Pad
+(if that does anything, or right-click it and select Options).
+An elaborate Project Options dialog window appears.</li>
+<li>In the left pane under Build, select General.
+In the right pane, you problably see Compile Target: Library.
+Change Library to <em>Executable</em>.</li>
+<li>Finally finish as in the first error fix discussed in
+<a class="reference internal" href="../data/lab-division-sentences.html#xamarinstudio-reminders"><span>Xamarin Studio Reminders and Fixes</span></a>, so the Console is used for
+input and output.  (You should already have the Project options
+displayed from the steps above.)</li>
+</ul>
 </li>
 <li><p class="first">In the Solutions pad, in your addition3 project,
 click on the References entry just inside the project.
@@ -580,7 +595,7 @@ thing, but use the UIF class for all user input.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 24-August-2015 02:34:44.<br/>
+      Last updated on 07-September-2015 02:36:50.<br/>
     </p>
   </div>
 </footer>

@@ -111,6 +111,8 @@ can detect.
 .. index:: editor error annotations
    syntax error annotations in editor
    Xamarin Studio; editor error annotations
+   logical error
+   run-time error
    
 **Errors shown** *while* **editing**:  If you use an editor like Xamarin Studio, 
 some of these errors are even checked while you type and are
