@@ -155,7 +155,7 @@ want to change the implementation but not the interface to library functions,
 you just do it once, in the library project.  
 Other projects reference that project.
 
-Some students find the Xamarin Studion overhead of setting up and referencing 
+Some students find the Xamarin Studio overhead of setting up and referencing 
 library projects onerous.
 As a  practical matter with files that you want to reuse but are not likely to change, 
 you can just copy the source file into the new project, and avoid the 
@@ -188,9 +188,26 @@ Try adding a reference yourself.  Follow these instructions:
        That is fine when you are creating a sequence of Console projects.
        However, if you have just explicitly chosen to create a library 
        project, the default for your next project will also be library,
-       and really mess up your next Console project.  Fix such an error
-       after the fact as in the first 
-       entry in :ref:`xamarinstudio-reminders`. 
+       and really mess up your next Console project.  You can fix such an error
+       after the fact as described next. 
+
+    If you created a Library project by mistake, you can either
+    start over from scratch using the wizard again, but concentrating on
+    making a *Console* project this time, or you can change the current
+    project settings options manually:
+    
+    -   Double click on the project in the Solution Pad 
+        (if that does anything, or right-click it and select Options).  
+        An elaborate Project Options dialog window appears.
+
+    -   In the left pane under Build, select General.  
+        In the right pane, you problably see Compile Target: Library.
+        Change Library to *Executable*.  
+      
+    -   Finally finish as in the first error fix discussed in
+        :ref:`xamarinstudio-reminders`, so the Console is used for 
+        input and output.  (You should already have the Project options
+        displayed from the steps above.)
     
 #.  In the Solutions pad, in your addition3 project,
     click on the References entry just inside the project.

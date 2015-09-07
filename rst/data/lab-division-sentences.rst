@@ -151,11 +151,12 @@ mess up here.  We emphasize them and mention fixes if you make the easy mistakes
       necessary.
       
 #.  Another common error is to proceed like with most text processors, 
-    and go to the the top Xamarin Studio menu (not in the the Solution apd) 
+    and go to the the top Xamarin Studio menu (not in the the Solution pad) 
     and open a file using the application's File menu item,  
     and choose to open and edit a new file for your program. 
     This *does not put the file in your Xamarin project.* Hence 
     **you cannot** *run* **this program from Xamarin Studio.**  
+    
     The file you edit must show in the *solution pad* in Xamarain Studio, as
     a source file in your project.  If you have a separate project set up, 
     but without this file or any other showing in the Solutions pad, an attempt to
