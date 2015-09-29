@@ -57,7 +57,9 @@ the project name for a namespace.  We are never going to use that.
    declarative or not. Then remember you can test further cases with 
    ``else if (...)``.
 
-#. Read a whole name from a line of input.  Assume first and last names
+#. Read a *whole* name from a *single* line of user input. Do not ask for 
+   first and last names to be entered on separate lines!
+   Assume first and last names
    are separated by a space (no middle name).  
    Print last name first followed by a comma
    and a space, followed by the first name. 
@@ -68,7 +70,7 @@ the project name for a namespace.  We are never going to use that.
    so it also allows a single name without spaces,
    like "Socrates", and prints the original without change. If there are
    two parts of the name, it should work as in the original version.
-   (This needs the next chapter.)
+   (This needs syntax from the next chapter.)
 
 Run the program (with parts 1, 2 and 4 active)
 from a terminal window and show your TA when you are
