@@ -52,10 +52,10 @@ Public classes and functions start their heading with ``public``.
 
 The code included in a namespace is enclosed in braces, so the general syntax is 
 
-   | ``namespace`` *name* 
-   | ``{``
-   |     class definition(s)...
-   | ``}``   
+| ``namespace`` *name* 
+| ``{``
+|     class definition(s)...
+| ``}``   
 
 We will keep user input library classes like this one, :repsrc:`uif.cs <ui/uif.cs>`, 
 in a project ui.

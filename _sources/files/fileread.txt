@@ -7,11 +7,19 @@
 Reading Files
 =============
 
-In Xamarin Studio, go to project :repsrc:`print_first_file`.
-Right click on the project in the Solution pad, and select Open Containing Folder. 
-Drill down two folders through :file:`bin` to :file:`Debug`.
-You should find a copy of the ``sample.txt`` that we stored there.  You can open it and
-look at it if you like.
+In Xamarin Studio, go to project :repsrc:`print_first_file`.  Note that we have added a copy of 
+:file:`sample.txt` as a project file, so it is an existing file in the project folder.  
+You can open it and see that it is a copy of the file created in the last section.
+
+It will be true of most all the programs for this chapter, but you might check that we have
+modified the project Output Path to refer to the project folder, 
+in this case with the path ending
+``examples/print_first_file``.  This means :file:`sample.txt` will be in the
+current directory when the program runs.
+
+.. old
+    Right click on the project in the Solution pad, and select "Open Containing Folder"
+    or "Reveal in Finder". 
    
 Run the example program
 :repsrc:`print_first_file/print_first_file.cs`, shown below:
@@ -46,13 +54,15 @@ Reading to End of Stream
 
 In ``first_file.cs``, we explicitly coded reading two lines.  You will often
 want to process each line in a file, without knowing the total number of
-lines while programming.  This means that files provide us with our
-second kind of a sequence:  this time the sequence of lines in the file!
+lines at the time when you were programming.  
+This means that files provide us with our
+second kind of a sequence:  the sequence of lines in the file!
 To process all of them will require a loop and a new test to make sure that you
 have not yet come to the end of the file's stream: You can use the ``EndOfStream``
 property. It has the wrong sense (true at the end of the file), so we negate it,
-testing for ``!reader.EndOfStream`` in the example program ``print_file_lines.cs``.
-This little program reads and prints the contents of a file specified by the 
+testing for ``!reader.EndOfStream`` to *continue* reading. 
+The example program ``print_file_lines.cs`` 
+reads and prints the contents of a file specified by the 
 user, one line at a time:
 
 .. literalinclude:: ../../source/examples/print_file_lines/print_file_lines.cs
@@ -75,6 +85,9 @@ user, one line at a time:
    
    We could have used this syntax long ago, but as the type names become longer, 
    it is more useful!
+
+You can run this program. You need an existing file to read.  An obvious file is
+the source file itself:  :file:`print_file_lines.cs`.
 
 Things to note about reading from files:
 
@@ -113,7 +126,7 @@ loop we could have just had::
     string wholeFile = reader.ReadToEnd();
     Console.Write(wholeFile);
     
-``ReadToEnd`` does not strip off a newline, like ``ReadLine`` does,
+``ReadToEnd`` does not strip off a newline, unlike ``ReadLine``,
 so we do not want to add an extra newline
 when writing.  We use the ``Write`` method instead of ``WriteLine``.
 
@@ -124,7 +137,7 @@ Example: Sum Numbers in File
 -------------------------------
 
 We have summed the numbers from 1 to ``n``.  In that case we generated
-the next number ``i`` automatically using i++.  We could also read numbers
+the next number ``i`` automatically using ``i++``.  We could also read numbers
 from a file containing one number per line (plus possible white space)::
 
       static int CalcSum(string filename)
@@ -155,44 +168,55 @@ is ``File.Exists`` in the ``System.IO`` namespace ::
 
 It is true if the named files exists in the operating system's file structure.  
 
-You should see the file :repsrc:`sum_file/numbers.txt` in the Xamarin Studio project.
-It is in the right form for the program.  If you run the program and enter the
-response:
+You should see the files :repsrc:`sum_file/numbers.txt` and
+:repsrc:`sum_file/numbers2.txt` in the Xamarin Studio project.  You can test
+with them.  It is important to test all paths through the program: also do
+put in a bad name and see that the program exits gracefully, as intended.
 
-.. code-block:: none
+For files in the current folder, you can just use the plain file name.  
+For other folders see :ref:`path-strings`.
 
-   numbers.txt
+.. bin/debug
+    It is in the right form for the program.  If you run the program and enter the
+    response:
 
-you should be told that the file does not exist.  Recall that the executable
-created by Xamarin Studio is two directories down through :file:`bin` 
-to :file:`Debug`.  This is the default 
-*current directory* when Xamarin Studio runs the program.
-You can refer to
-a file that is not in the current directory.  
-A full description is in the next section, but briefly, what we need now:
-The symbol for the parent directory is ``..``.  
-The hierarchy of folders and files are separated by
-``\`` in Windows and ``/`` on a Mac,  so you can test the program successfully
-if you use the file name:
-``..\..\numbers.txt`` in Windows and ``../../numbers.txt`` on a Mac.  On a Mac, running 
-the program looks like:
+    .. code-block:: none
 
-.. code-block:: none
+       numbers.txt
 
-   Enter the name of a file of integers: ../../numbers.txt
-   The sum is 16
+    you should be told that the file does not exist.  Recall that the executable
+    created by Xamarin Studio is two directories down through :file:`bin` 
+    to :file:`Debug`.  This is the default 
+    *current directory* when Xamarin Studio runs the program.
+    You can refer to
+    a file that is not in the current directory.  
+    A full description is in the next section, but briefly, what we need now:
+    The symbol for the parent directory is ``..``.  
+    The hierarchy of folders and files are separated by
+    ``\`` in Windows and ``/`` on a Mac,  so you can test the program successfully
+    if you use the file name:
+    ``..\..\numbers.txt`` in Windows and ``../../numbers.txt`` on a Mac.  On a Mac, running 
+    the program looks like:
 
-In :ref:`fio` we will discuss a more flexible way of finding files to open, 
-that works well in Xamarin Studio and many other situations.
+    .. code-block:: none
+
+       Enter the name of a file of integers: ../../numbers.txt
+       The sum is 16
+    
+.. bin/Debug
+    In :ref:`fio` we will discuss a more flexible way of finding files to open, 
+    that works well in Xamarin Studio and many other situations.
  
 .. index:: exercise; safe sum
    safe sum exercise 
    
+.. _safe_sum_file_ex:
 
 Safe Sum File Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-a.  Copy :file:`sum_file.cs` to a file :file:`safe_sum_file.cs` in a new project of yours.  
+a.  Copy :file:`sum_file.cs` to a file :file:`safe_sum_file.cs` in a new project of yours. 
+    *Be sure to modify the Output path option to just refer to the project folder!* 
     Modify the program: Write
     a new function with the heading below.  Use it in ``Main``, in place of the ``if`` 
     statement that checks (only once) for a legal file::         
@@ -202,7 +226,7 @@ a.  Copy :file:`sum_file.cs` to a file :file:`safe_sum_file.cs` in a new project
       // Open and return the file.
       public static StreamReader PromptFile(string prompt)
 
-b.  A user who forgot the file name woud be stuck!
+b.  A user who completely forgot the file name could be stuck in an infinite loop!
     Elaborate the function and program, so that an empty line entered means
     "give up", and ``null`` (no object) should be returned.  The main program needs to
     test for this and quit gracefully in that case.
@@ -224,13 +248,13 @@ You may test this in the Xamarin Studio example project copy_upper:
     includes the input file.  You may not see it at first.  You need to expand the folder
     for :file:`bin` and then :file:`Debug`.  You see :file:`text.txt`.  
 #.  To see
-    what else is in the file system directory, 
-    you can select the Debug folder and right click and select
-    Open Containing Folder.  
-    You should see :file:`text.txt` but not :file:`upper_text.txt`.
+    what else is in the project directory, 
+    select
+    "Open Containing Folder" or "Open in Finder" on a Mac.  
+    You should see project file :file:`text.txt` but not :file:`upper_text.txt`.
     Leave that operating system file folder open.  
 #.  Go back to Xamarin Studio and run the project.  Now look at the
-    operating system :file:`Debug` folder again.  You should see :file:`upper_text.txt`.
+    operating system folder again.  You should see :file:`upper_text.txt`.
     You can open it and see that it holds an upper case version of the contents
     of :file:`text.txt`.
 

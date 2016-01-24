@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -255,10 +256,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">9.7. Command Line Execution</a><ul>
-<li><a class="reference internal" href="#mcs-compiling">9.7.1. MCS: Compiling</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">9.7. Command Line Execution</a></li>
 </ul>
 </ul>
 </li>
@@ -306,7 +304,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="command-line-execution">
 <span id="cmdline-execution"></span><span id="index-0"></span><h1>9.7. Command Line Execution<a class="headerlink" href="#command-line-execution" title="Permalink to this headline">¶</a></h1>
@@ -320,47 +318,24 @@ between the operating systems.  <em>Look over that section.</em></p>
 you execute a program.  The natural environment for the text-based programs
 that we are writing is the command line.
 We need to get outside of Xamarin Studio.</p>
-<ol class="arabic">
-<li><p class="first">To show off the transition, first build or run the <code class="docutils literal"><span class="pre">addition1</span></code> example project
-from inside Xamarin Studio.</p>
-</li>
-<li><p class="first">Open a terminal on a Mac or a Mono Command Prompt console in Windows.</p>
-</li>
-<li><p class="first">Following the
+<ol class="arabic simple">
+<li>To show off the transition, first run the <code class="docutils literal"><span class="pre">addition1</span></code> example project
+from inside Xamarin Studio.</li>
+<li>Open a terminal on a Mac or a Mono Command Prompt console in Windows.</li>
+<li>Following the
 <a class="reference internal" href="../appendix/cmdline.html#commandline"><span>Command Line Introduction</span></a>,
-change the current directory to the addition1 example project directory.</p>
-</li>
-<li><p class="first">Then change to the subdirectory <code class="docutils literal"><span class="pre">bin</span></code> and then the subdirectory <code class="docutils literal"><span class="pre">Debug</span></code>.</p>
-</li>
-<li><p class="first">Enter the command to list the directory (<code class="docutils literal"><span class="pre">dir</span></code> in Windows; <code class="docutils literal"><span class="pre">ls</span></code> on a Mac).</p>
-</li>
-<li><p class="first">You should see <code class="docutils literal"><span class="pre">addition1.exe</span></code>.  This is the compiled program
-created by Xamarin Studio.  Enter the command</p>
-<div class="highlight-none"><div class="highlight"><pre>mono addition1.exe
-</pre></div>
-</div>
-<p>This should run your program.  Note that when you complete it, the window does not
-disappear!  You keep that history.  Keep this terminal/console window open
-until the end of the chapter.</p>
-</li>
-<li><p class="first">Windows only:  On Windows, Xamarin Studio creates a regular Windows executable file.
-For consistency you can use the command above, but you no longer need Mono.
-You can just enter the command <code class="docutils literal"><span class="pre">addition1.exe</span></code> or the shorter <code class="docutils literal"><span class="pre">addition1</span></code>.</p>
-</li>
+change the current directory to the addition1 example project directory.</li>
+<li>Enter the command to list the directory (<code class="docutils literal"><span class="pre">dir</span></code> in Windows; <code class="docutils literal"><span class="pre">ls</span></code> on a Mac).</li>
+<li>You should see <code class="docutils literal"><span class="pre">addition1.cs</span></code> but
+<em>not</em> see <code class="docutils literal"><span class="pre">addition1.exe</span></code>.  The file <code class="docutils literal"><span class="pre">addition1.exe</span></code> is the compiled program
+that Xamarin Studio creates for this project, however,
+with the default configuration that we kept
+for this project, this file ends up two directories down in <code class="file docutils literal"><span class="pre">bin/Debug</span></code>.</li>
 </ol>
-<div class="section" id="mcs-compiling">
-<span id="gmcs"></span><span id="index-1"></span><h2>9.7.1. MCS: Compiling<a class="headerlink" href="#mcs-compiling" title="Permalink to this headline">¶</a></h2>
-<p>Continue with the same terminal/console window.
-Let us now consider creating an executable program for <code class="docutils literal"><span class="pre">addition1.cs</span></code>,
-directly, without using Xamarin Studio:</p>
+<p id="index-1">Let us now create <code class="docutils literal"><span class="pre">addition1.exe</span></code> in the main project directory
+without using Xamarin Studio.
+Continue with the same terminal/console window:</p>
 <ol class="arabic">
-<li><p class="first">Enter the command <code class="docutils literal"><span class="pre">cd</span> <span class="pre">..</span></code> and then <em>repeat</em>: <code class="docutils literal"><span class="pre">cd</span> <span class="pre">..</span></code>,
-to go up to the project directory.</p>
-</li>
-<li><p class="first">Print a listing of the directory.
-You should see
-<code class="docutils literal"><span class="pre">addition1.cs</span></code> but not <code class="docutils literal"><span class="pre">addition1.exe</span></code>.</p>
-</li>
 <li><p class="first">Try the command</p>
 <div class="highlight-none"><div class="highlight"><pre>mono addition1.exe
 </pre></div>
@@ -374,13 +349,19 @@ directory.</p>
 </div>
 <p>This is the Mono system compiler, building from the source code.</p>
 </li>
-<li><p class="first">Print a listing of the directory.  You should see
-now <code class="docutils literal"><span class="pre">addition1.exe</span></code>, created by the compiler.</p>
+<li><p class="first">Print a listing of the directory.  You should now see
+<code class="docutils literal"><span class="pre">addition1.exe</span></code>, created by the compiler.</p>
 </li>
 <li><p class="first">Try the command again:</p>
 <div class="highlight-none"><div class="highlight"><pre>mono addition1.exe
 </pre></div>
 </div>
+<p>Note that no new terminal window popped up and later disappeared -
+output appears in and stays in the current terminal window.</p>
+</li>
+<li><p class="first">Windows only:  On Windows, Xamarin Studio creates a regular Windows executable file.
+For consistency you can use the command above, but you no longer need Mono.
+You can just enter the command <code class="docutils literal"><span class="pre">addition1.exe</span></code> or the shorter <code class="docutils literal"><span class="pre">addition1</span></code>.</p>
 </li>
 </ol>
 <p>Now try a program that had multiple files.  The project version addition3
@@ -391,10 +372,11 @@ uses the library class UIF.  Continue with the same terminal/console window:</p>
 mcs addition3.cs
 </pre></div>
 </div>
-<p>You should get an error about missing the UIF class. The mcs program
+<p>to get to the addiiton3 project foilder, and attempt to compile its program.
+You should get an error about missing the UIF class. The mcs program
 does not know about the information Xamarin Studio keeps in its references.</p>
 </li>
-<li><p class="first">Extend the command:</p>
+<li><p class="first">Extend the command to also give the location of the library file:</p>
 <div class="highlight-none"><div class="highlight"><pre>mcs addition3.cs ../ui/uif.cs
 </pre></div>
 </div>
@@ -405,36 +387,53 @@ does not know about the information Xamarin Studio keeps in its references.</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Now let us try a project where we read a file.  Enter commands</p>
+<li><p class="first">Now let us try a project where we read a file.  Enter command</p>
 <div class="highlight-none"><div class="highlight"><pre>cd ../sum_file
-mcs sum_file.cs
-mono sum_file.exe
 </pre></div>
 </div>
 </li>
+<li><p class="first">List the contents of this directory. (<code class="docutils literal"><span class="pre">dir</span></code> on Windows; <code class="docutils literal"><span class="pre">ls</span></code> on a mac).</p>
+</li>
+<li><p class="first">If you have run the sum_file.cs program before, you should see
+<code class="file docutils literal"><span class="pre">sum_file.exe</span></code> listed,
+since the Xamarin options for this project were set to place the output in this
+main project directory.  Erase <code class="file docutils literal"><span class="pre">sum_file.exe</span></code> with
+<code class="docutils literal"><span class="pre">erase</span> <span class="pre">sum_file.exe</span></code> on Windows or <code class="docutils literal"><span class="pre">rm</span> <span class="pre">sum_file.exe</span></code> on a Mac.
+You can list the directory again to check that you did it.</p>
+</li>
+<li><p class="first">Now enter the command</p>
+<div class="highlight-none"><div class="highlight"><pre>mcs sum_file.cs
+</pre></div>
+</div>
+</li>
+<li><p class="first">List the directory again - <code class="file docutils literal"><span class="pre">sum_file.exe</span></code> has been created again.</p>
+</li>
+<li><p class="first">Now enter the command</p>
+<div class="highlight-none"><div class="highlight"><pre>mono sum_file.exe
+</pre></div>
+</div>
+<p>As the program runs, remember the file
+<code class="docutils literal"><span class="pre">numbers.txt</span></code> is in the same folder. To use it,
+just enter the simple file name, <code class="docutils literal"><span class="pre">numbers.txt</span></code>.</p>
+</li>
+<li><p class="first">For a little more command-line experience enter
+<code class="docutils literal"><span class="pre">type</span> <span class="pre">numbers.txt</span></code> on Windows, or <code class="docutils literal"><span class="pre">cat</span> <span class="pre">numbers.txt</span></code> on a Mac.
+You should see that the the numbers in the file
+do add to the program&#8217;s result: 16.</p>
+</li>
 </ol>
-<blockquote>
-<div>We ran this program earlier through Xamarin Studio.  Recall that that
-entering the file name <code class="docutils literal"><span class="pre">numbers.txt</span></code> failed, and to refer to the right
-place for the <code class="docutils literal"><span class="pre">numbers.txt</span></code> file, we needed to use <code class="docutils literal"><span class="pre">..\..\numbers.txt</span></code>
-or <code class="docutils literal"><span class="pre">../../numbers.txt</span></code>.  This time <em>just enter</em> <code class="docutils literal"><span class="pre">numbers.txt</span></code>.  The
-program should work, giving the answer 16.</div></blockquote>
 <p>By default mcs and mono read from and write to the current directory of the
-terminal/console.  In the situation above, <code class="docutils literal"><span class="pre">sum_file.cs</span></code> and <code class="docutils literal"><span class="pre">numbers.txt</span></code>
-were in the project directory, which is the current directory.
-Then sum_file.exe was written to and run from
-the same directory.</p>
-<p>This is unlike the Xamarin Studio default, where the current directory for execution
-is not the project directory.</p>
-<p>Under the hood, Xamarin Studio uses mcs also, with a bunch of further options
+terminal/console.
+This is unlike the Xamarin Studio default, where the current directory for execution
+is not the project directory.
+Under the hood, Xamarin Studio uses mcs also, with a bunch of further options
 in the parameters, changing the execution directory and also arranging
 for better debugging information when you get a runtime error.</p>
 <p id="index-2">Xamarin Studio keeps track of all of the parts of your projects, and recompiles only
 as needed.  There are
-also command-line tools that manage multi-file projects neatly, remembering
+also many command-line tools that manage multi-file projects neatly, remembering
 the parts, and compiling only as necessary.
 One example is NAnt, which comes with Mono.</p>
-</div>
 </div>
 
 
@@ -450,7 +449,7 @@ One example is NAnt, which comes with Mono.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

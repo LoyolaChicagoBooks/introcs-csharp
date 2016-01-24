@@ -42,9 +42,9 @@ loop, so there is no need to gather data before the loop::
     
 The general form of a |do-while| statement is
 
-    | ``do {``
-    |    statement(s)
-    | ``} while (`` *continuationCondition* ``);``
+| ``do {``
+|    statement(s)
+| ``} while (`` *continuationCondition* ``);``
     
 Here the block of statement(s) is *always* executed at least once, but it continues
 to be executed in a loop only so long as the condition tested 

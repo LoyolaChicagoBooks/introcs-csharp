@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -309,7 +310,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="rationals-revisited">
 <span id="index-0"></span><span id="id1"></span><h1>15.1. Rationals Revisited<a class="headerlink" href="#rationals-revisited" title="Permalink to this headline">¶</a></h1>
@@ -331,8 +332,7 @@ Rational r2, then</p>
 <p>The single CompareTo method is very versatile:  Just by varying
 the comparison with 0, you vary the corresponding
 comparison of Rationals:</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">r1.CompareTo(r2)</span> <span class="pre">&lt;</span> <span class="pre">0</span></code> means r1 &lt; r2</div>
 <div class="line"><code class="docutils literal"><span class="pre">r1.CompareTo(r2)</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code> means r1 &lt;= r2</div>
 <div class="line"><code class="docutils literal"><span class="pre">r1.CompareTo(r2)</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> means r1  &gt; r2</div>
@@ -340,7 +340,6 @@ comparison of Rationals:</p>
 <div class="line"><code class="docutils literal"><span class="pre">r1.CompareTo(r2)</span> <span class="pre">==</span> <span class="pre">0</span></code> means r1 is equal to r2</div>
 <div class="line"><code class="docutils literal"><span class="pre">r1.CompareTo(r2)</span> <span class="pre">!=</span> <span class="pre">0</span></code> means r1 is not equal to r2</div>
 </div>
-</div></blockquote>
 <p>None of the other methods for Rationals make any difference for
 sorting:  Just this one method is needed.  Of course the
 comparison of strings or doubles are done with
@@ -510,7 +509,7 @@ elements.  Show the before and after sequence in the list.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

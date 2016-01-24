@@ -1,4 +1,4 @@
-.. index:: Directory 
+.. index:: Directory class
 
 .. _directory-class:
 

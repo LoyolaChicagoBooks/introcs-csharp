@@ -26,13 +26,12 @@ The single CompareTo method is very versatile:  Just by varying
 the comparison with 0, you vary the corresponding 
 comparison of Rationals:
 
-
-  | ``r1.CompareTo(r2) < 0`` means r1 < r2
-  | ``r1.CompareTo(r2) <= 0`` means r1 <= r2
-  | ``r1.CompareTo(r2) > 0`` means r1  > r2
-  | ``r1.CompareTo(r2) >= 0`` means r1 >= r2
-  | ``r1.CompareTo(r2) == 0`` means r1 is equal to r2
-  | ``r1.CompareTo(r2) != 0`` means r1 is not equal to r2
+| ``r1.CompareTo(r2) < 0`` means r1 < r2
+| ``r1.CompareTo(r2) <= 0`` means r1 <= r2
+| ``r1.CompareTo(r2) > 0`` means r1  > r2
+| ``r1.CompareTo(r2) >= 0`` means r1 >= r2
+| ``r1.CompareTo(r2) == 0`` means r1 is equal to r2
+| ``r1.CompareTo(r2) != 0`` means r1 is not equal to r2
   
 None of the other methods for Rationals make any difference for
 sorting:  Just this one method is needed.  Of course the

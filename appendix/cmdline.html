@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -310,7 +311,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="command-line-introduction">
 <span id="commandline"></span><span id="index-0"></span><h1>18.3. Command Line Introduction<a class="headerlink" href="#command-line-introduction" title="Permalink to this headline">¶</a></h1>
@@ -370,7 +371,7 @@ a Mac it is typically /Users/<em>yourLogin</em>.</p>
 to get to a better location.</p>
 <p>If you can get to a parent folder of a folder that you want in a Windows Explorer window
 (by right clicking on Start) or Mac Finder, there are shortcuts to opening a terminal
-with the current directory being one shown in the graphical window:</p>
+so the current directory is one being one shown in the graphical window:</p>
 <dl class="docutils">
 <dt>Windows</dt>
 <dd><ol class="first last arabic simple">
@@ -409,7 +410,7 @@ path reference with a drive, like C:, if it is not the current drive.</p>
 <p>When you run cmd or start a Mono command prompt in Windows,
 you are likely to want to get to
 your home directory (where the Mac users start automatically).</p>
-<p>Windows 7 or 8 users enter the command below (substituting your login ID)
+<p>Windows users enter the command below (substituting your login ID)
 to get to your home directory:</p>
 <div class="highlight-none"><div class="highlight"><pre>cd C:\Users\yourLoginId
 </pre></div>
@@ -420,9 +421,9 @@ to get to your home directory:</p>
 <p>Windows only:
 The cd command does not work the way you are likely to think about it on
 a Windows system with more than one drive (like C: and flash drive E: that you have
-plugged in).  Windows remembers a separate current directory for each
-separate drive.  It also <em>separately</em> remembers a <em>current drive</em>.
-<em>You do not change the current drive with the cd command.</em>
+plugged in).  Windows remembers a <em>separate</em> current directory for each
+<em>separate</em> drive.  It also <em>independently</em> remembers a <em>current drive</em>.
+You do <em>not change the current drive</em> with the cd command.
 The command to change the current drive is just the name of the
 drive with a colon after it.  For example the command</p>
 <div class="highlight-none"><div class="highlight"><pre>E:
@@ -459,7 +460,7 @@ bar to see its contents in a GUI window.</li>
 </ul>
 <p>On a Mac there is an easier shortcut:</p>
 <ul class="simple">
-<li>Type <em>cd</em> and a space to start the command in the terminal</li>
+<li>Type <em>cd</em> and a <em>space</em> to start the command in the terminal</li>
 <li>Locate the directory you want as a subfolder in the Finder
 (not opening the directory).</li>
 <li>Drag the directory icon to the terminal.  The path gets pasted! Press return.</li>
@@ -495,11 +496,12 @@ by name.  If the Comp170 directory was you current directory, it would
 be shorter to use relative paths and just <code class="docutils literal"><span class="pre">cd</span> <span class="pre">hello</span></code>.  Remember if
 you want a different Windows drive, you must first use a
 <a class="reference internal" href="#drive-change"><span>drive change command</span></a>.</p>
-<p>On a Mac you can also use either an absolute or a relative path with <code class="docutils literal"><span class="pre">cd</span></code>.</p>
+<p>On a Mac absolute or relative paths work with <code class="docutils literal"><span class="pre">cd</span></code>.
+There is no issue with drives.</p>
 <p>If you included a space in one or more of the directory names, for
 example C:\COMP 170\hello (a space between COMP and 170) you should
-enclose that part(s) in quotes like so: <em>cd C:\&#8221;COMP 170&#8221;\hello</em></p>
-<p class="last">Mac Note: if you type just <em>cd</em> and press Enter you will change back to
+enclose the path in quotes like: <code class="docutils literal"><span class="pre">cd</span> <span class="pre">&quot;C:\\COMP</span> <span class="pre">170\\hello&quot;</span></code></p>
+<p class="last"><strong>Mac Note</strong>: if you type just <em>cd</em> and press Enter you will change back to
 your home directory.  There is also a shorthand name for your home
 directory in command paths:  tilde (~), often shifted backquote on the
 keyboard. Sorry,
@@ -521,13 +523,14 @@ a C# source file in that directory and enter <em>cd hello</em> in the command sh
 <dl class="docutils" id="index-6">
 <dt>rmdir</dt>
 <dd><p class="first">removes an <em>empty</em> directory that you give as parameter, e.g.,</p>
-<blockquote class="last">
-<div>rmdir hello</div></blockquote>
+<div class="last highlight-none"><div class="highlight"><pre>rmdir hello
+</pre></div>
+</div>
 </dd>
 </dl>
 <p>With Mono installed (and for Windows, with a Mono command window), the
 programs associated with Mono can be used:</p>
-<dl class="docutils" id="index-7">
+<dl class="docutils">
 <dt>mcs</dt>
 <dd>compiles one or more listed C# source files without using Xamarin Studio.</dd>
 <dt>csharp</dt>
@@ -537,58 +540,52 @@ programs associated with Mono can be used:</p>
 are listed next by generic function,
 with general Windows syntax first and Mac second, and then
 often examples in the same order:</p>
-<p id="index-8">Display the contents of a text file in the command window. The Unix/Mac
+<p id="index-7">Display the contents of a text file in the command window. The Unix/Mac
 name origin:  a more complicated
 use of cat is to con<strong>cat</strong>enate files.</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line">type <em>textFileName</em></div>
 <div class="line">cat <em>textFileName</em></div>
 </div>
-<div class="line-block">
-<div class="line">type my_program.cs</div>
-<div class="line">cat my_program.cs</div>
+<div class="highlight-none"><div class="highlight"><pre>type my_program.cs
+cat my_program.cs
+</pre></div>
 </div>
-</div></blockquote>
-<p id="index-9">Make a copy of a file.  Caution: If the second file already exists,
+<p id="index-8">Make a copy of a file.  Caution: If the second file already exists,
 you wipe out the original contents!</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line">copy <em>originalFile</em>  <em>copyName</em></div>
 <div class="line">cp <em>originalFile</em>  <em>copyName</em></div>
 </div>
-<div class="line-block">
-<div class="line">copy prog.cs prog_bak.cs</div>
-<div class="line">cp prog.cs prog_bak.cs</div>
+<div class="highlight-none"><div class="highlight"><pre>copy prog.cs prog_bak.cs
+cp prog.cs prog_bak.cs
+</pre></div>
 </div>
-</div></blockquote>
-<p id="index-10">Erase or remove a file:</p>
-<blockquote>
-<div><div class="line-block">
+<p id="index-9">Erase or remove a file:</p>
+<div class="line-block">
 <div class="line">erase <em>fileToKill</em></div>
 <div class="line">rm <em>fileToKill</em></div>
 </div>
-<div class="line-block">
-<div class="line">erase poorAttempt.cs</div>
-<div class="line">rm poorAttempt.cs</div>
+<div class="highlight-none"><div class="highlight"><pre>erase poorAttempt.cs
+rm poorAttempt.cs
+</pre></div>
 </div>
-</div></blockquote>
 <p>Another Windows equivalent is <code class="docutils literal"><span class="pre">del</span></code> (short for delete).</p>
-<p id="index-11">Help on a command:</p>
-<blockquote>
-<div><div class="line-block">
+<p id="index-10">We have explained the simplest use of many of the commands above.
+Many modifiers are possible.</p>
+<p>Help on a command:</p>
+<div class="line-block">
 <div class="line">help <em>commandName</em>;</div>
 <div class="line"><em>commandName</em> &#8211;help</div>
 </div>
-</div></blockquote>
 <p>Note the double dash above: This
 sometimes works for concise help on a Mac while you can generally get
-immensely detailed help overload on a Mac from</p>
+an immensely detailed help overload on a Mac from</p>
 <blockquote>
 <div>man <em>commandName</em></div></blockquote>
 </div>
 <div class="section" id="scripts">
-<span id="index-12"></span><h2>18.3.3. Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h2>
+<span id="index-11"></span><h2>18.3.3. Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h2>
 <p>This is not a subject of this course, but commands can be combined into
 script files.</p>
 <p>Scripting languages are in fact whole new specialized programming languages,
@@ -596,10 +593,10 @@ that include many of the types of
 programming statements found in C#.</p>
 </div>
 <div class="section" id="copy-and-paste">
-<span id="copypaste"></span><span id="index-13"></span><h2>18.3.4. Copy and Paste<a class="headerlink" href="#copy-and-paste" title="Permalink to this headline">¶</a></h2>
+<span id="copypaste"></span><span id="index-12"></span><h2>18.3.4. Copy and Paste<a class="headerlink" href="#copy-and-paste" title="Permalink to this headline">¶</a></h2>
 <p>Copying or pasting with a Mac is is the same with a terminal as in other editing:
 Use the same Apple Command key with C or P, and you can select with the mouse.</p>
-<p>In Windows it is more complicated to use a command window:
+<p>In Windows it is more complicated when using a command window:
 You can paste into the current command line by <em>right</em>
 clicking on the Command Window Title bar, and select edit and then paste.</p>
 <p>By default
@@ -612,8 +609,8 @@ Click OK.  Then you can select with
 mouse and press Enter for the selection to be remembered in the copy buffer.</p>
 </div>
 <div class="section" id="command-line-shortcuts">
-<span id="index-14"></span><h2>18.3.5. Command Line Shortcuts<a class="headerlink" href="#command-line-shortcuts" title="Permalink to this headline">¶</a></h2>
-<p>Both Windows and Mac (with the right options selected,
+<span id="index-13"></span><h2>18.3.5. Command Line Shortcuts<a class="headerlink" href="#command-line-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>Both Mac and Windows (with the right options selected,
 like the Windows check boxes in the last section), allow you to reduce typing:</p>
 <p>You can bring back a previous command for the history of commands that are automatically
 remembered: Use the up and down arrows.  This makes it very easy to run the same command
@@ -652,7 +649,7 @@ more to disambiguate the meaning.</li>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

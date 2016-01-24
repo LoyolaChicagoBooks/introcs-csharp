@@ -48,12 +48,12 @@ and the if-false-statement, but it is a standard style convention.
 
 The general C# |if-else| syntax is
 
-    | ``if (`` *condition* ``) {``   
-    |    statement(s) for if-true  
-    | ``}``
-    | ``else {``
-    |    statement(s) for if-false 
-    | ``}``
+| ``if (`` *condition* ``) {``   
+|    statement(s) for if-true  
+| ``}``
+| ``else {``
+|    statement(s) for if-false 
+| ``}``
 
 
 The statements chosen based on the condition 

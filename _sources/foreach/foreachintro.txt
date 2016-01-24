@@ -70,9 +70,9 @@ no possibility of an infinite loop!
 
 The general syntax of a ``foreach`` loop is
 
-    | ``foreach (`` **type itemName** ``in`` *sequence* ``) {``
-    |      statement(s) using **itemName**
-    | ``}``
+| ``foreach (`` **type itemName** ``in`` *sequence* ``) {``
+|      statement(s) using **itemName**
+| ``}``
 
 Here is a version of IsDigits::
 

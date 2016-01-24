@@ -23,10 +23,10 @@ Function definition
 
 #. The general syntax for defining a static function is
 
-    | ``static`` **returnTypeOrVoid** **FunctionName** ``(``  formal parameter list ``)``
-    | ``{``
-    |    statements in the function body...
-    | ``}``
+   | ``static`` **returnTypeOrVoid** **FunctionName** ``(``  formal parameter list ``)``
+   | ``{``
+   |    statements in the function body...
+   | ``}``
        
 #. The *formal parameter list* can be empty or contain one or more comma separated 
    *formal parameter* entries.  [:ref:`Function-Parameters`] 

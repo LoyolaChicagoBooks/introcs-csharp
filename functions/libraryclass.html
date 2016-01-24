@@ -31,7 +31,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="3. Defining Functions of your Own" href="functions.html" />
-    <link rel="next" title="3.11. Static Function Summary" href="funcsummary.html" />
+    <link rel="next" title="3.11. Tracebacks" href="traceback.html" />
     <link rel="prev" title="3.9. Not using Return Values" href="notusereturn.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -275,7 +276,7 @@
     </a>
   </li>
   <li>
-    <a href="funcsummary.html" title="Next Chapter: 3.11. Static Function Summary">
+    <a href="traceback.html" title="Next Chapter: 3.11. Tracebacks">
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
   </li>
@@ -308,7 +309,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="library-classes">
 <span id="index-0"></span><span id="id1"></span><h1>3.10. Library Classes<a class="headerlink" href="#library-classes" title="Permalink to this headline">¶</a></h1>
@@ -380,8 +381,7 @@ examples in this book.</p>
 same namespace to reference <em>public</em> parts of the current class, and vice-versa.</p>
 <p>Public classes and functions start their heading with <code class="docutils literal"><span class="pre">public</span></code>.</p>
 <p>The code included in a namespace is enclosed in braces, so the general syntax is</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">namespace</span></code> <em>name</em></div>
 <div class="line"><code class="docutils literal"><span class="pre">{</span></code></div>
 <div class="line-block">
@@ -389,7 +389,6 @@ same namespace to reference <em>public</em> parts of the current class, and vice
 </div>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 </div>
-</div></blockquote>
 <p>We will keep user input library classes like this one, <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/ui/uif.cs">uif.cs</a>,
 in a project ui.</p>
 <p>Notice that the functions we want accessible in <code class="docutils literal"><span class="pre">UIF</span></code>
@@ -595,7 +594,7 @@ thing, but use the UIF class for all user input.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

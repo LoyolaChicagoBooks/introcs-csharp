@@ -1,3 +1,9 @@
+commit e6295c1aad9b5b7f3e7f045f574f00987fd07502
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Sat Jan 23 21:34:16 2016 -0600
+
+    redid files ch, mostly dumping bin/Debug; also traceback section at end of functions
+
 commit c33163be6779c3feab64e3b56f853e94479531d0
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Mon Sep 28 19:45:11 2015 -0500
@@ -21,13 +27,5 @@ Author: George K. Thiruvathukal <gkt@cs.luc.edu>
 Date:   Sun Aug 16 23:24:46 2015 -0400
 
     formatting fixes in arrays chapter
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>
-
-commit 016e86286d928188117d3b50143970666bb9ddbf
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Aug 16 12:28:08 2015 -0400
-
-    files chapter dedent fixes
     
     Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

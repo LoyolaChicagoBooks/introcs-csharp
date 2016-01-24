@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -306,7 +307,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="simple-if-statements">
 <span id="id1"></span><h1>5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements<a class="headerlink" href="#simple-if-statements" title="Permalink to this headline">¶</a></h1>
@@ -341,29 +342,25 @@ printing &#8220;Thank you&#8221;.
 An <code class="docutils literal"><span class="pre">if</span></code> statement only breaks the  normal sequential order
 <em>inside</em> the <code class="docutils literal"><span class="pre">if</span></code> statement itself.</p>
 <p>The general C# syntax for a simple <code class="docutils literal"><span class="pre">if</span></code> statement is</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">if</span> <span class="pre">(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">)</span></code></div>
 <div class="line-block">
 <div class="line">statement</div>
 </div>
 </div>
-</div></blockquote>
 <p>The condition is an expression that is true or false, of <a class="reference internal" href="../data/types-and-conversions.html#type-boolean"><span>Type Boolean or bool</span></a>.</p>
 <p id="index-0">Often you want multiple statements executed when the condition
 is true.  We have used braces before.  We have not said
 what they do technically, syntactically:  braces around
 a group of statements technically makes a single
 <em>compound statement</em>.  So the pattern commonly written is:</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">if</span> <span class="pre">(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">)</span> <span class="pre">{</span></code></div>
 <div class="line-block">
 <div class="line">one or more statements</div>
 </div>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 </div>
-</div></blockquote>
 <p>If the condition is true, then do the statement(s) in braces. If the
 condition is not true, then skip the statements in braces.  The
 indentation pattern is also illustrated.  Recall the compiler
@@ -431,7 +428,7 @@ each case?  (Assume we have access to the class UIF.)</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

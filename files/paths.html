@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -256,7 +257,11 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">9.4. Path Strings</a><ul>
-<li><a class="reference internal" href="#paths-in-c">9.4.1. Paths in C#</a></li>
+<li><a class="reference internal" href="#paths-in-c">9.4.1. Paths in C#</a><ul>
+<li><a class="reference internal" href="#path-string-exercise">9.4.1.1. Path String Exercise</a></li>
+<li><a class="reference internal" href="#file-line-removal-exercise">9.4.1.2. File Line Removal Exercise</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -306,21 +311,19 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="path-strings">
 <span id="index-0"></span><span id="id1"></span><h1>9.4. Path Strings<a class="headerlink" href="#path-strings" title="Permalink to this headline">¶</a></h1>
 <p>When a program is running, there is alway a <em>current working directory</em>.
-When you run a project through Xamarin Studio, by default the current directory is the directory
-two levels below the project directory.</p>
-<p>Files in the current working directory can to referred to by their simple names,
-e.g., <em>sample.txt</em>.</p>
+Files in the current working directory can to referred to by their simple names,
+e.g., <em>sample.txt</em>, so with our conventions, project files can be referred to by their simple names.</p>
 <p>Referring to files not in the current directory is more complicated.
 You should be aware from using the Windows Explorer or the Finder that
 files and  directories are located in a hierarchy of directories in the
 file system.  On a Mac, the file system is unified in
 one hierarchy. On Windows, each drive has its own hierarchy.</p>
-<p>Files are generally referred to by a chain of directories before
+<p id="index-1">Files are generally referred to by a chain of directories before
 the final name of the file desired.  A <em>path string</em> is used
 to represent such a sequence of names.  Elements of the directory chain are separated
 by operating system specific punctuation:  In Windows the separator is backslash, \,
@@ -339,7 +342,7 @@ and the separator is a \, so</p>
 <p>is on C: drive; Windows is a subdirectory of the root directory \, and System32 is
 a subdirectory of Windows.
 Each drive in Windows has a separate file hierarchy underneath it.</p>
-<p>Paths starting from the root of a file system, with <code class="docutils literal"><span class="pre">\</span></code> or <code class="docutils literal"><span class="pre">/</span></code> are called
+<p id="index-2">Paths starting from the root of a file system, with <code class="docutils literal"><span class="pre">\</span></code> or <code class="docutils literal"><span class="pre">/</span></code> are called
 <em>absolute paths</em>.
 Since there is always a current directory, it makes sense to allow a path to be <em>relative</em>
 to the current directory.  In that case do <em>not</em> start with the slash that would
@@ -348,24 +351,31 @@ your home directory, you likely have a subdirectory <code class="file docutils l
 <code class="file docutils literal"><span class="pre">Downloads</span></code>
 directory might contain <code class="file docutils literal"><span class="pre">examples.zip</span></code>.  From the home directory, this file could
 be referred to as <code class="file docutils literal"><span class="pre">Downloads\examples.zip</span></code> or  <code class="file docutils literal"><span class="pre">Downloads/examples.zip</span></code> on a Mac.</p>
-<p>Relative to a Xamarin Studio project directory, the current directory for execution
-of the program is <code class="file docutils literal"><span class="pre">bin\Debug</span></code> or  <code class="file docutils literal"><span class="pre">bin/Debug</span></code> on a Mac.</p>
+<p>When you run a project through Xamarin Studio with the default setup, the current directory is the directory
+two levels below the project directory, in a folder created by the system,
+<code class="file docutils literal"><span class="pre">bin\Debug</span></code> or  <code class="file docutils literal"><span class="pre">bin/Debug</span></code> on a Mac.
+We choose to modify and simplify this in our projects working with files, so the Output Folder
+is just the project folder.</p>
 <p>Referring to files in the current directory just by their plain file name is
 actually an example of using relative paths.</p>
-<p>With relative paths, you sometimes want to move up the directory hierarchy:  <code class="docutils literal"><span class="pre">..</span></code>
+<p id="index-3">With relative paths, you sometimes want to move up the directory hierarchy:  <code class="docutils literal"><span class="pre">..</span></code>
 (two periods) refers to the directory one level up the chain.</p>
-<p>Next imagine reversing the relative path from a Xamarin Studio project directory to the
-current directory for execution:  If the current directory is the execution
-directory, then <code class="docutils literal"><span class="pre">..</span></code> refers to directory <code class="file docutils literal"><span class="pre">bin</span></code>, and then
-<code class="docutils literal"><span class="pre">..\..</span></code> or <code class="docutils literal"><span class="pre">../..</span></code> refers to the project directory.  Further, if the
-project directory contains the file <code class="file docutils literal"><span class="pre">numbers.txt</span></code>, then it could be referred to
-relative to the execution directory as
-<code class="file docutils literal"><span class="pre">..\..\numbers.txt</span></code> or <code class="file docutils literal"><span class="pre">../../numbers.txt</span></code>.</p>
-<p>Occasionally you need to
-refer explicitly to the current directory:  It is referred to as &#8221;.&#8221; (a single
+<p>For example, suppose you solve <a class="reference internal" href="fileread.html#safe-sum-file-ex"><span>Safe Sum File Exercise</span></a> by puting your new project
+safe_sum_file in the <em>same</em> solution as the original sum_file.  That means the parent folder
+for both projects is the solution folder.  If you want to run your new <code class="file docutils literal"><span class="pre">safe_sum_file.cs</span></code>
+program (assuming you made the Output Path be the project folder)
+and want tp open the <code class="file docutils literal"><span class="pre">numbers.txt</span></code>
+file in the sum_file project, then, when prompted in the program, you would refer to the
+file to read as <code class="file docutils literal"><span class="pre">..\sum_file\numbers.txt</span></code> in Windows or
+<code class="file docutils literal"><span class="pre">../sum_file/numbers.txt</span></code> on a Mac.  Follow this one step at a time:
+Starting from the <code class="file docutils literal"><span class="pre">safe_sum_file</span></code> project folder, where the program is running,
+go up one folder (<code class="file docutils literal"><span class="pre">..</span></code>) to the solution folder, then down into the <code class="file docutils literal"><span class="pre">sum_file</span></code> project folder,
+and refer to the <code class="file docutils literal"><span class="pre">numbers.txt</span></code> file in that folder.</p>
+<p id="index-4">Occasionally you need to
+refer explicitly to the current directory:  It is referred to as <code class="file docutils literal"><span class="pre">.</span></code>. (a single
 period).</p>
 <div class="section" id="paths-in-c">
-<h2>9.4.1. Paths in C#<a class="headerlink" href="#paths-in-c" title="Permalink to this headline">¶</a></h2>
+<span id="index-5"></span><h2>9.4.1. Paths in C#<a class="headerlink" href="#paths-in-c" title="Permalink to this headline">¶</a></h2>
 <p>The differing versions of paths for Windows and a Mac are a pain to deal with. Luckily C#
 abstracts away the differences.  It has a <code class="docutils literal"><span class="pre">Path</span></code> class in the <code class="docutils literal"><span class="pre">System.IO</span></code>
 namespace that provides many handy functions for dealing with paths in
@@ -377,15 +387,49 @@ for sequential parts of a path, and creates a single string appropriate for the
 current operating system.  For example,
 <code class="docutils literal"><span class="pre">Path.Combine(&quot;bin&quot;,</span> <span class="pre">&quot;Debug&quot;)</span></code> will return <code class="docutils literal"><span class="pre">&quot;bin\Debug&quot;</span></code> or <code class="docutils literal"><span class="pre">&quot;bin/debug&quot;</span></code>
 as appropriate.
-<code class="docutils literal"><span class="pre">Path.Combine(&quot;..&quot;,</span> <span class="pre">&quot;..&quot;,</span> <span class="pre">&quot;numbers.txt&quot;)</span></code> will return a string with characters
-<code class="docutils literal"><span class="pre">..\..\numbers.txt</span></code> or <code class="docutils literal"><span class="pre">../../numbers.txt</span></code>.</p>
+<code class="docutils literal"><span class="pre">Path.Combine(&quot;..&quot;,</span> <span class="pre">&quot;sum_file&quot;,</span> <span class="pre">&quot;numbers.txt&quot;)</span></code> will return a string with characters
+<code class="docutils literal"><span class="pre">..\sum_file\numbers.txt</span></code> or <code class="docutils literal"><span class="pre">../sum_file/numbers.txt</span></code>.</p>
 <p>Even if you know you are going to be on Windows, file paths are a problem because
 <code class="docutils literal"><span class="pre">\</span></code> is the string escape character.  To enter the Windows path above explicitly
-you would need to have <code class="docutils literal"><span class="pre">&quot;..\\..\\numbers.txt&quot;</span></code>, or the raw string prefix,
-<code class="docutils literal"><span class="pre">&#64;</span></code> can come to the rescue:  <code class="docutils literal"><span class="pre">&#64;&quot;..\..\numbers.txt&quot;</span></code>.</p>
+you would need to have <code class="docutils literal"><span class="pre">&quot;..\\sum_file\\numbers.txt&quot;</span></code>, or the raw string prefix,
+<code class="docutils literal"><span class="pre">&#64;</span></code> can come to the rescue:  <code class="docutils literal"><span class="pre">&#64;&quot;..\sum_file\numbers.txt&quot;</span></code>.</p>
 <p>You can look at the <code class="docutils literal"><span class="pre">Path</span></code> class in the MSDN documentation
 for many other operations with path strings.</p>
 <p>Path strings are used by the <a class="reference internal" href="dir-file.html#directory-class"><span>Directory Class</span></a> and by the <a class="reference internal" href="dir-file.html#file-class"><span>File Class</span></a>.</p>
+<div class="section" id="path-string-exercise">
+<h3>9.4.1.1. Path String Exercise<a class="headerlink" href="#path-string-exercise" title="Permalink to this headline">¶</a></h3>
+<p>In the path string illustration above to open <code class="file docutils literal"><span class="pre">numbers.txt</span></code>,
+we assumed for simplicity that the sum_file and safe_sum_file
+projects were in the same Xamarin solution.
+Imagine the following alternate assumptions, more like the way
+we suggested you actually set up your projects:</p>
+<ul class="simple">
+<li>You have your own solution including the
+safe_sum_file project.</li>
+<li>Your solution&#8217;s folder and the examples solution folder are both
+subfolder of the
+same parent folder.</li>
+<li>You are running the safe_sum_file.cs program from your safe_sum_file project folder.</li>
+<li>You want the user to reference the <code class="file docutils literal"><span class="pre">numbers.txt</span></code> in the sum_file project inside
+our examples project.</li>
+</ul>
+<p>What path string would you enter to be able to open that file?</p>
+</div>
+<div class="section" id="file-line-removal-exercise">
+<h3>9.4.1.2. File Line Removal Exercise<a class="headerlink" href="#file-line-removal-exercise" title="Permalink to this headline">¶</a></h3>
+<p>Complete the function described below, and make a Main program and
+sample file to test it.  Modify the Xamarin defaults so the Output Path
+is the project folder.</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Take all lines from reader that do not start with startToRemove</span>
+<span class="c1">/// and copy them to writer.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">FileLineRemoval</span><span class="p">(</span><span class="n">StreamReader</span> <span class="n">reader</span><span class="p">,</span> <span class="n">StreamWriter</span> <span class="n">writer</span>
+                            <span class="kt">char</span> <span class="n">startToRemove</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For example, in Unix/Mac scripts lines starting with <code class="docutils literal"><span class="pre">'#'</span></code> are
+comment lines.  Making <code class="docutils literal"><span class="pre">startToRemove</span></code> be <code class="docutils literal"><span class="pre">'#'</span></code> would write only non-comment lines
+to the writer.</p>
+</div>
 </div>
 </div>
 
@@ -402,7 +446,7 @@ for many other operations with path strings.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

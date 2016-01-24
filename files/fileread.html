@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -311,15 +312,18 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="reading-files">
 <span id="fileread"></span><span id="index-0"></span><h1>9.3. Reading Files<a class="headerlink" href="#reading-files" title="Permalink to this headline">¶</a></h1>
-<p>In Xamarin Studio, go to project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_first_file">print_first_file</a>.
-Right click on the project in the Solution pad, and select Open Containing Folder.
-Drill down two folders through <code class="file docutils literal"><span class="pre">bin</span></code> to <code class="file docutils literal"><span class="pre">Debug</span></code>.
-You should find a copy of the <code class="docutils literal"><span class="pre">sample.txt</span></code> that we stored there.  You can open it and
-look at it if you like.</p>
+<p>In Xamarin Studio, go to project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_first_file">print_first_file</a>.  Note that we have added a copy of
+<code class="file docutils literal"><span class="pre">sample.txt</span></code> as a project file, so it is an existing file in the project folder.
+You can open it and see that it is a copy of the file created in the last section.</p>
+<p>It will be true of most all the programs for this chapter, but you might check that we have
+modified the project Output Path to refer to the project folder,
+in this case with the path ending
+<code class="docutils literal"><span class="pre">examples/print_first_file</span></code>.  This means <code class="file docutils literal"><span class="pre">sample.txt</span></code> will be in the
+current directory when the program runs.</p>
 <p>Run the example program
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_first_file/print_first_file.cs">print_first_file/print_first_file.cs</a>, shown below:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
@@ -360,13 +364,15 @@ if a program ends without closing a file that was being read. <a class="footnote
 <span id="endofstream"></span><span id="index-1"></span><h2>9.3.1. Reading to End of Stream<a class="headerlink" href="#reading-to-end-of-stream" title="Permalink to this headline">¶</a></h2>
 <p>In <code class="docutils literal"><span class="pre">first_file.cs</span></code>, we explicitly coded reading two lines.  You will often
 want to process each line in a file, without knowing the total number of
-lines while programming.  This means that files provide us with our
-second kind of a sequence:  this time the sequence of lines in the file!
+lines at the time when you were programming.
+This means that files provide us with our
+second kind of a sequence:  the sequence of lines in the file!
 To process all of them will require a loop and a new test to make sure that you
 have not yet come to the end of the file&#8217;s stream: You can use the <code class="docutils literal"><span class="pre">EndOfStream</span></code>
 property. It has the wrong sense (true at the end of the file), so we negate it,
-testing for <code class="docutils literal"><span class="pre">!reader.EndOfStream</span></code> in the example program <code class="docutils literal"><span class="pre">print_file_lines.cs</span></code>.
-This little program reads and prints the contents of a file specified by the
+testing for <code class="docutils literal"><span class="pre">!reader.EndOfStream</span></code> to <em>continue</em> reading.
+The example program <code class="docutils literal"><span class="pre">print_file_lines.cs</span></code>
+reads and prints the contents of a file specified by the
 user, one line at a time:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
@@ -407,6 +413,8 @@ with a couple of restrictions:</p>
 it is more useful!</p>
 </dd>
 </dl>
+<p>You can run this program. You need an existing file to read.  An obvious file is
+the source file itself:  <code class="file docutils literal"><span class="pre">print_file_lines.cs</span></code>.</p>
 <p>Things to note about reading from files:</p>
 <ul class="simple" id="index-3">
 <li>Reading from a file returns the part read, of course.  Never forget the
@@ -434,14 +442,14 @@ loop we could have just had:</p>
 <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">wholeFile</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">ReadToEnd</span></code> does not strip off a newline, like <code class="docutils literal"><span class="pre">ReadLine</span></code> does,
+<p><code class="docutils literal"><span class="pre">ReadToEnd</span></code> does not strip off a newline, unlike <code class="docutils literal"><span class="pre">ReadLine</span></code>,
 so we do not want to add an extra newline
 when writing.  We use the <code class="docutils literal"><span class="pre">Write</span></code> method instead of <code class="docutils literal"><span class="pre">WriteLine</span></code>.</p>
 </div>
 <div class="section" id="example-sum-numbers-in-file">
 <span id="index-5"></span><h2>9.3.2. Example: Sum Numbers in File<a class="headerlink" href="#example-sum-numbers-in-file" title="Permalink to this headline">¶</a></h2>
 <p>We have summed the numbers from 1 to <code class="docutils literal"><span class="pre">n</span></code>.  In that case we generated
-the next number <code class="docutils literal"><span class="pre">i</span></code> automatically using i++.  We could also read numbers
+the next number <code class="docutils literal"><span class="pre">i</span></code> automatically using <code class="docutils literal"><span class="pre">i++</span></code>.  We could also read numbers
 from a file containing one number per line (plus possible white space):</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">CalcSum</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
 <span class="p">{</span>
@@ -478,9 +486,9 @@ If you give a good file name, it skips lines that contain only whitespace.</p>
          <span class="p">}</span>
       <span class="p">}</span>
 
-      <span class="c1">/// Read the named file and</span>
-      <span class="c1">/// return the sum of an int</span>
-      <span class="c1">/// from each line that is not just white space.</span>
+      <span class="c1">/// Open, read and close the named file and</span>
+      <span class="c1">/// return the sum of an int from</span>
+      <span class="c1">/// each line that is not just white space.</span>
       <span class="k">static</span> <span class="kt">int</span> <span class="nf">CalcSum</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -504,35 +512,17 @@ is <code class="docutils literal"><span class="pre">File.Exists</span></code> in
 </pre></div>
 </div>
 <p>It is true if the named files exists in the operating system&#8217;s file structure.</p>
-<p>You should see the file <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_file/numbers.txt">sum_file/numbers.txt</a> in the Xamarin Studio project.
-It is in the right form for the program.  If you run the program and enter the
-response:</p>
-<div class="highlight-none"><div class="highlight"><pre>numbers.txt
-</pre></div>
-</div>
-<p>you should be told that the file does not exist.  Recall that the executable
-created by Xamarin Studio is two directories down through <code class="file docutils literal"><span class="pre">bin</span></code>
-to <code class="file docutils literal"><span class="pre">Debug</span></code>.  This is the default
-<em>current directory</em> when Xamarin Studio runs the program.
-You can refer to
-a file that is not in the current directory.
-A full description is in the next section, but briefly, what we need now:
-The symbol for the parent directory is <code class="docutils literal"><span class="pre">..</span></code>.
-The hierarchy of folders and files are separated by
-<code class="docutils literal"><span class="pre">\</span></code> in Windows and <code class="docutils literal"><span class="pre">/</span></code> on a Mac,  so you can test the program successfully
-if you use the file name:
-<code class="docutils literal"><span class="pre">..\..\numbers.txt</span></code> in Windows and <code class="docutils literal"><span class="pre">../../numbers.txt</span></code> on a Mac.  On a Mac, running
-the program looks like:</p>
-<div class="highlight-none"><div class="highlight"><pre>Enter the name of a file of integers: ../../numbers.txt
-The sum is 16
-</pre></div>
-</div>
-<p>In <a class="reference internal" href="fio.html#fio"><span>FIO Helper Class</span></a> we will discuss a more flexible way of finding files to open,
-that works well in Xamarin Studio and many other situations.</p>
+<p>You should see the files <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_file/numbers.txt">sum_file/numbers.txt</a> and
+<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_file/numbers2.txt">sum_file/numbers2.txt</a> in the Xamarin Studio project.  You can test
+with them.  It is important to test all paths through the program: also do
+put in a bad name and see that the program exits gracefully, as intended.</p>
+<p>For files in the current folder, you can just use the plain file name.
+For other folders see <a class="reference internal" href="paths.html#path-strings"><span>Path Strings</span></a>.</p>
 <div class="section" id="safe-sum-file-exercise">
-<span id="index-7"></span><h3>9.3.2.1. Safe Sum File Exercise<a class="headerlink" href="#safe-sum-file-exercise" title="Permalink to this headline">¶</a></h3>
+<span id="safe-sum-file-ex"></span><span id="index-7"></span><h3>9.3.2.1. Safe Sum File Exercise<a class="headerlink" href="#safe-sum-file-exercise" title="Permalink to this headline">¶</a></h3>
 <ol class="loweralpha">
 <li><p class="first">Copy <code class="file docutils literal"><span class="pre">sum_file.cs</span></code> to a file <code class="file docutils literal"><span class="pre">safe_sum_file.cs</span></code> in a new project of yours.
+<em>Be sure to modify the Output path option to just refer to the project folder!</em>
 Modify the program: Write
 a new function with the heading below.  Use it in <code class="docutils literal"><span class="pre">Main</span></code>, in place of the <code class="docutils literal"><span class="pre">if</span></code>
 statement that checks (only once) for a legal file:</p>
@@ -543,7 +533,7 @@ statement that checks (only once) for a legal file:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">A user who forgot the file name woud be stuck!
+<li><p class="first">A user who completely forgot the file name could be stuck in an infinite loop!
 Elaborate the function and program, so that an empty line entered means
 &#8220;give up&#8221;, and <code class="docutils literal"><span class="pre">null</span></code> (no object) should be returned.  The main program needs to
 test for this and quit gracefully in that case.</p>
@@ -571,13 +561,13 @@ It copies a file line by line to a new file in upper case:</p>
 includes the input file.  You may not see it at first.  You need to expand the folder
 for <code class="file docutils literal"><span class="pre">bin</span></code> and then <code class="file docutils literal"><span class="pre">Debug</span></code>.  You see <code class="file docutils literal"><span class="pre">text.txt</span></code>.</li>
 <li>To see
-what else is in the file system directory,
-you can select the Debug folder and right click and select
-Open Containing Folder.
-You should see <code class="file docutils literal"><span class="pre">text.txt</span></code> but not <code class="file docutils literal"><span class="pre">upper_text.txt</span></code>.
+what else is in the project directory,
+select
+&#8220;Open Containing Folder&#8221; or &#8220;Open in Finder&#8221; on a Mac.
+You should see project file <code class="file docutils literal"><span class="pre">text.txt</span></code> but not <code class="file docutils literal"><span class="pre">upper_text.txt</span></code>.
 Leave that operating system file folder open.</li>
 <li>Go back to Xamarin Studio and run the project.  Now look at the
-operating system <code class="file docutils literal"><span class="pre">Debug</span></code> folder again.  You should see <code class="file docutils literal"><span class="pre">upper_text.txt</span></code>.
+operating system folder again.  You should see <code class="file docutils literal"><span class="pre">upper_text.txt</span></code>.
 You can open it and see that it holds an upper case version of the contents
 of <code class="file docutils literal"><span class="pre">text.txt</span></code>.</li>
 </ol>
@@ -622,7 +612,7 @@ The <code class="docutils literal"><span class="pre">ReadToEnd</span></code> ver
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

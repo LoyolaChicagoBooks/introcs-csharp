@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -306,7 +307,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="for-statement-syntax">
 <span id="index-0"></span><h1>8.1. For-Statement Syntax<a class="headerlink" href="#for-statement-syntax" title="Permalink to this headline">¶</a></h1>
@@ -329,18 +330,15 @@ equivalent syntax by the compiler.  For example:</p>
 </pre></div>
 </div>
 <p>More generally:</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">for</span> <span class="pre">(</span></code> <em>initialization</em> <code class="docutils literal"><span class="pre">;</span></code> <em>condition</em> ; <em>update</em> <code class="docutils literal"><span class="pre">)</span></code> {</div>
 <div class="line-block">
 <div class="line">statement(s)</div>
 </div>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 </div>
-</div></blockquote>
 <p>translates to</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line"><em>initialization</em> <code class="docutils literal"><span class="pre">;</span></code></div>
 <div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">)</span></code> {</div>
 <div class="line-block">
@@ -349,7 +347,6 @@ equivalent syntax by the compiler.  For example:</p>
 </div>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 </div>
-</div></blockquote>
 <p>In the example above, <em>initialization</em> is <code class="docutils literal"><span class="pre">i=2</span></code>, <em>condition</em> is <code class="docutils literal"><span class="pre">i</span> <span class="pre">&lt;=</span> <span class="pre">n</span></code>,
 and <em>update</em> is <code class="docutils literal"><span class="pre">i++</span></code>.</p>
 <p>Why bother with this rearrangement?  It is a matter of taste,
@@ -538,7 +535,7 @@ It can considerable shorten code if the test is inside of complicated, deeply ne
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

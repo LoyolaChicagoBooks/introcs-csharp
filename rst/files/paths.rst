@@ -6,17 +6,17 @@ Path Strings
 ====================
 
 When a program is running, there is alway a *current working directory*.  
-When you run a project through Xamarin Studio, by default the current directory is the directory
-two levels below the project directory.
-   
 Files in the current working directory can to referred to by their simple names,
-e.g., *sample.txt*.  
+e.g., *sample.txt*, so with our conventions, project files can be referred to by their simple names.  
 
 Referring to files not in the current directory is more complicated.  
 You should be aware from using the Windows Explorer or the Finder that
 files and  directories are located in a hierarchy of directories in the
 file system.  On a Mac, the file system is unified in 
 one hierarchy. On Windows, each drive has its own hierarchy.
+
+.. index:: / ; path separator
+   single: \ ; path separator
 
 Files are generally referred to by a chain of directories before
 the final name of the file desired.  A *path string* is used
@@ -42,6 +42,8 @@ is on C: drive; Windows is a subdirectory of the root directory \\, and System32
 a subdirectory of Windows.  
 Each drive in Windows has a separate file hierarchy underneath it.
 
+.. index:: path; absolute
+
 Paths starting from the root of a file system, with ``\`` or ``/`` are called
 *absolute paths*.
 Since there is always a current directory, it makes sense to allow a path to be *relative*
@@ -52,26 +54,39 @@ your home directory, you likely have a subdirectory :file:`Downloads`, and the
 directory might contain :file:`examples.zip`.  From the home directory, this file could
 be referred to as :file:`Downloads\\examples.zip` or  :file:`Downloads/examples.zip` on a Mac.
 
-Relative to a Xamarin Studio project directory, the current directory for execution
-of the program is :file:`bin\\Debug` or  :file:`bin/Debug` on a Mac.
+When you run a project through Xamarin Studio with the default setup, the current directory is the directory
+two levels below the project directory, in a folder created by the system,
+:file:`bin\\Debug` or  :file:`bin/Debug` on a Mac.
+We choose to modify and simplify this in our projects working with files, so the Output Folder 
+is just the project folder.
 
 Referring to files in the current directory just by their plain file name is
 actually an example of using relative paths.
 
+.. index:: .. parent folder
+
 With relative paths, you sometimes want to move up the directory hierarchy:  ``..``
 (two periods) refers to the directory one level up the chain.  
 
-Next imagine reversing the relative path from a Xamarin Studio project directory to the
-current directory for execution:  If the current directory is the execution 
-directory, then ``..`` refers to directory :file:`bin`, and then
-``..\..`` or ``../..`` refers to the project directory.  Further, if the 
-project directory contains the file :file:`numbers.txt`, then it could be referred to
-relative to the execution directory as 
-:file:`..\\..\\numbers.txt` or :file:`../../numbers.txt`.
+For example, suppose you solve :ref:`safe_sum_file_ex` by puting your new project
+safe_sum_file in the *same* solution as the original sum_file.  That means the parent folder
+for both projects is the solution folder.  If you want to run your new :file:`safe_sum_file.cs`
+program (assuming you made the Output Path be the project folder) 
+and want tp open the :file:`numbers.txt`
+file in the sum_file project, then, when prompted in the program, you would refer to the
+file to read as :file:`..\\sum_file\\numbers.txt` in Windows or 
+:file:`../sum_file/numbers.txt` on a Mac.  Follow this one step at a time:  
+Starting from the :file:`safe_sum_file` project folder, where the program is running,
+go up one folder (:file:`..`) to the solution folder, then down into the :file:`sum_file` project folder,
+and refer to the :file:`numbers.txt` file in that folder.  
+
+.. index:: . ; current folder
 
 Occasionally you need to
-refer explicitly to the current directory:  It is referred to as "." (a single
+refer explicitly to the current directory:  It is referred to as :file:`.`. (a single
 period).
+
+.. index:: Path class
 
 Paths in C#
 --------------
@@ -89,16 +104,51 @@ for sequential parts of a path, and creates a single string appropriate for the
 current operating system.  For example,
 ``Path.Combine("bin", "Debug")`` will return ``"bin\Debug"`` or ``"bin/debug"``
 as appropriate.
-``Path.Combine("..", "..", "numbers.txt")`` will return a string with characters
-``..\..\numbers.txt`` or ``../../numbers.txt``.  
+``Path.Combine("..", "sum_file", "numbers.txt")`` will return a string with characters
+``..\sum_file\numbers.txt`` or ``../sum_file/numbers.txt``.  
 
 Even if you know you are going to be on Windows, file paths are a problem because
 ``\`` is the string escape character.  To enter the Windows path above explicitly
-you would need to have ``"..\\..\\numbers.txt"``, or the raw string prefix,
-``@`` can come to the rescue:  ``@"..\..\numbers.txt"``.
+you would need to have ``"..\\sum_file\\numbers.txt"``, or the raw string prefix,
+``@`` can come to the rescue:  ``@"..\sum_file\numbers.txt"``.
 
 You can look at the ``Path`` class in the MSDN documentation 
 for many other operations with path strings.
 
 Path strings are used by the :ref:`directory-class` and by the :ref:`file-class`.
 
+Path String Exercise
+~~~~~~~~~~~~~~~~~~~~~~
+
+In the path string illustration above to open :file:`numbers.txt`,
+we assumed for simplicity that the sum_file and safe_sum_file 
+projects were in the same Xamarin solution.
+Imagine the following alternate assumptions, more like the way 
+we suggested you actually set up your projects:
+
+* You have your own solution including the 
+  safe_sum_file project.
+* Your solution's folder and the examples solution folder are both 
+  subfolder of the
+  same parent folder.
+* You are running the safe_sum_file.cs program from your safe_sum_file project folder.
+* You want the user to reference the :file:`numbers.txt` in the sum_file project inside 
+  our examples project.
+
+What path string would you enter to be able to open that file?
+
+File Line Removal Exercise
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Complete the function described below, and make a Main program and
+sample file to test it.  Modify the Xamarin defaults so the Output Path
+is the project folder.  ::
+
+    /// Take all lines from reader that do not start with startToRemove
+    /// and copy them to writer.
+    static void FileLineRemoval(StreamReader reader, StreamWriter writer
+                                char startToRemove)
+    
+For example, in Unix/Mac scripts lines starting with ``'#'`` are
+comment lines.  Making ``startToRemove`` be ``'#'`` would write only non-comment lines
+to the writer.

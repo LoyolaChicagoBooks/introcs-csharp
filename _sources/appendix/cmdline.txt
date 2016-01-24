@@ -76,7 +76,7 @@ to get to a better location.
 
 If you can get to a parent folder of a folder that you want in a Windows Explorer window 
 (by right clicking on Start) or Mac Finder, there are shortcuts to opening a terminal
-with the current directory being one shown in the graphical window:
+so the current directory is one being one shown in the graphical window:
 
 Windows
    #. Note: this approach does *not* give your a Mono command prompt.
@@ -93,8 +93,6 @@ Mac
       A popup menu appears.
    #. Click on the bottom item Services, to get a submenu.
    #. In the submenu click on "New Terminal at Folder" (likely the bottom entry).
-   
-
 
 .. index:: command line; dir and ls
    dir on Windows command line 
@@ -121,7 +119,7 @@ When you run cmd or start a Mono command prompt in Windows,
 you are likely to want to get to
 your home directory (where the Mac users start automatically).
 
-Windows 7 or 8 users enter the command below (substituting your login ID)
+Windows users enter the command below (substituting your login ID)
 to get to your home directory:
 
 .. code-block:: none
@@ -139,9 +137,9 @@ The cd is short for "Change Directory", changing the current directory.
    Windows only: 
    The cd command does not work the way you are likely to think about it on
    a Windows system with more than one drive (like C: and flash drive E: that you have
-   plugged in).  Windows remembers a separate current directory for each
-   separate drive.  It also *separately* remembers a *current drive*.  
-   *You do not change the current drive with the cd command.*  
+   plugged in).  Windows remembers a *separate* current directory for each
+   *separate* drive.  It also *independently* remembers a *current drive*.  
+   You do *not change the current drive* with the cd command.  
    The command to change the current drive is just the name of the
    drive with a colon after it.  For example the command
    
@@ -184,7 +182,7 @@ Windows
 
 On a Mac there is an easier shortcut:
   
-- Type *cd* and a space to start the command in the terminal
+- Type *cd* and a *space* to start the command in the terminal
 - Locate the directory you want as a subfolder in the Finder 
   (not opening the directory).
 - Drag the directory icon to the terminal.  The path gets pasted! Press return.
@@ -228,13 +226,14 @@ cd
   you want a different Windows drive, you must first use a 
   :ref:`drive change command <drive-change>`.
 
-  On a Mac you can also use either an absolute or a relative path with ``cd``.
+  On a Mac absolute or relative paths work with ``cd``.  
+  There is no issue with drives.
 
   If you included a space in one or more of the directory names, for
   example C:\\COMP 170\\hello (a space between COMP and 170) you should
-  enclose that part(s) in quotes like so: *cd C:\\"COMP 170"\\hello*
+  enclose the path in quotes like: ``cd "C:\\COMP 170\\hello"``
 
-  Mac Note: if you type just *cd* and press Enter you will change back to
+  **Mac Note**: if you type just *cd* and press Enter you will change back to
   your home directory.  There is also a shorthand name for your home
   directory in command paths:  tilde (~), often shifted backquote on the
   keyboard. Sorry,
@@ -261,15 +260,13 @@ mkdir
 rmdir
     removes an *empty* directory that you give as parameter, e.g.,
     
+    .. code-block:: none
+    
        rmdir hello
 
 With Mono installed (and for Windows, with a Mono command window), the
 programs associated with Mono can be used:
 
-.. index:: command line; mcs
-   mcs compile on command line
-   compile on command line mcs
-   
 mcs
   compiles one or more listed C# source files without using Xamarin Studio.
 
@@ -289,11 +286,13 @@ Display the contents of a text file in the command window. The Unix/Mac
 name origin:  a more complicated
 use of cat is to con\ **cat**\ enate files. 
 
-  | type *textFileName*
-  | cat *textFileName*
-  
-  | type my_program.cs
-  | cat my_program.cs
+| type *textFileName*
+| cat *textFileName*
+
+.. code-block:: none
+
+   type my_program.cs
+   cat my_program.cs
 
 .. index:: command line; copy file
    copy on Windows command line 
@@ -303,11 +302,13 @@ use of cat is to con\ **cat**\ enate files.
 Make a copy of a file.  Caution: If the second file already exists, 
 you wipe out the original contents!
 
-  | copy *originalFile*  *copyName*
-  | cp *originalFile*  *copyName*
+| copy *originalFile*  *copyName*
+| cp *originalFile*  *copyName*
   
-  | copy prog.cs prog_bak.cs
-  | cp prog.cs prog_bak.cs
+.. code-block:: none
+
+   copy prog.cs prog_bak.cs
+   cp prog.cs prog_bak.cs
   
 
 .. index:: command line; delete a file
@@ -316,11 +317,13 @@ you wipe out the original contents!
 
 Erase or remove a file:
 
-  | erase *fileToKill*
-  | rm *fileToKill*
-  
-  | erase poorAttempt.cs
-  | rm poorAttempt.cs
+| erase *fileToKill*
+| rm *fileToKill*
+
+.. code-block:: none
+
+   erase poorAttempt.cs
+   rm poorAttempt.cs
 
 
 Another Windows equivalent is ``del`` (short for delete).
@@ -329,14 +332,17 @@ Another Windows equivalent is ``del`` (short for delete).
    help on command line 
    man on Mac command line 
 
+We have explained the simplest use of many of the commands above.
+Many modifiers are possible.  
+
 Help on a command:
 
-  | help *commandName*;
-  | *commandName* --help
+| help *commandName*;
+| *commandName* --help
   
 Note the double dash above: This 
 sometimes works for concise help on a Mac while you can generally get
-immensely detailed help overload on a Mac from
+an immensely detailed help overload on a Mac from
 
    man *commandName*
 
@@ -365,7 +371,7 @@ Copy and Paste
 Copying or pasting with a Mac is is the same with a terminal as in other editing:  
 Use the same Apple Command key with C or P, and you can select with the mouse. 
 
-In Windows it is more complicated to use a command window:  
+In Windows it is more complicated when using a command window:  
 You can paste into the current command line by *right*
 clicking on the Command Window Title bar, and select edit and then paste.  
 
@@ -386,7 +392,7 @@ mouse and press Enter for the selection to be remembered in the copy buffer.
 Command Line Shortcuts
 -----------------------
 
-Both Windows and Mac (with the right options selected, 
+Both Mac and Windows (with the right options selected, 
 like the Windows check boxes in the last section), allow you to reduce typing:
 
 You can bring back a previous command for the history of commands that are automatically

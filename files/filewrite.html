@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -303,32 +304,59 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="writing-files">
 <span id="filewrite"></span><span id="index-0"></span><h1>9.2. Writing Files<a class="headerlink" href="#writing-files" title="Permalink to this headline">¶</a></h1>
+<p>Thus far we have only used the Console class for input and output,
+so we have neither read nor written data from/to files.</p>
+<p>By default Xamarin Studio places data files in a place that makes sense for advanced
+projects, but not for our usage.  Thus far it has not mattered, and we
+have left the default directory structure alone.  Now, however, it matters,
+and will be a lot simpler if we make a small change to the setup of all our projets using
+data files. This will also simplify command-line usage when we get to it.</p>
 <p>Try the following:</p>
-<ol class="arabic simple">
-<li>In Xamarin Studio build, <em>not</em> run, the project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/first_file">first_file</a>.  Build is
-the first selection in the local popup menu for first_file in the Solution pad.
-Recall to get the local popup menu<ul>
-<li>go to the Solution pad</li>
-<li>right click on the project (Mac control-click)</li>
-</ul>
+<ol class="arabic">
+<li><p class="first">In Xamarin Studio go to the example project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/first_file">first_file</a>.  Double click
+on the project line in the Solution pad to open the Options dialog.
+(If this does not work for some
+reason you can also open the drop-down project menu and select Options.)</p>
 </li>
-<li>Next open an operating system directory window for the project.
-With Xamarin Studio open, a quick way to do that is to go to the same popup window,
-and this time select &#8220;Open Containing Folder&#8221;.</li>
-<li>Besides the project files from the Solutions pad, in the directory window
-you should also see a folder
-<code class="file docutils literal"><span class="pre">bin</span></code>.  Change to that folder and then to its sub-folder <code class="file docutils literal"><span class="pre">Debug</span></code>.
-This is where the build step put its result <code class="file docutils literal"><span class="pre">first_file.exe</span></code> and debug
-information <code class="file docutils literal"><span class="pre">first_file.exe.mdb</span></code>.  You should see no other file.
-Leave this window open.</li>
-<li>Now, back in Xamarin Studio, run the project.  Depending on your operating system,
-you may or may not see a Console Window pop up.  If you do see one, you
-should not see any evidence of program results.  If you got a window, close it.</li>
-<li>Look at the directory window again.  You should see a file <code class="file docutils literal"><span class="pre">sample.txt</span></code>.
+<li><p class="first">In the left column of the dialog under Build, the last entry should be Output.  Click on it.
+The output path entry should end with</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">examples</span><span class="p">/</span><span class="n">first_file</span>
+</pre></div>
+</div>
+<p>This is <em>not</em> the way Xamarin sets it up by default.
+Originally Output Path ended with</p>
+<div class="highlight-csharp"><div class="highlight"><pre>examples/first_file/bin/$(Configuration)
+</pre></div>
+</div>
+<p>This version has the extra <code class="docutils literal"><span class="pre">/bin/$(Configuration)</span></code>.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When you create a new project to
+use data files, make sure the  <code class="docutils literal"><span class="pre">/bin/$(Configuration)</span></code> is <em>removed</em>
+from the end of this Output Path field.</p>
+</div>
+<p>Now let us examine the files here.</p>
+<ol class="arabic simple">
+<li>In the dropdown menu for the <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/first_file">first_file</a> project, select
+&#8220;Open Containing Folder&#8221; on Windows
+or &#8220;Reveal in Finder&#8221; on a Mac.  In any event the selection opens the project folder
+in the operating system, showing all the files, not just the ones you see listed in
+Xamarin in the project.</li>
+<li>Look at the folder. You should <em>not</em> see a file <code class="file docutils literal"><span class="pre">sample.txt</span></code>.   Keep the folder handy.</li>
+<li>Now build (not run yet ) the first_file project.</li>
+<li>Look at the operating system folder again.  You should now see build products,
+<code class="file docutils literal"><span class="pre">first_file.exe</span></code>, the executable file, and <code class="file docutils literal"><span class="pre">first_file.exe.mdb</span></code>,
+extra debugging information if there are errors in execution.</li>
+<li>Now run the program.  This program does <em>not</em> produce output to the screen,
+so just close the execution window.</li>
+<li>The program did do something:  Look at the operating system folder again.
+Now you <em>should</em> see a file <code class="file docutils literal"><span class="pre">sample.txt</span></code>.
 This is a file created by the program you ran.</li>
 </ol>
 <p>Here is the program:</p>
@@ -352,14 +380,15 @@ This is a file created by the program you ran.</li>
 </div>
 <p id="index-1">Look at the code.  Note the extra namespace being used at the top.  You will
 always need to be using <code class="docutils literal"><span class="pre">System.IO</span></code> when working with files.  Here is a slightly
-different use of a dot, <code class="docutils literal"><span class="pre">.</span></code>, to indicate a subsidiary namespace.</p>
+different use of a dot, <code class="docutils literal"><span class="pre">.</span></code>, to indicate a <em>subsidiary</em> namespace.</p>
 <p>The first line of <code class="docutils literal"><span class="pre">Main</span></code> creates a <code class="docutils literal"><span class="pre">StreamWriter</span></code> object assigned to the
 variable  <code class="docutils literal"><span class="pre">writer</span></code>.  A <code class="docutils literal"><span class="pre">StreamWriter</span></code>
 links C# to your
 computer&#8217;s file system for writing, not reading.
 Files are objects, like a Random, and use the <code class="docutils literal"><span class="pre">new</span></code> syntax to create a new one.
 The parameter in the constructor
-gives the name of the file to connect to the program, <code class="docutils literal"><span class="pre">sample.txt</span></code>.</p>
+gives the name of the file to connect to the program, <code class="docutils literal"><span class="pre">sample.txt</span></code> - the same
+as the file name we saw created by the program.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">If the file already existed,  the old contents are
@@ -369,9 +398,8 @@ gives the name of the file to connect to the program, <code class="docutils lite
 any operating system directory separators in the name (<code class="docutils literal"><span class="pre">'\'</span></code> or <code class="docutils literal"><span class="pre">'/'</span></code>,
 depending on your operating system), then the file will lie in the
 <em>current directory</em>, discussed more shortly.  The Xamarin Studio default is for this
-current directory to be this Debug directory.  This will be inconvenient
-in many circumstances, and later in the chapter we will see how to minimize the
-issue.</p>
+current directory to be the bin/Debug subdirectory.  Our change to the output path
+converts it so the <em>current directory</em> is the main project folder.</p>
 <p>The second and third lines of <code class="docutils literal"><span class="pre">Main</span></code> write the specified strings to lines in the file.
 Note that the <code class="docutils literal"><span class="pre">StreamWriter</span></code> object <code class="docutils literal"><span class="pre">writer</span></code>, not <code class="docutils literal"><span class="pre">Console</span></code>,
 comes before the dot and <code class="docutils literal"><span class="pre">WriteLine</span></code>.
@@ -397,13 +425,6 @@ other programs.</p>
 to write a program where you have the code to add all the data you
 want to a file, but the program does not end up creating a file.
 Usually this means you forgot to close the file!</p>
-<p>As discussed above, Xamarin Studio places <code class="docutils literal"><span class="pre">sample.txt</span></code> in the
-<code class="file docutils literal"><span class="pre">Debug</span></code> sub-subfolder, a hard-to-guess place in the file system,
-that is <em>not</em> shown in the Solution pad, so do not look for it there!
-As you should have checked above, you <em>can</em> see it in an operating system file
-window.  Do drill down to the Debug folder if you have not already;
-open the <code class="docutils literal"><span class="pre">sample.txt</span></code> file with your favorite text processor.
-It should contain just what was written!</p>
 <p>If you were to run the program from the command line instead of from Xamarin Studio,
 the file would appear in the current directory.</p>
 <p id="index-2">Just as you can use a <a class="reference internal" href="../data/writeline-substitution.html#format-strings"><span>String Format Operation</span></a> with
@@ -426,7 +447,7 @@ the format string.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -306,7 +307,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="while-statements">
 <span id="index-0"></span><span id="id1"></span><h1>6.1. While-Statements<a class="headerlink" href="#while-statements" title="Permalink to this headline">¶</a></h1>
@@ -325,35 +326,29 @@ add a little ice. If you test again and it is still too hot, you
 would add ice again. <em>As long as</em> you tested and found it was true
 that your tea was too hot, you would go back and add more ice.
 C# has a similar syntax:</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">)</span></code></div>
 <div class="line-block">
 <div class="line">statement</div>
 </div>
 </div>
-</div></blockquote>
 <p>As with an <code class="docutils literal"><span class="pre">if</span></code> statement we will generally assume a compound statement,
 after the condition, so the syntax will actually be:</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">)</span> <span class="pre">{</span></code></div>
 <div class="line-block">
 <div class="line">statement(s)</div>
 </div>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 </div>
-</div></blockquote>
 <p>Setting up the English example as pseudocode in a similar format would be:</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line">while ( <em>your tea is too hot</em> ) {</div>
 <div class="line-block">
 <div class="line">add a chip of ice</div>
 </div>
 <div class="line">}</div>
 </div>
-</div></blockquote>
 <p id="index-1">To make things concrete and numerical, suppose the following: The
 tea starts at 115 degrees Fahrenheit. You want it at 112 degrees. A
 chip of ice turns out to lower the temperature one degree each
@@ -472,8 +467,7 @@ or otherwise out of numerical order.</p>
 thing you want each time through.  That generally involves
 the use of variables that are modified for each successive time through
 the loop.  Here is a general pattern:</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line">initialization</div>
 <div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>continuationCondition</em> <code class="docutils literal"><span class="pre">)</span> <span class="pre">{</span></code></div>
 <div class="line-block">
@@ -482,7 +476,6 @@ the loop.  Here is a general pattern:</p>
 </div>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 </div>
-</div></blockquote>
 <p>The simple first example follows this pattern directly.  Note
 that the variables needed for the test of the condition must be
 set up <em>both</em> in the initialization <em>and</em> inside the loop
@@ -619,8 +612,7 @@ We have seen that we can produce a regular sequence of numbers in a loop.
 The &#8220;Blastoff!&#8221; part does not fit the pattern, so it is logically a <em>separate</em>
 part after the loop.  We need a name for the number that decreases.  It can
 be <code class="docutils literal"><span class="pre">time</span></code>.  Remember the general rubric for a <code class="docutils literal"><span class="pre">while</span></code> loop:</p>
-<blockquote>
-<div><div class="line-block">
+<div class="line-block">
 <div class="line">initialization</div>
 <div class="line"><code class="docutils literal"><span class="pre">while</span> <span class="pre">(</span></code> <em>continuationCondition</em> <code class="docutils literal"><span class="pre">)</span> <span class="pre">{</span></code></div>
 <div class="line-block">
@@ -629,7 +621,6 @@ be <code class="docutils literal"><span class="pre">time</span></code>.  Remembe
 </div>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 </div>
-</div></blockquote>
 <p>You can consider each part separately.  Where to start is partly a
 matter of taste.</p>
 <p>The main thing to do is print the time over and over.
@@ -1057,7 +1048,7 @@ Knowing this in theory is not the same as remembering it in practice!</li>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>

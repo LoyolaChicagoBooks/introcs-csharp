@@ -25,21 +25,21 @@ would add ice again. *As long as* you tested and found it was true
 that your tea was too hot, you would go back and add more ice.
 C# has a similar syntax:
 
-    | ``while (`` *condition* ``)`` 
-    |   statement 
+| ``while (`` *condition* ``)`` 
+|   statement 
 
 As with an ``if`` statement we will generally assume a compound statement, 
 after the condition, so the syntax will actually be:
 
-    | ``while (`` *condition* ``) {`` 
-    |    statement(s)
-    | ``}``
+| ``while (`` *condition* ``) {`` 
+|    statement(s)
+| ``}``
 
 Setting up the English example as pseudocode in a similar format would be:
 
-    | while ( *your tea is too hot* ) { 
-    |     add a chip of ice 
-    | }
+| while ( *your tea is too hot* ) { 
+|     add a chip of ice 
+| }
 
 .. index:: playing computer; loop
 
@@ -119,11 +119,11 @@ thing you want each time through.  That generally involves
 the use of variables that are modified for each successive time through
 the loop.  Here is a general pattern:
 
-    | initialization
-    | ``while (`` *continuationCondition* ``) {`` 
-    |     do main action to be repeated 
-    |     prepare variables for the next time through the loop
-    | ``}``
+| initialization
+| ``while (`` *continuationCondition* ``) {`` 
+|     do main action to be repeated 
+|     prepare variables for the next time through the loop
+| ``}``
     
 The simple first example follows this pattern directly.  Note
 that the variables needed for the test of the condition must be
@@ -218,11 +218,11 @@ The "Blastoff!" part does not fit the pattern, so it is logically a *separate*
 part after the loop.  We need a name for the number that decreases.  It can
 be ``time``.  Remember the general rubric for a ``while`` loop:
 
-    | initialization
-    | ``while (`` *continuationCondition* ``) {`` 
-    |     do main action to be repeated 
-    |     prepare variables for the next time through the loop
-    | ``}``
+| initialization
+| ``while (`` *continuationCondition* ``) {`` 
+|     do main action to be repeated 
+|     prepare variables for the next time through the loop
+| ``}``
 
 You can consider each part separately.  Where to start is partly a 
 matter of taste.

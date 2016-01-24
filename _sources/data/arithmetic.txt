@@ -144,7 +144,7 @@ left to right in most cases, like for combinations of addition and subtraction:
    single: % remainder
    single: operator; /, %
    division
-   single: / division
+   single: / ; division
    single: . ; double literal
    double
    int

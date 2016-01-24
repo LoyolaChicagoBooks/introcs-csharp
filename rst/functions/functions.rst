@@ -17,6 +17,7 @@ Defining Functions of your Own
    staticvariables
    notusereturn
    libraryclass
+   traceback
    funcsummary
    reviewfunc
    

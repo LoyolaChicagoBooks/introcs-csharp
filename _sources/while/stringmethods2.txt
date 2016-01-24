@@ -115,9 +115,9 @@ that tests a function with the following heading::
 For example here is what ``CountRep( "Mississippi", target)`` 
 would return with various values for ``target``:
   
-      | ``"i"``: 4
-      | ``"is"``: 2
-      | ``"sss"``: 0
+| ``"i"``: 4
+| ``"is"``: 2
+| ``"sss"``: 0
 
 Assume each repetition is completely separate, so
 ``CountRep("Wheee!", "ee")`` returns 1.  The last

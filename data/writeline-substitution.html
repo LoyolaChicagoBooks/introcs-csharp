@@ -109,8 +109,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.11. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.12. Chapter Review Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
@@ -313,7 +314,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="substitutions-in-console-writeline">
 <span id="substitution-in-writeline"></span><h1>2.11. Substitutions in Console.WriteLine<a class="headerlink" href="#substitutions-in-console-writeline" title="Permalink to this headline">¶</a></h1>
@@ -444,6 +445,10 @@ the braces: <code class="docutils literal"><span class="pre">&quot;{{&quot;</spa
 <div class="highlight-none"><div class="highlight"><pre>The set is {2, 3}.
 </pre></div>
 </div>
+<p>Note:  Braces only get their special meaning if there are at least two
+parameters (forcing the first parameter to be a format string).
+If there is just a single parameter,
+braces are interpreted as regular characters.</p>
 <div class="section" id="format-reading-exercise">
 <h3>2.11.2.1. Format Reading Exercise<a class="headerlink" href="#format-reading-exercise" title="Permalink to this headline">¶</a></h3>
 <p>What is printed?</p>
@@ -507,7 +512,7 @@ use of the same name is more helpful than confusing.</p>
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 29-September-2015 00:47:02.<br/>
+      Last updated on 24-January-2016 03:36:04.<br/>
     </p>
   </div>
 </footer>
