@@ -133,6 +133,11 @@ produces
 
     The set is {2, 3}.
 
+Note:  Braces only get their special meaning if there are at least two
+parameters (forcing the first parameter to be a format string).
+If there is just a single parameter, 
+braces are interpreted as regular characters.
+
 Format Reading Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

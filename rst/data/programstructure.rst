@@ -10,16 +10,16 @@ We discuss the most basic syntax satisfied by all C# programs, which are plain t
 with names ending in ``.cs``.  There will be additions
 later, but any program you can run will include:
 
-    | ``using System;`` 
-    |
-    | ``class`` **ClassName** 
-    | ``{``
-    |    ``static void Main()``
-    |    ``{``
-    |          program statements go here....
-    |
-    |    ``}``
-    | ``}``
+| ``using System;`` 
+|
+| ``class`` **ClassName** 
+| ``{``
+|    ``static void Main()``
+|    ``{``
+|          program statements go here....
+|
+|    ``}``
+| ``}``
 
 By convention class names are capitalized.
 

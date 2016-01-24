@@ -7,25 +7,28 @@
 FIO Helper Class
 =================
 
-We have already discussed and used the ``UI`` class to aid keyboard input.
-Now we are going to develop an ``FIO`` class for our libraries.  The ``FIO`` class aids
-file input and output with Xamarin Studio, and illustrates a number of
-more generally useful ideas.
+This is an **optional** section.  It was much more important before we realized how 
+easily we much
+simplified file manipulating projects by changing the Output Path setting.
 
-You saw in the last section how we might refer to ``numbers.txt`` in different
-ways depending on the execution environment.  Our situation
-is based on the particular choices made by the creators of Xamarin Studio.
-More generally, there are many times when a program may need a file 
-that may be stored in one of several directories.
+Still there are a variety of situations where a program may want to access 
+resources in the file system, without know ahead of time exactly which folder contains
+the file resource.  The ``FIO`` library class that we display here illustrates how
+a program can search for the directory in which a file resides, given a list
+of folder options.  This section also illustrates use of methods from the ``Path`` and
+``File`` classes.
 
-Our ``FIO`` class will address this issue, and we will set up the
-parameters to work specifically with both Xamarin Studio and command line
-development.
+In this case we are specifically thinking of two possible uses of 
+program source files:  When executing, the project folder may
+be the current directory or, in the default setup for Xamarain, the current directory
+may be two folders down in :file:`bin/Debug`.
 
 We use one idea that is discussed more in the next chapter:  We need a sequence
 of directory strings to look through.  At this point we have only discussed
 sequences of individual characters.   The variable ``paths``  
-contains a sequence of directory paths to check.  In our case we make the
+contains a sequence of directory paths to check.  
+(More on the syntax comes up shortly in :ref:`array`.) 
+In our case we make the
 sequence contain
 ``"."``, the current directory, ``".."``, the parent directory, and
 ``Path.Combine("..", "..")``, the parent's parent.  
@@ -64,8 +67,8 @@ directory containing the file.  Here is the heading:
 
 This is useful in case you want to later write into the same directory 
 that you read from.  You can get a location from ``GetLocation`` and then
-write to the same directory, creating a ``StreamWriter``. Use the convenience
-function:
+write to the same directory, creating a ``StreamWriter``. 
+You can use the convenience function:
 
 .. literalinclude:: ../../source/examples/fio/fio.cs
    :start-after: OpenWriter chunk
@@ -80,7 +83,7 @@ We illustrate the use of ``FIO`` functions in example file
 
 .. literalinclude:: ../../source/examples/fio_usage/fio_usage.cs
 
-IF you look at the fio_usage project in our examples solution, you see that
+If you look at the fio_usage project in our examples solution, you see that
 ``sample.txt`` is a file in the project folder.  The program
 ends up writing to a new file in the same (project) directory.  Remember that even
 though the new file :file:`output.txt`
@@ -88,28 +91,7 @@ appears in the project directory, it does not appear in the
 Solution pad unless you add it to the project.  You can see it in the file system, 
 and open it if you like.
 
-If you want to open a terminal/console and go to the project directory, you can compile
-and run this program, and it will still work, even though the current directory
-has changed.
-
-You are encouraged to make a library project fio in *your* work solution, copying
-the fio.cs file. (Follow instruction like for ui in 
-:ref:`library-projects-in-xamarinstudio`.)  You can test your new library by also 
-copying the fio_test project to your solution. 
-If you do this now and stick to one work solution, then you will be ready for 
-several later uses of ``FIO``.
-
-File Line Removal Exercise
-------------------------------
-
-Complete the function described below, and make a Main program and
-sample file to test it::
-
-    /// Take all lines from reader that do not start with startToRemove
-    /// and copy them to writer.
-    static void FileLineRemoval(StreamReader reader, StreamWriter writer
-                                char startToRemove)
-    
-For example, in Unix/Mac scripts lines starting with ``'#'`` are
-comment lines.  Making ``startToRemove`` be ``'#'`` would write only non-comment lines
-to the writer.
+This project was created with the default set up:  Output path 
+two folders down.  If you change to Output path to the main project folder, 
+it should still work.  If you open a terminal/console and go to the project directory, you can compile
+and run this program, and it will also work.  

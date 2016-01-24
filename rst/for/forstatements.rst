@@ -24,17 +24,17 @@ is exactly equivalent to this code similar to part of
 
 More generally:
 
-   | ``for (`` *initialization* ``;`` *condition* ; *update* ``)`` {
-   |    statement(s)
-   | ``}``
+| ``for (`` *initialization* ``;`` *condition* ; *update* ``)`` {
+|    statement(s)
+| ``}``
    
 translates to
 
-   | *initialization* ``;`` 
-   | ``while (`` *condition* ``)`` {
-   |    statement(s)
-   |    *update* ``;``
-   | ``}``
+| *initialization* ``;`` 
+| ``while (`` *condition* ``)`` {
+|    statement(s)
+|    *update* ``;``
+| ``}``
 
 In the example above, *initialization* is ``i=2``, *condition* is ``i <= n``,
 and *update* is ``i++``.

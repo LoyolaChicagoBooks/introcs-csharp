@@ -64,10 +64,10 @@ and then parentheses.
 A more general syntax for functions that just *do*
 something is
 
-    | ``static void`` **FunctionName**\ ``()``
-    | ``{``
-    |    statements in the function body...
-    | ``}``
+| ``static void`` **FunctionName**\ ``()``
+| ``{``
+|    statements in the function body...
+| ``}``
        
 Recall the conventions in :ref:`Syntax-Template-Typography`.
 

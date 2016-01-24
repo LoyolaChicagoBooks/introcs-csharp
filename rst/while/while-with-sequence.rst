@@ -310,8 +310,8 @@ work.  Still, this code can be improved:
 
 Examine the ``if`` statement more closely:
 
-    | if the condition is  ``true``, ``allDigitsSoFar`` is ``true``; 
-    | if the condition is ``false``, ``allDigitsSoFar`` is ``false``; 
+| if the condition is  ``true``, ``allDigitsSoFar`` is ``true``; 
+| if the condition is ``false``, ``allDigitsSoFar`` is ``false``; 
 
 See the symmetry: the value assigned to ``allDigitsSoFar`` is always
 the *value of the condition*.

@@ -72,19 +72,19 @@ See :ref:`gradeEx`.
 
 As in a basic |if-else| statement, in the general format,
 
-   | ``if (`` *condition1* ``) {``
-   |      statement-block-run-if-condition1-is-true;       
-   | ``}``  
-   | ``else if (`` *condition2* ``) {``
-   |      statement-block-run-if-condition2-is-the-first-true;       
-   | ``}``  
-   | ``else if (`` *condition3* ``) {``
-   |      statement-block-run-if-condition3-is-the-first-true;       
-   | ``}`` 
-   | // ...
-   | ``else {    //`` *no condition!* 
-   |      statement-block-run-if-no condition-is-true;       
-   | ``}`` 
+| ``if (`` *condition1* ``) {``
+|      statement-block-run-if-condition1-is-true;       
+| ``}``  
+| ``else if (`` *condition2* ``) {``
+|      statement-block-run-if-condition2-is-the-first-true;       
+| ``}``  
+| ``else if (`` *condition3* ``) {``
+|      statement-block-run-if-condition3-is-the-first-true;       
+| ``}`` 
+| // ...
+| ``else {    //`` *no condition!* 
+|      statement-block-run-if-no condition-is-true;       
+| ``}`` 
     
 *exactly one* of the statement blocks gets executed:
 If some condition is true,

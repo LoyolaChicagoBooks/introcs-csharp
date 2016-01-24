@@ -30,8 +30,8 @@ An ``if`` statement only breaks the  normal sequential order
 
 The general C# syntax for a simple ``if`` statement is
 
-    | ``if (`` *condition* ``)`` 
-    |     statement  
+| ``if (`` *condition* ``)`` 
+|     statement  
 
 The condition is an expression that is true or false, of :ref:`type-boolean`.  
 
@@ -46,9 +46,9 @@ what they do technically, syntactically:  braces around
 a group of statements technically makes a single 
 *compound statement*.  So the pattern commonly written is:
 
-    | ``if (`` *condition* ``) {`` 
-    |       one or more statements  
-    | ``}``
+| ``if (`` *condition* ``) {`` 
+|       one or more statements  
+| ``}``
 
 If the condition is true, then do the statement(s) in braces. If the
 condition is not true, then skip the statements in braces.  The
