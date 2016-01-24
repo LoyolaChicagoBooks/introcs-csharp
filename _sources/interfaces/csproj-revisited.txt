@@ -124,6 +124,10 @@ See how the Game class is simplified, too.
 
 Talking about adding commands - these classes could be the basis of a game project for
 a small group.  Have any ideas?  See :ref:`group-project`.
+Note that there is a data file in the project directory.  
+Make sure your project, 
+like this stub, sets the Output Path to the project folder.
+
 
 There are further examples of defining and using Interfaces
 in the starting code for the exercises at the end of the next section.

@@ -12,7 +12,12 @@ Goals for this lab:
 Overview
 ~~~~~~~~~~
 
-Copy project :repsrc:`dict_lab_stub` to your own project.
+Copy project :repsrc:`dict_lab_stub` to your own project.  
+Note that there are data files in the project directory.  
+Make sure your project, 
+like this stub, sets the Output Path to the project folder.
+
+
 
 This lab provides a replacement file 
 :repsrc:`fake_help.cs <dict_lab_stub/fake_help.cs>` for an improved

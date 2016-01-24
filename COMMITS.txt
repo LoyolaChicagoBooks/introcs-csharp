@@ -1,3 +1,9 @@
+commit e5feafbe062e7a5f331af966d0d3ec5ce1d68dab
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Sun Jan 24 09:34:47 2016 -0600
+
+     dump fio in rest of book
+
 commit 5e8c7c0a3c3e69133f17a6c886b4d780fdac958f
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sat Jan 23 22:20:56 2016 -0600
@@ -21,9 +27,3 @@ Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Mon Sep 28 19:45:11 2015 -0500
 
     clarify last name first input in string lab
-
-commit 926d4982490c33a8eb9285186c7596456dadc3b2
-Author: Andrew Harrington <aharrin@luc.edu>
-Date:   Sun Sep 6 21:34:34 2015 -0500
-
-    student-found typo and Xamarin library fix

@@ -81,10 +81,6 @@ Requirements
    but it could be something else.  The folder also contains sample data files
    for a course abbreviation comp150.
    
-   Note that these data files are not in the Xamarin Studio execution directory, but
-   in the project directory, so the :ref:`fio` is useful to provide
-   flexibility in reading the data files.
-
 #. There are two master files for any course. 
    One is "categories\_" + the course abbreviation
    + ".txt".  For example, ``categories_comp170.txt`` is a sample data file
