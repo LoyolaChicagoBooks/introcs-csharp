@@ -1,3 +1,9 @@
+commit 4d5a1ebe0e9d70fe83f613345cfd2886caf8e9a0
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Sat Jan 23 21:55:16 2016 -0600
+
+    traceback typos
+
 commit e6295c1aad9b5b7f3e7f045f574f00987fd07502
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sat Jan 23 21:34:16 2016 -0600
@@ -21,11 +27,3 @@ Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sun Aug 23 21:33:15 2015 -0500
 
     Xamarin updates through programstructure
-
-commit d3edcc1a875379e2c115d62c5c82d7bf0d2eebc0
-Author: George K. Thiruvathukal <gkt@cs.luc.edu>
-Date:   Sun Aug 16 23:24:46 2015 -0400
-
-    formatting fixes in arrays chapter
-    
-    Signed-off-by: George K. Thiruvathukal <gkt@cs.luc.edu>

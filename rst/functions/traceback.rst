@@ -30,11 +30,11 @@ There are several very long lines.  I have added numbers to reference different 
 #. Unhandled Exception:
 #. System.DivideByZeroException: Attempted to divide by zero.
 #. at IntroCS.Traceback.Remainder (Int32 n, Int32 m) [0x0000b] in 
-   *pathToMySolution*/examples/traceback/traceback.cs:26 
+   *pathToSolution*/examples/traceback/traceback.cs:26 
 #. at IntroCS.Traceback.DoRemainder () [0x00019] in 
-   *pathToMySolution*/examples/traceback/traceback.cs:19 
+   *pathToSolution*/examples/traceback/traceback.cs:19 
 #. at IntroCS.Traceback.Main () [0x00006] in 
-   *pathToMySolution*/examples/traceback/traceback.cs:10 
+   *pathToSolution*/examples/traceback/traceback.cs:10 
 #. [ERROR] ... 
 
 
@@ -54,7 +54,7 @@ Let us look at this a line at a time:
    There can be multiple source files coming from multiple places, 
    so it also includes the full path name to the sourcefile - quite a mouthful on my
    computer, so I left out the full path to my Xamarin solution, calling it
-   *pathToMySolution*. Do not let
+   *pathToSolution*. Do not let
    your eyes glaze over yet, because at the 
    very end comes the most important information: ":26".  The error
    was triggered in line **26**.  No surprise here: 
@@ -65,7 +65,7 @@ Let us look at this a line at a time:
    The function could be called from many places.  The remaining "at ..." lines give the whole
    *chain* of function calls in reverse time order, all the way up to the outer call, in ``Main``.  
    See the ":19" at the end of this long line:  
-   Check that the call to Remainder did come from line 19 in ``DoRemainder``.
+   Check that the call to ``Remainder`` did come from line 19 in ``DoRemainder``.
 #. There could be more intermediate function calls in general.  In this case, however, 
    we have come to the last "at ..." line shows the call from ``Main``.  We made the first call to
    ``DoRemainder`` so it had non-zero parameters and worked fine, and the problem came in the
@@ -76,7 +76,7 @@ chain of functions in which the error appeared by look at the line numbers after
 of the long "at ..." lines.
 
 In this case, we passed bad data to a function in the program source.  
-Now let us look at what happens in we pass bad data to a C# library function:
+Now let us look at what happens if we pass bad data to a C# library function:
 
 Run the program again giving non-zero integers twice, to successfully pass the DoRemainder calls.
 
@@ -84,7 +84,7 @@ The next prompt is for a string.  Enter a short word like "hi".  You should see 
 hi" and then "hihi".  This looks like a silly but simple sequence showing any string twice.
 
 Not so fast.  The DoSTwice function gets called again, asking for another string.  
-Try the *exact* string "set {5}".  All hell breaks loose in a torrent!  The traceback output is way longer.
+Try the *exact* string "set {5}".  What a torrent!  The traceback output is way longer.
 We will cut out some again, number lines, and explain:
 
 #. Unhandled Exception:
@@ -97,10 +97,10 @@ We will cut out some again, number lines, and explain:
 #. at (wrapper synchronized) System.IO.TextWriter ...
 #. at System.Console.WriteLine ... 
 #. at IntroCS.Traceback.ShowTwice (System.String s) [0x00001] in 
-   *pathToMySolution*/examples/traceback/traceback.cs:38 
+   *pathToSolution*/examples/traceback/traceback.cs:38 
 #. at IntroCS.Traceback.DoSTwice () [0x0000d] in 
-   *pathToMySolution*/examples/traceback/traceback.cs:33 
-#. at IntroCS.Traceback.Main () [0x00006] in *pathToMySolution*/examples/traceback/traceback.cs:10 
+   *pathToSolution*/examples/traceback/traceback.cs:33 
+#. at IntroCS.Traceback.Main () [0x00006] in *pathToSolution*/examples/traceback/traceback.cs:10 
 
 Discussion:
 
@@ -113,16 +113,19 @@ Discussion:
 * The System call closest to the class inside the program is at #8:  ``WriteLine`` - certainly used,
   and does involve formatting.
 * The functions actually in the program are in #9-11.  The innermost call is in #9 ``ShowTwice``.  
-  Now it makes sense to look at the line numbers: 38 - that is the more complcated call to ``WriteLine``.
-* You can follow the calls up:  ``ShowTwice`` called from line 33 in ``DoSTwice``.
-* The outermost call is from ``Main``.  We cannot explain the line number here for sure.  
+  Now it makes sense to look at the program line numbers: 
+  38 - that is the more complcated call to ``WriteLine``.
+* You can follow the calls up:  ``ShowTwice`` called from program line 33 in ``DoSTwice``.
+* The outermost call is from ``Main``.  We cannot explain the line number here (10) for sure.  
   It is either from a bug in Xamarin 
   or it may be that the compiler does some optimization that messes up line numbers slightly - be warned, this does happen.
 
-So to understand, we need to look at the data actually passed to Console.WriteLine in program line 38.
-If you used the data that I gave, ``s`` is ``"set {5}"``  and the expressions in the parameters evaluate to
+So to understand, we need to look at the data actually passed to ``Console.WriteLine`` in program line 38.
+If you used the data that I gave, ``s`` is ``"set {5}"``  
+and the expressions in the two string parameters evaluate 
+so the statement is in effect
 ``Console.WriteLine("string: set {5} \nTwice: {0}", "set {5}set{5}")``.  If you now look back at the description of the error, it talks about a bad index, and you see that the ``"{5}"`` embedded in the
-*format string* is interpreted to be looking for a parameter with index 5, and there is none.
+*format string*, so it is interpreted to be looking for a parameter with index 5, and there is none.  
 
 This particular example is a cautionary tale about
 embedding an arbitrary string in a format string.  Format strings actually form an embedded language
@@ -132,7 +135,9 @@ It turns out that there are major security issues with such embeddings in other 
 embedding unfiltered user text in SQL queries is a major source of network intrusion.  This is still true after many years, though the exploit,
 *SQL injection*, is well known! 
 
-Line numbers are not tremendous help if the error line has a very involved calculation.  If you find an error on such a line, it pays to split it up and have a number of separate assignment statements (on different lines), and then see what part triggers the error.
+Line numbers are not tremendous helpful if the error line has a very involved calculation, and you do
+not know what part is messed up.  If you find that there is an error on such a line, it pays to split 
+the statement up and have a number of separate assignment statements (on different lines), and then see what part triggers the error.
 
 .. index:: debugging; print statements
 

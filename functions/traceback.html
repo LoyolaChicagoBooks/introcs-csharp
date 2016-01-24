@@ -376,11 +376,11 @@ There are several very long lines.  I have added numbers to reference different 
 <li>Unhandled Exception:</li>
 <li>System.DivideByZeroException: Attempted to divide by zero.</li>
 <li>at IntroCS.Traceback.Remainder (Int32 n, Int32 m) [0x0000b] in
-<em>pathToMySolution</em>/examples/traceback/traceback.cs:26</li>
+<em>pathToSolution</em>/examples/traceback/traceback.cs:26</li>
 <li>at IntroCS.Traceback.DoRemainder () [0x00019] in
-<em>pathToMySolution</em>/examples/traceback/traceback.cs:19</li>
+<em>pathToSolution</em>/examples/traceback/traceback.cs:19</li>
 <li>at IntroCS.Traceback.Main () [0x00006] in
-<em>pathToMySolution</em>/examples/traceback/traceback.cs:10</li>
+<em>pathToSolution</em>/examples/traceback/traceback.cs:10</li>
 <li>[ERROR] ...</li>
 </ol>
 <p>Unhelpfully it repeats about the same data twice, so I chopped off the part after &#8220;[ERROR]&#8221;.</p>
@@ -398,7 +398,7 @@ in which the error occured.
 There can be multiple source files coming from multiple places,
 so it also includes the full path name to the sourcefile - quite a mouthful on my
 computer, so I left out the full path to my Xamarin solution, calling it
-<em>pathToMySolution</em>. Do not let
+<em>pathToSolution</em>. Do not let
 your eyes glaze over yet, because at the
 very end comes the most important information: &#8221;:26&#8221;.  The error
 was triggered in line <strong>26</strong>.  No surprise here:
@@ -409,7 +409,7 @@ the last line of the <code class="docutils literal"><span class="pre">Remainder<
 The function could be called from many places.  The remaining &#8220;at ...&#8221; lines give the whole
 <em>chain</em> of function calls in reverse time order, all the way up to the outer call, in <code class="docutils literal"><span class="pre">Main</span></code>.
 See the &#8221;:19&#8221; at the end of this long line:
-Check that the call to Remainder did come from line 19 in <code class="docutils literal"><span class="pre">DoRemainder</span></code>.</li>
+Check that the call to <code class="docutils literal"><span class="pre">Remainder</span></code> did come from line 19 in <code class="docutils literal"><span class="pre">DoRemainder</span></code>.</li>
 <li>There could be more intermediate function calls in general.  In this case, however,
 we have come to the last &#8220;at ...&#8221; line shows the call from <code class="docutils literal"><span class="pre">Main</span></code>.  We made the first call to
 <code class="docutils literal"><span class="pre">DoRemainder</span></code> so it had non-zero parameters and worked fine, and the problem came in the
@@ -419,12 +419,12 @@ second call, from what line? 10.</li>
 chain of functions in which the error appeared by look at the line numbers after the colons at the <em>ends</em>
 of the long &#8220;at ...&#8221; lines.</p>
 <p>In this case, we passed bad data to a function in the program source.
-Now let us look at what happens in we pass bad data to a C# library function:</p>
+Now let us look at what happens if we pass bad data to a C# library function:</p>
 <p>Run the program again giving non-zero integers twice, to successfully pass the DoRemainder calls.</p>
 <p>The next prompt is for a string.  Enter a short word like &#8220;hi&#8221;.  You should see output with
 hi&#8221; and then &#8220;hihi&#8221;.  This looks like a silly but simple sequence showing any string twice.</p>
 <p>Not so fast.  The DoSTwice function gets called again, asking for another string.
-Try the <em>exact</em> string &#8220;set {5}&#8221;.  All hell breaks loose in a torrent!  The traceback output is way longer.
+Try the <em>exact</em> string &#8220;set {5}&#8221;.  What a torrent!  The traceback output is way longer.
 We will cut out some again, number lines, and explain:</p>
 <ol class="arabic simple">
 <li>Unhandled Exception:</li>
@@ -437,10 +437,10 @@ and less than the size of the argument list.</li>
 <li>at (wrapper synchronized) System.IO.TextWriter ...</li>
 <li>at System.Console.WriteLine ...</li>
 <li>at IntroCS.Traceback.ShowTwice (System.String s) [0x00001] in
-<em>pathToMySolution</em>/examples/traceback/traceback.cs:38</li>
+<em>pathToSolution</em>/examples/traceback/traceback.cs:38</li>
 <li>at IntroCS.Traceback.DoSTwice () [0x0000d] in
-<em>pathToMySolution</em>/examples/traceback/traceback.cs:33</li>
-<li>at IntroCS.Traceback.Main () [0x00006] in <em>pathToMySolution</em>/examples/traceback/traceback.cs:10</li>
+<em>pathToSolution</em>/examples/traceback/traceback.cs:33</li>
+<li>at IntroCS.Traceback.Main () [0x00006] in <em>pathToSolution</em>/examples/traceback/traceback.cs:10</li>
 </ol>
 <p>Discussion:</p>
 <ul class="simple">
@@ -453,23 +453,28 @@ actually triggering the Exception!</li>
 <li>The System call closest to the class inside the program is at #8:  <code class="docutils literal"><span class="pre">WriteLine</span></code> - certainly used,
 and does involve formatting.</li>
 <li>The functions actually in the program are in #9-11.  The innermost call is in #9 <code class="docutils literal"><span class="pre">ShowTwice</span></code>.
-Now it makes sense to look at the line numbers: 38 - that is the more complcated call to <code class="docutils literal"><span class="pre">WriteLine</span></code>.</li>
-<li>You can follow the calls up:  <code class="docutils literal"><span class="pre">ShowTwice</span></code> called from line 33 in <code class="docutils literal"><span class="pre">DoSTwice</span></code>.</li>
-<li>The outermost call is from <code class="docutils literal"><span class="pre">Main</span></code>.  We cannot explain the line number here for sure.
+Now it makes sense to look at the program line numbers:
+38 - that is the more complcated call to <code class="docutils literal"><span class="pre">WriteLine</span></code>.</li>
+<li>You can follow the calls up:  <code class="docutils literal"><span class="pre">ShowTwice</span></code> called from program line 33 in <code class="docutils literal"><span class="pre">DoSTwice</span></code>.</li>
+<li>The outermost call is from <code class="docutils literal"><span class="pre">Main</span></code>.  We cannot explain the line number here (10) for sure.
 It is either from a bug in Xamarin
 or it may be that the compiler does some optimization that messes up line numbers slightly - be warned, this does happen.</li>
 </ul>
-<p>So to understand, we need to look at the data actually passed to Console.WriteLine in program line 38.
-If you used the data that I gave, <code class="docutils literal"><span class="pre">s</span></code> is <code class="docutils literal"><span class="pre">&quot;set</span> <span class="pre">{5}&quot;</span></code>  and the expressions in the parameters evaluate to
+<p>So to understand, we need to look at the data actually passed to <code class="docutils literal"><span class="pre">Console.WriteLine</span></code> in program line 38.
+If you used the data that I gave, <code class="docutils literal"><span class="pre">s</span></code> is <code class="docutils literal"><span class="pre">&quot;set</span> <span class="pre">{5}&quot;</span></code>
+and the expressions in the two string parameters evaluate
+so the statement is in effect
 <code class="docutils literal"><span class="pre">Console.WriteLine(&quot;string:</span> <span class="pre">set</span> <span class="pre">{5}</span> <span class="pre">\nTwice:</span> <span class="pre">{0}&quot;,</span> <span class="pre">&quot;set</span> <span class="pre">{5}set{5}&quot;)</span></code>.  If you now look back at the description of the error, it talks about a bad index, and you see that the <code class="docutils literal"><span class="pre">&quot;{5}&quot;</span></code> embedded in the
-<em>format string</em> is interpreted to be looking for a parameter with index 5, and there is none.</p>
+<em>format string</em>, so it is interpreted to be looking for a parameter with index 5, and there is none.</p>
 <p>This particular example is a cautionary tale about
 embedding an arbitrary string in a format string.  Format strings actually form an embedded language
 inside of C#, which is interpreted at runtime, not compile time.</p>
 <p>It turns out that there are major security issues with such embeddings in other circumstances.  For example
 embedding unfiltered user text in SQL queries is a major source of network intrusion.  This is still true after many years, though the exploit,
 <em>SQL injection</em>, is well known!</p>
-<p>Line numbers are not tremendous help if the error line has a very involved calculation.  If you find an error on such a line, it pays to split it up and have a number of separate assignment statements (on different lines), and then see what part triggers the error.</p>
+<p>Line numbers are not tremendous helpful if the error line has a very involved calculation, and you do
+not know what part is messed up.  If you find that there is an error on such a line, it pays to split
+the statement up and have a number of separate assignment statements (on different lines), and then see what part triggers the error.</p>
 <div class="section" id="other-debugging">
 <span id="index-1"></span><h2>3.11.1. Other Debugging<a class="headerlink" href="#other-debugging" title="Permalink to this headline">¶</a></h2>
 <p>Though we did use the error traceback for finding errors in <code class="docutils literal"><span class="pre">traceback.cs</span></code>, we also threw in
@@ -504,7 +509,7 @@ Look carefully at the error traceback, and make sure you thoroughly understand i
     </p>
     <p>
         &copy; Copyright 2015, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 24-January-2016 03:36:04.<br/>
+      Last updated on 24-January-2016 03:56:31.<br/>
     </p>
   </div>
 </footer>
