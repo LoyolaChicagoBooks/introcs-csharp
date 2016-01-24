@@ -1,3 +1,9 @@
+commit 5e8c7c0a3c3e69133f17a6c886b4d780fdac958f
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Sat Jan 23 22:20:56 2016 -0600
+
+    traceback typos, year
+
 commit 4d5a1ebe0e9d70fe83f613345cfd2886caf8e9a0
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sat Jan 23 21:55:16 2016 -0600
@@ -21,9 +27,3 @@ Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sun Sep 6 21:34:34 2015 -0500
 
     student-found typo and Xamarin library fix
-
-commit 9cdf70aa76daab436b97dead9bcd942ed3dfb02c
-Author: Andrew Harrington <aharrin@luc.edu>
-Date:   Sun Aug 23 21:33:15 2015 -0500
-
-    Xamarin updates through programstructure

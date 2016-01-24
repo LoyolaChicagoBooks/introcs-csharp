@@ -80,7 +80,7 @@ uses the library class UIF.  Continue with the same terminal/console window:
        cd ../addition3
        mcs addition3.cs
        
-    to get to the addiiton3 project foilder, and attempt to compile its program.
+    to get to the addition3 project folder, and attempt to compile its program.
     You should get an error about missing the UIF class. The mcs program
     does not know about the information Xamarin Studio keeps in its references.
 #.  Extend the command to also give the location of the library file:
