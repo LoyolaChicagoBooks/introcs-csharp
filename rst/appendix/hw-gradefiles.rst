@@ -81,6 +81,9 @@ Requirements
    but it could be something else.  The folder also contains sample data files
    for a course abbreviation comp150.
    
+   Note that these data files are in the project directory.  Make sure your project, 
+   like this stub, sets the Output Path to the project folder.
+
 #. There are two master files for any course. 
    One is "categories\_" + the course abbreviation
    + ".txt".  For example, ``categories_comp170.txt`` is a sample data file
