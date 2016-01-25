@@ -1,3 +1,9 @@
+commit c7647a1db1d659ff1f26455d606dbad95bdc4bdc
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Sun Jan 24 18:49:16 2016 -0600
+
+    forgot to save changes for one hw
+
 commit e5feafbe062e7a5f331af966d0d3ec5ce1d68dab
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sun Jan 24 09:34:47 2016 -0600
@@ -21,9 +27,3 @@ Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sat Jan 23 21:34:16 2016 -0600
 
     redid files ch, mostly dumping bin/Debug; also traceback section at end of functions
-
-commit c33163be6779c3feab64e3b56f853e94479531d0
-Author: Andrew Harrington <aharrin@luc.edu>
-Date:   Mon Sep 28 19:45:11 2015 -0500
-
-    clarify last name first input in string lab
