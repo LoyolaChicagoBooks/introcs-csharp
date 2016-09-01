@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3.7. Local Scope &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>3.7. Local Scope &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="3. Defining Functions of your Own" href="functions.html" />
     <link rel="next" title="3.8. Static Variables" href="staticvariables.html" />
@@ -105,7 +107,7 @@
 <li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3.7. Local Scope</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.7. Local Scope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
@@ -326,7 +328,7 @@ independent. This avoids lots of errors!</p>
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/bad_scope/bad_scope.cs">bad_scope/bad_scope.cs</a> causes a compilation error
 if the last line is uncommented.
 Read it, uncomment the line, and try to run it, and see:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">BadScope</span>
 <span class="p">{</span>
@@ -353,7 +355,7 @@ We will fix this error below.</p>
 <p>If you do want local data from one function to go to another,
 define the called function so it includes parameters! Read and
 compare and try the program <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/good_scope/good_scope.cs">good_scope/good_scope.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">GoodScope</span>
 <span class="p">{</span>
@@ -374,7 +376,7 @@ compare and try the program <a class="reference external" href="https://github.c
 <code class="docutils literal"><span class="pre">F</span></code> does not need to match the name of the actual parameter in
 the calling function <code class="docutils literal"><span class="pre">Main</span></code>. (Just the <code class="docutils literal"><span class="pre">int</span></code> value is passed.)
 The definition of <code class="docutils literal"><span class="pre">F</span></code> could just as well have been:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">F</span><span class="p">(</span><span class="kt">int</span> <span class="n">whatever</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">F</span><span class="p">(</span><span class="kt">int</span> <span class="n">whatever</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">whatever</span><span class="p">);</span>
 <span class="p">}</span>
@@ -406,7 +408,7 @@ the function where it is declared.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

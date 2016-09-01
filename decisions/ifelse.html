@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5.3. if-else Statements &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>5.3. if-else Statements &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="5. Decisions" href="decisions.html" />
     <link rel="next" title="5.4. More Conditional Expressions" href="comparisonops.html" />
@@ -125,7 +127,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="decisions.html">5. Decisions</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
@@ -322,7 +324,7 @@ depending on the input. The main code of <a class="reference external" href="htt
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">double</span> <span class="n">temperature</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;What is the temperature? &quot;</span><span class="p">);</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">temperature</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;What is the temperature? &quot;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">temperature</span> <span class="p">&gt;</span> <span class="m">70</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Wear shorts.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -378,15 +380,15 @@ can be any kind of statement.  This is the suggested form, but
 as with the plain <code class="docutils literal"><span class="pre">if</span></code> statement, the if-true compound statement or
 the if-false compound statement can be replace by a single statement
 without braces, except in one otherwise ambiguous situation later,
-<a class="reference internal" href="ifpitfalls.html#match-wrong-if"><span>Match Wrong if With else</span></a>.</p>
+<a class="reference internal" href="ifpitfalls.html#match-wrong-if"><span class="std std-ref">Match Wrong if With else</span></a>.</p>
 <span class="target" id="compound-statement-scope"></span><div class="section" id="scope-with-compound-statements">
 <span id="index-1"></span><h2>5.3.1. Scope With Compound Statements<a class="headerlink" href="#scope-with-compound-statements" title="Permalink to this headline">¶</a></h2>
-<p>The section <a class="reference internal" href="../functions/localscope.html#local-scope"><span>Local Scope</span></a> referred to function  bodies,
+<p>The section <a class="reference internal" href="../functions/localscope.html#local-scope"><span class="std std-ref">Local Scope</span></a> referred to function  bodies,
 which happen to be enclosed in braces, making the function body a <em>compound statement</em>.
 In fact variables declared inside <em>any</em> compound statement have their scope restricted
 to <em>inside</em> that compound statement.</p>
 <p>As a result the following code makes no sense:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">BadBlockScope</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">BadBlockScope</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
       <span class="kt">int</span> <span class="n">val</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
@@ -412,7 +414,7 @@ declared before the compound statements that are parts of the
 <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statement.   A local variable in a function declared before a nested compound
 statement is still visible (in scope) <em>inside</em>  that compound statement.
 The following would work:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
@@ -440,7 +442,7 @@ The two <code class="docutils literal"><span class="pre">if</span></code> statem
  9
 10
 11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope2</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">OkScope2</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="c1">// without the = 0: Unassigned local variable error</span>
    <span class="kt">int</span> <span class="n">val</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -494,7 +496,7 @@ execution of the code fragment proceed differently.  What would happen in
 each case?  (Assume we have access to the class UIF.)</p>
 <ol class="loweralpha">
 <li><p class="first">Consider:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">v</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="s">&quot;Enter a word: &quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">v</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="s">&quot;Enter a word: &quot;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">3</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">v</span> <span class="p">=</span> <span class="n">v</span> <span class="p">+</span> <span class="n">v</span><span class="p">;</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Now we have &quot;</span> <span class="p">+</span> <span class="n">v</span><span class="p">);</span>
@@ -506,7 +508,7 @@ each case?  (Assume we have access to the class UIF.)</p>
 </div>
 </li>
 <li><p class="first">Consider:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Enter a integer: &quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Enter a integer: &quot;</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;The magnitude of &quot;</span> <span class="p">+</span> <span class="n">x</span> <span class="p">+</span> <span class="s">&quot; is &quot;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(-</span><span class="n">x</span><span class="p">);</span>
@@ -534,7 +536,7 @@ each case?  (Assume we have access to the class UIF.)</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

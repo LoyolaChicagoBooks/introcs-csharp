@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>13.2. Class Instance Examples &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>13.2. Class Instance Examples &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="13. Classes and Object-Oriented Programming" href="classes.html" />
     <link rel="next" title="13.3. The Rational Class" href="rational.html" />
@@ -201,7 +203,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">13.2. Class Instance Examples</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">13.2. Class Instance Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
@@ -337,7 +339,7 @@
 <p>Compare yours to
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/example_class/example_class.cs">example_class/example_class.cs</a>.</p>
 <p>We include a testing class at the end of this file.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ExampleTest</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExampleTest</span>
 <span class="p">{</span>
    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
    <span class="p">{</span>
@@ -371,7 +373,7 @@
 </pre></div>
 </div>
 <p>Besides the obvious tests, we also use
-the fact that an Example object is mutable to play with  <a class="reference internal" href="../arrays/onedim.html#alias"><span>References and Aliases</span></a>:
+the fact that an Example object is mutable to play with  <a class="reference internal" href="../arrays/onedim.html#alias"><span class="std std-ref">References and Aliases</span></a>:
 In the
 last few lines of <code class="docutils literal"><span class="pre">Main</span></code>, after <code class="docutils literal"><span class="pre">e</span></code> becomes an alias for <code class="docutils literal"><span class="pre">e2</span></code>,
 we change
@@ -408,7 +410,7 @@ it label the number of data items and the average of the items.</li>
 state (no data) so we do not need any constructor parameters.</p>
 <p>We can imagine a demonstration class <code class="docutils literal"><span class="pre">AveragerDemo</span></code> with a <code class="docutils literal"><span class="pre">Main</span></code> method
 containing</p>
-<div class="highlight-csharp"><div class="highlight"><pre>         <span class="n">Averager</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Averager</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>         <span class="n">Averager</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Averager</span><span class="p">();</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;New Averager: &quot;</span> <span class="p">+</span> <span class="n">a</span><span class="p">);</span>
          <span class="k">foreach</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x</span> <span class="k">in</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span><span class="m">5.1</span><span class="p">,</span> <span class="p">-</span><span class="m">7.3</span><span class="p">,</span> <span class="m">11.0</span><span class="p">,</span> <span class="m">3.7</span><span class="p">})</span> <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Next datum &quot;</span> <span class="p">+</span> <span class="n">x</span><span class="p">);</span>
@@ -423,7 +425,7 @@ containing</p>
 </pre></div>
 </div>
 <p>It should print</p>
-<div class="highlight-none"><div class="highlight"><pre>New Averager: items: 0; average: NaN
+<div class="highlight-none"><div class="highlight"><pre><span></span>New Averager: items: 0; average: NaN
 Next datum 5.1
 average 5.1 with 1 data values
 Next datum -7.3
@@ -460,7 +462,7 @@ number of values so far.  We can just have instance variables
 <code class="docutils literal"><span class="pre">sum</span></code> and <code class="docutils literal"><span class="pre">dataCount</span></code>.</p>
 <p>You might think how to create this class....</p>
 <p>The full <code class="docutils literal"><span class="pre">Averager</span></code> code follows:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
 <span class="c1">/// a class that is more than a container</span>
@@ -513,13 +515,13 @@ number of values so far.  We can just have instance variables
 <li>We show that a constructor, like an instance method, can include a call
 to a further instance method.  Though we illustrate this idea, the
 constructor code is
-actually unneeded.  See the <a class="reference internal" href="#unneeded-constructor-code-exercise"><span>Unneeded Constructor Code Exercise</span></a> below.</li>
+actually unneeded.  See the <a class="reference internal" href="#unneeded-constructor-code-exercise"><span class="std std-ref">Unneeded Constructor Code Exercise</span></a> below.</li>
 <li>We have methods that are not ToString or mere getters or setters of instance
 variables.  The logic of the class requires more.</li>
 <li>The <code class="docutils literal"><span class="pre">GetAverage</span></code>
 method does return data obtained by reading instance variable, but it does
 a calculation using the instance variables first.  See
-<a class="reference internal" href="#alternate-internal-state-exercise"><span>Alternate Internal State Exercise</span></a>.</li>
+<a class="reference internal" href="#alternate-internal-state-exercise"><span class="std std-ref">Alternate Internal State Exercise</span></a>.</li>
 </ul>
 <p>The code for both classes is in project <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/averager">averager</a>.</p>
 <div class="section" id="statistics-exercise">
@@ -533,7 +535,7 @@ the sum of the squares of the data items, call it <code class="docutils literal"
 Before calculating the standard deviation, suppose we
 assign the current average to  a local variable <code class="docutils literal"><span class="pre">avg</span></code>.
 Then the handiest form of expression for the standard deviation is</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">((</span><span class="n">sumOfSqr</span> <span class="p">-</span> <span class="n">avg</span><span class="p">*</span><span class="n">avg</span><span class="p">)/</span><span class="n">dataCount</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">((</span><span class="n">sumOfSqr</span> <span class="p">-</span> <span class="n">avg</span><span class="p">*</span><span class="n">avg</span><span class="p">)/</span><span class="n">dataCount</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Modify the demonstration program to show the standard deviation, too.</p>
@@ -587,19 +589,19 @@ NaN, you need the boolean <code class="docutils literal"><span class="pre">Doubl
 <div class="section" id="converting-a-static-game-to-a-game-instance">
 <span id="index-3"></span><h2>13.2.2. Converting A Static Game To A Game Instance<a class="headerlink" href="#converting-a-static-game-to-a-game-instance" title="Permalink to this headline">¶</a></h2>
 <p>For a comparison of procedural and object-oriented coding,
-consider converting <a class="reference internal" href="../while/lab-number-game.html#lab-number-game"><span>Number Guessing Game Lab</span></a> so that a GuessGame
+consider converting <a class="reference internal" href="../while/lab-number-game.html#lab-number-game"><span class="std std-ref">Number Guessing Game Lab</span></a> so that a GuessGame
 is an object, an instance of the GuessGame class.</p>
 <p>While our earlier example, Contact, is a simple but practical
 use of object-oriented programming, GuessGame is somewhat more artificial.
 We create it hoping that highlighting the differences between procedural
 and object-oriented presentation is informative.  Also, we will see
-with <a class="reference internal" href="../interfaces/interfaces.html#interface"><span>Interfaces</span></a> that
+with <a class="reference internal" href="../interfaces/interfaces.html#interface"><span class="std std-ref">Interfaces</span></a> that
 there are C# language features that require an
 object rather than just a function and data.
-In <a class="reference internal" href="../interfaces/csproj-revisited.html#igame-interface-exercise"><span>IGame Interface Exercise</span></a> you can use a Game object.</p>
+In <a class="reference internal" href="../interfaces/csproj-revisited.html#igame-interface-exercise"><span class="std std-ref">IGame Interface Exercise</span></a> you can use a Game object.</p>
 <p>Here is a procedural game version, example file
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/static_version/static_version.cs">static_version/static_version.cs</a></p>
-<div class="highlight-csharp"><div class="highlight"><pre>   <span class="k">public</span> <span class="k">class</span> <span class="nc">Game</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>   <span class="k">public</span> <span class="k">class</span> <span class="nc">Game</span>
    <span class="p">{</span>
       <span class="k">private</span> <span class="k">static</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
 
@@ -719,7 +721,7 @@ If Froggy eats &#8220;worm&#8221; and then &#8220;fly&#8221;, its <code class="d
 </li>
 <li><p class="first">An Animal can <code class="docutils literal"><span class="pre">Excrete</span></code>
 (removing and printing what was <em>first</em> in the gut List).
-Recall the method <code class="docutils literal"><span class="pre">RemoveAt</span></code> in <a class="reference internal" href="../lists/listsyntax.html#listsyntax"><span>List Syntax</span></a>.  Print the
+Recall the method <code class="docutils literal"><span class="pre">RemoveAt</span></code> in <a class="reference internal" href="../lists/listsyntax.html#listsyntax"><span class="std std-ref">List Syntax</span></a>.  Print the
 empty string, &#8220;&#8221;, if the <code class="docutils literal"><span class="pre">gut</span></code>
 <em>was already empty</em>.  Following the
 Froggy example above, Froggy could <code class="docutils literal"><span class="pre">Excrete</span></code>,
@@ -778,7 +780,7 @@ We can start
 from a constructor that just sets the clock&#8217;s time to midnight.</p>
 <p>We can imagine a demonstration class <code class="docutils literal"><span class="pre">ClockDemo</span></code> with a <code class="docutils literal"><span class="pre">Main</span></code> method
 containing</p>
-<div class="highlight-csharp"><div class="highlight"><pre>         <span class="n">Clock</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Clock</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>         <span class="n">Clock</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Clock</span><span class="p">();</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Midnight &quot;</span> <span class="p">+</span> <span class="n">c</span><span class="p">.</span><span class="n">GetTimeString</span><span class="p">());</span>
          <span class="n">c</span><span class="p">.</span><span class="n">SetTime</span><span class="p">(</span><span class="m">23</span><span class="p">,</span> <span class="m">58</span><span class="p">);</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Before midnight &quot;</span> <span class="p">+</span> <span class="n">c</span><span class="p">.</span><span class="n">GetTimeString</span><span class="p">());</span>
@@ -789,7 +791,7 @@ containing</p>
 </pre></div>
 </div>
 <p>It should print</p>
-<div class="highlight-none"><div class="highlight"><pre>Midnight 00:00
+<div class="highlight-none"><div class="highlight"><pre><span></span>Midnight 00:00
 Before midnight 23:58
 Tick 23:59
 Tick 00:00
@@ -831,7 +833,7 @@ is first created.  Of course we must have a method to let the count
 advance, rolling over back to 0 when the limit it reached.</p>
 <p>Throw in a getter and a setter for the count and we can have the following
 class:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
 <span class="c1">/// class used twice in Clock</span>
@@ -871,7 +873,7 @@ Check examples by hand if this seems strange.</p>
 <p id="index-5">Finally we introduce the <code class="docutils literal"><span class="pre">Clock</span></code> class itself.
 We display the entire code first, and follow it with comments about a number
 of new features.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
 <span class="c1">/// class with instance variables of another user class</span>
@@ -1017,7 +1019,7 @@ you might change the original name <code class="docutils literal"><span class="p
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

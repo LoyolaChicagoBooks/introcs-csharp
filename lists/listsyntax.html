@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>11.1. List Syntax &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>11.1. List Syntax &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="11. Lists" href="lists.html" />
     <link rel="next" title="11.2. .Net Library (API)" href="dotnetapi.html" />
@@ -186,7 +188,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="lists.html">11. Lists</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">11.1. List Syntax</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.1. List Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewlists.html">11.3. Chapter Review Questions</a></li>
 </ul>
@@ -328,11 +330,11 @@ many kinds of objects.  There is <em>not</em> a new syntax for <em>each</em> one
 <p>Instead .Net 4.0 introduced one new form of syntax that can apply to all sorts of
 classes, <em>generics</em>.</p>
 <p>The type for a list of strings is</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>The type for an <code class="docutils literal"><span class="pre">int</span></code> list is</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>In general the new generic syntax allows a type (or several, comma separated) in angle
@@ -353,7 +355,7 @@ way to assign values to lists.</p>
 <p>The blocks below are all from one csharp session,
 with our comments breaking up the sequence.</p>
 <p>With the no-parameter constructor, the <code class="docutils literal"><span class="pre">List</span></code> is empty to start:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; List&lt;string&gt; words = new List&lt;string&gt;();
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; List&lt;string&gt; words = new List&lt;string&gt;();
 csharp&gt; words;
 {  }
 csharp&gt; words.Count;
@@ -362,7 +364,7 @@ csharp&gt; words.Count;
 </div>
 <p>You can add elements, and keep count with the <code class="docutils literal"><span class="pre">Count</span></code> property
 as the size changes:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; words.Add(&quot;up&quot;);
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; words.Add(&quot;up&quot;);
 csharp&gt; words;
 { &quot;up&quot; }
 csharp&gt; words.Add(&quot;down&quot;);
@@ -376,7 +378,7 @@ csharp&gt; words.Count;
 </pre></div>
 </div>
 <p id="index-3">You can reference and change elements by index, like with arrays:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; words[0];
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; words[0];
 &quot;up&quot;
 csharp&gt; words[2];
 &quot;over&quot;
@@ -386,7 +388,7 @@ csharp&gt; words;
 </pre></div>
 </div>
 <p>You can use <code class="docutils literal"><span class="pre">foreach</span></code> like with arrays or other sequences:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; foreach (string s in words) {
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; foreach (string s in words) {
           &gt;    Console.WriteLine(s.ToUpper());
           &gt; }
 UP
@@ -396,14 +398,14 @@ ON
 </div>
 <p id="index-4">Note:  Unfortunately C# is not user-friendly if
 you try to use <code class="docutils literal"><span class="pre">Console.WriteLine</span></code> to print a <code class="docutils literal"><span class="pre">List</span></code> <em>object</em>:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; Console.WriteLine(words)
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; Console.WriteLine(words)
 System.Collections.Generic.List`1[System.Int32]
 </pre></div>
 </div>
 <p>Next compare <code class="docutils literal"><span class="pre">Remove</span></code>, which finds the first matching element and removes it,
 and <code class="docutils literal"><span class="pre">RemoveAt</span></code>, which removes the element at a specified index.
 <code class="docutils literal"><span class="pre">Remove</span></code> returns whether the List has been changed:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; words.Remove(&quot;down&quot;);
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; words.Remove(&quot;down&quot;);
 true
 csharp&gt; words;
 { &quot;up&quot;, &quot;in&quot; }
@@ -420,21 +422,21 @@ csharp&gt; words;
 </div>
 <p>Removing does not leave a &#8220;hole&#8221; in the <code class="docutils literal"><span class="pre">List</span></code>:  The list closes up,
 so the index decreases for the elements after the removed one:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; words[2];
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; words[2];
 &quot;on&quot;
 csharp&gt; words.Count;
 3
 </pre></div>
 </div>
 <p>You can check for membership in a <code class="docutils literal"><span class="pre">List</span></code> with <code class="docutils literal"><span class="pre">Contains</span></code>:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; words.Contains(&quot;in&quot;);
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; words.Contains(&quot;in&quot;);
 true
 csharp&gt; words.Contains(&quot;into&quot;);
 false
 </pre></div>
 </div>
 <p>You can also remove all elements at once:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; words.Clear();
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; words.Clear();
 csharp&gt; words.Count;
 0
 </pre></div>
@@ -443,14 +445,14 @@ csharp&gt; words.Count;
 Though more verbose than for an array, you can initialize a <code class="docutils literal"><span class="pre">List</span></code>
 with another collection, including an anonymous array,
 specified with an explicit sequence in braces:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; List&lt;int&gt; nums = new List&lt;int&gt;(new[]{5, 3, 7, 4});
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; List&lt;int&gt; nums = new List&lt;int&gt;(new[]{5, 3, 7, 4});
 csharp&gt; nums;
 { 5, 3, 7, 4 }
 </pre></div>
 </div>
 <p>We have been using the explicit declaration syntax, but generic types tend to get long,
 so <code class="docutils literal"><span class="pre">var</span></code> is handy with them:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">stuff</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">stuff</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
 </pre></div>
 </div>
 <p>When initializing a generic object, you still need to remember both the angle braces
@@ -460,12 +462,12 @@ changing the list,
 <em>and</em> it returns a value.  If a function returns a value,
 we typically use the function call as an
 expression in a larger statement.  This is not necessary, as described in
-<a class="reference internal" href="../functions/notusereturn.html#not-using-ret-val"><span>Not using Return Values</span></a>.  In that section we discussed the <em>mistake</em> of not
+<a class="reference internal" href="../functions/notusereturn.html#not-using-ret-val"><span class="std std-ref">Not using Return Values</span></a>.  In that section we discussed the <em>mistake</em> of not
 using return values.  The <code class="docutils literal"><span class="pre">Remove</span></code> method illustrates that this is
 not always a mistake:  If you just want the side effect, trying to remove an element,
 whether or not it is in the list, then there is no need to check for the return value.
 This complete C# statement is fine:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">someList</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">element</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">someList</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">element</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You should generally think carefully before <em>defining</em> a function
@@ -478,7 +480,7 @@ it was <em>also</em> producing some side effect.</p>
 <span id="index-7"></span><h2>11.1.3. Interactive List Example<a class="headerlink" href="#interactive-list-example" title="Permalink to this headline">¶</a></h2>
 <p>Lists are handy when you do not know how much data there will be.
 A simple example would be reading in lines from the user interactively:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a List of lines entered by the user in response</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return a List of lines entered by the user in response</span>
 <span class="c1">/// to the prompt.  Lines in the List will be nonempty, since an</span>
 <span class="c1">/// empty line terminates the input.</span>
 <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">ReadLines</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">)</span>
@@ -511,7 +513,7 @@ A simple example would be reading in lines from the user interactively:</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

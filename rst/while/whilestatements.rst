@@ -278,7 +278,7 @@ later forms of loops, too):
    What action do I want to repeat? 
 -  How do I write the repeating action so I can modify it for the next time
    through the loop to work with new data?
--  What code is needed to do modifications to make the same code work
+-  What code is needed to do modifications to make the same action code work
    the next time through the loop?
 -  Have I thought of variables needed in the middle and declared them;
    do other things need initialization?
@@ -288,6 +288,19 @@ later forms of loops, too):
    loop) from repetitive actions (in the loop) from actions not repeated, but
    done after the loop (code after the loop). Missing this distinction
    is a *common error*!
+
+This is quite a sequence of steps!  Particularly looking forward to other forms of loops,
+we can note a more basic split into two parts:
+
+* Writing the code to make sure each desired iteration is reached 
+  (loop dynamics: initialized data for the test condition, the test condition itself, 
+  preparing for the next iteration)
+* Doing the work for a specific item/ireration (most of the body of the loop)
+
+You generally only need to concentrate on one of those at a time.  
+If you set up how to reach all of the repetitions, giving names for the variables
+to be acted on, then you can separately just concentrate on dealing with the the action/code
+to deal with the *current* situation.
 
 .. _SumToN:
 

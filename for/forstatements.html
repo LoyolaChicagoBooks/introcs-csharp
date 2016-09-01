@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>8.1. For-Statement Syntax &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>8.1. For-Statement Syntax &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="8. For Loops" href="for.html" />
     <link rel="next" title="8.2. Examples With for Statements" href="forexamples.html" />
@@ -155,7 +157,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="for.html">8. For Loops</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">8.1. For-Statement Syntax</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.1. For-Statement Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
@@ -315,14 +317,14 @@
 <p>A <code class="docutils literal"><span class="pre">for</span></code> loop is an example of <em>syntactic sugar</em>:  syntax that can simplify
 things for the programmer, but can be immediately translated into an
 equivalent syntax by the compiler.  For example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>is exactly equivalent to this code similar to part of
-<a class="reference internal" href="../while/whilestatements.html#sumton"><span>SumToN</span></a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">i</span><span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<a class="reference internal" href="../while/whilestatements.html#sumton"><span class="std std-ref">SumToN</span></a>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span><span class="p">=</span> <span class="m">2</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
    <span class="n">i</span><span class="p">++;</span>
@@ -351,7 +353,7 @@ equivalent syntax by the compiler.  For example:</p>
 and <em>update</em> is <code class="docutils literal"><span class="pre">i++</span></code>.</p>
 <p>Why bother with this rearrangement?  It is a matter of taste,
 but the heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
 </pre></div>
 </div>
 <p>puts all the information about the variable controlling the loop
@@ -371,13 +373,13 @@ anywhere inside the loop body.
 If you want more complicated behavior, use a <code class="docutils literal"><span class="pre">while</span></code> loop.</p>
 <p>A <code class="docutils literal"><span class="pre">for</span></code> loop can also include variable declaration in the initialization,
 as in:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>This is close, but not quite equivalent to:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
    <span class="n">i</span><span class="p">++;</span>
@@ -391,7 +393,7 @@ the <code class="docutils literal"><span class="pre">while</span></code> stateme
 parts they normally separate may be omitted.
 If the condition part is omitted, the condition is
 interpreted as always true, leading to an infinite loop, that can only
-terminate due to a <code class="docutils literal"><span class="pre">return</span></code> or <a class="reference internal" href="#break-continue"><span>break statement</span></a> in the body.</p>
+terminate due to a <code class="docutils literal"><span class="pre">return</span></code> or <a class="reference internal" href="#break-continue"><span class="std std-ref">break statement</span></a> in the body.</p>
 <p id="index-1">Note the different parts of the heading used at different times (consistent
 with the positions in the corresponding while loop):</p>
 <ul class="simple">
@@ -407,7 +409,7 @@ same type initialized at the beginning of a <code class="docutils literal"><span
 separated by commas.  Also, at the end of the <code class="docutils literal"><span class="pre">for</span></code> loop heading, the
 update portion may include more than one expression, separated by commas.
 For example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">j</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="m">2</span><span class="p">,</span> <span class="n">j</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">j</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="m">2</span><span class="p">,</span> <span class="n">j</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} {1}&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -436,7 +438,7 @@ The <code class="docutils literal"><span class="pre">break</span></code> and <co
 make practical sense inside of an <code class="docutils literal"><span class="pre">if</span></code> statement that is inside the loop.</p>
 <p>Examples, assuming  <code class="docutils literal"><span class="pre">target</span></code> already has a string value and <code class="docutils literal"><span class="pre">a</span></code> is an array of
 strings:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">bool</span> <span class="n">found</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">found</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">found</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
@@ -453,7 +455,7 @@ strings:</p>
 <p>When an element is reached that matches <code class="docutils literal"><span class="pre">target</span></code>,
 execution goes on <em>past the loop</em> with <code class="docutils literal"><span class="pre">if</span> <span class="pre">(found)</span></code> ....</p>
 <p>An alternate implementation with a compound condition in the heading and no <code class="docutils literal"><span class="pre">break</span></code> is:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">bool</span> <span class="n">found</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">found</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="n">Length</span> <span class="p">&amp;&amp;</span> <span class="p">!</span><span class="n">found</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">found</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
@@ -469,7 +471,7 @@ execution goes on <em>past the loop</em> with <code class="docutils literal"><sp
 <p>With a <code class="docutils literal"><span class="pre">foreach</span></code> loop, which has no explicit continuation condition,
 the <code class="docutils literal"><span class="pre">break</span></code> would be more clearly useful.
 Here is a variant if you do not care about the specific location of the target:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">bool</span> <span class="n">found</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">found</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="k">foreach</span> <span class="p">(</span><span class="kt">string</span> <span class="n">s</span> <span class="k">in</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="p">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">found</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
@@ -491,7 +493,7 @@ If you <em>are</em> reading through the loop, it may be clearer to have an immed
 where it is certain that the loop should terminate.</p>
 <p>All the modifiers about <em>innermost</em> loop are important
 in a situation like the following:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(....)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(....)</span> <span class="p">{</span>
    <span class="k">for</span> <span class="p">(....)</span> <span class="p">{</span>
       <span class="p">...</span>
       <span class="k">if</span> <span class="p">(...)</span> <span class="p">{</span>
@@ -535,7 +537,7 @@ It can considerable shorten code if the test is inside of complicated, deeply ne
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

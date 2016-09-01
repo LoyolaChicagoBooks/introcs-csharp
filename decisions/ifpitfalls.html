@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5.6. If-statement Pitfalls &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>5.6. If-statement Pitfalls &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="5. Decisions" href="decisions.html" />
     <link rel="next" title="5.7. Compound Boolean Expressions" href="compoundconditions.html" />
@@ -128,7 +130,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.6. If-statement Pitfalls</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.6. If-statement Pitfalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
@@ -317,7 +319,7 @@
 <span id="index-0"></span><span id="id1"></span><h2>5.6.1. Dangerous Semicolon<a class="headerlink" href="#dangerous-semicolon" title="Permalink to this headline">¶</a></h2>
 <p>Regular statements must end with a semicolon.
 It turns out that the semicolon is all you need to have a legal statement:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="p">;</span>
 </pre></div>
 </div>
 <p>We will see places that it is useful, but
@@ -326,7 +328,7 @@ remember to put semicolons at the end of all your statements, and in response yo
 get compulsive about adding them at the end of statement
 lines.  Be careful NOT to put one at the end of a method heading or
 an <code class="docutils literal"><span class="pre">if</span></code> condition:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">);</span> <span class="c1">// WRONG PROBABLY!</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">);</span> <span class="c1">// WRONG PROBABLY!</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -334,7 +336,7 @@ an <code class="docutils literal"><span class="pre">if</span></code> condition:<
 <em>not</em> what you mean.</p>
 <p>Remember indentation and newlines are only significant for humans. The
 two lines above are equivalent to:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
    <span class="p">;</span>  <span class="c1">// Do nothing as statement when the condition is true</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="c1">// past if statement - do it always</span>
 </pre></div>
@@ -343,13 +345,13 @@ two lines above are equivalent to:</p>
 semicolon all by itself on a line, as above.)</p>
 <p>If you always put an open brace <em>directly</em> after the condition in an <code class="docutils literal"><span class="pre">if</span></code> statement,
 you will not make this error:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Then even if you were to add a semicolon:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">;</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -359,7 +361,7 @@ inside the block, and the writing would still follow:
 The extra semicolon would have no effect.</p>
 <p>The corresponding error at the end of a method heading will at least
 generate a compiler error, though it may appear cryptic:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">badSemicolon</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">badSemicolon</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
 <span class="p">{</span>
     <span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
     <span class="c1">// ...</span>
@@ -377,7 +379,7 @@ you may well need to read code that does not place
 braces around single statements. If C# understood indentation as
 in the recommended formatting style (or as required in Python),
 the following would be OK:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;positive x and y&quot;</span><span class="p">);</span>
 <span class="k">else</span>
@@ -388,7 +390,7 @@ the following would be OK:</p>
 them go together (remember the C# compiler ignores extra whitespace). The
 following is equivalent to the compiler, with the else apparently going
 with the second if:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;positive x and y&quot;</span><span class="p">);</span>
    <span class="k">else</span>
@@ -406,7 +408,7 @@ tested and) is not positive.</p>
 <p>If you put braces everywhere to reinforce
 your indentation, as we suggest, or if you only add the following
 one set of braces around the inner if statement:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;positive x and y&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -424,7 +426,7 @@ printed will be true: <code class="docutils literal"><span class="pre">x</span><
 <span id="index-2"></span><span id="id2"></span><h2>5.6.3. Missing Braces<a class="headerlink" href="#missing-braces" title="Permalink to this headline">¶</a></h2>
 <p>Another place you can fool yourself with nice indenting style is
 something like this.  Suppose we start with a perfectly reasonable</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x is: positive&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -432,7 +434,7 @@ something like this.  Suppose we start with a perfectly reasonable</p>
 that we want as the if-true part, but if we later decide
 that we want this on two lines
 and change it to</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x is:&quot;</span><span class="p">);</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;  positive&quot;</span><span class="p">);</span>
 </pre></div>
@@ -440,13 +442,13 @@ and change it to</p>
 <p>We are not going to get the behavior we want.
 The word &#8220;positive&#8221; will <em>always</em> be printed.</p>
 <p>If we had first taken a bit more effort originally to write</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x is: positive&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>then we could have split successfully into</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x is:&quot;</span><span class="p">);</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;  positive&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -476,7 +478,7 @@ between the condition and opening brace.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

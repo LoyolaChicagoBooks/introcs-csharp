@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5.2. Simple if Statements &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>5.2. Simple if Statements &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="5. Decisions" href="decisions.html" />
     <link rel="next" title="5.3. if-else Statements" href="ifelse.html" />
@@ -124,7 +126,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="decisions.html">5. Decisions</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
@@ -320,7 +322,7 @@ depending on the input. The main code is:</p>
 3
 4
 5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">double</span> <span class="n">weight</span> <span class="p">=</span>
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">weight</span> <span class="p">=</span>
    <span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;How many pounds does your suitcase weigh? &quot;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">weight</span> <span class="p">&gt;</span> <span class="m">50</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;There is a $25 charge for luggage that heavy.&quot;</span><span class="p">);</span>
@@ -348,7 +350,7 @@ An <code class="docutils literal"><span class="pre">if</span></code> statement o
 <div class="line">statement</div>
 </div>
 </div>
-<p>The condition is an expression that is true or false, of <a class="reference internal" href="../data/types-and-conversions.html#type-boolean"><span>Type Boolean or bool</span></a>.</p>
+<p>The condition is an expression that is true or false, of <a class="reference internal" href="../data/types-and-conversions.html#type-boolean"><span class="std std-ref">Type Boolean or bool</span></a>.</p>
 <p id="index-0">Often you want multiple statements executed when the condition
 is true.  We have used braces before.  We have not said
 what they do technically, syntactically:  braces around
@@ -370,7 +372,7 @@ Later in:ref:<cite>missing-braces</cite> we will see
 that there is good reason to use this format
 with braces <em>even</em> if there is just one statement inside the braces.</p>
 <p>Another fragment as an example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">balance</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">balance</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">transfer</span> <span class="p">=</span> <span class="p">-</span><span class="n">balance</span><span class="p">;</span>
     <span class="c1">// transfer enough from the backup account:</span>
     <span class="n">backupAccount</span> <span class="p">=</span> <span class="n">backupAccount</span> <span class="p">-</span> <span class="n">transfer</span><span class="p">;</span>
@@ -393,7 +395,7 @@ execution of the code fragment proceed differently.  What would happen in
 each case?  (Assume we have access to the class UIF.)</p>
 <ol class="loweralpha">
 <li><p class="first">Consider:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">v</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="s">&quot;Enter a word: &quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">v</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span><span class="s">&quot;Enter a word: &quot;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">3</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">v</span> <span class="p">=</span> <span class="n">v</span> <span class="p">+</span> <span class="n">v</span><span class="p">;</span>
 <span class="p">}</span>
@@ -402,7 +404,7 @@ each case?  (Assume we have access to the class UIF.)</p>
 </div>
 </li>
 <li><p class="first">Consider:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Enter a integer: &quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Enter a integer: &quot;</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;The magnitude of &quot;</span> <span class="p">+</span> <span class="n">x</span> <span class="p">+</span> <span class="s">&quot; is &quot;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">x</span> <span class="p">=</span> <span class="p">-</span><span class="n">x</span><span class="p">;</span>
@@ -428,7 +430,7 @@ each case?  (Assume we have access to the class UIF.)</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

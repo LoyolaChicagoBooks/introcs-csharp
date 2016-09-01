@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>7.1. foreach Syntax &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>7.1. foreach Syntax &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="7. Foreach Loops" href="foreach.html" />
     <link rel="next" title="7.2. foreach Examples" href="foreachexamples.html" />
@@ -149,7 +151,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
 </ul>
@@ -308,7 +310,7 @@
       
   <div class="section" id="foreach-syntax">
 <span id="id1"></span><h1>7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax<a class="headerlink" href="#foreach-syntax" title="Permalink to this headline">¶</a></h1>
-<p id="index-0">These sections on <code class="docutils literal"><span class="pre">foreach</span></code> loops and the later <a class="reference internal" href="../for/for.html#for-loops"><span>For Loops</span></a>
+<p id="index-0">These sections on <code class="docutils literal"><span class="pre">foreach</span></code> loops and the later <a class="reference internal" href="../for/for.html#for-loops"><span class="std std-ref">For Loops</span></a>
 introduce new looping statements.
 Neither is absolutely necessary:
 You could do all the same things with <code class="docutils literal"><span class="pre">while</span></code> loops,
@@ -322,15 +324,15 @@ with a string, which is a sequence of characters.</p>
 We took advantage of the fact that strings could be indexed.  Our <code class="docutils literal"><span class="pre">while</span></code>
 loops directly controlled the sequence of indices. Then we could
 look up the character at each index of a given string <code class="docutils literal"><span class="pre">s</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
-   <span class="n">use</span> <span class="k">value</span> <span class="n">of</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]...</span>
+   <span class="n">code</span> <span class="k">using</span> <span class="nn">the</span> <span class="k">value</span> <span class="n">of</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]...</span>
    <span class="n">i</span><span class="p">++;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Examples have been in <a class="reference internal" href="../while/while-with-sequence.html#while-sequence"><span>While-Statements with Sequences</span></a>, like</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Print the characters of s, one per line.</span>
+<p>Examples have been in <a class="reference internal" href="../while/while-with-sequence.html#while-sequence"><span class="std std-ref">While-Statements with Sequences</span></a>, like</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Print the characters of s, one per line.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -345,7 +347,7 @@ look up the character at each index of a given string <code class="docutils lite
 Managing the indices is just a way to get at the
 underlying sequence of characters.</p>
 <p>A conceptually simpler view is just:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="n">each</span> <span class="n">character</span> <span class="k">in</span> <span class="n">s</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">each</span> <span class="n">character</span> <span class="k">in</span> <span class="n">s</span>
     <span class="n">use</span> <span class="n">the</span> <span class="k">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">character</span>
 </pre></div>
 </div>
@@ -353,7 +355,7 @@ underlying sequence of characters.</p>
 We might name the current character <code class="docutils literal"><span class="pre">ch</span></code>.
 The following is a variant of <code class="docutils literal"><span class="pre">OneCharPerLine</span></code> with a <code class="docutils literal"><span class="pre">foreach</span></code>
 loop:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="k">foreach</span> <span class="p">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
@@ -379,7 +381,7 @@ no possibility of an infinite loop!</p>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 </div>
 <p>Here is a version of IsDigits:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="n">Boolean</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">Boolean</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="k">foreach</span> <span class="p">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
        <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">ch</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
@@ -394,16 +396,17 @@ no possibility of an infinite loop!</p>
 <ul class="simple">
 <li>They are more concise than the indexing versions.</li>
 <li>They keep the emphasis on the characters, not the secondary indices.</li>
-<li>The <code class="docutils literal"><span class="pre">foreach</span></code> heading emphasizes that a particular sequence is being
+<li>The <code class="docutils literal"><span class="pre">foreach</span></code> heading emphasizes that an entire particular sequence is being
 processed.</li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last"><em>If</em> you have explicit need to refer to the indices of the items in the sequence,
-then a <code class="docutils literal"><span class="pre">foreach</span></code> statement does not work.</p>
+then a <code class="docutils literal"><span class="pre">foreach</span></code> statement does not work.  Also a <code class="docutils literal"><span class="pre">foreach</span></code> loop supplies the items in
+a specific order; if you need a different order, it will not work.</p>
 </div>
 <p>Of course you can refer to the indices of items in  sequence with a flexible
-<code class="docutils literal"><span class="pre">while</span></code> loop, or see <a class="reference internal" href="../for/for.html#for-loops"><span>For Loops</span></a>, coming soon....</p>
+<code class="docutils literal"><span class="pre">while</span></code> loop, or see <a class="reference internal" href="../for/for.html#for-loops"><span class="std std-ref">For Loops</span></a>, coming soon....</p>
 </div>
 
 
@@ -419,7 +422,7 @@ then a <code class="docutils literal"><span class="pre">foreach</span></code> st
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

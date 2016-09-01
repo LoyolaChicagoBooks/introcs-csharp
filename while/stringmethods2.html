@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6.6. More String Methods &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>6.6. More String Methods &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="6. While Loops" href="while.html" />
     <link rel="next" title="6.7. User Input: UI" href="userinput.html" />
@@ -140,7 +142,7 @@
 <li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.6. More String Methods</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.6. More String Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
@@ -316,7 +318,7 @@
 <p>Before we do more elaborate things with strings, some more string methods
 will be helpful.  Be sure you are familiar with the earlier discussion of
 strings in
-<a class="reference internal" href="../basicstringops/basicstringops.html#basic-string-ops"><span>Basic String Operations</span></a>.</p>
+<a class="reference internal" href="../basicstringops/basicstringops.html#basic-string-ops"><span class="std std-ref">Basic String Operations</span></a>.</p>
 <p>Play with the new string methods in csharp!</p>
 <p>This variation of <code class="docutils literal"><span class="pre">IndexOf</span></code> has a second parameter:</p>
 <dl class="docutils" id="index-1">
@@ -325,7 +327,7 @@ strings in
 <code class="docutils literal"><span class="pre">target</span></code>
 in <strong>this</strong> string object, starting at index <code class="docutils literal"><span class="pre">start</span></code> or after.
 Returns -1 if <code class="docutils literal"><span class="pre">target</span></code> is not found. Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">state</span> <span class="p">=</span> <span class="s">&quot;Mississippi&quot;</span><span class="p">;</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">state</span> <span class="p">=</span> <span class="s">&quot;Mississippi&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">print</span><span class="p">(</span><span class="s">&quot;01234567890\n&quot;</span><span class="p">+</span><span class="n">state</span><span class="p">)</span> <span class="c1">// to see indices</span>
 <span class="m">01234567890</span>
 <span class="n">Mississippi</span>
@@ -345,7 +347,7 @@ Returns -1 if <code class="docutils literal"><span class="pre">target</span></co
 <dt><code class="docutils literal"><span class="pre">string</span> <span class="pre">Trim()</span></code></dt>
 <dd><p class="first">Returns a string formed from <strong>this</strong> string object, but
 with leading and trailing whitespace removed. Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre>csharp&gt; string s = &quot;\n  123    &quot;;
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span>csharp&gt; string s = &quot;\n  123    &quot;;
 csharp&gt; &quot;#&quot; + s + &quot;#&quot;;
 #
   123   #
@@ -360,7 +362,7 @@ csharp&gt; &quot;#&quot; + s.Trim() + &quot;#&quot;;
 <dd><p class="first">Returns a string formed from <strong>this</strong> string by replacing
 all occurrences of the substring <code class="docutils literal"><span class="pre">target</span></code> by <code class="docutils literal"><span class="pre">replacement</span></code>.
 Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;This is it!&quot;</span><span class="p">;</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;This is it!&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Replace</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="s">&quot;/&quot;</span><span class="p">);</span>
 <span class="s">&quot;This/is/it!&quot;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Replace</span><span class="p">(</span><span class="s">&quot;is&quot;</span><span class="p">,</span> <span class="s">&quot;at&quot;</span><span class="p">);</span>
@@ -376,7 +378,7 @@ Example:</p>
 <dd><p class="first">Returns <code class="docutils literal"><span class="pre">true</span></code> if  <strong>this</strong> string object starts
 with string <code class="docutils literal"><span class="pre">prefix</span></code>, and <code class="docutils literal"><span class="pre">false</span></code> otherwise.
 Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;-123&quot;</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;-&quot;</span><span class="p">);</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;-123&quot;</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;-&quot;</span><span class="p">);</span>
 <span class="k">true</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;downstairs&quot;</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;down&quot;</span><span class="p">);</span>
 <span class="k">true</span>
@@ -391,7 +393,7 @@ Example:</p>
 <dd><p class="first">Returns <code class="docutils literal"><span class="pre">true</span></code> if  <strong>this</strong> string object ends
 with string <code class="docutils literal"><span class="pre">suffix</span></code>, and <code class="docutils literal"><span class="pre">false</span></code> otherwise.
 Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;-123&quot;</span><span class="p">.</span><span class="n">EndsWith</span><span class="p">(</span><span class="s">&quot;-&quot;</span><span class="p">);</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;-123&quot;</span><span class="p">.</span><span class="n">EndsWith</span><span class="p">(</span><span class="s">&quot;-&quot;</span><span class="p">);</span>
 <span class="k">false</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;downstairs&quot;</span><span class="p">.</span><span class="n">EndsWith</span><span class="p">(</span><span class="s">&quot;airs&quot;</span><span class="p">);</span>
 <span class="k">true</span>
@@ -405,7 +407,7 @@ Example:</p>
 <span id="countrep"></span><span id="index-6"></span><h2>6.6.1. Count Repetitions in a String Exercise<a class="headerlink" href="#count-repetitions-in-a-string-exercise" title="Permalink to this headline">¶</a></h2>
 <p>Write a program <code class="file docutils literal"><span class="pre">test_count_rep.cs</span></code>, with a Main testing method,
 that tests a function with the following heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Return the number of separate repetitions of target in s.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Return the number of separate repetitions of target in s.</span>
 <span class="k">static</span> <span class="kt">int</span> <span class="nf">CountRep</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">string</span> <span class="n">target</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -428,7 +430,7 @@ in a project of your own.</p>
 <p>The idea is to write safe versions of the utility functions
 PromptInt and PromptDouble (which can then be used in further
 places like PromptIntInRange).</p>
-<p>Be sure you are familiar with <a class="reference internal" href="whileinteractive.html#safe-whole-number-input"><span>Safe Whole Number Input Exercise</span></a>,
+<p>Be sure you are familiar with <a class="reference internal" href="whileinteractive.html#safe-whole-number-input"><span class="std std-ref">Safe Whole Number Input Exercise</span></a>,
 and the development of its <code class="docutils literal"><span class="pre">InputWhole</span></code> function.</p>
 <p>A legal whole number string consists entirely of digits.  We have
 already written example <code class="docutils literal"><span class="pre">IsDigits</span></code> to identify a string for a
@@ -479,11 +481,11 @@ to accept a string like <code class="docutils literal"><span class="pre">&quot;9
 too large for an <code class="docutils literal"><span class="pre">int</span></code>!  Catch 22?</p>
 <p>There is an alternate approach involving comparing strings, not numbers.</p>
 <p>There is a string instance method:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="kt">int</span> <span class="nf">CompareTo</span><span class="p">(</span><span class="kt">string</span> <span class="n">t</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="kt">int</span> <span class="nf">CompareTo</span><span class="p">(</span><span class="kt">string</span> <span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It does roughly lexicographical string comparisons, so</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">s</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="m">0</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="m">0</span>
 </pre></div>
 </div>
 <p>is true when s &#8220;comes before&#8221; t or is equal to t.  This works with
@@ -491,11 +493,11 @@ alphabetizing letter strings:  &#8220;at&#8221; comes before &#8220;ate&#8221; w
 &#8220;attention&#8221; which comes before &#8220;eat&#8221;.  It also works with digit strings
 <em>of the same length</em>
 to give the same relationship as the corresponding numbers:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="s">&quot;123456890&quot;</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="s">&quot;2147483647&quot;</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="m">0</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="s">&quot;123456890&quot;</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="s">&quot;2147483647&quot;</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="m">0</span>
 </pre></div>
 </div>
 <p>is true, and</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="s">&quot;9876543210&quot;</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="s">&quot;2147483647&quot;</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="m">0</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="s">&quot;9876543210&quot;</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="s">&quot;2147483647&quot;</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="m">0</span>
 </pre></div>
 </div>
 <p>is false.</p>
@@ -503,7 +505,7 @@ to give the same relationship as the corresponding numbers:</p>
 (With this approach you could also create an IsLongString very similarly,
 but we skip it since it teaches you nothing new.)</p>
 <p>The idea of a <code class="docutils literal"><span class="pre">CompareTo</span></code> method is much more general
-and is used much later in <a class="reference internal" href="../interfaces/fractions-revisited.html#rationals-revisited"><span>Rationals Revisited</span></a>.</p>
+and is used much later in <a class="reference internal" href="../interfaces/fractions-revisited.html#rationals-revisited"><span class="std std-ref">Rationals Revisited</span></a>.</p>
 </div>
 </div>
 
@@ -520,7 +522,7 @@ and is used much later in <a class="reference internal" href="../interfaces/frac
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

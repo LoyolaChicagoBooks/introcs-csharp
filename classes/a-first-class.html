@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>13.1. A First Example of Class Instances: Contact &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>13.1. A First Example of Class Instances: Contact &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="13. Classes and Object-Oriented Programming" href="classes.html" />
     <link rel="next" title="13.2. Class Instance Examples" href="classexamples.html" />
@@ -200,7 +202,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">13.1. A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">13.1. A First Example of Class Instances: Contact</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
@@ -347,7 +349,7 @@ instance of the class is like a cookie.
 You might consider constructor parameters as being for different decorations
 on different cookies, so not all cookies must end up completely the same.</p>
 <p>Later we will see an example for rational
-numbers, <a class="reference internal" href="rational.html#rational"><span>The Rational Class</span></a>,
+numbers, <a class="reference internal" href="rational.html#rational"><span class="std std-ref">The Rational Class</span></a>,
 where the parts of the class are more tightly integrated, but that is more
 complicated, so we defer it.</p>
 <p>We have already considered built-in types with internal state, like a <code class="docutils literal"><span class="pre">List</span></code>:
@@ -375,7 +377,7 @@ of interacting with it.</p>
 We can give parameters defining the initial state of the new object.
 In our example the obvious thing to do is supply parameters giving
 values for the three parts of the object state, so we can plan that</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Contact</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span> <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Contact</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span> <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>would create a new Contact storing the data.  A Contact object, created with
@@ -389,7 +391,7 @@ type as <em>methods</em>.  For instance we can</p>
 </ul>
 <p>Thinking ahead to what we would like for our Contact objects, here is
 the testing code of <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/contact1/test_contact1.cs">contact1/test_contact1.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
@@ -412,7 +414,7 @@ the testing code of <a class="reference external" href="https://github.com/Loyol
 </pre></div>
 </div>
 <p>When running this testing code, we would like the results:</p>
-<div class="highlight-none"><div class="highlight"><pre>Marie&#39;s full name: Marie Ortiz
+<div class="highlight-none"><div class="highlight"><pre><span></span>Marie&#39;s full name: Marie Ortiz
 Her phone number: 773-508-7890
 Her email: mortiz2@luc.edu
 
@@ -438,7 +440,7 @@ We start with the most basic parts.  First we need a <code class="docutils liter
 <div class="section" id="class-syntax">
 <h2>13.1.2. Class Syntax<a class="headerlink" href="#class-syntax" title="Permalink to this headline">¶</a></h2>
 <p>Our code is nested inside</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Contact</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Contact</span>
 <span class="p">{</span>
 
    <span class="c1">// ... fields, constructor, code for Contact omitted</span>
@@ -462,11 +464,11 @@ an <em>instance variable</em>, that is the particular data for an <em>individual
 for an individual instance of the class.
 This is our new place to store data:</p>
 <p>We declare these <em>in</em> the class and <em>outside</em> any method declaration.
-(This is in the same place as we would store <a class="reference internal" href="../functions/staticvariables.html#static-variables"><span>Static Variables</span></a>).</p>
+(This is in the same place as we would store <a class="reference internal" href="../functions/staticvariables.html#static-variables"><span class="std std-ref">Static Variables</span></a>).</p>
 <p>They are <em>fields</em> of the class.  As we will
 discuss more in terms of safety and security,
 we add the word &#8220;private&#8221; at the beginning:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Contact</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Contact</span>
 <span class="p">{</span>
    <span class="k">private</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
    <span class="k">private</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">;</span>
@@ -514,7 +516,7 @@ The constructor can have parameters like a regular method.  We will certainly
 want to give a state to our new object.
 That means giving values to its fields.  Recall we are want to
 store this state in instance variables <code class="docutils literal"><span class="pre">name</span></code>, <code class="docutils literal"><span class="pre">phone</span></code> and <code class="docutils literal"><span class="pre">email</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">name</span> <span class="p">=</span> <span class="n">fullName</span><span class="p">;</span>
          <span class="n">phone</span> <span class="p">=</span> <span class="n">phoneNumber</span><span class="p">;</span>
@@ -587,7 +589,7 @@ others to be able to <em>inspect</em> the name, phone and email,
 so how do we do that?  Use <strong>public methods</strong>.</p>
 <p>Since the fields are accessible anywhere <em>inside</em> the class&#8217;s instance methods,
 and public methods can be used from <em>outside</em> the class, we can simply code</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetName</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetName</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
       <span class="p">}</span>
@@ -615,7 +617,7 @@ Have getter methods names start with &#8220;Get&#8221;,
 followed by the name of the data to be returned.</p>
 <p>In this first simple version of Contact we add one further method, to
 print all the contact information with labels.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">@&quot;Name:  {0}</span>
 <span class="s">Phone: {1}</span>
@@ -625,7 +627,7 @@ print all the contact information with labels.</p>
 </div>
 <p>Again, we use the instance variable names, plugging them into a format string.
 Remember the <code class="docutils literal"><span class="pre">&#64;</span></code> syntax
-for multiline strings from <a class="reference internal" href="../data/strings2.html#strings2"><span>String Special Cases</span></a>.</p>
+for multiline strings from <a class="reference internal" href="../data/strings2.html#strings2"><span class="std std-ref">String Special Cases</span></a>.</p>
 <p>You can see and see the entire Contact class
 in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/contact1/contact1.cs">contact1/contact1.cs</a>.</p>
 <p>This is our first complete class defining a new type of object.
@@ -647,7 +649,7 @@ use it explicitly, but you could.   For example the current <code class="docutil
 In our next version of the Contact class we will see several places where
 an explicit <code class="docutils literal"><span class="pre">this</span></code> is useful.</p>
 <p>In the first version of the constructor, repeated here,</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">name</span> <span class="p">=</span> <span class="n">fullName</span><span class="p">;</span>
          <span class="n">phone</span> <span class="p">=</span> <span class="n">phoneNumber</span><span class="p">;</span>
@@ -663,7 +665,7 @@ parameters that will initialize the instance variables are the <em>same</em> nam
 <p>If we are not careful, there is a problem with that.  An instance variable,
 however named, and a local variable are not the same.  This is
 nonsensical:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">,</span> <span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">,</span> <span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="n">name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span> <span class="c1">// ????</span>
    <span class="p">...</span>
@@ -680,7 +682,7 @@ identifier.  We have to do something else to refer to the instance variable.
 The explicit <code class="docutils literal"><span class="pre">this</span></code> object comes to the rescue:  <code class="docutils literal"><span class="pre">this.name</span></code> refers to
 a part of this object.  It must refer to the
 instance variable, not the local variable.  Our alternate constructor is:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">,</span> <span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phone</span><span class="p">,</span> <span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
          <span class="k">this</span><span class="p">.</span><span class="n">phone</span> <span class="p">=</span> <span class="n">phone</span><span class="p">;</span>
@@ -700,7 +702,7 @@ with our Contact objects.  Users can read the data in a Contact with the
 <em>getter</em> methods.  Now we need <em>setter</em> methods.  The naming conventions
 are similar:  start with &#8220;Set&#8221;.  In this case we must supply the new data,
 so setter methods need a parameter:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetPhone</span><span class="p">(</span><span class="kt">string</span> <span class="n">newPhone</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetPhone</span><span class="p">(</span><span class="kt">string</span> <span class="n">newPhone</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">phone</span> <span class="p">=</span> <span class="n">newPhone</span><span class="p">;</span>
       <span class="p">}</span>
@@ -710,21 +712,21 @@ so setter methods need a parameter:</p>
 <em>new</em> name for the parameter that sets the instance variable.  For
 comparison we use the alternate identifier matching approach in the
 other setter:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="k">void</span> <span class="nf">SetEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">email</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">this</span><span class="p">.</span><span class="n">email</span> <span class="p">=</span> <span class="n">email</span><span class="p">;</span>
       <span class="p">}</span>
 </pre></div>
 </div>
 <p>Now we can alter the contents of a Contact:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span> <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span> <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
 <span class="n">c1</span><span class="p">.</span><span class="n">SetEmail</span> <span class="p">(</span><span class="s">&quot;maria.ortiz@gmail.com&quot;</span><span class="p">);</span>
 <span class="n">c1</span><span class="p">.</span><span class="n">SetPhone</span><span class="p">(</span><span class="s">&quot;555-555-5555&quot;</span><span class="p">);</span>
 <span class="n">c1</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>would print</p>
-<div class="highlight-none"><div class="highlight"><pre>Name:  Marie Ortiz
+<div class="highlight-none"><div class="highlight"><pre><span></span>Name:  Marie Ortiz
 Phone: 555-555-5555
 Email: maria.ortiz@gmail.com
 </pre></div>
@@ -757,7 +759,7 @@ your type, with its own specific instance variables.
 You need to have that version used <em>in place of</em> the default:
 You need to <em>override</em> the default.  To emphasize the <em>change</em>
 in meaning, the word <code class="docutils literal"><span class="pre">override</span></code> <em>must</em> be in the heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
 <span class="p">{</span>
    <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span> <span class="p">(</span><span class="s">@&quot;Name:  {0}</span>
 <span class="s"> {1}</span>
@@ -782,7 +784,7 @@ refers to an instance variable
 <code class="docutils literal"><span class="pre">name</span></code> without using dot notation.  Then <code class="docutils literal"><span class="pre">name</span></code> is assumed to refer to
 this object associated with the call to <code class="docutils literal"><span class="pre">GetName</span></code>.  We can change our
 <code class="docutils literal"><span class="pre">Print</span></code> definition to:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
 <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ToString</span><span class="p">());</span>
 <span class="p">}</span>
@@ -797,7 +799,7 @@ attached to the call to <code class="docutils literal"><span class="pre">Print</
 <p>New testing code is in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/contact2/test_contact2.cs">contact2/test_contact2.cs</a>.  Run the project
 and check that it does what you would expect.  There are several new
 features illustrated in the testing code:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
 <span class="p">{</span>
    <span class="n">Contact</span> <span class="n">c1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;Marie Ortiz&quot;</span><span class="p">,</span> <span class="s">&quot;773-508-7890&quot;</span><span class="p">,</span>
                             <span class="s">&quot;mortiz2@luc.edu&quot;</span><span class="p">);</span>
@@ -831,7 +833,7 @@ format string.  Find both in <code class="docutils literal"><span class="pre">Ma
 <p>The <code class="docutils literal"><span class="pre">ToString</span></code> override also means that the body of our <code class="docutils literal"><span class="pre">Print</span></code>
 definition in the Contact class could have been
 even shorter, using the object <code class="docutils literal"><span class="pre">this</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
 <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 <span class="p">}</span>
@@ -846,7 +848,7 @@ already a string, there is an automatic call to <code class="docutils literal"><
 once in the regular instance variable declarations,
 <em>outside of any constructor or method</em> and then again <em>inside</em> a
 constructor, like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="nf">Contact</span><span class="p">(</span><span class="kt">string</span> <span class="n">fullName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">phoneNumber</span><span class="p">,</span> <span class="kt">string</span> <span class="n">emailAddress</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="n">fullName</span><span class="p">;</span>      <span class="c1">// LOGICAL ERROR!</span>
    <span class="kt">string</span> <span class="n">phone</span> <span class="p">=</span> <span class="n">phoneNumber</span><span class="p">;</span>  <span class="c1">// LOGICAL ERROR!</span>
@@ -875,7 +877,7 @@ error is referenced, but with local variables covering instance variables,
 the real cause can come later in the text of the method.  Below, when you first
 refer to <code class="docutils literal"><span class="pre">r</span></code> in <code class="docutils literal"><span class="pre">Badnames</span></code>, it appears to be correctly referring to the
 instance variable <code class="docutils literal"><span class="pre">r</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ForwardError</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ForwardError</span>
 <span class="p">{</span>
     <span class="k">private</span> <span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
 
@@ -922,7 +924,7 @@ Can you construct an example to illustrate that?  One of ours is
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

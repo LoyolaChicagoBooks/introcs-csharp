@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>11.3. Chapter Review Questions &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>11.3. Chapter Review Questions &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="11. Lists" href="lists.html" />
     <link rel="next" title="12. Dictionaries" href="../dictionaries/dictionaries.html" />
@@ -188,7 +190,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="lists.html">11. Lists</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="listsyntax.html">11.1. List Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dotnetapi.html">11.2. .Net Library (API)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">11.3. Chapter Review Questions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.3. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
@@ -318,7 +320,7 @@ features, but with different syntax?</p>
 <li><p class="first">How is the type declaration for a generic type distinctive?</p>
 </li>
 <li><p class="first">Here is one way to put five particular elements into a list:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
 <span class="kt">string</span><span class="p">[]</span> <span class="n">temp</span> <span class="p">=</span> <span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;an&quot;</span><span class="p">,</span> <span class="s">&quot;the&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;of&quot;</span><span class="p">};</span>
 <span class="k">foreach</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span> <span class="k">in</span> <span class="n">temp</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">words</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
@@ -330,12 +332,12 @@ How about with a single statement,
 assuming you do not need <code class="docutils literal"><span class="pre">temp</span></code> again?</p>
 </li>
 <li><p class="first">If we continue on from above, with the line:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">words2</span> <span class="p">=</span> <span class="n">words</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">words2</span> <span class="p">=</span> <span class="n">words</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Then what would be the difference in effect between these two possible next
 lines?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">words</span><span class="p">.</span><span class="n">Clear</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">words</span><span class="p">.</span><span class="n">Clear</span><span class="p">()</span>
 
 <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
 </pre></div>
@@ -363,7 +365,7 @@ spot where you removed the element?</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

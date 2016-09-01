@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>10.6. Lab: Arrays &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>10.6. Lab: Arrays &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="10. Arrays" href="arrays.html" />
     <link rel="next" title="10.7. Lab: Performance" href="lab-searching-arrays-lists-maps.html" />
@@ -179,7 +181,7 @@
 <li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">10.6. Lab: Arrays</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.6. Lab: Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
@@ -352,7 +354,7 @@ you might want to write a separate testing function that prints
 and labels inputs, passes the data on to the function being tested,
 and prints results.</p>
 <p>Recall that you can declare an array in two ways:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">myArray1</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">10</span><span class="p">];</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[]</span> <span class="n">myArray1</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">10</span><span class="p">];</span>
 <span class="kt">int</span><span class="p">[]</span> <span class="n">myArray2</span> <span class="p">=</span> <span class="p">{</span> <span class="m">7</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span> <span class="p">};</span>
 </pre></div>
 </div>
@@ -362,7 +364,7 @@ array where the elements are taken from the bracketed list of
 values. The second will be convenient to set up tests for this lab.</p>
 <ol class="arabic">
 <li><p class="first">Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Print label and then each element preceeded by a space,</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Print label and then each element preceeded by a space,</span>
       <span class="c1">///  all across one line.  Example:</span>
       <span class="c1">///  If a contains {3, -1, 5} and label is &quot;Nums:&quot;,</span>
       <span class="c1">///  print:   Nums: 3 -1 5</span>
@@ -377,7 +379,7 @@ on the same line, but a later label can start with <code class="docutils literal
 to advance to the next line.</p>
 </li>
 <li><p class="first">Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Prompt the user to enter n integers, and</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">///  Prompt the user to enter n integers, and</span>
       <span class="c1">///  return an array containing them.</span>
       <span class="c1">///  Example:  ReadInts(&quot;Enter values&quot;, 3) could generate the</span>
       <span class="c1">///  Console sequence:</span>
@@ -397,7 +399,7 @@ to advance to the next line.</p>
 are included at the end of the class.</p>
 </li>
 <li><p class="first">Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Return the minimum value in a.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">///  Return the minimum value in a.</span>
       <span class="c1">///  Example: If a contains {5, 7, 4, 9}, return 4.</span>
       <span class="c1">///  Assume a contains at least one value.</span>
       <span class="k">static</span> <span class="kt">int</span> <span class="nf">Minimum</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
@@ -408,7 +410,7 @@ are included at the end of the class.</p>
 </div>
 </li>
 <li><p class="first">Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Return the number of even values in a.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">///  Return the number of even values in a.</span>
       <span class="c1">///  Example: If a contains {-4, 7, 6, 12, 9}, return 3.</span>
       <span class="k">static</span> <span class="kt">int</span> <span class="nf">CountEven</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
       <span class="p">{</span>
@@ -418,7 +420,7 @@ are included at the end of the class.</p>
 </div>
 </li>
 <li><p class="first">Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Add corresponding elements of a and b and place them in sum.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">///  Add corresponding elements of a and b and place them in sum.</span>
       <span class="c1">///  Assume all arrays have the same Length.</span>
       <span class="c1">///  Example: If a contains {2, 4, 6} and b contains {7, -1, 8}</span>
       <span class="c1">///  then at the end sum should contain {9, 3, 14}.</span>
@@ -436,7 +438,7 @@ dimensionality before proceeding.</p>
 if you do the next one:</p>
 </li>
 <li><p class="first">Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Return a new array whose elements are the sums of the</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">///  Return a new array whose elements are the sums of the</span>
       <span class="c1">///  corresponding elements of a and b.</span>
       <span class="c1">///  Assume a and b have the same Length.</span>
       <span class="c1">///  Example: If a contains {2, 4, 6} and b contains {3, -1, 5}</span>
@@ -450,7 +452,7 @@ if you do the next one:</p>
 <p>See how this is different from the previous part!</p>
 </li>
 <li><p class="first">Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Return true if the numbers are sorted in increasing order,</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">///  Return true if the numbers are sorted in increasing order,</span>
       <span class="c1">///  so that in each pair of consecutive entries,</span>
       <span class="c1">///  the second is always at least as large as the first.</span>
       <span class="c1">///  Return false otherwise.  Assume an array with fewer than</span>
@@ -470,7 +472,7 @@ immediately sure you know the answer?</p>
 </li>
 <li><p class="first"><strong>20 % extra credit:</strong>
 Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Print an ascending sequence from the elements</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">///  Print an ascending sequence from the elements</span>
       <span class="c1">///  of a, starting with the first element and printing</span>
       <span class="c1">///  the next number after the previous number</span>
       <span class="c1">///  that is at least as large as the previous one printed.</span>
@@ -485,7 +487,7 @@ Complete and test the function with documentation and heading:</p>
 </li>
 <li><p class="first"><strong>20 % extra credit:</strong>
 Complete and test the function with documentation and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">///  Prints each ascending run in a, one run per line.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">///  Prints each ascending run in a, one run per line.</span>
       <span class="c1">///  Example: If a contains {2, 5, 8, 3, 9, 9, 8}, print</span>
       <span class="c1">///  2 5 8</span>
       <span class="c1">///  3 9 9</span>
@@ -503,7 +505,7 @@ function that computes the vector dot product of these two
 floating point arrays. The vector dot product (in mathematics) is defined
 as the sum of <code class="docutils literal"><span class="pre">a[i]</span> <span class="pre">*</span> <span class="pre">b[i]</span></code> (for all i). Here&#8217;s an example of how it
 should work:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">double</span><span class="p">[]</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1.5</span><span class="p">,</span> <span class="m">2.0</span><span class="p">,</span> <span class="m">3.0</span> <span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="p">[]</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1.5</span><span class="p">,</span> <span class="m">2.0</span><span class="p">,</span> <span class="m">3.0</span> <span class="p">};</span>
 <span class="kt">double</span><span class="p">[]</span> <span class="n">b</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">[]</span> <span class="p">{</span> <span class="m">4.0</span><span class="p">,</span> <span class="m">2.0</span><span class="p">,</span> <span class="p">-</span><span class="m">1.0</span> <span class="p">};</span>
 
 <span class="kt">double</span> <span class="n">dotProduct</span> <span class="p">=</span> <span class="n">VectorDotProduct</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
@@ -520,14 +522,14 @@ where the digit for the highest power of 10 is kept in position 0,
 next highest in
 position 1, and so on. The ones position is always at position
 array.Length - 1:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">digits</span> <span class="p">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">6</span><span class="p">,</span> <span class="m">7</span> <span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[]</span> <span class="n">digits</span> <span class="p">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">6</span><span class="p">,</span> <span class="m">7</span> <span class="p">};</span>
 </pre></div>
 </div>
 <p>representing <span class="math">\(1(10^3)+9(10^2)+6(10^1)+7(10^0)\)</span>.</p>
 <p>Without showing you the code, here is how you would convert a
 number from its digits to an integer efficiently, without
 calculating high powers for 10 separately:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">num</span> <span class="p">=</span> <span class="m">0</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="p">=</span> <span class="m">0</span>
 <span class="n">num</span> <span class="p">=</span> <span class="m">10</span> <span class="p">*</span> <span class="m">0</span> <span class="p">+</span> <span class="m">1</span> <span class="p">=</span> <span class="m">1</span>
 <span class="n">num</span> <span class="p">=</span> <span class="m">10</span> <span class="p">*</span> <span class="m">1</span> <span class="p">+</span> <span class="m">9</span> <span class="p">=</span> <span class="m">19</span>
 <span class="n">num</span> <span class="p">=</span> <span class="m">10</span> <span class="p">*</span> <span class="m">19</span> <span class="p">+</span> <span class="m">6</span> <span class="p">=</span> <span class="m">196</span>
@@ -571,7 +573,7 @@ is returned. Base 2 is central to computer hardware.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

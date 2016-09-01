@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>18.3. Command Line Introduction &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>18.3. Command Line Introduction &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="18. Appendix" href="appendix.html" />
     <link rel="next" title="18.4. Precedence of Operators" href="precedence.html" />
@@ -231,7 +233,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="appendix.html">18. Appendix</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">18.3. Command Line Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">18.3. Command Line Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
@@ -359,7 +361,7 @@ commands.</p>
 you get to a terminal, so we will only distinguish Windows and Mac OS-X.</p>
 <div class="section" id="navigating-directories">
 <span id="index-1"></span><span id="id2"></span><h2>18.3.1. Navigating Directories<a class="headerlink" href="#navigating-directories" title="Permalink to this headline">¶</a></h2>
-<p>First make sure you are familiar with <a class="reference internal" href="../files/paths.html#path-strings"><span>Path Strings</span></a>.</p>
+<p>First make sure you are familiar with <a class="reference internal" href="../files/paths.html#path-strings"><span class="std std-ref">Path Strings</span></a>.</p>
 <p>In a command shell there is always a <em>current working directory</em>, usually
 shown in the prompt for the next command.
 When you open a Mono Command Prompt or Terminal window you will see
@@ -412,7 +414,7 @@ you are likely to want to get to
 your home directory (where the Mac users start automatically).</p>
 <p>Windows users enter the command below (substituting your login ID)
 to get to your home directory:</p>
-<div class="highlight-none"><div class="highlight"><pre>cd C:\Users\yourLoginId
+<div class="highlight-none"><div class="highlight"><pre><span></span>cd C:\Users\yourLoginId
 </pre></div>
 </div>
 <p>The cd is short for &#8220;Change Directory&#8221;, changing the current directory.</p>
@@ -426,13 +428,13 @@ plugged in).  Windows remembers a <em>separate</em> current directory for each
 You do <em>not change the current drive</em> with the cd command.
 The command to change the current drive is just the name of the
 drive with a colon after it.  For example the command</p>
-<div class="highlight-none"><div class="highlight"><pre>E:
+<div class="highlight-none"><div class="highlight"><pre><span></span>E:
 </pre></div>
 </div>
 <p>sets the current drive to E:, and the active directory is the
 current directory on E:.</p>
 <p>However, if the current drive is C:, and you enter the command</p>
-<div class="highlight-none"><div class="highlight"><pre>cd E:\comp170
+<div class="highlight-none"><div class="highlight"><pre><span></span>cd E:\comp170
 </pre></div>
 </div>
 <p class="last">then you change the current directory on E:, but <em>the current drive remains C:</em>.</p>
@@ -450,7 +452,7 @@ directory in the path converts the view to the version we use on the
 command line.</li>
 <li>When you see a full absolute path, you can just note it and manually copy it,
 or else select it all and copy it
-and follow the instructions in <a class="reference internal" href="#copypaste"><span>Copy and Paste</span></a> to later
+and follow the instructions in <a class="reference internal" href="#copypaste"><span class="std std-ref">Copy and Paste</span></a> to later
 paste in the command window.</li>
 <li>In any case click in the terminal window, type <em>cd</em> and a space, then
 type or paste the path.</li>
@@ -495,7 +497,7 @@ prompt will change to show this new directory location and programs like
 by name.  If the Comp170 directory was you current directory, it would
 be shorter to use relative paths and just <code class="docutils literal"><span class="pre">cd</span> <span class="pre">hello</span></code>.  Remember if
 you want a different Windows drive, you must first use a
-<a class="reference internal" href="#drive-change"><span>drive change command</span></a>.</p>
+<a class="reference internal" href="#drive-change"><span class="std std-ref">drive change command</span></a>.</p>
 <p>On a Mac absolute or relative paths work with <code class="docutils literal"><span class="pre">cd</span></code>.
 There is no issue with drives.</p>
 <p>If you included a space in one or more of the directory names, for
@@ -523,7 +525,7 @@ a C# source file in that directory and enter <em>cd hello</em> in the command sh
 <dl class="docutils" id="index-6">
 <dt>rmdir</dt>
 <dd><p class="first">removes an <em>empty</em> directory that you give as parameter, e.g.,</p>
-<div class="last highlight-none"><div class="highlight"><pre>rmdir hello
+<div class="last highlight-none"><div class="highlight"><pre><span></span>rmdir hello
 </pre></div>
 </div>
 </dd>
@@ -547,7 +549,7 @@ use of cat is to con<strong>cat</strong>enate files.</p>
 <div class="line">type <em>textFileName</em></div>
 <div class="line">cat <em>textFileName</em></div>
 </div>
-<div class="highlight-none"><div class="highlight"><pre>type my_program.cs
+<div class="highlight-none"><div class="highlight"><pre><span></span>type my_program.cs
 cat my_program.cs
 </pre></div>
 </div>
@@ -557,7 +559,7 @@ you wipe out the original contents!</p>
 <div class="line">copy <em>originalFile</em>  <em>copyName</em></div>
 <div class="line">cp <em>originalFile</em>  <em>copyName</em></div>
 </div>
-<div class="highlight-none"><div class="highlight"><pre>copy prog.cs prog_bak.cs
+<div class="highlight-none"><div class="highlight"><pre><span></span>copy prog.cs prog_bak.cs
 cp prog.cs prog_bak.cs
 </pre></div>
 </div>
@@ -566,7 +568,7 @@ cp prog.cs prog_bak.cs
 <div class="line">erase <em>fileToKill</em></div>
 <div class="line">rm <em>fileToKill</em></div>
 </div>
-<div class="highlight-none"><div class="highlight"><pre>erase poorAttempt.cs
+<div class="highlight-none"><div class="highlight"><pre><span></span>erase poorAttempt.cs
 rm poorAttempt.cs
 </pre></div>
 </div>
@@ -649,7 +651,7 @@ more to disambiguate the meaning.</li>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

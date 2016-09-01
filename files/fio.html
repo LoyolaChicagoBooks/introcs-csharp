@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>9.8. FIO Helper Class &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>9.8. FIO Helper Class &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="9. Files, Paths, and Directories" href="files.html" />
     <link rel="next" title="9.9. Chapter Review Questions" href="reviewfiles.html" />
@@ -169,7 +171,7 @@
 <li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">9.8. FIO Helper Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.8. FIO Helper Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -325,7 +327,7 @@ may be two folders down in <code class="file docutils literal"><span class="pre"
 of directory strings to look through.  At this point we have only discussed
 sequences of individual characters.   The variable <code class="docutils literal"><span class="pre">paths</span></code>
 contains a sequence of directory paths to check.
-(More on the syntax comes up shortly in <a class="reference internal" href="../arrays/arrays.html#array"><span>Arrays</span></a>.)
+(More on the syntax comes up shortly in <a class="reference internal" href="../arrays/arrays.html#array"><span class="std std-ref">Arrays</span></a>.)
 In our case we make the
 sequence contain
 <code class="docutils literal"><span class="pre">&quot;.&quot;</span></code>, the current directory, <code class="docutils literal"><span class="pre">&quot;..&quot;</span></code>, the parent directory, and
@@ -334,7 +336,7 @@ We make <code class="docutils literal"><span class="pre">paths</span></code> a s
 it is visible in all the functions in the class.</p>
 <p>Then the sequence <code class="docutils literal"><span class="pre">paths</span></code>
 can be used in the <code class="docutils literal"><span class="pre">foreach</span></code> loop:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Find a directory containing the filename</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Find a directory containing the filename</span>
 <span class="c1">/// and return the full file path, if it exists.</span>
 <span class="c1">/// Otherwise return null.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">GetPath</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
@@ -354,7 +356,7 @@ We allow for the file to not be in any of the directories in <code class="docuti
 we do not find it, we return <code class="docutils literal"><span class="pre">null</span></code> (no object).</p>
 <p>For convenience, we have an elaboration, using <code class="docutils literal"><span class="pre">GetPath</span></code>,
 that directly opens the file to read:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Find a directory containing filename;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Find a directory containing filename;</span>
 <span class="c1">/// return a new StreamReader to the file</span>
 <span class="c1">/// or null if the file does not exist.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">StreamReader</span> <span class="nf">OpenReader</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
@@ -369,7 +371,7 @@ that directly opens the file to read:</p>
 </div>
 <p>We have a variation on <code class="docutils literal"><span class="pre">GetPath</span></code> that just return the path to the
 directory containing the file.  Here is the heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a directory conaining the filename, if it exists.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return a directory conaining the filename, if it exists.</span>
 <span class="c1">/// Otherwise return null.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">GetLocation</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
 </pre></div>
@@ -378,7 +380,7 @@ directory containing the file.  Here is the heading:</p>
 that you read from.  You can get a location from <code class="docutils literal"><span class="pre">GetLocation</span></code> and then
 write to the same directory, creating a <code class="docutils literal"><span class="pre">StreamWriter</span></code>.
 You can use the convenience function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Join the location directory and filename;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Join the location directory and filename;</span>
 <span class="c1">/// open and return a StreamWriter to the file.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">StreamWriter</span> <span class="nf">OpenWriter</span><span class="p">(</span><span class="kt">string</span> <span class="n">location</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
 <span class="p">{</span>
@@ -391,7 +393,7 @@ You can use the convenience function:</p>
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/fio/fio.cs">fio/fio.cs</a></p>
 <p>We illustrate the use of <code class="docutils literal"><span class="pre">FIO</span></code> functions in example file
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/fio_usage/fio_usage.cs">fio_usage/fio_usage.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
@@ -457,7 +459,7 @@ and run this program, and it will also work.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

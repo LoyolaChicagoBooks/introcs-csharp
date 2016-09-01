@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>13.3. The Rational Class &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>13.3. The Rational Class &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="13. Classes and Object-Oriented Programming" href="classes.html" />
     <link rel="next" title="13.4. Planning A Class Structure" href="planning_classes.html" />
@@ -202,7 +204,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">13.3. The Rational Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">13.3. The Rational Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
@@ -316,7 +318,7 @@
 <p>Like other numbers, we think of a rational number as a unit,
 but all rational numbers can be most easily represented as a fraction,
 a ratio of two integers. We can create a class Rational, so</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Rational</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>would create a new Rational number for the mathematical expression, 2/3.</p>
@@ -332,7 +334,7 @@ in the illustration
 we operate on a single rational number, and do calculation with a pair,
 and parse string literals.  The code is from
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_rational/test_rational.cs">test_rational/test_rational.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
@@ -363,9 +365,9 @@ and parse string literals.  The code is from
 </div>
 <p>One non-obvious method is <code class="docutils literal"><span class="pre">CompareTo</span></code>.  This one method allows
 all the usual comparison operators to be used with the result.
-We will discuss it more in <a class="reference internal" href="../interfaces/fractions-revisited.html#rationals-revisited"><span>Rationals Revisited</span></a>.</p>
+We will discuss it more in <a class="reference internal" href="../interfaces/fractions-revisited.html#rationals-revisited"><span class="std std-ref">Rationals Revisited</span></a>.</p>
 <p>The results we would like when running this testing code:</p>
-<div class="highlight-none"><div class="highlight"><pre>6/(-10) simplifies to -3/5
+<div class="highlight-none"><div class="highlight"><pre><span></span>6/(-10) simplifies to -3/5
 reciprocal of -3/5 is -5/3
 -3/5 negated is 3/5
 -3/5 + 1/2 is -1/10
@@ -384,7 +386,7 @@ Parse &quot;1.125&quot; to Rational: 9/8
 Each individual Rational that we use will have its own numerator and
 denominator, which we store as the instance variables
 (and which we abbreviate since we are lazy):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Rational</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Rational</span>
 <span class="p">{</span>
    <span class="k">private</span> <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
    <span class="k">private</span> <span class="kt">int</span> <span class="n">denom</span><span class="p">;</span>
@@ -399,10 +401,10 @@ our internal representations unique, and use the smallest numbers.</p>
 <p>Intermediate operations and initial constructor parameters
 will not always be in lowest terms.  To reduce to lowest terms
 we need to divide the original numerator and denominator by their
-<a class="reference internal" href="../while/gcdexamples.html#gcd"><span>Greatest Common Divisor</span></a>.    We include a <em>static</em> GCD method taken from that section,
+<a class="reference internal" href="../while/gcdexamples.html#gcd"><span class="std std-ref">Greatest Common Divisor</span></a>.    We include a <em>static</em> GCD method taken from that section,
 and make the adjustment to lowest terms in a helping method, <code class="docutils literal"><span class="pre">Normalize</span></code>,
 that is called by the constructor:</p>
-<div class="highlight-csharp" id="index-1"><div class="highlight"><pre>      <span class="c1">/// Force the invarient: in lowest terms with a positive denominator.</span>
+<div class="highlight-csharp" id="index-1"><div class="highlight"><pre><span></span>      <span class="c1">/// Force the invarient: in lowest terms with a positive denominator.</span>
       <span class="k">private</span> <span class="k">void</span> <span class="nf">Normalize</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">denom</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// We *should* force an Exception, but we won&#39;t.</span>
@@ -442,7 +444,7 @@ its parameters.</li>
 Note that by the time we
 are done constructing a new Rational, it is in this normalized form:  lowest
 terms and positive denominator:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Create a fraction given numerator and denominator.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Create a fraction given numerator and denominator.</span>
       <span class="k">public</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span> <span class="n">numerator</span><span class="p">,</span> <span class="kt">int</span> <span class="n">denominator</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">num</span> <span class="p">=</span> <span class="n">numerator</span><span class="p">;</span>
@@ -466,7 +468,7 @@ The shorthand notation
 without an explicit object reference and dot cannot be used, because
 there is no
 current object to reference implicitly:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">void</span> <span class="nf">AnInstanceMethod</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">AnInstanceMethod</span><span class="p">()</span>
 <span class="p">{</span>
       <span class="p">...</span>
 <span class="p">}</span>
@@ -483,7 +485,7 @@ inaccessible inside the static method.)</p>
 </div>
 <p>The Rational class has the usual getter methods, to access the
 obvious parts of its state:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetNumerator</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetNumerator</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
       <span class="p">}</span>
@@ -495,7 +497,7 @@ obvious parts of its state:</p>
 </pre></div>
 </div>
 <p>We certainly want to be able to display a Rational as a string version:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a string of the fraction in lowest terms,</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a string of the fraction in lowest terms,</span>
       <span class="c1">/// omitting the denominator if it is 1.</span>
       <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
       <span class="p">{</span>
@@ -511,7 +513,7 @@ a negative Rational will always have a leading &#8220;-&#8221; as in &#8220;-5/9
 &#8220;5/-9&#8221;</p>
 <p>With a Rational, several other conversions make sense:  to <code class="docutils literal"><span class="pre">double</span></code>
 and <code class="docutils literal"><span class="pre">decimal</span></code> approximations.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a double approximation to the fraction.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a double approximation to the fraction.</span>
       <span class="k">public</span> <span class="kt">double</span> <span class="nf">ToDouble</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">num</span><span class="p">)/</span><span class="n">denom</span><span class="p">;</span>
@@ -531,7 +533,7 @@ How do we make a new Rational?
 We have a constructor!  We can easily use it.  The reciprocal
 swaps the numerator and denominator.  It is also easy to negate
 a Rational:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new Rational which is the reciprocal of this Rational.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the reciprocal of this Rational.</span>
       <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Reciprocal</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">denom</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
@@ -563,7 +565,7 @@ being referred to when it starts, but in this case the method <em>returns</em> o
 (before being reduced to lowest terms).
 Note that there were originally <em>two</em> digits after the decimal point
 and then the denominator gets <em>two</em> zeroes to have the right power of 10:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Parse a string of an integer, fraction (with /) or decimal (with .)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Parse a string of an integer, fraction (with /) or decimal (with .)</span>
       <span class="c1">///  and return the corresponding Rational.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="n">Rational</span> <span class="nf">Parse</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
       <span class="p">{</span>
@@ -589,7 +591,7 @@ and then the denominator gets <em>two</em> zeroes to have the right power of 10:
 <p>We can deal with the current object without using dot notation.  What if we are
 dealing with <em>more than one</em> Rational, the current one <em>and</em> another one,
 like the parameter in Multiply:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
       <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -598,7 +600,7 @@ and dot notation for another
 <em>named</em> object:  <code class="docutils literal"><span class="pre">num</span></code> and <code class="docutils literal"><span class="pre">denom</span></code> refer to the fields in the <em>current</em> object, and
 <code class="docutils literal"><span class="pre">f.num</span></code> and <code class="docutils literal"><span class="pre">f.denom</span></code> refer to fields for the other
 <code class="docutils literal"><span class="pre">Rational</span></code>, the parameter <code class="docutils literal"><span class="pre">f</span></code>.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
       <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
       <span class="p">{</span>  <span class="c1">// end Multiply heading chunk</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">num</span><span class="p">*</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="p">*</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
@@ -620,9 +622,9 @@ your knowledge of arithmetic! They do <em>not</em> add further C# syntax.</p>
 The testing code we started with, in
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_rational/test_rational.cs">test_rational/test_rational.cs</a>
 uses all the methods.  We will see more advance ways to test Rational
-in <a class="reference internal" href="../testing/testing.html#testing"><span>Testing</span></a>.</p>
+in <a class="reference internal" href="../testing/testing.html#testing"><span class="std std-ref">Testing</span></a>.</p>
 <p>There is also a more convenient version of Rational,
-using advanced concepts, in <a class="reference internal" href="overload-op.html#defining-operators"><span>Defining Operators (Optional)</span></a>.</p>
+using advanced concepts, in <a class="reference internal" href="overload-op.html#defining-operators"><span class="std std-ref">Defining Operators (Optional)</span></a>.</p>
 </div>
 <div class="section" id="pictorial-playing-computer">
 <h2>13.3.2. Pictorial Playing Computer<a class="headerlink" href="#pictorial-playing-computer" title="Permalink to this headline">¶</a></h2>
@@ -630,7 +632,7 @@ using advanced concepts, in <a class="reference internal" href="overload-op.html
 as a review of much of the previous sections.  We explicitly show a local variable
 <code class="docutils literal"><span class="pre">this</span></code> to identify the current object in an instance method or constructor.</p>
 <p>The first line of <code class="docutils literal"><span class="pre">Main</span></code>,</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Rational</span> <span class="n">f</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="p">-</span><span class="m">10</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">f</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="p">-</span><span class="m">10</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>creates a new Rational, so it calls the constructor.  At the very beginning of the
@@ -641,7 +643,7 @@ variables <code class="docutils literal"><span class="pre">numerator</span></cod
 The figure illustrates the memory state at the beginning of the constructor call:</p>
 <a class="reference internal image-reference" href="../_images/callConstructor.png"><img alt="../_images/callConstructor.png" src="../_images/callConstructor.png" style="width: 124pt;" /></a>
 <p>Note the immediate value assigned to the numeric instance variables is zero:  This is
-as discussed in <a class="reference internal" href="../arrays/onedim.html#default-fields"><span>Default Initializations</span></a>.
+as discussed in <a class="reference internal" href="../arrays/onedim.html#default-fields"><span class="std std-ref">Default Initializations</span></a>.
 Of course we do not want to keep those default values:
 The constructor finds the value of the local variable <code class="docutils literal"><span class="pre">numerator</span></code>, and needs to
 assign the value 6 to a variable <code class="docutils literal"><span class="pre">num</span></code>.  The compiler has looked
@@ -671,7 +673,7 @@ Just before the constructor completes we have:</p>
 initializing <code class="docutils literal"><span class="pre">f</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/setF.png"><img alt="../_images/setF.png" src="../_images/setF.png" style="width: 120pt;" /></a>
 <p>Consider the next line of <code class="docutils literal"><span class="pre">Main</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>We omit the internals of the WriteLine call, except to note that it must convert
@@ -683,7 +685,7 @@ so the implicit <code class="docutils literal"><span class="pre">this</span></co
 by <code class="docutils literal"><span class="pre">WriteLine</span></code>....</p>
 <p>We skip the similar details through two more <code class="docutils literal"><span class="pre">WriteLine</span></code> statements and the
 initialization of <code class="docutils literal"><span class="pre">h</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Rational</span> <span class="n">h</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">h</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">WriteLine</span></code>
@@ -747,7 +749,7 @@ a path through <em>several</em> references in sequence.</p>
 <div class="section" id="forcematch-exercise">
 <span id="index-2"></span><h2>13.3.3. ForceMatch Exercise<a class="headerlink" href="#forcematch-exercise" title="Permalink to this headline">¶</a></h2>
 <p>Suppose we have a class:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Pair</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pair</span>
 <span class="p">{</span>
    <span class="k">private</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
 
@@ -770,7 +772,7 @@ a path through <em>several</em> references in sequence.</p>
 </pre></div>
 </div>
 <p>A test would be code in another class:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Pair</span> <span class="n">first</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">7</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Pair</span> <span class="n">first</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">7</span><span class="p">);</span>
 <span class="n">Pair</span> <span class="n">second</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">9</span><span class="p">)</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>  <span class="c1">// prints (1, 9)</span>
 <span class="n">first</span><span class="p">.</span><span class="n">ForceMatch</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>
@@ -779,7 +781,7 @@ a path through <em>several</em> references in sequence.</p>
 </div>
 <ol class="loweralpha">
 <li><p class="first">Would this code work?  If not, explain why not:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">void</span> <span class="nf">ForceMatch</span><span class="p">(</span><span class="n">Pair</span> <span class="n">p</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">ForceMatch</span><span class="p">(</span><span class="n">Pair</span> <span class="n">p</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="n">p</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
 <span class="p">}</span>
@@ -807,7 +809,7 @@ do a graphical play-computer like in the last section.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

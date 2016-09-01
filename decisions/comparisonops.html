@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5.4. More Conditional Expressions &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>5.4. More Conditional Expressions &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="5. Decisions" href="decisions.html" />
     <link rel="next" title="5.5. Multiple Tests and if-else Statements" href="ifelsechained.html" />
@@ -126,7 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="conditions.html">5.1. Conditions I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.4. More Conditional Expressions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.4. More Conditional Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
@@ -378,7 +380,7 @@ and characters.  Strings can also be compared, most often for
 equality (==) or inequality (!=), though they also have a defined order,
 so you can use <code class="docutils literal"><span class="pre">&lt;</span></code>, for instance.</p>
 <p>Predict the results and try each line in csharp:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
 <span class="n">x</span><span class="p">;</span>
 <span class="n">x</span> <span class="p">==</span> <span class="m">5</span><span class="p">;</span>
 <span class="n">x</span> <span class="p">==</span> <span class="m">6</span><span class="p">;</span>
@@ -408,7 +410,7 @@ for the week, taking into account overtime. Hours worked over 40
 are overtime, paid at 1.5 times the normal rate. This is a natural
 place for a function enclosing the calculation.</p>
 <p><em>Read</em> the setup for the function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the total weekly wages for a worker working</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return the total weekly wages for a worker working</span>
 <span class="c1">/// totalHours with a given regular hourlyWage.</span>
 <span class="c1">/// Include overtime for hours over 40.</span>
 <span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
@@ -452,7 +454,7 @@ also shown below.</p>
 29
 30
 31
-32</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+32</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
    <span class="k">class</span> <span class="nc">Wages</span>
@@ -488,7 +490,7 @@ also shown below.</p>
 </td></tr></table></div>
 <p id="index-1">This program also introduces new notation for
 displaying decimal numbers:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span>
    <span class="s">&quot;Wages for {0} hours at ${1:F2} per hour are ${2:F2}.&quot;</span><span class="p">,</span>
    <span class="n">hours</span><span class="p">,</span> <span class="n">wage</span><span class="p">,</span> <span class="n">total</span><span class="p">);</span>
 </pre></div>
@@ -503,7 +505,7 @@ point are shown.  Also the result is <em>rounded</em>.
 This is appropriate for money with dollars and cents.
 You can replace the 2 to display
 a different number of digits after the decimal point.
-More formatting syntax is introduced in <a class="reference internal" href="../for/forexamples.html#tables"><span>Tables</span></a>.</p>
+More formatting syntax is introduced in <a class="reference internal" href="../for/forexamples.html#tables"><span class="std std-ref">Tables</span></a>.</p>
 <p>Because <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statements alter the flow or execution, and altering this flow
 causes lots of problems for many students, this is a good place to
 play computer to illustrate clearly what is happening.  We will just
@@ -617,7 +619,7 @@ solve the same problem!</p>
 10
 11
 12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">double</span> <span class="n">regularHours</span><span class="p">,</span> <span class="n">overtime</span><span class="p">;</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">totalHours</span> <span class="p">&lt;=</span> <span class="m">40</span><span class="p">)</span> <span class="p">{</span>
@@ -736,7 +738,7 @@ are needed for graduation.)</p>
 In other words, while <code class="docutils literal"><span class="pre">y</span></code> is not 0, adding it to  <code class="docutils literal"><span class="pre">x</span></code> does not
 change <code class="docutils literal"><span class="pre">x</span></code>.  (Hints:  Note the approximate number of digits of accuracy
 of a <code class="docutils literal"><span class="pre">double</span></code>, and remember the power of 10 notation with <code class="docutils literal"><span class="pre">E</span></code>
-for <code class="docutils literal"><span class="pre">double</span></code> literals. See <a class="reference internal" href="../data/types-and-conversions.html#type-double"><span>Type double</span></a> and the section on limits
+for <code class="docutils literal"><span class="pre">double</span></code> literals. See <a class="reference internal" href="../data/types-and-conversions.html#type-double"><span class="std std-ref">Type double</span></a> and the section on limits
 after it.)</p>
 </div>
 </div>
@@ -754,7 +756,7 @@ after it.)</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

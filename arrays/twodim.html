@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>10.8. Multi-dimensional Arrays &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>10.8. Multi-dimensional Arrays &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="10. Arrays" href="arrays.html" />
     <link rel="next" title="10.9. Chapter Review Questions" href="reviewarrays.html" />
@@ -181,7 +183,7 @@
 <li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">10.8. Multi-dimensional Arrays</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.8. Multi-dimensional Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -325,13 +327,13 @@ we need something more for a two dimensional table,
 where data values vary over both row and column.</p>
 <p>If we have a table of integers, for instance with three
 rows and four columns:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="m">2</span> <span class="m">4</span>  <span class="m">7</span> <span class="m">55</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="m">2</span> <span class="m">4</span>  <span class="m">7</span> <span class="m">55</span>
 <span class="m">3</span> <span class="m">1</span>  <span class="m">8</span> <span class="m">10</span>
 <span class="m">6</span> <span class="m">0</span> <span class="m">49</span> <span class="m">12</span>
 </pre></div>
 </div>
 <p>We could declare an array variable of the right size as</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[,]</span> <span class="n">table</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">];</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[,]</span> <span class="n">table</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>Multiple indices are separated by commas inside the square brackets.
@@ -350,14 +352,14 @@ row in normal counting, but we start array indices at 0, so there are
 rows 0, 1, and 2, and the 8 has row index 1.
 Again starting with index 0 for columns, the 8 is at index
 2. We can assign a value to that position with</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">table</span><span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>In fact a two dimensional array just needs two indices that could mean
 anything.  For instance, it was just the standard convention,
 calling the left index the row.  They could have been switched everywhere, and
 assume the notation <code class="docutils literal"><span class="pre">table[column,</span> <span class="pre">row]</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[,]</span> <span class="n">table</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">4</span><span class="p">,</span> <span class="m">3</span><span class="p">];</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[,]</span> <span class="n">table</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">4</span><span class="p">,</span> <span class="m">3</span><span class="p">];</span>
 <span class="n">table</span><span class="p">[</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="m">8</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -367,7 +369,7 @@ dimension array, with more indices between the square braces.  We
 will only consider two dimensional arrays in the examples here.</p>
 <p>A shorthand for initializing all the data in the table,
 analogous to initializing one dimensional arrays is:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[,</span> <span class="p">]</span> <span class="n">table</span> <span class="p">=</span> <span class="p">{</span> <span class="p">{</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span>  <span class="m">7</span><span class="p">,</span> <span class="m">55</span><span class="p">},</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[,</span> <span class="p">]</span> <span class="n">table</span> <span class="p">=</span> <span class="p">{</span> <span class="p">{</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span>  <span class="m">7</span><span class="p">,</span> <span class="m">55</span><span class="p">},</span>
                   <span class="p">{</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span>  <span class="m">8</span><span class="p">,</span> <span class="m">10</span><span class="p">},</span>
                   <span class="p">{</span><span class="m">6</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">49</span><span class="p">,</span> <span class="m">12</span><span class="p">}</span> <span class="p">};</span>
 </pre></div>
@@ -376,7 +378,7 @@ analogous to initializing one dimensional arrays is:</p>
 <p>Often two dimensional arrays, like one dimensional  arrays, are processed
 in loops. Multiple dimension arrays are often processed in nested loops.
 We could print out this table using columns 5 spaces wide with the code:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="m">4</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span> <span class="p">{</span>
                <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0, 5}&quot;</span><span class="p">,</span> <span class="n">table</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]);</span>
             <span class="p">}</span>
@@ -390,7 +392,7 @@ that we knew.  We need something more general.  For one dimensional
 arrays we had the Length property, but now there are more than one
 lengths!</p>
 <p>The following csharp sequence illustrates the syntax needed:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">int</span><span class="p">[,</span> <span class="p">]</span> <span class="n">table</span> <span class="p">=</span> <span class="p">{</span> <span class="p">{</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span>  <span class="m">7</span><span class="p">,</span> <span class="m">55</span><span class="p">},</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">int</span><span class="p">[,</span> <span class="p">]</span> <span class="n">table</span> <span class="p">=</span> <span class="p">{</span> <span class="p">{</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span>  <span class="m">7</span><span class="p">,</span> <span class="m">55</span><span class="p">},</span>
       <span class="p">&gt;</span>                   <span class="p">{</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span>  <span class="m">8</span><span class="p">,</span> <span class="m">10</span><span class="p">},</span>
       <span class="p">&gt;</span>                   <span class="p">{</span><span class="m">6</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">49</span><span class="p">,</span> <span class="m">12</span><span class="p">}</span> <span class="p">};</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">table</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
@@ -432,7 +434,7 @@ as the <code class="docutils literal"><span class="pre">foreach</span></code> st
 <p>Just replacing 3 and 4 by <code class="docutils literal"><span class="pre">table.GetLength(0)</span></code> and <code class="docutils literal"><span class="pre">table.GetLength(1)</span></code> in the
 table printing code would make it general.</p>
 <p>A more elaborate table might include row and column sums:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>  <span class="m">2</span>   <span class="m">4</span>   <span class="m">7</span>  <span class="m">55</span> <span class="p">|</span>  <span class="m">68</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>  <span class="m">2</span>   <span class="m">4</span>   <span class="m">7</span>  <span class="m">55</span> <span class="p">|</span>  <span class="m">68</span>
   <span class="m">3</span>   <span class="m">1</span>   <span class="m">8</span>  <span class="m">10</span> <span class="p">|</span>  <span class="m">22</span>
   <span class="m">6</span>   <span class="m">0</span>  <span class="m">49</span>  <span class="m">12</span> <span class="p">|</span>  <span class="m">67</span>
 <span class="p">---------------------</span>
@@ -454,11 +456,11 @@ width that is just large enough for the longest numbers.
 When looking through the data for string lengths, the row and column
 structure is not important, so the code illustrates <code class="docutils literal"><span class="pre">foreach</span></code> loops
 to chug through all the data.  We use the earlier trick in
-<a class="reference internal" href="../for/forexamples.html#modular-mult-table"><span>Modular Multiplication Table</span></a>, creating a custom format string to make columns
+<a class="reference internal" href="../for/forexamples.html#modular-mult-table"><span class="std std-ref">Modular Multiplication Table</span></a>, creating a custom format string to make columns
 the right width.</p>
-<p>The code refers once to the earlier <code class="docutils literal"><span class="pre">StringOfReps</span></code> in <a class="reference internal" href="../for/lab-nested-loops.html#lab-loops"><span>Lab: Loops</span></a>
+<p>The code refers once to the earlier <code class="docutils literal"><span class="pre">StringOfReps</span></code> in <a class="reference internal" href="../for/lab-nested-loops.html#lab-loops"><span class="std std-ref">Lab: Loops</span></a>
 for the row of dashes setting off the column sums:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintTableAndSums</span><span class="p">(</span><span class="kt">int</span><span class="p">[,]</span> <span class="n">t</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintTableAndSums</span><span class="p">(</span><span class="kt">int</span><span class="p">[,]</span> <span class="n">t</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="kt">int</span><span class="p">[]</span> <span class="n">rowSum</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">GetLength</span><span class="p">(</span><span class="m">0</span><span class="p">)],</span>
          <span class="n">colSum</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">GetLength</span><span class="p">(</span><span class="m">1</span><span class="p">)];</span>
@@ -505,7 +507,7 @@ normal row and column indices, starting from 0. For example
 an array with two rows
 and five columns would end up with values below. Your method should set
 the values in the array, not print them out:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="m">11</span> <span class="m">12</span> <span class="m">13</span> <span class="m">14</span> <span class="m">15</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="m">11</span> <span class="m">12</span> <span class="m">13</span> <span class="m">14</span> <span class="m">15</span>
 <span class="m">21</span> <span class="m">22</span> <span class="m">23</span> <span class="m">24</span> <span class="m">25</span>
 </pre></div>
 </div>
@@ -520,7 +522,7 @@ Edit it so that <em>each</em> column
 is only as wide as it needs to be: the width for the widest entry in
 that column.
 The earlier data would now print as:</p>
-<div class="highlight-csharp"><div class="highlight"><pre> <span class="m">2</span> <span class="m">4</span>  <span class="m">7</span> <span class="m">55</span> <span class="p">|</span>  <span class="m">68</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span> <span class="m">2</span> <span class="m">4</span>  <span class="m">7</span> <span class="m">55</span> <span class="p">|</span>  <span class="m">68</span>
  <span class="m">3</span> <span class="m">1</span>  <span class="m">8</span> <span class="m">10</span> <span class="p">|</span>  <span class="m">22</span>
  <span class="m">6</span> <span class="m">0</span> <span class="m">49</span> <span class="m">12</span> <span class="p">|</span>  <span class="m">67</span>
 <span class="p">----------------</span>
@@ -536,12 +538,12 @@ Hint: Create an array of widths and an array of format strings.</p>
 <p>Since you can have an array of any type, it is also possible to have an
 <em>array of arrays</em>.</p>
 <p>You could create a table with shape like the initial example
-in <a class="reference internal" href="#multi-dimensional-arrays"><span>Multi-dimensional Arrays</span></a></p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[][]</span> <span class="n">table2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">array</span><span class="p">[</span><span class="m">3</span><span class="p">][</span><span class="m">4</span><span class="p">];</span>
+in <a class="reference internal" href="#multi-dimensional-arrays"><span class="std std-ref">Multi-dimensional Arrays</span></a></p>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[][]</span> <span class="n">table2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">array</span><span class="p">[</span><span class="m">3</span><span class="p">][</span><span class="m">4</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>and refer to an element still by row and column index::</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">table2</span><span class="p">[</span><span class="m">1</span><span class="p">][</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">table2</span><span class="p">[</span><span class="m">1</span><span class="p">][</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The notational difference so far is just that each index in enclosed in
@@ -564,7 +566,7 @@ their lengths can <em>vary</em>.
 Here is code to make a doubly indexed &#8220;triangular&#8221; collection
 (of 0 values).
 Each row must be separately created as a new array:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[][]</span> <span class="n">tri</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">4</span><span class="p">][];</span> <span class="c1">//create four null int[] elements</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[][]</span> <span class="n">tri</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">4</span><span class="p">][];</span> <span class="c1">//create four null int[] elements</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">tri</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span> <span class="c1">// Length 4 (rows)</span>
    <span class="n">tri</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">i</span><span class="p">+</span><span class="m">1</span><span class="p">];</span>  <span class="c1">// each row has a different length</span>
 <span class="p">}</span>
@@ -593,7 +595,7 @@ since <code class="docutils literal"><span class="pre">tri[1]</span></code> is a
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

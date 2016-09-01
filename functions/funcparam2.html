@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3.4. Multiple Function Parameters &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>3.4. Multiple Function Parameters &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="3. Defining Functions of your Own" href="functions.html" />
     <link rel="next" title="3.5. Returned Function Values" href="funcreturn.html" />
@@ -102,7 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="firstfunc.html">3.1. A First Function Definition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3.4. Multiple Function Parameters</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. Multiple Function Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="funcreturn.html">3.5. Returned Function Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
@@ -319,7 +321,7 @@ uses
 a function, <code class="docutils literal"><span class="pre">SumProblem</span></code>,  with two parameters
 to make it easy to display many sum problems. Read and
 follow the code, and then run:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Addition2</span>
 <span class="p">{</span>
@@ -349,12 +351,12 @@ parameter names in the function definition, also left to right. For
 example a function call with actual parameters,
 <code class="docutils literal"><span class="pre">F(actual1,</span> <span class="pre">actual2,</span> <span class="pre">actual3)</span></code>, calling a function <code class="docutils literal"><span class="pre">F</span></code> with
 definition heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">F</span><span class="p">(</span><span class="kt">int</span> <span class="n">formal1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">formal2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">formal3</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">F</span><span class="p">(</span><span class="kt">int</span> <span class="n">formal1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">formal2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">formal3</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>acts approximately as if the first lines executed inside the called
 function <code class="docutils literal"><span class="pre">F</span></code> were</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">formal1</span> <span class="p">=</span> <span class="n">actual1</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">formal1</span> <span class="p">=</span> <span class="n">actual1</span><span class="p">;</span>
 <span class="n">formal2</span> <span class="p">=</span> <span class="n">actual2</span><span class="p">;</span>
 <span class="n">formal3</span> <span class="p">=</span> <span class="n">actual3</span><span class="p">;</span>
 </pre></div>
@@ -379,7 +381,7 @@ involving terms that are <em>already defined</em>, not just being declared.</p>
 <div class="section" id="quotient-function-exercise">
 <span id="quotientfunctionex"></span><h2>3.4.1. Quotient Function Exercise<a class="headerlink" href="#quotient-function-exercise" title="Permalink to this headline">¶</a></h2>
 <p>Modify <code class="file docutils literal"><span class="pre">quotient_format.cs</span></code> from
-<a class="reference internal" href="../data/writeline-substitution.html#quotientformat"><span>Exercise for Format</span></a> and save it
+<a class="reference internal" href="../data/writeline-substitution.html#quotientformat"><span class="std std-ref">Exercise for Format</span></a> and save it
 as <code class="docutils literal"><span class="pre">quotient_prob.cs</span></code>.
 You should create a function <code class="docutils literal"><span class="pre">QuotientProblem</span></code> with <code class="docutils literal"><span class="pre">int</span></code>
 parameters.  Like in the earlier versions, it should print a full
@@ -404,7 +406,7 @@ input from the user.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

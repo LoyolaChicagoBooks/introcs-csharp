@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>18.7. Homework: Grade File &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>18.7. Homework: Grade File &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="18. Appendix" href="appendix.html" />
     <link rel="next" title="18.8. Homework: Book List" href="hw-booklist.html" />
@@ -235,7 +237,7 @@
 <li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">18.7. Homework: Grade File</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">18.7. Homework: Grade File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
@@ -390,22 +392,22 @@ One is &#8220;categories_&#8221; + the course abbreviation
 provided and used below.</p>
 <p>It will contain three lines.
 The first line is a comma separated list of category names like</p>
-<div class="highlight-text"><div class="highlight"><pre>Exam, Lab, Homework, Project, Class Participation
+<div class="highlight-text"><div class="highlight"><pre><span></span>Exam, Lab, Homework, Project, Class Participation
 </pre></div>
 </div>
 <p>There may be extra spaces after the commas.
 Categories will be chosen so that <em>each one starts with a different letter</em>.</p>
 <p>The second line contains the integer weights for each category, like</p>
-<div class="highlight-text"><div class="highlight"><pre>40, 15, 15, 20, 10
+<div class="highlight-text"><div class="highlight"><pre><span></span>40, 15, 15, 20, 10
 </pre></div>
 </div>
 <p>They do <em>not</em> need to add to 100.  If the sum is called totWeights,
 get the final grade by summing for each category:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="p">(</span><span class="n">category</span> <span class="n">weight</span><span class="p">)(</span><span class="n">category</span> <span class="n">grade</span><span class="p">)/</span><span class="n">totWeights</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">category</span> <span class="n">weight</span><span class="p">)(</span><span class="n">category</span> <span class="n">grade</span><span class="p">)/</span><span class="n">totWeights</span>
 </pre></div>
 </div>
 <p>The third line will contain the number of grades in each category, like</p>
-<div class="highlight-text"><div class="highlight"><pre>2, 5, 3, 1, 2
+<div class="highlight-text"><div class="highlight"><pre><span></span>2, 5, 3, 1, 2
 </pre></div>
 </div>
 <p>The second master file will be &#8220;students_&#8221; + the course abbreviation + &#8221;.txt&#8221;.
@@ -417,7 +419,7 @@ structure:</p>
 <div><p>Student ID, Last Name, First Name</p>
 </div></blockquote>
 <p>For example, the sample data file <code class="file docutils literal"><span class="pre">students_comp170.txt</span></code> starts:</p>
-<div class="highlight-text"><div class="highlight"><pre>P12345678, Doe, John
+<div class="highlight-text"><div class="highlight"><pre><span></span>P12345678, Doe, John
 P00000001, Hernandez, Maria
 </pre></div>
 </div>
@@ -442,7 +444,7 @@ only used in part of the extra credit.</li>
 <li>the lines are in no special order.</li>
 </ul>
 <p>Sample data file <code class="docutils literal"><span class="pre">P12345678comp170.data</span></code> starts:</p>
-<div class="highlight-text"><div class="highlight"><pre>H, 1, 90
+<div class="highlight-text"><div class="highlight"><pre><span></span>H, 1, 90
 C, 1, 100
 L, 3, 100
 L, 2, 80
@@ -464,12 +466,12 @@ This file must have a line for each student showing the
 student&#8217;s last name, first name,
 weighted average rounded to one decimal place, and letter grade.
 File <code class="docutils literal"><span class="pre">comp170_summary.txt</span></code> would start with lines:</p>
-<div class="highlight-none"><div class="highlight"><pre>Doe, John 78.9 C+
+<div class="highlight-none"><div class="highlight"><pre><span></span>Doe, John 78.9 C+
 Hernandez, Maria 88.2 B+
 </pre></div>
 </div>
 <p>Write this file to the same directory where you found the input data.  Again
-the <a class="reference internal" href="../files/fio.html#fio"><span>FIO Helper Class</span></a> is useful.</p>
+the <a class="reference internal" href="../files/fio.html#fio"><span class="std std-ref">FIO Helper Class</span></a> is useful.</p>
 </li>
 <li><p class="first">The rest of the test data for
 course abbreviations comp170 and all the data for comp150 is
@@ -492,15 +494,15 @@ same form as for the last homework.</p>
 <h2>18.7.4. Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Read
-<a class="reference internal" href="../files/files.html#files"><span>Files, Paths, and Directories</span></a>.
+<a class="reference internal" href="../files/files.html#files"><span class="std std-ref">Files, Paths, and Directories</span></a>.
 You&#8217;re still going to need ReadLine() and
 WriteLine() in this assignment, the only difference is that we&#8217;ll
 get the input from a file instead
 of the Console. The parameter syntax will be the same.</p>
 </li>
-<li><p class="first">For each file line you&#8217;ll want to use the <a class="reference internal" href="../arrays/onedim.html#split"><span>String Method Split</span></a>,
+<li><p class="first">For each file line you&#8217;ll want to use the <a class="reference internal" href="../arrays/onedim.html#split"><span class="std std-ref">String Method Split</span></a>,
 and then the <code class="docutils literal"><span class="pre">Trim</span></code>
-method from <a class="reference internal" href="../while/stringmethods2.html#more-string-methods"><span>More String Methods</span></a> on each part to
+method from <a class="reference internal" href="../while/stringmethods2.html#more-string-methods"><span class="std std-ref">More String Methods</span></a> on each part to
 remove surrounding spaces. Then
 use indexing to get the field of interest. (More below.)</p>
 </li>
@@ -526,14 +528,14 @@ for each category.</p>
 <li><p class="first">In order to deal with a varying number of categories and different
 possible first letter codes, you will need to split the category
 name line into an array, say</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span><span class="p">[]</span> <span class="n">categories</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span><span class="p">[]</span> <span class="n">categories</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>To know where to update data for each category, you can use this
 function after you read in a code, to determine the proper index.
 It is already in the stub of the solution file
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/grade_file_homework_stub/grade_files.cs">grade_files.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Take the first letter code for a catagory, and</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Take the first letter code for a catagory, and</span>
       <span class="c1">/// return the index of that category in categories.</span>
       <span class="k">static</span> <span class="kt">int</span> <span class="nf">codeIndex</span><span class="p">(</span><span class="kt">string</span> <span class="n">code</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">categories</span><span class="p">)</span>
       <span class="p">{</span>
@@ -581,7 +583,7 @@ any combination that does not include both of the last two options about missing
 <li><p class="first">Format the summary file in nice columns.  Include the grades for each category,
 rounded to one decimal place.  Include a heading line.
 For example the summary for the repository example Comp150 could start:</p>
-<div class="highlight-none"><div class="highlight"><pre>Name: Last, First           Avg Gr     E     H     P
+<div class="highlight-none"><div class="highlight"><pre><span></span>Name: Last, First           Avg Gr     E     H     P
 Hopper, Grace             100.0 A  100.0 100.0 100.0
 </pre></div>
 </div>
@@ -590,7 +592,7 @@ Copy the first three column headings from above.
 The column headings for the categories can just be their one letter code.
 Names and letter grades should be left-justified (padded on the right, by
 using a <em>negative</em> field width).
-See <a class="reference internal" href="../for/forexamples.html#left-justification"><span>Left Justification</span></a>. <strong>[2]</strong></p>
+See <a class="reference internal" href="../for/forexamples.html#left-justification"><span class="std std-ref">Left Justification</span></a>. <strong>[2]</strong></p>
 </li>
 <li><p class="first">Change the scheme for calculating letter grades to use a function that calculates
 the proper grade, where the only <code class="docutils literal"><span class="pre">if</span></code> statement is one simple one
@@ -607,7 +609,7 @@ only if there are not enough grades in one or more
 categories.  For each category where
 one or more grades is missing, including a count of the number of grades missing followed
 by the category letter.  An example using the example categories is:</p>
-<div class="highlight-none"><div class="highlight"><pre>Doe, John 68.5 D+ Missing: 2 L 1 H
+<div class="highlight-none"><div class="highlight"><pre><span></span>Doe, John 68.5 D+ Missing: 2 L 1 H
 Smith, Chris 83.2 B Missing: 1 L
 Star, Anna 91.2 A-
 </pre></div>
@@ -626,7 +628,7 @@ run from 1 through the number of grades in the category.
 You may assume no item number for the same category appears twice.
 For example, with the sample data files given in the repository for
 comp170, the summary line for John Doe would be:</p>
-<div class="highlight-none"><div class="highlight"><pre>Doe, John 78.9 C+ Missing: L: 1, 4 H: 3
+<div class="highlight-none"><div class="highlight"><pre><span></span>Doe, John 78.9 C+ Missing: L: 1, 4 H: 3
 </pre></div>
 </div>
 <p>The most straightforward way to do this requires something
@@ -650,7 +652,7 @@ You may need to read ahead if you want to use one of these approaches. <strong>[
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

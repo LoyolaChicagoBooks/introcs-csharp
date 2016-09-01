@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6.4. Short-Circuiting &amp;&amp; and || &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>6.4. Short-Circuiting &amp;&amp; and || &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="6. While Loops" href="while.html" />
     <link rel="next" title="6.5. While Examples" href="whileexamples.html" />
@@ -138,7 +140,7 @@
 <li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
@@ -309,7 +311,7 @@
   <div class="section" id="short-circuiting-and">
 <span id="short-circuit"></span><span id="index-0"></span><h1>6.4. Short-Circuiting &amp;&amp; and ||<a class="headerlink" href="#short-circuiting-and" title="Permalink to this headline">¶</a></h1>
 <p>Follow along with the following silly, but illustrative csharp sequence:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">y</span> <span class="p">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">z</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">y</span> <span class="p">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">z</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">y</span><span class="p">/</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">z</span> <span class="p">&amp;&amp;</span> <span class="n">x</span> <span class="p">!=</span> <span class="m">0</span><span class="p">;</span>
 <span class="k">false</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">x</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span> <span class="n">y</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
@@ -320,20 +322,20 @@
 <p>The compound condition includes <code class="docutils literal"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">0</span></code>,
 so what happens if we change x to 0 and
 try the condition again.  Will you get <code class="docutils literal"><span class="pre">false</span></code>?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">x</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">x</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">y</span><span class="p">/</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">z</span> <span class="p">&amp;&amp;</span> <span class="n">x</span> <span class="p">!=</span> <span class="m">0</span><span class="p">;</span>
-<span class="n">System</span><span class="p">.</span><span class="n">DivideByZeroException</span><span class="p">:</span> <span class="n">Division</span> <span class="n">by</span> <span class="n">zero</span>
+<span class="n">System</span><span class="p">.</span><span class="n">DivideByZeroException</span><span class="p">:</span> <span class="n">Division</span> <span class="k">by</span> <span class="n">zero</span>
 <span class="p">...</span>
 </pre></div>
 </div>
 <p>No, one of the parts involves dividing by zero, and you see the result.
 What if we swap the two conditions to get the <em>logically equivalent</em></p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">x</span> <span class="p">!=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">y</span><span class="p">/</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">z</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">x</span> <span class="p">!=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">y</span><span class="p">/</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">z</span><span class="p">;</span>
 <span class="k">false</span>
 </pre></div>
 </div>
 <p>Something is going on here besides pure mathematical logic.
-Remember the final version in <a class="reference internal" href="while-with-sequence.html#isdigits"><span>IsDigits</span></a>.  We did not
+Remember the final version in <a class="reference internal" href="while-with-sequence.html#isdigits"><span class="std std-ref">IsDigits</span></a>.  We did not
 need to continue processing when we knew the final answer
 already.  The <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> and <code class="docutils literal"><span class="pre">||</span></code> operators work the same way,
 evaluating from left to right.  If <code class="docutils literal"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">0</span></code> is <code class="docutils literal"><span class="pre">false</span></code>,
@@ -346,20 +348,20 @@ this feature.</p>
 <p>It also applies to <code class="docutils literal"><span class="pre">||</span></code>.  In what situation do you know
 what the final result is after evaluating
 the first condition?  In this case you know:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">true</span> <span class="p">||</span> <span class="p">??</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">true</span> <span class="p">||</span> <span class="p">??</span>
 </pre></div>
 </div>
 <p>evaluates to true.  Continuing with the same csharp sequence above
 (where x is 0, y is 5, and z is 1):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">x</span> <span class="p">==</span> <span class="m">0</span> <span class="p">||</span> <span class="n">y</span><span class="p">/</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">z</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">x</span> <span class="p">==</span> <span class="m">0</span> <span class="p">||</span> <span class="n">y</span><span class="p">/</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">z</span><span class="p">;</span>
 <span class="k">true</span>
 </pre></div>
 </div>
 <p>The division by 0 in the second condition <em>never happens</em>.
 It is short-circuited.</p>
 <p>For completeness, try the other order:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">y</span><span class="p">/</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">z</span> <span class="p">||</span> <span class="n">x</span> <span class="p">==</span> <span class="m">0</span><span class="p">;</span>
-<span class="n">System</span><span class="p">.</span><span class="n">DivideByZeroException</span><span class="p">:</span> <span class="n">Division</span> <span class="n">by</span> <span class="n">zero</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">y</span><span class="p">/</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">z</span> <span class="p">||</span> <span class="n">x</span> <span class="p">==</span> <span class="m">0</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="n">DivideByZeroException</span><span class="p">:</span> <span class="n">Division</span> <span class="k">by</span> <span class="n">zero</span>
 <span class="p">...</span>
 </pre></div>
 </div>
@@ -401,7 +403,7 @@ the dangerous condition, use</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

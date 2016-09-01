@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>18.8. Homework: Book List &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>18.8. Homework: Book List &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="18. Appendix" href="appendix.html" />
     <link rel="next" title="18.9. Group Project" href="project.html" />
@@ -236,7 +238,7 @@
 <li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">18.8. Homework: Book List</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">18.8. Homework: Book List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
@@ -354,14 +356,14 @@ in the same format as the last assignment.</p>
 <p>See the stub file provided. It should have instance fields for the
 author, title, and year (published).</p>
 <p>Complete the constructor:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="nf">Book</span><span class="p">(</span><span class="kt">string</span> <span class="n">title</span><span class="p">,</span> <span class="kt">string</span> <span class="n">author</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="nf">Book</span><span class="p">(</span><span class="kt">string</span> <span class="n">title</span><span class="p">,</span> <span class="kt">string</span> <span class="n">author</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>that initializes the fields.
 (Be careful, as we have discussed in class, when using the same names
 for these parameters as the instance variables!)</p>
 <p>It should have three standard (one line) getter methods:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="kt">string</span> <span class="nf">GetTitle</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="kt">string</span> <span class="nf">GetTitle</span><span class="p">()</span>
 
 <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetAuthor</span><span class="p">()</span>
 
@@ -369,7 +371,7 @@ for these parameters as the instance variables!)</p>
 </pre></div>
 </div>
 <p>and</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">ToString</span></code> should return a <em>single</em> string spread across three lines,
@@ -377,7 +379,7 @@ with no newline at the end.
 For example if the <code class="docutils literal"><span class="pre">Book</span></code> fields were
 &#8220;C# Yellow Book&#8221;, &#8220;Rob Miles&#8221;, and 2011, the string should appear,
 when printed, as</p>
-<div class="highlight-none"><div class="highlight"><pre>Title: C# Yellow Book
+<div class="highlight-none"><div class="highlight"><pre><span></span>Title: C# Yellow Book
 Author: Rob Miles
 Year: 2011
 </pre></div>
@@ -390,15 +392,15 @@ to a string.</p>
 <div class="section" id="booklist-class">
 <h2>18.8.2. BookList class<a class="headerlink" href="#booklist-class" title="Permalink to this headline">¶</a></h2>
 <p>It has just one instance variable, already declared:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">private</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Book</span><span class="p">&gt;</span> <span class="n">list</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">private</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Book</span><span class="p">&gt;</span> <span class="n">list</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>It has a constructor (already written - creating an empty List):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="nf">BookList</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="nf">BookList</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>It should have public methods:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Add book to the list.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">// Add book to the list.</span>
       <span class="c1">// The regular assignment version always returns true.</span>
       <span class="k">public</span> <span class="kt">bool</span> <span class="nf">Addbook</span><span class="p">(</span><span class="n">Book</span> <span class="n">book</span><span class="p">)</span>
 </pre></div>
@@ -406,17 +408,17 @@ to a string.</p>
 <p>The regular version should just leave the final <code class="docutils literal"><span class="pre">return</span> <span class="pre">true;</span></code>
 The extra credit version is more elaborate.</p>
 <p>Further methods:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// List the full descriptions of each book,</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// List the full descriptions of each book,</span>
       <span class="c1">/// with each book separated by a blank line.</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">PrintList</span><span class="p">()</span> <span class="c1">//</span>
 </pre></div>
 </div>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// List the titles (only!), one per line, of each book</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">// List the titles (only!), one per line, of each book</span>
       <span class="c1">// in the list that is by the specified author.</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">PrintTitlesByAuthor</span><span class="p">(</span><span class="kt">string</span> <span class="n">author</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// List the full descriptions of each book printed</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">// List the full descriptions of each book printed</span>
       <span class="c1">// in the range of years specified,</span>
       <span class="c1">// with each book separated by a blank line.</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">PrintBooksInYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">firstYear</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lastYear</span><span class="p">)</span>
@@ -424,7 +426,7 @@ The extra credit version is more elaborate.</p>
 </div>
 <p>For instance if the list included books published in 1807, 1983, 2004,
 1948, 1990, and 2001, the statement</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PrintBooksInYears</span><span class="p">(</span><span class="m">1940</span><span class="p">,</span> <span class="m">1990</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">PrintBooksInYears</span><span class="p">(</span><span class="m">1940</span><span class="p">,</span> <span class="m">1990</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>would list the books from 1983, 1948, and 1990.</p>
@@ -480,13 +482,13 @@ requires you to do the previous one first.</p>
 <em>fully integrated</em> into TestBookList!</p>
 <ol class="arabic">
 <li><p class="first">[2 points] Complete</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a single string containing the same data as</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a single string containing the same data as</span>
       <span class="c1">/// printed by PrintList, including a final newline.</span>
       <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Also <em>change</em> the <code class="docutils literal"><span class="pre">PrintList</span></code> method body to the one line:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>(The <code class="docutils literal"><span class="pre">Write</span></code> and <code class="docutils literal"><span class="pre">WriteLine</span></code> methods print objects by using their
@@ -499,7 +501,7 @@ the <code class="docutils literal"><span class="pre">PrintList</span></code> met
 </li>
 <li><p class="first">[4 points]</p>
 <p>In the Book class, a new constructor:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Construct a Book, taking data from reader.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Construct a Book, taking data from reader.</span>
       <span class="c1">/// Read through three lines that contain the</span>
       <span class="c1">/// title, author, and year of publication, respectively.</span>
       <span class="c1">/// There may be an extra blank line at the beginning.</span>
@@ -509,7 +511,7 @@ the <code class="docutils literal"><span class="pre">PrintList</span></code> met
 </pre></div>
 </div>
 <p>In class BookList, a new constructor:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Construct a new BookList using Book data read from</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">// Construct a new BookList using Book data read from</span>
       <span class="c1">// reader.  The data coming from reader will contain groups</span>
       <span class="c1">// of three line descriptions useful for the Book constructor</span>
       <span class="c1">// that reads from a stream.  Each three-line book description</span>
@@ -524,7 +526,7 @@ easy to find.</p>
 </li>
 <li><p class="first">[4 points]</p>
 <p>In class Book:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Return true if all the corresponding fields in this Book</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">// Return true if all the corresponding fields in this Book</span>
       <span class="c1">// and in aBook are equal.  Return false otherwise.</span>
       <span class="k">public</span> <span class="kt">bool</span> <span class="nf">IsEqual</span><span class="p">(</span><span class="n">Book</span> <span class="n">aBook</span><span class="p">)</span>
       <span class="p">{</span>  <span class="c1">// code for extra credit</span>
@@ -543,7 +545,7 @@ more general <code class="docutils literal"><span class="pre">Equals</span></cod
 The <code class="docutils literal"><span class="pre">Equals</span></code> override allows for a parameter of any object type. With
 skills from Comp 271 you you be able to write the <code class="docutils literal"><span class="pre">Equals</span></code> override.</p>
 <p>In class BookList:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Test if aBook is contained in this BookList.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">// Test if aBook is contained in this BookList.</span>
       <span class="c1">// Return true if book IsEqual to a Book in the list,</span>
       <span class="c1">// false otherwise.</span>
       <span class="k">public</span> <span class="kt">bool</span> <span class="nf">Contains</span><span class="p">(</span><span class="n">Book</span> <span class="n">book</span><span class="p">)</span>
@@ -555,7 +557,7 @@ method <code class="docutils literal"><span class="pre">Contains</span></code> w
 work and write your own version with a loop.</p>
 <p>Change the <code class="docutils literal"><span class="pre">AddBook</span></code> method from the regular assignment, so it
 satisfies this documentation:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Adds aBook to the list if aBook is</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Adds aBook to the list if aBook is</span>
       <span class="c1">/// not already in the list.</span>
       <span class="c1">/// Return true if aBook is added,</span>
       <span class="c1">/// and false if it was already in the list.</span>
@@ -565,7 +567,7 @@ satisfies this documentation:</p>
 </li>
 <li><p class="first">[2 points] This one requires the previous elaboration of <code class="docutils literal"><span class="pre">AddBook</span></code>.
 In BookList:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">// Add each Book in books to this BookList.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">// Add each Book in books to this BookList.</span>
       <span class="c1">// if it is not already contained in this BookList.</span>
       <span class="c1">// Return true if the current list was changed.</span>
       <span class="c1">// Return false if each Book in books is a</span>
@@ -596,7 +598,7 @@ others!</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

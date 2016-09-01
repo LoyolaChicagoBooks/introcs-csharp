@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6.10. Number Guessing Game Lab &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>6.10. Number Guessing Game Lab &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="6. While Loops" href="while.html" />
     <link rel="next" title="6.11. Chapter Review Questions" href="reviewwhile.html" />
@@ -144,7 +146,7 @@
 <li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.10. Number Guessing Game Lab</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.10. Number Guessing Game Lab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -361,7 +363,7 @@ as a <em>reference</em> for the lab project.
 Make sure your program has <code class="docutils literal"><span class="pre">namespace</span> <span class="pre">IntroCS;</span></code> to match the UI class.</p>
 <p>You are going to play a game, and later may repeat it, so put the code
 for playing the number game in a function called <code class="docutils literal"><span class="pre">Game</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">Game</span><span class="p">()</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">Game</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>For now your write a <code class="docutils literal"><span class="pre">Main</span></code> function to just call <code class="docutils literal"><span class="pre">Game()</span></code>.</p>
@@ -435,16 +437,16 @@ going to let it vary, by having the game generate a <em>random</em> number.
 For your convenience, we are going to give you the C#
 code to compute the random number.  Assuming we want a secret number
 so <span class="math">\(1 \leq secret &lt; big\)</span>, we can use the code:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
 <span class="kt">int</span> <span class="n">secret</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">big</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In case you are wondering, we are creating a <em>new object</em>
 of the <em>class</em> <code class="docutils literal"><span class="pre">Random</span></code> which serves as the
 random number generator. We&#8217;ll cover this in more detail when we
-get to the <a class="reference internal" href="../classes/classes.html#classes"><span>Classes and Object-Oriented Programming</span></a> chapter. Here is some illustration using a <code class="docutils literal"><span class="pre">Random</span></code>
+get to the <a class="reference internal" href="../classes/classes.html#classes"><span class="std std-ref">Classes and Object-Oriented Programming</span></a> chapter. Here is some illustration using a <code class="docutils literal"><span class="pre">Random</span></code>
 object in csharp.  Your answers will not be the same!</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
 <span class="m">55</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
@@ -491,7 +493,7 @@ be printed out right away.
 <p>In <code class="docutils literal"><span class="pre">Game</span></code>:
 Instead of declaring <code class="docutils literal"><span class="pre">big</span></code> and  automatically initializing it to 100,
 make <code class="docutils literal"><span class="pre">big</span></code> be a parameter, so the heading looks like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">Game</span><span class="p">(</span><span class="kt">int</span> <span class="n">big</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">Game</span><span class="p">(</span><span class="kt">int</span> <span class="n">big</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>In <code class="docutils literal"><span class="pre">Main</span></code>:</p>
@@ -549,7 +551,7 @@ In the second case you need a new function,
 where the user is the one who knows the secret
 number and the computer guesses numbers until the answer
 is obtained. Write and use a new function</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">GameReversed</span><span class="p">(</span><span class="kt">int</span> <span class="n">big</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">GameReversed</span><span class="p">(</span><span class="kt">int</span> <span class="n">big</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Pass it the parameter <code class="docutils literal"><span class="pre">big</span></code>, still set in <code class="docutils literal"><span class="pre">Main</span></code>.
@@ -599,7 +601,7 @@ guesses the only possible value, and the human does <em>not</em> respond with &#
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>15.1. Rationals Revisited &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>15.1. Rationals Revisited &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="15. Interfaces" href="interfaces.html" />
     <link rel="next" title="15.2. Csproject Revisited" href="csproj-revisited.html" />
@@ -221,7 +223,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">15.1. Rationals Revisited</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">15.1. Rationals Revisited</a></li>
 <li class="toctree-l2"><a class="reference internal" href="csproj-revisited.html">15.2. Csproject Revisited</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
 </ul>
@@ -326,7 +328,7 @@ thing: indicate which object comes before another.
 We can do that.  The <code class="docutils literal"><span class="pre">CompareTo</span></code> method
 already does that.  If Rational r1 is less than
 Rational r2, then</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">r1</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">r2</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">0</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">r1</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">r2</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">0</span>
 </pre></div>
 </div>
 <p>The single CompareTo method is very versatile:  Just by varying
@@ -356,7 +358,7 @@ with one method, <code class="docutils literal"><span class="pre">CompareTo</spa
 object of the same type.</p>
 <p>C# defines a generic interface <code class="docutils literal"><span class="pre">IComparable&lt;T&gt;</span></code>.  A type T can satisfy this interface if
 if has a public instance method with signature:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="kt">int</span> <span class="nf">CompareTo</span><span class="p">(</span><span class="n">T</span> <span class="n">other</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="kt">int</span> <span class="nf">CompareTo</span><span class="p">(</span><span class="n">T</span> <span class="n">other</span><span class="p">);</span>
 </pre></div>
 </div>
 <p id="index-1">There is one more step before we can use a library method to sort:
@@ -368,7 +370,7 @@ You must explicitly say that you <em>want</em> your class
 to be considered to satisfy this interface.
 For instance for Rational, we need to change
 the class heading to:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Rational</span> <span class="p">:</span> <span class="n">IComparable</span><span class="p">&lt;</span><span class="n">Rational</span><span class="p">&gt;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Rational</span> <span class="p">:</span> <span class="n">IComparable</span><span class="p">&lt;</span><span class="n">Rational</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>In general one or more interface names can be listed
@@ -380,7 +382,7 @@ System.Collections.Generic, so we need to be using that namespace.</p>
 has the modified <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/interfaces/rational.cs">rational.cs</a>
 and <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/interfaces/test_rational_sort.cs">test_rational_sort.cs</a>
 to test this with a list of Rationals:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
@@ -415,7 +417,7 @@ to test this with a list of Rationals:</p>
 </pre></div>
 </div>
 <p>which prints:</p>
-<div class="highlight-none"><div class="highlight"><pre>Before sorting: 1/2 11/3 -1/10 2/5 2/3 1/3
+<div class="highlight-none"><div class="highlight"><pre><span></span>Before sorting: 1/2 11/3 -1/10 2/5 2/3 1/3
 After sorting:  -1/10 1/3 2/5 1/2 2/3 11/3
 </pre></div>
 </div>
@@ -424,7 +426,7 @@ different objects and different underlying class, but if an object is
 declared to be of interface type the compiler no longer sees the attributes
 that are <em>not</em> common to the interface.  A silly example, legal as far
 as it goes:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">IComparable</span><span class="p">&lt;</span><span class="n">Rational</span><span class="p">&gt;</span> <span class="n">r1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">5</span><span class="p">),</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">IComparable</span><span class="p">&lt;</span><span class="n">Rational</span><span class="p">&gt;</span> <span class="n">r1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">5</span><span class="p">),</span>
                       <span class="n">r2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">r1</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">r2</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">);</span> <span class="c1">// prints false</span>
 </pre></div>
@@ -433,7 +435,7 @@ as it goes:</p>
 <code class="docutils literal"><span class="pre">IComparable&lt;Rational&gt;</span></code>.  The use of <code class="docutils literal"><span class="pre">CompareTo</span></code> is legal
 because that is the one method that this interface type guarantees.</p>
 <p>However, if we add this extra line:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">r1</span><span class="p">.</span><span class="n">Multiply</span><span class="p">(</span><span class="n">r2</span><span class="p">));</span> <span class="c1">// compiler error!</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">r1</span><span class="p">.</span><span class="n">Multiply</span><span class="p">(</span><span class="n">r2</span><span class="p">));</span> <span class="c1">// compiler error!</span>
 </pre></div>
 </div>
 <p>Even though r1 and r2 are actually Rational underneath, where the
@@ -469,12 +471,12 @@ Check that the change causes a compiler error.</p>
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/interface_syntax7/interface_demo7.cs">interface_syntax7/interface_demo7.cs</a>,
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/interface_syntax8/interface_demo8.cs">interface_syntax8/interface_demo8.cs</a></p>
 <p>After looking at those simple bare examples illustrating the syntax,
-go on to the next section <a class="reference internal" href="csproj-revisited.html#csproject-revisited"><span>Csproject Revisited</span></a>,
+go on to the next section <a class="reference internal" href="csproj-revisited.html#csproject-revisited"><span class="std std-ref">Csproject Revisited</span></a>,
 where a useful, more sophisticated user-defined interface
 is introduced....</p>
 <div class="section" id="example-class-sorting-worked-exercise">
 <h3>15.1.1.1. Example Class Sorting - Worked Exercise<a class="headerlink" href="#example-class-sorting-worked-exercise" title="Permalink to this headline">¶</a></h3>
-<p>In <a class="reference internal" href="../classes/classexamples.html#more-getters-and-setters"><span>More Getters and Setters</span></a> we introduced example
+<p>In <a class="reference internal" href="../classes/classexamples.html#more-getters-and-setters"><span class="std std-ref">More Getters and Setters</span></a> we introduced example
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/example_class/example_class.cs">example_class/example_class.cs</a>.</p>
 <p>Elaborate the code for the <code class="docutils literal"><span class="pre">Example</span></code> class, adding
 a <code class="docutils literal"><span class="pre">CompareTo</span></code> method.
@@ -509,7 +511,7 @@ elements.  Show the before and after sequence in the list.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

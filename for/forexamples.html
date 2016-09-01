@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>8.2. Examples With for Statements &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>8.2. Examples With for Statements &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="8. For Loops" href="for.html" />
     <link rel="next" title="8.3. Lab: Loops" href="lab-nested-loops.html" />
@@ -156,7 +158,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="for.html">8. For Loops</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
 </ul>
@@ -329,7 +331,7 @@ Suppose you want to print the first <code class="docutils literal"><span class="
 like the first 5 multiples
 of 3:  3, 6, 9, 12, 15.  This could be handled by generating
 a sequence <code class="docutils literal"><span class="pre">i</span></code> = 1 through <code class="docutils literal"><span class="pre">n</span></code>, and multiply each <code class="docutils literal"><span class="pre">i</span></code> by <code class="docutils literal"><span class="pre">k</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">*</span><span class="n">k</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -337,18 +339,18 @@ a sequence <code class="docutils literal"><span class="pre">i</span></code> = 1 
 <p>Another approach is to note that the numbers you want to print advance
 in a regular fashion, too, but with an increment 3 in the example above,
 or k in general:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">*</span><span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">*</span><span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>The</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="n">k</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="n">k</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>is a common pattern, less common than incrementing by one,
 but still very common.  C# and many other languages allow a shorter version:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">i</span> <span class="p">+=</span> <span class="n">k</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">+=</span> <span class="n">k</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This means to increment the variable i by k.</p>
@@ -356,7 +358,7 @@ but still very common.  C# and many other languages allow a shorter version:</p>
 <p class="first admonition-title">Warning</p>
 <p>Be careful: the <code class="docutils literal"><span class="pre">+=</span></code> must be in
 that order, with no space between.  Unfortunately the reverse order:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">i</span> <span class="p">=+</span> <span class="n">k</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">=+</span> <span class="n">k</span><span class="p">;</span>
 </pre></div>
 </div>
 <p class="last">is also legal, and just assigns the value of k to i.</p>
@@ -369,11 +371,11 @@ if <em>op</em> is <code class="docutils literal"><span class="pre">+</span></cod
 <blockquote>
 <div><strong>variable</strong> = <strong>variable</strong> op <em>expression</em></div></blockquote>
 <p>For example</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">x</span> <span class="p">*=</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">*=</span> <span class="m">5</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>is the same as</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">*</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">*</span> <span class="m">5</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="section" id="tables">
@@ -383,13 +385,13 @@ a consistent formula.  As a simple first
 table, we can show the square, cube, and square root of numbers 1 through 10.
 The Math class has a function Sqrt, so we take the square root with Math.Sqrt
 function.  The pattern is consistent, so we can loop easily:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} {1} {2} {3}&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">,</span> <span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>The numbers will be there, but the output is not pretty:</p>
-<div class="highlight-none"><div class="highlight"><pre>1 1 1 1
+<div class="highlight-none"><div class="highlight"><pre><span></span>1 1 1 1
 2 4 8 1.4142135623731
 3 9 27 1.73205080756888
 4 16 64 2
@@ -407,14 +409,14 @@ We can replace <code class="docutils literal"><span class="pre">{3}</span></code
 columns by using a further formatting option.  The longest entries are all
 in the last row, where they take up, 2, 3, 4, and 6 columns (for 3.1623).
 Change the format string:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,2} {1,3} {2,4} {3,6:F4}&quot;</span><span class="p">,</span>
                        <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">,</span> <span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>and we generate the neater output:</p>
-<div class="highlight-none"><div class="highlight"><pre> 1   1    1 1.0000
+<div class="highlight-none"><div class="highlight"><pre><span></span> 1   1    1 1.0000
  2   4    8 1.4142
  3   9   27 1.7321
  4  16   64 2.0000
@@ -453,13 +455,13 @@ just silently give the wrong format.</p>
 </div>
 <p><em>If the string to be inserted is wider than the fieldWidth,</em>
 then the <em>whole</em> string is inserted, <em>ignoring</em> the fieldWidth.  Example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;stuff&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;stuff&quot;</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;123456789&quot;</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,9}\n{0,7}\n{0,5}\n{0,3}&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>generates:</p>
-<div class="highlight-none"><div class="highlight"><pre>123456789
+<div class="highlight-none"><div class="highlight"><pre><span></span>123456789
     stuff
   stuff
 stuff
@@ -469,13 +471,13 @@ stuff
 <p>filling 9, 7, and then 5 columns, by padding with 4, 2, and 0 blanks.
 <em>The last line sticks out past the proposed 3-column fieldWidth.</em></p>
 <p>One more thing to add to our power table is a heading.  We might want:</p>
-<div class="highlight-none"><div class="highlight"><pre>n   square    cube    root
+<div class="highlight-none"><div class="highlight"><pre><span></span>n   square    cube    root
 </pre></div>
 </div>
 <p>To make the data line up with the heading titles,
 we can expand the columns, with code in example
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/power_table/power_table.cs">power_table/power_table.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,2}{1,7}{2,5}{3,7}&quot;</span><span class="p">,</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,2}{1,7}{2,5}{3,7}&quot;</span><span class="p">,</span>
                   <span class="s">&quot;n&quot;</span><span class="p">,</span> <span class="s">&quot;square&quot;</span><span class="p">,</span> <span class="s">&quot;cube&quot;</span><span class="p">,</span> <span class="s">&quot;root&quot;</span><span class="p">);</span>
 <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,2}{1,7}{2,5}{3,7:F4}&quot;</span><span class="p">,</span>
@@ -484,7 +486,7 @@ we can expand the columns, with code in example
 </pre></div>
 </div>
 <p>generating:</p>
-<div class="highlight-none"><div class="highlight"><pre> n  square    cube    root
+<div class="highlight-none"><div class="highlight"><pre><span></span> n  square    cube    root
  1       1       1  1.0000
  2       4       8  1.4142
  3       9      27  1.7321
@@ -508,13 +510,13 @@ a field (padding on the left), for completeness we note this alternative:
 A minus sign in front of the fieldWidth
 places the result left justified (padded on the right).
 For example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;stuff&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;stuff&quot;</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;1234567890&quot;</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,-9}|\n{0,-7}|\n{0,-5}|\n{0,-3}|&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>prints:</p>
-<div class="highlight-none"><div class="highlight"><pre>1234567890
+<div class="highlight-none"><div class="highlight"><pre><span></span>1234567890
 stuff    |
 stuff  |
 stuff|
@@ -526,7 +528,7 @@ stuff|
 <div class="section" id="ascii-codes">
 <span id="ascii"></span><span id="index-3"></span><h2>8.2.2. ASCII Codes<a class="headerlink" href="#ascii-codes" title="Permalink to this headline">¶</a></h2>
 <p>Here is a reverse lookup from the
-<a class="reference internal" href="../foreach/foreachexamples.html#codeofstringchar"><span>Numeric Code of String Characters</span></a>:
+<a class="reference internal" href="../foreach/foreachexamples.html#codeofstringchar"><span class="std std-ref">Numeric Code of String Characters</span></a>:
 Find the characters for a list of numeric codes. Just as we can cast a
 <code class="docutils literal"><span class="pre">char</span></code> to an <code class="docutils literal"><span class="pre">int</span></code>, we can cast an <code class="docutils literal"><span class="pre">int</span></code> 0-127 to a <code class="docutils literal"><span class="pre">char</span></code>.</p>
 <p>The Unicode used
@@ -538,7 +540,7 @@ Characters 32 - 126 yield the 95 characters on a standard US keyboard.</p>
 <p>A loop to print each code followed by a space and the corresponding
 printable character
 would be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">127</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">127</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,3} {1}&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -556,7 +558,7 @@ the same:</p>
 <blockquote>
 <div>7 = 39 % 8 = 47 % 8 = 55 % 8 = ....</div></blockquote>
 <p>We can add a newline after each of these is printed.  This requires a test:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">127</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">127</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0,3} {1}  &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">i</span><span class="p">);</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">%</span> <span class="m">8</span> <span class="p">==</span> <span class="m">7</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
@@ -583,7 +585,7 @@ is <code class="docutils literal"><span class="pre">(3</span> <span class="pre">
 observe and explain more properties.</p>
 <p>The next example is to make a table of multiplication, mod 7, and later generalize.</p>
 <p>Tables generally have row and column labels.  We can aim for something like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="p">*</span> <span class="p">|</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="p">*</span> <span class="p">|</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span>
 <span class="p">-----------------</span>
 <span class="m">0</span> <span class="p">|</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span>
 <span class="m">1</span> <span class="p">|</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span>
@@ -596,7 +598,7 @@ observe and explain more properties.</p>
 </div>
 <p>The border labels make the table much more readable, but let us start simpler,
 with just the modular multiplications:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span>
 <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span>
 <span class="m">0</span> <span class="m">2</span> <span class="m">4</span> <span class="m">6</span> <span class="m">1</span> <span class="m">3</span> <span class="m">5</span>
 <span class="m">0</span> <span class="m">3</span> <span class="m">6</span> <span class="m">2</span> <span class="m">5</span> <span class="m">1</span> <span class="m">4</span>
@@ -608,7 +610,7 @@ with just the modular multiplications:</p>
 <p>This is more complicated in some respects than our previous table, so start slow,
 with some pseudocode.  We need a row for each number 0-6, and so a <code class="docutils literal"><span class="pre">for</span></code> loop
 suggests itself:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">print</span> <span class="n">row</span>
 <span class="p">}</span>
 </pre></div>
@@ -617,16 +619,16 @@ suggests itself:</p>
 calculate for the next number.  We can name the second number c for column.  The
 next revision replaces &#8220;print row&#8221; by a loop:  a <em>nested</em> loop, inside the loop for
 separate rows:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span> <span class="p">{</span>
-       <span class="n">print</span> <span class="n">modular</span> <span class="n">multiple</span> <span class="n">on</span> <span class="n">same</span> <span class="n">line</span>
+       <span class="n">print</span> <span class="n">modular</span> <span class="n">multiple</span> <span class="k">on</span> <span class="n">same</span> <span class="n">line</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>and the modular multiplication is just regular multiplication followed by
 taking the remainder mod 7, so you might come up with the C# code:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span> <span class="p">{</span>
        <span class="kt">int</span> <span class="n">modProd</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span><span class="p">*</span><span class="n">c</span><span class="p">)</span> <span class="p">%</span> <span class="m">7</span><span class="p">;</span>
        <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">modProd</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
@@ -636,7 +638,7 @@ taking the remainder mod 7, so you might come up with the C# code:</p>
 </div>
 <p>You can test this in csharp, and see it is not quite right!
 Chopped-off output starts:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> <span class="m">0</span> <span class="m">2</span> <span class="m">4</span> <span class="m">6</span> <span class="m">1</span> <span class="m">3</span> <span class="m">5</span> <span class="m">0</span> <span class="m">3</span> <span class="m">6</span> <span class="m">2</span> <span class="m">5</span> <span class="m">1</span> <span class="m">4</span> <span class="m">0.</span><span class="p">..</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> <span class="m">0</span> <span class="m">2</span> <span class="m">4</span> <span class="m">6</span> <span class="m">1</span> <span class="m">3</span> <span class="m">5</span> <span class="m">0</span> <span class="m">3</span> <span class="m">6</span> <span class="m">2</span> <span class="m">5</span> <span class="m">1</span> <span class="m">4</span> <span class="m">0.</span><span class="p">..</span>
 </pre></div>
 </div>
 <p>Though we want each entry in a row on the same line, we need to go down to the
@@ -652,7 +654,7 @@ On the other hand we do want it done for <em>each</em> row, so it must be
 4
 5
 6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span> <span class="p">{</span>
        <span class="kt">int</span> <span class="n">modProd</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span><span class="p">*</span><span class="n">c</span><span class="p">)</span> <span class="p">%</span> <span class="m">7</span><span class="p">;</span>
        <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">modProd</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
@@ -863,7 +865,7 @@ sense before we continue to the one with labels....</p>
 <p>The fancier table has a couple of extra rows at the top.  These two rows
 are unlike the remaining rows in the body of the table, so they need special code.</p>
 <p>If we go back to our pseudocode we could add to it:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">print</span> <span class="n">heading</span> <span class="n">row</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">print</span> <span class="n">heading</span> <span class="n">row</span>
 <span class="n">print</span> <span class="n">dash</span><span class="p">-</span><span class="n">row</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">print</span> <span class="n">body</span> <span class="n">row</span>
@@ -873,7 +875,7 @@ are unlike the remaining rows in the body of the table, so they need special cod
 <p>First analyze the heading row:  Some parts are repetitive and
 some are not: Print <code class="docutils literal"><span class="pre">&quot;*</span> <span class="pre">|&quot;</span></code> once, and then there is a repetitive pattern printing
 0 - 6, which we can do with a simpler loop than in the table body:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;* | &quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;* | &quot;</span><span class="p">);</span>
 <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">i</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -881,7 +883,7 @@ some are not: Print <code class="docutils literal"><span class="pre">&quot;*</sp
 </pre></div>
 </div>
 <p>The dashed line can be generated using <code class="docutils literal"><span class="pre">StringOfReps</span></code> from
-<a class="reference internal" href="lab-nested-loops.html#lab-loops"><span>Lab: Loops</span></a>.  How many dashes?  A digit and a space for each of
+<a class="reference internal" href="lab-nested-loops.html#lab-loops"><span class="std std-ref">Lab: Loops</span></a>.  How many dashes?  A digit and a space for each of
 seven columns and for a row header,
 so we need
 (7+1)*(1+1) characters, plus one for the &#8216;|&#8217;:  1 + (7+1)*(1+1).
@@ -893,7 +895,7 @@ Where does the code go?  It is repeated for each row, so it is inside
 the outer loop, but it is just printed once per row, so it comes <em>before</em> the
 inner column loop.  The row label is r.
 The whole code is in example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/mod7_table/mod7_table.cs">mod7_table/mod7_table.cs</a> and below:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">//heading</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">//heading</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;* | &quot;</span><span class="p">);</span>
 <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>  <span class="c1">//column headings</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">i</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
@@ -926,7 +928,7 @@ Knowing a lot more math is useful!
 easy to work out by brute force, going through the row of products.
 A much more efficient
 method is needed for cryptography:  That method involves
-an elaboration of <a class="reference internal" href="../while/gcdexamples.html#gcd"><span>Greatest Common Divisor</span></a>.</p>
+an elaboration of <a class="reference internal" href="../while/gcdexamples.html#gcd"><span class="std std-ref">Greatest Common Divisor</span></a>.</p>
 <p>Finally, let us generalize this table to mod n.  With n up to about 25,
 it is reasonable to print.
 Most of the changes are just replacing 7 by n.
@@ -942,25 +944,25 @@ number and an extra space
 mod 7, we want format string &#8220;{0,1} &#8221;, but for mod 11, we want &#8220;{0,2} &#8221;.
 This 1 or 2 is the number of characters in n as a string,
 given by</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">numberWidth</span> <span class="p">=</span> <span class="p">(</span><span class="s">&quot;&quot;</span> <span class="p">+</span> <span class="n">n</span><span class="p">).</span><span class="n">Length</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">numberWidth</span> <span class="p">=</span> <span class="p">(</span><span class="s">&quot;&quot;</span> <span class="p">+</span> <span class="n">n</span><span class="p">).</span><span class="n">Length</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>We can create the format string
 with a string concatenation expression:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">colFormat</span> <span class="p">=</span> <span class="s">&quot;{0,&quot;</span> <span class="p">+</span> <span class="n">numberWidth</span> <span class="p">+</span> <span class="s">&quot;}&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">colFormat</span> <span class="p">=</span> <span class="s">&quot;{0,&quot;</span> <span class="p">+</span> <span class="n">numberWidth</span> <span class="p">+</span> <span class="s">&quot;}&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>or use
 <em>another</em> format string and substitution.  This is an excuse to
 illustrate including explicit braces (for the main format string).
 Recall the explicit braces are doubled.  Check out this version:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">colFormat</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{{0,{0}}} &quot;</span><span class="p">,</span> <span class="n">numberWidth</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">colFormat</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{{0,{0}}} &quot;</span><span class="p">,</span> <span class="n">numberWidth</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>which we use in the code for the whole function, below,
 and in example program
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/mod_mult_table/mod_mult_table.cs">mod_mult_table/mod_mult_table.cs</a>.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print a table for modular multiplication mod n.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print a table for modular multiplication mod n.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">MultTable</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">numberWidth</span> <span class="p">=</span> <span class="p">(</span><span class="s">&quot;&quot;</span> <span class="p">+</span> <span class="n">n</span><span class="p">).</span><span class="n">Length</span><span class="p">;</span>
@@ -987,19 +989,19 @@ and in example program
 </div>
 <div class="section" id="reversed-string-returned">
 <span id="reverse-string-returned"></span><span id="index-5"></span><h2>8.2.4. Reversed String Returned<a class="headerlink" href="#reversed-string-returned" title="Permalink to this headline">¶</a></h2>
-<p>In <a class="reference internal" href="../while/while-with-sequence.html#reversed-print-example"><span>String Backwards Exercise/Example</span></a> we discuss iterating through a string&#8217;s
+<p>In <a class="reference internal" href="../while/while-with-sequence.html#reversed-print-example"><span class="std std-ref">String Backwards Exercise/Example</span></a> we discuss iterating through a string&#8217;s
 indices and characters to print the string reversed.  That might be useful,
 but it logically the joining of two separate ideas:  reversing a string and
 printing it.  We already know how to print a string as a step.  Now consider
 the first part as its own function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return s in reverse order.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return s in reverse order.</span>
       <span class="c1">/// If s is &quot;drab&quot;, return &quot;bard&quot;.</span>
       <span class="k">static</span> <span class="kt">string</span> <span class="nf">Reverse</span> <span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To go along with this chapter, we will use a <code class="docutils literal"><span class="pre">for</span></code> loop heading rather
 a <code class="docutils literal"><span class="pre">while</span></code> loop as in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/reversed_print/reversed_print.cs">reversed_print/reversed_print.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
 </pre></div>
 </div>
 <p>A more significant difference is that in
@@ -1009,7 +1011,7 @@ string, with all the characters, before returning the result.</p>
 <p>Let us think of the example in the documentation:  If we start with
 <code class="docutils literal"><span class="pre">s</span></code> as <code class="docutils literal"><span class="pre">&quot;drab&quot;</span></code>, and we go through the letters one at a time in
 reverse order, b a r d, we build up successively:</p>
-<div class="highlight-none"><div class="highlight"><pre>b
+<div class="highlight-none"><div class="highlight"><pre><span></span>b
 ba
 bar
 bard
@@ -1026,7 +1028,7 @@ I used the name <code class="docutils literal"><span class="pre">rev</span></cod
 Combining with a string is done with the <code class="docutils literal"><span class="pre">+</span></code> operator.
 Then when <code class="docutils literal"><span class="pre">rev</span></code> is <code class="docutils literal"><span class="pre">&quot;ba&quot;</span></code> and <code class="docutils literal"><span class="pre">s[i]</span></code> is <code class="docutils literal"><span class="pre">'r'</span></code>, the combination,
 using the variable names, is</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>We want this in our loop, so we must be able to use
@@ -1034,7 +1036,7 @@ that expression <em>each</em> time through the loop,
 so <code class="docutils literal"><span class="pre">rev</span></code>  changes each time through the loop.  In the next iteration <code class="docutils literal"><span class="pre">rev</span></code>
 is the <em>result</em> of the previous expression.  The assignment statement
 to give us the next version of <code class="docutils literal"><span class="pre">rev</span></code> can just be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">rev</span> <span class="p">=</span> <span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">=</span> <span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>That gives us the general rule.  Pay attention now to the beginning and end:
@@ -1045,14 +1047,14 @@ but the the first character that we add is <code class="docutils literal"><span 
 through all the characters in our loop.  It is better to go all the way
 back to the beginning:  If we use the general form with the first letter in the
 reversed sequence,</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">rev</span> <span class="p">=</span> <span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">=</span> <span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>then the result of the initial <code class="docutils literal"><span class="pre">rev</span></code> +  <code class="docutils literal"><span class="pre">'b'</span></code> should just be <code class="docutils literal"><span class="pre">&quot;b&quot;</span></code>.
 So what would <code class="docutils literal"><span class="pre">rev</span></code> be?</p>
 <p>Remember the empty string:  initialize <code class="docutils literal"><span class="pre">rev</span></code> to be <code class="docutils literal"><span class="pre">&quot;&quot;</span></code>.</p>
 <p>The result is:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return s in reverse order.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return s in reverse order.</span>
 <span class="c1">/// If s is &quot;drab&quot;, return &quot;bard&quot;.</span>
 <span class="k">static</span> <span class="kt">string</span> <span class="nf">Reverse</span> <span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1076,7 +1078,7 @@ So what would <code class="docutils literal"><span class="pre">rev</span></code>
 that will just randomly print <code class="docutils literal"><span class="pre">Heads</span></code> or <code class="docutils literal"><span class="pre">Tails</span></code> <em>once</em>.
 Accomplish this by choosing 0 or 1 arbitrarily with a random
 number generator.  More details follow.</p>
-<p>Use a <code class="docutils literal"><span class="pre">Random</span></code> object, as in <a class="reference internal" href="../while/lab-number-game.html#lab-number-game"><span>Number Guessing Game Lab</span></a>, <em>except</em> this time it is
+<p>Use a <code class="docutils literal"><span class="pre">Random</span></code> object, as in <a class="reference internal" href="../while/lab-number-game.html#lab-number-game"><span class="std std-ref">Number Guessing Game Lab</span></a>, <em>except</em> this time it is
 important <em>not</em> to make the <code class="docutils literal"><span class="pre">Random</span></code> object be a local variable inside
 the <code class="docutils literal"><span class="pre">Flip</span></code> function:  A new <code class="docutils literal"><span class="pre">Random</span></code> object in likely
 initialized using the current time.  The <code class="docutils literal"><span class="pre">Flip</span></code> function has no interaction
@@ -1088,14 +1090,14 @@ and be completely contrary to the idea of random results!</p>
 <p>Hence it is generally a good idea to only create a single <code class="docutils literal"><span class="pre">Random</span></code> object
 that stays in scope for the whole program.
 One way to do that is to make it <em>static</em>.  Place the declaration</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>inside your class but outside of any function, positioned like
-the static constants discussed in <a class="reference internal" href="../functions/staticvariables.html#static-variables"><span>Static Variables</span></a>.</p>
+the static constants discussed in <a class="reference internal" href="../functions/staticvariables.html#static-variables"><span class="std std-ref">Static Variables</span></a>.</p>
 <p>Then you can use <code class="docutils literal"><span class="pre">r</span></code> in any function in your class.
 For <code class="docutils literal"><span class="pre">int</span></code> variables <code class="docutils literal"><span class="pre">low</span></code> and <code class="docutils literal"><span class="pre">higher</span></code>, with <code class="docutils literal"><span class="pre">low</span> <span class="pre">&lt;</span> <span class="pre">higher</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">higher</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">higher</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>returns a (pseudo) random <code class="docutils literal"><span class="pre">int</span></code>, satisfying <code class="docutils literal"><span class="pre">low</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">higher</span></code>.
@@ -1115,7 +1117,7 @@ is to generate random double-precision values. Using the same
 variable, <code class="docutils literal"><span class="pre">r</span></code>, you can call <code class="docutils literal"><span class="pre">r.NextDouble()</span></code> to get a random value
 between 0 and 1. You can consider any generated value <span class="math">\(n &lt; 0.5\)</span> to
 be heads; <span class="math">\(n &gt;= 0.5\)</span> represents tails:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">double</span> <span class="n">n</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">NextDouble</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">n</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">NextDouble</span><span class="p">();</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">&lt;</span> <span class="m">0.5</span><span class="p">)</span> <span class="p">{</span>
    <span class="c1">// heads</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -1134,7 +1136,7 @@ variable declaration ensures that.</p>
 <p>Write a program <code class="docutils literal"><span class="pre">format_flips.cs</span></code>. It should include the function <code class="docutils literal"><span class="pre">Flip()</span></code>
 and the <code class="docutils literal"><span class="pre">static</span></code> <code class="docutils literal"><span class="pre">Random</span></code> declaration
 from the last exercise.  Also include another function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print out the results from the total number of random flips of a coin.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print out the results from the total number of random flips of a coin.</span>
 <span class="c1">/// Group them groupSize per line, each followed by a space.</span>
 <span class="c1">/// The last line may contain fewer than groupSize flips</span>
 <span class="c1">/// if total is not a multiple of groupSize.  The last line</span>
@@ -1149,16 +1151,16 @@ from the last exercise.  Also include another function:</p>
 <p>Complete this function definition and test
 with a variety of calls to <code class="docutils literal"><span class="pre">GroupFlips</span></code> in <code class="docutils literal"><span class="pre">Main</span></code>.
 The output from the previous exercise would be produced by the call:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">GroupFlips</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">GroupFlips</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="reverse-string-foreach-exercise">
 <span id="reverse-string-foreach"></span><span id="index-9"></span><h3>8.2.5.3. Reverse String <code class="docutils literal"><span class="pre">foreach</span></code> Exercise<a class="headerlink" href="#reverse-string-foreach-exercise" title="Permalink to this headline">¶</a></h3>
-<p>We already have discussed <a class="reference internal" href="#reverse-string-returned"><span>Reversed String Returned</span></a>.
+<p>We already have discussed <a class="reference internal" href="#reverse-string-returned"><span class="std std-ref">Reversed String Returned</span></a>.
 It used a <code class="docutils literal"><span class="pre">for</span></code> loop to go through the characters in
 reverse order.  Write a version with the only loop heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">foreach</span><span class="p">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="p">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
 <p>and no reference to indices in s.</p>
@@ -1167,7 +1169,7 @@ reverse order.  Write a version with the only loop heading:</p>
 <span id="only-letters-ex"></span><span id="index-10"></span><h3>8.2.5.4. Only Letters Exercise<a class="headerlink" href="#only-letters-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that defines and tests a function with
 description and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return s with all non-letters removed.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return s with all non-letters removed.</span>
 <span class="c1">/// For example OnlyLetters(&quot;Hello, World!&quot;) returns &quot;HelloWorld&quot;.</span>
 <span class="k">static</span> <span class="kt">string</span> <span class="nf">OnlyLetters</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
@@ -1178,7 +1180,7 @@ description and heading:</p>
 <span id="palindrome-ex"></span><span id="index-11"></span><h3>8.2.5.5. Palindrome Exercise<a class="headerlink" href="#palindrome-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a program <code class="docutils literal"><span class="pre">palindrome.cs</span></code> that defines and tests a function with
 description and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return true when s is a palindrome.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return true when s is a palindrome.</span>
 <span class="c1">/// For example IsPalindrome(&quot;A Toyota!&quot;) returns true.</span>
 <span class="k">static</span> <span class="kt">bool</span> <span class="nf">IsPalindrome</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
@@ -1192,7 +1194,7 @@ functions from previous exercises.</p>
 <div class="section" id="nested-play-computer-exercise">
 <span id="index-12"></span><h3>8.2.5.6. Nested Play Computer Exercise<a class="headerlink" href="#nested-play-computer-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Predict what these code fragments print.  Then check yourself in csharp:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span> <span class="n">i</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span> <span class="n">i</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="m">4</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span> <span class="p">{</span>
         <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
     <span class="p">}</span>
@@ -1214,7 +1216,7 @@ functions from previous exercises.</p>
 <li><p class="first">Write a program <code class="file docutils literal"><span class="pre">power_table.cs</span></code> that completes and tests
 the function with this heading.  Be sure your program tests
 with several values for each parameter:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print a table of powers of positive integers.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print a table of powers of positive integers.</span>
 <span class="c1">/// Assume 1 &lt;= nMax &lt;= 12, 1 &lt;= powerMax &lt;= 7.</span>
 <span class="c1">/// Example: output of PowerTable(3, 4)</span>
 <span class="c1">///       n^1       n^2      n^3      n^4</span>
@@ -1250,7 +1252,7 @@ somewhere in the table. Consider heading widths, too.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

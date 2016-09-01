@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.4. Variables and Assignment &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>2.4. Variables and Assignment &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="2. C# Data and Operations" href="data.html" />
     <link rel="next" title="2.5. Syntax Template Typography" href="typography.html" />
@@ -84,7 +86,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arithmetic.html">2.3. Arithmetic</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.4. Variables and Assignment</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.4. Variables and Assignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
 <li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
@@ -324,7 +326,7 @@ locations in memory are associated with the type of data stored there
 and with a name to refer to it.</p>
 <p>A program allocates a named storage spot for a particular type of data with a
 <em>declaration statement</em>, like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Each declaration must specify a type for the data to be stored and give a name to
@@ -333,14 +335,14 @@ refer to it.  These names associated with a data storage location are called
 <p>The declaration statement above sets aside a location to store an <code class="docutils literal"><span class="pre">int</span></code>, and names
 the location <code class="docutils literal"><span class="pre">width</span></code>.  Several variables of the same type can be
 listed together, like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>identifying three storage locations for variables of type <code class="docutils literal"><span class="pre">double</span></code>.</p>
 <p>To be useful, data needs to be stored in these locations.  This is done with
 an <em>assignment statement</em>.
 For example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>A simple schematic diagram with a name for a location in memory (the box):</p>
@@ -352,12 +354,12 @@ side of the equal sign, either giving an initial value or
 <em>overwriting</em> any previous value stored there.</p>
 <a class="reference internal image-reference" href="../_images/variableAssignment.png"><img alt="../_images/variableAssignment.png" src="../_images/variableAssignment.png" style="width: 72pt;" /></a>
 <p id="index-1">Variables can also be initialized as they are declared:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
 <span class="kt">double</span> <span class="n">x</span> <span class="p">=</span> <span class="m">12.5</span><span class="p">,</span> <span class="n">y</span> <span class="p">=</span> <span class="m">27</span><span class="p">,</span> <span class="n">z</span> <span class="p">=</span> <span class="m">0.5</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>or initializations and plain declarations can be mixed:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">width</span> <span class="p">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
 <span class="n">height</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -365,14 +367,14 @@ side of the equal sign, either giving an initial value or
 possible.  Technically an initialization is not an assignment.  We will see
 some syntax that is legal in initializers, but not in assignment statements.</p>
 <p>We could continue with a further assignment statement:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">area</span> <span class="p">=</span> <span class="n">width</span> <span class="p">*</span> <span class="n">height</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">area</span> <span class="p">=</span> <span class="n">width</span> <span class="p">*</span> <span class="n">height</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Look at this in detail.  The assignment statement starts by evaluating the
 expression on the right-hand side: <code class="docutils literal"><span class="pre">width</span> <span class="pre">*</span> <span class="pre">height</span></code>.  When variables are
 used in an expression, their current values are substituted,
 like in evaluating an expression in math, so the value is the same as</p>
-<div class="highlight-none"><div class="highlight"><pre>5 * 7
+<div class="highlight-none"><div class="highlight"><pre><span></span>5 * 7
 </pre></div>
 </div>
 <p>which finally evaluates to 35.  In the last step of the assignment statement,
@@ -382,9 +384,9 @@ the value 35 is then assigned to the variable on the left, <code class="docutils
 <p class="last">You want <em>one</em> spot in memory prepared for <em>each</em> variable.  This happens
 with declaration, not assignment:  Assignment just changes the value
 at the current location.  Do not <em>declare</em> the same variable more than once.
-You will get an error.  More on the fine points around that in <a class="reference internal" href="../functions/localscope.html#local-scope"><span>Local Scope</span></a>.</p>
+You will get an error.  More on the fine points around that in <a class="reference internal" href="../functions/localscope.html#local-scope"><span class="std std-ref">Local Scope</span></a>.</p>
 </div>
-<p id="more-csharp"><span id="index-2"></span>We continue introducing <a class="reference internal" href="arithmetic.html#csharp"><span>Csharp</span></a>:
+<p id="more-csharp"><span id="index-2"></span>We continue introducing <a class="reference internal" href="arithmetic.html#csharp"><span class="std std-ref">Csharp</span></a>:
 Remember that in csharp you can just give an expression,
 and csharp responds with a value.  That syntax and reaction is special to
 csharp.   In csharp you can also test regular C# statements,
@@ -395,7 +397,7 @@ an expression).
 As in a regular program, statements
 do not give an immediate visible response in csharp.  Still in
 csharp you can display a variable value easily:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int width = 5, height, area;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; int width = 5, height, area;
 csharp&gt; height = 7;
 csharp&gt; area = width * height;
 csharp&gt; area
@@ -406,7 +408,7 @@ csharp&gt; area
 which is just the current value of the variable.</p>
 <p id="index-3">At this point you should be able to make sense of some more features of csharp.
 You can start with the csharp special help command:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; help
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; help
 &quot;Static methods:
   Describe (object)       - Describes the object&#39;s type
   LoadPackage (package);  - Loads the given Package (like -pkg:FILE)
@@ -423,13 +425,13 @@ You can start with the csharp special help command:</p>
 </pre></div>
 </div>
 <p>A lot of this is still beyond us but these parts are useful:</p>
-<div class="highlight-none"><div class="highlight"><pre>ShowVars ();            - Shows defined local variables.
+<div class="highlight-none"><div class="highlight"><pre><span></span>ShowVars ();            - Shows defined local variables.
 quit;                   - You&#39;ll never believe it - this quits the repl!
 help;                   - This help text
 </pre></div>
 </div>
 <p>We can continue the csharp session above and illustrate ShowVars():</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; ShowVars();
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; ShowVars();
 int width = 5
 int height = 7
 int area = 35
@@ -438,7 +440,7 @@ int area = 35
 <p>displaying all the variables currently known to csharp, plus their current values.</p>
 <p>We refer to &#8220;current values&#8221;.  An important distinction between variables in math
 and variables in C# is that C# values can <em>change</em>.  Follow this csharp sequence:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int n = 3;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; int n = 3;
 csharp&gt; n
 3
 csharp&gt; n = 7;
@@ -451,7 +453,7 @@ csharp&gt; n
 <a class="reference internal image-reference" href="../_images/variableChange.png"><img alt="../_images/variableChange.png" src="../_images/variableChange.png" style="width: 43.5pt;" /></a>
 <p>We can carry this csharp session one step further,
 illustrating a difference between C# and math:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; n = n + 1;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; n = n + 1;
 csharp&gt; n
 8
 </pre></div>
@@ -482,7 +484,7 @@ different meanings.  You assign to a variable on the left side <em>after</em>
 evaluating the expression on the right.</p>
 </div>
 <p>We can illustrate a likely mistake in csharp:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 3 = n;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 3 = n;
 {interactive}(1,2): error CS0131: The left-hand side of an assignment
 must be a variable, a property or an indexer
 </pre></div>
@@ -490,7 +492,7 @@ must be a variable, a property or an indexer
 <p>Students commonly try to assign left to right.  At least in this case you get
 an error message so you see a mistake.  If you mean to assign the value of
 x to y, and write:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">x</span> <span class="p">=</span> <span class="n">y</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">=</span> <span class="n">y</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>you get the opposite effect, changing x rather than y, with <em>no</em> error statement.
@@ -502,7 +504,7 @@ an expression, sometimes leading to csharp giving
 a strange error for apparently no reason.  In that case,
 try putting <em>parentheses</em> around the expression, which is always legal for an
 expression, but would never start a regular statement:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int width = 3;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; int width = 3;
 csharp&gt; int height = 5;
 csharp&gt; width * height
 {interactive}(1,2): error CS0246: The type or namespace name &#39;width&#39; could
@@ -561,7 +563,7 @@ differently).</p>
 <div class="section" id="assignment-exercise">
 <h3>2.4.1.1. Assignment Exercise<a class="headerlink" href="#assignment-exercise" title="Permalink to this headline">¶</a></h3>
 <p><em>Think</em> what the result would be in csharp:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
 <span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
 <span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">*</span> <span class="m">3</span><span class="p">;</span>
 <span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">*</span> <span class="m">5</span><span class="p">;</span>
@@ -573,7 +575,7 @@ differently).</p>
 <div class="section" id="another-assignment-exercise">
 <h3>2.4.1.2. Another Assignment Exercise<a class="headerlink" href="#another-assignment-exercise" title="Permalink to this headline">¶</a></h3>
 <p>If you had trouble with the last, one try this one, too:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
 <span class="n">a</span> <span class="p">=</span> <span class="n">a</span><span class="p">/</span><span class="m">2</span><span class="p">;</span>
 <span class="n">a</span> <span class="p">=</span> <span class="n">a</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
 <span class="n">a</span> <span class="p">=</span> <span class="n">a</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span>
@@ -597,7 +599,7 @@ differently).</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

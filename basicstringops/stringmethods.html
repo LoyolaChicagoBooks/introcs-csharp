@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>4.2. Some Instance Methods and the Length Property &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>4.2. Some Instance Methods and the Length Property &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="4. Basic String Operations" href="basicstringops.html" />
     <link rel="next" title="4.3. A Creative Problem Solution" href="problem-solving-replace.html" />
@@ -116,7 +118,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="basicstringops.html">4. Basic String Operations</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="stringindexing.html">4.1. String Indexing</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">4.2. Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Some Instance Methods and the Length Property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-string-ops.html">4.4. Lab: String Operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewstring.html">4.5. Chapter Review Questions</a></li>
@@ -324,7 +326,7 @@ particular type of object.  These functions are called <em>instance methods</em>
 They always act on an object of the particular class, but a reference to the
 object is not placed inside the parameter list, but <em>before</em> the method name and
 a dot as in:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;hello&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;hello&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">();</span>
 <span class="s">&quot;HELLO&quot;</span>
 </pre></div>
@@ -342,7 +344,7 @@ and the parentheses after the method name are empty.  The general method syntax 
 <p id="index-1">Data can also be associated with object <em>properties</em>.
 A property of a string is its <code class="docutils literal"><span class="pre">Length</span></code> (an <code class="docutils literal"><span class="pre">int</span></code>).  References to property values
 use dot notation but do not have a parameter list in parentheses at the end:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;Hello&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
 <span class="m">5</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;&quot;</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
@@ -372,7 +374,7 @@ a variable name, a literal, or any expression evaluating to a string.</p>
 <dd><p class="first">Returns the index of the beginning of the first occurrence of the
 string <code class="docutils literal"><span class="pre">target</span></code>
 in <strong>this</strong> string object. Returns -1 if <code class="docutils literal"><span class="pre">target</span></code> not found. Examples:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">greeting</span> <span class="p">=</span> <span class="s">&quot;Bonjour&quot;</span><span class="p">,</span> <span class="n">part</span> <span class="p">=</span> <span class="s">&quot;jo&quot;</span><span class="p">;</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">greeting</span> <span class="p">=</span> <span class="s">&quot;Bonjour&quot;</span><span class="p">,</span> <span class="n">part</span> <span class="p">=</span> <span class="s">&quot;jo&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">greeting</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="n">part</span><span class="p">);</span>
 <span class="m">3</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">greeting</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="s">&quot;jot&quot;</span><span class="p">);</span>
@@ -383,7 +385,7 @@ in <strong>this</strong> string object. Returns -1 if <code class="docutils lite
 <dt><code class="docutils literal"><span class="pre">string</span> <span class="pre">Substring(int</span> <span class="pre">start)</span></code></dt>
 <dd><p class="first">Returns the substring of <strong>this</strong> string object starting from index <code class="docutils literal"><span class="pre">start</span></code>
 through to the end of the string object.  Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&quot;Sheryl Crow&quot;</span><span class="p">;</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&quot;Sheryl Crow&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">name</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="m">7</span><span class="p">);</span>
 <span class="s">&quot;Crow&quot;</span>
 </pre></div>
@@ -392,7 +394,7 @@ through to the end of the string object.  Example:</p>
 <dt><code class="docutils literal"><span class="pre">string</span> <span class="pre">Substring(int</span> <span class="pre">start,</span> <span class="pre">int</span> <span class="pre">len)</span></code></dt>
 <dd><p class="first">Returns the substring of <strong>this</strong> string object starting from index <code class="docutils literal"><span class="pre">start</span></code>,
 including a total of <code class="docutils literal"><span class="pre">len</span></code> characters.  Example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&quot;Sheryl Crow&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&quot;Sheryl Crow&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">name</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">);</span>
 <span class="s">&quot;ryl C&quot;</span>
 </pre></div>
@@ -401,21 +403,21 @@ including a total of <code class="docutils literal"><span class="pre">len</span>
 </dd>
 <dt><code class="docutils literal"><span class="pre">string</span> <span class="pre">ToUpper()</span></code></dt>
 <dd><p class="first">Return a string like <strong>this</strong> string, except all in upper case.  Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;Hi Jane!&quot;</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">();</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;Hi Jane!&quot;</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">();</span>
 <span class="s">&quot;HI JANE!&quot;</span>
 </pre></div>
 </div>
 </dd>
 <dt><code class="docutils literal"><span class="pre">string</span> <span class="pre">ToLower()</span></code></dt>
 <dd><p class="first">Return a string like <strong>this</strong> string, except all in lower case.  Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;Hi Jane!&quot;</span><span class="p">.</span><span class="n">ToLower</span><span class="p">();</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="s">&quot;Hi Jane!&quot;</span><span class="p">.</span><span class="n">ToLower</span><span class="p">();</span>
 <span class="s">&quot;hi jane!&quot;</span>
 </pre></div>
 </div>
 </dd>
 <dt><code class="docutils literal"><span class="pre">int</span> <span class="pre">Length</span></code></dt>
 <dd><p class="first">Property referring to the length of <strong>this</strong> string object. Example:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">greeting</span> <span class="p">=</span> <span class="s">&quot;Bonjour&quot;</span><span class="p">;</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">greeting</span> <span class="p">=</span> <span class="s">&quot;Bonjour&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">greeting</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>  <span class="c1">//no parentheses</span>
 <span class="m">7</span>
 </pre></div>
@@ -429,7 +431,7 @@ alters the original string.  Strings are <em>immutable</em>:
 They are objects that cannot be changed
 after they are first produced.  This is a common source of errors.</p>
 </div>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">csharp</span><span class="p">&gt;</span> <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;Hello&quot;</span><span class="p">;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">()</span>
 <span class="s">&quot;HELLO&quot;</span>
 <span class="n">csharp</span><span class="p">&gt;</span> <span class="n">s</span>
@@ -441,8 +443,8 @@ after they are first produced.  This is a common source of errors.</p>
 </div>
 <p>See that you need an explicit assignment if you <em>want</em> the variable associated
 with the original string to change.</p>
-<p>Further string methods are introduced in <a class="reference internal" href="../while/stringmethods2.html#more-string-methods"><span>More String Methods</span></a>.</p>
-<p>Time to reflect, thinking back to <a class="reference internal" href="../data/learning-to-problem-solve.html#learn-solve"><span>Learning to Solve Problems</span></a>.
+<p>Further string methods are introduced in <a class="reference internal" href="../while/stringmethods2.html#more-string-methods"><span class="std std-ref">More String Methods</span></a>.</p>
+<p>Time to reflect, thinking back to <a class="reference internal" href="../data/learning-to-problem-solve.html#learn-solve"><span class="std std-ref">Learning to Solve Problems</span></a>.
 Without forcing all the code details on yourself,
 how can you concisely say what powers you have with strings so far?
 Remember that kernel.</p>
@@ -472,7 +474,7 @@ These may not be evocative phrases for you.  Find your own.</p>
 18
 19
 20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Parenthesized</span>
 <span class="p">{</span>
@@ -495,14 +497,14 @@ These may not be evocative phrases for you.  Find your own.</p>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>It is a silly assumption, but until we get to <a class="reference internal" href="../decisions/decisions.html#if-statements"><span>Decisions</span></a>,
+<p>It is a silly assumption, but until we get to <a class="reference internal" href="../decisions/decisions.html#if-statements"><span class="std std-ref">Decisions</span></a>,
 we will have to assume there <em>is</em>
 a parenthesized expression in the parameter string.</p>
 <div class="section" id="string-methods-exercise">
 <h3>4.2.1.1. String Methods Exercise<a class="headerlink" href="#string-methods-exercise" title="Permalink to this headline">¶</a></h3>
 <ol class="loweralpha">
 <li><p class="first">What is printed by this fragment?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">w</span> <span class="p">=</span> <span class="s">&quot;quickly&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">w</span> <span class="p">=</span> <span class="s">&quot;quickly&quot;</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">w</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="n">w</span><span class="p">.</span><span class="n">Length</span><span class="p">-</span><span class="m">2</span><span class="p">]);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">w</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">));</span>
@@ -516,7 +518,7 @@ a parenthesized expression in the parameter string.</p>
 </div>
 </li>
 <li><p class="first">What is printed by this fragment?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;HELLO!&quot;</span><span class="p">,</span> <span class="n">t</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">ToLower</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;HELLO!&quot;</span><span class="p">,</span> <span class="n">t</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">ToLower</span><span class="p">();</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">+</span><span class="n">t</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -542,7 +544,7 @@ for which you predict the value and then test.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

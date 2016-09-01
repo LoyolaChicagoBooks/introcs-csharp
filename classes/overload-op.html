@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>13.6. Defining Operators (Optional) &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>13.6. Defining Operators (Optional) &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="13. Classes and Object-Oriented Programming" href="classes.html" />
     <link rel="next" title="13.7. Chapter Review Questions" href="reviewclasses.html" />
@@ -205,7 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="rational.html">13.3. The Rational Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">13.6. Defining Operators (Optional)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">13.6. Defining Operators (Optional)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -327,9 +329,9 @@ give new meanings to the operator <code class="docutils literal"><span class="pr
 variant of the Rational class in
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_ops_stub/rational.cs">rational_ops_stub/rational.cs</a>.  This class also contains code
 discussed in the
-next section, <a class="reference internal" href="#casts-in-user-classes"><span>Casts in User-Defined Classes</span></a>.
+next section, <a class="reference internal" href="#casts-in-user-classes"><span class="std std-ref">Casts in User-Defined Classes</span></a>.
 Here are operator overload declarations for <code class="docutils literal"><span class="pre">*</span></code> and others:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// * binary multiplication operator</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// * binary multiplication operator</span>
       <span class="k">public</span> <span class="k">static</span> <span class="n">Rational</span> <span class="k">operator</span> <span class="p">*(</span><span class="n">Rational</span> <span class="n">f1</span><span class="p">,</span> <span class="n">Rational</span> <span class="n">f2</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">f1</span><span class="p">.</span><span class="n">num</span><span class="p">*</span><span class="n">f2</span><span class="p">.</span><span class="n">num</span><span class="p">,</span> <span class="n">f1</span><span class="p">.</span><span class="n">denom</span><span class="p">*</span><span class="n">f2</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
@@ -369,7 +371,7 @@ at least one of the parameters must be of the type of the class being defined.</
 <p>(We could have directly defined four further overloads of <code class="docutils literal"><span class="pre">*</span></code>,
 with the first or second parameter
 being an <code class="docutils literal"><span class="pre">int</span></code> or a <code class="docutils literal"><span class="pre">double</span></code>, but we will avoid that by also adding methods
-to provide implicit <a class="reference internal" href="#casts-in-user-classes"><span>Casts in User-Defined Classes</span></a>.)</p>
+to provide implicit <a class="reference internal" href="#casts-in-user-classes"><span class="std std-ref">Casts in User-Defined Classes</span></a>.)</p>
 <p>The <code class="docutils literal"><span class="pre">-</span></code> symbol is special, since it can be used either as a unary operator for
 negation, or as a binary operator for subtraction.  Since we include only
 one parameter above, we are defining the unary version.</p>
@@ -382,10 +384,10 @@ overrides of Equals and HashCode methods, that are ideally in sync with
 the meaning of <code class="docutils literal"><span class="pre">==</span></code>.  You should see a discussion of these methods in a
 data structures course, like Loyola&#8217;s Comp 271.)</p>
 <p>The class is a stub,
-and <a class="reference internal" href="#overloading-operator-exercise"><span>Operator Overloading Exercise</span></a>
+and <a class="reference internal" href="#overloading-operator-exercise"><span class="std std-ref">Operator Overloading Exercise</span></a>
 invites you to add further operator overloads.</p>
 <p id="index-1"><strong>Precedence</strong>:  Note that the operator overloading method definitions include
-nothing about <a class="reference internal" href="../appendix/precedence.html#precedence"><span>Precedence of Operators</span></a>. That is because the precedence of operators
+nothing about <a class="reference internal" href="../appendix/precedence.html#precedence"><span class="std std-ref">Precedence of Operators</span></a>. That is because the precedence of operators
 is fixed across the whole language. Unary <code class="docutils literal"><span class="pre">-</span></code> has higher
 precedence than <code class="docutils literal"><span class="pre">*</span></code> ... no matter what the types involved.</p>
 <p>An example testing class also uses the new casting syntax of next section:</p>
@@ -406,7 +408,7 @@ We bridge this difference by defining an implicit cast of an <code class="docuti
 so  the compiler will take <code class="docutils literal"><span class="pre">f</span> <span class="pre">*</span> <span class="pre">n</span></code> and see the need to implicitly cast
 <code class="docutils literal"><span class="pre">n</span></code> to a Rational.  The definition below will also allow explicit casts
 if you choose, like <code class="docutils literal"><span class="pre">f</span> <span class="pre">*</span> <span class="pre">(Rational)</span> <span class="pre">n</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Code to cast an int to a Rational implicitly when needed.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Code to cast an int to a Rational implicitly when needed.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="k">implicit</span> <span class="k">operator</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
@@ -429,7 +431,7 @@ a <code class="docutils literal"><span class="pre">double</span></code> is only 
 it would not be wise to implicitly convert
 a <code class="docutils literal"><span class="pre">double</span></code> to a Rational, but it does make sense to approximate a Rational
 by a <code class="docutils literal"><span class="pre">double</span></code> before use with a <code class="docutils literal"><span class="pre">double</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Code to cast to a double implicitly when needed.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Code to cast to a double implicitly when needed.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="k">implicit</span> <span class="k">operator</span> <span class="nf">double</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">/</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
@@ -450,7 +452,7 @@ You are
 we have already seen these required for a cast from <code class="docutils literal"><span class="pre">double</span></code> to <code class="docutils literal"><span class="pre">int</span></code>.
 To only allow an explicit cast with your type,
 replace <code class="docutils literal"><span class="pre">implicit</span></code> by <code class="docutils literal"><span class="pre">explicit</span></code> in the cast method heading.</p>
-<div class="highlight-csharp" id="decimal-type"><span id="index-3"></span><div class="highlight"><pre>      <span class="c1">/// Code to cast to a decimal with an explicit cast.</span>
+<div class="highlight-csharp" id="decimal-type"><span id="index-3"></span><div class="highlight"><pre><span></span>      <span class="c1">/// Code to cast to a decimal with an explicit cast.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="k">explicit</span> <span class="k">operator</span> <span class="nf">decimal</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">/</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
@@ -497,7 +499,7 @@ and extend the TestOps class to test them.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

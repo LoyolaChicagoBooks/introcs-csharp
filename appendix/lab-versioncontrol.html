@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>18.10. Lab: Version Control &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>18.10. Lab: Version Control &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="18. Appendix" href="appendix.html" />
     <link rel="next" title="18.11. Mercurial and Teamwork" href="hgteamwork.html" />
@@ -238,7 +240,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">18.10. Lab: Version Control</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">18.10. Lab: Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
 <li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
 </ul>
@@ -443,7 +445,7 @@ where you are dumped when you open a DOS or Linux/OS X terminal.  This is <em>no
 inside your repository.
 This file must contain the following lines, with the part after the equal sign
 personalized for you:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="na">[ui]</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="na">[ui]</span>
 <span class="n">username</span> <span class="p">=</span> <span class="n">John</span> <span class="n">Doe</span> <span class="p">&lt;</span><span class="n">johndoe@johndoe</span><span class="p">.</span><span class="n">com</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -479,7 +481,7 @@ as a sub-directory.  This could be your home directory on your machine or
 a flash drive in a lab.</p>
 <p><strong>Windows only</strong>:
 To navigate in a DOS-Shell to a flash drive, you need to enter the short command:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">E</span><span class="p">:</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">E</span><span class="p">:</span>
 </pre></div>
 </div>
 <p>or possible another drive letter followed by a colon.
@@ -496,17 +498,17 @@ from the list of repositories.  If all goes well, you should see the
 following screen:</p>
 <a class="reference internal image-reference" href="../_images/hgrepositorysummary.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgrepositorysummary.png" style="height: 300pt;" /></a>
 <p>Somewhere on this screen, you should see this text:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Clone</span> <span class="k">this</span> <span class="nf">repository</span> <span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="m">546</span> <span class="n">bytes</span><span class="p">):</span> <span class="n">HTTPS</span> <span class="p">/</span> <span class="n">SSH</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Clone</span> <span class="k">this</span> <span class="nf">repository</span> <span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="m">546</span> <span class="n">bytes</span><span class="p">):</span> <span class="n">HTTPS</span> <span class="p">/</span> <span class="n">SSH</span>
 <span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//yourusername@bitbucket.org/yourusername/yourrepository</span>
 </pre></div>
 </div>
 <p>Copy the command you see in the browser starting <code class="docutils literal"><span class="pre">hg</span> <span class="pre">clone</span></code>, and paste it in
 as a command in your terminal/DOS-shell window.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170</span>
 </pre></div>
 </div>
 <p>You will see some output:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">http</span> <span class="n">authorization</span> <span class="n">required</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">http</span> <span class="n">authorization</span> <span class="n">required</span>
 <span class="n">realm</span><span class="p">:</span> <span class="n">Bitbucket</span><span class="p">.</span><span class="n">org</span> <span class="n">HTTP</span>
 <span class="n">user</span><span class="p">:</span> <span class="n">gkthiruvathukal</span>
 <span class="n">password</span><span class="p">:</span>
@@ -541,7 +543,7 @@ That should mean <code class="docutils literal"><span class="pre">cd</span></cod
 bitbucket repository name.</p>
 <p>The following is an example of a &#8220;dot hgignore&#8221; file.  Mercurial will neither
 list or otherwise pay attention the files in this list:</p>
-<div class="highlight-none"><div class="highlight"><pre># This indicates that we are using shell-like matching logic
+<div class="highlight-none"><div class="highlight"><pre><span></span># This indicates that we are using shell-like matching logic
 #    instead of regular expressions.
 syntax: glob
 # For Mac users
@@ -603,7 +605,7 @@ the <code class="docutils literal"><span class="pre">labs</span></code> folder.<
 </li>
 <li><p class="first">Verify that the .cs and .exe files are in the labs directory
 (<code class="docutils literal"><span class="pre">ls</span></code> on Linux or OS X; <code class="docutils literal"><span class="pre">dir</span></code> on MS-DOS):</p>
-<div class="highlight-csharp"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170/labs$ mcs hello.cs
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170/labs$ mcs hello.cs
 gkt@gkt-mini:~/gkt170/labs$ ls -l
 total 8
 -rw-r--r-- 1 gkt gkt  224 2012-02-20 20:02 hello.cs
@@ -612,7 +614,7 @@ total 8
 </div>
 </li>
 <li><p class="first">Check the status:</p>
-<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170/labs$ hg status
+<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170/labs$ hg status
 ? .hgignore
 ? labs/hello.cs
 </pre></div>
@@ -625,7 +627,7 @@ control if we want to use it wherever we happen to be working with our
 stuff (i.e. when we&#8217;re not in the computer lab but, say, at home).</p>
 </li>
 <li><p class="first">Add the file to version control:</p>
-<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg add .hgignore
+<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg add .hgignore
 
 gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 </pre></div>
@@ -634,7 +636,7 @@ gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 <li><p class="first">Commit the changes, and then see the log entry
 with the commands below.  If you set the .hgrc file,
 the command somewhere inside your local repository could be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">hg</span> <span class="n">commit</span> <span class="p">-</span><span class="n">m</span> <span class="s">&quot;adding an .hgignore file and Hello, World to the project&quot;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">commit</span> <span class="p">-</span><span class="n">m</span> <span class="s">&quot;adding an .hgignore file and Hello, World to the project&quot;</span>
 </pre></div>
 </div>
 <p>If you did not create .hgrc, you need also include identification
@@ -644,7 +646,7 @@ with -u yourName after <code class="docutils literal"><span class="pre">commit</
 </div></blockquote>
 <p>It is Ok if your message wraps to a new line.  You can check the log entry created
 by your commit:</p>
-<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg log
+<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg log
 changeset:   0:9fe6ee1bf907
 tag:         tip
 user:        George K. Thiruvathukal &lt;gkt@cs.luc.edu&gt;
@@ -655,11 +657,11 @@ summary:     adding an .hgignore file and Hello, World to the project
 </li>
 <li><p class="first">Push the changes to Bitbucket with the following command.
 (You&#8217;ll be prompted for user/password not shown here):</p>
-<div class="highlight-none"><div class="highlight"><pre>hg push
+<div class="highlight-none"><div class="highlight"><pre><span></span>hg push
 </pre></div>
 </div>
 <p>You should get a response like:</p>
-<div class="highlight-none"><div class="highlight"><pre>pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
+<div class="highlight-none"><div class="highlight"><pre><span></span>pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
 searching for changes
 remote: adding changesets
 remote: adding manifests
@@ -681,7 +683,7 @@ one or more folders, like work, or homework and labs.</p>
 <li><p class="first">Make sure you are in the checkout directory, or <code class="docutils literal"><span class="pre">cd</span></code> to it.</p>
 </li>
 <li><p class="first">Create directories:</p>
-<div class="highlight-none"><div class="highlight"><pre>mkdir hw
+<div class="highlight-none"><div class="highlight"><pre><span></span>mkdir hw
 mkdir labs
 </pre></div>
 </div>
@@ -711,7 +713,7 @@ like labs/hello.cs</p>
 <div><p>hg status</p>
 </div></blockquote>
 <p>and produce a response like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="p">?</span> <span class="n">labs</span><span class="p">/</span><span class="n">hello</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="p">?</span> <span class="n">labs</span><span class="p">/</span><span class="n">hello</span><span class="p">.</span><span class="n">cs</span>
 </pre></div>
 </div>
 <p>Mercurial shows you the tracked files that are modified (none here)
@@ -729,7 +731,7 @@ you can just type the following (nothing after the add):</p>
 <div><p>hg add</p>
 </div></blockquote>
 <p>and produce a response like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">adding</span> <span class="n">do_the_math</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">adding</span> <span class="n">do_the_math</span><span class="p">.</span><span class="n">cs</span>
 </pre></div>
 </div>
 <p>If you inadvertently added something that you truly don&#8217;t want in the repository, you
@@ -737,7 +739,7 @@ can use the <strong>hg rm</strong> command to remove it. We have nothing at the 
 we want to remove, but want to make you aware that correcting mistakes is possible.</p>
 </li>
 <li><p class="first">As before, commit and push.  Here is a sequence from Dr. Thiruvathukal&#8217;s Mac:</p>
-<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~/gkt170$ hg commit -m &quot;adding hello program&quot;
+<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg commit -m &quot;adding hello program&quot;
 gkt@gkt-mini:~/gkt170$ hg push
 pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170\
 searching for changes
@@ -816,7 +818,7 @@ a team on developing the book and examples.</p>
 <ol class="arabic">
 <li><p class="first">Pick a different location (outside of your repository folder and its subfolders)
 to check out our stuff from Bitbucket:</p>
-<div class="highlight-none"><div class="highlight"><pre>hg clone https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
+<div class="highlight-none"><div class="highlight"><pre><span></span>hg clone https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
 </pre></div>
 </div>
 </li>
@@ -826,7 +828,7 @@ to push changes to our repository, anything you change in your copy won&#8217;t 
 <li><p class="first">Look under the source tab on the project page.</p>
 </li>
 <li><p class="first">For example, if you performed a clone to introcs-csharp-examples, you should be able to change directory to introcs-csharp-examples:</p>
-<div class="highlight-none"><div class="highlight"><pre>gkt@gkt-mini:~$ cd introcs-csharp-examples
+<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~$ cd introcs-csharp-examples
 gkt@gkt-mini:~/introcs-csharp-examples$ ls
 addition1
 ...
@@ -855,7 +857,7 @@ write_test
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

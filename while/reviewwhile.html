@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6.11. Chapter Review Questions &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>6.11. Chapter Review Questions &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="6. While Loops" href="while.html" />
     <link rel="next" title="7. Foreach Loops" href="../foreach/foreach.html" />
@@ -145,7 +147,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.11. Chapter Review Questions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.11. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
@@ -310,7 +312,15 @@
 <h1>6.11. Chapter Review Questions<a class="headerlink" href="#chapter-review-questions" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic">
 <li><p class="first">While loops are a very important part of your programming tools.
-Put in your own words:  when should you think to use a while loop?</p>
+Put in your own words:  when should you think to use a while loop?
+What words or phrases in the description of a problem suggest the use of a loop?</p>
+<p>More concretely, each sentence below introduces a problem.
+What words/combinations suggest a loop/repetition?</p>
+<p>Square each number from 1 to n.</p>
+<p>Respond until the user says to stop.</p>
+<p>Repeat the process until the width is &lt; .00001.</p>
+<p>Count the vowels in the sentence that you are given.</p>
+<p>See if there are any double letters in the word that you are given.</p>
 </li>
 <li><p class="first">Loops are also among the hardest things for many students &#8211;
 with lots of things to think about.
@@ -335,7 +345,7 @@ condition in its heading and the value becomes false.
 What is the important difference in this statement from the previous
 incorrect statement?</p>
 </li>
-<li><p class="first">When does a program evaluate the condition in a <code class="docutils literal"><span class="pre">while</span></code> loop heading?
+<li><p class="first">When is the next step in a program to evaluate the condition in a <code class="docutils literal"><span class="pre">while</span></code> loop heading?
 (There are two situations.)</p>
 </li>
 <li><p class="first">A <code class="docutils literal"><span class="pre">while</span></code> loop is generally terminated when the program evaluates the
@@ -354,14 +364,14 @@ of what kind of statement?</p>
 <li><p class="first">Which of these conditions is safer in general, with <em>arbitrary</em>
 <code class="docutils literal"><span class="pre">string</span></code> <code class="docutils literal"><span class="pre">s</span></code> and
 <code class="docutils literal"><span class="pre">int</span></code> <code class="docutils literal"><span class="pre">i</span></code>?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">!=</span> <span class="sc">&#39;#&#39;</span> <span class="p">&amp;&amp;</span> <span class="n">i</span> <span class="p">&gt;=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">!=</span> <span class="sc">&#39;#&#39;</span> <span class="p">&amp;&amp;</span> <span class="n">i</span> <span class="p">&gt;=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span>
 
 <span class="n">i</span> <span class="p">&gt;=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">!=</span> <span class="sc">&#39;#&#39;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">What is printed?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">//          012345678901234567890</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">//          012345678901234567890</span>
 <span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;Is coding cool?  Yes!&quot;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Trim</span><span class="p">());</span>
 <span class="kt">string</span> <span class="n">t</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="m">8</span><span class="p">);</span>
@@ -391,7 +401,7 @@ of what kind of statement?</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

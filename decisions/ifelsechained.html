@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5.5. Multiple Tests and if-else Statements &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>5.5. Multiple Tests and if-else Statements &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="5. Decisions" href="decisions.html" />
     <link rel="next" title="5.6. If-statement Pitfalls" href="ifpitfalls.html" />
@@ -127,7 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
@@ -330,7 +332,7 @@ function to convert a numerical grade to a letter grade, &#8216;A&#8217;, &#8216
 would be to test for one grade at a time, and resolve all the
 remaining possibilities inside the next <code class="docutils literal"><span class="pre">else</span></code> clause.
 If we do this consistent with our indentation conventions so far:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">char</span> <span class="nf">letterGrade</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">char</span> <span class="nf">letterGrade</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">char</span> <span class="n">letter</span><span class="p">;</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">90</span><span class="p">)</span> <span class="p">{</span>
@@ -366,7 +368,7 @@ Combine each <code class="docutils literal"><span class="pre">else</span></code>
 and note that the <code class="docutils literal"><span class="pre">if</span></code> part after each else is just a <em>single</em>
 (possibly very complicated) statement.  This allows the elimination of
 some of the braces:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return letter grade for score.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return letter grade for score.</span>
 <span class="k">static</span> <span class="kt">char</span> <span class="nf">letterGrade</span><span class="p">(</span><span class="kt">double</span> <span class="n">score</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">char</span> <span class="n">letter</span><span class="p">;</span>
@@ -391,7 +393,7 @@ some of the braces:</p>
 </div>
 <p>A program testing the letterGrade function is in
 example program <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/grade1/grade1.cs">grade1/grade1.cs</a>.</p>
-<p>See <a class="reference internal" href="#gradeex"><span>Grade Exercise</span></a>.</p>
+<p>See <a class="reference internal" href="#gradeex"><span class="std std-ref">Grade Exercise</span></a>.</p>
 <p>As in a basic <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statement, in the general format,</p>
 <div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">if</span> <span class="pre">(</span></code> <em>condition1</em> <code class="docutils literal"><span class="pre">)</span> <span class="pre">{</span></code></div>
@@ -410,7 +412,7 @@ example program <a class="reference external" href="https://github.com/LoyolaChi
 </div>
 <div class="line"><code class="docutils literal"><span class="pre">}</span></code></div>
 <div class="line">// ...</div>
-<div class="line"><code class="docutils literal"><span class="pre">else</span> <span class="pre">{</span>&nbsp;&nbsp;&nbsp; <span class="pre">//</span></code> <em>no condition!</em></div>
+<div class="line"><code class="docutils literal"><span class="pre">else</span> <span class="pre">{</span>&#160;&#160;&#160; <span class="pre">//</span></code> <em>no condition!</em></div>
 <div class="line-block">
 <div class="line">statement-block-run-if-no condition-is-true;</div>
 </div>
@@ -423,7 +425,7 @@ If no condition is true,
 the <code class="docutils literal"><span class="pre">else</span></code> block is executed.</p>
 <p>Here is a variation. Consider this
 fragment <em>without</em> a final <code class="docutils literal"><span class="pre">else</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">weight</span> <span class="p">&gt;</span> <span class="m">120</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">weight</span> <span class="p">&gt;</span> <span class="m">120</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Sorry, we can not take a suitcase that heavy.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">weight</span> <span class="p">&gt;</span> <span class="m">50</span><span class="p">)</span> <span class="p">{</span>
@@ -499,7 +501,7 @@ test with enough different data to check all lines of your program.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>15.2. Csproject Revisited &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>15.2. Csproject Revisited &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="15. Interfaces" href="interfaces.html" />
     <link rel="next" title="15.3. Chapter Review Questions" href="reviewinterfaces.html" />
@@ -222,7 +224,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="interfaces.html">15. Interfaces</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="fractions-revisited.html">15.1. Rationals Revisited</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">15.2. Csproject Revisited</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">15.2. Csproject Revisited</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -347,7 +349,7 @@ We add a string property CommandWord to each of them.</p>
 Thus far we have used private instance variables and public
 getter methods.  We can use a public instance variable declaration
 with a similar effect as in:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">public</span> <span class="kt">string</span> <span class="n">CommandName</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;}</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="kt">string</span> <span class="n">CommandName</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;}</span>
 </pre></div>
 </div>
 <p>The extra syntax in braces says that users in a another class
@@ -363,7 +365,7 @@ using a getter method!</p>
 <p>Now we can define our own interface taking all of these common features
 together.  Since each is a response to a command, we will call our interface
 Response:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">namespace</span> <span class="nn">IntroCS</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
 <span class="c1">/// Object that responds to a command</span>
    <span class="k">public</span> <span class="k">interface</span> <span class="n">Response</span>
@@ -395,7 +397,7 @@ The part of the property about private access is merely omitted.</li>
 <p>We are going to need a collection if we want to simplify the code with
 loops.  We could use code like the following, assuming we already declared
 the objects helper, goer, and quitter:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Response</span><span class="p">[]</span> <span class="n">resp</span> <span class="p">=</span> <span class="p">{</span><span class="n">helper</span><span class="p">,</span> <span class="n">goer</span><span class="p">,</span> <span class="n">quitter</span><span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Response</span><span class="p">[]</span> <span class="n">resp</span> <span class="p">=</span> <span class="p">{</span><span class="n">helper</span><span class="p">,</span> <span class="n">goer</span><span class="p">,</span> <span class="n">quitter</span><span class="p">};</span>
 </pre></div>
 </div>
 <p>See how we use Response as a declaration type!
@@ -412,7 +414,7 @@ to match a command word with the proper Response, so a Dictionary is what makes 
 CommandMapper, and the the CommandMapper constructor creates the Dictionary
 used to look up the Response that goes with each command word.  Here is the whole code for
 ResponseMapper, taking advantage of the Dictionary in other methods, too.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
@@ -484,7 +486,7 @@ parameters.</p>
 <p>The revised Xamarin Studio project is <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/csproject_stub">csproject_stub</a> (no 1 this time).</p>
 <p>See how the Game class is simplified, too.</p>
 <p>Talking about adding commands - these classes could be the basis of a game project for
-a small group.  Have any ideas?  See <a class="reference internal" href="../appendix/project.html#group-project"><span>Group Project</span></a>.
+a small group.  Have any ideas?  See <a class="reference internal" href="../appendix/project.html#group-project"><span class="std std-ref">Group Project</span></a>.
 Note that there is a data file in the project directory.
 Make sure your project,
 like this stub, sets the Output Path to the project folder.</p>
@@ -590,7 +592,7 @@ find different roots of the same function.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

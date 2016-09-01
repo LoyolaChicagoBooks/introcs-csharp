@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5.8. Nested if Statements &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>5.8. Nested if Statements &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="5. Decisions" href="decisions.html" />
     <link rel="next" title="5.9. Chapter Review Questions" href="reviewdecisions.html" />
@@ -130,7 +132,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -314,7 +316,7 @@
 <p>In <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statements the substatements (the if-true and if-false clauses)
 are quite arbitrary statements.  They can be more <code class="docutils literal"><span class="pre">if</span></code> or
 <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statements.
-In <a class="reference internal" href="ifelsechained.html#multiple-tests"><span>Multiple Tests and if-else Statements</span></a>
+In <a class="reference internal" href="ifelsechained.html#multiple-tests"><span class="std std-ref">Multiple Tests and if-else Statements</span></a>
 we have just illustrated placing an <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statement as the <code class="docutils literal"><span class="pre">else</span></code>
 clause, and repeating this pattern, to repeatedly test for one more case,
 stopping when the first true condition if reached.
@@ -338,7 +340,7 @@ for you to do now?</li>
 <p>Assume we have Boolean variables <code class="docutils literal"><span class="pre">important</span></code> and <code class="docutils literal"><span class="pre">urgent</span></code>.
 There are four separate combinations, and we could handle this with a
 chain of compound conditions checking for one at a time:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">important</span> <span class="p">&amp;&amp;</span> <span class="n">urgent</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">important</span> <span class="p">&amp;&amp;</span> <span class="n">urgent</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Be sure ...&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">important</span> <span class="p">&amp;&amp;</span> <span class="p">!</span><span class="n">urgent</span><span class="p">)</span> <span class="p">{</span>
@@ -355,7 +357,7 @@ chain of compound conditions checking for one at a time:</p>
 <p>Compound test conditions
 are not necessary if we keep track of partial answers,
 nesting <code class="docutils literal"><span class="pre">if</span></code> statements, thinking about the two aspects separately:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">important</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">important</span><span class="p">)</span> <span class="p">{</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">urgent</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Be sure ...&quot;</span><span class="p">);</span>
    <span class="p">}</span>
@@ -428,7 +430,7 @@ no <code class="docutils literal"><span class="pre">else</span></code> clauses a
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.3. Arithmetic &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>2.3. Arithmetic &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="2. C# Data and Operations" href="data.html" />
     <link rel="next" title="2.4. Variables and Assignment" href="variables.html" />
@@ -83,7 +85,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="data.html">2. C# Data and Operations</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sampleprogram.html">2.1. A Sample C# Program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.3. Arithmetic</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.3. Arithmetic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variables.html">2.4. Variables and Assignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography.html">2.5. Syntax Template Typography</a></li>
 <li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
@@ -328,9 +330,9 @@ but there is a fair amount of overhead with a full program.
 For just testing little bits, there is another alternative:
 The Mono system comes with a program <em>csharp</em>.  Let us
 try it out.</p>
-<p>Open a terminal (Linux or OS X) or <a class="reference internal" href="../appendix/monotools.html#mono-command-prompt"><span>Mono Command Prompt</span></a>
+<p>Open a terminal (Linux or OS X) or <a class="reference internal" href="../appendix/monotools.html#mono-command-prompt"><span class="std std-ref">Mono Command Prompt</span></a>
 window in Windows, and enter the command <code class="docutils literal"><span class="pre">csharp</span></code>.  You should see  :</p>
-<div class="highlight-none"><div class="highlight"><pre>Mono C# Shell, type &quot;help;&quot; for help
+<div class="highlight-none"><div class="highlight"><pre><span></span>Mono C# Shell, type &quot;help;&quot; for help
 
 Enter statements below.
 csharp&gt;
@@ -340,7 +342,7 @@ csharp&gt;
 and is awaiting input. This allows you to create small bits of C#
 and test them, interactively, without having to write a full program!</p>
 <p id="index-2">Play along with the examples here, entering what comes after the prompt:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 2 + 3
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 2 + 3
 5
 </pre></div>
 </div>
@@ -351,7 +353,7 @@ Csharp can evaluate arbitrary C# expressions.  It is very handy for
 testing as you get used to new syntax.</p>
 <p id="index-3">Subtraction works as you would expect.
 Blanks are optional around symbols:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 10 - 3
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 10 - 3
 7
 </pre></div>
 </div>
@@ -363,13 +365,13 @@ If you press the return key when what you have entered is a complete expression
 you see the value as a response.
 If your expression is clearly incomplete you get another <code class="docutils literal"><span class="pre">&gt;</span></code> prompt (with no
 &#8220;csharp&#8221;), until you have entered enough for a full expression.</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 10-
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 10-
       &gt; 3
 7
 </pre></div>
 </div>
 <p id="index-4">In math class you could enter something like 4(10) for multiplication:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 4(10)
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 4(10)
 {interactive}(1,2): error CS0119: Expression denotes a &#39;value&#39;,
 where a &#39;method group&#39; was expected
 </pre></div>
@@ -379,13 +381,13 @@ it is hard to guess the
 intention of the user making a mistake.</p>
 <p>The issue here is that the multiplication operator must be <em>explicit</em> in
 C#.  Recall that an asterisk is used as a multiplication operator:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 4 * 10
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 4 * 10
 40
 </pre></div>
 </div>
 <p id="index-5">Enter each of the following expressions into csharp, and think what they
 will produce (and then check):</p>
-<div class="highlight-none"><div class="highlight"><pre>2*5
+<div class="highlight-none"><div class="highlight"><pre><span></span>2*5
 2 + 3 * 4
 </pre></div>
 </div>
@@ -393,13 +395,13 @@ will produce (and then check):</p>
 the normal <em>precedence</em> of arithmetic operations: Multiplications
 divisions, and negations are done before addition and subtraction, unless
 there are parentheses forcing the order:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; -(2+3)*4
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; -(2+3)*4
 -20
 </pre></div>
 </div>
 <p>A sequence of operations with equal precedence also work like in math:
 left to right in most cases, like for combinations of addition and subtraction:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 10 - 3 + 2
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 10 - 3 + 2
 9
 </pre></div>
 </div>
@@ -408,14 +410,14 @@ left to right in most cases, like for combinations of addition and subtraction:<
 <span id="index-6"></span><span id="id3"></span><h2>2.3.2. Division and Remainders<a class="headerlink" href="#division-and-remainders" title="Permalink to this headline">¶</a></h2>
 <p>We started with the almost direct translations from math.  Division is
 more complicated.  We continue in the csharp program:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 5.0/2.0;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 5.0/2.0;
 2.5
 csharp&gt; 14.0/4.0;
 3.5
 </pre></div>
 </div>
 <p>So far so good.  Now consider:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 14/4
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 14/4
 3
 </pre></div>
 </div>
@@ -428,7 +430,7 @@ general real number.  This is true even if the value of the number is an
 integer like 5.0: the type is still <code class="docutils literal"><span class="pre">double</span></code>.</p>
 <p>Addition, subtraction, and multiplication work as you would expect for
 <code class="docutils literal"><span class="pre">double</span></code> values, too:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 0.5 * (2.0 + 4.5)
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 0.5 * (2.0 + 4.5)
 3.25
 </pre></div>
 </div>
@@ -439,12 +441,12 @@ We say close,
 because C# stores
 values with only a limited precision, so in fact results are
 only approximate in general.  For example:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 1.0/3
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 1.0/3
 0.333333333333333
 </pre></div>
 </div>
 <p>Small errors are also possible with the <code class="docutils literal"><span class="pre">double</span></code> type
-and the other arithmetic operations.  See <a class="reference internal" href="types-and-conversions.html#type-double"><span>Type double</span></a>.</p>
+and the other arithmetic operations.  See <a class="reference internal" href="types-and-conversions.html#type-double"><span class="std std-ref">Type double</span></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In C#, the result of the / operator depends on the
@@ -467,7 +469,7 @@ so C# grabs an unused symbol:
 <code class="docutils literal"><span class="pre">%</span></code> is the remainder operator.
 (This is the same as in many other computer languages.)</p>
 <p>Try in the csharp shell:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; 14 / 4
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; 14 / 4
 3
 csharp&gt; 14 % 4
 2
@@ -476,7 +478,7 @@ csharp&gt; 14 % 4
 <p>You see that with the combination of the <code class="docutils literal"><span class="pre">/</span></code> operator and the <code class="docutils literal"><span class="pre">%</span></code> operator,
 you get both the quotient and the remainder from our grade school division.</p>
 <p>Now predict and then try each of these expression in csharp:</p>
-<div class="highlight-none"><div class="highlight"><pre>23/5
+<div class="highlight-none"><div class="highlight"><pre><span></span>23/5
 23%5
 20%5
 6/8
@@ -492,10 +494,10 @@ the future!  Remember the strange <code class="docutils literal"><span class="pr
 higher than addition and subtraction, <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">-</span></code>.</p>
 </div>
 <p>When you are <em>done with csharp</em>, you can enter the special expression</p>
-<div class="highlight-none"><div class="highlight"><pre>quit
+<div class="highlight-none"><div class="highlight"><pre><span></span>quit
 </pre></div>
 </div>
-<p>There are some more details about numeric types in <a class="reference internal" href="types-and-conversions.html#value-types"><span>Value Types and Conversions</span></a>.</p>
+<p>There are some more details about numeric types in <a class="reference internal" href="types-and-conversions.html#value-types"><span class="std std-ref">Value Types and Conversions</span></a>.</p>
 <p id="index-7">We have been testing arithmetic expressions, with the word
 <em>expression</em> used pretty much like with normal math.  More generally in C#
 an <em>expression</em> is any syntax that evaluates to a single value of some type.
@@ -510,7 +512,7 @@ We will introduce many more types and operations that can be used in expressions
 and <em>then</em> test, and write the correct answer afterward if you were wrong.
 Then go on to the next....
 For the ones you got wrong, can you explain the result after seeing it?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="m">2</span> <span class="p">*</span> <span class="m">5</span> <span class="p">+</span> <span class="m">3</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="m">2</span> <span class="p">*</span> <span class="m">5</span> <span class="p">+</span> <span class="m">3</span>
 <span class="m">2</span> <span class="p">+</span> <span class="m">5</span> <span class="p">*</span> <span class="m">3</span>
 <span class="m">1.5</span> <span class="p">*</span> <span class="m">3</span>
 <span class="m">7.0</span><span class="p">/</span><span class="m">2.0</span>
@@ -541,7 +543,7 @@ For the ones you got wrong, can you explain the result after seeing it?</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

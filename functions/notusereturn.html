@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3.9. Not using Return Values &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>3.9. Not using Return Values &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="3. Defining Functions of your Own" href="functions.html" />
     <link rel="next" title="3.10. Library Classes" href="libraryclass.html" />
@@ -107,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3.9. Not using Return Values</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="traceback.html">3.11. Tracebacks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="funcsummary.html">3.12. Static Function Summary</a></li>
@@ -333,7 +335,7 @@ with a side effect in the larger system.</li>
 in the system, <em>and</em>
 return a value.  Sometimes you care about both,
 and sometimes you use the function only for its side effect.
-We will see examples of that later, like in <a class="reference internal" href="../dictionaries/dictionaryexamples.html#sets"><span>Sets</span></a>.</p>
+We will see examples of that later, like in <a class="reference internal" href="../dictionaries/dictionaryexamples.html#sets"><span class="std std-ref">Sets</span></a>.</p>
 <p>This later advanced use will mean that the compiler needs to
 <em>permit</em> the programmer to ignore a
 returned value, and use a function returning a value as a whole statement.</p>
@@ -344,7 +346,7 @@ forgetting to immediately use a returned value that your program logic
 really needs.</p>
 </div>
 <p>For example with this definition:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">CalcResult</span><span class="p">(</span><span class="kt">int</span> <span class="n">param</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">CalcResult</span><span class="p">(</span><span class="kt">int</span> <span class="n">param</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
    <span class="c1">// ....</span>
@@ -355,7 +357,7 @@ really needs.</p>
 </div>
 <p>you might try to use <code class="docutils literal"><span class="pre">CalcResult</span></code> in this bad code, intending to use the <code class="docutils literal"><span class="pre">result</span></code>
 from CalcResult:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">BadUseResult</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">BadUseResult</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">result</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
    <span class="n">CalcResult</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
@@ -365,7 +367,7 @@ from CalcResult:</p>
 </div>
 <p>In fact you would always print 0, ignoring the <code class="docutils literal"><span class="pre">result</span></code>
 calculated in <code class="docutils literal"><span class="pre">CalcResult</span></code>.
-The reason is the <a class="reference internal" href="localscope.html#local-scope"><span>Local Scope</span></a> rules:  The local variable name <code class="docutils literal"><span class="pre">result</span></code>
+The reason is the <a class="reference internal" href="localscope.html#local-scope"><span class="std std-ref">Local Scope</span></a> rules:  The local variable name <code class="docutils literal"><span class="pre">result</span></code>
 disappears when the <code class="docutils literal"><span class="pre">CalcResult</span></code> function returns.
 It is not used in the calling function, <code class="docutils literal"><span class="pre">BadUseResult</span></code>, and the
 separately declared <code class="docutils literal"><span class="pre">result</span></code> of <code class="docutils literal"><span class="pre">BadUseResult</span></code>
@@ -379,12 +381,12 @@ The last line would try to use the variable <code class="docutils literal"><span
 without it being declared.</p>
 <p>You can use the result from <code class="docutils literal"><span class="pre">CalcResult</span></code>, like with any other
 value-returning function, with either</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="k">value</span> <span class="p">=</span> <span class="n">CalcResult</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>  <span class="c1">//store the returned value in an assignment!</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="k">value</span> <span class="p">=</span> <span class="n">CalcResult</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>  <span class="c1">//store the returned value in an assignment!</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">value</span><span class="p">);</span>   <span class="c1">//  and then use the remembered value</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">CalcResult</span><span class="p">(</span><span class="n">x</span><span class="p">));</span> <span class="c1">// immediately use the returned value</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">CalcResult</span><span class="p">(</span><span class="n">x</span><span class="p">));</span> <span class="c1">// immediately use the returned value</span>
 </pre></div>
 </div>
 <p>This second version works as long as you do <em>not</em> need the
@@ -405,7 +407,7 @@ one statement!</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

@@ -3,7 +3,22 @@ Chapter Review Questions
 
 #.  While loops are a very important part of your programming tools.  
     Put in your own words:  when should you think to use a while loop?
+    What words or phrases in the description of a problem suggest the use of a loop?
+
+    More concretely, each sentence below introduces a problem.  
+    What words/combinations suggest a loop/repetition?
     
+    Square each number from 1 to n.
+
+    Respond until the user says to stop.
+
+    Repeat the process until the width is < .00001.
+
+    Count the vowels in the sentence that you are given.
+
+    See if there are any double letters in the word that you are given.
+
+
 #.  Loops are also among the hardest things for many students --
     with lots of things to think about.  
     There is a sequence of general process questions that you can ask yourself 
@@ -27,7 +42,7 @@ Chapter Review Questions
     What is the important difference in this statement from the previous
     incorrect statement?
     
-#.  When does a program evaluate the condition in a ``while`` loop heading? 
+#.  When is the next step in a program to evaluate the condition in a ``while`` loop heading? 
     (There are two situations.)
 
 #.  A ``while`` loop is generally terminated when the program evaluates the

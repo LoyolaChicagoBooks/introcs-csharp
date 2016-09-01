@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>10.7. Lab: Performance &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>10.7. Lab: Performance &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="10. Arrays" href="arrays.html" />
     <link rel="next" title="10.8. Multi-dimensional Arrays" href="twodim.html" />
@@ -180,7 +182,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">10.7. Lab: Performance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.7. Lab: Performance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">10.9. Chapter Review Questions</a></li>
 </ul>
@@ -312,7 +314,7 @@
       
   <div class="section" id="lab-performance">
 <span id="lab-search-performance"></span><h1>10.7. Lab: Performance<a class="headerlink" href="#lab-performance" title="Permalink to this headline">¶</a></h1>
-<p>In <a class="reference internal" href="sorting.html#sorting"><span>Sorting Algorithms</span></a> we took advantage of a few ideas
+<p>In <a class="reference internal" href="sorting.html#sorting"><span class="std std-ref">Sorting Algorithms</span></a> we took advantage of a few ideas
 to show how to do basic
 benchmarking to compare the various approaches.</p>
 <ul class="simple">
@@ -355,9 +357,9 @@ do the actual analysis and produce a basic table.</p>
 <p>We&#8217;re going to measure the performance of data structures we have been learning
 about (and <em>will</em> learn about, for lists and sets). For this lab, we&#8217;ll focus on:</p>
 <ul class="simple">
-<li>Integer arrays using <a class="reference internal" href="searching.html#searching"><span>Linear Searching</span></a> and <a class="reference internal" href="binarysearching.html#binarysearching"><span>Binary Searching</span></a></li>
-<li><a class="reference internal" href="../lists/lists.html#lists"><span>Lists</span></a> of integers with linear searching</li>
-<li><a class="reference internal" href="../dictionaries/dictionaryexamples.html#sets"><span>Sets</span></a> of integers; checking if an item is contained in the set</li>
+<li>Integer arrays using <a class="reference internal" href="searching.html#searching"><span class="std std-ref">Linear Searching</span></a> and <a class="reference internal" href="binarysearching.html#binarysearching"><span class="std std-ref">Binary Searching</span></a></li>
+<li><a class="reference internal" href="../lists/lists.html#lists"><span class="std std-ref">Lists</span></a> of integers with linear searching</li>
+<li><a class="reference internal" href="../dictionaries/dictionaryexamples.html#sets"><span class="std std-ref">Sets</span></a> of integers; checking if an item is contained in the set</li>
 </ul>
 <p>In the interest of fairness, we are only going to look at the time it takes
 to perform the various search operations. We&#8217;re not going to count the time
@@ -423,7 +425,7 @@ searching on integer arrays:</p>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="kt">long</span> <span class="nf">ExpIntArrayLinearSearch</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rep</span><span class="p">,</span> <span class="kt">int</span> <span class="n">seed</span><span class="p">)</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="kt">long</span> <span class="nf">ExpIntArrayLinearSearch</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rep</span><span class="p">,</span> <span class="kt">int</span> <span class="n">seed</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="n">Stopwatch</span> <span class="n">watch</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Stopwatch</span> <span class="p">();</span>
    <span class="kt">int</span><span class="p">[]</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
@@ -495,7 +497,7 @@ for <code class="docutils literal"><span class="pre">rep</span></code> repetitio
 all values of n,
 with a title including the number of repetitions.  Print
 something like the following, with the number of seconds calculated.</p>
-<div class="highlight-none"><div class="highlight"><pre>Times in seconds with 50000 repetitions
+<div class="highlight-none"><div class="highlight"><pre><span></span>Times in seconds with 50000 repetitions
        n    linear      list  binary     set
     1000  ????.???  ????.???  ??.???  ??.???
    10000  ????.???  ????.???  ??.???  ??.???
@@ -561,7 +563,7 @@ Keep <code class="docutils literal"><span class="pre">rep*n</span></code> small 
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

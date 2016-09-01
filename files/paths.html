@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>9.4. Path Strings &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>9.4. Path Strings &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="9. Files, Paths, and Directories" href="files.html" />
     <link rel="next" title="9.5. Directory Class" href="dir-file.html" />
@@ -165,7 +167,7 @@
 <li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fileread.html">9.3. Reading Files</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">9.4. Path Strings</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.4. Path Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cmdline-execution.html">9.7. Command Line Execution</a></li>
@@ -328,7 +330,7 @@ the final name of the file desired.  A <em>path string</em> is used
 to represent such a sequence of names.  Elements of the directory chain are separated
 by operating system specific punctuation:  In Windows the separator is backslash, \,
 and on a Mac it is (forward) slash, /.  For example on a Mac the path</p>
-<div class="highlight-none"><div class="highlight"><pre>/Users/anh
+<div class="highlight-none"><div class="highlight"><pre><span></span>/Users/anh
 </pre></div>
 </div>
 <p>starts with a /, meaning the <em>root</em> or top directory in the hierarchy, and Users is
@@ -336,7 +338,7 @@ a subdirectory, and anh is a subdirectory of Users (in this case the home direct
 for the user with login anh).
 It is similar with Windows, except there may be a drive in the beginning,
 and the separator is a \, so</p>
-<div class="highlight-none"><div class="highlight"><pre>C:\Windows\System32
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Windows\System32
 </pre></div>
 </div>
 <p>is on C: drive; Windows is a subdirectory of the root directory \, and System32 is
@@ -360,7 +362,7 @@ is just the project folder.</p>
 actually an example of using relative paths.</p>
 <p id="index-3">With relative paths, you sometimes want to move up the directory hierarchy:  <code class="docutils literal"><span class="pre">..</span></code>
 (two periods) refers to the directory one level up the chain.</p>
-<p>For example, suppose you solve <a class="reference internal" href="fileread.html#safe-sum-file-ex"><span>Safe Sum File Exercise</span></a> by puting your new project
+<p>For example, suppose you solve <a class="reference internal" href="fileread.html#safe-sum-file-ex"><span class="std std-ref">Safe Sum File Exercise</span></a> by puting your new project
 safe_sum_file in the <em>same</em> solution as the original sum_file.  That means the parent folder
 for both projects is the solution folder.  If you want to run your new <code class="file docutils literal"><span class="pre">safe_sum_file.cs</span></code>
 program (assuming you made the Output Path be the project folder)
@@ -395,7 +397,7 @@ you would need to have <code class="docutils literal"><span class="pre">&quot;..
 <code class="docutils literal"><span class="pre">&#64;</span></code> can come to the rescue:  <code class="docutils literal"><span class="pre">&#64;&quot;..\sum_file\numbers.txt&quot;</span></code>.</p>
 <p>You can look at the <code class="docutils literal"><span class="pre">Path</span></code> class in the MSDN documentation
 for many other operations with path strings.</p>
-<p>Path strings are used by the <a class="reference internal" href="dir-file.html#directory-class"><span>Directory Class</span></a> and by the <a class="reference internal" href="dir-file.html#file-class"><span>File Class</span></a>.</p>
+<p>Path strings are used by the <a class="reference internal" href="dir-file.html#directory-class"><span class="std std-ref">Directory Class</span></a> and by the <a class="reference internal" href="dir-file.html#file-class"><span class="std std-ref">File Class</span></a>.</p>
 <div class="section" id="path-string-exercise">
 <h3>9.4.1.1. Path String Exercise<a class="headerlink" href="#path-string-exercise" title="Permalink to this headline">¶</a></h3>
 <p>In the path string illustration above to open <code class="file docutils literal"><span class="pre">numbers.txt</span></code>,
@@ -420,7 +422,7 @@ our examples project.</li>
 <p>Complete the function described below, and make a Main program and
 sample file to test it.  Modify the Xamarin defaults so the Output Path
 is the project folder.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Take all lines from reader that do not start with startToRemove</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Take all lines from reader that do not start with startToRemove</span>
 <span class="c1">/// and copy them to writer.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">FileLineRemoval</span><span class="p">(</span><span class="n">StreamReader</span> <span class="n">reader</span><span class="p">,</span> <span class="n">StreamWriter</span> <span class="n">writer</span>
                             <span class="kt">char</span> <span class="n">startToRemove</span><span class="p">)</span>
@@ -446,7 +448,7 @@ to the writer.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

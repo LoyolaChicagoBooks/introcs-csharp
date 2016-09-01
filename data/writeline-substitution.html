@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.11. Substitutions in Console.WriteLine &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>2.11. Substitutions in Console.WriteLine &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="2. C# Data and Operations" href="data.html" />
     <link rel="next" title="2.12. Value Types and Conversions" href="types-and-conversions.html" />
@@ -91,7 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.11. Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.11. Substitutions in Console.WriteLine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
@@ -342,7 +344,7 @@ construction, better called fill-in-the-braces,
 that can be used with <code class="docutils literal"><span class="pre">Console.WriteLine</span></code>.</p>
 <p>Instead of inserting user input with the <code class="docutils literal"><span class="pre">+</span></code> operation as in
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/hello_you1/hello_you1.cs">hello_you1/hello_you1.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">HelloYou1</span>
 <span class="p">{</span>
@@ -359,7 +361,7 @@ that can be used with <code class="docutils literal"><span class="pre">Console.W
 <p>look at a variation, <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/hello_you2/hello_you2.cs">hello_you2/hello_you2.cs</a>, shown below.
 Both programs
 look exactly the same to the user:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">HelloYou</span>
 <span class="p">{</span>
@@ -374,7 +376,7 @@ look exactly the same to the user:</p>
 </pre></div>
 </div>
 <p>All the new syntax is in the line:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Hello, {0}!&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">&quot;Hello, {0}!&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">Console.WriteLine</span></code> actually can take parameters <em>after</em> an initial string,
@@ -395,14 +397,14 @@ that parameter with index 0 is to be substituted.</p>
 with no braces, it is printed completely
 verbatim (reducing to the situations where we have used <code class="docutils literal"><span class="pre">Console.WriteLine</span></code> before).</p>
 <p>A more elaborate silly examples that you could test in csharp would be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">first</span> <span class="p">=</span> <span class="s">&quot;Peter&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">first</span> <span class="p">=</span> <span class="s">&quot;Peter&quot;</span><span class="p">;</span>
 <span class="kt">string</span> <span class="n">last</span> <span class="p">=</span> <span class="s">&quot;Piper&quot;</span><span class="p">;</span>
 <span class="kt">string</span> <span class="n">what</span> <span class="p">=</span> <span class="s">&quot;pick&quot;</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} {1}, {0} {1}, {2}.&quot;</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">what</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>It would print:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Peter</span> <span class="n">Piper</span><span class="p">,</span> <span class="n">Peter</span> <span class="n">Piper</span><span class="p">,</span> <span class="n">pick</span><span class="p">.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Peter</span> <span class="n">Piper</span><span class="p">,</span> <span class="n">Peter</span> <span class="n">Piper</span><span class="p">,</span> <span class="n">pick</span><span class="p">.</span>
 </pre></div>
 </div>
 <p>where parameter 0 is <code class="docutils literal"><span class="pre">first</span></code> (value <code class="docutils literal"><span class="pre">&quot;Peter&quot;</span></code>),
@@ -410,13 +412,13 @@ parameter 1 is <code class="docutils literal"><span class="pre">last</span></cod
 parameter 2 is <code class="docutils literal"><span class="pre">what</span></code> (value <code class="docutils literal"><span class="pre">&quot;pick&quot;</span></code>).</p>
 <p>Make sure you see why the given output is exactly what is printed.</p>
 <p>Or try in csharp:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">y</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} plus {1} is {2}; {0} times {1} is {3}.&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">+</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">*</span><span class="n">y</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>and see it print:</p>
-<div class="highlight-none"><div class="highlight"><pre>7 plus 5 is 12; 7 times 5 is 35.
+<div class="highlight-none"><div class="highlight"><pre><span></span>7 plus 5 is 12; 7 times 5 is 35.
 </pre></div>
 </div>
 <p>Note the following features of the parameters after the first string:</p>
@@ -429,7 +431,7 @@ use of the string <code class="docutils literal"><span class="pre">+</span></cod
 </ul>
 <p>In fact the simple use of format strings
 shown so far can be completed replaced by long expressions with <code class="docutils literal"><span class="pre">+</span></code>,
-if that is your taste.  We later discusses fancier formatting in <a class="reference internal" href="../for/forexamples.html#tables"><span>Tables</span></a>,
+if that is your taste.  We later discusses fancier formatting in <a class="reference internal" href="../for/forexamples.html#tables"><span class="std std-ref">Tables</span></a>,
 that <em>cannot</em> be duplicated with a simple string <code class="docutils literal"><span class="pre">+</span></code> operation.
 We will use the simple numbered substitutions for now just
 to get used to the idea of substitution.</p>
@@ -437,12 +439,12 @@ to get used to the idea of substitution.</p>
 string, there must be a special rule if you want braces to actually
 be included in the final <em>formatted</em> string. The rule is to double
 the braces: <code class="docutils literal"><span class="pre">&quot;{{&quot;</span></code> and <code class="docutils literal"><span class="pre">&quot;}}&quot;</span></code>. The fragment</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">b</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">b</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;The set is {{{0}, {1}}}.&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>produces</p>
-<div class="highlight-none"><div class="highlight"><pre>The set is {2, 3}.
+<div class="highlight-none"><div class="highlight"><pre><span></span>The set is {2, 3}.
 </pre></div>
 </div>
 <p>Note:  Braces only get their special meaning if there are at least two
@@ -452,7 +454,7 @@ braces are interpreted as regular characters.</p>
 <div class="section" id="format-reading-exercise">
 <h3>2.11.2.1. Format Reading Exercise<a class="headerlink" href="#format-reading-exercise" title="Permalink to this headline">¶</a></h3>
 <p>What is printed?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}{1}{1}{2}&quot;</span><span class="p">,</span> <span class="s">&quot;Mi&quot;</span><span class="p">,</span> <span class="s">&quot;ssi&quot;</span><span class="p">,</span> <span class="s">&quot;ppi&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0}{1}{1}{2}&quot;</span><span class="p">,</span> <span class="s">&quot;Mi&quot;</span><span class="p">,</span> <span class="s">&quot;ssi&quot;</span><span class="p">,</span> <span class="s">&quot;ppi&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Check yourself.</p>
@@ -460,7 +462,7 @@ braces are interpreted as regular characters.</p>
 <div class="section" id="exercise-for-format">
 <span id="quotientformat"></span><h3>2.11.2.2. Exercise for Format<a class="headerlink" href="#exercise-for-format" title="Permalink to this headline">¶</a></h3>
 <p>Write a program, <code class="docutils literal"><span class="pre">quotient_format.cs</span></code>, that behaves like
-<a class="reference internal" href="io.html#quotientproblem"><span>Exercise for Quotients</span></a>, but generate the sentence using
+<a class="reference internal" href="io.html#quotientproblem"><span class="std std-ref">Exercise for Quotients</span></a>, but generate the sentence using
 <code class="docutils literal"><span class="pre">Console.WriteLine</span></code> with a format string and no <code class="docutils literal"><span class="pre">+</span></code> operator.</p>
 </div>
 <div class="section" id="madlib-exercise">
@@ -512,7 +514,7 @@ use of the same name is more helpful than confusing.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

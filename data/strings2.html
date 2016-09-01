@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.10. String Special Cases &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>2.10. String Special Cases &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="2. C# Data and Operations" href="data.html" />
     <link rel="next" title="2.11. Substitutions in Console.WriteLine" href="writeline-substitution.html" />
@@ -90,7 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
 <li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io.html">2.9. Combining Input and Output</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.10. String Special Cases</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.10. String Special Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
@@ -320,7 +322,7 @@ Then the character after the backslash has a special meaning.</p>
 does not mean the end of a string literal.  It means a quote character
 is literally used <em>in</em> the string:  <code class="docutils literal"><span class="pre">&quot;He</span> <span class="pre">said,</span> <span class="pre">\&quot;Hello!\&quot;,</span> <span class="pre">over</span> <span class="pre">and</span> <span class="pre">over.&quot;</span></code></p>
 <p>We can illustrate with csharp, first with a simple string:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; Console.WriteLine(&quot;Hello world!&quot;);
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; Console.WriteLine(&quot;Hello world!&quot;);
 Hello world!
 csharp&gt; Console.WriteLine(&quot;He said, \&quot;Hello!\&quot;, over and over.&quot;);
 He said, &quot;Hello!&quot;, over and over.
@@ -358,7 +360,7 @@ you need to write two of them.</p>
 <p>The newline character indicates further text will appear on the next line down
 when <em>printed</em> with the <code class="docutils literal"><span class="pre">Console.WriteLine</span></code> function.</p>
 <p>Example:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; Console.WriteLine(&quot;Windows path: c:\\Users\\aharrin&quot;);
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; Console.WriteLine(&quot;Windows path: c:\\Users\\aharrin&quot;);
 Windows path: c:\Users\aharrin
 csharp&gt; Console.WriteLine(&quot;a\nbc\n\ndef&quot;)
 a
@@ -376,7 +378,7 @@ are included literally.  (The csharp program does not recognize
 multi-line &#64;-quoted strings.)
 This fragment in a program would produce the same output as the statements in
 the csharp example above:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">@&quot;Windows path: c:\Users\aharrin&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">@&quot;Windows path: c:\Users\aharrin&quot;</span><span class="p">);</span>
        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">@&quot;a</span>
 <span class="s">bc</span>
 
@@ -391,7 +393,7 @@ A whole simple program with this code is in example
 <p id="index-2">Caution:  When you give csharp an expression evaluating to a string at the
 prompt, you get back a verbatim string with <em>quotes added around it</em>,
 but no <code class="docutils literal"><span class="pre">&#64;</span></code> to remind you that it is verbatim:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; &quot;Windows path: c:\\Users\\aharrin&quot;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; &quot;Windows path: c:\\Users\\aharrin&quot;
 &quot;Windows path: c:\Users\aharrin&quot;
 csharp&gt; &quot;a\nbc\n\ndef&quot;
 &quot;a
@@ -426,7 +428,7 @@ with <code class="docutils literal"><span class="pre">&#64;</span></code>.)</li>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

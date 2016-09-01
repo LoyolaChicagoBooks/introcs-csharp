@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.15. Chapter Review Questions &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>2.15. Chapter Review Questions &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="2. C# Data and Operations" href="data.html" />
     <link rel="next" title="3. Defining Functions of your Own" href="../functions/functions.html" />
@@ -95,7 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.15. Chapter Review Questions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.15. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
@@ -322,7 +324,7 @@ This can matter in C# (including in a question below).</p>
 <li><p class="first">Which of these individual
 two-line fragments could fit into a legal C# program?
 Explain:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">w</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
 <span class="n">w</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
 
 <span class="n">x</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
@@ -343,7 +345,7 @@ Explain:</p>
 declared?  You can check them in csharp, giving the declaration first.</p>
 </li>
 <li><p class="first">What are the final values of <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code>  after this fragment?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">3</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">3</span>
 <span class="kt">int</span> <span class="n">y</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
 <span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span><span class="p">;</span>
 <span class="n">y</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span><span class="p">;</span>
@@ -354,7 +356,7 @@ declared?  You can check them in csharp, giving the declaration first.</p>
 <li><p class="first">Which of these expressions are legal in C#?
 Think of the results.
 Explain.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="s">&quot;a&quot;</span> <span class="p">+</span> <span class="s">&quot;b&quot;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="s">&quot;a&quot;</span> <span class="p">+</span> <span class="s">&quot;b&quot;</span>
 <span class="s">&quot;a&quot;</span> <span class="p">+</span> <span class="sc">&#39;b&#39;</span>
 <span class="s">&quot;a&quot;</span> <span class="p">+</span> <span class="m">2</span>
 <span class="m">2</span> <span class="p">+</span> <span class="s">&quot;a&quot;</span>
@@ -372,7 +374,7 @@ with fundamentally
 different syntax.</p>
 </li>
 <li><p class="first">What is printed?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{1} {0} {2} {1} {0}&quot;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="s">&quot;or not&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{1} {0} {2} {1} {0}&quot;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="s">&quot;or not&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </li>
@@ -380,7 +382,7 @@ different syntax.</p>
 (and be legal and mean the same thing)? Before testing,
 think what the values of the variables will be
 for the first two or three:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span><span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="m">5.8</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="m">5.8</span><span class="p">;</span>
 <span class="kt">double</span> <span class="n">y</span> <span class="p">=</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="m">6</span><span class="p">;</span>
 <span class="kt">char</span> <span class="n">c</span> <span class="p">=</span> <span class="p">(</span><span class="kt">char</span><span class="p">)(</span><span class="sc">&#39;a&#39;</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span>
 <span class="kt">int</span> <span class="n">z</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="sc">&#39;a&#39;</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
@@ -403,7 +405,7 @@ for the first two or three:</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

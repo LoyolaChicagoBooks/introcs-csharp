@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>9.3. Reading Files &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>9.3. Reading Files &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="9. Files, Paths, and Directories" href="files.html" />
     <link rel="next" title="9.4. Path Strings" href="paths.html" />
@@ -164,7 +166,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="files.html">9. Files, Paths, and Directories</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="fileabstraction.html">9.1. Files As Streams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filewrite.html">9.2. Writing Files</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">9.3. Reading Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.3. Reading Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
@@ -326,7 +328,7 @@ in this case with the path ending
 current directory when the program runs.</p>
 <p>Run the example program
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_first_file/print_first_file.cs">print_first_file/print_first_file.cs</a>, shown below:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
@@ -374,7 +376,7 @@ testing for <code class="docutils literal"><span class="pre">!reader.EndOfStream
 The example program <code class="docutils literal"><span class="pre">print_file_lines.cs</span></code>
 reads and prints the contents of a file specified by the
 user, one line at a time:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
@@ -399,7 +401,7 @@ user, one line at a time:</p>
 <dt><code class="docutils literal"><span class="pre">var</span></code></dt>
 <dd><p class="first">For conciseness (and variety) we declared <code class="docutils literal"><span class="pre">reader</span></code>
 using the more compact syntax with <code class="docutils literal"><span class="pre">var</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">userFileName</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">userFileName</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can use <code class="docutils literal"><span class="pre">var</span></code> in place of a declared type to shorten your code
@@ -438,7 +440,7 @@ You can read the entire remaining contents of a file
 as a single (multiline) string, using the
 <code class="docutils literal"><span class="pre">StreamReader</span></code> method <code class="docutils literal"><span class="pre">ReadToEnd</span></code>.  In place of the reading and printing
 loop we could have just had:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">wholeFile</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">wholeFile</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">wholeFile</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -451,7 +453,7 @@ when writing.  We use the <code class="docutils literal"><span class="pre">Write
 <p>We have summed the numbers from 1 to <code class="docutils literal"><span class="pre">n</span></code>.  In that case we generated
 the next number <code class="docutils literal"><span class="pre">i</span></code> automatically using <code class="docutils literal"><span class="pre">i++</span></code>.  We could also read numbers
 from a file containing one number per line (plus possible white space):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">CalcSum</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">CalcSum</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
    <span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
@@ -467,7 +469,7 @@ from a file containing one number per line (plus possible white space):</p>
 <p id="index-6">Below and in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_file/sum_file.cs">sum_file/sum_file.cs</a> is a more elaborate, complete example,
 that also exits gracefully if you give a bad file name.
 If you give a good file name, it skips lines that contain only whitespace.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
@@ -508,7 +510,7 @@ If you give a good file name, it skips lines that contain only whitespace.</p>
 </div>
 <p>A useful function used in <code class="docutils literal"><span class="pre">Main</span></code> for avoiding filename typo errors
 is <code class="docutils literal"><span class="pre">File.Exists</span></code> in the <code class="docutils literal"><span class="pre">System.IO</span></code> namespace</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">bool</span> <span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="kt">string</span> <span class="n">filenamePath</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="kt">string</span> <span class="n">filenamePath</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It is true if the named files exists in the operating system&#8217;s file structure.</p>
@@ -517,7 +519,7 @@ is <code class="docutils literal"><span class="pre">File.Exists</span></code> in
 with them.  It is important to test all paths through the program: also do
 put in a bad name and see that the program exits gracefully, as intended.</p>
 <p>For files in the current folder, you can just use the plain file name.
-For other folders see <a class="reference internal" href="paths.html#path-strings"><span>Path Strings</span></a>.</p>
+For other folders see <a class="reference internal" href="paths.html#path-strings"><span class="std std-ref">Path Strings</span></a>.</p>
 <div class="section" id="safe-sum-file-exercise">
 <span id="safe-sum-file-ex"></span><span id="index-7"></span><h3>9.3.2.1. Safe Sum File Exercise<a class="headerlink" href="#safe-sum-file-exercise" title="Permalink to this headline">¶</a></h3>
 <ol class="loweralpha">
@@ -526,7 +528,7 @@ For other folders see <a class="reference internal" href="paths.html#path-string
 Modify the program: Write
 a new function with the heading below.  Use it in <code class="docutils literal"><span class="pre">Main</span></code>, in place of the <code class="docutils literal"><span class="pre">if</span></code>
 statement that checks (only once) for a legal file:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Prompt the user to enter a file name to open for reading.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Prompt the user to enter a file name to open for reading.</span>
 <span class="c1">// Repeat until the name of an existing file is given.</span>
 <span class="c1">// Open and return the file.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">StreamReader</span> <span class="nf">PromptFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">)</span>
@@ -545,7 +547,7 @@ test for this and quit gracefully in that case.</p>
 <h2>9.3.3. Example Copy to Upper Case<a class="headerlink" href="#example-copy-to-upper-case" title="Permalink to this headline">¶</a></h2>
 <p>Here is a simple fragment from example file <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/copy_upper/copy_upper.cs">copy_upper/copy_upper.cs</a>.
 It copies a file line by line to a new file in upper case:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="s">&quot;text.txt&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamReader</span><span class="p">(</span><span class="s">&quot;text.txt&quot;</span><span class="p">);</span>
 <span class="kt">var</span> <span class="n">writer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamWriter</span><span class="p">(</span><span class="s">&quot;upper_text.txt&quot;</span><span class="p">);</span>
 <span class="k">while</span> <span class="p">(!</span><span class="n">reader</span><span class="p">.</span><span class="n">EndOfStream</span><span class="p">)</span> <span class="p">{</span>
    <span class="kt">string</span> <span class="n">line</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
@@ -573,7 +575,7 @@ of <code class="file docutils literal"><span class="pre">text.txt</span></code>.
 </ol>
 <p>This is another case where the <code class="docutils literal"><span class="pre">ReadToEnd</span></code> function could have eliminated the loop.
 <a class="footnote-reference" href="#finalnewline" id="id2">[2]</a></p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span>
 <span class="n">writer</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">contents</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">());</span>
 </pre></div>
 </div>
@@ -612,7 +614,7 @@ The <code class="docutils literal"><span class="pre">ReadToEnd</span></code> ver
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>10.1. One Dimensional Arrays &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>10.1. One Dimensional Arrays &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="10. Arrays" href="arrays.html" />
     <link rel="next" title="10.2. Musical Scales and Arrays" href="music.html" />
@@ -174,7 +176,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="arrays.html">10. Arrays</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">10.1. One Dimensional Arrays</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.1. One Dimensional Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
@@ -357,7 +359,7 @@ In general for any element type, the type for an array of the element type is</p
 <blockquote>
 <div><strong>type</strong><code class="docutils literal"><span class="pre">[]</span></code></div></blockquote>
 <p>so</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>declares <code class="docutils literal"><span class="pre">a</span></code> to refer to an array containing <code class="docutils literal"><span class="pre">int</span></code> elements.  You do <em>not</em>
@@ -365,12 +367,12 @@ know how many elements will be allowed in this array from this declaration.
 We must give further information to create the corresponding array object.
 A new object can be created using the <code class="docutils literal"><span class="pre">new</span></code> syntax.  An array must get a definite
 length, which can be a literal integer or any integer expression.  For example</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">;</span>
 <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">4</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>or combined with the declaration,</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">4</span><span class="p">];</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">4</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>creates an array that holds 4 integers.  The elements of the array must get initial values.
@@ -397,12 +399,12 @@ associated with each element, though they are not actual a part of what is store
 of the array - this length is unchangeable after creation.</p>
 <p id="index-2">The elements inside an array can to referenced with the same index notation used
 earlier for strings.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">a</span><span class="p">[</span><span class="m">2</span><span class="p">]</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="m">2</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>refers to the element at index 2 (third element because of 0 based indexing).</p>
 <p>Unlike with strings, this element can not only be read, but also be assigned to:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">a</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
 <span class="n">a</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
 <span class="n">a</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">9</span><span class="p">;</span>
 <span class="n">a</span><span class="p">[</span><span class="m">3</span><span class="p">]</span> <span class="p">=</span> <span class="m">6</span><span class="p">;</span>
@@ -412,7 +414,7 @@ earlier for strings.</p>
 would replace the original 0 values for each element in the array.</p>
 <p>This is a verbose way to specify all array values. An array with the
 same final data could be created with the single declaration:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">b</span> <span class="p">=</span> <span class="p">{</span><span class="m">7</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">6</span><span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[]</span> <span class="n">b</span> <span class="p">=</span> <span class="p">{</span><span class="m">7</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">6</span><span class="p">};</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/newArray2.png"><img alt="new array initialized with braces" class="align-center" src="../_images/newArray2.png" style="width: 300pt;" /></a>
@@ -422,25 +424,25 @@ Technically it is an initializer, not an array literal.</p>
 <p>Individual array elements can <em>both</em> be used in expressions, and be assigned to.
 Continuing with the
 earlier example code:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">a</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">4</span><span class="p">*</span><span class="n">a</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">-</span> <span class="n">a</span><span class="p">[</span><span class="m">3</span><span class="p">];</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">4</span><span class="p">*</span><span class="n">a</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">-</span> <span class="n">a</span><span class="p">[</span><span class="m">3</span><span class="p">];</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">a[2]</span></code> now equals 4*5 - 6 = 14.</p>
 <p>Arrays, like strings, have a <code class="docutils literal"><span class="pre">Length</span></code> property:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span> <span class="c1">// prints 4</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span> <span class="c1">// prints 4</span>
 </pre></div>
 </div>
 <p>Just as we saw that using a variable for an index was useful with
 strings, in practice array elements are almost always referred to with an index
 variable.  A very common pattern is to deal with each element in sequence,
 and the syntax is the same as for a string.  Print all elements of array <code class="docutils literal"><span class="pre">b</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">Length</span><span class="p">,</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">Length</span><span class="p">,</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>You could also use <code class="docutils literal"><span class="pre">while</span></code> syntax.  The <code class="docutils literal"><span class="pre">foreach</span></code> syntax would be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">foreach</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span> <span class="k">in</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span> <span class="k">in</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -448,7 +450,7 @@ and the syntax is the same as for a string.  Print all elements of array <code c
 <p>The <code class="docutils literal"><span class="pre">int</span></code> type for <code class="docutils literal"><span class="pre">x</span></code> matches the element type of the array <code class="docutils literal"><span class="pre">b</span></code>.</p>
 <p>The shorter <code class="docutils literal"><span class="pre">foreach</span></code> syntax is not as general as the <code class="docutils literal"><span class="pre">for</span></code> syntax.
 For example, to print only the first <em>3</em> elements of b:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="p">}</span>
 </pre></div>
@@ -456,7 +458,7 @@ For example, to print only the first <em>3</em> elements of b:</p>
 <p>but the <code class="docutils literal"><span class="pre">foreach</span></code> syntax would not work, since it must process <em>all</em> elements.</p>
 <p>Also use the <code class="docutils literal"><span class="pre">for</span></code> syntax to assign new values to the array elements,
 rather than just use the values in expressions:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="m">5</span><span class="p">*</span><span class="n">i</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -477,7 +479,7 @@ inside the square braces can be any <code class="docutils literal"><span class="
 Like parentheses, square brackets <em>delimit</em>
 the inside expression, which gets evaluated first, before the array value is
 looked up.  Consider this csharp sequence:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; int[] a = {5, 9, 15, -4};
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; int[] a = {5, 9, 15, -4};
 csharp&gt; int i = 2;
 csharp&gt; a[i];
 15
@@ -485,7 +487,7 @@ csharp&gt; a[i];
 </div>
 <p>This should be clear.  Now think first, what should <code class="docutils literal"><span class="pre">a[i+1]</span></code> be?</p>
 <p>...</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; a[i+1];
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; a[i+1];
 -4
 </pre></div>
 </div>
@@ -503,7 +505,7 @@ so the formal parameter is an array of strings:  <code class="docutils literal">
 4
 5
 6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">/// Print the strings in data, one per line.</span>
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">/// Print the strings in data, one per line.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintStrings</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="k">foreach</span><span class="p">(</span> <span class="kt">string</span> <span class="n">s</span> <span class="k">in</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
@@ -513,21 +515,21 @@ so the formal parameter is an array of strings:  <code class="docutils literal">
 </pre></div>
 </td></tr></table></div>
 <p>With this definition, the code fragment</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span><span class="p">[]</span> <span class="n">hamlet</span> <span class="p">=</span> <span class="p">{</span><span class="s">&quot;To be&quot;</span><span class="p">,</span> <span class="s">&quot;or not&quot;</span><span class="p">,</span> <span class="s">&quot;to be!&quot;</span><span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span><span class="p">[]</span> <span class="n">hamlet</span> <span class="p">=</span> <span class="p">{</span><span class="s">&quot;To be&quot;</span><span class="p">,</span> <span class="s">&quot;or not&quot;</span><span class="p">,</span> <span class="s">&quot;to be!&quot;</span><span class="p">};</span>
 <span class="n">PrintStrings</span><span class="p">(</span><span class="n">hamlet</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>would print:</p>
-<div class="highlight-none"><div class="highlight"><pre>To be
+<div class="highlight-none"><div class="highlight"><pre><span></span>To be
 or not
 to be!
 </pre></div>
 </div>
 <p>Here we are just reading the data from the array parameter.
-We will see that there are more wrinkles to array parameters in <a class="reference internal" href="#alias"><span>References and Aliases</span></a>.</p>
+We will see that there are more wrinkles to array parameters in <a class="reference internal" href="#alias"><span class="std std-ref">References and Aliases</span></a>.</p>
 <p id="index-4">An array type can also be
 returned like any other type.  Examine the function definition:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return an array with string data obtained from the user.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return an array with string data obtained from the user.</span>
 <span class="c1">/// The length of the array and the number of entries to</span>
 <span class="c1">///   prompt the user for is n.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span><span class="p">[]</span> <span class="nf">InputNStrings</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
@@ -576,7 +578,7 @@ to figure out.</p>
 19
 20
 21
-22</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">ArrayLoop1</span>
 <span class="p">{</span>  <span class="c1">//Play computer on this code and then test</span>
@@ -622,7 +624,7 @@ to figure out.  Be careful to keep the data current!</p>
 13
 14
 15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">ArrayLoop2</span>
 <span class="p">{</span>  <span class="c1">//Play computer on this code first and then test</span>
@@ -661,7 +663,7 @@ to figure out.</p>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">ArrayLoop3</span>
 <span class="p">{</span>  <span class="c1">//Play computer on this code first and then test</span>
@@ -688,7 +690,7 @@ table from playing computer included in the project,
 <div class="section" id="sign-array-exercise-example">
 <span id="sign-array-exercise"></span><h3>10.1.1.2. Sign Array Exercise/Example<a class="headerlink" href="#sign-array-exercise-example" title="Permalink to this headline">¶</a></h3>
 <p>Complete the code for this function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return an array contqining the sign (1, -1 or 0)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return an array contqining the sign (1, -1 or 0)</span>
 <span class="c1">/// of each element of x.</span>
 <span class="c1">/// For example if x contains elements 2, -5, 0, 7,</span>
 <span class="c1">/// then return a new array containing 1, -1, 0, 1.</span>
@@ -704,7 +706,7 @@ table from playing computer included in the project,
 <span id="command-line-param"></span><span id="index-5"></span><h2>10.1.2. Parameters to Main<a class="headerlink" href="#parameters-to-main" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">Main</span></code> function may take an array of strings as parameter, as in example
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_param/print_param.cs">print_param/print_param.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Demonstrate the use of command line parameters.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Demonstrate the use of command line parameters.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;There are {0} command line parameters.&quot;</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
@@ -719,11 +721,11 @@ table from playing computer included in the project,
 short for arguments.</p>
 <p>Compile and run the program from the command line.
 Run it again with some things at the end of the line like:</p>
-<div class="highlight-none"><div class="highlight"><pre>mono print_param.exe hi there 123
+<div class="highlight-none"><div class="highlight"><pre><span></span>mono print_param.exe hi there 123
 </pre></div>
 </div>
 <p>This should print for you:</p>
-<div class="highlight-none"><div class="highlight"><pre>There are 3 command line parameters.
+<div class="highlight-none"><div class="highlight"><pre><span></span>There are 3 command line parameters.
 hi
 there
 123
@@ -732,7 +734,7 @@ there
 <p>See what quoted strings do.  Use command line parameters (with the quotes)
 <code class="docutils literal"><span class="pre">&quot;hi</span> <span class="pre">there&quot;</span> <span class="pre">123</span></code>.
 This should print for you:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">There</span> <span class="n">are</span> <span class="m">2</span> <span class="n">command</span> <span class="n">line</span> <span class="n">parameters</span><span class="p">.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">There</span> <span class="n">are</span> <span class="m">2</span> <span class="n">command</span> <span class="n">line</span> <span class="n">parameters</span><span class="p">.</span>
 <span class="n">hi</span> <span class="n">there</span>
 <span class="m">123</span>
 </pre></div>
@@ -779,14 +781,14 @@ build the program again, and continue executing in the same terminal window.</p>
 <div class="section" id="modified-parameter-print-exercise">
 <h3>10.1.2.1. Modified Parameter Print Exercise<a class="headerlink" href="#modified-parameter-print-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Modify a copy of <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/print_param/print_param.cs">print_param/print_param.cs</a> to contain the earlier
-example function <a class="reference internal" href="#printstrings"><span>PrintStrings</span></a>, and call it.</p>
+example function <a class="reference internal" href="#printstrings"><span class="std std-ref">PrintStrings</span></a>, and call it.</p>
 </div>
 <div class="section" id="command-line-adder-exercise">
 <span id="index-8"></span><span id="id1"></span><h3>10.1.2.2. Command Line Adder Exercise<a class="headerlink" href="#command-line-adder-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a program <code class="docutils literal"><span class="pre">adder.cs</span></code> that calculates and prints the sum of
 command line parameters, so if you make the command line parameters
 in Xamarin Studio be</p>
-<div class="highlight-none"><div class="highlight"><pre>2 5 22
+<div class="highlight-none"><div class="highlight"><pre><span></span>2 5 22
 </pre></div>
 </div>
 <p>then the program prints 29.</p>
@@ -794,11 +796,11 @@ in Xamarin Studio be</p>
 Xamarin Studio, that means going down to the bin/Debug directory.
 Recall Xamarin Studio for Windows produces a Windows executable,
 not a Mono file, so you can run</p>
-<div class="highlight-none"><div class="highlight"><pre>adder 2 5 22
+<div class="highlight-none"><div class="highlight"><pre><span></span>adder 2 5 22
 </pre></div>
 </div>
 <p>but on a Mac you need to run with mono:</p>
-<div class="highlight-none"><div class="highlight"><pre>mono adder.exe 2 5 22
+<div class="highlight-none"><div class="highlight"><pre><span></span>mono adder.exe 2 5 22
 </pre></div>
 </div>
 </div>
@@ -812,7 +814,7 @@ not a Mono file, so you can run</p>
 after chopping out the separator character from the string.
 A piece may be the empty string.
 Example:</p>
-<div class="last highlight-none"><div class="highlight"><pre>csharp&gt; var fruitString = &quot;apple pear banana&quot;;
+<div class="last highlight-none"><div class="highlight"><pre><span></span>csharp&gt; var fruitString = &quot;apple pear banana&quot;;
 csharp&gt; string[] fruit = fruitString.Split(&#39; &#39;);
 csharp&gt; fruit;
 { &quot;apple&quot;, &quot;pear&quot;, &quot;banana&quot; }
@@ -831,7 +833,7 @@ Also see that the string is split at <em>each</em> <code class="docutils literal
 even if that produces empty strings.</p>
 <p id="ints-from-string1"><span id="index-10"></span><code class="docutils literal"><span class="pre">Split</span></code> is useful for parsing a line with several parts.  You might get a group of
 integers on a line of text, for instance from:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
    <span class="s">&quot;Please enter some integers, separated by single spaces: &quot;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -840,7 +842,7 @@ with <code class="docutils literal"><span class="pre">Split</span></code>, <em>a
 If you want them as integers, not strings, you must convert each one separately.</p>
 <p>It is useful to put this idea in a function.
 See the type returned.  It is an array <code class="docutils literal"><span class="pre">int[]</span></code> for the int results:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return ints taken from space separated integers in a string.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return ints taken from space separated integers in a string.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">IntsFromString1</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">string</span><span class="p">[]</span> <span class="n">integers</span> <span class="p">=</span> <span class="n">input</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39; &#39;</span><span class="p">);</span>
@@ -879,18 +881,18 @@ a standard way to have
 <em>related</em> entries in <em>corresponding</em> positions in the arrays.</p>
 </div>
 <p>We will introduce a refinement of this function in the
-<a class="reference internal" href="#intsfromstring-exercise"><span>IntsFromString Exercise</span></a>.  It will rely on a more complicated
+<a class="reference internal" href="#intsfromstring-exercise"><span class="std std-ref">IntsFromString Exercise</span></a>.  It will rely on a more complicated
 index-handling pattern.</p>
 <div class="section" id="newupper-exercise">
 <span id="new-upper"></span><h3>10.1.3.1. NewUpper Exercise<a class="headerlink" href="#newupper-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Complete the definition for</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return an array that is the same as data</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return an array that is the same as data</span>
 <span class="c1">/// except all strings are in upper case.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span><span class="p">[]</span> <span class="nf">NewUpper</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and write a <code class="docutils literal"><span class="pre">Main</span></code> driver to demonstrate it.  Use the example function
-<a class="reference internal" href="#printstrings"><span>PrintStrings</span></a> in your demonstration.</p>
+<a class="reference internal" href="#printstrings"><span class="std std-ref">PrintStrings</span></a> in your demonstration.</p>
 </div>
 </div>
 <div class="section" id="references-and-aliases">
@@ -907,7 +909,7 @@ but can later be changed independently.</p>
 not the array data itself, so both end up pointing at the <em>same</em>  actual array:</p>
 <a class="reference internal image-reference" href="../_images/arrayAlias.png"><img alt="copying an array reference" class="align-center" src="../_images/arrayAlias.png" style="width: 300pt;" /></a>
 <p>Hereafter, array assignments like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">b</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="p">-</span><span class="m">10</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="p">-</span><span class="m">10</span><span class="p">;</span>
 <span class="n">d</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="m">55</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -927,7 +929,7 @@ The change <em>remains</em> in the actual parameter array <em>after</em>
 the method has terminated.</p>
 </div>
 <p id="index-12">For example, consider the following function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Modify a by multiplying all elements by multiplier.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Modify a by multiplying all elements by multiplier.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">Scale</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">multiplier</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
@@ -937,7 +939,7 @@ the method has terminated.</p>
 </pre></div>
 </div>
 <p>The fragment:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">nums</span> <span class="p">=</span> <span class="p">{</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">1</span><span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[]</span> <span class="n">nums</span> <span class="p">=</span> <span class="p">{</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">1</span><span class="p">};</span>
 <span class="n">Scale</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -945,19 +947,19 @@ the method has terminated.</p>
 <div class="section" id="alltoupper-exercise">
 <span id="all-to-upper"></span><h3>10.1.4.1. AllToUpper Exercise<a class="headerlink" href="#alltoupper-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Complete the function with this heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Modifiy the array data so</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Modifiy the array data so</span>
 <span class="c1">///   all strings are in upper case.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AllToUpper</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Write a <code class="docutils literal"><span class="pre">Main</span></code> method to demonstrate it.  Use the example function
-<a class="reference internal" href="#printstrings"><span>PrintStrings</span></a> to show off your result.</p>
+<a class="reference internal" href="#printstrings"><span class="std std-ref">PrintStrings</span></a> to show off your result.</p>
 </div>
 <div class="section" id="sign-array-ii-exercise-example">
 <h3>10.1.4.2. Sign Array II Exercise/Example<a class="headerlink" href="#sign-array-ii-exercise-example" title="Permalink to this headline">¶</a></h3>
-<p>Create a variation on <a class="reference internal" href="#sign-array-exercise"><span>Sign Array Exercise/Example</span></a> with a function
+<p>Create a variation on <a class="reference internal" href="#sign-array-exercise"><span class="std std-ref">Sign Array Exercise/Example</span></a> with a function
 with heading</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Mutate array x, replacing each element by</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Mutate array x, replacing each element by</span>
 <span class="c1">/// its sign (1, -1 or 0)</span>
 <span class="c1">/// For example if array a contains elements  2, -5, 0, 7,</span>
 <span class="c1">/// then after the call Signs2(a), a contains 1, -1, 0, 1.</span>
@@ -973,25 +975,25 @@ with heading</p>
 <span id="index-13"></span><span id="id2"></span><h2>10.1.5. Anonymous Array Initialization<a class="headerlink" href="#anonymous-array-initialization" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you only want to use an array with specific values
 as a parameter to a function.  You could write something like</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span><span class="p">[]</span> <span class="n">temp</span> <span class="p">=</span> <span class="p">{</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">};</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">[]</span> <span class="n">temp</span> <span class="p">=</span> <span class="p">{</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">};</span>
 <span class="n">SomeFunc</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>but if <code class="docutils literal"><span class="pre">temp</span></code> is never going to be referenced again, you can
 do this without using a name:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SomeFunc</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">});</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">SomeFunc</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">});</span>
 </pre></div>
 </div>
 <p>Like with the use of <code class="docutils literal"><span class="pre">var</span></code>, the compiler can infer the type of the array, and the
 last example could be shortened to</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">SomeFunc</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">});</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">SomeFunc</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">});</span>
 </pre></div>
 </div>
 <p>It is essential to include the <code class="docutils literal"><span class="pre">new</span> <span class="pre">int[]</span></code> or <code class="docutils literal"><span class="pre">new[]</span></code>
 <em>in addition to</em>  the <code class="docutils literal"><span class="pre">{3,</span> <span class="pre">1,</span> <span class="pre">7}</span></code>.</p>
 <p>Such an approach could also be used if you want to return a fixed
 length array, where you have values for each parts, as in:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">minVal</span> <span class="p">=</span> <span class="p">...</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">minVal</span> <span class="p">=</span> <span class="p">...</span>
 <span class="kt">int</span> <span class="n">maxVal</span> <span class="p">=</span> <span class="p">...</span>
 <span class="c1">// ...</span>
 <span class="k">return</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span><span class="n">minVal</span><span class="p">,</span> <span class="n">maxVal</span><span class="p">};</span>
@@ -999,7 +1001,7 @@ length array, where you have values for each parts, as in:</p>
 </div>
 <div class="section" id="testing-newupper-exercise-example">
 <h3>10.1.5.1. Testing NewUpper Exercise/Example<a class="headerlink" href="#testing-newupper-exercise-example" title="Permalink to this headline">¶</a></h3>
-<p>Elaborate <a class="reference internal" href="#new-upper"><span>NewUpper Exercise</span></a> so your <code class="docutils literal"><span class="pre">Main</span></code> method calls
+<p>Elaborate <a class="reference internal" href="#new-upper"><span class="std std-ref">NewUpper Exercise</span></a> so your <code class="docutils literal"><span class="pre">Main</span></code> method calls
 <code class="docutils literal"><span class="pre">NewUpper</span></code> with an anonymous array as part of the demonstration.</p>
 <p>You can see our code for all the string array exercises in example project
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/string_array/string_array.cs">string_array/string_array.cs</a>, and with the <code class="docutils literal"><span class="pre">Main</span></code>
@@ -1040,7 +1042,7 @@ of objects always get a specific value, not random data.  Here are the defaults:
 without a specific initializer,
 gets initialized to  all <code class="docutils literal"><span class="pre">null</span></code> values.  The creation is totally
 legal, but if you try to use the created value, like</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span><span class="p">[]</span> <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[</span><span class="m">10</span><span class="p">];</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span><span class="p">[]</span> <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[</span><span class="m">10</span><span class="p">];</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Length</span><span class="p">);</span>  <span class="c1">// run time error here</span>
 </pre></div>
 </div>
@@ -1048,7 +1050,7 @@ legal, but if you try to use the created value, like</p>
 property.  If, for example,
 you want an array of empty strings you would need to initialize it with
 a loop:</p>
-<div class="last highlight-csharp"><div class="highlight"><pre><span class="kt">string</span><span class="p">[]</span> <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[</span><span class="m">10</span><span class="p">];</span>
+<div class="last highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span><span class="p">[]</span> <span class="n">words</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[</span><span class="m">10</span><span class="p">];</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">words</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1066,7 +1068,7 @@ is used to reference more than one array in parallel.</p>
 <p>Now that you have some experience,
 this section will include a variety of exercises where array index
 variables need to be manipulated in fancier ways.  Consider this heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a new array with all the 0&#39;s that are in</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new array with all the 0&#39;s that are in</span>
       <span class="c1">/// data removed.  If data contains 0, 3, 0, 0, 5, 9</span>
       <span class="c1">/// then an array containing 3, 5, 9 is returned.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">NoZeros</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
@@ -1135,7 +1137,7 @@ Our version is:</p>
 18
 19
 20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">/// Return a new array with all the 0&#39;s that are in</span>
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">/// Return a new array with all the 0&#39;s that are in</span>
 <span class="c1">/// data removed.  If data contains 0, 3, 0, 0, 5, 9</span>
 <span class="c1">/// then an array containing 3, 5, 9 is returned.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">NoZeros</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
@@ -1166,7 +1168,7 @@ Our version is:</p>
 <li>In the <code class="docutils literal"><span class="pre">NoZeros</span></code> function above,
 what are the values in the array <code class="docutils literal"><span class="pre">notzero</span></code> just after
 line 12 is executed?</li>
-<li>In the <a class="reference internal" href="#new-upper"><span>NewUpper Exercise</span></a>  or our version of <code class="docutils literal"><span class="pre">NewUpper</span></code> in
+<li>In the <a class="reference internal" href="#new-upper"><span class="std std-ref">NewUpper Exercise</span></a>  or our version of <code class="docutils literal"><span class="pre">NewUpper</span></code> in
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/string_array/string_array_demo.cs">string_array/string_array_demo.cs</a>
 consider the execution of the <code class="docutils literal"><span class="pre">NewUpper</span></code> function
 immediately after you first create
@@ -1177,7 +1179,7 @@ Right then, what are the element values in that array?</li>
 <div class="section" id="extractitems-exercise">
 <span id="index-16"></span><h3>10.1.7.2. ExtractItems Exercise<a class="headerlink" href="#extractitems-exercise" title="Permalink to this headline">¶</a></h3>
 <p>A string intended to indicate a sequence of items could be like in the
-discussion  above of <a class="reference internal" href="#ints-from-string1"><span>IntsFromString1</span></a>.
+discussion  above of <a class="reference internal" href="#ints-from-string1"><span class="std std-ref">IntsFromString1</span></a>.
 As illustrated there, individual items
 are separated out neatly with <code class="docutils literal"><span class="pre">Split</span></code>.  If you want to act on a user-generated
 string, it is probably better to allow more leeway:
@@ -1185,7 +1187,7 @@ Commas are often used to separate items or comma with blank, or several blanks.<
 <p>In this exercise write a version that will accept all those variations
 and return an array of non-empty strings, without the commas or blanks.
 Complete this function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return an array of non-empty strings that are separated</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return an array of non-empty strings that are separated</span>
 <span class="c1">/// in the original string by any combination of commas and blanks.</span>
 <span class="c1">/// Example:  ExtractItems(&quot;  extra  spaces,plus,  more, &quot;) returns an</span>
 <span class="c1">/// array containing {&quot;extra&quot;, &quot;spaces&quot;, &quot;plus&quot;, &quot;more&quot;}</span>
@@ -1207,10 +1209,10 @@ Handling the indices for the new array also adds complication.</p>
 <span id="id3"></span><h3>10.1.7.3. IntsFromString Exercise<a class="headerlink" href="#intsfromstring-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a function
 <code class="docutils literal"><span class="pre">IntsFromString</span></code> with a corresponding signature and intent
-like <a class="reference internal" href="#ints-from-string1"><span>IntsFromString1</span></a>, but make it
+like <a class="reference internal" href="#ints-from-string1"><span class="std std-ref">IntsFromString1</span></a>, but make it
 more robust by allowing all the separator combinations of
 <code class="docutils literal"><span class="pre">ExtractItems</span></code> from the last exercise, so
-<code class="docutils literal"><span class="pre">IntsFromString(&quot;</span> <span class="pre">2,</span> <span class="pre">33</span>&nbsp; <span class="pre">4,55</span> <span class="pre">6</span> <span class="pre">77</span>&nbsp; <span class="pre">&quot;)</span></code> returns an array containing <code class="docutils literal"><span class="pre">int</span></code>
+<code class="docutils literal"><span class="pre">IntsFromString(&quot;</span> <span class="pre">2,</span> <span class="pre">33</span>&#160; <span class="pre">4,55</span> <span class="pre">6</span> <span class="pre">77</span>&#160; <span class="pre">&quot;)</span></code> returns an array containing <code class="docutils literal"><span class="pre">int</span></code>
 values 2, 33, 4, 55, 6, 77.  (Don&#8217;t reinvent the wheel: call <code class="docutils literal"><span class="pre">ExtractItems</span></code>.)
 Also write a <code class="docutils literal"><span class="pre">Main</span></code> function so you can demonstrate the use of
 <code class="docutils literal"><span class="pre">IntsFromString</span></code>.</p>
@@ -1219,7 +1221,7 @@ Also write a <code class="docutils literal"><span class="pre">Main</span></code>
 <span id="index-17"></span><span id="id4"></span><h3>10.1.7.4. Trim All Exercise<a class="headerlink" href="#trim-all-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a program <code class="docutils literal"><span class="pre">trimmer.cs</span></code> that includes and tests a
 function with heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Trim all elements of a and replace them in the array.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Trim all elements of a and replace them in the array.</span>
 <span class="c1">//  Example: If a contains {&quot; is  &quot;, &quot; it&quot;, &quot;trimmed?   &quot;}</span>
 <span class="c1">//  then after the function call the array contains</span>
 <span class="c1">//  {&quot;is&quot;, &quot;it&quot;, &quot;trimmed?&quot;}.</span>
@@ -1231,7 +1233,7 @@ function with heading:</p>
 <span id="dups-exercise"></span><span id="index-18"></span><h3>10.1.7.5. Count Duplicates Exercise<a class="headerlink" href="#count-duplicates-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a program <code class="docutils literal"><span class="pre">count_dups.cs</span></code> that includes and tests a
 function with heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Return the number of duplicate pairs in an array a.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Return the number of duplicate pairs in an array a.</span>
 <span class="c1">// Example: for elements 2, 5, 1, 5, 2, 5</span>
 <span class="c1">// the return value would be 4 (one pair of 2&#39;s three pairs of 5&#39;s.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">dups</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
@@ -1242,7 +1244,7 @@ function with heading:</p>
 <span id="mirror-exercise"></span><span id="index-19"></span><h3>10.1.7.6. Mirror Array Exercise<a class="headerlink" href="#mirror-array-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a program <code class="docutils literal"><span class="pre">make_mirror.cs</span></code> that includes and tests a
 function with heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Create a new array with the elements of a in the opposite order.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Create a new array with the elements of a in the opposite order.</span>
 <span class="c1">// {&quot;aA&quot;, &quot;bB&quot;, &quot;cC&quot;} produces a new array {&quot;cC&quot;, &quot;bB&quot;, &quot;aA&quot;}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span><span class="p">[]</span> <span class="nf">Mirror</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
@@ -1252,7 +1254,7 @@ function with heading:</p>
 <span id="reverse-exercise"></span><span id="index-20"></span><h3>10.1.7.7. Reverse Array Exercise<a class="headerlink" href="#reverse-array-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a program <code class="docutils literal"><span class="pre">reverse_array.cs</span></code> that includes and tests a
 function with heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Reverse the order of array elements</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Reverse the order of array elements</span>
 <span class="c1">// If array a first contains &quot;aA&quot;, &quot;bB&quot;, &quot;cC&quot;,</span>
 <span class="c1">// than it ends up containing &quot;cC&quot;, &quot;bB&quot;, &quot;aA&quot;.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Reverse</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
@@ -1265,7 +1267,7 @@ trick here.)</p>
 <span id="index-21"></span><span id="id5"></span><h3>10.1.7.8. Histogram Exercise<a class="headerlink" href="#histogram-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Write a program <code class="docutils literal"><span class="pre">make_histogram.cs</span></code> that includes and tests a
 function with heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Return a histogram array counting repetitions of values</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Return a histogram array counting repetitions of values</span>
 <span class="c1">// start through end in array a.  The count for value start+i</span>
 <span class="c1">// is at index i of the returned array, starting at i == 0.</span>
 <span class="c1">// For example:</span>
@@ -1290,7 +1292,7 @@ array <code class="docutils literal"><span class="pre">a</span></code>.  You sho
 you count entries in intervals, not just of width 1.</p>
 <p>Write a program <code class="docutils literal"><span class="pre">make_histogram2.cs</span></code> that includes and tests a
 function with heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Return a histogram array counting repetitions of values</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Return a histogram array counting repetitions of values</span>
 <span class="c1">// in array a in the n half-open intervals [start, start + width),</span>
 <span class="c1">// [start+width, start+2*width), ... [</span>
 <span class="c1">// [start + (n-1)*width, start + n*width) .  The counts for</span>
@@ -1312,14 +1314,14 @@ result as <code class="docutils literal"><span class="pre">HistogramIntervals(a,
 <div class="section" id="power-table-exercise-2">
 <span id="power-table-exercise2"></span><span id="index-22"></span><h3>10.1.7.10. Power Table Exercise 2<a class="headerlink" href="#power-table-exercise-2" title="Permalink to this headline">¶</a></h3>
 <p>Write a program <code class="file docutils literal"><span class="pre">power_table2.cs`</span></code> producing a table much
-like <a class="reference internal" href="../for/forexamples.html#power-table-exercise"><span>Power Table Exercise</span></a>, with right-justified columns,
+like <a class="reference internal" href="../for/forexamples.html#power-table-exercise"><span class="std std-ref">Power Table Exercise</span></a>, with right-justified columns,
 but this time make each separate column have the minimum width
 necessary - so there is a single space (and no less)
 in front of some entry in
 <em>each</em> column, except the first.
 Be careful: take the heading widths into account; the
 parameter limits are important, too; test them:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print a table of powers of positive integers.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print a table of powers of positive integers.</span>
 <span class="c1">/// Assume 1 &lt;= nMax &lt;= 14, 1 &lt;= powerMax &lt;= 10</span>
 <span class="c1">/// Example: output of PowerTable(4, 5)</span>
 <span class="c1">/// n^1 n^2 n^3 n^4  n^5</span>
@@ -1347,7 +1349,7 @@ parameter limits are important, too; test them:</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

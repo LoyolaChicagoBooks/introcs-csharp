@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>12.3. Dictionary Examples &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>12.3. Dictionary Examples &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="12. Dictionaries" href="dictionaries.html" />
     <link rel="next" title="12.4. Lab: File Data and Collections" href="lab-filedata.html" />
@@ -194,7 +196,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">12.3. Dictionary Examples</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">12.3. Dictionary Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
 </ul>
@@ -324,7 +326,7 @@ a <code class="docutils literal"><span class="pre">HashSet</span></code> uses th
 <p>Here is a csharp session using the type <code class="docutils literal"><span class="pre">HashSet</span></code> of strings. The <code class="docutils literal"><span class="pre">Add</span></code> method, like
 the <code class="docutils literal"><span class="pre">Remove</span></code> method for Lists, returns true or false depending on whether the method
 changes the set:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; var set = new HashSet&lt;string&gt;();
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; var set = new HashSet&lt;string&gt;();
 csharp&gt; set;
 {  }
 csharp&gt; set.Add(&quot;hi&quot;);
@@ -375,7 +377,7 @@ as well as a blank.</p>
 <p>We separate the processing into two functions, one calculating the dictionary, and one printing
 a table.  To reduce the amount of clutter in the <code class="docutils literal"><span class="pre">Dictionary</span></code>, the function
 <code class="docutils literal"><span class="pre">GetCounts</span></code> takes as a parameter a set of words to ignore.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Return a Dictionary of word:count pairs from parsing s,</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a Dictionary of word:count pairs from parsing s,</span>
       <span class="c1">///  excluding all strings in ignore.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;</span> <span class="n">GetCounts</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span>
             <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">ignore</span><span class="p">)</span>
@@ -428,7 +430,7 @@ Gettysburg Address.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

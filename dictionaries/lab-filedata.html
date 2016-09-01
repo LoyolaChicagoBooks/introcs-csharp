@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>12.4. Lab: File Data and Collections &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>12.4. Lab: File Data and Collections &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="12. Dictionaries" href="dictionaries.html" />
     <link rel="next" title="12.5. Chapter Review Questions" href="reviewdictionaries.html" />
@@ -195,7 +197,7 @@
 <li class="toctree-l2"><a class="reference internal" href="dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">12.4. Lab: File Data and Collections</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">12.4. Lab: File Data and Collections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -373,7 +375,7 @@ The files that they read will contain the basic data.
 You can look in the lab project at the first data file:
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/dict_lab_stub/help_not_defaults.txt">help_not_defaults.txt</a>,
 and the beginning is shown below:</p>
-<div class="highlight-none"><div class="highlight"><pre>Welcome to We-Give-Answers!
+<div class="highlight-none"><div class="highlight"><pre><span></span>Welcome to We-Give-Answers!
 What do you have to say?
 
 We-Give-Answers 
@@ -412,7 +414,7 @@ the text data needed.</p>
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/dict_lab_stub/file_util.cs">file_util.cs</a>
 is useful by itself and later for use in the
 <code class="docutils literal"><span class="pre">GetParagraphs</span></code> and <code class="docutils literal"><span class="pre">GetDictionary</span></code> that you will complete.  See the stub:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a string consisting of a sequence of nonempty lines read</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return a string consisting of a sequence of nonempty lines read</span>
 <span class="c1">/// from reader. All the newlines at the ends of these lines are included.</span>
 <span class="c1">/// The function ends after reading (but not including) an empty line.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">ReadParagraph</span><span class="p">(</span><span class="n">StreamReader</span> <span class="n">reader</span><span class="p">)</span>
@@ -420,7 +422,7 @@ is useful by itself and later for use in the
 </div>
 <p>The first call to <code class="docutils literal"><span class="pre">ReadParagraph</span></code>, using the file illustrated above, should
 return the following (showing the escape codes for the newlines):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="s">&quot;Welcome to We-Give-Answers!\nWhat do you have to say?\n&quot;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="s">&quot;Welcome to We-Give-Answers!\nWhat do you have to say?\n&quot;</span>
 </pre></div>
 </div>
 <p>and then the reader should be set to read the goodbye paragraph
@@ -451,7 +453,7 @@ can advance to the next two parts.</p>
 insert a <em>few remaining lines of code</em> to complete the next method
 <code class="docutils literal"><span class="pre">GetParagraphs</span></code>, that reads to the end of the file, and likely
 processes more than one paragraph.</p>
-<div class="highlight-csharp"><div class="highlight"><pre>      <span class="c1">/// Read the remaining empty-line terminated paragraphs</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Read the remaining empty-line terminated paragraphs</span>
       <span class="c1">/// from reader into a new list of paragraph strings,</span>
       <span class="c1">/// and return the list.</span>
       <span class="c1">/// The function reads all the way to the end of</span>
@@ -486,7 +488,7 @@ stub also takes a <code class="docutils literal"><span class="pre">StreamReader<
 <code class="docutils literal"><span class="pre">Main</span></code> this function is called to read from
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/dict_lab_stub/help_not_responses.txt">help_not_responses.txt</a>.
 Here are the first few lines:</p>
-<div class="highlight-none"><div class="highlight"><pre>crash
+<div class="highlight-none"><div class="highlight"><pre><span></span>crash
 Well, it never crashes on our system. 
 It must have something to do with your system. 
 Tell me more about your configuration.
@@ -504,7 +506,7 @@ Are you running any other processes in the background?
 </pre></div>
 </div>
 <p>Here is the stub of the function to complete, reading such data:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a new Dictionary, taking data for it from reader.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return a new Dictionary, taking data for it from reader.</span>
 <span class="c1">/// Reader contains key-value pairs, where each single-line key is</span>
 <span class="c1">/// followed by a possibly multi-line paragraph value that is terminated</span>
 <span class="c1">/// by an empty line. The file must end with two newlines in sequence:</span>
@@ -551,7 +553,7 @@ for each key variation, repeating the value paragraph.
 A concise approach is to use a data file
 like <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/dict_lab_stub/help_not_responses2.txt">help_not_responses2.txt</a>.
 Here are the first few lines:</p>
-<div class="highlight-none"><div class="highlight"><pre>crash crashes crashed
+<div class="highlight-none"><div class="highlight"><pre><span></span>crash crashes crashed
 Well, it never crashes on our system. 
 It must have something to do with your system. 
 Tell me more about your configuration.
@@ -570,7 +572,7 @@ Are you running any other processes in the background?
 </div>
 <p>The line that used to have one key now may have several blank-separated keys.</p>
 <p>Here is how the documentation for <code class="docutils literal"><span class="pre">GetDictionary</span></code> should be changed:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a new Dictionary, taking data for it from reader.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return a new Dictionary, taking data for it from reader.</span>
 <span class="c1">/// Reader generates key-value pairs, where one or more space</span>
 <span class="c1">/// separated keys on a line are followed by a possibly multi-line</span>
 <span class="c1">/// paragraph value that is terminated by an empty line.  Each</span>
@@ -603,7 +605,7 @@ same response, and show to your TA.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>8.3. Lab: Loops &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>8.3. Lab: Loops &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="8. For Loops" href="for.html" />
     <link rel="next" title="8.4. Chapter Review Questions" href="reviewfor.html" />
@@ -157,7 +159,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="for.html">8. For Loops</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">8.3. Lab: Loops</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.3. Lab: Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -317,7 +319,7 @@
 and fill in function bodies for each part below:</p>
 <ol class="arabic" id="index-1">
 <li><p class="first">Complete</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print n copies of s, end to end.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print n copies of s, end to end.</span>
 <span class="c1">/// For example PrintReps(&quot;Ok&quot;, 9) prints: OkOkOkOkOkOkOkOkOk</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintReps</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
@@ -325,14 +327,14 @@ and fill in function bodies for each part below:</p>
 <p>Hint:  How would you do something like the example
 <code class="docutils literal"><span class="pre">PrintReps(&quot;Ok&quot;,</span> <span class="pre">9)</span></code> or with a higher count by hand?
 Probably count under your breath as you write:</p>
-<div class="highlight-none"><div class="highlight"><pre> 1 2 3 4 5 6 7 8 9
+<div class="highlight-none"><div class="highlight"><pre><span></span> 1 2 3 4 5 6 7 8 9
 OkOkOkOkOkOkOkOkOk
 </pre></div>
 </div>
 <p>This is a counting loop.</p>
 </li>
 <li id="index-2"><p class="first">Complete</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return a string containing n copies of s, end to end.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return a string containing n copies of s, end to end.</span>
 <span class="c1">/// For example StringOfReps(&quot;Ok&quot;, 9) returns: &quot;OkOkOkOkOkOkOkOkOk&quot;</span>
 <span class="k">static</span> <span class="kt">string</span> <span class="nf">StringOfReps</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
@@ -343,14 +345,14 @@ string.</p>
 </li>
 <li id="index-3"><p class="first">Complete <code class="docutils literal"><span class="pre">Factorial</span></code>, in a format much like SumToN in example
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_test/sum_to_n_test.cs">sum_to_n_test/sum_to_n_test.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return n! (n factorial: 1*2*3 *...* n if n &gt;=1;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return n! (n factorial: 1*2*3 *...* n if n &gt;=1;</span>
 <span class="c1">/// 0! is 1.).  For example Factorial(4) returns 1*2*3*4 = 24.</span>
 <span class="k">static</span> <span class="kt">int</span> <span class="nf">Factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It is useful to think of the sequence of steps to calculate a
 concrete example of a factorial, say 6!:</p>
-<div class="highlight-none"><div class="highlight"><pre>Start with 1
+<div class="highlight-none"><div class="highlight"><pre><span></span>Start with 1
 2 *1 = 2
 3*2 = 6
 4 * 6 = 24
@@ -371,7 +373,7 @@ Then what is the largest value of <code class="docutils literal"><span class="pr
 <em>to tell the TA&#8217;s checking out your work.</em></p>
 </li>
 <li id="index-4"><p class="first">Complete the method</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Print a filled rectange, where the filling is</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Print a filled rectange, where the filling is</span>
 <span class="c1">// the specified number of columns and rows of the character inChar,</span>
 <span class="c1">// surrounded by a border made of the character edgeChar.</span>
 <span class="c1">// For example printRectangle(3, 2, &#39;i&#39;, &#39;e&#39;) prints</span>
@@ -384,12 +386,12 @@ Then what is the largest value of <code class="docutils literal"><span class="pr
 </pre></div>
 </div>
 <p>Here are further examples:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PrintRectangle</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="sc">&#39; &#39;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">PrintRectangle</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="sc">&#39; &#39;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">);</span>
 <span class="n">PrintRectangle</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="sc">&#39;-&#39;</span><span class="p">,</span> <span class="sc">&#39;+&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>would print</p>
-<div class="highlight-none"><div class="highlight"><pre>BBBBBBB
+<div class="highlight-none"><div class="highlight"><pre><span></span>BBBBBBB
 B     B
 BBBBBBB
 ++
@@ -403,7 +405,7 @@ incrementally.
 You might start by just creating the inner rectangle, without the border.</p>
 </li>
 <li><p class="first">Complete the method below.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print the borders of the cells of a table.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print the borders of the cells of a table.</span>
 <span class="c1">/// The borders divide the table into rows and columns.</span>
 <span class="c1">/// The blank space within a cell is width characters wide</span>
 <span class="c1">/// and continues down for height lines.</span>
@@ -420,11 +422,11 @@ You might start by just creating the inner rectangle, without the border.</p>
 </pre></div>
 </div>
 <p>Here is further example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PrintTableBorders</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">6</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">PrintTableBorders</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">6</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>would print (with actual vertical bars)</p>
-<div class="highlight-none"><div class="highlight"><pre>+------+------+
+<div class="highlight-none"><div class="highlight"><pre><span></span>+------+------+
 |      |      |
 |      |      |
 |      |      |
@@ -457,7 +459,7 @@ as content is added inside the cells!</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

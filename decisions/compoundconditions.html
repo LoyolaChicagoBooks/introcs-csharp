@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5.7. Compound Boolean Expressions &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>5.7. Compound Boolean Expressions &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="5. Decisions" href="decisions.html" />
     <link rel="next" title="5.8. Nested if Statements" href="ifnested.html" />
@@ -129,7 +131,7 @@
 <li class="toctree-l2"><a class="reference internal" href="comparisonops.html">5.4. More Conditional Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.7. Compound Boolean Expressions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.7. Compound Boolean Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">5.9. Chapter Review Questions</a></li>
 </ul>
@@ -317,13 +319,13 @@ have 120 credits <em>and</em> a GPA of at least 2.0. C# does not use the
 word <em>and</em>.  Instead it uses <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> (inherited from the C language).
 Then the requirement
 translates directly into C# as a <em>compound condition</em>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">credits</span> <span class="p">&gt;=</span> <span class="m">120</span> <span class="p">&amp;&amp;</span> <span class="n">GPA</span> <span class="p">&gt;=</span><span class="m">2.0</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">credits</span> <span class="p">&gt;=</span> <span class="m">120</span> <span class="p">&amp;&amp;</span> <span class="n">GPA</span> <span class="p">&gt;=</span><span class="m">2.0</span>
 </pre></div>
 </div>
 <p>This is true if both <code class="docutils literal"><span class="pre">credits</span> <span class="pre">&gt;=</span> <span class="pre">120</span></code> is true and
 <code class="docutils literal"><span class="pre">GPA</span> <span class="pre">&gt;=</span> <span class="pre">2.0</span></code> is
 true. A short example function using this would be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">checkGraduation</span><span class="p">(</span><span class="kt">int</span> <span class="n">credits</span><span class="p">,</span> <span class="kt">double</span> <span class="n">GPA</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">checkGraduation</span><span class="p">(</span><span class="kt">int</span> <span class="n">credits</span><span class="p">,</span> <span class="kt">double</span> <span class="n">GPA</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">credits</span> <span class="p">&gt;=</span> <span class="m">120</span> <span class="p">&amp;&amp;</span> <span class="n">GPA</span> <span class="p">&gt;=</span><span class="m">2.0</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;You are eligible to graduate!&quot;</span><span class="p">);</span>
@@ -347,7 +349,7 @@ equivalent to</p>
 <div>(low &lt; val) &lt; high</div></blockquote>
 <p>comparing a Boolean result to high, and causing a compiler error.
 There is a C# version.  Be sure to use this pattern:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">low</span> <span class="p">&lt;</span> <span class="n">val</span> <span class="p">&amp;&amp;</span> <span class="n">val</span> <span class="p">&lt;</span> <span class="n">high</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">low</span> <span class="p">&lt;</span> <span class="n">val</span> <span class="p">&amp;&amp;</span> <span class="n">val</span> <span class="p">&lt;</span> <span class="n">high</span>
 </pre></div>
 </div>
 <p id="index-1">Now suppose we want the opposite condition:  that val is <em>not</em>
@@ -367,7 +369,7 @@ are true. It is false if both conditions are false.</p>
 is that it is <em>not</em> the case
 that low &lt; val &amp;&amp; val &lt;&lt; high.  C# translates <em>not</em> as <code class="docutils literal"><span class="pre">!</span></code>.  Another way
 to state the condition would be</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="p">!(</span><span class="n">low</span> <span class="p">&lt;</span> <span class="n">val</span> <span class="p">&amp;&amp;</span> <span class="n">val</span> <span class="p">&lt;</span> <span class="n">high</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="p">!(</span><span class="n">low</span> <span class="p">&lt;</span> <span class="n">val</span> <span class="p">&amp;&amp;</span> <span class="n">val</span> <span class="p">&lt;</span> <span class="n">high</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The parentheses are needed because the <code class="docutils literal"><span class="pre">!</span></code>
@@ -387,7 +389,7 @@ and false when <em>condition</em> is true.</p>
 parentheses are also needed:</p>
 <blockquote>
 <div><code class="docutils literal"><span class="pre">if</span> <span class="pre">(!(</span></code> <em>condition</em> <code class="docutils literal"><span class="pre">))</span> <span class="pre">{</span></code></div></blockquote>
-<p>We now have a lot of operators!  Most of those in appendix <a class="reference internal" href="../appendix/precedence.html#precedence"><span>Precedence of Operators</span></a>
+<p>We now have a lot of operators!  Most of those in appendix <a class="reference internal" href="../appendix/precedence.html#precedence"><span class="std std-ref">Precedence of Operators</span></a>
 have now been considered. There
 you can see that <code class="docutils literal"><span class="pre">!</span></code> has the high precedence of unary arithmetic operators.
 The operators <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> and <code class="docutils literal"><span class="pre">||</span></code> are almost at the bottom of the operators
@@ -395,9 +397,9 @@ considered in this book, just above the assignment operators, and below the
 relational operators, with <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> above <code class="docutils literal"><span class="pre">||</span></code>.
 You are encourages to use parentheses to make sure.</p>
 <p><strong>Compound Overkill</strong>:  Look back to the code converting a score to a letter grade
-in <a class="reference internal" href="ifelsechained.html#multiple-tests"><span>Multiple Tests and if-else Statements</span></a>.
+in <a class="reference internal" href="ifelsechained.html#multiple-tests"><span class="std std-ref">Multiple Tests and if-else Statements</span></a>.
 The condition before assigning the B grade could have been:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">80</span> <span class="p">&amp;&amp;</span> <span class="n">score</span> <span class="p">&lt;</span> <span class="m">90</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">score</span> <span class="p">&gt;=</span> <span class="m">80</span> <span class="p">&amp;&amp;</span> <span class="n">score</span> <span class="p">&lt;</span> <span class="m">90</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>That would have totally nailed the condition, but it is overly verbose in the
@@ -405,7 +407,7 @@ The condition before assigning the B grade could have been:</p>
 Since you only get to consider a B as a grade if the grade was <em>not</em> already
 set to A, the second part of the compound condition above is redundant.</p>
 <p>There are a couple more wrinkles with compound Boolean expressions introduced
-later in <a class="reference internal" href="../while/condition-short-circuit.html#short-circuit"><span>Short-Circuiting &amp;&amp; and ||</span></a>.</p>
+later in <a class="reference internal" href="../while/condition-short-circuit.html#short-circuit"><span class="std std-ref">Short-Circuiting &amp;&amp; and ||</span></a>.</p>
 <div class="section" id="congress-exercise">
 <span id="congressex"></span><h2>5.7.1. Congress Exercise<a class="headerlink" href="#congress-exercise" title="Permalink to this headline">¶</a></h2>
 <p>A person is eligible to be a US Senator who is at least 30 years
@@ -470,7 +472,7 @@ umbrella.&#8221; is true or not in this situation.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

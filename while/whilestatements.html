@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6.1. While-Statements &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>6.1. While-Statements &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="6. While Loops" href="while.html" />
     <link rel="next" title="6.2. While-Statements with Sequences" href="while-with-sequence.html" />
@@ -135,7 +137,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="while.html">6. While Loops</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.1. While-Statements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. While-Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
@@ -361,7 +363,7 @@ write and run the code below, saved in example program
 3
 4
 5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">temperature</span> <span class="p">=</span> <span class="m">115</span><span class="p">;</span>
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">temperature</span> <span class="p">=</span> <span class="m">115</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">temperature</span> <span class="p">&gt;</span> <span class="m">112</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// first while loop code</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
    <span class="n">temperature</span> <span class="p">=</span> <span class="n">temperature</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
@@ -377,7 +379,7 @@ closely is to make a table with a line for each instruction
 executed, keeping track of all the variables, playing computer.
 as with <code class="docutils literal"><span class="pre">if</span></code> statements, the executed lines that you show in your table
 will not be in textual order, as in
-<a class="reference internal" href="../data/programstructure.html#sequential-execution"><span>Sequential Execution</span></a>.
+<a class="reference internal" href="../data/programstructure.html#sequential-execution"><span class="std std-ref">Sequential Execution</span></a>.
 While <code class="docutils literal"><span class="pre">if</span></code> statements merely altered execution order
 by skipping some lines, loops allow the same line in the text of your program
 to be executed repeatedly, and show up in multiple places in your table.</p>
@@ -491,7 +493,7 @@ If it helps, get detailed and play computer:</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">9</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
    <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
@@ -514,7 +516,7 @@ carefully, one step at a time.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span> <span class="c1">//variation on TestWhile1.cs</span>
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span> <span class="c1">//variation on TestWhile1.cs</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="m">9</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
@@ -594,7 +596,7 @@ of the computer in detail.
 As code gets more complicated, particularly with loops, this &#8220;playing computer&#8221;
 is an important skill.</p>
 <p><strong>Problem</strong>:  Write a program with a <code class="docutils literal"><span class="pre">while</span></code> loop to print:</p>
-<div class="highlight-none"><div class="highlight"><pre>10
+<div class="highlight-none"><div class="highlight"><pre><span></span>10
 9
 8
 7
@@ -635,7 +637,7 @@ preparation for the next value of time is:  <code class="docutils literal"><span
 <p>Putting that all together, and remembering the one thing we noted
 to do after the loop,
 we get <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/blastoff/blastoff.cs">blastoff/blastoff.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Blastoff</span>
 <span class="p">{</span>
@@ -675,7 +677,7 @@ into a proper <em>continuation</em> condition.</li>
 What action do I want to repeat?</li>
 <li>How do I write the repeating action so I can modify it for the next time
 through the loop to work with new data?</li>
-<li>What code is needed to do modifications to make the same code work
+<li>What code is needed to do modifications to make the same action code work
 the next time through the loop?</li>
 <li>Have I thought of variables needed in the middle and declared them;
 do other things need initialization?</li>
@@ -686,10 +688,22 @@ loop) from repetitive actions (in the loop) from actions not repeated, but
 done after the loop (code after the loop). Missing this distinction
 is a <em>common error</em>!</li>
 </ul>
+<p>This is quite a sequence of steps!  Particularly looking forward to other forms of loops,
+we can note a more basic split into two parts:</p>
+<ul class="simple">
+<li>Writing the code to make sure each desired iteration is reached
+(loop dynamics: initialized data for the test condition, the test condition itself,
+preparing for the next iteration)</li>
+<li>Doing the work for a specific item/ireration (most of the body of the loop)</li>
+</ul>
+<p>You generally only need to concentrate on one of those at a time.
+If you set up how to reach all of the repetitions, giving names for the variables
+to be acted on, then you can separately just concentrate on dealing with the the action/code
+to deal with the <em>current</em> situation.</p>
 <div class="section" id="sum-to-n">
 <span id="sumton"></span><h2>6.1.1. Sum To <code class="docutils literal"><span class="pre">n</span></code><a class="headerlink" href="#sum-to-n" title="Permalink to this headline">¶</a></h2>
 <p>Let us write a function to sum the numbers from 1 to <code class="docutils literal"><span class="pre">n</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
 <span class="k">static</span> <span class="kt">int</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="p">...</span>
@@ -704,7 +718,7 @@ so quick at this that you just see it all at once, with the answer.</p>
 <p id="index-5">In fact, you and the computer need to do this in steps.  To help see, let
 us take a concrete example like the one above for SumToN(5), and write out a
 detailed sequence of steps like:</p>
-<div class="highlight-none"><div class="highlight"><pre>3 = 1 + 2
+<div class="highlight-none"><div class="highlight"><pre><span></span>3 = 1 + 2
 6 = 3 + 3
 10 = 6 + 4
 15 = 10 + 5
@@ -720,29 +734,29 @@ partial sum change from step to step, so in order to use the same code over and
 over we will need changeable variables, with names.  We can make the partial
 sum be <code class="docutils literal"><span class="pre">sum</span></code> and we can call the next integer <code class="docutils literal"><span class="pre">i</span></code>.  Each addition can be
 in the form:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">sum</span> <span class="p">+</span> <span class="n">i</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">sum</span> <span class="p">+</span> <span class="n">i</span>
 </pre></div>
 </div>
 <p>We need to remember that result, the new sum.  You might first think to introduce
 such a name:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">newSum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">newSum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This will work.  We can go through the <code class="docutils literal"><span class="pre">while</span></code> loop rubric:</p>
 <p>The variables are <code class="docutils literal"><span class="pre">sum</span></code>, <code class="docutils literal"><span class="pre">newSum</span></code> and <code class="docutils literal"><span class="pre">i</span></code>.</p>
 <p>To evaluate</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">newSum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">newSum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>the first time in the loop, we need <em>initial</em> values for sum and i.
 Our concrete example leads the way:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>We need a <code class="docutils literal"><span class="pre">while</span></code> loop heading with a continuation condition.  How
 long do we want to add the next <code class="docutils literal"><span class="pre">i</span></code>?  That is for all the value up to and
 including n:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
 <p>There is one more important piece - making sure the same code</p>
@@ -750,17 +764,17 @@ including n:</p>
 <div>newSum = sum + i;</div></blockquote>
 <p>works for the <em>next</em> time through the loop.  We have dealt before with
 the idea of the next number in sequence:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>What about <code class="docutils literal"><span class="pre">sum</span></code>?  What was the <code class="docutils literal"><span class="pre">newSum</span></code>
 on <em>one</em> time through the loop becomes the old or
 just plain <code class="docutils literal"><span class="pre">sum</span></code> the <em>next</em> time through, so we can make an assignment:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">sum</span> <span class="p">=</span> <span class="n">newSum</span><span class="p">:</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">sum</span> <span class="p">=</span> <span class="n">newSum</span><span class="p">:</span>
 </pre></div>
 </div>
 <p>All together we calculate the sum with:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
    <span class="kt">int</span> <span class="n">newSum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
    <span class="n">sum</span> <span class="p">=</span> <span class="n">newSum</span><span class="p">:</span>
@@ -773,7 +787,7 @@ through the loop at the end of the loop.
 We can condense it in this case: Since <code class="docutils literal"><span class="pre">newSum</span></code> is only used
 once, we can do away with this extra variable name,
 and directly change the value of sum:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="p">+</span> <span class="n">i</span><span class="p">;</span>
    <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
@@ -783,7 +797,7 @@ and directly change the value of sum:</p>
 <p>Finally this was supposed to fit in a function.  The ultimate purpose
 was to <em>return</em> the sum, which is the final value of the
 variable <code class="docutils literal"><span class="pre">sum</span></code>, so the whole function is:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
 <span class="k">static</span> <span class="kt">int</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>     <span class="c1">// line 1</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>       <span class="c1">// 2</span>
@@ -895,7 +909,7 @@ make entries where variables change value.</p>
 <p>The return only happens once, so it is not in the loop.  You get <em>a</em> value
 for a sum each time through, but not the final one.  A common beginner
 error is to put the return statement inside the loop, like</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">// 1   BAD VERSION!!!</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">// 1   BAD VERSION!!!</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>    <span class="c1">// 2</span>
    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// 3</span>
@@ -959,7 +973,7 @@ The point is here that 1 is a constant.  The time is of <em>constant order</em>.
 <p id="index-10">We can write a ridiculously short
 function following Gauss&#8217;s model.  Here we introduce the variable average,
 as in the motivation for Gauss&#8217;s answer:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
 <span class="k">static</span> <span class="kt">long</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">//CHANGED:  quick and WRONG</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">average</span> <span class="p">=</span> <span class="p">(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>    <span class="c1">//from Gausse&#39;s motivation</span>
@@ -980,12 +994,12 @@ Gauss&#8217;s motivation can put a mathematical non-integer in the middle.</p>
 <p>The C# fix: The final answer is clearly an integer, so if we do the division
 last, when we know the answer will be an integer (assuming a <code class="docutils literal"><span class="pre">long</span></code> integer),
 things should be better:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">long</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">long</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>
 <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
 </pre></div>
 </div>
 <p id="index-11">Here is a shot at the whole function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return the sum of the numbers from 1 through n.</span>
 <span class="k">static</span> <span class="kt">long</span> <span class="nf">SumToN</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">//CHANGED:  quick and still WRONG</span>
 <span class="p">{</span>
    <span class="kt">long</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>  <span class="c1">// final division will produce an integer</span>
@@ -1012,14 +1026,14 @@ when wrong.</p>
 In the correct looping version <code class="docutils literal"><span class="pre">sum</span></code> was a <code class="docutils literal"><span class="pre">long</span></code>, and that
 forced all the later arithmetic to be with longs.  Here are two variations
 that work:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">long</span> <span class="n">nLong</span> <span class="p">=</span> <span class="n">n</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">long</span> <span class="n">nLong</span> <span class="p">=</span> <span class="n">n</span><span class="p">;</span>
 <span class="k">return</span> <span class="n">nLong</span><span class="p">*(</span><span class="n">nLong</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>or we can avoid a new variable name by <a class="reference internal" href="../data/types-and-conversions.html#cast"><span>Casting</span></a> to <code class="docutils literal"><span class="pre">long</span></code>, converting
+<p>or we can avoid a new variable name by <a class="reference internal" href="../data/types-and-conversions.html#cast"><span class="std std-ref">Casting</span></a> to <code class="docutils literal"><span class="pre">long</span></code>, converting
 the first (left) operand to <code class="docutils literal"><span class="pre">long</span></code>, so all the later left-to-right
 operations are forced to be <code class="docutils literal"><span class="pre">long</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">n</span><span class="p">*(</span><span class="n">n</span><span class="p">+</span><span class="m">1</span><span class="p">)/</span><span class="m">2</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>You can try example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sum_to_n_long_quick/sum_to_n_long_quick.cs">sum_to_n_long_quick/sum_to_n_long_quick.cs</a>
@@ -1031,7 +1045,7 @@ to finally get a result that is dependably fast and correct.</p>
 Knowing this in theory is not the same as remembering it in practice!</li>
 </ul>
 <p>Further special syntax that only makes sense in any kind of loop is discussed in
-<a class="reference internal" href="../for/forstatements.html#break-continue"><span>Break and Continue</span></a>, after we introduce the last kind of loop.</p>
+<a class="reference internal" href="../for/forstatements.html#break-continue"><span class="std std-ref">Break and Continue</span></a>, after we introduce the last kind of loop.</p>
 </div>
 </div>
 
@@ -1048,7 +1062,7 @@ Knowing this in theory is not the same as remembering it in practice!</li>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

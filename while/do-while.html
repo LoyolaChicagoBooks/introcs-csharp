@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6.9. Do-While Loops &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>6.9. Do-While Loops &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="6. While Loops" href="while.html" />
     <link rel="next" title="6.10. Number Guessing Game Lab" href="lab-number-game.html" />
@@ -143,7 +145,7 @@
 <li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcdexamples.html">6.8. Greatest Common Divisor</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.9. Do-While Loops</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.9. Do-While Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
 </ul>
@@ -315,7 +317,7 @@
 right triangle.  If they do not make a right triangle, say so
 and make the user try again.</p>
 <p>One way to look at the while statement rubric is:</p>
-<div class="highlight-none"><div class="highlight"><pre>set data for condition
+<div class="highlight-none"><div class="highlight"><pre><span></span>set data for condition
 while (condition) {
    accomplish something
    set data for condition
@@ -328,7 +330,7 @@ and the condition to test is fairly simple.   (In any case the condition
 could be calculated in a function.)</p>
 <p>A <code class="docutils literal"><span class="pre">do</span></code>-<code class="docutils literal"><span class="pre">while</span></code> loop will help here.  It tests the condition at the end of the
 loop, so there is no need to gather data before the loop:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
 <span class="k">do</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Think of integer sides for a right triangle.&quot;</span><span class="p">);</span>
     <span class="n">a</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Enter integer leg: &quot;</span><span class="p">);</span>
@@ -355,14 +357,14 @@ after the loop body is true.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">A <code class="docutils literal"><span class="pre">do</span></code>-<code class="docutils literal"><span class="pre">while</span></code> loop is the <em>one</em> place where you <em>do</em> want a semicolon
 right after a condition, unlike the places mentioned in
-<a class="reference internal" href="../decisions/ifpitfalls.html#dangerous-semicolon"><span>Dangerous Semicolon</span></a>.  At least if you omit it here you
+<a class="reference internal" href="../decisions/ifpitfalls.html#dangerous-semicolon"><span class="std std-ref">Dangerous Semicolon</span></a>.  At least if you omit it here you
 are likely to get a compiler error rather than a difficult logical
 bug.</p>
 </div>
 <p>A <code class="docutils literal"><span class="pre">do</span></code>-<code class="docutils literal"><span class="pre">while</span></code> loop, like the example above,
 can accomplish exactly the same thing as the <code class="docutils literal"><span class="pre">while</span></code>
 loop rubric at the beginning of this section.  It has the general form:</p>
-<div class="highlight-none"><div class="highlight"><pre>do {
+<div class="highlight-none"><div class="highlight"><pre><span></span>do {
    set data for condition
    if (condition) {
        accomplish something
@@ -395,7 +397,7 @@ for the first payment)</li>
 </ul>
 <p>Continuing the example above, the whole table
 would look like:</p>
-<div class="highlight-none"><div class="highlight"><pre>Number Principal   Interest    Payment
+<div class="highlight-none"><div class="highlight"><pre><span></span>Number Principal   Interest    Payment
      1    100.00      10.00      20.00
      2     90.00       9.00      20.00
      3     79.00       7.90      20.00
@@ -410,7 +412,7 @@ would look like:</p>
 off the loan.</p>
 <p>Similarly, with a $1000.00 starting loan, 5% interest per pay period, and
 $196 payments due, we would get</p>
-<div class="highlight-none"><div class="highlight"><pre>Number Principal   Interest    Payment
+<div class="highlight-none"><div class="highlight"><pre><span></span>Number Principal   Interest    Payment
      1   1000.00      50.00     196.00
      2    854.00      42.70     196.00
      3    700.70      35.04     196.00
@@ -424,7 +426,7 @@ $196 payments due, we would get</p>
 initial amount, and the loan would never be paid off.</p>
 <p>There are a couple of wrinkles here:  <code class="docutils literal"><span class="pre">double</span></code> values do not hold decimal
 values exactly.  The <code class="docutils literal"><span class="pre">decimal</span></code> type does hold decimal numbers exactly
-(and in an enormous range, see <a class="reference internal" href="../data/types-and-conversions.html#numeric-type-limits"><span>Numeric Types and  Limits</span></a>) and
+(and in an enormous range, see <a class="reference internal" href="../data/types-and-conversions.html#numeric-type-limits"><span class="std std-ref">Numeric Types and  Limits</span></a>) and
 hence are beter for monetary calculations.  Decimal literals end with m, like
 <code class="docutils literal"><span class="pre">34.56m</span></code> for <em>exactly</em> 34.56.</p>
 <p>Though decimals are exact, money only has two decimal places.  We make the
@@ -433,7 +435,7 @@ principal*rate, rounded
 to two decimal places:  <code class="docutils literal"><span class="pre">Math.Round(principal*rate,</span> <span class="pre">2)</span></code>.</p>
 <p>Write <code class="file docutils literal"><span class="pre">loan_calc.cs`</span></code>, completing <code class="docutils literal"><span class="pre">LoanTable</span></code> and write a
 <code class="docutils literal"><span class="pre">Main</span></code> testing program:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print a loan table, showing payment number, principal at the</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print a loan table, showing payment number, principal at the</span>
 <span class="c1">/// beginning of the payment period, interest over the period, and</span>
 <span class="c1">/// payment at the end of the period.</span>
 <span class="c1">/// The principal is the initial amount of the loan.</span>
@@ -449,7 +451,7 @@ even though it does not represent money.
 That is important, because arithmetic with a <code class="docutils literal"><span class="pre">decimal</span></code> and a <code class="docutils literal"><span class="pre">double</span></code> is
 forbidden:  A <code class="docutils literal"><span class="pre">double</span></code> would have to be explicitly cast to a <code class="docutils literal"><span class="pre">decimal</span></code>.
 Insisting on <code class="docutils literal"><span class="pre">decimal</span></code> parameter simplifies the function code.</p>
-<p>This exercise is much more sophisticated than the <a class="reference internal" href="whileexamples.html#savings-exercise"><span>Savings Exercise</span></a>,
+<p>This exercise is much more sophisticated than the <a class="reference internal" href="whileexamples.html#savings-exercise"><span class="std std-ref">Savings Exercise</span></a>,
 so it is placed in this section, much later in the chapter.  Use what
 ever form of loop makes the most sense to you.</p>
 </div>
@@ -468,7 +470,7 @@ ever form of loop makes the most sense to you.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

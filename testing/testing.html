@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>14. Testing &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>14. Testing &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="next" title="15. Interfaces" href="../interfaces/interfaces.html" />
     <link rel="prev" title="13.7. Chapter Review Questions" href="../classes/reviewclasses.html" />
@@ -208,7 +210,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">14. Testing</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Testing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#assertions">14.1. Assertions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#attributes">14.2. Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#testing-the-constructor">14.3. Testing the Constructor</a></li>
@@ -404,7 +406,7 @@ fractions into properly initialized (and reduced) rational numbers.</li>
 13
 14
 15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="na">      [Test()]</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">ConstructorTest</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="n">Rational</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">);</span>
@@ -432,7 +434,7 @@ of 5, 5, 5, and 1, respectively.</p>
 </li>
 <li><p class="first">As you can observe from the code, we perform basic assertion testing to ensure that
 the numerators and denominators are what we expect. For example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetNumerator</span><span class="p">()</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">GetNumerator</span><span class="p">()</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Tests whether the newly minted rational number, Rational(3, 5), actually has the
@@ -455,7 +457,7 @@ at how the rest of our testing is done.</p>
 6
 7
 8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="na">      [Test()]</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">BasicComparisonTests</span><span class="p">()</span> <span class="p">{</span>
          <span class="n">Rational</span> <span class="n">r1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(-</span><span class="m">3</span><span class="p">,</span> <span class="m">6</span><span class="p">);</span>
          <span class="n">Rational</span> <span class="n">r2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">);</span>
@@ -504,7 +506,7 @@ an <em>expected result</em> (e.g. 1/4 + 2/4 == 3/4).</p>
 21
 22
 23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="na">      [Test()]</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">BasicArithmeticTests</span><span class="p">()</span> <span class="p">{</span>
          <span class="n">Rational</span> <span class="n">r</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">;</span>
          <span class="n">r1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">47</span><span class="p">,</span> <span class="m">64</span><span class="p">);</span>
@@ -540,7 +542,7 @@ method to add the two rational numbers and then test whether the result of the a
 is equal to the <em>known</em> answer of 36/64.</p>
 <p>As you can observe by looking at the code, the magic occurs by checking whether the
 <em>computed</em> result matches the <em>constructed</em> result:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">36</span><span class="p">,</span> <span class="m">64</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">36</span><span class="p">,</span> <span class="m">64</span><span class="p">))</span> <span class="p">==</span> <span class="m">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Because we have <em>separately</em> tested the constructor and comparison methods, we can
@@ -572,7 +574,7 @@ minimal explanation as they are in many ways variations on the theme.</p>
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="na">      [Test()]</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">ConversionTests</span><span class="p">()</span> <span class="p">{</span>
          <span class="n">Rational</span> <span class="n">r1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">6</span><span class="p">);</span>
          <span class="n">Rational</span> <span class="n">r2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(-</span><span class="m">3</span><span class="p">,</span> <span class="m">6</span><span class="p">);</span>
@@ -606,7 +608,7 @@ representations.</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span class="na">      [Test()]</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="na">      [Test()]</span>
       <span class="k">public</span> <span class="k">void</span> <span class="nf">ParseTest</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="n">Rational</span> <span class="n">r</span><span class="p">;</span>
@@ -683,7 +685,7 @@ Remember the necessary library reference and try it out.</p>
 </div>
 <div class="section" id="grade-file-nunit-test-exercise">
 <span id="index-5"></span><h3>14.8.2. Grade File NUnit Test Exercise<a class="headerlink" href="#grade-file-nunit-test-exercise" title="Permalink to this headline">¶</a></h3>
-<p>Add a testing class using NUnit to <a class="reference internal" href="../appendix/hw-gradefiles.html#hw-gradefiles"><span>Homework: Grade File</span></a>.
+<p>Add a testing class using NUnit to <a class="reference internal" href="../appendix/hw-gradefiles.html#hw-gradefiles"><span class="std std-ref">Homework: Grade File</span></a>.
 Remember the necessary library reference.
 Sample data files and files for testing the results
 are included in the project.  Just test
@@ -706,7 +708,7 @@ Test with both comp170 and comp150.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

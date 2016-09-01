@@ -26,7 +26,7 @@ look up the character at each index of a given string ``s``::
 
 	int i = 0;
 	while (i < s.Length) {
-	   use value of s[i]...
+	   code using the value of s[i]...
 	   i++;
 	}
 
@@ -90,13 +90,14 @@ See the advantages of ``foreach`` in these examples:
 
 - They are more concise than the indexing versions.
 - They keep the emphasis on the characters, not the secondary indices.
-- The ``foreach`` heading emphasizes that a particular sequence is being 
+- The ``foreach`` heading emphasizes that an entire particular sequence is being 
   processed.
 
 .. warning::  
    
    *If* you have explicit need to refer to the indices of the items in the sequence,
-   then a ``foreach`` statement does not work.  
+   then a ``foreach`` statement does not work.  Also a ``foreach`` loop supplies the items in 
+   a specific order; if you need a different order, it will not work.
    
 Of course you can refer to the indices of items in  sequence with a flexible 
 ``while`` loop, or see :ref:`For-Loops`, coming soon....

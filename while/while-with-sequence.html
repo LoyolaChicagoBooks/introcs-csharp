@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6.2. While-Statements with Sequences &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>6.2. While-Statements with Sequences &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="6. While Loops" href="while.html" />
     <link rel="next" title="6.3. Interactive while Loops" href="whileinteractive.html" />
@@ -136,7 +138,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="while.html">6. While Loops</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.2. While-Statements with Sequences</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.2. While-Statements with Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
@@ -326,12 +328,12 @@
 the only collection we have discussed is a string - a sequence of
 characters that we can index.</p>
 <span class="target" id="onecharperline"></span><p id="index-1">Consider the following silly function description and heading as a start:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Print the characters of s, one per line.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Print the characters of s, one per line.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">OneCharPerLine(&quot;bug&quot;)</span></code> would print:</p>
-<div class="highlight-none"><div class="highlight"><pre>b
+<div class="highlight-none"><div class="highlight"><pre><span></span>b
 u
 g
 </pre></div>
@@ -344,7 +346,7 @@ with three explicit print statements, but we are looking to write a general
 definition for an arbitrary length string:
 This requires a loop.
 For now our only option is a <code class="docutils literal"><span class="pre">while</span></code> loop.  We can follow our basic
-<a class="reference internal" href="whilestatements.html#loop-rubric"><span>loop planning rubric</span></a>,
+<a class="reference internal" href="whilestatements.html#loop-rubric"><span class="std std-ref">loop planning rubric</span></a>,
 one step at a time:
 The index is changing in a simple repetitive sequence.
 We can call the
@@ -357,28 +359,28 @@ character is the length - 1, or with our parameter <code class="docutils literal
 The <code class="docutils literal"><span class="pre">while</span></code> loop condition needs to allow indices through
 <code class="docutils literal"><span class="pre">s.Length</span> <span class="pre">-</span> <span class="pre">1</span></code>.  We could write a condition with <code class="docutils literal"><span class="pre">&lt;=</span></code> or more
 concisely:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
 <p>In the body of the loop, the main thing is to print the next character,
 and the next character is <code class="docutils literal"><span class="pre">s[i]</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 </pre></div>
 </div>
 <p id="index-2">We also need to remember the part to get ready for the next time
 through the loop.  We have dealt with regular sequence of values
 before.  We change <code class="docutils literal"><span class="pre">i</span></code> with:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="m">1</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="m">1</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This change is so common, there is a simpler syntax:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">i</span><span class="p">++;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span><span class="p">++;</span>
 </pre></div>
 </div>
 <p>This increases the value of the numeric variable i by 1.
 (The reverse is <code class="docutils literal"><span class="pre">i--;</span></code>) <a class="footnote-reference" href="#plusplustype" id="id1">[1]</a></p>
 <p>So all together:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">// Print the characters of s, one per line.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">// Print the characters of s, one per line.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">OneCharPerLine</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -396,7 +398,7 @@ not just print it.</p>
 <div class="section" id="string-backwards-exercise-example">
 <span id="reversed-print-example"></span><span id="index-3"></span><h3>6.2.1.1. String Backwards Exercise/Example<a class="headerlink" href="#string-backwards-exercise-example" title="Permalink to this headline">¶</a></h3>
 <p>Here is a variation:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print s in reverse order; no extra newlines</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print s in reverse order; no extra newlines</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintReversed</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -418,12 +420,12 @@ notation.)</li>
 <div class="section" id="print-vowels-function">
 <span id="printvowels"></span><span id="index-4"></span><h2>6.2.2. Print Vowels Function<a class="headerlink" href="#print-vowels-function" title="Permalink to this headline">¶</a></h2>
 <p>Let us get more complicated.  Consider the function described:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>For instance PrintVowels(&#8220;computer&#8221;) would print:</p>
-<div class="highlight-none"><div class="highlight"><pre>o
+<div class="highlight-none"><div class="highlight"><pre><span></span>o
 u
 e
 </pre></div>
@@ -438,7 +440,7 @@ eyes let you just grab the vowels easily, but think, what is actually
 happening?  You are checking each character to see <strong>if</strong> it is a vowel,
 and printing it if it is:  You are doing the same thing each time -
 <em>testing</em> <strong>if</strong> the character is a vowel.  The pseudocode is</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">is</span> <span class="n">a</span> <span class="n">vowel</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">is</span> <span class="n">a</span> <span class="n">vowel</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">print</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
@@ -448,7 +450,7 @@ a <code class="docutils literal"><span class="pre">while</span></code> statement
 <p>Next task:  convert the pseudocode &#8220;s[i] is a vowel&#8221; to C#.</p>
 <p>There are multiple approaches.  The one you get by following your
 nose is just to consider all the cases where it is true:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;a&#39;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;a&#39;</span>
 <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;e&#39;</span>
 <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;i&#39;</span>
 <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;o&#39;</span>
@@ -457,7 +459,7 @@ nose is just to consider all the cases where it is true:</p>
 </div>
 <p>How do you combine them into a condition?
 The letter can be a <em>or</em> e <em>or</em> i <em>or</em> o <em>or</em> u.  We get the code:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -490,7 +492,7 @@ the string version of <code class="docutils literal"><span class="pre">s[i]</spa
 Only lowercase vowels are listed.  We could do something with
 <code class="docutils literal"><span class="pre">ToLower</span></code>, or just use the condition: <code class="docutils literal"><span class="pre">&quot;aeiouAEIOU&quot;.Contains(&quot;&quot;+s[i])</span></code></p>
 <p>This variation is in example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/vowels2/vowels2.cs">vowels2/vowels2.cs</a>.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print the vowels (aeiou) in s, one per line.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">PrintVowels</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -518,12 +520,12 @@ The integer codes for digits are sequential,
 and since characters are technically a kind of integer, we can
 compare:  The character <code class="docutils literal"><span class="pre">s[i]</span></code> is a digit if it is in the range from <code class="docutils literal"><span class="pre">'0'</span></code>
 to <code class="docutils literal"><span class="pre">'9'</span></code>, so the condition can be written:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="sc">&#39;0&#39;</span> <span class="p">&lt;=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;=</span> <span class="sc">&#39;9&#39;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="sc">&#39;0&#39;</span> <span class="p">&lt;=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;=</span> <span class="sc">&#39;9&#39;</span>
 </pre></div>
 </div>
 <p>Similarly  the condition <code class="docutils literal"><span class="pre">s[i]</span></code> is not a digit, can be written
-negating the compound condition as in <a class="reference internal" href="../decisions/compoundconditions.html#compound-boolean-expressions"><span>Compound Boolean Expressions</span></a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span>
+negating the compound condition as in <a class="reference internal" href="../decisions/compoundconditions.html#compound-boolean-expressions"><span class="std std-ref">Compound Boolean Expressions</span></a>:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span>
 </pre></div>
 </div>
 <p>If you think of going through by hand and checking,
@@ -531,21 +533,21 @@ you would check through the
 characters sequentially and if you find a non-digit,
 you would want to <em>remember</em> that the string is not only digits.</p>
 <p>One way to do this is have a variable holding an answer so far:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">bool</span> <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Of course initially, you have not found any non-digits, so it starts off true.
 As you go through
 the string, you want to make sure that answer is changed to <code class="docutils literal"><span class="pre">false</span></code>
 if a non-digit is encountered:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="sc">&#39;0&#39;</span> <span class="p">&gt;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="sc">&#39;0&#39;</span> <span class="p">&gt;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>When we get all the way through the string, the answer so far is the
 final answer to be returned:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return true if s contains one or more digits</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return true if s contains one or more digits</span>
 <span class="c1">/// and nothing else. Otherwise return false.</span>
 <span class="k">static</span> <span class="kt">bool</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
@@ -572,7 +574,7 @@ is false if the length is 0, and we could immediately set
 so it checks the length and chooses the right value for <code class="docutils literal"><span class="pre">allDigitsSoFar</span></code>,
 true or false. Since we are selecting between two values,
 an <code class="docutils literal"><span class="pre">if</span></code> statement should occur to you:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">bool</span> <span class="n">allDigitsSoFar</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">allDigitsSoFar</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
 <span class="p">}</span>
@@ -592,7 +594,7 @@ work.  Still, this code can be improved:</p>
 <p>See the symmetry: the value assigned to <code class="docutils literal"><span class="pre">allDigitsSoFar</span></code> is always
 the <em>value of the condition</em>.</p>
 <p>A <em>much</em> more concise and still equivalent initialization is just:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">bool</span> <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In more generality this
@@ -606,7 +608,7 @@ very low, lower than the comparison <code class="docutils literal"><span class="
 so the parentheses could be omitted.  We think the
 code is easier to read with the parentheses left in, as written above.</p>
 <p>The whole function would be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return true if s contains one or more digits</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return true if s contains one or more digits</span>
 <span class="c1">/// and nothing else. Otherwise return false.</span>
 <span class="k">static</span> <span class="n">Boolean</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
@@ -627,14 +629,14 @@ code is easier to read with the parentheses left in, as written above.</p>
 generating a Boolean value by a simple Boolean assignment.
 In the most recent sample code, there is an <code class="docutils literal"><span class="pre">if</span></code> statement setting a Boolean
 value:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>You might be tempted to replace this <code class="docutils literal"><span class="pre">if</span></code> statement by a simple Boolean
 assignment:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">);</span>  <span class="c1">// bad!</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">allDigitsSoFar</span> <span class="p">=</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">);</span>  <span class="c1">// bad!</span>
 </pre></div>
 </div>
 <p>Play computer with this change to see for yourself why it is bad, before
@@ -668,7 +670,7 @@ the simplest thing is to use the fact that a return statement
 <em>immediately terminates</em> the function (even if in a loop).</p>
 <p>Instead of setting a variable to <code class="docutils literal"><span class="pre">false</span></code> to <em>later</em> be returned,
 we can return right away, using the loop:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="p">{</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="p">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
    <span class="p">}</span>
@@ -685,7 +687,7 @@ Again we do <em>not</em> need an <code class="docutils literal"><span class="pre
 set the Boolean result.
 Look in the full
 code for the function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Return true if s contains one or more digits</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return true if s contains one or more digits</span>
 <span class="c1">/// and nothing else. Otherwise return false.</span>
 <span class="k">static</span> <span class="n">Boolean</span> <span class="nf">IsDigits</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
@@ -726,7 +728,7 @@ also using a sequence:</p>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">LoopSteps</span>
 <span class="p">{</span>
@@ -797,7 +799,7 @@ assigned to <code class="docutils literal"><span class="pre">c</span></code>.  S
 <tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><p class="first">The Boolean assignment did not work when <code class="docutils literal"><span class="pre">allDigitsSoFar</span></code> was already
 <code class="docutils literal"><span class="pre">false</span></code>, and the next character was a digit.  This could be fixed with
 a compound Boolean expression in the assignment:</p>
-<p><code class="docutils literal"><span class="pre">allDigitsSoFar</span> <span class="pre">=</span> <span class="pre">allDigitsSoFar</span>&nbsp; <span class="pre">&amp;&amp;</span> <span class="pre">(s[i]</span> <span class="pre">&lt;</span> <span class="pre">'0'</span> <span class="pre">||</span> <span class="pre">s[i]</span> <span class="pre">&gt;</span> <span class="pre">'9');</span></code></p>
+<p><code class="docutils literal"><span class="pre">allDigitsSoFar</span> <span class="pre">=</span> <span class="pre">allDigitsSoFar</span>&#160; <span class="pre">&amp;&amp;</span> <span class="pre">(s[i]</span> <span class="pre">&lt;</span> <span class="pre">'0'</span> <span class="pre">||</span> <span class="pre">s[i]</span> <span class="pre">&gt;</span> <span class="pre">'9');</span></code></p>
 <p class="last">This way, once <code class="docutils literal"><span class="pre">allDigitsSoFar</span></code> is <code class="docutils literal"><span class="pre">false</span></code>, it stays <code class="docutils literal"><span class="pre">false</span></code>.</p>
 </td></tr>
 </tbody>
@@ -806,7 +808,7 @@ a compound Boolean expression in the assignment:</p>
 <h3>6.2.4.1. Duplicate Character Exercise<a class="headerlink" href="#duplicate-character-exercise" title="Permalink to this headline">¶</a></h3>
 <p>Create a file <code class="docutils literal"><span class="pre">double_char_test.cs</span></code>,
 and write and test a function with the documentation and heading below:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// If two consecutive characters in s are the same, return true.</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// If two consecutive characters in s are the same, return true.</span>
 <span class="c1">/// Return false otherwise.  Examples:</span>
 <span class="c1">/// HasDoubleChar(&quot;bigfoot&quot;) and HasDoubleChar(&quot;aaah!&quot;) are true;</span>
 <span class="c1">/// HasDoubleChar(&quot;treated&quot;) and HasDoubleChar(&quot;haha!&quot;) are false.</span>
@@ -832,7 +834,7 @@ to make.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

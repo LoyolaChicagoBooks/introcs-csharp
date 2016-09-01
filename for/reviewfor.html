@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>8.4. Chapter Review Questions &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>8.4. Chapter Review Questions &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="8. For Loops" href="for.html" />
     <link rel="next" title="9. Files, Paths, and Directories" href="../files/files.html" />
@@ -158,7 +160,7 @@
 <li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">8.4. Chapter Review Questions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.4. Chapter Review Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
@@ -326,26 +328,26 @@ a <code class="docutils literal"><span class="pre">for</span></code> loop?</p>
 several variables?</p>
 </li>
 <li><p class="first">Rewrite</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">num</span> <span class="p">/=</span> <span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="p">/=</span> <span class="m">2</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>equivalently without the operand <code class="docutils literal"><span class="pre">/=</span></code>.</p>
 </li>
 <li><p class="first">Rewrite</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">bigName</span> <span class="p">=</span> <span class="n">bigName</span> <span class="p">-</span> <span class="m">10</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">bigName</span> <span class="p">=</span> <span class="n">bigName</span> <span class="p">-</span> <span class="m">10</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>with a statement that only includes <code class="docutils literal"><span class="pre">bigName</span></code> once.</p>
 </li>
 <li><p class="first">Distinguish the effects of these two statements:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">x</span><span class="p">-=</span><span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">-=</span><span class="m">2</span><span class="p">;</span>
 
 <span class="n">x</span><span class="p">=-</span><span class="m">2</span><span class="p">;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">What is printed?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;12345678&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;12345678&quot;</span><span class="p">);</span>
 <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">p</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">p</span> <span class="p">&lt;</span> <span class="m">6</span><span class="p">;</span> <span class="n">p</span><span class="p">++)</span> <span class="p">{</span>
     <span class="kt">string</span> <span class="n">formatStr</span> <span class="p">=</span> <span class="s">&quot;{0:F&quot;</span> <span class="p">+</span> <span class="n">p</span> <span class="p">+</span> <span class="s">&quot;}&quot;</span><span class="p">;</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">formatStr</span><span class="p">,</span> <span class="m">1.2345678</span><span class="p">);</span>
@@ -354,7 +356,7 @@ several variables?</p>
 </div>
 </li>
 <li><p class="first">What is printed?  (Just &#8221;,4&#8221; has been inserted.)</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;12345678&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;12345678&quot;</span><span class="p">);</span>
 <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">p</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">p</span> <span class="p">&lt;</span> <span class="m">6</span><span class="p">;</span> <span class="n">p</span><span class="p">++)</span> <span class="p">{</span>
     <span class="kt">string</span> <span class="n">formatStr</span> <span class="p">=</span> <span class="s">&quot;{0,4:F&quot;</span> <span class="p">+</span> <span class="n">p</span> <span class="p">+</span> <span class="s">&quot;}&quot;</span><span class="p">;</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">formatStr</span><span class="p">,</span> <span class="m">1.2345678</span><span class="p">);</span>
@@ -363,7 +365,7 @@ several variables?</p>
 </div>
 </li>
 <li><p class="first">What is printed?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;123456&quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;123456&quot;</span><span class="p">);</span>
 <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">w</span> <span class="p">=</span> <span class="m">6</span><span class="p">;</span> <span class="n">w</span> <span class="p">&gt;=</span> <span class="p">-</span><span class="m">6</span><span class="p">;</span> <span class="n">w</span> <span class="p">-=</span> <span class="m">4</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">string</span> <span class="n">formatStr</span> <span class="p">=</span> <span class="s">&quot;{0,&quot;</span> <span class="p">+</span> <span class="n">w</span> <span class="p">+</span> <span class="s">&quot;}|&quot;</span><span class="p">;</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">formatStr</span><span class="p">,</span> <span class="s">&quot;here&quot;</span><span class="p">);</span>
@@ -387,7 +389,7 @@ several variables?</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

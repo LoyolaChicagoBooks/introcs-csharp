@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>9.7. Command Line Execution &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>9.7. Command Line Execution &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="9. Files, Paths, and Directories" href="files.html" />
     <link rel="next" title="9.8. FIO Helper Class" href="fio.html" />
@@ -168,7 +170,7 @@
 <li class="toctree-l2"><a class="reference internal" href="paths.html">9.4. Path Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dir-file.html">9.5. Directory Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dir-file.html#file-class">9.6. File Class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">9.7. Command Line Execution</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.7. Command Line Execution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fio.html">9.8. FIO Helper Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewfiles.html">9.9. Chapter Review Questions</a></li>
 </ul>
@@ -312,7 +314,7 @@
 between operating systems
 with its <code class="docutils literal"><span class="pre">File</span></code>, <code class="docutils literal"><span class="pre">Path</span></code>, and <code class="docutils literal"><span class="pre">Directory</span></code> classes.</p>
 <p>If you leave Xamarin Studio and go to the command line as described in
-<a class="reference internal" href="../appendix/cmdline.html#commandline"><span>Command Line Introduction</span></a>, then you are exposed to the differences
+<a class="reference internal" href="../appendix/cmdline.html#commandline"><span class="std std-ref">Command Line Introduction</span></a>, then you are exposed to the differences
 between the operating systems.  <em>Look over that section.</em></p>
 <p>Thus far we have let Xamarin Studio hide what actually is happening when
 you execute a program.  The natural environment for the text-based programs
@@ -323,7 +325,7 @@ We need to get outside of Xamarin Studio.</p>
 from inside Xamarin Studio.</li>
 <li>Open a terminal on a Mac or a Mono Command Prompt console in Windows.</li>
 <li>Following the
-<a class="reference internal" href="../appendix/cmdline.html#commandline"><span>Command Line Introduction</span></a>,
+<a class="reference internal" href="../appendix/cmdline.html#commandline"><span class="std std-ref">Command Line Introduction</span></a>,
 change the current directory to the addition1 example project directory.</li>
 <li>Enter the command to list the directory (<code class="docutils literal"><span class="pre">dir</span></code> in Windows; <code class="docutils literal"><span class="pre">ls</span></code> on a Mac).</li>
 <li>You should see <code class="docutils literal"><span class="pre">addition1.cs</span></code> but
@@ -337,14 +339,14 @@ without using Xamarin Studio.
 Continue with the same terminal/console window:</p>
 <ol class="arabic">
 <li><p class="first">Try the command</p>
-<div class="highlight-none"><div class="highlight"><pre>mono addition1.exe
+<div class="highlight-none"><div class="highlight"><pre><span></span>mono addition1.exe
 </pre></div>
 </div>
 <p>You should get an error message, because <code class="docutils literal"><span class="pre">addition1.exe</span></code> is not in the current
 directory.</p>
 </li>
 <li><p class="first">Enter the command</p>
-<div class="highlight-none"><div class="highlight"><pre>mcs addition1.cs
+<div class="highlight-none"><div class="highlight"><pre><span></span>mcs addition1.cs
 </pre></div>
 </div>
 <p>This is the Mono system compiler, building from the source code.</p>
@@ -353,7 +355,7 @@ directory.</p>
 <code class="docutils literal"><span class="pre">addition1.exe</span></code>, created by the compiler.</p>
 </li>
 <li><p class="first">Try the command again:</p>
-<div class="highlight-none"><div class="highlight"><pre>mono addition1.exe
+<div class="highlight-none"><div class="highlight"><pre><span></span>mono addition1.exe
 </pre></div>
 </div>
 <p>Note that no new terminal window popped up and later disappeared -
@@ -368,7 +370,7 @@ You can just enter the command <code class="docutils literal"><span class="pre">
 uses the library class UIF.  Continue with the same terminal/console window:</p>
 <ol class="arabic">
 <li><p class="first">Enter the commands:</p>
-<div class="highlight-none"><div class="highlight"><pre>cd ../addition3
+<div class="highlight-none"><div class="highlight"><pre><span></span>cd ../addition3
 mcs addition3.cs
 </pre></div>
 </div>
@@ -377,18 +379,18 @@ You should get an error about missing the UIF class. The mcs program
 does not know about the information Xamarin Studio keeps in its references.</p>
 </li>
 <li><p class="first">Extend the command to also give the location of the library file:</p>
-<div class="highlight-none"><div class="highlight"><pre>mcs addition3.cs ../ui/uif.cs
+<div class="highlight-none"><div class="highlight"><pre><span></span>mcs addition3.cs ../ui/uif.cs
 </pre></div>
 </div>
 <p>That should work, now referring to both needed files.</p>
 </li>
 <li><p class="first">Enter the command</p>
-<div class="highlight-none"><div class="highlight"><pre>mono addition3.exe
+<div class="highlight-none"><div class="highlight"><pre><span></span>mono addition3.exe
 </pre></div>
 </div>
 </li>
 <li><p class="first">Now let us try a project where we read a file.  Enter command</p>
-<div class="highlight-none"><div class="highlight"><pre>cd ../sum_file
+<div class="highlight-none"><div class="highlight"><pre><span></span>cd ../sum_file
 </pre></div>
 </div>
 </li>
@@ -402,14 +404,14 @@ main project directory.  Erase <code class="file docutils literal"><span class="
 You can list the directory again to check that you did it.</p>
 </li>
 <li><p class="first">Now enter the command</p>
-<div class="highlight-none"><div class="highlight"><pre>mcs sum_file.cs
+<div class="highlight-none"><div class="highlight"><pre><span></span>mcs sum_file.cs
 </pre></div>
 </div>
 </li>
 <li><p class="first">List the directory again - <code class="file docutils literal"><span class="pre">sum_file.exe</span></code> has been created again.</p>
 </li>
 <li><p class="first">Now enter the command</p>
-<div class="highlight-none"><div class="highlight"><pre>mono sum_file.exe
+<div class="highlight-none"><div class="highlight"><pre><span></span>mono sum_file.exe
 </pre></div>
 </div>
 <p>As the program runs, remember the file
@@ -449,7 +451,7 @@ One example is NAnt, which comes with Mono.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

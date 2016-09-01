@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.14. Lab: Division Sentences &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>2.14. Lab: Division Sentences &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="2. C# Data and Operations" href="data.html" />
     <link rel="next" title="2.15. Chapter Review Questions" href="reviewdataop.html" />
@@ -94,7 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.14. Lab: Division Sentences</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.14. Lab: Division Sentences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewdataop.html">2.15. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -331,11 +333,11 @@ access to storage and peripherals, such as consoles (graphical displays),
 printers, and the network. We already got a glimpse of this access
 when we explored <code class="docutils literal"><span class="pre">Console.WriteLine</span></code> in the first lab exercise.</p>
 <p>We have discussed all the syntax and concepts needed in recent sections
-on <a class="reference internal" href="arithmetic.html#arithmetic"><span>Arithmetic</span></a>, <a class="reference internal" href="variables.html#variables-and-assignment"><span>Variables and Assignment</span></a>,
-<a class="reference internal" href="io.html#io"><span>Combining Input and Output</span></a>, and <a class="reference internal" href="types-and-conversions.html#cast"><span>Casting</span></a>.  Also you can make things easier for yourself using
-<a class="reference internal" href="writeline-substitution.html#substitution-in-writeline"><span>Substitutions in Console.WriteLine</span></a> to format output.</p>
+on <a class="reference internal" href="arithmetic.html#arithmetic"><span class="std std-ref">Arithmetic</span></a>, <a class="reference internal" href="variables.html#variables-and-assignment"><span class="std std-ref">Variables and Assignment</span></a>,
+<a class="reference internal" href="io.html#io"><span class="std std-ref">Combining Input and Output</span></a>, and <a class="reference internal" href="types-and-conversions.html#cast"><span class="std std-ref">Casting</span></a>.  Also you can make things easier for yourself using
+<a class="reference internal" href="writeline-substitution.html#substitution-in-writeline"><span class="std std-ref">Substitutions in Console.WriteLine</span></a> to format output.</p>
 <p>Before writing your final program, you might like to review some of
-the parts, testing in the <a class="reference internal" href="arithmetic.html#csharp"><span>Csharp</span></a> program, so you get immediate feedback
+the parts, testing in the <a class="reference internal" href="arithmetic.html#csharp"><span class="std std-ref">Csharp</span></a> program, so you get immediate feedback
 for the calculations.</p>
 </div>
 <div class="section" id="requirements">
@@ -352,7 +354,7 @@ remainder of 2 = 2 2/4).</li>
 </ul>
 <p>Your final program should work as in this sample run, and use the same
 labeled format:</p>
-<div class="highlight-none"><div class="highlight"><pre>Please enter the numerator? 14
+<div class="highlight-none"><div class="highlight"><pre><span></span>Please enter the numerator? 14
 Please enter the denominator? 4
 Integer division result = 3 with a remainder 2
 Floating point division result = 3.5
@@ -362,16 +364,16 @@ The result as a mixed fraction is 3 2/4.
 <p>For this lab the example format <code class="docutils literal"><span class="pre">3</span> <span class="pre">2/4</span></code> is sufficient.
 It would look better as <code class="docutils literal"><span class="pre">3</span> <span class="pre">1/2</span></code>, but a general
 efficient way to reduce fractions to
-lowest terms is not covered until the section on the algorithm <a class="reference internal" href="../while/gcdexamples.html#gcd"><span>Greatest Common Divisor</span></a>.</p>
+lowest terms is not covered until the section on the algorithm <a class="reference internal" href="../while/gcdexamples.html#gcd"><span class="std std-ref">Greatest Common Divisor</span></a>.</p>
 <p>To do the part requiring a decimal quotient you are going to need to have a
 <code class="docutils literal"><span class="pre">double</span></code> value, though your original data was of type <code class="docutils literal"><span class="pre">int</span></code>.
-You could use the approach in <a class="reference internal" href="types-and-conversions.html#cast"><span>Casting</span></a>, with an explicit cast.
+You could use the approach in <a class="reference internal" href="types-and-conversions.html#cast"><span class="std std-ref">Casting</span></a>, with an explicit cast.
 Another approach mentioned in that section was to do the cast implicitly
 in a <code class="docutils literal"><span class="pre">double</span></code> declaration with initialization from an <code class="docutils literal"><span class="pre">int</span></code>.  If we
 already had <code class="docutils literal"><span class="pre">int</span></code> variables, <code class="docutils literal"><span class="pre">numerator</span></code> and
 <code class="docutils literal"><span class="pre">denominator</span></code>, that were previously assigned their values,
 we could use:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">double</span> <span class="n">numeratorDouble</span> <span class="p">=</span> <span class="n">numerator</span><span class="p">;</span> <span class="c1">// implicit cast</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">numeratorDouble</span> <span class="p">=</span> <span class="n">numerator</span><span class="p">;</span> <span class="c1">// implicit cast</span>
 <span class="kt">double</span> <span class="n">quotientDouble</span> <span class="p">=</span> <span class="n">numeratorDouble</span><span class="p">/</span><span class="n">denominator</span><span class="p">;</span>
 <span class="p">...</span>
 </pre></div>
@@ -383,7 +385,7 @@ get started with your program code,
 we provided this simple <em>stub</em> in the example file
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/do_the_math_stub/do_the_math.cs">do_the_math_stub/do_the_math.cs</a>.
 You are encouraged to copy this into your own project as reviewed
-after the lab in <a class="reference internal" href="#xamarinstudio-reminders"><span>Xamarin Studio Reminders and Fixes</span></a>.</p>
+after the lab in <a class="reference internal" href="#xamarinstudio-reminders"><span class="std std-ref">Xamarin Studio Reminders and Fixes</span></a>.</p>
 <p id="index-1">The body of <code class="docutils literal"><span class="pre">Main</span></code> presently contains only <em>comments</em>, skipped by the compiler.
 We illustrate two forms (being inconsistent for your information only):</p>
 <ul class="simple">
@@ -392,7 +394,7 @@ We illustrate two forms (being inconsistent for your information only):</p>
 </ul>
 <p>Save the stub in a project of
 your own and replace the comments with your code to complete it:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">DoTheMath</span> <span class="p">{</span>   <span class="c1">// Lab stub</span>
    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> <span class="p">{</span>
@@ -501,7 +503,7 @@ select Pads, and then select Solution.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

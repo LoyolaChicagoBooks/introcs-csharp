@@ -1,3 +1,9 @@
+commit d3759ef738b381b13700ebd8c6b140d49da0b6b7
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Thu Sep 1 14:58:59 2016 -0500
+
+    xamarin pic out of date; small edits
+
 commit c7647a1db1d659ff1f26455d606dbad95bdc4bdc
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sun Jan 24 18:49:16 2016 -0600
@@ -21,9 +27,3 @@ Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sat Jan 23 21:55:16 2016 -0600
 
     traceback typos
-
-commit e6295c1aad9b5b7f3e7f045f574f00987fd07502
-Author: Andrew Harrington <aharrin@luc.edu>
-Date:   Sat Jan 23 21:34:16 2016 -0600
-
-    redid files ch, mostly dumping bin/Debug; also traceback section at end of functions

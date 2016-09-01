@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>10.5. Binary Searching &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>10.5. Binary Searching &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="10. Arrays" href="arrays.html" />
     <link rel="next" title="10.6. Lab: Arrays" href="lab-array1d.html" />
@@ -178,7 +180,7 @@
 <li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="searching.html">10.3. Linear Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">10.5. Binary Searching</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.5. Binary Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twodim.html">10.8. Multi-dimensional Arrays</a></li>
@@ -314,7 +316,7 @@
 <p>Binary search is an improvement over linear searching that works only
 if the data in the array are sorted beforehand.</p>
 <p>Suppose we have the following array data shown under the array indices:</p>
-<div class="highlight-none"><div class="highlight"><pre>10  20  30  40  50  60  70  80  90  100 115 125 135 145 155 178 198
+<div class="highlight-none"><div class="highlight"><pre><span></span>10  20  30  40  50  60  70  80  90  100 115 125 135 145 155 178 198
 </pre></div>
 </div>
 <p>Binary search works by keeping track of the midpoint (mid) and the minimum (min) and
@@ -323,7 +325,7 @@ maximum (max) index positions where the item <em>might be</em>.</p>
 We display the indices over the data being considered.
 Here min and max are the smallest and largest index to still consider.
 A textual explanation follows the visual:</p>
-<div class="highlight-none"><div class="highlight"><pre>   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+<div class="highlight-none"><div class="highlight"><pre><span></span>   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
   10  20  30  40  50  60  70  80  90 100 115 125 135 145 155 178 198
 min=0 max=16 mid=8
                                      100 115 125 135 145 155 178 198
@@ -366,7 +368,7 @@ in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/int
 13
 14
 15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">/// Return the index of item in a non-empty sorted array data,</span>
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">/// Return the index of item in a non-empty sorted array data,</span>
 <span class="c1">/// or return -1 if item is not in the array.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">IntArrayBinarySearch</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">item</span><span class="p">)</span>
 <span class="p">{</span>
@@ -434,7 +436,7 @@ It also references previous example projects: functions from files
 15
 16
 17
-18</pre></div></td><td class="code"><div class="highlight"><pre>   <span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span>   <span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
       <span class="s">&quot;Please enter some comma/space separated integers: &quot;</span><span class="p">);</span>
    <span class="kt">int</span><span class="p">[]</span> <span class="n">data</span> <span class="p">=</span> <span class="n">ExtractFromString</span><span class="p">.</span><span class="n">IntsFromString</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
    <span class="n">Sorting</span><span class="p">.</span><span class="n">IntArrayShellSortBetter</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
@@ -488,7 +490,7 @@ require any added loop.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

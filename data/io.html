@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.9. Combining Input and Output &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>2.9. Combining Input and Output &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="2. C# Data and Operations" href="data.html" />
     <link rel="next" title="2.10. String Special Cases" href="strings2.html" />
@@ -89,7 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="strings1.html">2.6. Strings, Part I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="print1.html">2.7. Writing to the Console</a></li>
 <li class="toctree-l2"><a class="reference internal" href="programstructure.html">2.8. C# Program Structure</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.9. Combining Input and Output</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.9. Combining Input and Output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="strings2.html">2.10. String Special Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="types-and-conversions.html">2.12. Value Types and Conversions</a></li>
@@ -325,7 +327,7 @@
 <p>If you want users to type something at the keyboard, you should let them know first!
 The jargon for this is to give them a <em>prompt</em>:  Instructions written to the screen,
 something like</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Enter your name: &quot;</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;Enter your name: &quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Then the user should respond.
@@ -347,12 +349,12 @@ This is the same as in normal use of functions in math.</p>
 <p>With any function producing a value,
 the value is <em>lost</em> unless it is <em>immediately</em> used.
 Often this is done by immediately assigning the value to a variable like in</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
 <span class="n">name</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>or in the shorter</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
 </pre></div>
 </div>
 <p id="index-1">Fine point:  Notice that in most operating systems you can edit and correct your line
@@ -369,7 +371,7 @@ Just for completeness we mention that you can read a raw single keystroke immedi
 <p>You may well want to have the user supply you with numbers.
 There is a complication.  Suppose you want to get numbers and add them.
 What happens with this code, in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/bad_sum/bad_sum.cs">bad_sum/bad_sum.cs</a>?</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">BadSum</span>
 <span class="p">{</span>
@@ -387,7 +389,7 @@ What happens with this code, in <a class="reference external" href="https://gith
 </pre></div>
 </div>
 <p>Here is a sample run:</p>
-<div class="highlight-none"><div class="highlight"><pre>Enter an integer: 23
+<div class="highlight-none"><div class="highlight"><pre><span></span>Enter an integer: 23
 Enter another integer: 9
 They add up to 239
 </pre></div>
@@ -401,7 +403,7 @@ that should be the characters in an <code class="docutils literal"><span class="
 produces the corresponding <code class="docutils literal"><span class="pre">int</span></code> value, like 123 or -25.
 In <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/good_sum/good_sum.cs">good_sum/good_sum.cs</a>, we changed the names to emphasize the type
 conversions:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">GoodSum</span>
 <span class="p">{</span>
@@ -428,7 +430,7 @@ but the corresponding <code class="docutils literal"><span class="pre">int</span
 and gets assigned to an <code class="docutils literal"><span class="pre">int</span></code> variable, <code class="docutils literal"><span class="pre">x</span></code>.</p>
 <p>Note that this would not work if the string represents the wrong kind of number,
 but there is an alternative:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; string s = &quot;34.5&quot;;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; string s = &quot;34.5&quot;;
 csharp&gt; int.Parse(s);
 System.FormatException: Input string was not in the correct format ....
 csharp&gt; double.Parse(s);
@@ -508,7 +510,7 @@ to keep the changes, because we will make additions and modifications to
 our source download, and we would not want you to overwrite any of
 your modified files after downloading a later version of the examples.</p>
 <p>If you do want to alter our code, we suggest you copy it to a project in your
-solution (&#8220;work&#8221;, discussed in the first lab in the <a class="reference internal" href="lab-edit-compile-run.html#steps"><span>Steps</span></a>).</p>
+solution (&#8220;work&#8221;, discussed in the first lab in the <a class="reference internal" href="lab-edit-compile-run.html#steps"><span class="std std-ref">Steps</span></a>).</p>
 <ol class="arabic simple">
 <li>Open your solution.</li>
 <li>Create a new project, maybe with the same name as the one we had.  If it was a
@@ -524,7 +526,7 @@ in the same parent folder as your work folder.)</li>
 Click to approve copy (as opposed to move or link).</li>
 <li>Now the desired files should appear in your project,
 along with the unfortunate default Program.cs.  If you have not already
-deleted Program.cs, as described in <a class="reference internal" href="lab-edit-compile-run.html#steps"><span>Steps</span></a>, do it now.</li>
+deleted Program.cs, as described in <a class="reference internal" href="lab-edit-compile-run.html#steps"><span class="std std-ref">Steps</span></a>, do it now.</li>
 <li>If you intended to copy everything for a project, test by running the project.
 Even our stub projects should compile, though a stub project may not do anything
 when you run it until you add your own code to it.  To make successful incremental
@@ -542,7 +544,7 @@ copying from a place that you had it before.</p>
 <span id="interviewproblem"></span><h3>2.9.5.1. Interview Exercise/Example<a class="headerlink" href="#interview-exercise-example" title="Permalink to this headline">¶</a></h3>
 <p>Write a program that prompts the user for a name (like Elliot)  and a time
 (like 10AM) and prints out a sentence like:</p>
-<div class="highlight-none"><div class="highlight"><pre>Elliot has an interview at 10AM.
+<div class="highlight-none"><div class="highlight"><pre><span></span>Elliot has an interview at 10AM.
 </pre></div>
 </div>
 <p>If you are having a hard time and want a further example,
@@ -561,10 +563,10 @@ similar format to <a class="reference external" href="https://github.com/LoyolaC
 <p>Write a program, <code class="docutils literal"><span class="pre">quotient.cs</span></code>, that
 prompts the user for two integers, and then prints them out in a
 sentence with an integer division problem like</p>
-<div class="highlight-none"><div class="highlight"><pre>The quotient of 14 and 3 is 4 with a remainder of 2.
+<div class="highlight-none"><div class="highlight"><pre><span></span>The quotient of 14 and 3 is 4 with a remainder of 2.
 </pre></div>
 </div>
-<p>Review <a class="reference internal" href="arithmetic.html#division-and-remainders"><span>Division and Remainders</span></a> if you forget the integer
+<p>Review <a class="reference internal" href="arithmetic.html#division-and-remainders"><span class="std std-ref">Division and Remainders</span></a> if you forget the integer
 division or remainder operator.</p>
 </div>
 </div>
@@ -583,7 +585,7 @@ division or remainder operator.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

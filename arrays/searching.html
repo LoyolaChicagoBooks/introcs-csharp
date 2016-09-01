@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>10.3. Linear Searching &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>10.3. Linear Searching &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="10. Arrays" href="arrays.html" />
     <link rel="next" title="10.4. Sorting Algorithms" href="sorting.html" />
@@ -176,7 +178,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="arrays.html">10. Arrays</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="onedim.html">10.1. One Dimensional Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="music.html">10.2. Musical Scales and Arrays</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">10.3. Linear Searching</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.3. Linear Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting.html">10.4. Sorting Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="binarysearching.html">10.5. Binary Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">10.6. Lab: Arrays</a></li>
@@ -333,7 +335,7 @@ array:</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">/// Return the index of the first position in data</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">/// Return the index of the first position in data</span>
 <span class="c1">/// where item appears, or -1 if item does not appear.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">IntArrayLinearSearch</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">item</span><span class="p">)</span>
 <span class="p">{</span>
@@ -379,7 +381,7 @@ something like the following:</li>
 13
 14
 15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">/// Return the first index &gt;= start in data where</span>
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">/// Return the first index &gt;= start in data where</span>
 <span class="c1">/// item appears, or -1 if item does not appear there.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">IntArrayLinearSearch</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">item</span><span class="p">,</span>
                                        <span class="kt">int</span> <span class="n">start</span><span class="p">)</span>
@@ -423,7 +425,7 @@ demonstrates how to use the linear search:</p>
 22
 23
 24
-25</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
+25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">input</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptLine</span><span class="p">(</span>
    <span class="s">&quot;Please enter integers, separated by spaces and/or comma: &quot;</span><span class="p">);</span>
 <span class="kt">int</span><span class="p">[]</span> <span class="n">data</span> <span class="p">=</span> <span class="n">ExtractFromString</span><span class="p">.</span><span class="n">IntsFromString</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
@@ -452,7 +454,7 @@ demonstrates how to use the linear search:</p>
 </td></tr></table></div>
 <p>In this example, we ask the user to enter all the data for the array
 on one line. To convert the string to an int array we
-use the result of the <a class="reference internal" href="onedim.html#intsfromstring-exercise"><span>IntsFromString Exercise</span></a> that we put in
+use the result of the <a class="reference internal" href="onedim.html#intsfromstring-exercise"><span class="std std-ref">IntsFromString Exercise</span></a> that we put in
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/searching/extract_from_string.cs">searching/extract_from_string.cs</a>.</p>
 <p>To allow easy termination of the testing loop, we do not use <code class="docutils literal"><span class="pre">PromptInt</span></code>
 for <code class="docutils literal"><span class="pre">searchItem</span></code>, because any
@@ -475,7 +477,7 @@ string as the response, and we test for that to terminate the loop.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

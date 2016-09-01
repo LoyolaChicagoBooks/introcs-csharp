@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>12.1. Dictionary Syntax &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>12.1. Dictionary Syntax &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="12. Dictionaries" href="dictionaries.html" />
     <link rel="next" title="12.2. Dictionary Efficiency" href="dictionaryefficiency.html" />
@@ -192,7 +194,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="dictionaries.html">12. Dictionaries</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">12.1. Dictionary Syntax</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">12.1. Dictionary Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionaryexamples.html">12.3. Dictionary Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
@@ -330,11 +332,11 @@ C# generalization, the possible types of key and value are much more extensive.
 Hence the generic <code class="docutils literal"><span class="pre">Dictionary</span></code> type requires you to specify
 both a type for the key and a type for the value.</p>
 <p>We can initialize an English-Spanish dictionary <code class="docutils literal"><span class="pre">e2sp</span></code> with</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">e2sp</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">e2sp</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;();</span>
 </pre></div>
 </div>
 <p>That is quite a mouthful!  The C# <code class="docutils literal"><span class="pre">var</span></code> syntax is handy to shorten it:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">e2sp</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">e2sp</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;();</span>
 </pre></div>
 </div>
 <p>The general generic type syntax is</p>
@@ -342,7 +344,7 @@ both a type for the key and a type for the value.</p>
 <div><code class="docutils literal"><span class="pre">Dictionary&lt;</span></code> <strong>keyType</strong><code class="docutils literal"><span class="pre">,</span></code> <strong>valueType</strong> <code class="docutils literal"><span class="pre">&gt;</span></code></div></blockquote>
 <p>If you are counting the number of repetitions of words in a document, you are likely to want
 a <code class="docutils literal"><span class="pre">Dictionary</span></code> mapping each word to its number of repetitions so far:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">var</span> <span class="n">wordCount</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;();</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">wordCount</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;();</span>
 </pre></div>
 </div>
 <p>If your friends all have a personal list of phone numbers, you might look them up
@@ -351,19 +353,19 @@ strings for the value.  The type could be <code class="docutils literal"><span c
 This example illustrates how one generic type can be built on another.</p>
 <p>There is no restriction on the value type.  There is one important technical
 restriction on the key type: it should be immutable. This has to do with the implementation
-referenced in <a class="reference internal" href="dictionaryefficiency.html#dictionary-efficiency"><span>Dictionary Efficiency</span></a>.</p>
+referenced in <a class="reference internal" href="dictionaryefficiency.html#dictionary-efficiency"><span class="std std-ref">Dictionary Efficiency</span></a>.</p>
 <p id="index-0">Similar to an array or <code class="docutils literal"><span class="pre">List</span></code>,
 you can assign and reference elements of a <code class="docutils literal"><span class="pre">Dictionary</span></code>,
 using square bracket notation.  The difference is that the reference is through a key,
 not a sequential index, as in:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">e2sp</span><span class="p">[</span><span class="s">&quot;one&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;uno&quot;</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">e2sp</span><span class="p">[</span><span class="s">&quot;one&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;uno&quot;</span><span class="p">;</span>
 <span class="n">e2sp</span><span class="p">[</span><span class="s">&quot;two&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;dos&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Csharp displays dictionaries in its own special form,
 as a sequence of pairs {key, value}.  Again, this is <em>special</em> to csharp.
 Here is a longer csharp sequence, broken up with our comments:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; Dictionary&lt;string, string&gt; e2sp = new Dictionary&lt;string, string&gt;();
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; Dictionary&lt;string, string&gt; e2sp = new Dictionary&lt;string, string&gt;();
 csharp&gt; e2sp;
 {}
 csharp&gt; e2sp[&quot;one&quot;] = &quot;uno&quot;;
@@ -380,7 +382,7 @@ uno, dos, tres...
 </div>
 <p id="index-1">If you want to iterate through a whole <code class="docutils literal"><span class="pre">Dictionary</span></code>, you will want the syntax below,
 with <code class="docutils literal"><span class="pre">foreach</span></code> and the property <code class="docutils literal"><span class="pre">Keys</span></code>:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; foreach (string s in e2sp.Keys) {
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; foreach (string s in e2sp.Keys) {
       &gt;    Console.WriteLine(s);
       &gt; }
 one
@@ -393,7 +395,7 @@ that you cannot depend on the order of processing with <code class="docutils lit
 implementation remembers the order in which keys were added.</p>
 <p id="index-2">It is often useful to know if a key is already in a <code class="docutils literal"><span class="pre">Dictionary</span></code>:
 Note the method <code class="docutils literal"><span class="pre">ContainsKey</span></code>:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; e2sp.ContainsKey(&quot;seven&quot;);
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; e2sp.ContainsKey(&quot;seven&quot;);
 false
 csharp&gt; e2sp.ContainsKey(&quot;three&quot;);
 true
@@ -401,7 +403,7 @@ true
 </div>
 <p>The method Remove takes a key as parameter.  Like a <code class="docutils literal"><span class="pre">List</span></code> and other
 collections, a <code class="docutils literal"><span class="pre">Dictionary</span></code> has a <code class="docutils literal"><span class="pre">Clear</span></code> method:</p>
-<div class="highlight-none"><div class="highlight"><pre>csharp&gt; e2sp.Count;
+<div class="highlight-none"><div class="highlight"><pre><span></span>csharp&gt; e2sp.Count;
 3
 csharp&gt; e2sp.Remove(&quot;two&quot;);
 true
@@ -427,7 +429,7 @@ csharp&gt; e2sp.Count;
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

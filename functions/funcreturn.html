@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3.5. Returned Function Values &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>3.5. Returned Function Values &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="3. Defining Functions of your Own" href="functions.html" />
     <link rel="next" title="3.6. Two Roles: Writer and Consumer of Functions" href="writerconsumer.html" />
@@ -103,7 +105,7 @@
 <li class="toctree-l2"><a class="reference internal" href="multfunc.html">3.2. Multiple Function Definitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="funcparam.html">3.3. Function Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="funcparam2.html">3.4. Multiple Function Parameters</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3.5. Returned Function Values</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.5. Returned Function Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="localscope.html">3.7. Local Scope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="staticvariables.html">3.8. Static Variables</a></li>
@@ -324,7 +326,7 @@ replaced during evaluation by the value of the function.</p>
 <p>The corresponding definition and examples in C# would be the
 following, taken from example program <code class="file docutils literal"><span class="pre">return1.cs</span></code>. <em>Read</em>
 <em>and run</em>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Return1</span>
 <span class="p">{</span>
@@ -356,27 +358,27 @@ meant nothing was returned.  The <code class="docutils literal"><span class="pre
 returned and its type is <code class="docutils literal"><span class="pre">int</span></code>.</p>
 <p>After the function <code class="docutils literal"><span class="pre">F</span></code>
 finishes executing from inside</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="m">3</span><span class="p">));</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="m">3</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>it is as if the statement temporarily became</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">9</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">9</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>and similarly when executing</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="m">3</span><span class="p">)</span> <span class="p">+</span> <span class="n">F</span><span class="p">(</span><span class="m">4</span><span class="p">));</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="m">3</span><span class="p">)</span> <span class="p">+</span> <span class="n">F</span><span class="p">(</span><span class="m">4</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>the interpreter first evaluates F(3) and effectively replaces the
 call by the returned result, 9, as if the statement temporarily
 became</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">9</span> <span class="p">+</span> <span class="n">F</span><span class="p">(</span><span class="m">4</span><span class="p">));</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">9</span> <span class="p">+</span> <span class="n">F</span><span class="p">(</span><span class="m">4</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>and then the interpreter evaluates F(4) and effectively replaces
 the call by the returned result, 16, as if the statement
 temporarily became</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">9</span> <span class="p">+</span> <span class="m">16</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">9</span> <span class="p">+</span> <span class="m">16</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>resulting finally in 25 being calculated and printed.</p>
@@ -400,7 +402,7 @@ statement. Read, follow, and run the example program
 14
 15
 16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Return2</span>
 <span class="p">{</span>
@@ -464,7 +466,7 @@ to have a function that just creates the sentence, and returns it for
 whatever further use you want.  After returning that value,
 printing is one possibility, done in
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/addition2/addition2.cs">addition2/addition2.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Addition2</span>
 <span class="p">{</span>
@@ -504,7 +506,7 @@ have the same form as for <code class="docutils literal"><span class="pre">Conso
 <em>returned</em>.</p>
 <p>Here is a revised version of the function <code class="docutils literal"><span class="pre">SumProblemString</span></code>,
 from example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/addition2a/addition2a.cs">addition2a/addition2a.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="kt">string</span> <span class="nf">SumProblemString</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// with string.Format</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">string</span> <span class="nf">SumProblemString</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// with string.Format</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span><span class="p">;</span>
    <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;The sum of {0} and {1} is {2}.&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
@@ -523,7 +525,7 @@ own project and modify it.</p>
 <div class="section" id="interview-string-return-exercise-example">
 <span id="interviewstringex"></span><h2>3.5.1. Interview String Return Exercise/Example<a class="headerlink" href="#interview-string-return-exercise-example" title="Permalink to this headline">¶</a></h2>
 <p>Write a program by that accomplishes the same thing as
-<a class="reference internal" href="../data/io.html#interviewproblem"><span>Interview Exercise/Example</span></a>, but introduce a function
+<a class="reference internal" href="../data/io.html#interviewproblem"><span class="std std-ref">Interview Exercise/Example</span></a>, but introduce a function
 <code class="docutils literal"><span class="pre">InterviewSentence</span></code> that takes name
 and time strings as parameters and returns the interview sentence string.
 For practice use <code class="docutils literal"><span class="pre">string.Format</span></code> in the function.
@@ -542,7 +544,7 @@ see our solution, <a class="reference external" href="https://github.com/LoyolaC
 <div class="section" id="quotient-string-return-exercise">
 <span id="quotientstringex"></span><h2>3.5.2. Quotient String Return Exercise<a class="headerlink" href="#quotient-string-return-exercise" title="Permalink to this headline">¶</a></h2>
 <p>Create <code class="file docutils literal"><span class="pre">quotient_return.cs</span></code> by modifying <code class="file docutils literal"><span class="pre">quotient_prob.cs</span></code> in
-<a class="reference internal" href="funcparam2.html#quotientfunctionex"><span>Quotient Function Exercise</span></a> so that the program accomplishes the same
+<a class="reference internal" href="funcparam2.html#quotientfunctionex"><span class="std std-ref">Quotient Function Exercise</span></a> so that the program accomplishes the same
 thing, but everywhere:</p>
 <ul class="simple">
 <li>Change the QuotientProblem function into one
@@ -568,7 +570,7 @@ the result of each call to the <code class="docutils literal"><span class="pre">
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

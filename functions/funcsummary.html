@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3.12. Static Function Summary &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>3.12. Static Function Summary &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="3. Defining Functions of your Own" href="functions.html" />
     <link rel="next" title="3.13. Chapter Review Questions" href="reviewfunc.html" />
@@ -110,7 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="notusereturn.html">3.9. Not using Return Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="libraryclass.html">3.10. Library Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="traceback.html">3.11. Tracebacks</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3.12. Static Function Summary</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.12. Static Function Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewfunc.html">3.13. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -315,7 +317,7 @@
   <div class="section" id="static-function-summary">
 <span id="index-0"></span><span id="id1"></span><h1>3.12. Static Function Summary<a class="headerlink" href="#static-function-summary" title="Permalink to this headline">¶</a></h1>
 <p>This chapter has introduced static functions:  those used in procedural programming
-as opposed to <a class="reference internal" href="../classes/a-first-class.html#instance-methods"><span>Instance Methods</span></a> used to
+as opposed to <a class="reference internal" href="../classes/a-first-class.html#instance-methods"><span class="std std-ref">Instance Methods</span></a> used to
 implement object-oriented programming.</p>
 <p>References in square brackets link to fully discussions of summary items below.</p>
 <div class="section" id="function-definition">
@@ -332,14 +334,14 @@ implement object-oriented programming.</p>
 </div>
 </li>
 <li><p class="first">The <em>formal parameter list</em> can be empty or contain one or more comma separated
-<em>formal parameter</em> entries.  [<a class="reference internal" href="funcparam.html#function-parameters"><span>Function Parameters</span></a>]
+<em>formal parameter</em> entries.  [<a class="reference internal" href="funcparam.html#function-parameters"><span class="std std-ref">Function Parameters</span></a>]
 Each formal parameter entry has the form</p>
 <blockquote>
 <div><p><strong>type</strong> <strong>parameterName</strong></p>
 </div></blockquote>
 </li>
 <li><p class="first">If the function is going to be called from outside its class, the heading needs
-to start with <code class="docutils literal"><span class="pre">public</span></code> before the <code class="docutils literal"><span class="pre">static</span></code>. [<a class="reference internal" href="libraryclass.html#library-classes"><span>Library Classes</span></a>]</p>
+to start with <code class="docutils literal"><span class="pre">public</span></code> before the <code class="docutils literal"><span class="pre">static</span></code>. [<a class="reference internal" href="libraryclass.html#library-classes"><span class="std std-ref">Library Classes</span></a>]</p>
 </li>
 <li><p class="first">If <strong>returnTypeOrVoid</strong> in the heading is not <code class="docutils literal"><span class="pre">void</span></code>, there must be a
 <em>return statement</em> in the function body.  A return statement has the form</p>
@@ -348,7 +350,7 @@ to start with <code class="docutils literal"><span class="pre">public</span></co
 </div></blockquote>
 <p>where the expression should be of the same type as in <strong>returnTypeOrVoid</strong>.
 Execution of the function terminates immediately when a return statement
-is reached. [<a class="reference internal" href="funcreturn.html#returned-function-values"><span>Returned Function Values</span></a>]</p>
+is reached. [<a class="reference internal" href="funcreturn.html#returned-function-values"><span class="std std-ref">Returned Function Values</span></a>]</p>
 </li>
 <li><p class="first">Execution of a program starts at a function with a heading including</p>
 <blockquote>
@@ -356,14 +358,14 @@ is reached. [<a class="reference internal" href="funcreturn.html#returned-functi
 </div></blockquote>
 <p>Thus far we have only discussed having an empty parameter list in the heading
 of the definition
-of <code class="docutils literal"><span class="pre">Main</span></code>, and we defer discussion of <a class="reference internal" href="../arrays/onedim.html#command-line-param"><span>Parameters to Main</span></a> until
-we have introduced <a class="reference internal" href="../arrays/onedim.html#one-dim-arrays"><span>One Dimensional Arrays</span></a>.</p>
+of <code class="docutils literal"><span class="pre">Main</span></code>, and we defer discussion of <a class="reference internal" href="../arrays/onedim.html#command-line-param"><span class="std std-ref">Parameters to Main</span></a> until
+we have introduced <a class="reference internal" href="../arrays/onedim.html#one-dim-arrays"><span class="std std-ref">One Dimensional Arrays</span></a>.</p>
 </li>
 <li><p class="first">There are various conventions for putting documentation just above the headings
 of function definitions.  The official format, specified by C# and recognized by
 Xamarin Studio, involves putting the function interface description on
 consecutive lines
-starting with <code class="docutils literal"><span class="pre">///</span></code>.  [<a class="reference internal" href="libraryclass.html#function-documentation"><span>Function Documentation</span></a>]</p>
+starting with <code class="docutils literal"><span class="pre">///</span></code>.  [<a class="reference internal" href="libraryclass.html#function-documentation"><span class="std std-ref">Function Documentation</span></a>]</p>
 </li>
 </ol>
 </div>
@@ -382,7 +384,7 @@ formal parameter variable the corresponding value from
 evaluating the actual parameter expression.
 In particular, that means the actual parameter values must be allowed
 in an assignment statement for a variable of the formal parameter&#8217;s type!
-[<a class="reference internal" href="funcparam2.html#more-func-param"><span>Multiple Function Parameters</span></a>]</p>
+[<a class="reference internal" href="funcparam2.html#more-func-param"><span class="std std-ref">Multiple Function Parameters</span></a>]</p>
 </li>
 <li><p class="first">If the function has return type <code class="docutils literal"><span class="pre">void</span></code>, it can only be used syntactically
 as an entire statement (with a semicolon added). After the function
@@ -393,11 +395,11 @@ an expression in the statement where is appears.
 The execution of such a function must reach a return statement.  The value
 of the function-call expression is the value of the expression in this
 return statement.
-[<a class="reference internal" href="funcreturn.html#returned-function-values"><span>Returned Function Values</span></a>]</p>
+[<a class="reference internal" href="funcreturn.html#returned-function-values"><span class="std std-ref">Returned Function Values</span></a>]</p>
 </li>
 <li><p class="first">A function with a return value can also legally be used as a whole statement.
 In this case the return value is lost.  Though legal, this is often an error!
-[<a class="reference internal" href="notusereturn.html#not-using-ret-val"><span>Not using Return Values</span></a>]</p>
+[<a class="reference internal" href="notusereturn.html#not-using-ret-val"><span class="std std-ref">Not using Return Values</span></a>]</p>
 </li>
 </ol>
 </div>
@@ -406,7 +408,7 @@ In this case the return value is lost.  Though legal, this is often an error!
 <ol class="arabic">
 <li><p class="first">A variable declared inside a function definition is called a <em>local variable</em>.
 This declaration may be in either the formal parameter
-list or in the body of the function.  [<a class="reference internal" href="localscope.html#local-scope"><span>Local Scope</span></a>]</p>
+list or in the body of the function.  [<a class="reference internal" href="localscope.html#local-scope"><span class="std std-ref">Local Scope</span></a>]</p>
 </li>
 <li><p class="first">A local variable comes into existence after the function is called, and ceases
 to exist after that function call terminates.  A local variable is invisible
@@ -420,7 +422,7 @@ sent back to the caller.</li>
 <li>It can be passed as an
 actual parameter to a further function called within its scope.</li>
 </ul>
-<p>[<a class="reference internal" href="localscope.html#local-scope"><span>Local Scope</span></a>]</p>
+<p>[<a class="reference internal" href="localscope.html#local-scope"><span class="std std-ref">Local Scope</span></a>]</p>
 </li>
 </ol>
 </div>
@@ -430,10 +432,10 @@ actual parameter to a further function called within its scope.</li>
 <li>There may be a declaration prefaced by the word <code class="docutils literal"><span class="pre">static</span></code> that appears
 <em>inside</em> a class and <em>outside</em> of any function definition in the class.
 Static variables are visible within each function of the class, and may
-be used by the functions.  [<a class="reference internal" href="staticvariables.html#static-variables"><span>Static Variables</span></a>]</li>
+be used by the functions.  [<a class="reference internal" href="staticvariables.html#static-variables"><span class="std std-ref">Static Variables</span></a>]</li>
 <li>A common use of a static variable is to give a name to a constant
 value used in multiple functions in the class.
-[<a class="reference internal" href="staticvariables.html#static-variables"><span>Static Variables</span></a>]</li>
+[<a class="reference internal" href="staticvariables.html#static-variables"><span class="std std-ref">Static Variables</span></a>]</li>
 </ol>
 </div>
 </div>
@@ -451,7 +453,7 @@ value used in multiple functions in the class.
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

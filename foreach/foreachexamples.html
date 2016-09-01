@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>7.2. foreach Examples &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>7.2. foreach Examples &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="7. Foreach Loops" href="foreach.html" />
     <link rel="next" title="7.3. Chapter Review Questions" href="reviewforeach.html" />
@@ -150,7 +152,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="foreach.html">7. Foreach Loops</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewforeach.html">7.3. Chapter Review Questions</a></li>
 </ul>
 </li>
@@ -308,7 +310,7 @@
       
   <div class="section" id="foreach-examples">
 <h1>7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples<a class="headerlink" href="#foreach-examples" title="Permalink to this headline">¶</a></h1>
-<p id="codeofstringchar"><span id="index-0"></span>In <a class="reference internal" href="../while/while-with-sequence.html#isdigits"><span>IsDigits</span></a> we use the underlying int Unicode value
+<p id="codeofstringchar"><span id="index-0"></span>In <a class="reference internal" href="../while/while-with-sequence.html#isdigits"><span class="std std-ref">IsDigits</span></a> we use the underlying int Unicode value
 of the characters in comparisons.
 When printing, you cannot see this code directly,
 since the <code class="docutils literal"><span class="pre">char</span></code> type prints as <em>characters</em>!
@@ -317,7 +319,7 @@ it can be cast to an int:  <code class="docutils literal"><span class="pre">(int
 <p>We can easily write a loop to print the unicode value of each character in a
 string, <code class="docutils literal"><span class="pre">s</span></code>.  We do not need indices here, so a <code class="docutils literal"><span class="pre">foreach</span></code> loop is
 appropriate:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">foreach</span> <span class="p">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">foreach</span> <span class="p">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Unicode for {0} is {1}.&quot;</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">ch</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -339,7 +341,7 @@ appropriate:</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

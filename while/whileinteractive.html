@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6.3. Interactive while Loops &mdash; Introduction to Computer Science in C# 1.0 documentation</title>
+    <title>6.3. Interactive while Loops &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,8 +27,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
     <link rel="up" title="6. While Loops" href="while.html" />
     <link rel="next" title="6.4. Short-Circuiting &amp;&amp; and ||" href="condition-short-circuit.html" />
@@ -137,7 +139,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="while.html">6. While Loops</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
@@ -348,21 +350,21 @@ in boldface:</p>
 <p>and the value 100 would be accepted.</p>
 <p>This is a well-defined idea.  A function makes sense.  Its heading
 includes a prompt and low and high limits of the allowed range:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Prompt the user to obtain an int until the response is in the</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Prompt the user to obtain an int until the response is in the</span>
 <span class="c1">/// range [lowLim, highLim].  Then return the int in range.</span>
 <span class="k">static</span> <span class="kt">int</span> <span class="nf">PromptIntInRange</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lowLim</span><span class="p">,</span> <span class="kt">int</span> <span class="n">highLim</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>For example to generate
 sequence above, the call would be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">PromptIntInRange</span><span class="p">(</span><span class="s">&quot;Enter a score: (0 through 100) &quot;</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">PromptIntInRange</span><span class="p">(</span><span class="s">&quot;Enter a score: (0 through 100) &quot;</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span>
 </pre></div>
 </div>
 <p id="index-1">There is an issue with the common term &#8220;loop&#8221; in programming.
 In normal English, a loop has no beginning and no end, like a circle.
 C# loops have a sequence of statements with a definite beginning and end.</p>
 <p>Consider the sequence above in pseudocode.</p>
-<div class="highlight-none"><div class="highlight"><pre>Input a number with prompt (233)
+<div class="highlight-none"><div class="highlight"><pre><span></span>Input a number with prompt (233)
 Print error message
 Input a number with prompt (101)
 Print error message
@@ -377,7 +379,7 @@ pattern in two ways.  The most obvious is the following,
 with three repetitions of a basic pattern,
 with the last two line not in the same pattern
 (so they would go after the loop).  :</p>
-<div class="highlight-none"><div class="highlight"><pre>Input a number with prompt (233)
+<div class="highlight-none"><div class="highlight"><pre><span></span>Input a number with prompt (233)
 Print error message
 
 Input a number with prompt (101)
@@ -393,7 +395,7 @@ Return 100
 <p>Another choice, since
 you can split a loop at any point, would be the following, with the first and
 last lines not in the  pattern that repeats three times in the middle:</p>
-<div class="highlight-none"><div class="highlight"><pre>Input a number with prompt (233)
+<div class="highlight-none"><div class="highlight"><pre><span></span>Input a number with prompt (233)
 
 Print error message
 Input a number with prompt (101)
@@ -420,14 +422,14 @@ The easiest thing to think of is that we are done when
 we get something correct.  That, however, is a <em>termination</em> condition.
 We need to reverse it to get the <em>continuation condition</em>, that the answer is
 out of range.  There are two ways to be out of range:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">number</span> <span class="p">&lt;</span> <span class="n">lowLim</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="p">&lt;</span> <span class="n">lowLim</span>
 <span class="n">number</span> <span class="p">&gt;</span> <span class="n">highLim</span>
 </pre></div>
 </div>
 <p>How do we combine them?  Either one rules out a correct answer,
 so <code class="docutils literal"><span class="pre">number</span></code> is out of range
 if too high OR too low.  Remember the C# symbolism for &#8220;or&#8221;: <code class="docutils literal"><span class="pre">||</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">while</span> <span class="p">(</span><span class="n">number</span> <span class="p">&lt;</span> <span class="n">lowLim</span> <span class="p">||</span> <span class="n">number</span> <span class="p">&gt;</span> <span class="n">highLim</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">number</span> <span class="p">&lt;</span> <span class="n">lowLim</span> <span class="p">||</span> <span class="n">number</span> <span class="p">&gt;</span> <span class="n">highLim</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
 <p>Following the sequence in the concrete example we had above,
@@ -439,7 +441,7 @@ in the <code class="docutils literal"><span class="pre">while</span></code> head
 <p>Do not reinvent the wheel!
 We can use our earlier general <code class="docutils literal"><span class="pre">PromptInt</span></code> function.  It needs a prompt.
 As a first version, we can use the parameter <code class="docutils literal"><span class="pre">prompt</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="n">PromptInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="n">PromptInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>That is the initialization step before the loop.</p>
@@ -460,7 +462,7 @@ from the bottom of the loop.  To get a <em>new</em> value to test, we must
 <p id="index-3">You might decide to be quick
 and just copy the initialization line into the bottom of the
 loop (and indent it):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="n">PromptInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="n">PromptInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Luckily you will get a compiler error in that situation, avoiding
@@ -470,13 +472,13 @@ part as well as the assignment part, and the compiler sees the declaration of
 <code class="docutils literal"><span class="pre">number</span></code> already there
 from the scope outside the while block, and complains.</p>
 <p>Hence copy the line, <em>without</em> the <code class="docutils literal"><span class="pre">int</span></code> declaration:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">number</span> <span class="p">=</span> <span class="n">PromptInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="p">=</span> <span class="n">PromptInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>When the loop condition becomes false, and you get past the loop,
 you have a correct value in <code class="docutils literal"><span class="pre">number</span></code>.  You have done all the hard work.
 Do not forget to return it at the end.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="c1">/// Prompt the user to obtain an int until the response is in the</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Prompt the user to obtain an int until the response is in the</span>
 <span class="c1">/// range [lowLim, highLim].  Then return the int in range.</span>
 <span class="k">static</span> <span class="kt">int</span> <span class="nf">PromptIntInRange</span><span class="p">(</span><span class="kt">string</span> <span class="n">prompt</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lowLim</span><span class="p">,</span> <span class="kt">int</span> <span class="n">highLim</span><span class="p">)</span>
 <span class="p">{</span>
@@ -500,17 +502,17 @@ to have the program elaborate the prompt automatically.
 If the limits are -10 and 10,
 automatically add to the prompt something like (-10 through 10).</p>
 <p>We could use</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot; ({0} through {1}) &quot;</span><span class="p">,</span> <span class="n">lowLim</span><span class="p">,</span> <span class="n">highLim</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot; ({0} through {1}) &quot;</span><span class="p">,</span> <span class="n">lowLim</span><span class="p">,</span> <span class="n">highLim</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>but we need the code twice, producing the same string each time.
 If you recall the
-<a class="reference internal" href="../functions/funcreturn.html#string-format"><span>string.Format function</span></a>, then we can just create
+<a class="reference internal" href="../functions/funcreturn.html#string-format"><span class="std std-ref">string.Format function</span></a>, then we can just create
 the string once, and use it twice.
 Here is a revised version, in example
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/input_in_range2/input_in_range2.cs">input_in_range2/input_in_range2.cs</a>,
 without redundancy in the prompts in <code class="docutils literal"><span class="pre">Main</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> <span class="c1">//testing routine</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> <span class="c1">//testing routine</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">PromptIntInRange</span><span class="p">(</span><span class="s">&quot;Enter a score: &quot;</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Your score is {0}.&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
@@ -555,7 +557,7 @@ if you fail to get new input from the user at the
 end of the loop.  The condition uses the bad
 original choice forever.  Here is the loop in the mistaken version,
 from example  <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/input_in_range2_bad/input_in_range2_bad.cs">input_in_range2_bad/input_in_range2_bad.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="n">longPrompt</span><span class="p">);</span>
+<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">number</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="n">longPrompt</span><span class="p">);</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">number</span> <span class="p">&lt;</span> <span class="n">lowLim</span> <span class="p">||</span> <span class="n">number</span> <span class="p">&gt;</span> <span class="n">highLim</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// infinte loop!</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} is out of range!&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">);</span>
    <span class="c1">// number = UIF.PromptInt(longPrompt); //OMITS repeated prompt!</span>
@@ -605,8 +607,8 @@ string to the right kind of number, a naive program will bomb.
 This is avoidable if you test the string and repeat the input
 if the string is illegal.
 Places where more complicated tests for illegality are needed are
-considered in <a class="reference internal" href="stringmethods2.html#safe-input-number"><span>Safer PromptInt and PromptDouble Exercise</span></a> and
-<a class="reference internal" href="stringmethods2.html#safest-input-int"><span>Safest PromptInt Exercise</span></a>.  For now we just consider
+considered in <a class="reference internal" href="stringmethods2.html#safe-input-number"><span class="std std-ref">Safer PromptInt and PromptDouble Exercise</span></a> and
+<a class="reference internal" href="stringmethods2.html#safest-input-int"><span class="std std-ref">Safest PromptInt Exercise</span></a>.  For now we just consider
 reading in whole numbers (integers greater than or equal to 0).
 Note that such
 a number is written as just a sequence of digits.
@@ -629,7 +631,7 @@ the user enters something that is legal: in this case, all digits.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 25-January-2016 00:51:04.<br/>
+      Last updated on 01-September-2016 20:10:56.<br/>
     </p>
   </div>
 </footer>

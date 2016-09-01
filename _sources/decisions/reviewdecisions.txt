@@ -174,7 +174,9 @@ Chapter Review Questions
         if (x > 5)
            y = 1;
 
-
+#.  When reading a verbal description of a problem to solve, 
+    what are some words or phrases that suggest that some version of 
+    an ``if`` statement will be useful?
 
 
         
