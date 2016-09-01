@@ -181,8 +181,9 @@ we will see more complicated
 execution orders that do *not* match textual order.
 Whatever the order of execution given by the program, it is important to
 always keep track of the current state of the program, 
-one statement at a time: whhat statement was just executed,
-what are the values of variables, and what will be executed next. 
+one statement at a time: what statement was just executed,
+what are the values of variables after that statement's execution, 
+and what will be executed next. 
 
 For now consider a small, 
 artificial example program,

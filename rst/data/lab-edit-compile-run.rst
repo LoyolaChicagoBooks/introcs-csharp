@@ -171,11 +171,18 @@ a Mac.  Windows versions should be similar.
    
 #. Program.cs should be selected in the Solution Pad, as shown above.  
    Change the selection by clicking on hello. 
-   At the right end of the
-   highlighted hello entry you should see an icon with a small gear and a triangle.
-   Click on it to get the context sensitive popup window.   
-   When selected, most entries in the Solution Pad should show this icon,
-   allowing you to open its context sensitive menu. 
+
+   .. old
+       At the right end of the
+       highlighted hello entry you should see an icon with a small gear and a triangle.
+
+   UPDATE: The pictures show an icon at the right side of a selected project line 
+   in the Solution pad.  This appears to have disappeared in the latest version. 
+   To get the context sensitive popup window for such a line, you can right-click on
+   Windows or control-click on a Mac. Ignore later references to this now missing icon
+   and remember the new approach.   
+   Other items in the Solution Pad will also have a context sensitive menu accessed by
+   right-clicjk or control-click. 
    
 #. Bring up the context menu on the hello project in the Solution Pad.
    Select Run Item.  
