@@ -1,3 +1,9 @@
+commit 3f3c4c27f4fed36fcb0bc91c025569a852dd69f0
+Author: Andrew Harrington <aharrin@luc.edu>
+Date:   Sat Sep 10 11:58:01 2016 -0500
+
+    do-while scope note
+
 commit d3759ef738b381b13700ebd8c6b140d49da0b6b7
 Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Thu Sep 1 14:58:59 2016 -0500
@@ -21,9 +27,3 @@ Author: Andrew Harrington <aharrin@luc.edu>
 Date:   Sat Jan 23 22:20:56 2016 -0600
 
     traceback typos, year
-
-commit 4d5a1ebe0e9d70fe83f613345cfd2886caf8e9a0
-Author: Andrew Harrington <aharrin@luc.edu>
-Date:   Sat Jan 23 21:55:16 2016 -0600
-
-    traceback typos

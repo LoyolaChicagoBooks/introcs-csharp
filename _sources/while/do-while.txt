@@ -75,6 +75,19 @@ loop rubric at the beginning of this section.  It has the general form:
 It only sets the data to be tested *once*.  
 (The trade-off is that the condition is tested *twice*.)
 
+In the example above note that the declaration of ``a``, ``b``, and ``c`` is 
+*before* the |do-while|
+loop.  You can try moving the declaration inside the braces for the loop body,
+and see the compiler error that you get!  
+
+.. note::
+   Recall the variables declared inside
+   a braces-delimited block have scope *local to that block*.  The condition at 
+   the end of the loop is *outside* that scope.  Hence the declaration of variables that
+   you want in the final test or for later use after the loop must be 
+   declared *before* the |do-while| loop.
+
+
 .. index:: exercise; loan table
    decimal; loan table exercise
 

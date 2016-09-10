@@ -374,6 +374,18 @@ loop rubric at the beginning of this section.  It has the general form:</p>
 </div>
 <p>It only sets the data to be tested <em>once</em>.
 (The trade-off is that the condition is tested <em>twice</em>.)</p>
+<p>In the example above note that the declaration of <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code>, and <code class="docutils literal"><span class="pre">c</span></code> is
+<em>before</em> the <code class="docutils literal"><span class="pre">do</span></code>-<code class="docutils literal"><span class="pre">while</span></code>
+loop.  You can try moving the declaration inside the braces for the loop body,
+and see the compiler error that you get!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Recall the variables declared inside
+a braces-delimited block have scope <em>local to that block</em>.  The condition at
+the end of the loop is <em>outside</em> that scope.  Hence the declaration of variables that
+you want in the final test or for later use after the loop must be
+declared <em>before</em> the <code class="docutils literal"><span class="pre">do</span></code>-<code class="docutils literal"><span class="pre">while</span></code> loop.</p>
+</div>
 <div class="section" id="loan-table-exercise">
 <span id="index-1"></span><span id="id1"></span><h2>6.9.1. Loan Table Exercise<a class="headerlink" href="#loan-table-exercise" title="Permalink to this headline">¶</a></h2>
 <p>Loans are common with a specified interest rate and with a fixed periodic
@@ -470,7 +482,7 @@ ever form of loop makes the most sense to you.</p>
     </p>
     <p>
         &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 01-September-2016 20:10:56.<br/>
+      Last updated on 10-September-2016 16:59:02.<br/>
     </p>
   </div>
 </footer>
