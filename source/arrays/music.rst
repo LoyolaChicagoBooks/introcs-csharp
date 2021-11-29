@@ -30,7 +30,9 @@ has the following progression::
 
 This progression is known as the *diatonic major* scale. If you look at
 the ``tones`` array, you can actually figure out the intervals associated
-with this array::
+with this array:
+
+.. code-block:: none
 
    C + 2 = D
    D + 2 = E
@@ -44,7 +46,9 @@ So given any starting note, the major scale can be *generated* from the
 intervals (represented as an array).
 
 So, for example, if you want the F-major scale, you can get it by starting
-at F and applying the steps of 2, 2, 1, 2, 2, 2, 1::
+at F and applying the steps of 2, 2, 1, 2, 2, 2, 1:
+
+.. code-block:: none
 
    F + 2 = G
    G + 2 = A
@@ -55,6 +59,8 @@ at F and applying the steps of 2, 2, 1, 2, 2, 2, 1::
    E + 1 = F
 
 So this is the F-major scale::
+
+.. code-block:: none
 
    F G A B' C D E F
 

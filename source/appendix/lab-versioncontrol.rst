@@ -338,7 +338,9 @@ Now do the following steps:
    ``labs`` folder and compile the ``Hello, World.`` example. 
 	
 #. Verify that the .cs and .exe files are in the labs directory
-   (``ls`` on Linux or OS X; ``dir`` on MS-DOS)::
+   (``ls`` on Linux or OS X; ``dir`` on MS-DOS)
+
+   .. code-block:: none
 
       gkt@gkt-mini:~/gkt170/labs$ mcs hello.cs 
       gkt@gkt-mini:~/gkt170/labs$ ls -l
