@@ -1,5 +1,0 @@
-#! /bin/bash
-
-cd ../examples
-rm ../examples.zip
-zip ../examples.zip * */* */*/*

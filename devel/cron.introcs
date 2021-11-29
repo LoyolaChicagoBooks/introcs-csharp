@@ -1,5 +1,0 @@
-# This script is only run on our server as a cron job
-# It should be run within the devel directory (set by cron)
-
-./makeall.introcs default
-./makeall.introcs bootstrap

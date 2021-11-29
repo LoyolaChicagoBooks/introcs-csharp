@@ -20,6 +20,7 @@ java/
 projSol/
 work/
 examples-deprecated/
+examples/
 test-results/
 TestResult.xml
 projects2/
@@ -32,7 +33,6 @@ rst/*.zip
 test/
 rst3/
 rst/images/lab-edit/old
-source/
 scriptcs.0.10.0/
 sites-enabled/
 rst/images/lab-edit/new/
