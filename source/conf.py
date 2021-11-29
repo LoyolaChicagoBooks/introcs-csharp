@@ -49,7 +49,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'Introduction to Computer Science in C#'
 authors= u'Andrew N. Harrington and George Thiruvathukal'
-copyright = u'2012, Andrew N. Harrington and George Thiruvathukal'
+copyright = u'2012-2021, Andrew N. Harrington and George Thiruvathukal'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
