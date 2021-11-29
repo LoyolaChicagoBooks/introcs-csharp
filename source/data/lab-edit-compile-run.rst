@@ -305,7 +305,7 @@ a Mac.  Windows versions should be similar.
    and will be discussing more shortly.  The automatically generate line numbers
    are not a part of the text:
     
-   ..  literalinclude:: ../../source/examples/hello/hello.cs
+   ..  literalinclude:: ../../examples/introcs/hello/hello.cs
        :language: csharp
        :linenos:
    

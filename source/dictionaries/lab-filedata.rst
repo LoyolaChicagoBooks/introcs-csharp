@@ -62,7 +62,7 @@ You can look in the lab project at the first data file:
 :repsrc:`help_not_defaults.txt <dict_lab_stub/help_not_defaults.txt>`, 
 and the beginning is shown below:  
 
-.. literalinclude:: ../../source/examples/dict_lab_stub/help_not_defaults.txt
+.. literalinclude:: ../../examples/introcs/dict_lab_stub/help_not_defaults.txt
    :language: none
    :lines: 1-15
 
@@ -92,7 +92,7 @@ The first method to complete in
 is useful by itself and later for use in the 
 ``GetParagraphs`` and ``GetDictionary`` that you will complete.  See the stub:
 
-.. literalinclude:: ../../source/examples/dict_lab_stub/file_util.cs
+.. literalinclude:: ../../examples/introcs/dict_lab_stub/file_util.cs
    :start-after: ReadParagraph chunk
    :end-before: chunk
    :dedent: 6
@@ -136,7 +136,7 @@ insert a *few remaining lines of code* to complete the next method
 ``GetParagraphs``, that reads to the end of the file, and likely
 processes more than one paragraph.  
 
-.. literalinclude:: ../../source/examples/dict_lab_stub/file_util.cs
+.. literalinclude:: ../../examples/introcs/dict_lab_stub/file_util.cs
    :start-after: GetParagraphs chunk
    :end-before: chunk
 
@@ -161,13 +161,13 @@ stub also takes a ``StreamReader`` as parameter.  In
 :repsrc:`help_not_responses.txt <dict_lab_stub/help_not_responses.txt>`.  
 Here are the first few lines:
 
-.. literalinclude:: ../../source/examples/dict_lab_stub/help_not_responses.txt
+.. literalinclude:: ../../examples/introcs/dict_lab_stub/help_not_responses.txt
    :language: none
    :lines: 1-15
 
 Here is the stub of the function to complete, reading such data:
 
-.. literalinclude:: ../../source/examples/dict_lab_stub/file_util.cs
+.. literalinclude:: ../../examples/introcs/dict_lab_stub/file_util.cs
    :start-after: GetDictionary chunk
    :end-before: chunk
    :dedent: 6
@@ -207,7 +207,7 @@ Extra credit
     like :repsrc:`help_not_responses2.txt <dict_lab_stub/help_not_responses2.txt>`.  
     Here are the first few lines:
 
-    .. literalinclude:: ../../source/examples/dict_lab_stub/help_not_responses2.txt
+    .. literalinclude:: ../../examples/introcs/dict_lab_stub/help_not_responses2.txt
        :language: none
        :lines: 1-15
 
@@ -215,7 +215,7 @@ Extra credit
 
     Here is how the documentation for ``GetDictionary`` should be changed:
 
-    .. literalinclude:: ../../source/examples/dict_lab_stub/file_util.cs
+    .. literalinclude:: ../../examples/introcs/dict_lab_stub/file_util.cs
        :start-after: Extra credit documentation
        :end-before: }
        :dedent: 6

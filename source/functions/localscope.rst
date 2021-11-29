@@ -27,7 +27,7 @@ For example, the following code in the example program
 if the last line is uncommented. 
 Read it, uncomment the line, and try to run it, and see:
 
-.. literalinclude:: ../../source/examples/bad_scope/bad_scope.cs
+.. literalinclude:: ../../examples/introcs/bad_scope/bad_scope.cs
 
 The compilation error that Mono gives is pretty clear:
 
@@ -42,7 +42,7 @@ If you do want local data from one function to go to another,
 define the called function so it includes parameters! Read and
 compare and try the program :repsrc:`good_scope/good_scope.cs`:
 
-.. literalinclude:: ../../source/examples/good_scope/good_scope.cs
+.. literalinclude:: ../../examples/introcs/good_scope/good_scope.cs
 
 With parameter passing, the parameter name ``x`` in the function
 ``F`` does not need to match the name of the actual parameter in

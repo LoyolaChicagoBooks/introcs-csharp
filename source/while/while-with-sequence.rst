@@ -22,7 +22,7 @@ characters that we can index.
    
 Consider the following silly function description and heading as a start:
 
-.. literalinclude:: ../../source/examples/char_loop1/char_loop1.cs
+.. literalinclude:: ../../examples/introcs/char_loop1/char_loop1.cs
    :start-after: chunk
    :end-before: {
    :dedent: 6
@@ -86,7 +86,7 @@ This increases the value of the numeric variable i by 1.
 
 So all together:
 
-.. literalinclude:: ../../source/examples/char_loop1/char_loop1.cs
+.. literalinclude:: ../../examples/introcs/char_loop1/char_loop1.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -106,7 +106,7 @@ String Backwards Exercise/Example
 	
 Here is a variation:
 
-.. literalinclude:: ../../source/examples/reversed_print/reversed_print.cs
+.. literalinclude:: ../../examples/introcs/reversed_print/reversed_print.cs
    :start-after: chunk
    :end-before: {
    :dedent: 6
@@ -135,7 +135,7 @@ Print Vowels Function
 
 Let us get more complicated.  Consider the function described:
 
-.. literalinclude:: ../../source/examples/vowels/vowels.cs
+.. literalinclude:: ../../examples/introcs/vowels/vowels.cs
    :start-after: chunk
    :end-before: {
    :dedent: 6
@@ -181,7 +181,7 @@ nose is just to consider all the cases where it is true::
 How do you combine them into a condition?  
 The letter can be a *or* e *or* i *or* o *or* u.  We get the code:
 
-.. literalinclude:: ../../source/examples/vowels/vowels.cs
+.. literalinclude:: ../../examples/introcs/vowels/vowels.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -212,7 +212,7 @@ Only lowercase vowels are listed.  We could do something with
 
 This variation is in example :repsrc:`vowels2/vowels2.cs`.
 
-.. literalinclude:: ../../source/examples/vowels2/vowels2.cs
+.. literalinclude:: ../../examples/introcs/vowels2/vowels2.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -334,7 +334,7 @@ code is easier to read with the parentheses left in, as written above.
 
 The whole function would be:
 
-.. literalinclude:: ../../source/examples/check_digits1/check_digits1.cs
+.. literalinclude:: ../../examples/introcs/check_digits1/check_digits1.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -410,7 +410,7 @@ set the Boolean result.
 Look in the full
 code for the function:
 
-.. literalinclude:: ../../source/examples/check_digits2/check_digits2.cs
+.. literalinclude:: ../../examples/introcs/check_digits2/check_digits2.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -433,7 +433,7 @@ some simple silly code,
 :repsrc:`loop_steps/loop_steps.cs`,
 also using a sequence: 
  
-.. literalinclude:: ../../source/examples/loop_steps/loop_steps.cs
+.. literalinclude:: ../../examples/introcs/loop_steps/loop_steps.cs
    :linenos:
 
 Play computer, completing the table.  You fill in the line numbers,

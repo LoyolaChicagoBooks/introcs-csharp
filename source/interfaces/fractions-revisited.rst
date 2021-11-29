@@ -79,7 +79,7 @@ has the modified :repsrc:`rational.cs <interfaces/rational.cs>`
 and :repsrc:`test_rational_sort.cs <interfaces/test_rational_sort.cs>`
 to test this with a list of Rationals:
    
-.. literalinclude:: ../../source/examples/interfaces/test_rational_sort.cs
+.. literalinclude:: ../../examples/introcs/interfaces/test_rational_sort.cs
 
 which prints:
 

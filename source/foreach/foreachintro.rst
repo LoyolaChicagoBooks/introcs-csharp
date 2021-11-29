@@ -32,7 +32,7 @@ look up the character at each index of a given string ``s``::
 
 Examples have been in :ref:`While-Sequence`, like
 
-.. literalinclude:: ../../source/examples/char_loop1/char_loop1.cs
+.. literalinclude:: ../../examples/introcs/char_loop1/char_loop1.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6

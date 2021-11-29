@@ -109,7 +109,7 @@ so you have your own copy to modify.  You can either
 Here is the code for the first experiment, to test the performance of linear
 searching on integer arrays:
 
-.. literalinclude:: ../../source/examples/performance_lab_stub/performance_lab.cs
+.. literalinclude:: ../../examples/introcs/performance_lab_stub/performance_lab.cs
    :start-after: chunk-experiment1-begin
    :end-before: chunk-experiment1-end
    :linenos:

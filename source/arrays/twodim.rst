@@ -77,7 +77,7 @@ Often two dimensional arrays, like one dimensional  arrays, are processed
 in loops. Multiple dimension arrays are often processed in nested loops.
 We could print out this table using columns 5 spaces wide with the code:
 
-.. literalinclude:: ../../source/examples/print_table/print_table.cs
+.. literalinclude:: ../../examples/introcs/print_table/print_table.cs
    :start-after: };
    :end-before: chunk
 
@@ -161,7 +161,7 @@ the right width.
 The code refers once to the earlier ``StringOfReps`` in :ref:`lab-loops` 
 for the row of dashes setting off the column sums:
 
-.. literalinclude:: ../../source/examples/print_table/print_table.cs
+.. literalinclude:: ../../examples/introcs/print_table/print_table.cs
    :start-after: chunk
    :end-before: chunk
 

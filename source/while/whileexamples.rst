@@ -71,7 +71,7 @@ previous midpoint value ``c``.
 Of course a production version would not print out all the intermediate data,
 as the interval shrinks, but we do for illustration:
 
-.. literalinclude:: ../../source/examples/bisection_method1/bisection_method1.cs
+.. literalinclude:: ../../examples/introcs/bisection_method1/bisection_method1.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -84,7 +84,7 @@ eventually run out of distinct ``double`` values! We can stop when
 the midpoint (calculated with limited ``double`` precision) 
 is *exactly* the same as ``a`` or ``b``:
 
-.. literalinclude:: ../../source/examples/bisection_method1/bisection_method1.cs
+.. literalinclude:: ../../examples/introcs/bisection_method1/bisection_method1.cs
    :start-after: end chunk
    :end-before: end chunk
    :dedent: 6

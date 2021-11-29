@@ -24,7 +24,7 @@ discussed in the
 next section, :ref:`casts_in_user_classes`.  
 Here are operator overload declarations for ``*`` and others:
 
-.. literalinclude:: ../../source/examples/rational_ops_stub/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_ops_stub/rational.cs
    :start-after: operator chunk
    :end-before: chunk
 
@@ -99,7 +99,7 @@ so  the compiler will take ``f * n`` and see the need to implicitly cast
 ``n`` to a Rational.  The definition below will also allow explicit casts 
 if you choose, like ``f * (Rational) n``:
 
-.. literalinclude:: ../../source/examples/rational_ops_stub/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_ops_stub/rational.cs
    :start-after: implicit cast chunk
    :end-before: chunk
  
@@ -121,7 +121,7 @@ it would not be wise to implicitly convert
 a ``double`` to a Rational, but it does make sense to approximate a Rational 
 by a ``double`` before use with a ``double``:
 
-.. literalinclude:: ../../source/examples/rational_ops_stub/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_ops_stub/rational.cs
    :start-after: to double chunk
    :end-before: chunk
  
@@ -148,7 +148,7 @@ replace ``implicit`` by ``explicit`` in the cast method heading.
 
 .. _decimal-type:
    
-.. literalinclude:: ../../source/examples/rational_ops_stub/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_ops_stub/rational.cs
    :start-after: explicit cast chunk
    :end-before: chunk
 

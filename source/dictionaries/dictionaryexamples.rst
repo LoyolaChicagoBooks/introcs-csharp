@@ -89,7 +89,7 @@ We separate the processing into two functions, one calculating the dictionary, a
 a table.  To reduce the amount of clutter in the ``Dictionary``, the function
 ``GetCounts`` takes as a parameter a set of words to ignore.
 
-.. literalinclude:: ../../source/examples/count_words/count_words.cs
+.. literalinclude:: ../../examples/introcs/count_words/count_words.cs
    :start-after: chunk
    :end-before: chunk
 

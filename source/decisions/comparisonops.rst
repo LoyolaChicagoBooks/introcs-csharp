@@ -89,7 +89,7 @@ place for a function enclosing the calculation.
 
 *Read* the setup for the function:
 
-.. literalinclude:: ../../source/examples/wages1/wages1.cs
+.. literalinclude:: ../../examples/introcs/wages1/wages1.cs
    :start-after: chunk
    :end-before: {
    :dedent: 6
@@ -103,7 +103,7 @@ solution before going on and examining mine.
 You can try running the complete example program, :repsrc:`wages1/wages1.cs`, 
 also shown below.  
 
-.. literalinclude:: ../../source/examples/wages1/wages1.cs
+.. literalinclude:: ../../examples/introcs/wages1/wages1.cs
    :linenos:
   
 .. index::
@@ -115,7 +115,7 @@ also shown below.
 This program also introduces new notation for 
 displaying decimal numbers:  
 
-.. literalinclude:: ../../source/examples/wages1/wages1.cs
+.. literalinclude:: ../../examples/introcs/wages1/wages1.cs
    :start-after: chunk2
    :end-before: chunk2
    :dedent: 9
@@ -179,7 +179,7 @@ general calculation formula and sets the parameters for the formula
 in the ``if`` statement. There are generally a number of ways you might
 solve the same problem!
 
-.. literalinclude:: ../../source/examples/wages2/wages2.cs
+.. literalinclude:: ../../examples/introcs/wages2/wages2.cs
    :start-after: Include
    :end-before: chunk
    :linenos:

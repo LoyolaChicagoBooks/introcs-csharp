@@ -66,7 +66,7 @@ Now let us examine the files here.
 
 Here is the program:
 
-.. literalinclude:: ../../source/examples/first_file/first_file.cs
+.. literalinclude:: ../../examples/introcs/first_file/first_file.cs
 
 .. index:: . ; part of namespace
    System.IO namespace

@@ -17,7 +17,7 @@ and fill in function bodies for each part below:
 
 #.  Complete  
 
-    .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
+    .. literalinclude:: ../../examples/introcs/loop_lab_stub/loop_lab.cs
        :start-after: PrintReps chunk
        :end-before: body
        :dedent: 6
@@ -37,7 +37,7 @@ and fill in function bodies for each part below:
     
 #.  Complete  
 
-    .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
+    .. literalinclude:: ../../examples/introcs/loop_lab_stub/loop_lab.cs
        :start-after: StringOfReps chunk
        :end-before: body
        :dedent: 6
@@ -51,7 +51,7 @@ and fill in function bodies for each part below:
 #.  Complete ``Factorial``, in a format much like SumToN in example 
     :repsrc:`sum_to_n_test/sum_to_n_test.cs`:  
     
-    .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
+    .. literalinclude:: ../../examples/introcs/loop_lab_stub/loop_lab.cs
        :start-after: Factorial chunk
        :end-before: body
        :dedent: 6
@@ -85,7 +85,7 @@ and fill in function bodies for each part below:
       
 #.  Complete the method
 
-    .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
+    .. literalinclude:: ../../examples/introcs/loop_lab_stub/loop_lab.cs
        :start-after: PrintRectangle chunk
        :end-before: body
        :dedent: 6
@@ -113,7 +113,7 @@ and fill in function bodies for each part below:
 
 #.  Complete the method below.  
 
-    .. literalinclude:: ../../source/examples/loop_lab_stub/loop_lab.cs
+    .. literalinclude:: ../../examples/introcs/loop_lab_stub/loop_lab.cs
        :start-after: PrintTableBorders chunk
        :end-before: body
        :dedent: 6

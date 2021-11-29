@@ -99,7 +99,7 @@ number would be the (non-zero) remainder.
 
 Now take a look at a basic version of GCD:
 
-.. literalinclude:: ../../source/examples/g_c_d_basic/g_c_d_basic.cs
+.. literalinclude:: ../../examples/introcs/g_c_d_basic/g_c_d_basic.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:
@@ -179,7 +179,7 @@ Greatest Common Divisor works as follows:
   if ``a`` and ``b`` bump into one another, thereby meaning that we
   have computed the GCD.
 
-.. literalinclude:: ../../source/examples/g_c_d_subtraction_method/g_c_d_subtraction_method.cs
+.. literalinclude:: ../../examples/introcs/g_c_d_subtraction_method/g_c_d_subtraction_method.cs
    :start-after: chunk-gcd-begin
    :end-before: chunk-gcd-end
    :linenos:

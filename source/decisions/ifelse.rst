@@ -10,7 +10,7 @@ Run the example program, :repsrc:`clothes/clothes.cs`. Try it at least twice, wi
 inputs 50 and then 80. As you can see, you get different results,
 depending on the input. The main code of :repsrc:`clothes/clothes.cs` is:
 
-.. literalinclude:: ../../source/examples/clothes/clothes.cs
+.. literalinclude:: ../../examples/introcs/clothes/clothes.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
@@ -106,7 +106,7 @@ declared before the compound statements that are parts of the
 statement is still visible (in scope) *inside*  that compound statement.
 The following would work:
 
-.. literalinclude:: ../../source/examples/ok_if_scope/ok_if_scope.cs
+.. literalinclude:: ../../examples/introcs/ok_if_scope/ok_if_scope.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -118,7 +118,7 @@ The two ``if`` statements would use opposite conditions, as in this variation:
 
 .. index:: compiler error; uninitialized local variable
 
-.. literalinclude:: ../../source/examples/ok_if_scope/ok_if_scope.cs
+.. literalinclude:: ../../examples/introcs/ok_if_scope/ok_if_scope.cs
    :start-after: past chunk
    :end-before: chunk
    :linenos:

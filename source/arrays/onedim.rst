@@ -199,7 +199,7 @@ parameter, so an array type is perfectly reasonable!  Above we
 printed each element of an array of integers.  This time let's choose strings,
 so the formal parameter is an array of strings:  ``string[]``.
 
-.. literalinclude:: ../../source/examples/string_array/string_array.cs
+.. literalinclude:: ../../examples/introcs/string_array/string_array.cs
    :start-after: chunk PrintStrings
    :end-before: chunk
    :linenos:
@@ -227,7 +227,7 @@ We will see that there are more wrinkles to array parameters in :ref:`alias`.
 An array type can also be
 returned like any other type.  Examine the function definition:
   
-.. literalinclude:: ../../source/examples/string_array/string_array.cs
+.. literalinclude:: ../../examples/introcs/string_array/string_array.cs
    :start-after: chunk InputNStrings
    :end-before: chunk
    :dedent: 6
@@ -248,7 +248,7 @@ Follow Array Loop Exercise/Example
 a.  What is printed by this program?  Play computer first
     to figure out.  
 
-    .. literalinclude:: ../../source/examples/array_loop1/array_loop1.cs
+    .. literalinclude:: ../../examples/introcs/array_loop1/array_loop1.cs
        :linenos:
 
     Then you can run example 
@@ -259,7 +259,7 @@ a.  What is printed by this program?  Play computer first
 #.  What is printed by this program?  Play computer first
     to figure out.  Be careful to keep the data current! 
 
-    .. literalinclude:: ../../source/examples/array_loop2/array_loop2.cs
+    .. literalinclude:: ../../examples/introcs/array_loop2/array_loop2.cs
        :linenos:
 
     Then you can run example 
@@ -271,7 +271,7 @@ a.  What is printed by this program?  Play computer first
 #.  What is printed by this program?  Play computer first
     to figure out.   
 
-    .. literalinclude:: ../../source/examples/array_loop3/array_loop3.cs
+    .. literalinclude:: ../../examples/introcs/array_loop3/array_loop3.cs
        :linenos:
 
     Then you can run example 
@@ -287,7 +287,7 @@ Sign Array Exercise/Example
 
 Complete the code for this function:
 
-.. literalinclude:: ../../source/examples/sign_array1/sign_array1.cs
+.. literalinclude:: ../../examples/introcs/sign_array1/sign_array1.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 3
@@ -311,7 +311,7 @@ Parameters to Main
 The ``Main`` function may take an array of strings as parameter, as in example 
 :repsrc:`print_param/print_param.cs`:
 
-.. literalinclude:: ../../source/examples/print_param/print_param.cs
+.. literalinclude:: ../../examples/introcs/print_param/print_param.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 3
@@ -532,7 +532,7 @@ NewUpper Exercise
 
 Complete the definition for
 
-.. literalinclude:: ../../source/examples/string_array/string_array.cs
+.. literalinclude:: ../../examples/introcs/string_array/string_array.cs
    :start-after: chunk NewUpper
    :end-before: {
    :dedent: 6
@@ -622,7 +622,7 @@ AllToUpper Exercise
 
 Complete the function with this heading:
 
-.. literalinclude:: ../../source/examples/string_array/string_array.cs
+.. literalinclude:: ../../examples/introcs/string_array/string_array.cs
    :start-after: chunk AllToUpper
    :end-before: {
    :dedent: 6
@@ -638,7 +638,7 @@ Sign Array II Exercise/Example
 Create a variation on :ref:`sign-array-exercise` with a function 
 with heading
 
-.. literalinclude:: ../../source/examples/sign_array2/sign_array2.cs
+.. literalinclude:: ../../examples/introcs/sign_array2/sign_array2.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 3
@@ -752,7 +752,7 @@ Now that you have some experience,
 this section will include a variety of exercises where array index
 variables need to be manipulated in fancier ways.  Consider this heading:
 
-.. literalinclude:: ../../source/examples/remove_zeros/remove_zeros.cs
+.. literalinclude:: ../../examples/introcs/remove_zeros/remove_zeros.cs
    :start-after: chunk
    :end-before: {
 
@@ -807,7 +807,7 @@ You should see that:
 If you get those ideas together, hopefully you can write the needed code.  
 Our version is:
 
-.. literalinclude:: ../../source/examples/remove_zeros/remove_zeros.cs
+.. literalinclude:: ../../examples/introcs/remove_zeros/remove_zeros.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:

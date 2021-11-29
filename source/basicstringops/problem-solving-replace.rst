@@ -45,7 +45,7 @@ the first occurrence, and for now we will assume the
 replacement makes sense.  The following heading 
 (with documentation) should work:
 
-.. literalinclude:: ../../source/examples/string_manip_stub/string_manip.cs
+.. literalinclude:: ../../examples/introcs/string_manip_stub/string_manip.cs
    :start-after: end main chunk
    :end-before: {
    :dedent: 3
@@ -55,7 +55,7 @@ As soon as we have the calling interface, it is good to be thinking
 of the tests it should pass.  Here is a Main program written 
 to test the function in different ways and display the results:
 
-.. literalinclude:: ../../source/examples/string_manip_stub/string_manip.cs
+.. literalinclude:: ../../examples/introcs/string_manip_stub/string_manip.cs
    :start-after: main chunk
    :end-before: main chunk
    :dedent: 3

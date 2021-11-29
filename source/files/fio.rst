@@ -38,7 +38,7 @@ it is visible in all the functions in the class.
 Then the sequence ``paths``
 can be used in the ``foreach`` loop:
 
-.. literalinclude:: ../../source/examples/fio/fio.cs
+.. literalinclude:: ../../examples/introcs/fio/fio.cs
    :start-after: GetPath chunk
    :end-before:  chunk
    :dedent: 6
@@ -51,7 +51,7 @@ we do not find it, we return ``null`` (no object).
 For convenience, we have an elaboration, using ``GetPath``,
 that directly opens the file to read:
 
-.. literalinclude:: ../../source/examples/fio/fio.cs
+.. literalinclude:: ../../examples/introcs/fio/fio.cs
    :start-after: OpenReader chunk
    :end-before:  chunk
    :dedent: 6
@@ -59,7 +59,7 @@ that directly opens the file to read:
 We have a variation on ``GetPath`` that just return the path to the 
 directory containing the file.  Here is the heading:
 
-.. literalinclude:: ../../source/examples/fio/fio.cs
+.. literalinclude:: ../../examples/introcs/fio/fio.cs
    :start-after: GetLocation chunk
    :end-before:  chunk
    :dedent: 6
@@ -70,7 +70,7 @@ that you read from.  You can get a location from ``GetLocation`` and then
 write to the same directory, creating a ``StreamWriter``. 
 You can use the convenience function:
 
-.. literalinclude:: ../../source/examples/fio/fio.cs
+.. literalinclude:: ../../examples/introcs/fio/fio.cs
    :start-after: OpenWriter chunk
    :end-before:  chunk
    :dedent: 6
@@ -81,7 +81,7 @@ The entire ``FIO`` class is in
 We illustrate the use of ``FIO`` functions in example file
 :repsrc:`fio_usage/fio_usage.cs`:
 
-.. literalinclude:: ../../source/examples/fio_usage/fio_usage.cs
+.. literalinclude:: ../../examples/introcs/fio_usage/fio_usage.cs
 
 If you look at the fio_usage project in our examples solution, you see that
 ``sample.txt`` is a file in the project folder.  The program

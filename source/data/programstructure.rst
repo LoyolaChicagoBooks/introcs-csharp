@@ -33,7 +33,7 @@ clutter up the basic setup with features that we are not about to use and discus
 Here is a silly little test illustrating the difference between ``Console.WriteLine``
 and ``Console.Write``, in example :repsrc:`write_test/write_test.cs`:
 
-.. literalinclude:: ../../source/examples/write_test/write_test.cs
+.. literalinclude:: ../../examples/introcs/write_test/write_test.cs
 
 When run, the program prints:
 
@@ -190,7 +190,7 @@ artificial example program,
 :repsrc:`update_vars/update_vars.cs`,
 emphasizing the ability to *reassign* variable values. 
  
-.. literalinclude:: ../../source/examples/update_vars/update_vars.cs
+.. literalinclude:: ../../examples/introcs/update_vars/update_vars.cs
    :linenos:
        
 Can you *predict* the result? Run the program and check.
@@ -251,7 +251,7 @@ Play Computer Exercise
 Here is a similar program,
 :repsrc:`update_vars2/update_vars2.cs`:
  
-.. literalinclude:: ../../source/examples/update_vars2/update_vars2.cs
+.. literalinclude:: ../../examples/introcs/update_vars2/update_vars2.cs
    :linenos:
 
 Play computer, completing the table
@@ -274,7 +274,7 @@ Another Play Computer Exercise
 A silly one on the same line:
 :repsrc:`update_vars3/update_vars3.cs`:
  
-.. literalinclude:: ../../source/examples/update_vars3/update_vars3.cs
+.. literalinclude:: ../../examples/introcs/update_vars3/update_vars3.cs
    :linenos:
 
 Play computer, completing the table

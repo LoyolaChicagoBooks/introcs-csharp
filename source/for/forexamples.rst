@@ -188,7 +188,7 @@ To make the data line up with the heading titles,
 we can expand the columns, with code in example
 :repsrc:`power_table/power_table.cs`:
 
-.. literalinclude:: ../../source/examples/power_table/power_table.cs
+.. literalinclude:: ../../examples/introcs/power_table/power_table.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -513,7 +513,7 @@ inner column loop.  The row label is r.
 The whole code is in example :repsrc:`mod7_table/mod7_table.cs` and below:
 
 
-..  literalinclude:: ../../source/examples/mod7_table/mod7_table.cs
+..  literalinclude:: ../../examples/introcs/mod7_table/mod7_table.cs
     :start-after: chunk
     :end-before: chunk
     :dedent: 6
@@ -570,7 +570,7 @@ which we use in the code for the whole function, below,
 and in example program
 :repsrc:`mod_mult_table/mod_mult_table.cs`.
 
-..  literalinclude:: ../../source/examples/mod_mult_table/mod_mult_table.cs
+..  literalinclude:: ../../examples/introcs/mod_mult_table/mod_mult_table.cs
     :start-after: chunk
     :end-before: chunk
     :dedent: 6
@@ -589,7 +589,7 @@ but it logically the joining of two separate ideas:  reversing a string and
 printing it.  We already know how to print a string as a step.  Now consider 
 the first part as its own function:
 
-..  literalinclude:: ../../source/examples/reversed_string/reversed_string.cs
+..  literalinclude:: ../../examples/introcs/reversed_string/reversed_string.cs
     :start-after: chunk
     :end-before: {
 
@@ -656,7 +656,7 @@ Remember the empty string:  initialize ``rev`` to be ``""``.
 
 The result is:
 
-..  literalinclude:: ../../source/examples/reversed_string/reversed_string.cs
+..  literalinclude:: ../../examples/introcs/reversed_string/reversed_string.cs
     :start-after: chunk
     :end-before: chunk
     :dedent: 6

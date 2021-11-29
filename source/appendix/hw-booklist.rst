@@ -103,7 +103,7 @@ It has a constructor (already written - creating an empty List)::
 
 It should have public methods:
 
-.. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+.. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
    :start-after:  AddBook chunk
    :end-before: {
        
@@ -112,15 +112,15 @@ The extra credit version is more elaborate.
 
 Further methods:
 
-.. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+.. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
    :start-after:  PrintList chunk
    :end-before: {
 
-.. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+.. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
    :start-after:  PrintTitlesByAuthor chunk
    :end-before: {
 
-.. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+.. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
    :start-after:  PrintBooksInYears chunk
    :end-before: {
 
@@ -187,7 +187,7 @@ To get full credit for any particular option, tests for it must be
 
 #.  [2 points] Complete 
 
-    .. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+    .. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
        :start-after:  ToString chunk
        :end-before: {
 
@@ -208,13 +208,13 @@ To get full credit for any particular option, tests for it must be
 
     In the Book class, a new constructor:
 
-    .. literalinclude:: ../../source/examples/books_homework_stub/book.cs
+    .. literalinclude:: ../../examples/introcs/books_homework_stub/book.cs
        :start-after:  Book chunk
        :end-before: {
     
     In class BookList, a new constructor:
     
-    .. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+    .. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
        :start-after:  BookList chunk
        :end-before: {
     
@@ -228,7 +228,7 @@ To get full credit for any particular option, tests for it must be
 
     In class Book:
 
-    .. literalinclude:: ../../source/examples/books_homework_stub/book.cs
+    .. literalinclude:: ../../examples/introcs/books_homework_stub/book.cs
        :start-after:  IsEqual chunk
 
     It is essential to have the ``IsEqual`` method working in Book before any of
@@ -242,7 +242,7 @@ To get full credit for any particular option, tests for it must be
     
     In class BookList:
     
-    .. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+    .. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
        :start-after:  Contains chunk
        :end-before: {
 
@@ -254,7 +254,7 @@ To get full credit for any particular option, tests for it must be
     Change the ``AddBook`` method from the regular assignment, so it 
     satisfies this documentation:
     
-    .. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+    .. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
        :start-after:  Revised AddBook
        :end-before: }
 
@@ -263,7 +263,7 @@ To get full credit for any particular option, tests for it must be
 #.  [2 points] This one requires the previous elaboration of ``AddBook``. 
     In BookList:    
         
-    .. literalinclude:: ../../source/examples/books_homework_stub/book_list.cs
+    .. literalinclude:: ../../examples/introcs/books_homework_stub/book_list.cs
        :start-after:  AddAll chunk
        :end-before: {
 

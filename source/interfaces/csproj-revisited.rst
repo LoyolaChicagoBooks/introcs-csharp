@@ -59,7 +59,7 @@ Now we can define our own interface taking all of these common features
 together.  Since each is a response to a command, we will call our interface
 Response:
 
-.. literalinclude:: ../../source/examples/csproject_stub/response.cs
+.. literalinclude:: ../../examples/introcs/csproject_stub/response.cs
 
 Things to note:
 
@@ -96,7 +96,7 @@ CommandMapper, and the the CommandMapper constructor creates the Dictionary
 used to look up the Response that goes with each command word.  Here is the whole code for 
 ResponseMapper, taking advantage of the Dictionary in other methods, too.
 
-.. literalinclude:: ../../source/examples/csproject_stub/command_mapper.cs
+.. literalinclude:: ../../examples/introcs/csproject_stub/command_mapper.cs
 
 There is even more to recommend this setup:  The old setup had references in multiple places 
 to various details about the collection of Responses.  That made it harder to follow and

@@ -51,7 +51,7 @@ temperature before reducing the temperature. In C# you could
 write and run the code below, saved in example program 
 :repsrc:`cool/cool.cs`:
 
-.. literalinclude:: ../../source/examples/cool/cool.cs
+.. literalinclude:: ../../examples/introcs/cool/cool.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
@@ -139,7 +139,7 @@ above.
 Test yourself: Follow the code.  Figure out what is printed.
 If it helps, get detailed and play computer:
 
-.. literalinclude:: ../../source/examples/test_while1/test_while1.cs
+.. literalinclude:: ../../examples/introcs/test_while1/test_while1.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
@@ -158,7 +158,7 @@ Check yourself by running the example program :repsrc:`test_while1/test_while1.c
 previous example, switching the order in the loop body. Follow it
 carefully, one step at a time.
 
-.. literalinclude:: ../../source/examples/test_while2/test_while2.cs
+.. literalinclude:: ../../examples/introcs/test_while2/test_while2.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:
@@ -242,7 +242,7 @@ Putting that all together, and remembering the one thing we noted
 to do after the loop,
 we get :repsrc:`blastoff/blastoff.cs`:
 
-.. literalinclude:: ../../source/examples/blastoff/blastoff.cs
+.. literalinclude:: ../../examples/introcs/blastoff/blastoff.cs
 
 Look back and see how we fit the general rubric.  
 There are a bunch of things to think about with a while loop, so
@@ -554,7 +554,7 @@ We can write a ridiculously short
 function following Gauss's model.  Here we introduce the variable average,
 as in the motivation for Gauss's answer:
 
-.. literalinclude:: ../../source/examples/sum_to_n_long_bad/sum_to_n_long_bad.cs
+.. literalinclude:: ../../examples/introcs/sum_to_n_long_bad/sum_to_n_long_bad.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6
@@ -583,7 +583,7 @@ things should be better::
    
 Here is a shot at the whole function:
 
-.. literalinclude:: ../../source/examples/sum_to_n_long_bad2/sum_to_n_long_bad2.cs
+.. literalinclude:: ../../examples/introcs/sum_to_n_long_bad2/sum_to_n_long_bad2.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 6

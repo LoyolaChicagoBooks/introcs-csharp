@@ -104,7 +104,7 @@ We illustrate two forms (being inconsistent for your information only):
 Save the stub in a project of
 your own and replace the comments with your code to complete it:
 
-.. literalinclude:: ../../source/examples/do_the_math_stub/do_the_math.cs
+.. literalinclude:: ../../examples/introcs/do_the_math_stub/do_the_math.cs
      
 Be sure to run it and test it thoroughly. Show your output to a TA.
 

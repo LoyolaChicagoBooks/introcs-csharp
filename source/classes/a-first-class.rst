@@ -90,7 +90,7 @@ type as *methods*.  For instance we can
 Thinking ahead to what we would like for our Contact objects, here is
 the testing code of :repsrc:`contact1/test_contact1.cs`:
 
-.. literalinclude:: ../../source/examples/contact1/test_contact1.cs
+.. literalinclude:: ../../examples/introcs/contact1/test_contact1.cs
 
 When running this testing code, we would like the results:
 
@@ -218,7 +218,7 @@ want to give a state to our new object.
 That means giving values to its fields.  Recall we are want to
 store this state in instance variables ``name``, ``phone`` and ``email``:  
 
-.. literalinclude:: ../../source/examples/contact1/contact1.cs
+.. literalinclude:: ../../examples/introcs/contact1/contact1.cs
    :start-after: constructor 
    :end-before: getter
 
@@ -305,7 +305,7 @@ so how do we do that?  Use **public methods**.
 Since the fields are accessible anywhere *inside* the class's instance methods, 
 and public methods can be used from *outside* the class, we can simply code
 
-.. literalinclude:: ../../source/examples/contact1/contact1.cs
+.. literalinclude:: ../../examples/introcs/contact1/contact1.cs
    :start-after: getter
    :end-before: labels
 
@@ -325,7 +325,7 @@ followed by the name of the data to be returned.
 In this first simple version of Contact we add one further method, to
 print all the contact information with labels.
 
-.. literalinclude:: ../../source/examples/contact1/contact1.cs
+.. literalinclude:: ../../examples/introcs/contact1/contact1.cs
    :start-after: labels
    :end-before: chunk
 
@@ -365,7 +365,7 @@ an explicit ``this`` is useful.
 
 In the first version of the constructor, repeated here,
 
-.. literalinclude:: ../../source/examples/contact1/contact1.cs
+.. literalinclude:: ../../examples/introcs/contact1/contact1.cs
    :start-after: constructor 
    :end-before: getter
 
@@ -397,7 +397,7 @@ The explicit ``this`` object comes to the rescue:  ``this.name`` refers to
 a part of this object.  It must refer to the 
 instance variable, not the local variable.  Our alternate constructor is:
 
-.. literalinclude:: ../../source/examples/contact2/contact2.cs
+.. literalinclude:: ../../examples/introcs/contact2/contact2.cs
    :start-after: constructor 
    :end-before: getter
 
@@ -414,7 +414,7 @@ with our Contact objects.  Users can read the data in a Contact with the
 are similar:  start with "Set".  In this case we must supply the new data,
 so setter methods need a parameter:
 
-.. literalinclude:: ../../source/examples/contact2/contact2.cs
+.. literalinclude:: ../../examples/introcs/contact2/contact2.cs
    :start-after: setter methods
    :end-before: chunk
 
@@ -423,7 +423,7 @@ In ``SetPhone``, like in our original constructor, we illustrate using a
 comparison we use the alternate identifier matching approach in the 
 other setter:
 
-.. literalinclude:: ../../source/examples/contact2/contact2.cs
+.. literalinclude:: ../../examples/introcs/contact2/contact2.cs
    :start-after: SetEmail
    :end-before: chunk
 
@@ -480,7 +480,7 @@ You need to have that version used *in place of* the default:
 You need to *override* the default.  To emphasize the *change*
 in meaning, the word ``override`` *must* be in the heading:
 
-.. literalinclude:: ../../source/examples/contact2/contact2.cs
+.. literalinclude:: ../../examples/introcs/contact2/contact2.cs
    :start-after: ToString chunk
    :end-before: chunk
    :dedent: 6
@@ -524,7 +524,7 @@ New testing code is in :repsrc:`contact2/test_contact2.cs`.  Run the project
 and check that it does what you would expect.  There are several new 
 features illustrated in the testing code:
 
-.. literalinclude:: ../../source/examples/contact2/test_contact2.cs
+.. literalinclude:: ../../examples/introcs/contact2/test_contact2.cs
    :start-after: main chunk
    :end-before: chunk
    :dedent: 6

@@ -92,7 +92,7 @@ Requirements
    It will contain three lines.
    The first line is a comma separated list of category names like
 
-   .. literalinclude:: ../../source/examples/grade_file_homework_stub/categories_comp170.txt
+   .. literalinclude:: ../../examples/introcs/grade_file_homework_stub/categories_comp170.txt
       :language: text
       :lines: 1
        
@@ -101,7 +101,7 @@ Requirements
    
    The second line contains the integer weights for each category, like
    
-   .. literalinclude:: ../../source/examples/grade_file_homework_stub/categories_comp170.txt
+   .. literalinclude:: ../../examples/introcs/grade_file_homework_stub/categories_comp170.txt
       :language: text
       :lines: 2
        
@@ -112,7 +112,7 @@ Requirements
    
    The third line will contain the number of grades in each category, like
    
-   .. literalinclude:: ../../source/examples/grade_file_homework_stub/categories_comp170.txt
+   .. literalinclude:: ../../examples/introcs/grade_file_homework_stub/categories_comp170.txt
       :language: text
       :lines: 3
        
@@ -126,7 +126,7 @@ Requirements
 
    For example, the sample data file :file:`students_comp170.txt` starts:
    
-   .. literalinclude:: ../../source/examples/grade_file_homework_stub/students_comp170.txt
+   .. literalinclude:: ../../examples/introcs/grade_file_homework_stub/students_comp170.txt
       :language: text
       :lines: 1-2
 
@@ -152,7 +152,7 @@ Requirements
    
    Sample data file ``P12345678comp170.data`` starts:
    
-   .. literalinclude:: ../../source/examples/grade_file_homework_stub/P12345678comp170.data
+   .. literalinclude:: ../../examples/introcs/grade_file_homework_stub/P12345678comp170.data
       :language: text
       :lines: 1-6
 
@@ -241,7 +241,7 @@ Hints
    It is already in the stub of the solution file 
    :repsrc:`grade_files.cs <grade_file_homework_stub/grade_files.cs>`:
 
-   .. literalinclude:: ../../source/examples/grade_file_homework_stub/grade_files.cs
+   .. literalinclude:: ../../examples/introcs/grade_file_homework_stub/grade_files.cs
       :start-after: chunk
       :end-before: chunk
 

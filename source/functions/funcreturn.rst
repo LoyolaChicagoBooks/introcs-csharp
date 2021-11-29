@@ -30,7 +30,7 @@ The corresponding definition and examples in C# would be the
 following, taken from example program :file:`return1.cs`. *Read*
 *and run*:
 
-.. literalinclude:: ../../source/examples/return1/return1.cs
+.. literalinclude:: ../../examples/introcs/return1/return1.cs
 
 The new C# syntax is the *return statement*, with the word
 ``return`` followed by an expression. Functions that return values
@@ -80,7 +80,7 @@ there can be any number of statements executed before the return
 statement. Read, follow, and run the example program
 :file:`return2.cs`:
 
-.. literalinclude:: ../../source/examples/return2/return2.cs
+.. literalinclude:: ../../examples/introcs/return2/return2.cs
    :linenos:
 
 Many have a hard time following the flow of execution with functions.
@@ -143,7 +143,7 @@ whatever further use you want.  After returning that value,
 printing is one possibility, done in
 :repsrc:`addition2/addition2.cs`:
 
-.. literalinclude:: ../../source/examples/addition2/addition2.cs
+.. literalinclude:: ../../examples/introcs/addition2/addition2.cs
 
 This example constructs the sentence using the string ``+`` operator.
 Generating a string with substitutions using a format string 
@@ -169,7 +169,7 @@ have the same form as for ``Console.Write``, but the formatted string is
 Here is a revised version of the function ``SumProblemString``, 
 from example :repsrc:`addition2a/addition2a.cs`:
 
-.. literalinclude:: ../../source/examples/addition2a/addition2a.cs
+.. literalinclude:: ../../examples/introcs/addition2a/addition2a.cs
    :start-after: chunk
    :end-before: chunk
    :dedent: 3

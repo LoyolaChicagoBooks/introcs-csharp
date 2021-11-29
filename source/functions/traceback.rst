@@ -14,7 +14,7 @@ the useful information.
 This program below, :repsrc:`traceback/traceback.cs` takes user input and is designed to bomb out with
 bad input in both an obvious and in a subtle way.  
 
-.. literalinclude:: ../../source/examples/traceback/traceback.cs
+.. literalinclude:: ../../examples/introcs/traceback/traceback.cs
 
 The remainder part works fine if the user enters integers other than 0, 
 but it will blow up if the user enters 0 for the divisor.

@@ -24,7 +24,7 @@ then you can then use the name of the fixed data value in
 expressions in any function in the class. 
 A simple example program is :repsrc:`constant/constant.cs`:
 
-.. literalinclude:: ../../source/examples/constant/constant.cs
+.. literalinclude:: ../../examples/introcs/constant/constant.cs
 
 See that ``PI`` is used in two functions without being declared locally.
 

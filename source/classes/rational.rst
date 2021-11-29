@@ -28,7 +28,7 @@ we operate on a single rational number, and do calculation with a pair,
 and parse string literals.  The code is from 
 :repsrc:`test_rational/test_rational.cs`:
 
-.. literalinclude:: ../../source/examples/test_rational/test_rational.cs
+.. literalinclude:: ../../examples/introcs/test_rational/test_rational.cs
 
 One non-obvious method is ``CompareTo``.  This one method allows
 all the usual comparison operators to be used with the result.  
@@ -79,7 +79,7 @@ that is called by the constructor:
 
 .. index::  private; helping method
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: normalize chunk
    :end-before: chunk
 
@@ -107,7 +107,7 @@ Note that by the time we
 are done constructing a new Rational, it is in this normalized form:  lowest
 terms and positive denominator:
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: constructor chunk
    :end-before: chunk
 
@@ -146,13 +146,13 @@ and this is fine.  The reverse is not true:
 The Rational class has the usual getter methods, to access the
 obvious parts of its state:
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: getter chunk
    :end-before: chunk
  
 We certainly want to be able to display a Rational as a string version:
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: ToString chunk
    :end-before: chunk
 
@@ -164,7 +164,7 @@ a negative Rational will always have a leading "-" as in "-5/9" rather than
 With a Rational, several other conversions make sense:  to ``double``
 and ``decimal`` approximations.
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: ToDouble chunk
    :end-before: chunk
 
@@ -176,7 +176,7 @@ We have a constructor!  We can easily use it.  The reciprocal
 swaps the numerator and denominator.  It is also easy to negate
 a Rational:
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: Reciprocal chunk
    :end-before: chunk
 
@@ -203,7 +203,7 @@ That last case is the trickiest.  For example ``"123.45"`` becomes 12345/100
 Note that there were originally *two* digits after the decimal point 
 and then the denominator gets *two* zeroes to have the right power of 10:
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: Parse chunk
    :end-before: chunk
 
@@ -214,7 +214,7 @@ We can deal with the current object without using dot notation.  What if we are
 dealing with *more than one* Rational, the current one *and* another one, 
 like the parameter in Multiply:
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: Multiply chunk
    :end-before: chunk
 
@@ -224,7 +224,7 @@ and dot notation for another
 ``f.num`` and ``f.denom`` refer to fields for the other 
 ``Rational``, the parameter ``f``.
 
-.. literalinclude:: ../../source/examples/rational_nunit/rational.cs
+.. literalinclude:: ../../examples/introcs/rational_nunit/rational.cs
    :start-after: Multiply chunk
    :end-before: Divide chunk
 

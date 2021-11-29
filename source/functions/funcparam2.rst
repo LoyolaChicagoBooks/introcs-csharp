@@ -15,7 +15,7 @@ a function, ``SumProblem``,  with two parameters
 to make it easy to display many sum problems. Read and
 follow the code, and then run:
 
-.. literalinclude:: ../../source/examples/addition1/addition1.cs
+.. literalinclude:: ../../examples/introcs/addition1/addition1.cs
 
 .. index:: parameter; actual and formal
    actual parameter 

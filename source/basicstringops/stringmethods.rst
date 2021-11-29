@@ -158,7 +158,7 @@ Here is a brief example of a function using several of these methods,
 
 :repsrc:`parenthesized/parenthesized.cs`: 
  
-.. literalinclude:: ../../source/examples/parenthesized/parenthesized.cs
+.. literalinclude:: ../../examples/introcs/parenthesized/parenthesized.cs
    :linenos:
  
 It is a silly assumption, but until we get to :ref:`If-Statements`, 

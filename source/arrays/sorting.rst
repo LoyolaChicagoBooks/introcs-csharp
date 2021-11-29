@@ -39,7 +39,7 @@ Exchanging Array Elements
 We'll begin by introducing you to a simple method, whose only purpose in life is to 
 swap two data values at positions ``m`` and ``n`` in a given integer array:
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-exchange-begin
    :end-before: chunk
    :linenos:
@@ -130,7 +130,7 @@ Each such exchange removes precisely one inversion; therefore,
 Bubble Sort requires :math:`O(N^2)` exchanges.
 
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-bubblesort-begin
    :end-before: chunk
    :linenos:
@@ -148,7 +148,7 @@ Selection Sort
 The Selection Sort algorithm works to minimize the amount of data movement,
 hence the number of ``Exchange()`` calls. 
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-selectionsort-begin
    :end-before: chunk
    :linenos:
@@ -286,7 +286,7 @@ list from the bottom of the array. We repeatedly insert the next element
 into the sorted part of the array by sliding it down (using our familiar
 ``Exchange()`` method) to its proper position.
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-insertionsort-begin
    :end-before: chunk
    :linenos:
@@ -409,7 +409,7 @@ In this first example, we sort all subsequences of elements 8 apart,
 then 4, 2, and 1. Please note that these intervals are to show how the 
 method works--not how the method works *best*.
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-shellsort-begin
    :end-before: chunk
    :linenos:
@@ -417,7 +417,7 @@ method works--not how the method works *best*.
 
 
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-shellsort-naive-begin
    :end-before: chunk
    :linenos:
@@ -472,7 +472,7 @@ This results in a sequence 1, 3, 7, 15, 31....
 Here is the improvement to our naive method that dynamically calculates
 the intervals based on the first suggestion of Knuth:
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-shellsort-better-begin
    :end-before: chunk
    :linenos:
@@ -505,7 +505,7 @@ behavior, it has a worst case performance of :math:`O(N ^2)`.
    
    We'll have a bit more to say about this algorithm in our discussion of recursion.
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-quicksort-begin
    :end-before: chunk
    :linenos:
@@ -553,7 +553,7 @@ the data are in random order.
 
 The following code generates a random array:
 
-.. literalinclude:: ../../source/examples/sorting/sorting.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting.cs
    :start-after: chunk-random-begin
    :end-before: chunk
    :linenos:
@@ -607,7 +607,7 @@ of each of the sorting algorithms.
 As all of the tests follow the same pattern, 
 we're going to look at the basic variable setup first, and then one test.
 
-.. literalinclude:: ../../source/examples/sorting/sorting_demo.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting_demo.cs
    :start-after: chunk-drivervars-begin
    :end-before: chunk
    :dedent: 6
@@ -628,7 +628,7 @@ The variables declared here are to set up the apparatus:
 
 - ``data``:  The array to be sorted.
 
-.. literalinclude:: ../../source/examples/sorting/sorting_demo.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting_demo.cs
    :start-after: chunk-driverparameters-begin
    :end-before: chunk
 
@@ -638,7 +638,7 @@ often try to make it possible to run them with minimal user interaction. For the
 of teaching, we wanted to make it possible to run it with or without command-line parameters.
 
 
-.. literalinclude:: ../../source/examples/sorting/sorting_demo.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting_demo.cs
    :start-after: chunk-driverapparatus-begin
    :end-before: chunk
    :dedent: 6
@@ -649,7 +649,7 @@ for timing first, run the desired sorting algorithm (bubble sort in this case),
 and report the timing results.  Since the timing setup and reporting is 
 always done the same way, they actions are placed in helping methods:
 
-.. literalinclude:: ../../source/examples/sorting/sorting_demo.cs
+.. literalinclude:: ../../examples/introcs/sorting/sorting_demo.cs
    :start-after: chunk timing
    :end-before: chunk
    :dedent: 6

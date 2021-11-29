@@ -13,7 +13,7 @@ those gathered with you to sing "Happy Birthday to Emily".
 We can make C# display the song. *Read*, and run if you like,
 the example program :repsrc:`birthday1/birthday1.cs`:
 
-.. literalinclude:: ../../source/examples/birthday1/birthday1.cs
+.. literalinclude:: ../../examples/introcs/birthday1/birthday1.cs
 
 Here the song is just a part of the ``Main`` method that is in 
 every program.  
@@ -52,7 +52,7 @@ This *does* your whole program and is not attached to an object.)
 
 *Read* for now:
 
-.. literalinclude:: ../../source/examples/birthday2/birthday2.cs
+.. literalinclude:: ../../examples/introcs/birthday2/birthday2.cs
    :linenos:
        
 There are several parts of the syntax for a function definition to

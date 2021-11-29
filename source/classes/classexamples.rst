@@ -25,7 +25,7 @@ Compare yours to
 
 We include a testing class at the end of this file.  
 
-.. literalinclude:: ../../source/examples/example_class/example_class.cs
+.. literalinclude:: ../../examples/introcs/example_class/example_class.cs
    :start-after:  test class
 
 
@@ -77,7 +77,7 @@ state (no data) so we do not need any constructor parameters.
 We can imagine a demonstration class ``AveragerDemo`` with a ``Main`` method
 containing
 
-.. literalinclude:: ../../source/examples/averager/averager_demo.cs
+.. literalinclude:: ../../examples/introcs/averager/averager_demo.cs
    :start-after:  chunk
    :end-before: chunk
 
@@ -129,7 +129,7 @@ You might think how to create this class....
 
 The full ``Averager`` code follows:
 
-.. literalinclude:: ../../source/examples/averager/averager.cs
+.. literalinclude:: ../../examples/introcs/averager/averager.cs
 
 Several things to note:
 
@@ -239,7 +239,7 @@ In :ref:`igame-interface-exercise` you can use a Game object.
 Here is a procedural game version, example file 
 :repsrc:`static_version/static_version.cs`
 
-.. literalinclude:: ../../source/examples/static_version/static_version.cs
+.. literalinclude:: ../../examples/introcs/static_version/static_version.cs
    :start-after:  chunk
    :end-before: chunk
 
@@ -408,7 +408,7 @@ from a constructor that just sets the clock's time to midnight.
 We can imagine a demonstration class ``ClockDemo`` with a ``Main`` method
 containing
 
-.. literalinclude:: ../../source/examples/clock/clock_demo.cs
+.. literalinclude:: ../../examples/introcs/clock/clock_demo.cs
    :start-after:  chunk
    :end-before: chunk
 
@@ -465,7 +465,7 @@ advance, rolling over back to 0 when the limit it reached.
 Throw in a getter and a setter for the count and we can have the following
 class:
 
-.. literalinclude:: ../../source/examples/clock/rollover_counter.cs
+.. literalinclude:: ../../examples/introcs/clock/rollover_counter.cs
 
 Note how concise the ``Advance`` method is!  With the remainder operation,
 we do not need an ``if`` statement.  
@@ -479,7 +479,7 @@ Finally we introduce the ``Clock`` class itself.
 We display the entire code first, and follow it with comments about a number
 of new features.
 
-.. literalinclude:: ../../source/examples/clock/clock.cs
+.. literalinclude:: ../../examples/introcs/clock/clock.cs
 
 #.  First the principal reason for this example:  We illustrate 
     writing a class where the instance variables are objects of a different

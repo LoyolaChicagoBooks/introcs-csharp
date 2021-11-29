@@ -7,7 +7,7 @@ Here is example program :repsrc:`birthday3/birthday3.cs` where we add a function
 ``HappyBirthdayAndre``, and call them both. Guess what happens, and
 then load and try it:
 
-.. literalinclude:: ../../source/examples/birthday3/birthday3.cs
+.. literalinclude:: ../../examples/introcs/birthday3/birthday3.cs
 
 Again, definitions are remembered and execution starts in ``Main``.  
 The order in which the function definitions are given does not matter

@@ -57,7 +57,7 @@ to consider, it could be 4 or 5 steps.  Note that :math:`4 < log_2 17 < 5`.
 Now that we've seen how the method works, here is the code 
 in :repsrc:`binary_searching/binary_searching.cs` that does the work:
 
-.. literalinclude:: ../../source/examples/binary_searching/binary_searching.cs
+.. literalinclude:: ../../examples/introcs/binary_searching/binary_searching.cs
    :start-after: chunk-binarysearch-begin
    :end-before: chunk
    :linenos:
@@ -98,7 +98,7 @@ out the steps visually, as in the introduction to this section.
 It also references previous example projects: functions from files 
 :repsrc:`searching/extract_from_string.cs` and :repsrc:`sorting/sorting.cs`.
 
-.. literalinclude:: ../../source/examples/binary_searching/binary_searching_demo.cs
+.. literalinclude:: ../../examples/introcs/binary_searching/binary_searching_demo.cs
    :start-after: chunk
    :end-before: chunk
    :linenos:

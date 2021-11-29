@@ -29,7 +29,7 @@ that can be used directly for multiple programs.  We can create functions
 in project ui's file :repsrc:`uif.cs <ui/uif.cs>`.  
 We explain the namespace line after the code:
 
-.. literalinclude:: ../../source/examples/ui/uif.cs
+.. literalinclude:: ../../examples/introcs/ui/uif.cs
 
 .. index:: namespace
    IntroCS namespace 
@@ -66,7 +66,7 @@ are all marked ``public``, so that any class can use them.
 We can write a modified example addition program, :repsrc:`addition3/addition3.cs`,
 as an example of using ``UIF``:
 
-.. literalinclude:: ../../source/examples/addition3/addition3.cs
+.. literalinclude:: ../../examples/introcs/addition3/addition3.cs
 
 To allow access to UIF, we have added the IntroCS namespace for the class.
 To reference the static functions in the different class ``UIF``, we put ``UIF.``

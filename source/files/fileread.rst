@@ -24,7 +24,7 @@ current directory when the program runs.
 Run the example program
 :repsrc:`print_first_file/print_first_file.cs`, shown below:
 
-.. literalinclude:: ../../source/examples/print_first_file/print_first_file.cs
+.. literalinclude:: ../../examples/introcs/print_first_file/print_first_file.cs
 
 Now you have read a file and used it in a program.
 
@@ -65,7 +65,7 @@ The example program ``print_file_lines.cs``
 reads and prints the contents of a file specified by the 
 user, one line at a time:
 
-.. literalinclude:: ../../source/examples/print_file_lines/print_file_lines.cs
+.. literalinclude:: ../../examples/introcs/print_file_lines/print_file_lines.cs
     
 .. index:: var
    type; var
@@ -159,7 +159,7 @@ Below and in :repsrc:`sum_file/sum_file.cs` is a more elaborate, complete exampl
 that also exits gracefully if you give a bad file name.
 If you give a good file name, it skips lines that contain only whitespace.  
 
-.. literalinclude:: ../../source/examples/sum_file/sum_file.cs
+.. literalinclude:: ../../examples/introcs/sum_file/sum_file.cs
 
 A useful function used in ``Main`` for avoiding filename typo errors 
 is ``File.Exists`` in the ``System.IO`` namespace :: 
@@ -237,7 +237,7 @@ Example Copy to Upper Case
 Here is a simple fragment from example file :repsrc:`copy_upper/copy_upper.cs`.
 It copies a file line by line to a new file in upper case:
 
-.. literalinclude:: ../../source/examples/copy_upper/copy_upper.cs
+.. literalinclude:: ../../examples/introcs/copy_upper/copy_upper.cs
    :start-after: chunk
    :end-before:  chunk
    :dedent: 9
