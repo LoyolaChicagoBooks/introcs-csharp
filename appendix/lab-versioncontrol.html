@@ -1,334 +1,107 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>18.10. Lab: Version Control &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab: Version Control &mdash; Introduction to Computer Science in C# 29 Nov 2021 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
-    <link rel="up" title="18. Appendix" href="appendix.html" />
-    <link rel="next" title="18.11. Mercurial and Teamwork" href="hgteamwork.html" />
-    <link rel="prev" title="18.9. Group Project" href="project.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="next" title="Mercurial and Teamwork" href="hgteamwork.html" />
+    <link rel="prev" title="Group Project" href="project.html" /> 
+</head>
 
-  </head>
-  <body role="document">
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #922247" >
+            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
+          </a>
+              <div class="version">
+                29 Nov 2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="appendix.html">Appendix</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="monotools.html">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Group Project</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
 
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">
-          COMP 170</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="../genindex.html">Index</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="appendix.html">18. Appendix</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="monotools.html">18.1. Development Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
-<li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">18.10. Lab: Version Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
-<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">18.10. Lab: Version Control</a><ul>
-<li><a class="reference internal" href="#goals">18.10.1. Goals</a><ul>
-<li><a class="reference internal" href="#before-we-proceed">18.10.1.1. Before We Proceed</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#steps">18.10.2. Steps</a><ul>
-<li><a class="reference internal" href="#create-bitbucket-org-account">18.10.2.1. Create Bitbucket.org account</a></li>
-<li><a class="reference internal" href="#create-repository-at-bitbucket">18.10.2.2. Create repository at Bitbucket</a></li>
-<li><a class="reference internal" href="#set-up-your-mercurial-commit-username">18.10.2.3. Set up your Mercurial commit username</a></li>
-<li><a class="reference internal" href="#clone-a-repository-from-bitbucket">18.10.2.4. Clone a repository from Bitbucket</a></li>
-<li><a class="reference internal" href="#add-an-hgignore-and-hello-world-file-to-your-project">18.10.2.5. Add an .hgignore and Hello World file to your project</a></li>
-<li><a class="reference internal" href="#create-an-initial-structure-for-your-project">18.10.2.6. Create an initial structure for your project</a></li>
-<li><a class="reference internal" href="#create-and-test-content">18.10.2.7. Create and Test Content</a></li>
-<li><a class="reference internal" href="#verify-that-your-stuff-really-made-it-to-bitbucket-org">18.10.2.8. Verify that your stuff really made it to bitbucket.org</a></li>
-<li><a class="reference internal" href="#working-between-lab-and-home-or-home-and-lab">18.10.2.9. Working between lab and home (or home and lab)</a></li>
-<li><a class="reference internal" href="#getting-our-examples">18.10.2.10. Getting our examples</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="project.html" title="Previous Chapter: 18.9. Group Project">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-  </li>
-  <li>
-    <a href="hgteamwork.html" title="Next Chapter: 18.11. Mercurial and Teamwork">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/appendix/lab-versioncontrol.txt"
-     rel="nofollow">Source</a>
-</div></li>
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
         </div>
-    </div>
-  </div>
+      </div>
+    </nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 content">
-      
-  <div class="section" id="lab-version-control">
-<span id="lab-versioncontrol"></span><span id="index-0"></span><h1>18.10. Lab: Version Control<a class="headerlink" href="#lab-version-control" title="Permalink to this headline">¶</a></h1>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to Computer Science in C#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="appendix.html">Appendix</a> &raquo;</li>
+      <li>Lab: Version Control</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/appendix/lab-versioncontrol.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lab-version-control">
+<span id="lab-versioncontrol"></span><span id="index-0"></span><h1>Lab: Version Control<a class="headerlink" href="#lab-version-control" title="Permalink to this headline"></a></h1>
 <p>Modern software development requires an early introduction source code
 management, also known as version control. While source code
 management is frequently touted as being beneficial to a <em>project
@@ -340,7 +113,7 @@ the days of carrying stuff around on USB drives and sending e-mail
 attachments.</p>
 <p>There are numerous options for version control. In the free/open
 source community, a number of solutions have emerged, including some
-old (CVS, Subversion) and some new (Mercurial, Git, and Bazaar). We&#8217;re
+old (CVS, Subversion) and some new (Mercurial, Git, and Bazaar). We’re
 particularly fond of the Mercurial system. A key reason for our choice
 is that there is an excellent cloud-based solution to host your
 projects known as Bitbucket (<a class="reference external" href="http://bitbucket.org">http://bitbucket.org</a>).</p>
@@ -355,125 +128,125 @@ central version.  You can add and change files.  There are several
 layers insulating changes to local files from changes to the
 central repository:</p>
 <ul class="simple">
-<li>You must explicitly <em>add</em> any new file names you want the repository to track.</li>
-<li>Even on a tracked file, you must <em>commit</em> changes to the local repository.</li>
-<li>For the committed changes to get to the central repository, you must <em>push</em> them.</li>
-<li>You have control over what files get ignored.</li>
+<li><p>You must explicitly <em>add</em> any new file names you want the repository to track.</p></li>
+<li><p>Even on a tracked file, you must <em>commit</em> changes to the local repository.</p></li>
+<li><p>For the committed changes to get to the central repository, you must <em>push</em> them.</p></li>
+<li><p>You have control over what files get ignored.</p></li>
 </ul>
 <p>Later, when you want the latest changes to the central repository to get to your
 site, you need to <em>pull</em> data from the central repository, and then explicitly
 <em>update</em> your local repository, to incorporate the new data from the central
 repository.</p>
-<div class="section" id="goals">
-<h2>18.10.1. Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
-<p>In this lab, we&#8217;re going to learn:</p>
+<section id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline"></a></h2>
+<p>In this lab, we’re going to learn:</p>
 <ol class="arabic simple">
-<li>How to create a source code repository.</li>
-<li>How to add files and folders to a repository and track them.</li>
-<li>How to make sure certain files and folders are not kept in the repository.</li>
-<li>How to push your changes to a remote repository (at Bitbucket.org).</li>
-<li>How to do your work at home and in the lab.</li>
-<li>How to get our book, examples, and projects (now that that you know how
-to use Mercurial).</li>
+<li><p>How to create a source code repository.</p></li>
+<li><p>How to add files and folders to a repository and track them.</p></li>
+<li><p>How to make sure certain files and folders are not kept in the repository.</p></li>
+<li><p>How to push your changes to a remote repository (at Bitbucket.org).</p></li>
+<li><p>How to do your work at home and in the lab.</p></li>
+<li><p>How to get our book, examples, and projects (now that that you know how
+to use Mercurial).</p></li>
 </ol>
-<div class="section" id="before-we-proceed">
-<h3>18.10.1.1. Before We Proceed<a class="headerlink" href="#before-we-proceed" title="Permalink to this headline">¶</a></h3>
+<section id="before-we-proceed">
+<h3>Before We Proceed<a class="headerlink" href="#before-we-proceed" title="Permalink to this headline"></a></h3>
 <p>You should know that this lab is designed to be repeated as many times
 as needed. You can create as many repositories as you wish, subject to
 the limitations at Bitbucket.org, and may want to create different
 repositories for different needs (one for yourself, one for you and
 your partner in pair programming, etc.) This lab assumes you are
-starting with a repository for your own work. We&#8217;ll include a step for
+starting with a repository for your own work. We’ll include a step for
 how to add a <em>collaborator</em> to the project.</p>
 <p>Future labs will talk about additional things you need to know when it comes
 to collaboration, so please view this lab as a <em>beginning</em> aimed at helping
 you to start using version control right away for your own projects.</p>
-</div>
-</div>
-<div class="section" id="steps">
-<h2>18.10.2. Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="create-bitbucket-org-account">
-<span id="index-1"></span><h3>18.10.2.1. Create Bitbucket.org account<a class="headerlink" href="#create-bitbucket-org-account" title="Permalink to this headline">¶</a></h3>
-<p>We&#8217;re going to begin by creating a remote repository for our work. The
+</section>
+</section>
+<section id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline"></a></h2>
+<section id="create-bitbucket-org-account">
+<span id="index-1"></span><h3>Create Bitbucket.org account<a class="headerlink" href="#create-bitbucket-org-account" title="Permalink to this headline"></a></h3>
+<p>We’re going to begin by creating a remote repository for our work. The
 advantage of doing so is that we get a <em>hosted</em> repository that we can
 use to push/pull our work. (Unlike a dangerous stunt, you <em>want</em> to be able
 to try this at home, too!)</p>
 <p>Signing up for a repository at <a class="reference external" href="http://bitbucket.org">http://bitbucket.org</a> is easy. From the
 landing page, just click on the option for the <em>Free Plan</em>. This allows
 you to create any number of public/private repositories with support
-for up to 5 users. This is all you&#8217;ll need for your work in this course.</p>
-<p>Once you&#8217;ve created your account (and confirmed it, if required) you
+for up to 5 users. This is all you’ll need for your work in this course.</p>
+<p>Once you’ve created your account (and confirmed it, if required) you
 are good to go for the rest of this lab!</p>
-</div>
-<div class="section" id="create-repository-at-bitbucket">
-<h3>18.10.2.2. Create repository at Bitbucket<a class="headerlink" href="#create-repository-at-bitbucket" title="Permalink to this headline">¶</a></h3>
-<p>Now we&#8217;ll create a first repository at Bitbucket.org.</p>
-<p>Go to <code class="docutils literal"><span class="pre">Repositories</span> <span class="pre">-&gt;</span> <span class="pre">Create</span> <span class="pre">Repository</span></code> (the option is at the bottom
-of the list of menu options). You&#8217;ll see this screen:</p>
+</section>
+<section id="create-repository-at-bitbucket">
+<h3>Create repository at Bitbucket<a class="headerlink" href="#create-repository-at-bitbucket" title="Permalink to this headline"></a></h3>
+<p>Now we’ll create a first repository at Bitbucket.org.</p>
+<p>Go to <code class="docutils literal notranslate"><span class="pre">Repositories</span> <span class="pre">-&gt;</span> <span class="pre">Create</span> <span class="pre">Repository</span></code> (the option is at the bottom
+of the list of menu options). You’ll see this screen:</p>
 <a class="reference internal image-reference" href="../_images/hgcreaterepository.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgcreaterepository.png" style="width: 350pt;" /></a>
-<p>You&#8217;ll need to fill in or select the following options:</p>
+<p>You’ll need to fill in or select the following options:</p>
 <ul class="simple">
-<li>Name: A short name for your project. You are encouraged to keep this
+<li><p>Name: A short name for your project. You are encouraged to keep this
 simple.  If you are using this for all of your work in COMP 170
 (which is fine) you might name the repository after your
 initials. So if your name is Linus Torvalds, you could give a short
-name like <em>LinusTorvaldsCOMP170</em> or <em>LTCOMP170</em>.</li>
-<li>Repository Type: Select Mercurial. Yes, we realize that Xamarin Studio
+name like <em>LinusTorvaldsCOMP170</em> or <em>LTCOMP170</em>.</p></li>
+<li><p>Repository Type: Select Mercurial. Yes, we realize that Xamarin Studio
 supports Git natively, but for the reasons mentioned earlier, we
 have chosen Mercurial. We will allow you to use Git on your own if
 you can figure it out and use it properly. But this lab assumes
-Mercurial.</li>
-<li>Language: You can select anything you like here. We do C# for the
-most part in this class, so we recommend that you select it.</li>
-<li>Description: You can give any description you like. If you are
-working with a partner please list both you and your partner&#8217;s name
-in the description.</li>
-<li>Web Site: Optional</li>
-<li>Private checkbox should be checked.</li>
+Mercurial.</p></li>
+<li><p>Language: You can select anything you like here. We do C# for the
+most part in this class, so we recommend that you select it.</p></li>
+<li><p>Description: You can give any description you like. If you are
+working with a partner please list both you and your partner’s name
+in the description.</p></li>
+<li><p>Web Site: Optional</p></li>
+<li><p>Private checkbox should be checked.</p></li>
 </ul>
 <p>So just go ahead and create your first repository. You can always
 create more of them later.</p>
 <p>Here is an example of a filled out form:</p>
 <a class="reference internal image-reference" href="../_images/hgcreaterepository2.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgcreaterepository2.png" style="width: 350pt;" /></a>
-</div>
-<div class="section" id="set-up-your-mercurial-commit-username">
-<h3>18.10.2.3. Set up your Mercurial commit username<a class="headerlink" href="#set-up-your-mercurial-commit-username" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="set-up-your-mercurial-commit-username">
+<h3>Set up your Mercurial commit username<a class="headerlink" href="#set-up-your-mercurial-commit-username" title="Permalink to this headline"></a></h3>
 <p>If you in a place where you have a permanent home directory,
 like on your machine or in the Linux Lab,
-create a file named <code class="docutils literal"><span class="pre">.hgrc</span></code> in <em>your home directory</em>. Your home directory is
+create a file named <code class="docutils literal notranslate"><span class="pre">.hgrc</span></code> in <em>your home directory</em>. Your home directory is
 where you are dumped when you open a DOS or Linux/OS X terminal.  This is <em>not</em>
 inside your repository.
 This file must contain the following lines, with the part after the equal sign
 personalized for you:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="na">[ui]</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[ui]</span>
 <span class="n">username</span> <span class="p">=</span> <span class="n">John</span> <span class="n">Doe</span> <span class="p">&lt;</span><span class="n">johndoe@johndoe</span><span class="p">.</span><span class="n">com</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>It is a convention to give a name and email address, though
 it does not need to match the email address you gave when
 signing up for bitbucket.</p>
-<p>Creating this file saves you the trouble of having to pass the <code class="docutils literal"><span class="pre">-u</span> <span class="pre">username</span></code>
-option to <code class="docutils literal"><span class="pre">hg</span></code> each time you do a <em>commit</em> operation.</p>
+<p>Creating this file saves you the trouble of having to pass the <code class="docutils literal notranslate"><span class="pre">-u</span> <span class="pre">username</span></code>
+option to <code class="docutils literal notranslate"><span class="pre">hg</span></code> each time you do a <em>commit</em> operation.</p>
 <p>You can put this file in your home directory in Windows labs, but it disappears.
 You might want to keep an extra copy in your repository, and copy it to the Windows
 home folder when in the lab.</p>
 <p>As a gentle reminder, your home directory on Windows can be a bit difficult to find.
 The easiest way is to use your editor to locate your home folder.
 When in the DOS prompt, you will also see the path to your directory as part of the prompt.
-For example, on Windows 7, you will see <code class="docutils literal"><span class="pre">C:\Users\johndoe</span></code>.</p>
+For example, on Windows 7, you will see <code class="docutils literal notranslate"><span class="pre">C:\Users\johndoe</span></code>.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">To ensure that you did this step correctly, please open a <em>new</em> terminal or DOS
-window at this time and use the <code class="docutils literal"><span class="pre">ls</span></code> or <code class="docutils literal"><span class="pre">dir</span></code> command to verify that the <code class="docutils literal"><span class="pre">.hgrc</span></code>
+<p class="admonition-title">Warning</p>
+<p>To ensure that you did this step correctly, please open a <em>new</em> terminal or DOS
+window at this time and use the <code class="docutils literal notranslate"><span class="pre">ls</span></code> or <code class="docutils literal notranslate"><span class="pre">dir</span></code> command to verify that the <code class="docutils literal notranslate"><span class="pre">.hgrc</span></code>
 file is indeed present in your home directory. If it is in any other folder, Mercurial
-(the <strong>hg</strong> command) will not be able to find it&#8211;and you will receive an error.</p>
+(the <strong>hg</strong> command) will not be able to find it–and you will receive an error.</p>
 </div>
-</div>
-<div class="section" id="clone-a-repository-from-bitbucket">
-<h3>18.10.2.4. Clone a repository from Bitbucket<a class="headerlink" href="#clone-a-repository-from-bitbucket" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="clone-a-repository-from-bitbucket">
+<h3>Clone a repository from Bitbucket<a class="headerlink" href="#clone-a-repository-from-bitbucket" title="Permalink to this headline"></a></h3>
 <p>Open a terminal or DOS command shell.</p>
 <p>On Windows, the Mono shell is not appropriate. You can get a regular DOS
-command shell by clicking the start menu and typing <code class="docutils literal"><span class="pre">cmd</span></code> and into the text box
+command shell by clicking the start menu and typing <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and into the text box
 at the bottom of the start menu, and pressing return.</p>
 <p>In the terminal/DOS-shell navigate with to the the directory
 where you want to place the repository
@@ -481,34 +254,34 @@ as a sub-directory.  This could be your home directory on your machine or
 a flash drive in a lab.</p>
 <p><strong>Windows only</strong>:
 To navigate in a DOS-Shell to a flash drive, you need to enter the short command:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">E</span><span class="p">:</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">E</span><span class="p">:</span>
 </pre></div>
 </div>
 <p>or possible another drive letter followed by a colon.
 DOS drive letters are annoying because they be different another time with different
-resources loaded.  Once you see the proper drive displayed, <code class="docutils literal"><span class="pre">cd</span></code> to the desired
+resources loaded.  Once you see the proper drive displayed, <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the desired
 directory.</p>
 <p>If all has gone well at bitbucket, you should be able to look at your
 bitbucket site and see your new repository on the
 list of repositories .</p>
-<p>For example, the co-author&#8217;s new repository, <code class="docutils literal"><span class="pre">gkt170</span></code>, shows up on
-the list of repositories (the dropdown) as <code class="docutils literal"><span class="pre">gkthiruvathukal/gkt170</span></code>.</p>
+<p>For example, the co-author’s new repository, <code class="docutils literal notranslate"><span class="pre">gkt170</span></code>, shows up on
+the list of repositories (the dropdown) as <code class="docutils literal notranslate"><span class="pre">gkthiruvathukal/gkt170</span></code>.</p>
 <p>So you can now go ahead by selecting this newly created repository
 from the list of repositories.  If all goes well, you should see the
 following screen:</p>
 <a class="reference internal image-reference" href="../_images/hgrepositorysummary.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgrepositorysummary.png" style="height: 300pt;" /></a>
 <p>Somewhere on this screen, you should see this text:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Clone</span> <span class="k">this</span> <span class="nf">repository</span> <span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="m">546</span> <span class="n">bytes</span><span class="p">):</span> <span class="n">HTTPS</span> <span class="p">/</span> <span class="n">SSH</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Clone</span> <span class="k">this</span> <span class="nf">repository</span> <span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="m">546</span> <span class="n">bytes</span><span class="p">):</span> <span class="n">HTTPS</span> <span class="p">/</span> <span class="n">SSH</span>
 <span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//yourusername@bitbucket.org/yourusername/yourrepository</span>
 </pre></div>
 </div>
-<p>Copy the command you see in the browser starting <code class="docutils literal"><span class="pre">hg</span> <span class="pre">clone</span></code>, and paste it in
+<p>Copy the command you see in the browser starting <code class="docutils literal notranslate"><span class="pre">hg</span> <span class="pre">clone</span></code>, and paste it in
 as a command in your terminal/DOS-shell window.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170</span>
 </pre></div>
 </div>
 <p>You will see some output:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">http</span> <span class="n">authorization</span> <span class="n">required</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">http</span> <span class="n">authorization</span> <span class="n">required</span>
 <span class="n">realm</span><span class="p">:</span> <span class="n">Bitbucket</span><span class="p">.</span><span class="n">org</span> <span class="n">HTTP</span>
 <span class="n">user</span><span class="p">:</span> <span class="n">gkthiruvathukal</span>
 <span class="n">password</span><span class="p">:</span>
@@ -520,30 +293,30 @@ as a command in your terminal/DOS-shell window.</p>
 </div>
 <p>You have created a copy of the (empty) bitbucket repository in a
 subdirectory named the same as yourrepository (gkt170 in the example).
-The is the &#8220;checkout directory&#8221;, the top level of your copy.</p>
+The is the “checkout directory”, the top level of your copy.</p>
 <p>Again, because the repository at Bitbucket is presently empty, the
 above output actually makes sense. There are no files to be
-updated. We&#8217;ll learn more about what this output means later. It is
+updated. We’ll learn more about what this output means later. It is
 possible to get <em>unresolved</em> files when you make changes that
-introduce conflicts. We&#8217;re going to do whatever we can to avoid these
+introduce conflicts. We’re going to do whatever we can to avoid these
 for the small projects in our course work. However, when working in
 teams, it will become especially important that you and your
 teammate(s) are careful to communicate changes you are making,
 especially when changing the same files in a project.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">A version control system doesn&#8217;t replace the need for human communication and being
+<p class="admonition-title">Warning</p>
+<p>A version control system doesn’t replace the need for human communication and being
 organized.</p>
 </div>
-</div>
-<div class="section" id="add-an-hgignore-and-hello-world-file-to-your-project">
-<h3>18.10.2.5. Add an .hgignore and Hello World file to your project<a class="headerlink" href="#add-an-hgignore-and-hello-world-file-to-your-project" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="add-an-hgignore-and-hello-world-file-to-your-project">
+<h3>Add an .hgignore and Hello World file to your project<a class="headerlink" href="#add-an-hgignore-and-hello-world-file-to-your-project" title="Permalink to this headline"></a></h3>
 <p>Change directory into the top-level directory of your local repository.
-That should mean <code class="docutils literal"><span class="pre">cd</span></code> to the directory whose name matches the
+That should mean <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the directory whose name matches the
 bitbucket repository name.</p>
-<p>The following is an example of a &#8220;dot hgignore&#8221; file.  Mercurial will neither
+<p>The following is an example of a “dot hgignore” file.  Mercurial will neither
 list or otherwise pay attention the files in this list:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span># This indicates that we are using shell-like matching logic
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># This indicates that we are using shell-like matching logic
 #    instead of regular expressions.
 syntax: glob
 # For Mac users
@@ -560,52 +333,50 @@ In case you compiled your own stuff, we ignore *.exe and *.dll
 *.userprefs
 </pre></div>
 </div>
-<p>Here is a brief explanation of what we&#8217;ve included here and why:</p>
+<p>Here is a brief explanation of what we’ve included here and why:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">syntax:</span> <span class="pre">glob</span></code> indicates that uses the &#8220;glob&#8221; syntax, which comes
+<li><p><code class="docutils literal notranslate"><span class="pre">syntax:</span> <span class="pre">glob</span></code> indicates that uses the “glob” syntax, which comes
 from MS-DOS (the command prompt still found on Windows). Glob syntax
 allows you to do special things like match all files having a
-certain extension (e.g. <code class="docutils literal"><span class="pre">*.exe</span></code> matches <code class="docutils literal"><span class="pre">Hello.exe</span></code> and any
-other filename with extension .exe.)</li>
-<li><code class="docutils literal"><span class="pre">Thumbs.db</span></code> and <code class="docutils literal"><span class="pre">.DS_Store</span></code>. Unfortunately, the Mac is still
+certain extension (e.g. <code class="docutils literal notranslate"><span class="pre">*.exe</span></code> matches <code class="docutils literal notranslate"><span class="pre">Hello.exe</span></code> and any
+other filename with extension .exe.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Thumbs.db</span></code> and <code class="docutils literal notranslate"><span class="pre">.DS_Store</span></code>. Unfortunately, the Mac is still
 notorious for generating temporary files that serve no purpose,
 except on OS X. In general, we try to keep these files out of our
 repository and encourage you to do the same, especially if you are a
-Mac user.</li>
-<li><code class="docutils literal"><span class="pre">*.exe</span></code> and <code class="docutils literal"><span class="pre">*.dll</span></code>. Anything that can be (re)produced by the
+Mac user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*.exe</span></code> and <code class="docutils literal notranslate"><span class="pre">*.dll</span></code>. Anything that can be (re)produced by the
 Mono or Xamarin Studio tools should be excluded. In particular, do not
 keep these files in your repository. Today, they are quite small,
 but in future development work, they can be large. Worse, they are
 not text files (unlike your .cs files), so they cannot be stored
-optimally in a version control system.</li>
-<li>There are some other files produced by Xamarin Studio that we&#8217;ve put on
-the exclusion list, including <code class="docutils literal"><span class="pre">*.pidb</span></code> and <code class="docutils literal"><span class="pre">*.userprefs</span></code>. The
+optimally in a version control system.</p></li>
+<li><p>There are some other files produced by Xamarin Studio that we’ve put on
+the exclusion list, including <code class="docutils literal notranslate"><span class="pre">*.pidb</span></code> and <code class="docutils literal notranslate"><span class="pre">*.userprefs</span></code>. The
 reasoning for not keeping these is similar to that in the previous
-case.</li>
+case.</p></li>
 </ul>
 <p>Now do the following steps:</p>
 <ol class="arabic simple">
-<li>Using your text editor, create a file <code class="docutils literal"><span class="pre">.hgignore</span></code>. You can simply
+<li><p>Using your text editor, create a file <code class="docutils literal notranslate"><span class="pre">.hgignore</span></code>. You can simply
 copy and paste the above contents into this file.  Be careful of an editor
-like notepad, which adds &#8221;.txt&#8221; to the end of file names by default.</li>
+like notepad, which adds “.txt” to the end of file names by default.</p></li>
 </ol>
 <blockquote>
-<div><dl class="docutils">
-<dt><strong>Windows</strong>: To change from the default extension, use Save As, and change the</dt>
-<dd>file type from .txt by electing the drop-down menu beside file type, and
-select &#8220;All files&#8221;.</dd>
+<div><dl class="simple">
+<dt><strong>Windows</strong>: To change from the default extension, use Save As, and change the</dt><dd><p>file type from .txt by electing the drop-down menu beside file type, and
+select “All files”.</p>
+</dd>
 </dl>
 </div></blockquote>
 <ol class="arabic">
-<li><p class="first">Create or copy your existing <code class="docutils literal"><span class="pre">Hello</span> <span class="pre">World</span></code> example, hello.cs to the
-the <code class="docutils literal"><span class="pre">labs</span></code> folder.</p>
-</li>
-<li><p class="first">Let&#8217;s test whether .hgignore is having any effect. Go to the
-<code class="docutils literal"><span class="pre">labs</span></code> folder and compile the <code class="docutils literal"><span class="pre">Hello,</span> <span class="pre">World.</span></code> example.</p>
-</li>
-<li><p class="first">Verify that the .cs and .exe files are in the labs directory
-(<code class="docutils literal"><span class="pre">ls</span></code> on Linux or OS X; <code class="docutils literal"><span class="pre">dir</span></code> on MS-DOS):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170/labs$ mcs hello.cs
+<li><p>Create or copy your existing <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code> example, hello.cs to the
+the <code class="docutils literal notranslate"><span class="pre">labs</span></code> folder.</p></li>
+<li><p>Let’s test whether .hgignore is having any effect. Go to the
+<code class="docutils literal notranslate"><span class="pre">labs</span></code> folder and compile the <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">World.</span></code> example.</p></li>
+<li><p>Verify that the .cs and .exe files are in the labs directory
+(<code class="docutils literal notranslate"><span class="pre">ls</span></code> on Linux or OS X; <code class="docutils literal notranslate"><span class="pre">dir</span></code> on MS-DOS)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170/labs$ mcs hello.cs
 gkt@gkt-mini:~/gkt170/labs$ ls -l
 total 8
 -rw-r--r-- 1 gkt gkt  224 2012-02-20 20:02 hello.cs
@@ -613,40 +384,40 @@ total 8
 </pre></div>
 </div>
 </li>
-<li><p class="first">Check the status:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170/labs$ hg status
+<li><p>Check the status:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170/labs$ hg status
 ? .hgignore
 ? labs/hello.cs
 </pre></div>
 </div>
-<p>What this tells us is that <code class="docutils literal"><span class="pre">.hgignore</span></code> and <code class="docutils literal"><span class="pre">labs/hello.cs</span></code> are not
+<p>What this tells us is that <code class="docutils literal notranslate"><span class="pre">.hgignore</span></code> and <code class="docutils literal notranslate"><span class="pre">labs/hello.cs</span></code> are not
 presently being tracked by our version control system, Mercurial. The
-file <code class="docutils literal"><span class="pre">labs/hello.exe</span></code> is not shown, because it&#8217;s on the ignore list.</p>
-<p>Note that we actually need to put the <code class="docutils literal"><span class="pre">.hgignore</span></code> file under version
+file <code class="docutils literal notranslate"><span class="pre">labs/hello.exe</span></code> is not shown, because it’s on the ignore list.</p>
+<p>Note that we actually need to put the <code class="docutils literal notranslate"><span class="pre">.hgignore</span></code> file under version
 control if we want to use it wherever we happen to be working with our
-stuff (i.e. when we&#8217;re not in the computer lab but, say, at home).</p>
+stuff (i.e. when we’re not in the computer lab but, say, at home).</p>
 </li>
-<li><p class="first">Add the file to version control:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg add .hgignore
+<li><p>Add the file to version control:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg add .hgignore
 
 gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 </pre></div>
 </div>
 </li>
-<li><p class="first">Commit the changes, and then see the log entry
+<li><p>Commit the changes, and then see the log entry
 with the commands below.  If you set the .hgrc file,
 the command somewhere inside your local repository could be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">commit</span> <span class="p">-</span><span class="n">m</span> <span class="s">&quot;adding an .hgignore file and Hello, World to the project&quot;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">commit</span> <span class="p">-</span><span class="n">m</span> <span class="s">&quot;adding an .hgignore file and Hello, World to the project&quot;</span>
 </pre></div>
 </div>
 <p>If you did not create .hgrc, you need also include identification
-with -u yourName after <code class="docutils literal"><span class="pre">commit</span></code>, as in</p>
+with -u yourName after <code class="docutils literal notranslate"><span class="pre">commit</span></code>, as in</p>
 <blockquote>
-<div><p>hg commit -u gkt -m &#8220;adding an .hgignore file and Hello, World to the project&#8221;</p>
+<div><p>hg commit -u gkt -m “adding an .hgignore file and Hello, World to the project”</p>
 </div></blockquote>
 <p>It is Ok if your message wraps to a new line.  You can check the log entry created
 by your commit:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg log
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg log
 changeset:   0:9fe6ee1bf907
 tag:         tip
 user:        George K. Thiruvathukal &lt;gkt@cs.luc.edu&gt;
@@ -655,13 +426,13 @@ summary:     adding an .hgignore file and Hello, World to the project
 </pre></div>
 </div>
 </li>
-<li><p class="first">Push the changes to Bitbucket with the following command.
-(You&#8217;ll be prompted for user/password not shown here):</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>hg push
+<li><p>Push the changes to Bitbucket with the following command.
+(You’ll be prompted for user/password not shown here):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>hg push
 </pre></div>
 </div>
 <p>You should get a response like:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170
 searching for changes
 remote: adding changesets
 remote: adding manifests
@@ -672,74 +443,71 @@ remote: bb/acl: gkthiruvathukal is allowed. accepted payload.
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="create-an-initial-structure-for-your-project">
-<h3>18.10.2.6. Create an initial structure for your project<a class="headerlink" href="#create-an-initial-structure-for-your-project" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="create-an-initial-structure-for-your-project">
+<h3>Create an initial structure for your project<a class="headerlink" href="#create-an-initial-structure-for-your-project" title="Permalink to this headline"></a></h3>
 <p>We suggest that you follow a scheme similar to what we use when working
 with version control. We suggest that your source code goes in
 one or more folders, like work, or homework and labs.</p>
-<p>So let&#8217;s do it:</p>
+<p>So let’s do it:</p>
 <ol class="arabic">
-<li><p class="first">Make sure you are in the checkout directory, or <code class="docutils literal"><span class="pre">cd</span></code> to it.</p>
-</li>
-<li><p class="first">Create directories:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>mkdir hw
+<li><p>Make sure you are in the checkout directory, or <code class="docutils literal notranslate"><span class="pre">cd</span></code> to it.</p></li>
+<li><p>Create directories:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mkdir hw
 mkdir labs
 </pre></div>
 </div>
 <p>We will be creating items in each one of these folders during the lab.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Please note that most version control systems do not allow you to add <em>empty</em>
+<p class="admonition-title">Warning</p>
+<p>Please note that most version control systems do not allow you to add <em>empty</em>
 folders to the repository. You must create at least one file and <strong>hg add</strong> it
 to the repository (and <strong>hg add</strong> and <strong>hg push</strong>) for the folder to actually
-be created. The above was just intended to make you aware of a desired &#8220;organization&#8221;.
+be created. The above was just intended to make you aware of a desired “organization”.
 You are free to organize your project any way you like as long as we are able
 to find your homework assignments.</p>
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="create-and-test-content">
-<h3>18.10.2.7. Create and Test Content<a class="headerlink" href="#create-and-test-content" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="create-and-test-content">
+<h3>Create and Test Content<a class="headerlink" href="#create-and-test-content" title="Permalink to this headline"></a></h3>
 <ol class="arabic">
-<li><p class="first">copy in or create a simple program in a directory you created,
-like labs/hello.cs</p>
-</li>
-<li><p class="first">Run it.</p>
-</li>
-<li><p class="first">Now go back to the command prompt, and enterEnter:</p>
+<li><p>copy in or create a simple program in a directory you created,
+like labs/hello.cs</p></li>
+<li><p>Run it.</p></li>
+<li><p>Now go back to the command prompt, and enterEnter:</p>
 <blockquote>
 <div><p>hg status</p>
 </div></blockquote>
 <p>and produce a response like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="p">?</span> <span class="n">labs</span><span class="p">/</span><span class="n">hello</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="p">?</span> <span class="n">labs</span><span class="p">/</span><span class="n">hello</span><span class="p">.</span><span class="n">cs</span>
 </pre></div>
 </div>
 <p>Mercurial shows you the tracked files that are modified (none here)
-or files not not being tracked (after a &#8216;?&#8217;),
+or files not not being tracked (after a ‘?’),
 except for those files explicitly ignored.  As you can see,
 the source (.cs) file is shown, but
-no &#8220;binary&#8221; objects (like an .exe file),
+no “binary” objects (like an .exe file),
 since you gave instructions to ignore all such files.</p>
 </li>
-<li><p class="first">Add the new solution/projects to Mercurial. At this point, if the above list looks
-&#8220;reasonable&#8221; to you, you can go ahead and just add <em>everything</em>. The <strong>hg</strong> command
+<li><p>Add the new solution/projects to Mercurial. At this point, if the above list looks
+“reasonable” to you, you can go ahead and just add <em>everything</em>. The <strong>hg</strong> command
 makes this easy for you. Instead of adding the specific files,
 you can just type the following (nothing after the add):</p>
 <blockquote>
 <div><p>hg add</p>
 </div></blockquote>
 <p>and produce a response like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">adding</span> <span class="n">do_the_math</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">adding</span> <span class="n">do_the_math</span><span class="p">.</span><span class="n">cs</span>
 </pre></div>
 </div>
-<p>If you inadvertently added something that you truly don&#8217;t want in the repository, you
+<p>If you inadvertently added something that you truly don’t want in the repository, you
 can use the <strong>hg rm</strong> command to remove it. We have nothing at the moment that
 we want to remove, but want to make you aware that correcting mistakes is possible.</p>
 </li>
-<li><p class="first">As before, commit and push.  Here is a sequence from Dr. Thiruvathukal&#8217;s Mac:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg commit -m &quot;adding hello program&quot;
+<li><p>As before, commit and push.  Here is a sequence from Dr. Thiruvathukal’s Mac:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gkt@gkt-mini:~/gkt170$ hg commit -m &quot;adding hello program&quot;
 gkt@gkt-mini:~/gkt170$ hg push
 pushing to https://gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170\
 searching for changes
@@ -752,83 +520,79 @@ remote: bb/acl: gkthiruvathukal is allowed. accepted payload.
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="verify-that-your-stuff-really-made-it-to-bitbucket-org">
-<h3>18.10.2.8. Verify that your stuff really made it to bitbucket.org<a class="headerlink" href="#verify-that-your-stuff-really-made-it-to-bitbucket-org" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="verify-that-your-stuff-really-made-it-to-bitbucket-org">
+<h3>Verify that your stuff really made it to bitbucket.org<a class="headerlink" href="#verify-that-your-stuff-really-made-it-to-bitbucket-org" title="Permalink to this headline"></a></h3>
 <p>At this point, it is entirely possible that you need some convincing to believe that
-everything we&#8217;ve been doing thus far is really making it to your repository at Bitbucket.
+everything we’ve been doing thus far is really making it to your repository at Bitbucket.
 Luckily, this is where having a web interface really can help us.</p>
 <p>Do the following:</p>
 <ol class="arabic">
-<li><p class="first">Log into bitbucket.org if you are not already logged in.</p>
-</li>
-<li><p class="first">Go to Repositories and look for your repository. In the authors case, it is under
-<code class="docutils literal"><span class="pre">gkthiruvathukal</span> <span class="pre">/</span> <span class="pre">gkt170</span></code>.</p>
-</li>
-<li><p class="first">It pays to take a quick look at the dashboard. You&#8217;ll see the <em>recent commits</em> on the
+<li><p>Log into bitbucket.org if you are not already logged in.</p></li>
+<li><p>Go to Repositories and look for your repository. In the authors case, it is under
+<code class="docutils literal notranslate"><span class="pre">gkthiruvathukal</span> <span class="pre">/</span> <span class="pre">gkt170</span></code>.</p></li>
+<li><p>It pays to take a quick look at the dashboard. You’ll see the <em>recent commits</em> on the
 main screen. You should see at least two commits from our lab session thus far, both
-of which likely happened just &#8220;minutes ago&#8221;.</p>
-</li>
-<li><p class="first">You can click on any revision to see what changes were made. It is ok to do so at this
-time, but we&#8217;re going to take a look at the powerful capability of &#8220;looking at the
-source&#8221;. So go to the <em>Source</em> tab.</p>
+of which likely happened just “minutes ago”.</p></li>
+<li><p>You can click on any revision to see what changes were made. It is ok to do so at this
+time, but we’re going to take a look at the powerful capability of “looking at the
+source”. So go to the <em>Source</em> tab.</p>
 <a class="reference internal image-reference" href="../_images/bitbucket-source.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/bitbucket-source.png" style="width: 350pt;" /></a>
 </li>
-<li><p class="first">If all was done properly, you will see .hgignore and labs. These
+<li><p>If all was done properly, you will see .hgignore and labs. These
 were all the result of our earlier sequence of commit+push operations. You can click on
 any folder to drill into the hierarchy of folders/files that have been pushed
 to Bitbucket (from your local repository). In labs you find
 your source code (for hello.cs). Then you
-can look at it&#8211;through the web! When you do so, you&#8217;ll see something like this.</p>
+can look at it–through the web! When you do so, you’ll see something like this.</p>
 <a class="reference internal image-reference" href="../_images/HelloWorld.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/HelloWorld.png" style="height: 290pt;" /></a>
 </li>
 </ol>
-</div>
-<div class="section" id="working-between-lab-and-home-or-home-and-lab">
-<h3>18.10.2.9. Working between lab and home (or home and lab)<a class="headerlink" href="#working-between-lab-and-home-or-home-and-lab" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="working-between-lab-and-home-or-home-and-lab">
+<h3>Working between lab and home (or home and lab)<a class="headerlink" href="#working-between-lab-and-home-or-home-and-lab" title="Permalink to this headline"></a></h3>
 <p>It may not be immediately obvious, but what we have just shown you is how to work between
 the classroom/lab environment and home. In the typical scenario, when you go to your
 desk (or laptop), you will go through the following lifecycle:</p>
 <ul class="simple">
-<li><strong>hg pull</strong>: To gather any changes that you made at another location. You are always
+<li><p><strong>hg pull</strong>: To gather any changes that you made at another location. You are always
 pulling changes from the repository stored at Bitbucket, which is acting as our
-intermediary. Being &#8220;in the cloud&#8221; it is a great place to keep stuff without having
-to worry (for the most part) about the repository getting lost.</li>
-<li><strong>hg update</strong>: To update your local copy of the repository with all of the changes
-that you just pulled down from Bitbucket.</li>
-<li>Create or modify your folders/files as desired.</li>
-<li>If any files that you want included were just created, use <strong>hg add</strong>.  It does not
-hurt to use this command, even if nothing was added.</li>
-<li><strong>hg commit -m message.</strong>: Save any changes you&#8217;ve made, to your local repository only.</li>
-<li><strong>hg push</strong>: Push the changes you&#8217;ve stashed in your local repository to the Bitbucket
-repository.</li>
+intermediary. Being “in the cloud” it is a great place to keep stuff without having
+to worry (for the most part) about the repository getting lost.</p></li>
+<li><p><strong>hg update</strong>: To update your local copy of the repository with all of the changes
+that you just pulled down from Bitbucket.</p></li>
+<li><p>Create or modify your folders/files as desired.</p></li>
+<li><p>If any files that you want included were just created, use <strong>hg add</strong>.  It does not
+hurt to use this command, even if nothing was added.</p></li>
+<li><p><strong>hg commit -m message.</strong>: Save any changes you’ve made, to your local repository only.</p></li>
+<li><p><strong>hg push</strong>: Push the changes you’ve stashed in your local repository to the Bitbucket
+repository.</p></li>
 </ul>
 <p>You might wonder why the pull/update and commit/push operations are separate. For a team
-of one (or two, if you have a pair), it is not likely that you&#8217;d make a mistake when
+of one (or two, if you have a pair), it is not likely that you’d make a mistake when
 coordinating changes to a central repository. In a larger team, however, some coordination
-is required. We&#8217;re not going into all of those details in this lab, of course, but will
+is required. We’re not going into all of those details in this lab, of course, but will
 likely revisit this topic as we get closer to the team project, which we think will make
 you thankful for having a version control system.</p>
-</div>
-<div class="section" id="getting-our-examples">
-<h3>18.10.2.10. Getting our examples<a class="headerlink" href="#getting-our-examples" title="Permalink to this headline">¶</a></h3>
-<p>We&#8217;re going to conclude by taking this opportunity to introduce you to how <em>we</em> (Drs.
+</section>
+<section id="getting-our-examples">
+<h3>Getting our examples<a class="headerlink" href="#getting-our-examples" title="Permalink to this headline"></a></h3>
+<p>We’re going to conclude by taking this opportunity to introduce you to how <em>we</em> (Drs.
 Harrington and Thiruvathukal) are actually using the stuff we are teaching to work as
 a team on developing the book and examples.</p>
 <ol class="arabic">
-<li><p class="first">Pick a different location (outside of your repository folder and its subfolders)
+<li><p>Pick a different location (outside of your repository folder and its subfolders)
 to check out our stuff from Bitbucket:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>hg clone https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>hg clone https://bitbucket.org/loyolachicagocs_books/introcs-csharp-examples
 </pre></div>
 </div>
 </li>
-<li><p class="first">Don&#8217;t worry about breaking anything. Because Bitbucket knows what users are allowed
-to push changes to our repository, anything you change in your copy won&#8217;t affect us.</p>
+<li><p>Don’t worry about breaking anything. Because Bitbucket knows what users are allowed
+to push changes to our repository, anything you change in your copy won’t affect us.</p>
 </li>
-<li><p class="first">Look under the source tab on the project page.</p>
-</li>
-<li><p class="first">For example, if you performed a clone to introcs-csharp-examples, you should be able to change directory to introcs-csharp-examples:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>gkt@gkt-mini:~$ cd introcs-csharp-examples
+<li><p>Look under the source tab on the project page.</p></li>
+<li><p>For example, if you performed a clone to introcs-csharp-examples, you should be able to change directory to introcs-csharp-examples:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gkt@gkt-mini:~$ cd introcs-csharp-examples
 gkt@gkt-mini:~/introcs-csharp-examples$ ls
 addition1
 ...
@@ -837,29 +601,43 @@ write_test
 </div>
 <p>(Most output has been eliminated for conciseness.)</p>
 </li>
-<li><p class="first">You can explore subfolders to see our programs.</p>
-</li>
+<li><p>You can explore subfolders to see our programs.</p></li>
 </ol>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="project.html" class="btn btn-neutral float-left" title="Group Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hgteamwork.html" class="btn btn-neutral float-right" title="Mercurial and Teamwork" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-      
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012, Andrew N. Harrington and George Thiruvathukal.
+      <span class="lastupdated">Last updated on 29-November-2021 23:33:52.
+      </span></p>
   </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 10-September-2016 16:59:02.<br/>
-    </p>
-  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
 </footer>
-  </body>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

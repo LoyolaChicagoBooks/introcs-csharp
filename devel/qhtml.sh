@@ -1,1 +1,0 @@
-sh makehtml.sh bootstrap nocron

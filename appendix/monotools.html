@@ -1,334 +1,109 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>18.1. Development Tools &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Development Tools &mdash; Introduction to Computer Science in C# 29 Nov 2021 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
-    <link rel="up" title="18. Appendix" href="appendix.html" />
-    <link rel="next" title="18.2. Xamarin Studio" href="xamarinstudio.html" />
-    <link rel="prev" title="18. Appendix" href="appendix.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="next" title="Xamarin Studio" href="xamarinstudio.html" />
+    <link rel="prev" title="Appendix" href="appendix.html" /> 
+</head>
 
-  </head>
-  <body role="document">
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #922247" >
+            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
+          </a>
+              <div class="version">
+                29 Nov 2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="appendix.html">Appendix</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmdline.html">Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precedence.html">Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+</ul>
+</li>
+</ul>
 
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">
-          COMP 170</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="../genindex.html">Index</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="appendix.html">18. Appendix</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">18.1. Development Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">18.2. Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cmdline.html">18.3. Command Line Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precedence.html">18.4. Precedence of Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">18.7. Homework: Grade File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">18.8. Homework: Book List</a></li>
-<li class="toctree-l2"><a class="reference internal" href="project.html">18.9. Group Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
-<li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">18.12. Acknowledgments</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">18.1. Development Tools</a><ul>
-<li><a class="reference internal" href="#about-software-development-kits-sdks">18.1.1. About Software Development Kits (SDKs)</a></li>
-<li><a class="reference internal" href="#editing-and-building-tools">18.1.2. Editing and Building Tools</a></li>
-<li><a class="reference internal" href="#about-integrated-development-environments-ide">18.1.3. About Integrated Development Environments (IDE)</a></li>
-<li><a class="reference internal" href="#our-approach">18.1.4. Our Approach</a></li>
-<li><a class="reference internal" href="#installing-mono-and-xamarin-studios">18.1.5. Installing Mono and Xamarin Studios</a></li>
-<li><a class="reference internal" href="#os-x">18.1.6. OS X</a><ul>
-<li><a class="reference internal" href="#xamarin-studio-installation-osx">18.1.6.1. Xamarin Studio Installation - OSX</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#windows">18.1.7. Windows</a><ul>
-<li><a class="reference internal" href="#mono-command-prompt">18.1.7.1. Mono Command Prompt</a></li>
-<li><a class="reference internal" href="#xamarin-studio-installation-windows">18.1.7.2. Xamarin Studio Installation - Windows</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#linux">18.1.8. Linux</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="appendix.html" title="Previous Chapter: 18. Appendix">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-  </li>
-  <li>
-    <a href="xamarinstudio.html" title="Next Chapter: 18.2. Xamarin Studio">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/appendix/monotools.txt"
-     rel="nofollow">Source</a>
-</div></li>
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
         </div>
-    </div>
-  </div>
+      </div>
+    </nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 content">
-      
-  <div class="section" id="development-tools">
-<span id="index-0"></span><span id="id1"></span><h1>18.1. Development Tools<a class="headerlink" href="#development-tools" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="about-software-development-kits-sdks">
-<h2>18.1.1. About Software Development Kits (SDKs)<a class="headerlink" href="#about-software-development-kits-sdks" title="Permalink to this headline">¶</a></h2>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to Computer Science in C#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="appendix.html">Appendix</a> &raquo;</li>
+      <li>Development Tools</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/appendix/monotools.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="development-tools">
+<span id="index-0"></span><span id="id1"></span><h1>Development Tools<a class="headerlink" href="#development-tools" title="Permalink to this headline"></a></h1>
+<section id="about-software-development-kits-sdks">
+<h2>About Software Development Kits (SDKs)<a class="headerlink" href="#about-software-development-kits-sdks" title="Permalink to this headline"></a></h2>
 <p>A software development kit (SDK) is a set of tools for developing in a
 particular programming language (in our class, C#). Developing in a
 language means everything from compiling to running and (when things
@@ -344,9 +119,9 @@ where you want to develop .Net applications on non-Windows platforms.</p>
 the Mono SDK are working on commercial tools that allow you to
 develop/run applications written in .Net on Apple iOS and Android
 mobile devices (phones and tablets).</p>
-</div>
-<div class="section" id="editing-and-building-tools">
-<h2>18.1.2. Editing and Building Tools<a class="headerlink" href="#editing-and-building-tools" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="editing-and-building-tools">
+<h2>Editing and Building Tools<a class="headerlink" href="#editing-and-building-tools" title="Permalink to this headline"></a></h2>
 <p>Early programs were written with rudimentary text editors,
 more primitive than Windows Notepad.  Gradually tools got better.
 Now there are editors that are highly optimized for editing code.</p>
@@ -357,30 +132,30 @@ are a variety of building tools that can be used with, or built into
 an SDK:  make, ant, and now NAnt for .net.</p>
 <p>Many developers use an a la carte approach, using their favorite editor along
 with their favorite building tool.</p>
-</div>
-<div class="section" id="about-integrated-development-environments-ide">
-<h2>18.1.3. About Integrated Development Environments (IDE)<a class="headerlink" href="#about-integrated-development-environments-ide" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="about-integrated-development-environments-ide">
+<h2>About Integrated Development Environments (IDE)<a class="headerlink" href="#about-integrated-development-environments-ide" title="Permalink to this headline"></a></h2>
 <p>There are also all-in-one tools that combine an editor and build tools.
 These are also used by many developers.</p>
 <p>There are two major IDEs for .Net development, which we explain briefly below:</p>
 <ul class="simple">
-<li>Visual Studio is the Microsoft IDE that interfaces directly to the
-Microsoft SDK.</li>
-<li>Xamarin Studio is the free/open source IDE for developing applications
+<li><p>Visual Studio is the Microsoft IDE that interfaces directly to the
+Microsoft SDK.</p></li>
+<li><p>Xamarin Studio is the free/open source IDE for developing applications
 using the Mono SDK on Windows and all other platforms (in
 particular, Linux and OS X).  The project started as MonoDevelop.
 Now Xamarin is both a major contributor to the code and has commercial
 versions for iOS development.  <em>The name on the software is now</em>
-<strong>Xamarin Studio</strong>, though you may see references to MonoDevelop instead.</li>
+<strong>Xamarin Studio</strong>, though you may see references to MonoDevelop instead.</p></li>
 </ul>
 <p>In addition, there is another Windows-specific IDE, SharpDevelop, that
 inspired the creation of Xamarin Studio. It is still actively maintained
-and provides a somewhat &#8220;lighter weight&#8221; alternative to Visual Studio
+and provides a somewhat “lighter weight” alternative to Visual Studio
 for Windows users. Like Xamarin Studio, it is aimed at developers who
-would prefer a more free/open source &#8220;friendly&#8221; version.</p>
-</div>
-<div class="section" id="our-approach">
-<h2>18.1.4. Our Approach<a class="headerlink" href="#our-approach" title="Permalink to this headline">¶</a></h2>
+would prefer a more free/open source “friendly” version.</p>
+</section>
+<section id="our-approach">
+<h2>Our Approach<a class="headerlink" href="#our-approach" title="Permalink to this headline"></a></h2>
 <p>In the interest of providing a consistent experience for our students who use
 various operating systems on their own machines,
 we will be using the multi-platform Mono (the SDK).</p>
@@ -392,30 +167,29 @@ underlying tools that are obscured by the use of Xamarin Studio.</p>
 small snippets of code.  We will use it extensively as we introduce bits of
 syntax.</p>
 <p>As there is significant evolution of both the Microsoft
-and Mono <em>toolchains</em>&#8211;a fancy word we want you to know and a more
-elegant way of saying SDK&#8211;we&#8217;ll issue updates to this book.</p>
+and Mono <em>toolchains</em>–a fancy word we want you to know and a more
+elegant way of saying SDK–we’ll issue updates to this book.</p>
 <p>Everything is free, but there are a number of steps.  Follow them carefully.</p>
-</div>
-<div class="section" id="installing-mono-and-xamarin-studios">
-<span id="install-mono"></span><span id="index-1"></span><h2>18.1.5. Installing Mono and Xamarin Studios<a class="headerlink" href="#installing-mono-and-xamarin-studios" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="installing-mono-and-xamarin-studios">
+<span id="install-mono"></span><span id="index-1"></span><h2>Installing Mono and Xamarin Studios<a class="headerlink" href="#installing-mono-and-xamarin-studios" title="Permalink to this headline"></a></h2>
 <p>Because the Mono Project web page is known to change frequently, these
 instructions are designed to be as generic as possible. If you have
 any questions, you should contact the instructors immediately or seek
 tutoring help.</p>
-</div>
-<div class="section" id="os-x">
-<h2>18.1.6. OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="os-x">
+<h2>OS X<a class="headerlink" href="#os-x" title="Permalink to this headline"></a></h2>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Xamarin Studio needs at least version 10.8 of OSX.
+<p class="admonition-title">Warning</p>
+<p>Xamarin Studio needs at least version 10.8 of OSX.
 If you have an older version, you can upgrade the operating system, or
 possibly use an older version of Xamarin Studio.  In that case, ask for help.</p>
 </div>
 <p>There are two downloads to get and install in order. Mono first:</p>
 <ol class="arabic">
-<li><p class="first">Go to &lt;<a class="reference external" href="http://mono-project.com">http://mono-project.com</a>&gt;.</p>
-</li>
-<li><p class="first">Look for the Mono downloads link. Link on OS-X.
+<li><p>Go to &lt;<a class="reference external" href="http://mono-project.com">http://mono-project.com</a>&gt;.</p></li>
+<li><p>Look for the Mono downloads link. Link on OS-X.
 You want to get the latest <em>stable</em>
 version of Mono for OS X. For this class, you need version 2.10 or
 later, though preferably 3.2.4 or later. Choose the MRE version.
@@ -428,125 +202,122 @@ This version of Xamararin Studio bugs you with emails.</p>
 </ol>
 <p>Here is how to do a quick sanity check of your Mono setup:</p>
 <ol class="arabic simple">
-<li>Go to Applications -&gt; Utilities and launch the Terminal
+<li><p>Go to Applications -&gt; Utilities and launch the Terminal
 application, or quicker: enter terminal in Spotlight.
-(Terminal is how you get to a command-line shell in OS X.)</li>
-<li>You&#8217;ll see a prompt that looks like this
-<code class="docutils literal"><span class="pre">computername:folder</span> <span class="pre">user$</span></code>.
-This means that Terminal is ready for input.</li>
-<li>Type <code class="docutils literal"><span class="pre">which</span> <span class="pre">csharp</span></code> and hit enter/return. You should see
-<code class="docutils literal"><span class="pre">/usr/bin/csharp</span></code> as output. <code class="docutils literal"><span class="pre">csharp</span></code> is the C# interpreter.</li>
-<li>Type <code class="docutils literal"><span class="pre">which</span> <span class="pre">mcs</span></code> and hit enter/return. You should see
-<code class="docutils literal"><span class="pre">/usr/bin/mcs</span></code> as output.  <code class="docutils literal"><span class="pre">mcs</span></code> is one of the interfaces to
-the C# compiler.</li>
+(Terminal is how you get to a command-line shell in OS X.)</p></li>
+<li><p>You’ll see a prompt that looks like this
+<code class="docutils literal notranslate"><span class="pre">computername:folder</span> <span class="pre">user$</span></code>.
+This means that Terminal is ready for input.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">csharp</span></code> and hit enter/return. You should see
+<code class="docutils literal notranslate"><span class="pre">/usr/bin/csharp</span></code> as output. <code class="docutils literal notranslate"><span class="pre">csharp</span></code> is the C# interpreter.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">mcs</span></code> and hit enter/return. You should see
+<code class="docutils literal notranslate"><span class="pre">/usr/bin/mcs</span></code> as output.  <code class="docutils literal notranslate"><span class="pre">mcs</span></code> is one of the interfaces to
+the C# compiler.</p></li>
 </ol>
-<div class="section" id="xamarin-studio-installation-osx">
-<span id="install-md-osx"></span><span id="index-2"></span><h3>18.1.6.1. Xamarin Studio Installation - OSX<a class="headerlink" href="#xamarin-studio-installation-osx" title="Permalink to this headline">¶</a></h3>
+<section id="xamarin-studio-installation-osx">
+<span id="install-md-osx"></span><span id="index-2"></span><h3>Xamarin Studio Installation - OSX<a class="headerlink" href="#xamarin-studio-installation-osx" title="Permalink to this headline"></a></h3>
 <ol class="arabic simple">
-<li>Make sure Mono is installed first.</li>
-<li>Now go to <a class="reference external" href="http://monodevelop.com">http://monodevelop.com</a>.  <strong>Note</strong>:  Do <em>not</em> use a version
+<li><p>Make sure Mono is installed first.</p></li>
+<li><p>Now go to <a class="reference external" href="http://monodevelop.com">http://monodevelop.com</a>.  <strong>Note</strong>:  Do <em>not</em> use a version
 that is linked to the
 mono-project.com site.  Getting the suggested open-source version
-from <a class="reference external" href="http://monodevelop.com">http://monodevelop.com</a> should not lead to a prompt for your email address....</li>
-<li>As with Mono, we need to look for the downloads link.
-You should download the <em>stable</em> version.</li>
-<li>For OS X, the Xamarin Studio SDK is distributed as a DMG disk image. You&#8217;ll need
+from <a class="reference external" href="http://monodevelop.com">http://monodevelop.com</a> should not lead to a prompt for your email address….</p></li>
+<li><p>As with Mono, we need to look for the downloads link.
+You should download the <em>stable</em> version.</p></li>
+<li><p>For OS X, the Xamarin Studio SDK is distributed as a DMG disk image. You’ll need
 to download this image and double-click it. Open the image and run
 the installer. Administrative privileges are required to run the
-installer.</li>
-<li>This time, you will see an App for Xamarin Studio,
-which you can drag and drop into the Applications folder.</li>
-<li>If the preceding steps were successful, you can launch
+installer.</p></li>
+<li><p>This time, you will see an App for Xamarin Studio,
+which you can drag and drop into the Applications folder.</p></li>
+<li><p>If the preceding steps were successful, you can launch
 Xamarin Studio by double-clicking the icon in your Applications
-folder. (You won&#8217;t know what to do with it yet, but at least you can
-verify that it launches correctly and then use Command-Q to exit.)</li>
+folder. (You won’t know what to do with it yet, but at least you can
+verify that it launches correctly and then use Command-Q to exit.)</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="windows">
-<h2>18.1.7. Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline"></a></h2>
 <p>There are four packages, so this takes a while.  Mono first:</p>
 <p>Dr. Yacobellis has a video showing Windows installation.
 <a class="reference external" href="https://connect.luc.edu/p4hmzk2kbmt/">https://connect.luc.edu/p4hmzk2kbmt/</a>
 There may be further changes to the system.</p>
 <ol class="arabic simple">
-<li>Go to &lt;<a class="reference external" href="http://mono-project.com">http://mono-project.com</a>&gt;.</li>
-<li>Look for the Mono downloads link. You want to get the latest
+<li><p>Go to &lt;<a class="reference external" href="http://mono-project.com">http://mono-project.com</a>&gt;.</p></li>
+<li><p>Look for the Mono downloads link. You want to get the latest
 <em>stable</em> version of Mono for Windows. For this class, you need version
-2.10 or later, preferably 3.2.3 or later.</li>
-<li>Choose the link: Mono for Windows, Gtk#, and XSP, and download the
-installation package</li>
-<li>It is a
+2.10 or later, preferably 3.2.3 or later.</p></li>
+<li><p>Choose the link: Mono for Windows, Gtk#, and XSP, and download the
+installation package</p></li>
+<li><p>It is a
 self-extracting executable, so you will need to double click it to
 install. For Windows 7 users, you may need to check your taskbar to
-see whether the installer is being held up by Microsoft&#8217;s enhanced
+see whether the installer is being held up by Microsoft’s enhanced
 security, UAM, that makes sure you really want to install something
-you downloaded from the internet.</li>
+you downloaded from the internet.</p></li>
 </ol>
 <p>Here is how to do a quick sanity check of your Mono setup:</p>
-<div class="section" id="mono-command-prompt">
-<span id="index-3"></span><span id="id2"></span><h3>18.1.7.1. Mono Command Prompt<a class="headerlink" href="#mono-command-prompt" title="Permalink to this headline">¶</a></h3>
+<section id="mono-command-prompt">
+<span id="index-3"></span><span id="id2"></span><h3>Mono Command Prompt<a class="headerlink" href="#mono-command-prompt" title="Permalink to this headline"></a></h3>
 <ol class="arabic simple">
-<li>Open the Windows Start Menu and type &#8220;mono&#8221; in the text field at the bottom.
-You should see a short list of places &#8220;mono&#8221; appears.</li>
-<li>Click on the choice that says &#8220;Mono ... Command prompt&#8221;.
+<li><p>Open the Windows Start Menu and type “mono” in the text field at the bottom.
+You should see a short list of places “mono” appears.</p></li>
+<li><p>Click on the choice that says “Mono … Command prompt”.
 (This is probably faster than going to the Start Menu,
 finding the Mono folder, expanding it, and clicking on
-the Mono Command Prompt.)</li>
+the Mono Command Prompt.)</p></li>
 </ol>
 <p>If it comes up, you are all set for an initial installation check. This will be the first
 step later, when you want to run the handy csharp program or compile and run your
 own programs.  When working, you can just leave this window open,
 saving it for later use,
-(or close and reopen later....)</p>
-</div>
-<div class="section" id="xamarin-studio-installation-windows">
-<span id="install-md-win"></span><h3>18.1.7.2. Xamarin Studio Installation - Windows<a class="headerlink" href="#xamarin-studio-installation-windows" title="Permalink to this headline">¶</a></h3>
+(or close and reopen later….)</p>
+</section>
+<section id="xamarin-studio-installation-windows">
+<span id="install-md-win"></span><h3>Xamarin Studio Installation - Windows<a class="headerlink" href="#xamarin-studio-installation-windows" title="Permalink to this headline"></a></h3>
 <ol class="arabic">
-<li><p class="first">Have Mono installed first.</p>
-</li>
-<li><p class="first">Now go to <a class="reference external" href="http://monodevelop.com">http://monodevelop.com</a>.  <strong>Note</strong>:  Do <em>not</em> use a version
+<li><p>Have Mono installed first.</p></li>
+<li><p>Now go to <a class="reference external" href="http://monodevelop.com">http://monodevelop.com</a>.  <strong>Note</strong>:  Do <em>not</em> use a version
 that is linked to the
 mono-project.com site.  Getting the suggested open-source version
-from <a class="reference external" href="http://monodevelop.com">http://monodevelop.com</a> should not lead to a prompt for your email address....</p>
-</li>
-<li><p class="first">As with Mono, we need to look for the downloads link, click on the Windows icon.
+from <a class="reference external" href="http://monodevelop.com">http://monodevelop.com</a> should not lead to a prompt for your email address….</p></li>
+<li><p>As with Mono, we need to look for the downloads link, click on the Windows icon.
 You should
 click the link for the download of the requirements for the <em>stable</em> version.
 That should be at least numbered 4.2.2. <strong>Do not install it yet.</strong></p>
 <p><strong>Note however, that you will next</strong>
 <strong>install two support packages</strong>:</p>
 <ul class="simple">
-<li>.Net Framework 4.0 first.  The link takes you to a Microsoft download site.
+<li><p>.Net Framework 4.0 first.  The link takes you to a Microsoft download site.
 Do not click the top Download button - that gives you much more than you need.
 Further down in Popular download 01 is
 Microsoft .NET Framework 4 (Web Installer).  Click on that and follow
-the default sequence.</li>
-<li>GKT#  The GKT&#64; download directly downloads the GKT installer.  Again follow
-the default installation sequence.</li>
-<li>install Xamarin Studio <strong>last</strong>. The Download link gets you the installer
-directly.  Install it following the default steps.</li>
+the default sequence.</p></li>
+<li><p>GKT#  The GKT&#64; download directly downloads the GKT installer.  Again follow
+the default installation sequence.</p></li>
+<li><p>install Xamarin Studio <strong>last</strong>. The Download link gets you the installer
+directly.  Install it following the default steps.</p></li>
 </ul>
 </li>
-<li><p class="first">If the preceding steps were successful, you can launch
+<li><p>If the preceding steps were successful, you can launch
 Xamarin Studio by double-clicking the icon on the Desktop
 or using the Start Menu.
-(You won&#8217;t know what to do with it yet, but at least you can
-verify at it launches correctly and then close the window.)</p>
-</li>
+(You won’t know what to do with it yet, but at least you can
+verify at it launches correctly and then close the window.)</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="linux">
-<h2>18.1.8. Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline"></a></h2>
 <p>We only provide instructions for Debian-based Linux distributions such
 as Ubuntu.</p>
 <ol class="arabic simple">
-<li>Using the command-line <code class="docutils literal"><span class="pre">apt-get</span></code> tool, you can install everything
-that you need using <code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">monodevelop</span></code>. This should be
-run as the <strong>root</strong> user (using the <code class="docutils literal"><span class="pre">sudo</span></code> command).</li>
-<li>You can test the sanity of your setup by following the instructions
-under OS X.</li>
+<li><p>Using the command-line <code class="docutils literal notranslate"><span class="pre">apt-get</span></code> tool, you can install everything
+that you need using <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">monodevelop</span></code>. This should be
+run as the <strong>root</strong> user (using the <code class="docutils literal notranslate"><span class="pre">sudo</span></code> command).</p></li>
+<li><p>You can test the sanity of your setup by following the instructions
+under OS X.</p></li>
 </ol>
 <p>Xamarin Studio releases on Linux tend to lag behind the official stable
 release.</p>
@@ -554,7 +325,7 @@ release.</p>
 <a class="reference external" href="https://launchpad.net/~keks9n/+archive/monodevelop-latest">https://launchpad.net/~keks9n/+archive/monodevelop-latest</a>,
 describes
 how to update your Xamarin Studio setup if it is not version 2.8 or later
-as we&#8217;ll need for this course.</p>
+as we’ll need for this course.</p>
 <p>We wish to stress that Linux is recommended for students who already
 have a bit of programming experience under their belts. It can take a
 significant amount of energy to get a Linux setup up and running and
@@ -563,25 +334,40 @@ since the 1990s when it first appeared, we encourage you to set it up
 perhaps a bit later in the semester or consider running it using
 virtualization software (on Mac or Windows) such as VirtualBox or
 VMware.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="appendix.html" class="btn btn-neutral float-left" title="Appendix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="xamarinstudio.html" class="btn btn-neutral float-right" title="Xamarin Studio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-      
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012, Andrew N. Harrington and George Thiruvathukal.
+      <span class="lastupdated">Last updated on 29-November-2021 23:33:52.
+      </span></p>
   </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 10-September-2016 16:59:02.<br/>
-    </p>
-  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
 </footer>
-  </body>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

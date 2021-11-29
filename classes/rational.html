@@ -1,324 +1,106 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>13.3. The Rational Class &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Rational Class &mdash; Introduction to Computer Science in C# 29 Nov 2021 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
-    <link rel="up" title="13. Classes and Object-Oriented Programming" href="classes.html" />
-    <link rel="next" title="13.4. Planning A Class Structure" href="planning_classes.html" />
-    <link rel="prev" title="13.2. Class Instance Examples" href="classexamples.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="next" title="Planning A Class Structure" href="planning_classes.html" />
+    <link rel="prev" title="Class Instance Examples" href="classexamples.html" /> 
+</head>
 
-  </head>
-  <body role="document">
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #922247" >
+            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
+          </a>
+              <div class="version">
+                29 Nov 2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="classes.html">Classes and Object-Oriented Programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classexamples.html">Class Instance Examples</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overload-op.html">Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">Appendix</a></li>
+</ul>
 
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">
-          COMP 170</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="../genindex.html">Index</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="reference internal" href="classes.html">13. Classes and Object-Oriented Programming</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classexamples.html">13.2. Class Instance Examples</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">13.3. The Rational Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="planning_classes.html">13.4. Planning A Class Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">13.5. Classes And Structs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overload-op.html">13.6. Defining Operators (Optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">13.7. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">13.3. The Rational Class</a><ul>
-<li><a class="reference internal" href="#method-parameters-of-the-same-type">13.3.1. Method Parameters of the Same Type</a></li>
-<li><a class="reference internal" href="#pictorial-playing-computer">13.3.2. Pictorial Playing Computer</a></li>
-<li><a class="reference internal" href="#forcematch-exercise">13.3.3. ForceMatch Exercise</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="classexamples.html" title="Previous Chapter: 13.2. Class Instance Examples">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-  </li>
-  <li>
-    <a href="planning_classes.html" title="Next Chapter: 13.4. Planning A Class Structure">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/classes/rational.txt"
-     rel="nofollow">Source</a>
-</div></li>
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
         </div>
-    </div>
-  </div>
+      </div>
+    </nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 content">
-      
-  <div class="section" id="the-rational-class">
-<span id="rational"></span><span id="index-0"></span><h1>13.3. The Rational Class<a class="headerlink" href="#the-rational-class" title="Permalink to this headline">¶</a></h1>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to Computer Science in C#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="classes.html">Classes and Object-Oriented Programming</a> &raquo;</li>
+      <li>The Rational Class</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/classes/rational.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-rational-class">
+<span id="rational"></span><span id="index-0"></span><h1>The Rational Class<a class="headerlink" href="#the-rational-class" title="Permalink to this headline"></a></h1>
 <p>Like other numbers, we think of a rational number as a unit,
 but all rational numbers can be most easily represented as a fraction,
 a ratio of two integers. We can create a class Rational, so</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>would create a new Rational number for the mathematical expression, 2/3.</p>
@@ -334,7 +116,7 @@ in the illustration
 we operate on a single rational number, and do calculation with a pair,
 and parse string literals.  The code is from
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_rational/test_rational.cs">test_rational/test_rational.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">IntroCS</span>
 <span class="p">{</span>
@@ -363,11 +145,11 @@ and parse string literals.  The code is from
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>One non-obvious method is <code class="docutils literal"><span class="pre">CompareTo</span></code>.  This one method allows
+<p>One non-obvious method is <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code>.  This one method allows
 all the usual comparison operators to be used with the result.
 We will discuss it more in <a class="reference internal" href="../interfaces/fractions-revisited.html#rationals-revisited"><span class="std std-ref">Rationals Revisited</span></a>.</p>
 <p>The results we would like when running this testing code:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>6/(-10) simplifies to -3/5
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>6/(-10) simplifies to -3/5
 reciprocal of -3/5 is -5/3
 -3/5 negated is 3/5
 -3/5 + 1/2 is -1/10
@@ -386,7 +168,7 @@ Parse &quot;1.125&quot; to Rational: 9/8
 Each individual Rational that we use will have its own numerator and
 denominator, which we store as the instance variables
 (and which we abbreviate since we are lazy):</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Rational</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Rational</span>
 <span class="p">{</span>
    <span class="k">private</span> <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
    <span class="k">private</span> <span class="kt">int</span> <span class="n">denom</span><span class="p">;</span>
@@ -396,15 +178,15 @@ denominator, which we store as the instance variables
 <p>We could have a very simple constructor that just copies in values for
 the numerator and denominator.  However, there is an extra wrinkle with
 rational numbers:  They can be represented many ways.  You remember from
-grade school being told to &#8220;reduce to lowest terms&#8221;.  This will keep
+grade school being told to “reduce to lowest terms”.  This will keep
 our internal representations unique, and use the smallest numbers.</p>
 <p>Intermediate operations and initial constructor parameters
 will not always be in lowest terms.  To reduce to lowest terms
 we need to divide the original numerator and denominator by their
 <a class="reference internal" href="../while/gcdexamples.html#gcd"><span class="std std-ref">Greatest Common Divisor</span></a>.    We include a <em>static</em> GCD method taken from that section,
-and make the adjustment to lowest terms in a helping method, <code class="docutils literal"><span class="pre">Normalize</span></code>,
+and make the adjustment to lowest terms in a helping method, <code class="docutils literal notranslate"><span class="pre">Normalize</span></code>,
 that is called by the constructor:</p>
-<div class="highlight-csharp" id="index-1"><div class="highlight"><pre><span></span>      <span class="c1">/// Force the invarient: in lowest terms with a positive denominator.</span>
+<div class="highlight-csharp notranslate" id="index-1"><div class="highlight"><pre><span></span>      <span class="c1">/// Force the invarient: in lowest terms with a positive denominator.</span>
       <span class="k">private</span> <span class="k">void</span> <span class="nf">Normalize</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">denom</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// We *should* force an Exception, but we won&#39;t.</span>
@@ -423,28 +205,28 @@ that is called by the constructor:</p>
 </div>
 <p>There are several things to note about this method:</p>
 <ul class="simple">
-<li>It is <em>private</em>.
+<li><p>It is <em>private</em>.
 It is only used as a helping method, called from inside of Rational.  It
-is not a part of the public interface used from other classes.</li>
-<li>We need to deal with a 0 denominator somehow.  We should be causing an
+is not a part of the public interface used from other classes.</p></li>
+<li><p>We need to deal with a 0 denominator somehow.  We should be causing an
 <em>exception</em>, but that is an advanced topic, so we wimp out and just
-change the denominator to 1.</li>
-<li>There is one other technical issue in getting a unique representation:  The
+change the denominator to 1.</p></li>
+<li><p>There is one other technical issue in getting a unique representation:  The
 denominator could start off being negative.
 If that is the case, we change the sign of
 both the numerator and denominator, so we always end up with a positive
-denominator.  We will use this fact in several places.</li>
-<li>It calls a static method of the class, <code class="docutils literal"><span class="pre">GCD</span></code>.  Classes can have both
+denominator.  We will use this fact in several places.</p></li>
+<li><p>It calls a static method of the class, <code class="docutils literal notranslate"><span class="pre">GCD</span></code>.  Classes can have both
 instance and static methods.  It is fine for an instance method like
-<code class="docutils literal"><span class="pre">Normalize</span></code> to call a static method:  The instance variables cannot be
-accessed.  Here <code class="docutils literal"><span class="pre">GCD</span></code> is passed all its data explicitly through
-its parameters.</li>
+<code class="docutils literal notranslate"><span class="pre">Normalize</span></code> to call a static method:  The instance variables cannot be
+accessed.  Here <code class="docutils literal notranslate"><span class="pre">GCD</span></code> is passed all its data explicitly through
+its parameters.</p></li>
 </ul>
-<p>The complete constructor, using <code class="docutils literal"><span class="pre">Normalize</span></code>, is below.
+<p>The complete constructor, using <code class="docutils literal notranslate"><span class="pre">Normalize</span></code>, is below.
 Note that by the time we
 are done constructing a new Rational, it is in this normalized form:  lowest
 terms and positive denominator:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Create a fraction given numerator and denominator.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Create a fraction given numerator and denominator.</span>
       <span class="k">public</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span> <span class="n">numerator</span><span class="p">,</span> <span class="kt">int</span> <span class="n">denominator</span><span class="p">)</span>
       <span class="p">{</span>
          <span class="n">num</span> <span class="p">=</span> <span class="n">numerator</span><span class="p">;</span>
@@ -453,14 +235,14 @@ terms and positive denominator:</p>
       <span class="p">}</span>
 </pre></div>
 </div>
-<p>The call to the <code class="docutils literal"><span class="pre">Normalize</span></code> method is another place where we have a
+<p>The call to the <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> method is another place where we have a
 call without dot notation, since it
 is acting on the same object as for the constructor.</p>
-<p>We mentioned that instance method <code class="docutils literal"><span class="pre">Normalize</span></code> calls static method <code class="docutils literal"><span class="pre">GCD</span></code>,
+<p>We mentioned that instance method <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> calls static method <code class="docutils literal notranslate"><span class="pre">GCD</span></code>,
 and this is fine.  The reverse is not true:</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p>Inside a <code class="docutils literal"><span class="pre">static</span></code> method there
+<p class="admonition-title">Warning</p>
+<p>Inside a <code class="docutils literal notranslate"><span class="pre">static</span></code> method there
 is <em>no</em> current object.  A common compiler error is caused when you
 try to have a static method call
 an instance method without dot notation for a specific object.
@@ -468,7 +250,7 @@ The shorthand notation
 without an explicit object reference and dot cannot be used, because
 there is no
 current object to reference implicitly:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">AnInstanceMethod</span><span class="p">()</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">AnInstanceMethod</span><span class="p">()</span>
 <span class="p">{</span>
       <span class="p">...</span>
 <span class="p">}</span>
@@ -479,13 +261,13 @@ current object to reference implicitly:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p class="last">On the other hand, there is no issue when
+<p>On the other hand, there is no issue when
 an instance method calls a static method.  (The instance variables are just
 inaccessible inside the static method.)</p>
 </div>
 <p>The Rational class has the usual getter methods, to access the
 obvious parts of its state:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetNumerator</span><span class="p">()</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetNumerator</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
       <span class="p">}</span>
@@ -497,7 +279,7 @@ obvious parts of its state:</p>
 </pre></div>
 </div>
 <p>We certainly want to be able to display a Rational as a string version:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a string of the fraction in lowest terms,</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a string of the fraction in lowest terms,</span>
       <span class="c1">/// omitting the denominator if it is 1.</span>
       <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
       <span class="p">{</span>
@@ -507,13 +289,13 @@ obvious parts of its state:</p>
       <span class="p">}</span>
 </pre></div>
 </div>
-<p>Note that we simplify so you would see &#8220;3&#8221; rather than &#8220;3/1&#8221;.  This is also
+<p>Note that we simplify so you would see “3” rather than “3/1”.  This is also
 a place where the normalization to have a positive denominator comes in:
-a negative Rational will always have a leading &#8220;-&#8221; as in &#8220;-5/9&#8221; rather than
-&#8220;5/-9&#8221;</p>
-<p>With a Rational, several other conversions make sense:  to <code class="docutils literal"><span class="pre">double</span></code>
-and <code class="docutils literal"><span class="pre">decimal</span></code> approximations.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a double approximation to the fraction.</span>
+a negative Rational will always have a leading “-” as in “-5/9” rather than
+“5/-9”</p>
+<p>With a Rational, several other conversions make sense:  to <code class="docutils literal notranslate"><span class="pre">double</span></code>
+and <code class="docutils literal notranslate"><span class="pre">decimal</span></code> approximations.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a double approximation to the fraction.</span>
       <span class="k">public</span> <span class="kt">double</span> <span class="nf">ToDouble</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">num</span><span class="p">)/</span><span class="n">denom</span><span class="p">;</span>
@@ -533,7 +315,7 @@ How do we make a new Rational?
 We have a constructor!  We can easily use it.  The reciprocal
 swaps the numerator and denominator.  It is also easy to negate
 a Rational:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the reciprocal of this Rational.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the reciprocal of this Rational.</span>
       <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Reciprocal</span><span class="p">()</span>
       <span class="p">{</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">denom</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
@@ -548,24 +330,24 @@ a Rational:</p>
 </div>
 <p>Static methods are still useful.
 For example, in analogy with the other numeric types
-we may want a static <code class="docutils literal"><span class="pre">Parse</span></code> method
+we may want a static <code class="docutils literal notranslate"><span class="pre">Parse</span></code> method
 to act on a string parameter and return a new Rational.</p>
-<p>The most obvious kind of string to parse would be one like <code class="docutils literal"><span class="pre">&quot;2/3&quot;</span></code> or <code class="docutils literal"><span class="pre">&quot;-10/77&quot;</span></code>,
-which we can split at the <code class="docutils literal"><span class="pre">'/'</span></code>.
-Integers are also rational numbers, so we would like to parse <code class="docutils literal"><span class="pre">&quot;123&quot;</span></code>.
+<p>The most obvious kind of string to parse would be one like <code class="docutils literal notranslate"><span class="pre">&quot;2/3&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;-10/77&quot;</span></code>,
+which we can split at the <code class="docutils literal notranslate"><span class="pre">'/'</span></code>.
+Integers are also rational numbers, so we would like to parse <code class="docutils literal notranslate"><span class="pre">&quot;123&quot;</span></code>.
 Finally decimal strings can be converted to rational numbers,
-so we would like to parse <code class="docutils literal"><span class="pre">&quot;123.45&quot;</span></code>.</p>
-<p>See how our <code class="docutils literal"><span class="pre">Parse</span></code> method below distinguishes and handles
+so we would like to parse <code class="docutils literal notranslate"><span class="pre">&quot;123.45&quot;</span></code>.</p>
+<p>See how our <code class="docutils literal notranslate"><span class="pre">Parse</span></code> method below distinguishes and handles
 all the cases.  It constructs integer strings,
-<code class="docutils literal"><span class="pre">parts[0]</span></code> and <code class="docutils literal"><span class="pre">parts[1]</span></code>, for both the numerator and denominator,
-and then parses the integers.  Note that the method <em>is</em> <code class="docutils literal"><span class="pre">static</span></code>.
+<code class="docutils literal notranslate"><span class="pre">parts[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">parts[1]</span></code>, for both the numerator and denominator,
+and then parses the integers.  Note that the method <em>is</em> <code class="docutils literal notranslate"><span class="pre">static</span></code>.
 There is no Rational
 being referred to when it starts, but in this case the method <em>returns</em> one.</p>
-<p>That last case is the trickiest.  For example <code class="docutils literal"><span class="pre">&quot;123.45&quot;</span></code> becomes 12345/100
+<p>That last case is the trickiest.  For example <code class="docutils literal notranslate"><span class="pre">&quot;123.45&quot;</span></code> becomes 12345/100
 (before being reduced to lowest terms).
 Note that there were originally <em>two</em> digits after the decimal point
 and then the denominator gets <em>two</em> zeroes to have the right power of 10:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Parse a string of an integer, fraction (with /) or decimal (with .)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Parse a string of an integer, fraction (with /) or decimal (with .)</span>
       <span class="c1">///  and return the corresponding Rational.</span>
       <span class="k">public</span> <span class="k">static</span> <span class="n">Rational</span> <span class="nf">Parse</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
       <span class="p">{</span>
@@ -586,33 +368,33 @@ and then the denominator gets <em>two</em> zeroes to have the right power of 10:
       <span class="p">}</span>
 </pre></div>
 </div>
-<div class="section" id="method-parameters-of-the-same-type">
-<h2>13.3.1. Method Parameters of the Same Type<a class="headerlink" href="#method-parameters-of-the-same-type" title="Permalink to this headline">¶</a></h2>
+<section id="method-parameters-of-the-same-type">
+<h2>Method Parameters of the Same Type<a class="headerlink" href="#method-parameters-of-the-same-type" title="Permalink to this headline"></a></h2>
 <p>We can deal with the current object without using dot notation.  What if we are
 dealing with <em>more than one</em> Rational, the current one <em>and</em> another one,
 like the parameter in Multiply:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
       <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>We can mix the shorthand notation for the current object&#8217;s fields
+<p>We can mix the shorthand notation for the current object’s fields
 and dot notation for another
-<em>named</em> object:  <code class="docutils literal"><span class="pre">num</span></code> and <code class="docutils literal"><span class="pre">denom</span></code> refer to the fields in the <em>current</em> object, and
-<code class="docutils literal"><span class="pre">f.num</span></code> and <code class="docutils literal"><span class="pre">f.denom</span></code> refer to fields for the other
-<code class="docutils literal"><span class="pre">Rational</span></code>, the parameter <code class="docutils literal"><span class="pre">f</span></code>.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
+<em>named</em> object:  <code class="docutils literal notranslate"><span class="pre">num</span></code> and <code class="docutils literal notranslate"><span class="pre">denom</span></code> refer to the fields in the <em>current</em> object, and
+<code class="docutils literal notranslate"><span class="pre">f.num</span></code> and <code class="docutils literal notranslate"><span class="pre">f.denom</span></code> refer to fields for the other
+<code class="docutils literal notranslate"><span class="pre">Rational</span></code>, the parameter <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
       <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
       <span class="p">{</span>  <span class="c1">// end Multiply heading chunk</span>
          <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">num</span><span class="p">*</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="p">*</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
       <span class="p">}</span>
 </pre></div>
 </div>
-<p>We do not refer to the fields of <code class="docutils literal"><span class="pre">f</span></code> through the public methods
-<code class="docutils literal"><span class="pre">GetNumerator</span></code> and <code class="docutils literal"><span class="pre">GetDenominator</span></code>.
-Though <code class="docutils literal"><span class="pre">f</span></code> is not the same <em>object</em>, it is the same <em>type</em>:</p>
+<p>We do not refer to the fields of <code class="docutils literal notranslate"><span class="pre">f</span></code> through the public methods
+<code class="docutils literal notranslate"><span class="pre">GetNumerator</span></code> and <code class="docutils literal notranslate"><span class="pre">GetDenominator</span></code>.
+Though <code class="docutils literal notranslate"><span class="pre">f</span></code> is not the same <em>object</em>, it is the same <em>type</em>:</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Private members of <em>another</em> object of the <em>same</em> type are
+<p class="admonition-title">Note</p>
+<p>Private members of <em>another</em> object of the <em>same</em> type are
 accessible from method definitions in the class.</p>
 </div>
 <p>There are a number of other arithmetic methods in the source code for Rational
@@ -625,96 +407,96 @@ uses all the methods.  We will see more advance ways to test Rational
 in <a class="reference internal" href="../testing/testing.html#testing"><span class="std std-ref">Testing</span></a>.</p>
 <p>There is also a more convenient version of Rational,
 using advanced concepts, in <a class="reference internal" href="overload-op.html#defining-operators"><span class="std std-ref">Defining Operators (Optional)</span></a>.</p>
-</div>
-<div class="section" id="pictorial-playing-computer">
-<h2>13.3.2. Pictorial Playing Computer<a class="headerlink" href="#pictorial-playing-computer" title="Permalink to this headline">¶</a></h2>
-<p>Let us start pictorially playing computer on <code class="file docutils literal"><span class="pre">test_rational.cs</span></code>,
+</section>
+<section id="pictorial-playing-computer">
+<h2>Pictorial Playing Computer<a class="headerlink" href="#pictorial-playing-computer" title="Permalink to this headline"></a></h2>
+<p>Let us start pictorially playing computer on <code class="file docutils literal notranslate"><span class="pre">test_rational.cs</span></code>,
 as a review of much of the previous sections.  We explicitly show a local variable
-<code class="docutils literal"><span class="pre">this</span></code> to identify the current object in an instance method or constructor.</p>
-<p>The first line of <code class="docutils literal"><span class="pre">Main</span></code>,</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">f</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="p">-</span><span class="m">10</span><span class="p">);</span>
+<code class="docutils literal notranslate"><span class="pre">this</span></code> to identify the current object in an instance method or constructor.</p>
+<p>The first line of <code class="docutils literal notranslate"><span class="pre">Main</span></code>,</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">f</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="p">-</span><span class="m">10</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>creates a new Rational, so it calls the constructor.  At the very beginning of the
-constructor, a prototype <code class="docutils literal"><span class="pre">Rational</span></code> is already created as the current object,
-so immediately, there is a <code class="docutils literal"><span class="pre">this</span></code>.
+constructor, a prototype <code class="docutils literal notranslate"><span class="pre">Rational</span></code> is already created as the current object,
+so immediately, there is a <code class="docutils literal notranslate"><span class="pre">this</span></code>.
 The parameters 6, and -10 are passed, initializing the explicit local
-variables <code class="docutils literal"><span class="pre">numerator</span></code> and <code class="docutils literal"><span class="pre">denominator</span></code>.
+variables <code class="docutils literal notranslate"><span class="pre">numerator</span></code> and <code class="docutils literal notranslate"><span class="pre">denominator</span></code>.
 The figure illustrates the memory state at the beginning of the constructor call:</p>
 <a class="reference internal image-reference" href="../_images/callConstructor.png"><img alt="../_images/callConstructor.png" src="../_images/callConstructor.png" style="width: 124pt;" /></a>
 <p>Note the immediate value assigned to the numeric instance variables is zero:  This is
 as discussed in <a class="reference internal" href="../arrays/onedim.html#default-fields"><span class="std std-ref">Default Initializations</span></a>.
 Of course we do not want to keep those default values:
-The constructor finds the value of the local variable <code class="docutils literal"><span class="pre">numerator</span></code>, and needs to
-assign the value 6 to a variable <code class="docutils literal"><span class="pre">num</span></code>.  The compiler has looked
-first for a local variable <code class="docutils literal"><span class="pre">num</span></code>, and found none.
+The constructor finds the value of the local variable <code class="docutils literal notranslate"><span class="pre">numerator</span></code>, and needs to
+assign the value 6 to a variable <code class="docutils literal notranslate"><span class="pre">num</span></code>.  The compiler has looked
+first for a local variable <code class="docutils literal notranslate"><span class="pre">num</span></code>, and found none.
 Then it looked <em>second</em> for an instance variable in the object pointed to
-by <code class="docutils literal"><span class="pre">this</span></code>.  It found <code class="docutils literal"><span class="pre">num</span></code> there.  Now it copies the 6 into that location.
-Similarly for <code class="docutils literal"><span class="pre">denominator</span></code> and <code class="docutils literal"><span class="pre">denom</span></code>:</p>
+by <code class="docutils literal notranslate"><span class="pre">this</span></code>.  It found <code class="docutils literal notranslate"><span class="pre">num</span></code> there.  Now it copies the 6 into that location.
+Similarly for <code class="docutils literal notranslate"><span class="pre">denominator</span></code> and <code class="docutils literal notranslate"><span class="pre">denom</span></code>:</p>
 <a class="reference internal image-reference" href="../_images/callConstructorCopied.png"><img alt="../_images/callConstructorCopied.png" src="../_images/callConstructorCopied.png" style="width: 124pt;" /></a>
-<p>Then the constructor calls <code class="docutils literal"><span class="pre">Normalize</span></code>.
-Since <code class="docutils literal"><span class="pre">Normalize</span></code> is also an instance method,
-a reference to <code class="docutils literal"><span class="pre">this</span></code> is passed implicitly.
+<p>Then the constructor calls <code class="docutils literal notranslate"><span class="pre">Normalize</span></code>.
+Since <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> is also an instance method,
+a reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> is passed implicitly.
 While illustrating the memory state for more than one active method,
 we separate each one with a horizontal segment.</p>
 <a class="reference internal image-reference" href="../_images/callNormalize.png"><img alt="../_images/callNormalize.png" src="../_images/callNormalize.png" style="width: 124pt;" /></a>
-<p>Later <code class="docutils literal"><span class="pre">Normalize</span></code> calls <code class="docutils literal"><span class="pre">GCD</span></code>.  Since <code class="docutils literal"><span class="pre">GCD</span></code> is static, note that the local
-variables for <code class="docutils literal"><span class="pre">GCD</span></code> do <em>not</em> contain a reference to <code class="docutils literal"><span class="pre">this</span></code>.</p>
+<p>Later <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> calls <code class="docutils literal notranslate"><span class="pre">GCD</span></code>.  Since <code class="docutils literal notranslate"><span class="pre">GCD</span></code> is static, note that the local
+variables for <code class="docutils literal notranslate"><span class="pre">GCD</span></code> do <em>not</em> contain a reference to <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/callGCD.png"><img alt="../_images/callGCD.png" src="../_images/callGCD.png" style="width: 124pt;" /></a>
-<p>At the end of <code class="docutils literal"><span class="pre">GCD</span></code> the <code class="docutils literal"><span class="pre">int</span></code> 2 is returned and initializes
-<code class="docutils literal"><span class="pre">n</span></code> in the calling method <code class="docutils literal"><span class="pre">Normalize</span></code>.
-Then <code class="docutils literal"><span class="pre">Normalize</span></code> modifies the instance variable pointed to by <code class="docutils literal"><span class="pre">this</span></code>,
+<p>At the end of <code class="docutils literal notranslate"><span class="pre">GCD</span></code> the <code class="docutils literal notranslate"><span class="pre">int</span></code> 2 is returned and initializes
+<code class="docutils literal notranslate"><span class="pre">n</span></code> in the calling method <code class="docutils literal notranslate"><span class="pre">Normalize</span></code>.
+Then <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> modifies the instance variable pointed to by <code class="docutils literal notranslate"><span class="pre">this</span></code>,
 and finishes.</p>
 <a class="reference internal image-reference" href="../_images/finishNormalize.png"><img alt="../_images/finishNormalize.png" src="../_images/finishNormalize.png" style="width: 124pt;" /></a>
-<p>That is the same object <code class="docutils literal"><span class="pre">this</span></code> in the constructor.
+<p>That is the same object <code class="docutils literal notranslate"><span class="pre">this</span></code> in the constructor.
 Just before the constructor completes we have:</p>
 <a class="reference internal image-reference" href="../_images/finishConstructor.png"><img alt="../_images/finishConstructor.png" src="../_images/finishConstructor.png" style="width: 124pt;" /></a>
-<p>Then in <code class="docutils literal"><span class="pre">Main</span></code> the constructor&#8217;s <code class="docutils literal"><span class="pre">this</span></code> is the reference to the new object
-initializing <code class="docutils literal"><span class="pre">f</span></code>.</p>
+<p>Then in <code class="docutils literal notranslate"><span class="pre">Main</span></code> the constructor’s <code class="docutils literal notranslate"><span class="pre">this</span></code> is the reference to the new object
+initializing <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/setF.png"><img alt="../_images/setF.png" src="../_images/setF.png" style="width: 120pt;" /></a>
-<p>Consider the next line of <code class="docutils literal"><span class="pre">Main</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+<p>Consider the next line of <code class="docutils literal notranslate"><span class="pre">Main</span></code>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>We omit the internals of the WriteLine call, except to note that it must convert
-the reference <code class="docutils literal"><span class="pre">f</span></code> to a string.  As with any object,
-it does this by calling the <code class="docutils literal"><span class="pre">ToString</span></code> method for <code class="docutils literal"><span class="pre">f</span></code>,
-so the implicit <code class="docutils literal"><span class="pre">this</span></code> in the call to <code class="docutils literal"><span class="pre">ToString</span></code> refers to the same object as <code class="docutils literal"><span class="pre">f</span></code>:</p>
+the reference <code class="docutils literal notranslate"><span class="pre">f</span></code> to a string.  As with any object,
+it does this by calling the <code class="docutils literal notranslate"><span class="pre">ToString</span></code> method for <code class="docutils literal notranslate"><span class="pre">f</span></code>,
+so the implicit <code class="docutils literal notranslate"><span class="pre">this</span></code> in the call to <code class="docutils literal notranslate"><span class="pre">ToString</span></code> refers to the same object as <code class="docutils literal notranslate"><span class="pre">f</span></code>:</p>
 <a class="reference internal image-reference" href="../_images/callToString.png"><img alt="../_images/callToString.png" src="../_images/callToString.png" style="width: 196.5pt;" /></a>
-<p><code class="docutils literal"><span class="pre">ToString</span></code> returns &#8220;-3/5&#8221;, and it gets printed as part of the line generated
-by <code class="docutils literal"><span class="pre">WriteLine</span></code>....</p>
-<p>We skip the similar details through two more <code class="docutils literal"><span class="pre">WriteLine</span></code> statements and the
-initialization of <code class="docutils literal"><span class="pre">h</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">h</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">);</span>
+<p><code class="docutils literal notranslate"><span class="pre">ToString</span></code> returns “-3/5”, and it gets printed as part of the line generated
+by <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code>….</p>
+<p>We skip the similar details through two more <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code> statements and the
+initialization of <code class="docutils literal notranslate"><span class="pre">h</span></code>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">h</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">WriteLine</span></code>
-statement after that needs to evaluate <code class="docutils literal"><span class="pre">f.Add(h)</span></code>, generating a call to <code class="docutils literal"><span class="pre">Add</span></code>.
-The next figure shows the two local variables in <code class="docutils literal"><span class="pre">Main</span></code>, <code class="docutils literal"><span class="pre">f</span></code> and <code class="docutils literal"><span class="pre">h</span></code>, each
-pointing to a <code class="docutils literal"><span class="pre">Rational</span></code> object.  The image shows the situation
-in the call to <code class="docutils literal"><span class="pre">Add</span></code>, just before the end of the return statement,
+<p>The <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code>
+statement after that needs to evaluate <code class="docutils literal notranslate"><span class="pre">f.Add(h)</span></code>, generating a call to <code class="docutils literal notranslate"><span class="pre">Add</span></code>.
+The next figure shows the two local variables in <code class="docutils literal notranslate"><span class="pre">Main</span></code>, <code class="docutils literal notranslate"><span class="pre">f</span></code> and <code class="docutils literal notranslate"><span class="pre">h</span></code>, each
+pointing to a <code class="docutils literal notranslate"><span class="pre">Rational</span></code> object.  The image shows the situation
+in the call to <code class="docutils literal notranslate"><span class="pre">Add</span></code>, just before the end of the return statement,
 when the new Rational is being constructed.</p>
-<p>In the local variables for the method <code class="docutils literal"><span class="pre">Add</span></code>
-see what the implicit <code class="docutils literal"><span class="pre">this</span></code> refers to, and what the
-(local to <code class="docutils literal"><span class="pre">Add</span></code>) variable <code class="docutils literal"><span class="pre">f</span></code> refer to.  As the figure shows,
+<p>In the local variables for the method <code class="docutils literal notranslate"><span class="pre">Add</span></code>
+see what the implicit <code class="docutils literal notranslate"><span class="pre">this</span></code> refers to, and what the
+(local to <code class="docutils literal notranslate"><span class="pre">Add</span></code>) variable <code class="docutils literal notranslate"><span class="pre">f</span></code> refer to.  As the figure shows,
 this use of a local variable
-<code class="docutils literal"><span class="pre">f</span></code> is independent of the <code class="docutils literal"><span class="pre">f</span></code> in <code class="docutils literal"><span class="pre">Main</span></code>:</p>
+<code class="docutils literal notranslate"><span class="pre">f</span></code> is independent of the <code class="docutils literal notranslate"><span class="pre">f</span></code> in <code class="docutils literal notranslate"><span class="pre">Main</span></code>:</p>
 <a class="reference internal image-reference" href="../_images/callAdd.png"><img alt="../_images/callAdd.png" src="../_images/callAdd.png" style="width: 132pt;" /></a>
-<p>Since the return statement in <code class="docutils literal"><span class="pre">Add</span></code> creates a new object,
+<p>Since the return statement in <code class="docutils literal notranslate"><span class="pre">Add</span></code> creates a new object,
 the figure shows  a call to the
-constructor from inside <code class="docutils literal"><span class="pre">Add</span></code>.  We do not go through the details of another
+constructor from inside <code class="docutils literal notranslate"><span class="pre">Add</span></code>.  We do not go through the details of another
 constructor call, but
-<code class="docutils literal"><span class="pre">this</span></code> in the constructor points to the Rational shown and returned by
-<code class="docutils literal"><span class="pre">Add</span></code>:</p>
+<code class="docutils literal notranslate"><span class="pre">this</span></code> in the constructor points to the Rational shown and returned by
+<code class="docutils literal notranslate"><span class="pre">Add</span></code>:</p>
 <a class="reference internal image-reference" href="../_images/endAdd.png"><img alt="../_images/endAdd.png" src="../_images/endAdd.png" style="width: 132pt;" /></a>
-<p>which gets sent to the <code class="docutils literal"><span class="pre">WriteLine</span></code> statement
-and gets printed in <code class="docutils literal"><span class="pre">Main</span></code> as in the earlier code.</p>
+<p>which gets sent to the <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code> statement
+and gets printed in <code class="docutils literal notranslate"><span class="pre">Main</span></code> as in the earlier code.</p>
 <p>Make sure you see how the pictures reinforce these important ideas:</p>
 <ul class="simple">
-<li>Keeping track of the <code class="docutils literal"><span class="pre">this</span></code> with
-constructors and instance methods (but not static methods).</li>
-<li>The aliasing of <code class="docutils literal"><span class="pre">Rational</span></code> objects used as parameters explicitly or
-implicitly (<code class="docutils literal"><span class="pre">this</span></code>).</li>
+<li><p>Keeping track of the <code class="docutils literal notranslate"><span class="pre">this</span></code> with
+constructors and instance methods (but not static methods).</p></li>
+<li><p>The aliasing of <code class="docutils literal notranslate"><span class="pre">Rational</span></code> objects used as parameters explicitly or
+implicitly (<code class="docutils literal notranslate"><span class="pre">this</span></code>).</p></li>
 </ul>
 <p>We have played computer before in procedural programming,
 following individually explicitly named
@@ -730,26 +512,26 @@ data they want to work with.
 If you have a picture of the data relationships
 you can point with a finger to a part that you want to use.
 For example
-in the call to <code class="docutils literal"><span class="pre">Add</span></code>, one piece of data you need for your arithmetic is
-the <code class="docutils literal"><span class="pre">num</span></code> field in <code class="docutils literal"><span class="pre">f</span></code>.  Then you must be carful to note
+in the call to <code class="docutils literal notranslate"><span class="pre">Add</span></code>, one piece of data you need for your arithmetic is
+the <code class="docutils literal notranslate"><span class="pre">num</span></code> field in <code class="docutils literal notranslate"><span class="pre">f</span></code>.  Then you must be carful to note
 that <em>only local variables can be referenced directly</em>
-(including the implicit <code class="docutils literal"><span class="pre">this</span></code>).   If you want to refer to data that is not a local
+(including the implicit <code class="docutils literal notranslate"><span class="pre">this</span></code>).   If you want to refer to data that is not a local
 variable, you must follow the reference path arrow that leads <em>from a local variable</em> to
 an instance field that you want to reference.</p>
 <a class="reference internal image-reference" href="../_images/pathToNum.png"><img alt="../_images/pathToNum.png" src="../_images/pathToNum.png" style="width: 132pt;" /></a>
 <p>Then use the proper object-oriented notation to refer to the path.
 In the example, it takes one step,
-from local variable <code class="docutils literal"><span class="pre">f</span></code> to its field <code class="docutils literal"><span class="pre">num</span></code>, referred to as <code class="docutils literal"><span class="pre">f.num</span></code>.
-Similarly the current object&#8217;s <code class="docutils literal"><span class="pre">num</span></code> is connected through <code class="docutils literal"><span class="pre">this</span></code>, but C# shorthand
-allows <code class="docutils literal"><span class="pre">this.</span></code> to be omitted.  And so on, for <code class="docutils literal"><span class="pre">f.denom</span></code> and <code class="docutils literal"><span class="pre">denom</span></code>.</p>
+from local variable <code class="docutils literal notranslate"><span class="pre">f</span></code> to its field <code class="docutils literal notranslate"><span class="pre">num</span></code>, referred to as <code class="docutils literal notranslate"><span class="pre">f.num</span></code>.
+Similarly the current object’s <code class="docutils literal notranslate"><span class="pre">num</span></code> is connected through <code class="docutils literal notranslate"><span class="pre">this</span></code>, but C# shorthand
+allows <code class="docutils literal notranslate"><span class="pre">this.</span></code> to be omitted.  And so on, for <code class="docutils literal notranslate"><span class="pre">f.denom</span></code> and <code class="docutils literal notranslate"><span class="pre">denom</span></code>.</p>
 <p>Visually following such paths will be even more important later, when we construct
 more complex types of objects, and you need to follow
 a path through <em>several</em> references in sequence.</p>
-</div>
-<div class="section" id="forcematch-exercise">
-<span id="index-2"></span><h2>13.3.3. ForceMatch Exercise<a class="headerlink" href="#forcematch-exercise" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="forcematch-exercise">
+<span id="index-2"></span><h2>ForceMatch Exercise<a class="headerlink" href="#forcematch-exercise" title="Permalink to this headline"></a></h2>
 <p>Suppose we have a class:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pair</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pair</span>
 <span class="p">{</span>
    <span class="k">private</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
 
@@ -772,7 +554,7 @@ a path through <em>several</em> references in sequence.</p>
 </pre></div>
 </div>
 <p>A test would be code in another class:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Pair</span> <span class="n">first</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">7</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Pair</span> <span class="n">first</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">7</span><span class="p">);</span>
 <span class="n">Pair</span> <span class="n">second</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">9</span><span class="p">)</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>  <span class="c1">// prints (1, 9)</span>
 <span class="n">first</span><span class="p">.</span><span class="n">ForceMatch</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>
@@ -780,8 +562,8 @@ a path through <em>several</em> references in sequence.</p>
 </pre></div>
 </div>
 <ol class="loweralpha">
-<li><p class="first">Would this code work?  If not, explain why not:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">ForceMatch</span><span class="p">(</span><span class="n">Pair</span> <span class="n">p</span><span class="p">)</span>
+<li><p>Would this code work?  If not, explain why not:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">ForceMatch</span><span class="p">(</span><span class="n">Pair</span> <span class="n">p</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="n">p</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
 <span class="p">}</span>
@@ -790,28 +572,42 @@ a path through <em>several</em> references in sequence.</p>
 <p>If you do not see it,
 do a graphical play-computer like in the last section.</p>
 </li>
-<li><p class="first">Complete the body of <code class="docutils literal"><span class="pre">ForceMatch</span></code> correctly.</p>
-</li>
+<li><p>Complete the body of <code class="docutils literal notranslate"><span class="pre">ForceMatch</span></code> correctly.</p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
 
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classexamples.html" class="btn btn-neutral float-left" title="Class Instance Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="planning_classes.html" class="btn btn-neutral float-right" title="Planning A Class Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-      
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012, Andrew N. Harrington and George Thiruvathukal.
+      <span class="lastupdated">Last updated on 29-November-2021 23:33:52.
+      </span></p>
   </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 10-September-2016 16:59:02.<br/>
-    </p>
-  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
 </footer>
-  </body>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

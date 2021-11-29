@@ -1,375 +1,157 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>6.8. Greatest Common Divisor &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greatest Common Divisor &mdash; Introduction to Computer Science in C# 29 Nov 2021 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
-    <link rel="up" title="6. While Loops" href="while.html" />
-    <link rel="next" title="6.9. Do-While Loops" href="do-while.html" />
-    <link rel="prev" title="6.7. User Input: UI" href="userinput.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="next" title="Do-While Loops" href="do-while.html" />
+    <link rel="prev" title="User Input: UI" href="userinput.html" /> 
+</head>
 
-  </head>
-  <body role="document">
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #922247" >
+            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
+          </a>
+              <div class="version">
+                29 Nov 2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="while.html">While Loops</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">Interactive <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinput.html">User Input: UI</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="do-while.html">Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">Appendix</a></li>
+</ul>
 
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">
-          COMP 170</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="../genindex.html">Index</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="reference internal" href="while.html">6. While Loops</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="whilestatements.html">6.1. While-Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
-<li class="toctree-l2"><a class="reference internal" href="whileexamples.html">6.5. While Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stringmethods2.html">6.6. More String Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="userinput.html">6.7. User Input: UI</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.8. Greatest Common Divisor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="do-while.html">6.9. Do-While Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reviewwhile.html">6.11. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">8. For Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">8.1. For-Statement Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">8.3. Lab: Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">8.4. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">6.8. Greatest Common Divisor</a><ul>
-<li><a class="reference internal" href="#euclid-s-algorithm">6.8.1. Euclid&#8217;s Algorithm</a></li>
-<li><a class="reference internal" href="#gcd-brute-force-method">6.8.2. GCD &#8220;Brute Force&#8221; Method</a><ul>
-<li><a class="reference internal" href="#brute-force-gcd-exercise">6.8.2.1. Brute-Force GCD Exercise</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gcd-subtraction-method">6.8.3. GCD Subtraction Method</a></li>
-<li><a class="reference internal" href="#gcd-remainder-loop">6.8.4. GCD Remainder Loop</a></li>
-<li><a class="reference internal" href="#preview-recursive-gcd">6.8.5. Preview: Recursive GCD</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="userinput.html" title="Previous Chapter: 6.7. User Input: UI">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-  </li>
-  <li>
-    <a href="do-while.html" title="Next Chapter: 6.9. Do-While Loops">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/while/gcdexamples.txt"
-     rel="nofollow">Source</a>
-</div></li>
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
         </div>
-    </div>
-  </div>
+      </div>
+    </nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 content">
-      
-  <div class="section" id="greatest-common-divisor">
-<span id="gcd"></span><span id="index-0"></span><h1>6.8. Greatest Common Divisor<a class="headerlink" href="#greatest-common-divisor" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="euclid-s-algorithm">
-<h2>6.8.1. Euclid&#8217;s Algorithm<a class="headerlink" href="#euclid-s-algorithm" title="Permalink to this headline">¶</a></h2>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to Computer Science in C#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="while.html">While Loops</a> &raquo;</li>
+      <li>Greatest Common Divisor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/while/gcdexamples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="greatest-common-divisor">
+<span id="gcd"></span><span id="index-0"></span><h1>Greatest Common Divisor<a class="headerlink" href="#greatest-common-divisor" title="Permalink to this headline"></a></h1>
+<section id="euclid-s-algorithm">
+<h2>Euclid’s Algorithm<a class="headerlink" href="#euclid-s-algorithm" title="Permalink to this headline"></a></h2>
 <p>The greatest common divisor of two non-zero integers is a great
 example to illustrate the power of loops. Everyone learns about the
 <em>concept</em> of a greatest common divisor when faced with a fraction that
 is not in <em>reduced</em> form.</p>
-<p>Consider the fraction <span class="math">\(\frac{2}{4}\)</span>, which is the same as
-<span class="math">\(\frac{1}{2}\)</span>. The fraction <span class="math">\(\frac{2}{4}\)</span>
+<p>Consider the fraction <span class="math notranslate nohighlight">\(\frac{2}{4}\)</span>, which is the same as
+<span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>. The fraction <span class="math notranslate nohighlight">\(\frac{2}{4}\)</span>
 can be reduced, because the
 numerator and denominator both have greatest common factor of 2. That
-is, <span class="math">\(\frac{2}{4} = \frac{1 \cdot 2}{2 \cdot 2}\)</span>. So the factor of 2 can
+is, <span class="math notranslate nohighlight">\(\frac{2}{4} = \frac{1 \cdot 2}{2 \cdot 2}\)</span>. So the factor of 2 can
 be canceled from both the numerator and the denominator.</p>
 <p>Euclid (the mathematician from classic times and author of <em>Elements</em>)
 is credited with having come up with a clever algorithm for how to
 compute the greatest common divisor efficiently. It is written as
-follows, where <span class="math">\(a \bmod b\)</span> means <code class="docutils literal"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code> in C#.</p>
-<div class="math">
+follows, where <span class="math notranslate nohighlight">\(a \bmod b\)</span> means <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code> in C#.</p>
+<div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}gcd(a, b) = gcd(b, a \bmod b)\\gcd(a, 0) = a\end{aligned}\end{align} \]</div>
 <p>It is common in mathematics to list functions as one or more
 <em>cases</em>. The way you read this is as follows:</p>
 <ul class="simple">
-<li>In general, the greatest common divisor of <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> is the
-same as computing the greatest common divisor of <code class="docutils literal"><span class="pre">b</span></code> and the
-remainder of <code class="docutils literal"><span class="pre">a</span></code> divided by <code class="docutils literal"><span class="pre">b</span></code>.</li>
-<li>In the case where <code class="docutils literal"><span class="pre">b</span></code> is zero, the result is <code class="docutils literal"><span class="pre">a</span></code>. This makes
-sense because <code class="docutils literal"><span class="pre">a</span></code> divides itself and 0.</li>
+<li><p>In general, the greatest common divisor of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> is the
+same as computing the greatest common divisor of <code class="docutils literal notranslate"><span class="pre">b</span></code> and the
+remainder of <code class="docutils literal notranslate"><span class="pre">a</span></code> divided by <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+<li><p>In the case where <code class="docutils literal notranslate"><span class="pre">b</span></code> is zero, the result is <code class="docutils literal notranslate"><span class="pre">a</span></code>. This makes
+sense because <code class="docutils literal notranslate"><span class="pre">a</span></code> divides itself and 0.</p></li>
 </ul>
 <p>To gain some appreciation of how the definition <em>always</em> allows you to
 compute the greatest common divisor, it is worthwhile to try it out
 for a couple of numbers where you <em>know</em> the greatest common
 divisor. For example, we already know that the greatest common divisor
-of 10 and 15 is 5. Let&#8217;s use Euclid&#8217;s method to verify this:</p>
+of 10 and 15 is 5. Let’s use Euclid’s method to verify this:</p>
 <ul class="simple">
-<li><span class="math">\(gcd(10, 15) = gcd(15, 10 \bmod 15) = gcd(15, 10)\)</span></li>
-<li><span class="math">\(gcd(15, 10) = gcd(10, 15 \bmod 10) = gcd(10, 5)\)</span></li>
-<li><span class="math">\(gcd(10, 5) = gcd(5, 10 \bmod 5) = gcd(5, 0)\)</span></li>
-<li><span class="math">\(gcd(5, 0) = 5\)</span></li>
+<li><p><span class="math notranslate nohighlight">\(gcd(10, 15) = gcd(15, 10 \bmod 15) = gcd(15, 10)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(gcd(15, 10) = gcd(10, 15 \bmod 10) = gcd(10, 5)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(gcd(10, 5) = gcd(5, 10 \bmod 5) = gcd(5, 0)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(gcd(5, 0) = 5\)</span></p></li>
 </ul>
 <p>Notice that in the example above, the first number (10) was smaller than
 the second (15), and the first transformation just swapped the numbers,
 so the larger number was first.  Thereafter the first number is always
 larger.</p>
-</div>
-<div class="section" id="gcd-brute-force-method">
-<h2>6.8.2. GCD &#8220;Brute Force&#8221; Method<a class="headerlink" href="#gcd-brute-force-method" title="Permalink to this headline">¶</a></h2>
-<p>Now that we&#8217;ve gotten the preliminaries out of the way and have a basic
+</section>
+<section id="gcd-brute-force-method">
+<h2>GCD “Brute Force” Method<a class="headerlink" href="#gcd-brute-force-method" title="Permalink to this headline"></a></h2>
+<p>Now that we’ve gotten the preliminaries out of the way and have a basic
 mathematical explanation for how
 to calculate the greatest common divisor,
-we&#8217;ll take a look at how to translate this into code using the
-machinery of while loops that you&#8217;ve recently learned.</p>
+we’ll take a look at how to translate this into code using the
+machinery of while loops that you’ve recently learned.</p>
 <p>The way GCD is formulated above is, indeed, the most clever way to
 calculate the greatest common divisor.
 Yet the way we learn about the greatest common divisor in elementary
@@ -383,7 +165,7 @@ So the greatest common divisor is 5.</p>
 <p>But if we had something more tricky to do like 810 and 729,
 we might have to think a bit more.</p>
 <p>Before we learn to find the factors of numbers,
-we will often just &#8220;try&#8221; numbers until we get the
+we will often just “try” numbers until we get the
 greatest common divisor. This sort of trial process can take place in a loop,
 where we start at 1 and end at min(a, b). Why the minimum?
 We know that none of the values after the minimum can divide both a and b
@@ -391,61 +173,48 @@ We know that none of the values after the minimum can divide both a and b
 because no larger number can divide a smaller positive number. The smaller
 number would be the (non-zero) remainder.</p>
 <p>Now take a look at a basic version of GCD:</p>
-<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">/// Return the greatest common divisor of positive numbers.</span>
-<span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-<span class="p">{</span>
-   <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="n">Min</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-   <span class="kt">int</span> <span class="n">gcd</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
-
-   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="p">%</span> <span class="n">i</span> <span class="p">==</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">b</span> <span class="p">%</span> <span class="n">i</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-         <span class="n">gcd</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="n">i</span><span class="p">++;</span>
-   <span class="p">}</span>
-   <span class="k">return</span> <span class="n">gcd</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">/// Return the greatest common divisor of positive numbers.</span>
+<span class="linenos"> 2</span><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="p">{</span>
+<span class="linenos"> 4</span>   <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="n">Min</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+<span class="linenos"> 5</span>   <span class="kt">int</span> <span class="n">gcd</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos"> 8</span>      <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="p">%</span> <span class="n">i</span> <span class="p">==</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">b</span> <span class="p">%</span> <span class="n">i</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos"> 9</span>         <span class="n">gcd</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span>
+<span class="linenos">10</span>      <span class="p">}</span>
+<span class="linenos">11</span>      <span class="n">i</span><span class="p">++;</span>
+<span class="linenos">12</span>   <span class="p">}</span>
+<span class="linenos">13</span>   <span class="k">return</span> <span class="n">gcd</span><span class="p">;</span>
+<span class="linenos">14</span><span class="p">}</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>This code works as follows:</p>
 <ul class="simple">
-<li>We begin by finding <code class="docutils literal"><span class="pre">Math.Min(a,</span> <span class="pre">b)</span></code>.
+<li><p>We begin by finding <code class="docutils literal notranslate"><span class="pre">Math.Min(a,</span> <span class="pre">b)</span></code>.
 This is how to compute the minimum of any two
-values in C#. Technically, we don&#8217;t need to use the minimum of a and b,
+values in C#. Technically, we don’t need to use the minimum of a and b,
 but there is no
-point in doing any more work than necessary.</li>
-<li>We&#8217;ll use the variable <code class="docutils literal"><span class="pre">i</span></code> as the loop index, starting at 1.</li>
-<li>The variable <code class="docutils literal"><span class="pre">gcd</span></code> will hold the largest currently known common divisor.
+point in doing any more work than necessary.</p></li>
+<li><p>We’ll use the variable <code class="docutils literal notranslate"><span class="pre">i</span></code> as the loop index, starting at 1.</p></li>
+<li><p>The variable <code class="docutils literal notranslate"><span class="pre">gcd</span></code> will hold the largest currently known common divisor.
 We start with 1, which divides any integer, and we will
-look for a higher value that also divides a and b.</li>
-<li>The line <code class="docutils literal"><span class="pre">while</span> <span class="pre">(i</span> <span class="pre">&lt;=</span> <span class="pre">n)</span></code> is used to indicate that we are
+look for a higher value that also divides a and b.</p></li>
+<li><p>The line <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">(i</span> <span class="pre">&lt;=</span> <span class="pre">n)</span></code> is used to indicate that we are
 iterating the values of
-<code class="docutils literal"><span class="pre">i</span></code> until the minimum of <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> (computed earlier) is reached.</li>
-<li>The line <code class="docutils literal"><span class="pre">if</span> <span class="pre">(a</span> <span class="pre">%</span> <span class="pre">i</span> <span class="pre">==</span> <span class="pre">0</span> <span class="pre">&amp;&amp;</span> <span class="pre">b</span> <span class="pre">%</span> <span class="pre">i</span> <span class="pre">==</span> <span class="pre">0)</span></code>
+<code class="docutils literal notranslate"><span class="pre">i</span></code> until the minimum of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> (computed earlier) is reached.</p></li>
+<li><p>The line <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(a</span> <span class="pre">%</span> <span class="pre">i</span> <span class="pre">==</span> <span class="pre">0</span> <span class="pre">&amp;&amp;</span> <span class="pre">b</span> <span class="pre">%</span> <span class="pre">i</span> <span class="pre">==</span> <span class="pre">0)</span></code>
 is used to check whether we have found a
 new value that replaces our previous <em>candidate</em> for the GCD.
 A value can only be
 a candidate for the GCD if it divides a and b without a remainder.
 The modulus
-operator <code class="docutils literal"><span class="pre">%</span></code> is our way of determining whether there is a
+operator <code class="docutils literal notranslate"><span class="pre">%</span></code> is our way of determining whether there is a
 remainder from the
-division operation <code class="docutils literal"><span class="pre">a</span> <span class="pre">/</span> <span class="pre">i</span></code> or <code class="docutils literal"><span class="pre">b</span> <span class="pre">/</span> <span class="pre">i</span></code>.</li>
-<li>The line <code class="docutils literal"><span class="pre">i++</span></code> is our way of going to the next value of <code class="docutils literal"><span class="pre">i</span></code>
-to be tested as the new GCD.</li>
-<li>When this loop terminates, the greatest common divisor has been found.</li>
+division operation <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">/</span> <span class="pre">i</span></code> or <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">/</span> <span class="pre">i</span></code>.</p></li>
+<li><p>The line <code class="docutils literal notranslate"><span class="pre">i++</span></code> is our way of going to the next value of <code class="docutils literal notranslate"><span class="pre">i</span></code>
+to be tested as the new GCD.</p></li>
+<li><p>When this loop terminates, the greatest common divisor has been found.</p></li>
 </ul>
 <p>So this gives you a relatively straightforward way of calculating the
 greatest common divisor. While simple, it is not necessarily the most
@@ -456,108 +225,94 @@ one billion (1,000,000,000) and two billion (2,000,000,000)
 it is painfully evident that you would consider a large number of values
 (a billion, in fact) before obtaining
 the candidate GCD, which we know is 1,000,000,000.</p>
-<div class="section" id="brute-force-gcd-exercise">
-<h3>6.8.2.1. Brute-Force GCD Exercise<a class="headerlink" href="#brute-force-gcd-exercise" title="Permalink to this headline">¶</a></h3>
-<p>The code above goes though all integers 2 through <code class="docutils literal"><span class="pre">min(a,</span> <span class="pre">b)</span></code>.  That is
+<section id="brute-force-gcd-exercise">
+<h3>Brute-Force GCD Exercise<a class="headerlink" href="#brute-force-gcd-exercise" title="Permalink to this headline"></a></h3>
+<p>The code above goes though all integers 2 through <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code>.  That is
 not generally necessary when the GCD is greater than 1,
 even with a brute-force mindset.   Write a
-<code class="docutils literal"><span class="pre">g_c_d_basic_faster.cs</span></code> to do this with a slightly different
-<code class="docutils literal"><span class="pre">GreatestCommonDivisor</span></code> function. <a class="footnote-reference" href="#gcdbrute" id="id1">[1]</a></p>
-</div>
-</div>
-<div class="section" id="gcd-subtraction-method">
-<h2>6.8.3. GCD Subtraction Method<a class="headerlink" href="#gcd-subtraction-method" title="Permalink to this headline">¶</a></h2>
+<code class="docutils literal notranslate"><span class="pre">g_c_d_basic_faster.cs</span></code> to do this with a slightly different
+<code class="docutils literal notranslate"><span class="pre">GreatestCommonDivisor</span></code> function. <a class="footnote-reference brackets" href="#gcdbrute" id="id1">1</a></p>
+</section>
+</section>
+<section id="gcd-subtraction-method">
+<h2>GCD Subtraction Method<a class="headerlink" href="#gcd-subtraction-method" title="Permalink to this headline"></a></h2>
 <p>The subtraction method (also attributable to Euclid) to compute the
 Greatest Common Divisor works as follows:</p>
 <ul class="simple">
-<li>Based on the <em>mathematical</em> definition in the previous section, the
+<li><p>Based on the <em>mathematical</em> definition in the previous section, the
 greatest common divisor algorithm saves a step when we already have
-<code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> in the <em>right order</em>.</li>
-<li>The <em>right order</em> means that <span class="math">\(a &gt; b\)</span>. As we noted earlier, the
-cleverness of the <em>mathematical</em> definition is that <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code>
-are swapped as the first step to ensure that <span class="math">\(a &gt; b\)</span>, after
-which we can repeatedly divide to get the GCD.</li>
-<li>Division, of course, is a form of repetitive subtraction, so the way
-to divide by <code class="docutils literal"><span class="pre">b</span></code> is to repeatedly subtract it (from a) until <code class="docutils literal"><span class="pre">a</span></code>
-is no longer greater than <code class="docutils literal"><span class="pre">b</span></code>.</li>
-<li>The subtraction method basically makes no attempt to put <code class="docutils literal"><span class="pre">a</span></code> and
-<code class="docutils literal"><span class="pre">b</span></code> in the right order. Instead, we just write similar loops to
-allow for the possibility of either order.</li>
-<li>A simple check must be performed to ensure that the approach of
+<code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> in the <em>right order</em>.</p></li>
+<li><p>The <em>right order</em> means that <span class="math notranslate nohighlight">\(a &gt; b\)</span>. As we noted earlier, the
+cleverness of the <em>mathematical</em> definition is that <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>
+are swapped as the first step to ensure that <span class="math notranslate nohighlight">\(a &gt; b\)</span>, after
+which we can repeatedly divide to get the GCD.</p></li>
+<li><p>Division, of course, is a form of repetitive subtraction, so the way
+to divide by <code class="docutils literal notranslate"><span class="pre">b</span></code> is to repeatedly subtract it (from a) until <code class="docutils literal notranslate"><span class="pre">a</span></code>
+is no longer greater than <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+<li><p>The subtraction method basically makes no attempt to put <code class="docutils literal notranslate"><span class="pre">a</span></code> and
+<code class="docutils literal notranslate"><span class="pre">b</span></code> in the right order. Instead, we just write similar loops to
+allow for the possibility of either order.</p></li>
+<li><p>A simple check must be performed to ensure that the approach of
 repeated subtraction actually resulted in the GCD. This will happen
-if <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> bump into one another, thereby meaning that we
-have computed the GCD.</li>
+if <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> bump into one another, thereby meaning that we
+have computed the GCD.</p></li>
 </ul>
-<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-<span class="p">{</span>
-   <span class="kt">int</span> <span class="n">c</span><span class="p">;</span>
-   <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="p">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="p">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-         <span class="n">c</span> <span class="p">=</span> <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>
-         <span class="n">a</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="p">&gt;</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
-         <span class="n">c</span> <span class="p">=</span> <span class="n">b</span> <span class="p">-</span> <span class="n">a</span><span class="p">;</span>
-         <span class="n">b</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
-      <span class="p">}</span>
-   <span class="p">}</span>
-   <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="p">{</span>
+<span class="linenos"> 3</span>   <span class="kt">int</span> <span class="n">c</span><span class="p">;</span>
+<span class="linenos"> 4</span>   <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="p">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos"> 5</span>      <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="p">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos"> 6</span>         <span class="n">c</span> <span class="p">=</span> <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>
+<span class="linenos"> 7</span>         <span class="n">a</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
+<span class="linenos"> 8</span>      <span class="p">}</span>
+<span class="linenos"> 9</span>      <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="p">&gt;</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">10</span>         <span class="n">c</span> <span class="p">=</span> <span class="n">b</span> <span class="p">-</span> <span class="n">a</span><span class="p">;</span>
+<span class="linenos">11</span>         <span class="n">b</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
+<span class="linenos">12</span>      <span class="p">}</span>
+<span class="linenos">13</span>   <span class="p">}</span>
+<span class="linenos">14</span>   <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="linenos">15</span><span class="p">}</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>A look at the source code more or less follows the above explanation.</p>
-<p>Let&#8217;s start by looking at the inner loop at line 5, <code class="docutils literal"><span class="pre">while</span> <span class="pre">(a</span> <span class="pre">&gt;</span>
-<span class="pre">b)</span></code>. In this loop, we are repeatedly subtracting <code class="docutils literal"><span class="pre">b</span></code> from <code class="docutils literal"><span class="pre">a</span></code>,
-which we know we can do, because <code class="docutils literal"><span class="pre">a</span></code> started out as being larger
-than <code class="docutils literal"><span class="pre">b</span></code>.  At the end of loop <code class="docutils literal"><span class="pre">a</span></code> is reduced to either</p>
+<p>Let’s start by looking at the inner loop at line 5, <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">(a</span> <span class="pre">&gt;</span>
+<span class="pre">b)</span></code>. In this loop, we are repeatedly subtracting <code class="docutils literal notranslate"><span class="pre">b</span></code> from <code class="docutils literal notranslate"><span class="pre">a</span></code>,
+which we know we can do, because <code class="docutils literal notranslate"><span class="pre">a</span></code> started out as being larger
+than <code class="docutils literal notranslate"><span class="pre">b</span></code>.  At the end of loop <code class="docutils literal notranslate"><span class="pre">a</span></code> is reduced to either</p>
 <ol class="arabic simple">
-<li><code class="docutils literal"><span class="pre">b</span></code>, in which case <code class="docutils literal"><span class="pre">b</span></code> exactly divided the earlier <code class="docutils literal"><span class="pre">a</span></code>,
-and <code class="docutils literal"><span class="pre">b</span></code> is the GCD, or</li>
-<li>a number less than <code class="docutils literal"><span class="pre">b</span></code>, namely
-<span class="math">\(a \bmod b\)</span> (or in C# terms <code class="docutils literal"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code>), and the process continues....</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code>, in which case <code class="docutils literal notranslate"><span class="pre">b</span></code> exactly divided the earlier <code class="docutils literal notranslate"><span class="pre">a</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">b</span></code> is the GCD, or</p></li>
+<li><p>a number less than <code class="docutils literal notranslate"><span class="pre">b</span></code>, namely
+<span class="math notranslate nohighlight">\(a \bmod b\)</span> (or in C# terms <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code>), and the process continues….</p></li>
 </ol>
 <p>The loop on line 9 is similar to the loop in line 5. For the same
-reasons as we already explained, <code class="docutils literal"><span class="pre">b</span></code> ends up equal to <code class="docutils literal"><span class="pre">a</span></code>,
-which is the GCD, or <code class="docutils literal"><span class="pre">b</span></code> ends up as
-<span class="math">\(b \bmod a\)</span>.</p>
-<p>As discussed above, if <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> end up as the same number,
+reasons as we already explained, <code class="docutils literal notranslate"><span class="pre">b</span></code> ends up equal to <code class="docutils literal notranslate"><span class="pre">a</span></code>,
+which is the GCD, or <code class="docutils literal notranslate"><span class="pre">b</span></code> ends up as
+<span class="math notranslate nohighlight">\(b \bmod a\)</span>.</p>
+<p>As discussed above, if <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> end up as the same number,
 that is the GCD.  On the other hand,
 the first GCD algorithm example showed how remainders may need to be to
 be calculated over and over.  The outer loop in this version keeps this up
-until <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> are reduced to equal
+until <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are reduced to equal
 values.  At this point the inner loops would make no further changes,
 and the common value is the GCD.</p>
 <p>As an exercise to the reader, you may want to consider adding some
-<code class="docutils literal"><span class="pre">Console.WriteLine()</span></code> statements to print the values of <code class="docutils literal"><span class="pre">a</span></code> and
-<code class="docutils literal"><span class="pre">b</span></code> within each loop, and after both loops have executed. It will
+<code class="docutils literal notranslate"><span class="pre">Console.WriteLine()</span></code> statements to print the values of <code class="docutils literal notranslate"><span class="pre">a</span></code> and
+<code class="docutils literal notranslate"><span class="pre">b</span></code> within each loop, and after both loops have executed. It will
 allow you to see in visual terms how this method does its work.</p>
-</div>
-<div class="section" id="gcd-remainder-loop">
-<span id="index-1"></span><span id="id2"></span><h2>6.8.4. GCD Remainder Loop<a class="headerlink" href="#gcd-remainder-loop" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="gcd-remainder-loop">
+<span id="index-1"></span><span id="id2"></span><h2>GCD Remainder Loop<a class="headerlink" href="#gcd-remainder-loop" title="Permalink to this headline"></a></h2>
 <p>There are several ways to code the shorter Euclidean algorithm at the beginning of this
 GCD section.  It is a repetitive pattern,
-and a loop can be used.  There are two parameters, <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code>, to the gcd,
+and a loop can be used.  There are two parameters, <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, to the gcd,
 and they can be successively changed, suggesting a loop.  What is the continuation
-condition?  You stop when <code class="docutils literal"><span class="pre">b</span></code> is 0, so you continue while <code class="docutils literal"><span class="pre">b</span> <span class="pre">!=</span> <span class="pre">0</span></code>.
-The parameters <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> need to be replaced by <code class="docutils literal"><span class="pre">b</span></code> and <code class="docutils literal"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code>.
+condition?  You stop when <code class="docutils literal notranslate"><span class="pre">b</span></code> is 0, so you continue while <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">!=</span> <span class="pre">0</span></code>.
+The parameters <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> need to be replaced by <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code>.
 One extra variable needs to be introduced to make this double change work.  The simplest
-is to introduce a variable <code class="docutils literal"><span class="pre">r</span></code> for the remainder.  Check and see for yourself that you
-need an extra variable like <code class="docutils literal"><span class="pre">r</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return the greatest comon divisor of nonnegative numbers,</span>
+is to introduce a variable <code class="docutils literal notranslate"><span class="pre">r</span></code> for the remainder.  Check and see for yourself that you
+need an extra variable like <code class="docutils literal notranslate"><span class="pre">r</span></code>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Return the greatest comon divisor of nonnegative numbers,</span>
 <span class="c1">/// not both 0.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>
@@ -573,11 +328,11 @@ need an extra variable like <code class="docutils literal"><span class="pre">r</
 <p>More verbose demonstration code,
 that prints the progress each time through
 loop is in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/g_c_d_remainder_loop/g_c_d_remainder_loop.cs">g_c_d_remainder_loop/g_c_d_remainder_loop.cs</a>.</p>
-</div>
-<div class="section" id="preview-recursive-gcd">
-<span id="gcd-recursive"></span><span id="index-2"></span><h2>6.8.5. Preview: Recursive GCD<a class="headerlink" href="#preview-recursive-gcd" title="Permalink to this headline">¶</a></h2>
-<p>The first statement of Euclid&#8217;s algorithm said (in C#) when</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="p">%</span> <span class="n">b</span><span class="p">)</span>
+</section>
+<section id="preview-recursive-gcd">
+<span id="gcd-recursive"></span><span id="index-2"></span><h2>Preview: Recursive GCD<a class="headerlink" href="#preview-recursive-gcd" title="Permalink to this headline"></a></h2>
+<p>The first statement of Euclid’s algorithm said (in C#) when</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="p">%</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It is saying the result of the function with one set of parameters is equal to
@@ -585,10 +340,10 @@ calling the function with another set of parameters.  If we put this into a
 C# function definition, it would mean the instructions for the function say
 to <em>call itself</em>.  This is a broadly useful technique called <em>recursion</em>,
 where a function calls <em>itself</em> inside its definition.
-We don&#8217;t expect you to master this
+We don’t expect you to master this
 technique immediately but do feel that it is important you at least
 <em>hear</em> about it and see its tremendous power:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return the greatest comon divisor of nonnegative numbers,</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Return the greatest comon divisor of nonnegative numbers,</span>
 <span class="c1">/// not both 0.</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">GreatestCommonDivisor</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>
@@ -601,15 +356,15 @@ technique immediately but do feel that it is important you at least
 </pre></div>
 </div>
 <ul class="simple">
-<li>Recalling our earlier definition, the case <span class="math">\(gcd(a, 0) = a\)</span> is
-handled directly by lines commented as &#8220;base case&#8221;.</li>
-<li>And the case <span class="math">\(gcd(a, b) = gcd(b, a \bmod b)\)</span> is handled by
-line with comment &#8220;recursion&#8221;, with the function calling itself.</li>
+<li><p>Recalling our earlier definition, the case <span class="math notranslate nohighlight">\(gcd(a, 0) = a\)</span> is
+handled directly by lines commented as “base case”.</p></li>
+<li><p>And the case <span class="math notranslate nohighlight">\(gcd(a, b) = gcd(b, a \bmod b)\)</span> is handled by
+line with comment “recursion”, with the function calling itself.</p></li>
 </ul>
 <p>In <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/g_c_d_euclid_recursive/g_c_d_euclid_recursive.cs">g_c_d_euclid_recursive/g_c_d_euclid_recursive.cs</a>
 is a wordier demonstration version that prints to the screen
 the progress at each recursive call.</p>
-<p>The recursive version of the <code class="docutils literal"><span class="pre">gcd</span></code> function <em>refers to itself</em>
+<p>The recursive version of the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> function <em>refers to itself</em>
 by <em>calling</em> itself.  Though this seems circular, you can see
 from the examples that it works very well.  The important point is that
 the calls to the same function are not completely the same:
@@ -621,33 +376,47 @@ mathematical algorithm than the looping version!</p>
 <p>The general idea of recursion is for a
 function to call itself with <em>simpler</em> parameters, until a simple enough place
 is reached, where the answer can be directly calculated.</p>
-<table class="docutils footnote" frame="void" id="gcdbrute" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The original brute-force gcd approach always goes through all the integers
-between 1 and <code class="docutils literal"><span class="pre">min(a,</span> <span class="pre">b)</span></code>.  There is a way to stop the first time
-the real gcd is reached.  How can you arrange that?</td></tr>
-</tbody>
-</table>
-</div>
-</div>
+<dl class="footnote brackets">
+<dt class="label" id="gcdbrute"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The original brute-force gcd approach always goes through all the integers
+between 1 and <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code>.  There is a way to stop the first time
+the real gcd is reached.  How can you arrange that?</p>
+</dd>
+</dl>
+</section>
+</section>
 
 
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="userinput.html" class="btn btn-neutral float-left" title="User Input: UI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="do-while.html" class="btn btn-neutral float-right" title="Do-While Loops" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-      
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012, Andrew N. Harrington and George Thiruvathukal.
+      <span class="lastupdated">Last updated on 29-November-2021 23:33:52.
+      </span></p>
   </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 10-September-2016 16:59:02.<br/>
-    </p>
-  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
 </footer>
-  </body>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

@@ -1,337 +1,106 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>8.2. Examples With for Statements &#8212; Introduction to Computer Science in C# 1.0 documentation</title>
-    
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples With for Statements &mdash; Introduction to Computer Science in C# 29 Nov 2021 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="Introduction to Computer Science in C# 1.0 documentation" href="../index.html" />
-    <link rel="up" title="8. For Loops" href="for.html" />
-    <link rel="next" title="8.3. Lab: Loops" href="lab-nested-loops.html" />
-    <link rel="prev" title="8.1. For-Statement Syntax" href="forstatements.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="next" title="Lab: Loops" href="lab-nested-loops.html" />
+    <link rel="prev" title="For-Statement Syntax" href="forstatements.html" /> 
+</head>
 
-  </head>
-  <body role="document">
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #922247" >
+            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
+          </a>
+              <div class="version">
+                29 Nov 2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="for.html">For Loops</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="forstatements.html">For-Statement Syntax</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Examples With <code class="docutils literal notranslate"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">Chapter Review Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">Appendix</a></li>
+</ul>
 
-
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">
-          COMP 170</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="../genindex.html">Index</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">1. Context</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">1.1. Motivation for This Book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">1.2. Resources Online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/download.html">1.3. Downloading and Reading Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">1.4. Computer Science, Broadly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">1.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">2. C# Data and Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">2.1. A Sample C# Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">2.2. Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">2.3. Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">2.4. Variables and Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">2.5. Syntax Template Typography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">2.6. Strings, Part I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">2.7. Writing to the Console</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">2.8. C# Program Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/io.html">2.9. Combining Input and Output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">2.10. String Special Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">2.11. Substitutions in Console.WriteLine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">2.12. Value Types and Conversions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">2.13. Learning to Solve Problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">2.14. Lab: Division Sentences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">2.15. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">3. Defining Functions of your Own</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">3.1. A First Function Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">3.2. Multiple Function Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">3.3. Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">3.4. Multiple Function Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">3.5. Returned Function Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">3.6. Two Roles: Writer and Consumer of Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">3.7. Local Scope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">3.8. Static Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">3.9. Not using Return Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">3.10. Library Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">3.11. Tracebacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">3.12. Static Function Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">3.13. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">4. Basic String Operations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">4.1. String Indexing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">4.2. Some Instance Methods and the Length Property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">4.3. A Creative Problem Solution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">4.4. Lab: String Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">4.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">5. Decisions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">5.1. Conditions I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">5.2. Simple <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html">5.3. <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">5.4. More Conditional Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">5.5. Multiple Tests and <code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">5.6. If-statement Pitfalls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">5.7. Compound Boolean Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">5.8. Nested <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">5.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">6. While Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">6.1. While-Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">6.2. While-Statements with Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">6.3. Interactive <code class="docutils literal"><span class="pre">while</span></code> Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">6.4. Short-Circuiting &amp;&amp; and ||</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">6.5. While Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">6.6. More String Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">6.7. User Input: UI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">6.8. Greatest Common Divisor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">6.9. Do-While Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">6.10. Number Guessing Game Lab</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">6.11. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">7. Foreach Loops</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html">7.1. <code class="docutils literal"><span class="pre">foreach</span></code> Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html">7.2. <code class="docutils literal"><span class="pre">foreach</span></code> Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">7.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="reference internal" href="for.html">8. For Loops</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="forstatements.html">8.1. For-Statement Syntax</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lab-nested-loops.html">8.3. Lab: Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reviewfor.html">8.4. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">9. Files, Paths, and Directories</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">9.1. Files As Streams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">9.2. Writing Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">9.3. Reading Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">9.4. Path Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">9.5. Directory Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html#file-class">9.6. File Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">9.7. Command Line Execution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">9.8. FIO Helper Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">9.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">10. Arrays</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">10.1. One Dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">10.2. Musical Scales and Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">10.3. Linear Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">10.4. Sorting Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">10.5. Binary Searching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">10.6. Lab: Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">10.7. Lab: Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">10.8. Multi-dimensional Arrays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">10.9. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">11. Lists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">11.1. List Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">11.2. .Net Library (API)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">11.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">12. Dictionaries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">12.1. Dictionary Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">12.2. Dictionary Efficiency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">12.3. Dictionary Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">12.4. Lab: File Data and Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">12.5. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">13. Classes and Object-Oriented Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">13.1. A First Example of Class Instances: Contact</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">13.2. Class Instance Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">13.3. The Rational Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">13.4. Planning A Class Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">13.5. Classes And Structs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">13.6. Defining Operators (Optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">13.7. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">14. Testing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#assertions">14.1. Assertions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#attributes">14.2. Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-constructor">14.3. Testing the Constructor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-comparisons">14.4. Testing Rational Comparisons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-arithmetic">14.5. Testing Rational Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-rational-conversions-to-other-types">14.6. Testing Rational Conversions (to other types)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#testing-the-parsing-feature">14.7. Testing the Parsing Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testing/testing.html#running-the-nunit-tests">14.8. Running the NUnit Tests</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">15. Interfaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">15.1. Rationals Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">15.2. Csproject Revisited</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">15.3. Chapter Review Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">16. Recursion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">17. Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">18. Appendix</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">18.1. Development Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">18.2. Xamarin Studio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">18.3. Command Line Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">18.4. Precedence of Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">18.5. Homework: Grade Calculation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">18.6. Homework: Grade Calculation from Individual Scores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">18.7. Homework: Grade File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">18.8. Homework: Book List</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">18.9. Group Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">18.10. Lab: Version Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">18.11. Mercurial and Teamwork</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">18.12. Acknowledgments</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements</a><ul>
-<li><a class="reference internal" href="#tables">8.2.1. Tables</a></li>
-<li><a class="reference internal" href="#ascii-codes">8.2.2. ASCII Codes</a></li>
-<li><a class="reference internal" href="#modular-multiplication-table">8.2.3. Modular Multiplication Table</a></li>
-<li><a class="reference internal" href="#reversed-string-returned">8.2.4. Reversed String Returned</a></li>
-<li><a class="reference internal" href="#exercises">8.2.5. Exercises</a><ul>
-<li><a class="reference internal" href="#head-or-tails-exercise">8.2.5.1. Head or Tails Exercise</a></li>
-<li><a class="reference internal" href="#group-flips-exercise">8.2.5.2. Group Flips Exercise</a></li>
-<li><a class="reference internal" href="#reverse-string-foreach-exercise">8.2.5.3. Reverse String <code class="docutils literal"><span class="pre">foreach</span></code> Exercise</a></li>
-<li><a class="reference internal" href="#only-letters-exercise">8.2.5.4. Only Letters Exercise</a></li>
-<li><a class="reference internal" href="#palindrome-exercise">8.2.5.5. Palindrome Exercise</a></li>
-<li><a class="reference internal" href="#nested-play-computer-exercise">8.2.5.6. Nested Play Computer Exercise</a></li>
-<li><a class="reference internal" href="#power-table-exercise">8.2.5.7. Power Table Exercise</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="forstatements.html" title="Previous Chapter: 8.1. For-Statement Syntax">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-  </li>
-  <li>
-    <a href="lab-nested-loops.html" title="Next Chapter: 8.3. Lab: Loops">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/for/forexamples.txt"
-     rel="nofollow">Source</a>
-</div></li>
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
         </div>
-    </div>
-  </div>
+      </div>
+    </nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 content">
-      
-  <div class="section" id="examples-with-for-statements">
-<h1>8.2. Examples With <code class="docutils literal"><span class="pre">for</span></code> Statements<a class="headerlink" href="#examples-with-for-statements" title="Permalink to this headline">¶</a></h1>
-<p>Thus far all of our <code class="docutils literal"><span class="pre">for</span></code> loops have used a sequence of successive integers.
-Suppose you want to print the first <code class="docutils literal"><span class="pre">n</span></code> multiples of <code class="docutils literal"><span class="pre">k</span></code>,
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to Computer Science in C#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="for.html">For Loops</a> &raquo;</li>
+      <li>Examples With <code class="docutils literal notranslate"><span class="pre">for</span></code> Statements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/for/forexamples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples-with-for-statements">
+<h1>Examples With <code class="docutils literal notranslate"><span class="pre">for</span></code> Statements<a class="headerlink" href="#examples-with-for-statements" title="Permalink to this headline"></a></h1>
+<p>Thus far all of our <code class="docutils literal notranslate"><span class="pre">for</span></code> loops have used a sequence of successive integers.
+Suppose you want to print the first <code class="docutils literal notranslate"><span class="pre">n</span></code> multiples of <code class="docutils literal notranslate"><span class="pre">k</span></code>,
 like the first 5 multiples
 of 3:  3, 6, 9, 12, 15.  This could be handled by generating
-a sequence <code class="docutils literal"><span class="pre">i</span></code> = 1 through <code class="docutils literal"><span class="pre">n</span></code>, and multiply each <code class="docutils literal"><span class="pre">i</span></code> by <code class="docutils literal"><span class="pre">k</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+a sequence <code class="docutils literal notranslate"><span class="pre">i</span></code> = 1 through <code class="docutils literal notranslate"><span class="pre">n</span></code>, and multiply each <code class="docutils literal notranslate"><span class="pre">i</span></code> by <code class="docutils literal notranslate"><span class="pre">k</span></code>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">*</span><span class="n">k</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -339,59 +108,61 @@ a sequence <code class="docutils literal"><span class="pre">i</span></code> = 1 
 <p>Another approach is to note that the numbers you want to print advance
 in a regular fashion, too, but with an increment 3 in the example above,
 or k in general:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">*</span><span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">n</span><span class="p">*</span><span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">=</span> <span class="n">i</span><span class="p">+</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>The</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="n">k</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="n">k</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>is a common pattern, less common than incrementing by one,
 but still very common.  C# and many other languages allow a shorter version:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">+=</span> <span class="n">k</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">+=</span> <span class="n">k</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This means to increment the variable i by k.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p>Be careful: the <code class="docutils literal"><span class="pre">+=</span></code> must be in
+<p class="admonition-title">Warning</p>
+<p>Be careful: the <code class="docutils literal notranslate"><span class="pre">+=</span></code> must be in
 that order, with no space between.  Unfortunately the reverse order:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">=+</span> <span class="n">k</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">=+</span> <span class="n">k</span><span class="p">;</span>
 </pre></div>
 </div>
-<p class="last">is also legal, and just assigns the value of k to i.</p>
+<p>is also legal, and just assigns the value of k to i.</p>
 </div>
 <p id="index-0">Most C# binary operations have a similar variation.  For instance
-if <em>op</em> is <code class="docutils literal"><span class="pre">+</span></code>, <code class="docutils literal"><span class="pre">-</span></code>, <code class="docutils literal"><span class="pre">*</span></code>, <code class="docutils literal"><span class="pre">/</span></code> or <code class="docutils literal"><span class="pre">%</span></code>,</p>
+if <em>op</em> is <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code> or <code class="docutils literal notranslate"><span class="pre">%</span></code>,</p>
 <blockquote>
-<div><strong>variable</strong> <em>op</em>= <em>expression</em></div></blockquote>
+<div><p><strong>variable</strong> <em>op</em>= <em>expression</em></p>
+</div></blockquote>
 <p>means the same as</p>
 <blockquote>
-<div><strong>variable</strong> = <strong>variable</strong> op <em>expression</em></div></blockquote>
+<div><p><strong>variable</strong> = <strong>variable</strong> op <em>expression</em></p>
+</div></blockquote>
 <p>For example</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">*=</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">*=</span> <span class="m">5</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>is the same as</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">*</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">*</span> <span class="m">5</span><span class="p">;</span>
 </pre></div>
 </div>
-<div class="section" id="tables">
-<span id="index-1"></span><span id="id1"></span><h2>8.2.1. Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<section id="tables">
+<span id="index-1"></span><span id="id1"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline"></a></h2>
 <p>Reports commonly include tables, often with successive lines generated by
 a consistent formula.  As a simple first
 table, we can show the square, cube, and square root of numbers 1 through 10.
 The Math class has a function Sqrt, so we take the square root with Math.Sqrt
 function.  The pattern is consistent, so we can loop easily:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} {1} {2} {3}&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">,</span> <span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>The numbers will be there, but the output is not pretty:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>1 1 1 1
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1 1 1 1
 2 4 8 1.4142135623731
 3 9 27 1.73205080756888
 4 16 64 2
@@ -404,19 +175,19 @@ function.  The pattern is consistent, so we can loop easily:</p>
 </pre></div>
 </div>
 <p>First we might not need all those digits in the square root approximations.
-We can replace <code class="docutils literal"><span class="pre">{3}</span></code> by <code class="docutils literal"><span class="pre">{3:F4}</span></code> to just show 4 decimal places.</p>
+We can replace <code class="docutils literal notranslate"><span class="pre">{3}</span></code> by <code class="docutils literal notranslate"><span class="pre">{3:F4}</span></code> to just show 4 decimal places.</p>
 <p>We can adjust the spacing to make nice
 columns by using a further formatting option.  The longest entries are all
 in the last row, where they take up, 2, 3, 4, and 6 columns (for 3.1623).
 Change the format string:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,2} {1,3} {2,4} {3,6:F4}&quot;</span><span class="p">,</span>
                        <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">*</span><span class="n">n</span><span class="p">,</span> <span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>and we generate the neater output:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span> 1   1    1 1.0000
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> 1   1    1 1.0000
  2   4    8 1.4142
  3   9   27 1.7321
  4  16   64 2.0000
@@ -431,15 +202,15 @@ Change the format string:</p>
 <p>We are using two new formatting forms:</p>
 <blockquote>
 <div><div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">{</span></code>index<code class="docutils literal"><span class="pre">,</span></code>fieldWidth<code class="docutils literal"><span class="pre">}</span></code>  and</div>
-<div class="line"><code class="docutils literal"><span class="pre">{</span></code>index<code class="docutils literal"><span class="pre">,</span></code>fieldWidth<code class="docutils literal"><span class="pre">:F</span></code>#<code class="docutils literal"><span class="pre">}</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">{</span></code>index<code class="docutils literal notranslate"><span class="pre">,</span></code>fieldWidth<code class="docutils literal notranslate"><span class="pre">}</span></code>  and</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">{</span></code>index<code class="docutils literal notranslate"><span class="pre">,</span></code>fieldWidth<code class="docutils literal notranslate"><span class="pre">:F</span></code>#<code class="docutils literal notranslate"><span class="pre">}</span></code></div>
 </div>
 </div></blockquote>
 <p>where index, fieldWidth, and # are replaces by specific literal integers.
 The new part with the comma (not colon) and fieldWidth, sets the <em>minimum</em>
 number of columns used for the substituted string, padding with blanks as needed.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
+<p class="admonition-title">Warning</p>
 <p>There is a <em>special</em> language for the
 characters between the braces in a format string.
 The rules are different than in regular C# code, where
@@ -450,18 +221,18 @@ There cannot be a space after the colon or before the comma.
 Some blanks are legal; some blanks lead to exceptions being thrown,
 and other positions for blanks
 just silently give the wrong format.</p>
-<p class="last">The safest approach for a programmer is just to have
+<p>The safest approach for a programmer is just to have
 <em>no</em> blanks between the braces in a format string.</p>
 </div>
 <p><em>If the string to be inserted is wider than the fieldWidth,</em>
 then the <em>whole</em> string is inserted, <em>ignoring</em> the fieldWidth.  Example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;stuff&quot;</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;stuff&quot;</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;123456789&quot;</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,9}\n{0,7}\n{0,5}\n{0,3}&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>generates:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>123456789
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>123456789
     stuff
   stuff
 stuff
@@ -471,13 +242,13 @@ stuff
 <p>filling 9, 7, and then 5 columns, by padding with 4, 2, and 0 blanks.
 <em>The last line sticks out past the proposed 3-column fieldWidth.</em></p>
 <p>One more thing to add to our power table is a heading.  We might want:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>n   square    cube    root
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>n   square    cube    root
 </pre></div>
 </div>
 <p>To make the data line up with the heading titles,
 we can expand the columns, with code in example
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/power_table/power_table.cs">power_table/power_table.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,2}{1,7}{2,5}{3,7}&quot;</span><span class="p">,</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,2}{1,7}{2,5}{3,7}&quot;</span><span class="p">,</span>
                   <span class="s">&quot;n&quot;</span><span class="p">,</span> <span class="s">&quot;square&quot;</span><span class="p">,</span> <span class="s">&quot;cube&quot;</span><span class="p">,</span> <span class="s">&quot;root&quot;</span><span class="p">);</span>
 <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">n</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">n</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,2}{1,7}{2,5}{3,7:F4}&quot;</span><span class="p">,</span>
@@ -486,7 +257,7 @@ we can expand the columns, with code in example
 </pre></div>
 </div>
 <p>generating:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span> n  square    cube    root
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> n  square    cube    root
  1       1       1  1.0000
  2       4       8  1.4142
  3       9      27  1.7321
@@ -510,27 +281,27 @@ a field (padding on the left), for completeness we note this alternative:
 A minus sign in front of the fieldWidth
 places the result left justified (padded on the right).
 For example:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;stuff&quot;</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;stuff&quot;</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;1234567890&quot;</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,-9}|\n{0,-7}|\n{0,-5}|\n{0,-3}|&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>prints:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>1234567890
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1234567890
 stuff    |
 stuff  |
 stuff|
 stuff|
 </pre></div>
 </div>
-<p>where the &#8216;|&#8217; appears after any blank padding in each line.</p>
-</div>
-<div class="section" id="ascii-codes">
-<span id="ascii"></span><span id="index-3"></span><h2>8.2.2. ASCII Codes<a class="headerlink" href="#ascii-codes" title="Permalink to this headline">¶</a></h2>
+<p>where the ‘|’ appears after any blank padding in each line.</p>
+</section>
+<section id="ascii-codes">
+<span id="ascii"></span><span id="index-3"></span><h2>ASCII Codes<a class="headerlink" href="#ascii-codes" title="Permalink to this headline"></a></h2>
 <p>Here is a reverse lookup from the
 <a class="reference internal" href="../foreach/foreachexamples.html#codeofstringchar"><span class="std std-ref">Numeric Code of String Characters</span></a>:
 Find the characters for a list of numeric codes. Just as we can cast a
-<code class="docutils literal"><span class="pre">char</span></code> to an <code class="docutils literal"><span class="pre">int</span></code>, we can cast an <code class="docutils literal"><span class="pre">int</span></code> 0-127 to a <code class="docutils literal"><span class="pre">char</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">char</span></code> to an <code class="docutils literal notranslate"><span class="pre">int</span></code>, we can cast an <code class="docutils literal notranslate"><span class="pre">int</span></code> 0-127 to a <code class="docutils literal notranslate"><span class="pre">char</span></code>.</p>
 <p>The Unicode used
 by C# is an extension of the ASCII codes corresponding to the
 characters on a US keyboard.  The codes were originally
@@ -540,7 +311,7 @@ Characters 32 - 126 yield the 95 characters on a standard US keyboard.</p>
 <p>A loop to print each code followed by a space and the corresponding
 printable character
 would be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">127</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">127</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0,3} {1}&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -550,15 +321,16 @@ would be:</p>
 the first line printed does not appear to have a character:  That is the
 blank character.  All the other characters are visible.</p>
 <p>Let us make a more concise table, putting 8 entries per line.
-We can print successive parts using <code class="docutils literal"><span class="pre">Write</span></code> instead of <code class="docutils literal"><span class="pre">WriteLine</span></code>,
+We can print successive parts using <code class="docutils literal notranslate"><span class="pre">Write</span></code> instead of <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code>,
 but we still need to advance to the next line after every 8th
-entry, for codes 39, 47, 55, ....
+entry, for codes 39, 47, 55, ….
 Since they are 8 apart, their remainder when divided by 8 is always
 the same:</p>
 <blockquote>
-<div>7 = 39 % 8 = 47 % 8 = 55 % 8 = ....</div></blockquote>
+<div><p>7 = 39 % 8 = 47 % 8 = 55 % 8 = ….</p>
+</div></blockquote>
 <p>We can add a newline after each of these is printed.  This requires a test:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">127</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">127</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0,3} {1}  &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">i</span><span class="p">);</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">%</span> <span class="m">8</span> <span class="p">==</span> <span class="m">7</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
@@ -566,26 +338,26 @@ the same:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Recall that <code class="docutils literal"><span class="pre">Console.WriteLine()</span></code>
+<p>Recall that <code class="docutils literal notranslate"><span class="pre">Console.WriteLine()</span></code>
 with no parameters <em>only</em> advances to the next line.</p>
 <p>Paste that whole code at once into csharp to see the result.</p>
-<p>The next csharp&gt; prompt appears right after <code class="docutils literal"><span class="pre">126</span> <span class="pre">~</span></code>.
+<p>The next csharp&gt; prompt appears right after <code class="docutils literal notranslate"><span class="pre">126</span> <span class="pre">~</span></code>.
 There is no eighth entry on the last line, and hence no advance to the
 next line.  A program printing this table should include an extra
-<code class="docutils literal"><span class="pre">Console.WriteLine()</span></code> after the loop.</p>
-</div>
-<div class="section" id="modular-multiplication-table">
-<span id="modular-mult-table"></span><span id="index-4"></span><h2>8.2.3. Modular Multiplication Table<a class="headerlink" href="#modular-multiplication-table" title="Permalink to this headline">¶</a></h2>
-<p>We have introduced the remainder operator <code class="docutils literal"><span class="pre">%</span></code> and mentioned that the corresponding
-mathematical term is &#8220;mod&#8221;.  We can extend that to the idea of modular arithmetic
+<code class="docutils literal notranslate"><span class="pre">Console.WriteLine()</span></code> after the loop.</p>
+</section>
+<section id="modular-multiplication-table">
+<span id="modular-mult-table"></span><span id="index-4"></span><h2>Modular Multiplication Table<a class="headerlink" href="#modular-multiplication-table" title="Permalink to this headline"></a></h2>
+<p>We have introduced the remainder operator <code class="docutils literal notranslate"><span class="pre">%</span></code> and mentioned that the corresponding
+mathematical term is “mod”.  We can extend that to the idea of modular arithmetic
 systems.  For example, if we only look at remainders mod 7, we can just consider
 numbers 0, 1, 2, 3, 4, 5, and 6.  We can do multiplication and addition and take
 remainders mod 7 to get answers in the same range.  For example 3 * 5 mod 7
-is <code class="docutils literal"><span class="pre">(3</span> <span class="pre">*</span> <span class="pre">5)</span> <span class="pre">%</span> <span class="pre">7</span></code> in C#, which is 1.  As we look more at this system, we will
+is <code class="docutils literal notranslate"><span class="pre">(3</span> <span class="pre">*</span> <span class="pre">5)</span> <span class="pre">%</span> <span class="pre">7</span></code> in C#, which is 1.  As we look more at this system, we will
 observe and explain more properties.</p>
 <p>The next example is to make a table of multiplication, mod 7, and later generalize.</p>
 <p>Tables generally have row and column labels.  We can aim for something like:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="p">*</span> <span class="p">|</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="p">*</span> <span class="p">|</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span>
 <span class="p">-----------------</span>
 <span class="m">0</span> <span class="p">|</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span>
 <span class="m">1</span> <span class="p">|</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span>
@@ -598,7 +370,7 @@ observe and explain more properties.</p>
 </div>
 <p>The border labels make the table much more readable, but let us start simpler,
 with just the modular multiplications:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span>
 <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span>
 <span class="m">0</span> <span class="m">2</span> <span class="m">4</span> <span class="m">6</span> <span class="m">1</span> <span class="m">3</span> <span class="m">5</span>
 <span class="m">0</span> <span class="m">3</span> <span class="m">6</span> <span class="m">2</span> <span class="m">5</span> <span class="m">1</span> <span class="m">4</span>
@@ -608,18 +380,18 @@ with just the modular multiplications:</p>
 </pre></div>
 </div>
 <p>This is more complicated in some respects than our previous table, so start slow,
-with some pseudocode.  We need a row for each number 0-6, and so a <code class="docutils literal"><span class="pre">for</span></code> loop
+with some pseudocode.  We need a row for each number 0-6, and so a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop
 suggests itself:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">print</span> <span class="n">row</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Each individual row also involves a repeated pattern:
 calculate for the next number.  We can name the second number c for column.  The
-next revision replaces &#8220;print row&#8221; by a loop:  a <em>nested</em> loop, inside the loop for
+next revision replaces “print row” by a loop:  a <em>nested</em> loop, inside the loop for
 separate rows:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span> <span class="p">{</span>
        <span class="n">print</span> <span class="n">modular</span> <span class="n">multiple</span> <span class="k">on</span> <span class="n">same</span> <span class="n">line</span>
    <span class="p">}</span>
@@ -628,7 +400,7 @@ separate rows:</p>
 </div>
 <p>and the modular multiplication is just regular multiplication followed by
 taking the remainder mod 7, so you might come up with the C# code:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span> <span class="p">{</span>
        <span class="kt">int</span> <span class="n">modProd</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span><span class="p">*</span><span class="n">c</span><span class="p">)</span> <span class="p">%</span> <span class="m">7</span><span class="p">;</span>
        <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">modProd</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
@@ -638,31 +410,25 @@ taking the remainder mod 7, so you might come up with the C# code:</p>
 </div>
 <p>You can test this in csharp, and see it is not quite right!
 Chopped-off output starts:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> <span class="m">0</span> <span class="m">2</span> <span class="m">4</span> <span class="m">6</span> <span class="m">1</span> <span class="m">3</span> <span class="m">5</span> <span class="m">0</span> <span class="m">3</span> <span class="m">6</span> <span class="m">2</span> <span class="m">5</span> <span class="m">1</span> <span class="m">4</span> <span class="m">0.</span><span class="p">..</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> <span class="m">0</span> <span class="m">2</span> <span class="m">4</span> <span class="m">6</span> <span class="m">1</span> <span class="m">3</span> <span class="m">5</span> <span class="m">0</span> <span class="m">3</span> <span class="m">6</span> <span class="m">2</span> <span class="m">5</span> <span class="m">1</span> <span class="m">4</span> <span class="m">0.</span><span class="p">..</span>
 </pre></div>
 </div>
 <p>Though we want each entry in a row on the same line, we need to go down to the
 next line at the end of each line!  Where do we put in the newline in the code?
 A line is <em>all</em> the modular products by r, <em>followed</em> by <em>one</em> newline.
-Each modular product for a row is printed in the inner <code class="docutils literal"><span class="pre">for</span></code> loop.  We want to
+Each modular product for a row is printed in the inner <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.  We want to
 advance <em>after</em> that, so the newline must be inserted <em>outside the inner loop</em>.
 On the other hand we do want it done for <em>each</em> row, so it must be
 <em>inside the outer loop</em>:</p>
-<div class="highlight-csharp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
-   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span> <span class="p">{</span>
-       <span class="kt">int</span> <span class="n">modProd</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span><span class="p">*</span><span class="n">c</span><span class="p">)</span> <span class="p">%</span> <span class="m">7</span><span class="p">;</span>
-       <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">modProd</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
-   <span class="p">}</span>
-   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
-<span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
+<span class="linenos">2</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">c</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">c</span><span class="p">++)</span> <span class="p">{</span>
+<span class="linenos">3</span>       <span class="kt">int</span> <span class="n">modProd</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span><span class="p">*</span><span class="n">c</span><span class="p">)</span> <span class="p">%</span> <span class="m">7</span><span class="p">;</span>
+<span class="linenos">4</span>       <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">modProd</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="linenos">5</span>   <span class="p">}</span>
+<span class="linenos">6</span>   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+<span class="linenos">7</span><span class="p">}</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>You can copy and test that code in csharp, and it works!</p>
 <p>It is important to be able to play computer on nested loops and follow execution,
 statement by statement.  Look more closely at the code above,
@@ -673,46 +439,46 @@ looping through the whole body.  Within a loop body, each <em>complete</em>
 statement is executed sequentially.</p>
 <p>Most new students can get successfully to line 4:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="13%" />
-<col width="5%" />
-<col width="5%" />
-<col width="25%" />
-<col width="53%" />
+<col style="width: 13%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 25%" />
+<col style="width: 53%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">line</th>
-<th class="head">r</th>
-<th class="head">c</th>
-<th class="head">modProd</th>
-<th class="head">comment</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>line</p></th>
+<th class="head"><p>r</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>modProd</p></th>
+<th class="head"><p>comment</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>-</td>
-<td>-</td>
-<td>initialize outer loop</td>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>initialize outer loop</p></td>
 </tr>
-<tr class="row-odd"><td>2</td>
-<td>0</td>
-<td>0</td>
-<td>-</td>
-<td>initialize inner loop</td>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>-</p></td>
+<td><p>initialize inner loop</p></td>
 </tr>
-<tr class="row-even"><td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td>4</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>Write 0</td>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>Write 0</p></td>
 </tr>
 </tbody>
 </table>
@@ -725,88 +491,88 @@ inner loop continues until you reach the bottom of the inner loop,
 line 4, with c = 6, and return to the heading, line 2, and the test fails,
 finishing the inner row loop:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="12%" />
-<col width="5%" />
-<col width="5%" />
-<col width="24%" />
-<col width="54%" />
+<col style="width: 12%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 24%" />
+<col style="width: 54%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">line</th>
-<th class="head">r</th>
-<th class="head">c</th>
-<th class="head">modProd</th>
-<th class="head">comment</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>line</p></th>
+<th class="head"><p>r</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>modProd</p></th>
+<th class="head"><p>comment</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>-</td>
-<td>-</td>
-<td>initialize outer loop</td>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>initialize outer loop</p></td>
 </tr>
-<tr class="row-odd"><td>2</td>
-<td>0</td>
-<td>0</td>
-<td>-</td>
-<td>0 &lt; 7, enter loop body</td>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>-</p></td>
+<td><p>0 &lt; 7, enter loop body</p></td>
 </tr>
-<tr class="row-even"><td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>(0*0)%7</td>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>(0*0)%7</p></td>
 </tr>
-<tr class="row-odd"><td>4</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>Write 0</td>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>Write 0</p></td>
 </tr>
-<tr class="row-even"><td>2</td>
-<td>0</td>
-<td>1</td>
-<td>-</td>
-<td>c=0+1=1,  1 &lt; 7: true</td>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>-</p></td>
+<td><p>c=0+1=1,  1 &lt; 7: true</p></td>
 </tr>
-<tr class="row-odd"><td>3</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>(0*1)%7</td>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>(0*1)%7</p></td>
 </tr>
-<tr class="row-even"><td>4</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>Write 0</td>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>Write 0</p></td>
 </tr>
-<tr class="row-odd"><td>2</td>
-<td>0</td>
-<td>2</td>
-<td>-</td>
-<td>c=1+1=2,  2 &lt; 7: true</td>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>-</p></td>
+<td><p>c=1+1=2,  2 &lt; 7: true</p></td>
 </tr>
-<tr class="row-even"><td>...</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>... through c = 6</td>
+<tr class="row-even"><td><p>…</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>… through c = 6</p></td>
 </tr>
-<tr class="row-odd"><td>4</td>
-<td>0</td>
-<td>6</td>
-<td>0</td>
-<td>Write 0</td>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>0</p></td>
+<td><p>6</p></td>
+<td><p>0</p></td>
+<td><p>Write 0</p></td>
 </tr>
-<tr class="row-even"><td>2</td>
-<td>0</td>
-<td>7</td>
-<td>-</td>
-<td>c=+1=7,  7 &lt; 7: false</td>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>7</p></td>
+<td><p>-</p></td>
+<td><p>c=+1=7,  7 &lt; 7: false</p></td>
 </tr>
 </tbody>
 </table>
@@ -820,34 +586,34 @@ That is the last statement of the outer loop, so you
 return to the heading of the outer loop and modify its loop
 variable r.  The two lines just described are:</p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="4%" />
-<col width="4%" />
-<col width="20%" />
-<col width="63%" />
+<col style="width: 10%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 20%" />
+<col style="width: 63%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">line</th>
-<th class="head">r</th>
-<th class="head">c</th>
-<th class="head">modProd</th>
-<th class="head">comment</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>line</p></th>
+<th class="head"><p>r</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>modProd</p></th>
+<th class="head"><p>comment</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>6</td>
-<td>0</td>
-<td>-</td>
-<td>-</td>
-<td>print a newline</td>
+<tbody>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>0</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>print a newline</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td>-</td>
-<td>-</td>
-<td>r=s0+1=1, 1 &lt; 7 enter outer loop</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>r=s0+1=1, 1 &lt; 7 enter outer loop</p></td>
 </tr>
 </tbody>
 </table>
@@ -855,17 +621,17 @@ variable r.  The two lines just described are:</p>
 <p>Then you go all the way through the inner loop again,
 for all columns, with c going from 0 through 6, and exit at c=7,
 finish the body of the outer loop by advancing to a new print line,
-and return to the outer loop heading, setting r = 2..., until
+and return to the outer loop heading, setting r = 2…, until
 all rows are completed.</p>
 <p>The common error here is to forget what loop is the innermost one
 that you are working on, and exit that loop before is is totally finished:
 It finishes when the test of the condition controlling the loop becomes false.</p>
 <p>Look back one more time and make sure the code for this <em>simpler</em> table makes
-sense before we continue to the one with labels....</p>
+sense before we continue to the one with labels….</p>
 <p>The fancier table has a couple of extra rows at the top.  These two rows
 are unlike the remaining rows in the body of the table, so they need special code.</p>
 <p>If we go back to our pseudocode we could add to it:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">print</span> <span class="n">heading</span> <span class="n">row</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">print</span> <span class="n">heading</span> <span class="n">row</span>
 <span class="n">print</span> <span class="n">dash</span><span class="p">-</span><span class="n">row</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">print</span> <span class="n">body</span> <span class="n">row</span>
@@ -873,20 +639,20 @@ are unlike the remaining rows in the body of the table, so they need special cod
 </pre></div>
 </div>
 <p>First analyze the heading row:  Some parts are repetitive and
-some are not: Print <code class="docutils literal"><span class="pre">&quot;*</span> <span class="pre">|&quot;</span></code> once, and then there is a repetitive pattern printing
+some are not: Print <code class="docutils literal notranslate"><span class="pre">&quot;*</span> <span class="pre">|&quot;</span></code> once, and then there is a repetitive pattern printing
 0 - 6, which we can do with a simpler loop than in the table body:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;* | &quot;</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;* | &quot;</span><span class="p">);</span>
 <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">i</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>The dashed line can be generated using <code class="docutils literal"><span class="pre">StringOfReps</span></code> from
+<p>The dashed line can be generated using <code class="docutils literal notranslate"><span class="pre">StringOfReps</span></code> from
 <a class="reference internal" href="lab-nested-loops.html#lab-loops"><span class="std std-ref">Lab: Loops</span></a>.  How many dashes?  A digit and a space for each of
 seven columns and for a row header,
 so we need
-(7+1)*(1+1) characters, plus one for the &#8216;|&#8217;:  1 + (7+1)*(1+1).
+(7+1)*(1+1) characters, plus one for the ‘|’:  1 + (7+1)*(1+1).
 Thinking ahead, we will leave that expression unsimplified.</p>
 <p>We have done most of the work for the rows of the body of the table in the simpler
 version.  We just
@@ -895,7 +661,7 @@ Where does the code go?  It is repeated for each row, so it is inside
 the outer loop, but it is just printed once per row, so it comes <em>before</em> the
 inner column loop.  The row label is r.
 The whole code is in example <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/mod7_table/mod7_table.cs">mod7_table/mod7_table.cs</a> and below:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">//heading</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">//heading</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;* | &quot;</span><span class="p">);</span>
 <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>  <span class="c1">//column headings</span>
    <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">i</span> <span class="p">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
@@ -921,7 +687,7 @@ possible to define the <em>inverse</em> of the multiplication operation, and mod
 actually forms a mathematical <em>field</em>.
 Modular arithmetic (with much larger moduli!) is extremely important in
 <em>public key cryptography</em>, which
-protects all your online financial transactions....
+protects all your online financial transactions….
 Knowing a lot more math is useful!
 (But it is not required for this course.)</p>
 <p>The inverse operation to multiplication for prime moduli is
@@ -941,28 +707,28 @@ but our number of digits in n is <em>variable</em>.</p>
 <p>Here is a good trick:  Construct the format string inside the program.
 To get the format for a
 number and an extra space
-mod 7, we want format string &#8220;{0,1} &#8221;, but for mod 11, we want &#8220;{0,2} &#8221;.
+mod 7, we want format string “{0,1} “, but for mod 11, we want “{0,2} “.
 This 1 or 2 is the number of characters in n as a string,
 given by</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">numberWidth</span> <span class="p">=</span> <span class="p">(</span><span class="s">&quot;&quot;</span> <span class="p">+</span> <span class="n">n</span><span class="p">).</span><span class="n">Length</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">numberWidth</span> <span class="p">=</span> <span class="p">(</span><span class="s">&quot;&quot;</span> <span class="p">+</span> <span class="n">n</span><span class="p">).</span><span class="n">Length</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>We can create the format string
 with a string concatenation expression:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">colFormat</span> <span class="p">=</span> <span class="s">&quot;{0,&quot;</span> <span class="p">+</span> <span class="n">numberWidth</span> <span class="p">+</span> <span class="s">&quot;}&quot;</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">colFormat</span> <span class="p">=</span> <span class="s">&quot;{0,&quot;</span> <span class="p">+</span> <span class="n">numberWidth</span> <span class="p">+</span> <span class="s">&quot;}&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>or use
 <em>another</em> format string and substitution.  This is an excuse to
 illustrate including explicit braces (for the main format string).
 Recall the explicit braces are doubled.  Check out this version:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">colFormat</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{{0,{0}}} &quot;</span><span class="p">,</span> <span class="n">numberWidth</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">colFormat</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{{0,{0}}} &quot;</span><span class="p">,</span> <span class="n">numberWidth</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>which we use in the code for the whole function, below,
 and in example program
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/mod_mult_table/mod_mult_table.cs">mod_mult_table/mod_mult_table.cs</a>.</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print a table for modular multiplication mod n.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Print a table for modular multiplication mod n.</span>
 <span class="k">static</span> <span class="k">void</span> <span class="nf">MultTable</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="kt">int</span> <span class="n">numberWidth</span> <span class="p">=</span> <span class="p">(</span><span class="s">&quot;&quot;</span> <span class="p">+</span> <span class="n">n</span><span class="p">).</span><span class="n">Length</span><span class="p">;</span>
@@ -986,22 +752,22 @@ and in example program
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="reversed-string-returned">
-<span id="reverse-string-returned"></span><span id="index-5"></span><h2>8.2.4. Reversed String Returned<a class="headerlink" href="#reversed-string-returned" title="Permalink to this headline">¶</a></h2>
-<p>In <a class="reference internal" href="../while/while-with-sequence.html#reversed-print-example"><span class="std std-ref">String Backwards Exercise/Example</span></a> we discuss iterating through a string&#8217;s
+</section>
+<section id="reversed-string-returned">
+<span id="reverse-string-returned"></span><span id="index-5"></span><h2>Reversed String Returned<a class="headerlink" href="#reversed-string-returned" title="Permalink to this headline"></a></h2>
+<p>In <a class="reference internal" href="../while/while-with-sequence.html#reversed-print-example"><span class="std std-ref">String Backwards Exercise/Example</span></a> we discuss iterating through a string’s
 indices and characters to print the string reversed.  That might be useful,
 but it logically the joining of two separate ideas:  reversing a string and
 printing it.  We already know how to print a string as a step.  Now consider
 the first part as its own function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span>      <span class="c1">/// Return s in reverse order.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return s in reverse order.</span>
       <span class="c1">/// If s is &quot;drab&quot;, return &quot;bard&quot;.</span>
       <span class="k">static</span> <span class="kt">string</span> <span class="nf">Reverse</span> <span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To go along with this chapter, we will use a <code class="docutils literal"><span class="pre">for</span></code> loop heading rather
-a <code class="docutils literal"><span class="pre">while</span></code> loop as in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/reversed_print/reversed_print.cs">reversed_print/reversed_print.cs</a>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
+<p>To go along with this chapter, we will use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop heading rather
+a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop as in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/reversed_print/reversed_print.cs">reversed_print/reversed_print.cs</a>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
 </pre></div>
 </div>
 <p>A more significant difference is that in
@@ -1009,52 +775,52 @@ the previous example we immediately printed,
 individually, each letter that we wanted.  Now we need to create a single
 string, with all the characters, before returning the result.</p>
 <p>Let us think of the example in the documentation:  If we start with
-<code class="docutils literal"><span class="pre">s</span></code> as <code class="docutils literal"><span class="pre">&quot;drab&quot;</span></code>, and we go through the letters one at a time in
+<code class="docutils literal notranslate"><span class="pre">s</span></code> as <code class="docutils literal notranslate"><span class="pre">&quot;drab&quot;</span></code>, and we go through the letters one at a time in
 reverse order, b a r d, we build up successively:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>b
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>b
 ba
 bar
 bard
 </pre></div>
 </div>
 <p>We need a loop with variables and operations.  The sequence
-of reversed letters, <code class="docutils literal"><span class="pre">s[i]</span></code>, are the
+of reversed letters, <code class="docutils literal notranslate"><span class="pre">s[i]</span></code>, are the
 last character on the end of each line above.</p>
 <p>At least lines after the first are constructed from previous parts,
-so, for instance,  <code class="docutils literal"><span class="pre">&quot;bar&quot;</span></code>  comes from combining the initial part <code class="docutils literal"><span class="pre">&quot;ba&quot;</span></code>
-with the latest character <code class="docutils literal"><span class="pre">'r'</span></code> (<code class="docutils literal"><span class="pre">s[i]</span></code>).
+so, for instance,  <code class="docutils literal notranslate"><span class="pre">&quot;bar&quot;</span></code>  comes from combining the initial part <code class="docutils literal notranslate"><span class="pre">&quot;ba&quot;</span></code>
+with the latest character <code class="docutils literal notranslate"><span class="pre">'r'</span></code> (<code class="docutils literal notranslate"><span class="pre">s[i]</span></code>).
 We need a name for the initial part.
-I used the name <code class="docutils literal"><span class="pre">rev</span></code>.
-Combining with a string is done with the <code class="docutils literal"><span class="pre">+</span></code> operator.
-Then when <code class="docutils literal"><span class="pre">rev</span></code> is <code class="docutils literal"><span class="pre">&quot;ba&quot;</span></code> and <code class="docutils literal"><span class="pre">s[i]</span></code> is <code class="docutils literal"><span class="pre">'r'</span></code>, the combination,
+I used the name <code class="docutils literal notranslate"><span class="pre">rev</span></code>.
+Combining with a string is done with the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.
+Then when <code class="docutils literal notranslate"><span class="pre">rev</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;ba&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">s[i]</span></code> is <code class="docutils literal notranslate"><span class="pre">'r'</span></code>, the combination,
 using the variable names, is</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>We want this in our loop, so we must be able to use
 that expression <em>each</em> time through the loop,
-so <code class="docutils literal"><span class="pre">rev</span></code>  changes each time through the loop.  In the next iteration <code class="docutils literal"><span class="pre">rev</span></code>
+so <code class="docutils literal notranslate"><span class="pre">rev</span></code>  changes each time through the loop.  In the next iteration <code class="docutils literal notranslate"><span class="pre">rev</span></code>
 is the <em>result</em> of the previous expression.  The assignment statement
-to give us the next version of <code class="docutils literal"><span class="pre">rev</span></code> can just be:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">=</span> <span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+to give us the next version of <code class="docutils literal notranslate"><span class="pre">rev</span></code> can just be:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">=</span> <span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>That gives us the general rule.  Pay attention now to the beginning and end:
-The end is simple:  The last value for <code class="docutils literal"><span class="pre">rev</span></code> is the complete reversed string,
+The end is simple:  The last value for <code class="docutils literal notranslate"><span class="pre">rev</span></code> is the complete reversed string,
 so that is what we return.</p>
-<p>How do we initialize <code class="docutils literal"><span class="pre">rev</span></code>?  You could imagine <code class="docutils literal"><span class="pre">rev</span></code> starting as <code class="docutils literal"><span class="pre">&quot;b&quot;</span></code>,
-but the the first character that we add is <code class="docutils literal"><span class="pre">'a'</span></code>, and we would not be going
+<p>How do we initialize <code class="docutils literal notranslate"><span class="pre">rev</span></code>?  You could imagine <code class="docutils literal notranslate"><span class="pre">rev</span></code> starting as <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code>,
+but the the first character that we add is <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, and we would not be going
 through all the characters in our loop.  It is better to go all the way
 back to the beginning:  If we use the general form with the first letter in the
 reversed sequence,</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">=</span> <span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">rev</span> <span class="p">=</span> <span class="n">rev</span> <span class="p">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </pre></div>
 </div>
-<p>then the result of the initial <code class="docutils literal"><span class="pre">rev</span></code> +  <code class="docutils literal"><span class="pre">'b'</span></code> should just be <code class="docutils literal"><span class="pre">&quot;b&quot;</span></code>.
-So what would <code class="docutils literal"><span class="pre">rev</span></code> be?</p>
-<p>Remember the empty string:  initialize <code class="docutils literal"><span class="pre">rev</span></code> to be <code class="docutils literal"><span class="pre">&quot;&quot;</span></code>.</p>
+<p>then the result of the initial <code class="docutils literal notranslate"><span class="pre">rev</span></code> +  <code class="docutils literal notranslate"><span class="pre">'b'</span></code> should just be <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code>.
+So what would <code class="docutils literal notranslate"><span class="pre">rev</span></code> be?</p>
+<p>Remember the empty string:  initialize <code class="docutils literal notranslate"><span class="pre">rev</span></code> to be <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
 <p>The result is:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return s in reverse order.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Return s in reverse order.</span>
 <span class="c1">/// If s is &quot;drab&quot;, return &quot;bard&quot;.</span>
 <span class="k">static</span> <span class="kt">string</span> <span class="nf">Reverse</span> <span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1066,58 +832,58 @@ So what would <code class="docutils literal"><span class="pre">rev</span></code>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>We used our new operator <code class="docutils literal"><span class="pre">+=</span></code> to be more concise.</p>
-<p>This function and a <code class="docutils literal"><span class="pre">Main</span></code> used to demonstrate it are in
+<p>We used our new operator <code class="docutils literal notranslate"><span class="pre">+=</span></code> to be more concise.</p>
+<p>This function and a <code class="docutils literal notranslate"><span class="pre">Main</span></code> used to demonstrate it are in
 <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/reversed_string/reversed_string.cs">reversed_string/reversed_string.cs</a>.</p>
-</div>
-<div class="section" id="exercises">
-<h2>8.2.5. Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="index-6"></span><div class="section" id="head-or-tails-exercise">
-<span id="head-tails-exercise"></span><span id="index-7"></span><h3>8.2.5.1. Head or Tails Exercise<a class="headerlink" href="#head-or-tails-exercise" title="Permalink to this headline">¶</a></h3>
-<p>Write a program <code class="docutils literal"><span class="pre">heads_tails.cs</span></code>. It should include a function <code class="docutils literal"><span class="pre">Flip()</span></code>,
-that will just randomly print <code class="docutils literal"><span class="pre">Heads</span></code> or <code class="docutils literal"><span class="pre">Tails</span></code> <em>once</em>.
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline"></a></h2>
+<span class="target" id="index-6"></span><section id="head-or-tails-exercise">
+<span id="head-tails-exercise"></span><span id="index-7"></span><h3>Head or Tails Exercise<a class="headerlink" href="#head-or-tails-exercise" title="Permalink to this headline"></a></h3>
+<p>Write a program <code class="docutils literal notranslate"><span class="pre">heads_tails.cs</span></code>. It should include a function <code class="docutils literal notranslate"><span class="pre">Flip()</span></code>,
+that will just randomly print <code class="docutils literal notranslate"><span class="pre">Heads</span></code> or <code class="docutils literal notranslate"><span class="pre">Tails</span></code> <em>once</em>.
 Accomplish this by choosing 0 or 1 arbitrarily with a random
 number generator.  More details follow.</p>
-<p>Use a <code class="docutils literal"><span class="pre">Random</span></code> object, as in <a class="reference internal" href="../while/lab-number-game.html#lab-number-game"><span class="std std-ref">Number Guessing Game Lab</span></a>, <em>except</em> this time it is
-important <em>not</em> to make the <code class="docutils literal"><span class="pre">Random</span></code> object be a local variable inside
-the <code class="docutils literal"><span class="pre">Flip</span></code> function:  A new <code class="docutils literal"><span class="pre">Random</span></code> object in likely
-initialized using the current time.  The <code class="docutils literal"><span class="pre">Flip</span></code> function has no interaction
+<p>Use a <code class="docutils literal notranslate"><span class="pre">Random</span></code> object, as in <a class="reference internal" href="../while/lab-number-game.html#lab-number-game"><span class="std std-ref">Number Guessing Game Lab</span></a>, <em>except</em> this time it is
+important <em>not</em> to make the <code class="docutils literal notranslate"><span class="pre">Random</span></code> object be a local variable inside
+the <code class="docutils literal notranslate"><span class="pre">Flip</span></code> function:  A new <code class="docutils literal notranslate"><span class="pre">Random</span></code> object in likely
+initialized using the current time.  The <code class="docutils literal notranslate"><span class="pre">Flip</span></code> function has no interaction
 with the user,
-so it can be repeated very quickly, and new <code class="docutils literal"><span class="pre">Random</span></code> objects
+so it can be repeated very quickly, and new <code class="docutils literal notranslate"><span class="pre">Random</span></code> objects
 may not register a new value
-through several reruns of <code class="docutils literal"><span class="pre">Flip</span></code>.  This would give the same answer,
+through several reruns of <code class="docutils literal notranslate"><span class="pre">Flip</span></code>.  This would give the same answer,
 and be completely contrary to the idea of random results!</p>
-<p>Hence it is generally a good idea to only create a single <code class="docutils literal"><span class="pre">Random</span></code> object
+<p>Hence it is generally a good idea to only create a single <code class="docutils literal notranslate"><span class="pre">Random</span></code> object
 that stays in scope for the whole program.
 One way to do that is to make it <em>static</em>.  Place the declaration</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>inside your class but outside of any function, positioned like
 the static constants discussed in <a class="reference internal" href="../functions/staticvariables.html#static-variables"><span class="std std-ref">Static Variables</span></a>.</p>
-<p>Then you can use <code class="docutils literal"><span class="pre">r</span></code> in any function in your class.
-For <code class="docutils literal"><span class="pre">int</span></code> variables <code class="docutils literal"><span class="pre">low</span></code> and <code class="docutils literal"><span class="pre">higher</span></code>, with <code class="docutils literal"><span class="pre">low</span> <span class="pre">&lt;</span> <span class="pre">higher</span></code>:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">higher</span><span class="p">);</span>
+<p>Then you can use <code class="docutils literal notranslate"><span class="pre">r</span></code> in any function in your class.
+For <code class="docutils literal notranslate"><span class="pre">int</span></code> variables <code class="docutils literal notranslate"><span class="pre">low</span></code> and <code class="docutils literal notranslate"><span class="pre">higher</span></code>, with <code class="docutils literal notranslate"><span class="pre">low</span> <span class="pre">&lt;</span> <span class="pre">higher</span></code>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">higher</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>returns a (pseudo) random <code class="docutils literal"><span class="pre">int</span></code>, satisfying <code class="docutils literal"><span class="pre">low</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">higher</span></code>.
-If you select <code class="docutils literal"><span class="pre">low</span></code> and <code class="docutils literal"><span class="pre">higher</span></code> as 0 and 2,
+<p>returns a (pseudo) random <code class="docutils literal notranslate"><span class="pre">int</span></code>, satisfying <code class="docutils literal notranslate"><span class="pre">low</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">higher</span></code>.
+If you select <code class="docutils literal notranslate"><span class="pre">low</span></code> and <code class="docutils literal notranslate"><span class="pre">higher</span></code> as 0 and 2,
 so there are only two possible values for n,
-then you can choose to print <code class="docutils literal"><span class="pre">Heads</span></code> or <code class="docutils literal"><span class="pre">Tails</span></code> with an
-<code class="docutils literal"><span class="pre">if</span></code>-<code class="docutils literal"><span class="pre">else</span></code> statement based on the result.</p>
+then you can choose to print <code class="docutils literal notranslate"><span class="pre">Heads</span></code> or <code class="docutils literal notranslate"><span class="pre">Tails</span></code> with an
+<code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> statement based on the result.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">We have discovered some problems with the <code class="docutils literal"><span class="pre">Next()</span></code> implementation
+<p class="admonition-title">Warning</p>
+<p>We have discovered some problems with the <code class="docutils literal notranslate"><span class="pre">Next()</span></code> implementation
 when running on Mono that sometimes results in random values not
 being generated. This is likely a bug that will be fixed. If you
-experience any problems with <code class="docutils literal"><span class="pre">Next()</span></code>, the following is for you!</p>
+experience any problems with <code class="docutils literal notranslate"><span class="pre">Next()</span></code>, the following is for you!</p>
 </div>
 <p>An alternative to generating random 0 and 1 values for heads and tails
 is to generate random double-precision values. Using the same
-variable, <code class="docutils literal"><span class="pre">r</span></code>, you can call <code class="docutils literal"><span class="pre">r.NextDouble()</span></code> to get a random value
-between 0 and 1. You can consider any generated value <span class="math">\(n &lt; 0.5\)</span> to
-be heads; <span class="math">\(n &gt;= 0.5\)</span> represents tails:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">n</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">NextDouble</span><span class="p">();</span>
+variable, <code class="docutils literal notranslate"><span class="pre">r</span></code>, you can call <code class="docutils literal notranslate"><span class="pre">r.NextDouble()</span></code> to get a random value
+between 0 and 1. You can consider any generated value <span class="math notranslate nohighlight">\(n &lt; 0.5\)</span> to
+be heads; <span class="math notranslate nohighlight">\(n &gt;= 0.5\)</span> represents tails:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">n</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">NextDouble</span><span class="p">();</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">&lt;</span> <span class="m">0.5</span><span class="p">)</span> <span class="p">{</span>
    <span class="c1">// heads</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -1125,18 +891,18 @@ be heads; <span class="math">\(n &gt;= 0.5\)</span> represents tails:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>In your <code class="docutils literal"><span class="pre">Main</span></code> method have a <code class="docutils literal"><span class="pre">for</span></code> loop calling  <code class="docutils literal"><span class="pre">Flip()</span></code>
+<p>In your <code class="docutils literal notranslate"><span class="pre">Main</span></code> method have a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop calling  <code class="docutils literal notranslate"><span class="pre">Flip()</span></code>
 10 times to test it, so you generate a random sequence of
 10 heads and/or tails.  With these 10 rapid calls, it is important
 that a new Random object is only created once.  The suggested static
 variable declaration ensures that.</p>
-</div>
-<div class="section" id="group-flips-exercise">
-<span id="index-8"></span><h3>8.2.5.2. Group Flips Exercise<a class="headerlink" href="#group-flips-exercise" title="Permalink to this headline">¶</a></h3>
-<p>Write a program <code class="docutils literal"><span class="pre">format_flips.cs</span></code>. It should include the function <code class="docutils literal"><span class="pre">Flip()</span></code>
-and the <code class="docutils literal"><span class="pre">static</span></code> <code class="docutils literal"><span class="pre">Random</span></code> declaration
+</section>
+<section id="group-flips-exercise">
+<span id="index-8"></span><h3>Group Flips Exercise<a class="headerlink" href="#group-flips-exercise" title="Permalink to this headline"></a></h3>
+<p>Write a program <code class="docutils literal notranslate"><span class="pre">format_flips.cs</span></code>. It should include the function <code class="docutils literal notranslate"><span class="pre">Flip()</span></code>
+and the <code class="docutils literal notranslate"><span class="pre">static</span></code> <code class="docutils literal notranslate"><span class="pre">Random</span></code> declaration
 from the last exercise.  Also include another function:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print out the results from the total number of random flips of a coin.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Print out the results from the total number of random flips of a coin.</span>
 <span class="c1">/// Group them groupSize per line, each followed by a space.</span>
 <span class="c1">/// The last line may contain fewer than groupSize flips</span>
 <span class="c1">/// if total is not a multiple of groupSize.  The last line</span>
@@ -1149,52 +915,52 @@ from the last exercise.  Also include another function:</p>
 </pre></div>
 </div>
 <p>Complete this function definition and test
-with a variety of calls to <code class="docutils literal"><span class="pre">GroupFlips</span></code> in <code class="docutils literal"><span class="pre">Main</span></code>.
+with a variety of calls to <code class="docutils literal notranslate"><span class="pre">GroupFlips</span></code> in <code class="docutils literal notranslate"><span class="pre">Main</span></code>.
 The output from the previous exercise would be produced by the call:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">GroupFlips</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">GroupFlips</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="reverse-string-foreach-exercise">
-<span id="reverse-string-foreach"></span><span id="index-9"></span><h3>8.2.5.3. Reverse String <code class="docutils literal"><span class="pre">foreach</span></code> Exercise<a class="headerlink" href="#reverse-string-foreach-exercise" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="reverse-string-foreach-exercise">
+<span id="reverse-string-foreach"></span><span id="index-9"></span><h3>Reverse String <code class="docutils literal notranslate"><span class="pre">foreach</span></code> Exercise<a class="headerlink" href="#reverse-string-foreach-exercise" title="Permalink to this headline"></a></h3>
 <p>We already have discussed <a class="reference internal" href="#reverse-string-returned"><span class="std std-ref">Reversed String Returned</span></a>.
-It used a <code class="docutils literal"><span class="pre">for</span></code> loop to go through the characters in
+It used a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to go through the characters in
 reverse order.  Write a version with the only loop heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="p">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="p">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
 <p>and no reference to indices in s.</p>
-</div>
-<div class="section" id="only-letters-exercise">
-<span id="only-letters-ex"></span><span id="index-10"></span><h3>8.2.5.4. Only Letters Exercise<a class="headerlink" href="#only-letters-exercise" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="only-letters-exercise">
+<span id="only-letters-ex"></span><span id="index-10"></span><h3>Only Letters Exercise<a class="headerlink" href="#only-letters-exercise" title="Permalink to this headline"></a></h3>
 <p>Write a program that defines and tests a function with
 description and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return s with all non-letters removed.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Return s with all non-letters removed.</span>
 <span class="c1">/// For example OnlyLetters(&quot;Hello, World!&quot;) returns &quot;HelloWorld&quot;.</span>
 <span class="k">static</span> <span class="kt">string</span> <span class="nf">OnlyLetters</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Assume the English alphabet.</p>
-</div>
-<div class="section" id="palindrome-exercise">
-<span id="palindrome-ex"></span><span id="index-11"></span><h3>8.2.5.5. Palindrome Exercise<a class="headerlink" href="#palindrome-exercise" title="Permalink to this headline">¶</a></h3>
-<p>Write a program <code class="docutils literal"><span class="pre">palindrome.cs</span></code> that defines and tests a function with
+</section>
+<section id="palindrome-exercise">
+<span id="palindrome-ex"></span><span id="index-11"></span><h3>Palindrome Exercise<a class="headerlink" href="#palindrome-exercise" title="Permalink to this headline"></a></h3>
+<p>Write a program <code class="docutils literal notranslate"><span class="pre">palindrome.cs</span></code> that defines and tests a function with
 description and heading:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Return true when s is a palindrome.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Return true when s is a palindrome.</span>
 <span class="c1">/// For example IsPalindrome(&quot;A Toyota!&quot;) returns true.</span>
 <span class="k">static</span> <span class="kt">bool</span> <span class="nf">IsPalindrome</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A palindrome is a string that contains the same sequence of letters,
 ignoring capitalization, forward and backward.  Non-letters are ignored.
-Examples are &#8220;Madam, I&#8217;m Adam.&#8221; and &#8220;Able was I &#8216;ere I saw Elba.&#8221;</p>
-<p><code class="docutils literal"><span class="pre">IsPalindrome</span></code> can be written very concisely by copying and using
+Examples are “Madam, I’m Adam.” and “Able was I ‘ere I saw Elba.”</p>
+<p><code class="docutils literal notranslate"><span class="pre">IsPalindrome</span></code> can be written very concisely by copying and using
 functions from previous exercises.</p>
-</div>
-<div class="section" id="nested-play-computer-exercise">
-<span id="index-12"></span><h3>8.2.5.6. Nested Play Computer Exercise<a class="headerlink" href="#nested-play-computer-exercise" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nested-play-computer-exercise">
+<span id="index-12"></span><h3>Nested Play Computer Exercise<a class="headerlink" href="#nested-play-computer-exercise" title="Permalink to this headline"></a></h3>
 <p>Predict what these code fragments print.  Then check yourself in csharp:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span> <span class="n">i</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span> <span class="n">i</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="m">4</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span> <span class="p">{</span>
         <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
     <span class="p">}</span>
@@ -1209,14 +975,14 @@ functions from previous exercises.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="power-table-exercise">
-<span id="index-13"></span><span id="id2"></span><h3>8.2.5.7. Power Table Exercise<a class="headerlink" href="#power-table-exercise" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="power-table-exercise">
+<span id="index-13"></span><span id="id2"></span><h3>Power Table Exercise<a class="headerlink" href="#power-table-exercise" title="Permalink to this headline"></a></h3>
 <ol class="loweralpha">
-<li><p class="first">Write a program <code class="file docutils literal"><span class="pre">power_table.cs</span></code> that completes and tests
+<li><p>Write a program <code class="file docutils literal notranslate"><span class="pre">power_table.cs</span></code> that completes and tests
 the function with this heading.  Be sure your program tests
 with several values for each parameter:</p>
-<div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="c1">/// Print a table of powers of positive integers.</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Print a table of powers of positive integers.</span>
 <span class="c1">/// Assume 1 &lt;= nMax &lt;= 12, 1 &lt;= powerMax &lt;= 7.</span>
 <span class="c1">/// Example: output of PowerTable(3, 4)</span>
 <span class="c1">///       n^1       n^2      n^3      n^4</span>
@@ -1229,32 +995,46 @@ with several values for each parameter:</p>
 </div>
 <p>Make sure the table always ends up with right-justified columns.</p>
 </li>
-<li><p class="first">Make the table have columns all the same width, but
+<li><p>Make the table have columns all the same width, but
 make the width be as small as possible for the parameters
 provided, leaving a minimal one space (but not less!) between columns
-somewhere in the table. Consider heading widths, too.</p>
-</li>
+somewhere in the table. Consider heading widths, too.</p></li>
 </ol>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="forstatements.html" class="btn btn-neutral float-left" title="For-Statement Syntax" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lab-nested-loops.html" class="btn btn-neutral float-right" title="Lab: Loops" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-      
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012, Andrew N. Harrington and George Thiruvathukal.
+      <span class="lastupdated">Last updated on 29-November-2021 23:33:52.
+      </span></p>
   </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2016, Andrew N. Harrington and George Thiruvathukal.<br/>
-      Last updated on 10-September-2016 16:59:02.<br/>
-    </p>
-  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
 </footer>
-  </body>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

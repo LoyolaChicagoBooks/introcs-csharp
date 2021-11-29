@@ -1,1 +1,0 @@
-﻿Xam on mac automatically updates mono but gives no indication exceot that the only menu entry is Xamarin.
