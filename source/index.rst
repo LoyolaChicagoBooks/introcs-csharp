@@ -3,7 +3,6 @@ Introduction to Computer Science in C#
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    context/context
    data/data
