@@ -41,14 +41,16 @@ This variation of ``IndexOf`` has a second parameter:
    
 ``string Trim()``   
     Returns a string formed from **this** string object, but
-    with leading and trailing whitespace removed. Example:: 
+    with leading and trailing whitespace removed. Example:
+
+    .. code-block:: none
     
-        csharp> string s = "\n  123    ";
-        csharp> "#" + s + "#";
-        #
-          123   #
-        csharp> "#" + s.Trim() + "#";
-        #123#
+       csharp> string s = "\n  123    ";
+       csharp> "#" + s + "#";
+       #
+         123   #
+       csharp> "#" + s.Trim() + "#";
+       #123#
 
 .. index:: string; Replace
    Replace string method

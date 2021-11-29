@@ -25,14 +25,18 @@ Try the following:
     reason you can also open the drop-down project menu and select Options.)
 
 #.  In the left column of the dialog under Build, the last entry should be Output.  Click on it.
-    The output path entry should end with ::
+    The output path entry should end with:
 
-      examples/first_file
+    .. code-block:: none
+
+       examples/first_file
 
     This is *not* the way Xamarin sets it up by default.  
-    Originally Output Path ended with ::
+    Originally Output Path ended with:
 
-      examples/first_file/bin/$(Configuration)
+    .. code-block:: none
+
+       examples/first_file/bin/$(Configuration)
 
     This version has the extra ``/bin/$(Configuration)``.  
 
