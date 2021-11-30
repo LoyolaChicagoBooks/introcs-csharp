@@ -7,7 +7,7 @@ For Loops
 ######################
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    
    forstatements
    forexamples

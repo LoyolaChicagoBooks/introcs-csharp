@@ -7,7 +7,7 @@ Classes and Object-Oriented Programming
 ########################################
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    
    a-first-class
    classexamples

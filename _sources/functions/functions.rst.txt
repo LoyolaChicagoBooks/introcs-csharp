@@ -5,7 +5,7 @@ Defining Functions of your Own
 ###############################
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    firstfunc
    multfunc
