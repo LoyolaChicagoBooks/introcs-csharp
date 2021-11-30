@@ -2,7 +2,7 @@ C# Data and Operations
 ######################
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    sampleprogram
    lab-edit-compile-run

@@ -7,7 +7,7 @@ While Loops
 ######################
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    
    whilestatements
    while-with-sequence

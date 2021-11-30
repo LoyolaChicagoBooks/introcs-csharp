@@ -7,7 +7,7 @@ Lists
 ######################
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
       
    listsyntax
    dotnetapi
