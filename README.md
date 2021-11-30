@@ -4,36 +4,19 @@ Introduction to Computer Science in C\#
 Build Status
 -------------
 
-introcs-csharp (the book) - [![Build Status](https://travis-ci.org/LoyolaChicagoBooks/introcs-csharp.svg?branch=master)](https://travis-ci.org/LoyolaChicagoBooks/introcs-csharp)
-
-introcs-csharp-examples (the code) - [![Build Status](https://travis-ci.org/LoyolaChicagoBooks/introcs-csharp-examples.svg?branch=master)](https://travis-ci.org/LoyolaChicagoBooks/introcs-csharp-examples) 
+[![GitHub Pages and Release PDF](https://github.com/LoyolaChicagoBooks/introcs-csharp/actions/workflows/main.yml/badge.svg)](https://github.com/LoyolaChicagoBooks/introcs-csharp/actions/workflows/main.yml)
 
 Viewing and Downloading
 ---------------------------
 
-Web Site - http://books.cs.luc.edu/introcs-csharp/
-
-Web Site (offline ZIP) - http://books.cs.luc.edu/introcs-csharp/download/html.zip
-
-PDF (US Letter) - http://books.cs.luc.edu/introcs-csharp/download/comp170.pdf
-
-PDF (7x9 Book) - http://books.cs.luc.edu/introcs-csharp/download/comp170book.pdf
-
-EPUB (Experimental) - http://books.cs.luc.edu/introcs-csharp/download/comp170.epub
-
+Web Site - http://introcs.cs.luc.edu
 
 Building the Book
 --------------------
 
-- pip install sphinx sphinx_bootstrap_theme
+More details to follow...
 
-- build.sh -h (to see help and the various options)
-
-- build.sh -a (to build HTML, PDF, 7x9 PDF, and EPUB)
-
-
-
-
-
-
-
+```
+$ pip install -r requirements.txt
+$./bin/get-code-examples.sh && make html latexpdf
+```
