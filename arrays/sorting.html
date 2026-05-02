@@ -1,105 +1,483 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sorting Algorithms &mdash; Introduction to Computer Science in C# 30 Nov 2021 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sorting Algorithms &#8212; Introduction to Computer Science in C# 02 May 2026 documentation</title>
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=72beec40"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'arrays/sorting';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Binary Searching" href="binarysearching.html" />
-    <link rel="prev" title="Linear Searching" href="searching.html" /> 
-</head>
+    <link rel="prev" title="Linear Searching" href="searching.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="02 May 2026" />
+    <meta name="docbuild:last-update" content="02-May-2026 16:33:37"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #922247" >
-            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
-          </a>
-              <div class="version">
-                30 Nov 2021
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="arrays.html">Arrays</a><ul class="current">
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Introduction to Computer Science in C# 02 May 2026 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction to Computer Science in C#
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../context/context.html">Context</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/data.html">C# Data and Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../decisions/decisions.html">Decisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">Simple <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html"><code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">Multiple Tests and <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">Nested <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../while/while.html">While Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">Interactive <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../for/for.html">For Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">Examples With <code class="docutils literal notranslate"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">Directory Class</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="arrays.html">Arrays</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="onedim.html">One Dimensional Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="music.html">Musical Scales and Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="searching.html">Linear Searching</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Sorting Algorithms</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Sorting Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="binarysearching.html">Binary Searching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-array1d.html">Lab: Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lab-searching-arrays-lists-maps.html">Lab: Performance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="twodim.html">Multi-dimensional Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewarrays.html">Chapter Review Questions</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lists/lists.html">Lists</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">.Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">Appendix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">Acknowledgments</a></li>
+</ul>
+</details></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Introduction to Computer Science in C#</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content style-external-links">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="arrays.html">Arrays</a> &raquo;</li>
-      <li>Sorting Algorithms</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/arrays/sorting.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp/issues/new?title=Issue%20on%20page%20%2Farrays/sorting.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sorting Algorithms</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchanging-array-elements">Exchanging Array Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bubble-sort">Bubble Sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-sort">Selection Sort</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shuffle-exercise">Shuffle Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-sort">Insertion Sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-sort">Shell Sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quicksort-a-k-a-partition-sort">Quicksort a.k.a. Partition Sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-data-generation">Random Data Generation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timing">Timing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code">Running the Code</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="sorting-algorithms">
-<span id="sorting"></span><span id="index-0"></span><h1>Sorting Algorithms<a class="headerlink" href="#sorting-algorithms" title="Permalink to this headline"></a></h1>
+<span id="sorting"></span><span id="index-0"></span><h1>Sorting Algorithms<a class="headerlink" href="#sorting-algorithms" title="Link to this heading">#</a></h1>
 <p>Sorting algorithms represent foundational knowledge that every computer scientist and
 IT professional should at least know at a basic level. And it turns out to be a great
 way of learning about why arrays are important.</p>
@@ -114,17 +492,17 @@ by Niklaus Wirth <a class="reference internal" href="#wirthadp" id="id1"><span>[
 some examples from Thomas W. Christopher’s <a class="reference internal" href="#tcsortingjava" id="id2"><span>[TCSortingJava]</span></a> animated sorting algorithms
 page.</p>
 <p>The sorts and supporting functions are all in
-<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sorting/sorting.cs">sorting/sorting.cs</a>, but we start one bit at a time:</p>
+<a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sorting/sorting.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>, but we start one bit at a time:</p>
 <section id="exchanging-array-elements">
-<span id="index-1"></span><h2>Exchanging Array Elements<a class="headerlink" href="#exchanging-array-elements" title="Permalink to this headline"></a></h2>
+<span id="index-1"></span><h2>Exchanging Array Elements<a class="headerlink" href="#exchanging-array-elements" title="Link to this heading">#</a></h2>
 <p>We’ll begin by introducing you to a simple method, whose only purpose in life is to
 swap two data values at positions <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code> in a given integer array:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">/// Exchange the elements of data at indices m and n.</span>
-<span class="linenos">2</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Exchange</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="linenos">2</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Exchange</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
 <span class="linenos">3</span><span class="p">{</span>
-<span class="linenos">4</span>   <span class="kt">int</span> <span class="n">temporary</span> <span class="p">=</span> <span class="n">data</span><span class="p">[</span><span class="n">m</span><span class="p">];</span>
-<span class="linenos">5</span>   <span class="n">data</span> <span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="p">=</span> <span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
-<span class="linenos">6</span>   <span class="n">data</span> <span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="p">=</span> <span class="n">temporary</span><span class="p">;</span>
+<span class="linenos">4</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">m</span><span class="p">];</span>
+<span class="linenos">5</span><span class="w">   </span><span class="n">data</span><span class="w"> </span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+<span class="linenos">6</span><span class="w">   </span><span class="n">data</span><span class="w"> </span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temporary</span><span class="p">;</span>
 <span class="linenos">7</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -141,14 +519,14 @@ index:  0  1  2  3  4  5  6
 <p>In general, swapping two values in an array is
 no different than swapping any two integers.
 Suppose we have the following integers <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
 
-<span class="n">a</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
-<span class="n">b</span> <span class="p">=</span> <span class="m">35</span><span class="p">;</span>
-<span class="n">t</span> <span class="p">=</span> <span class="n">a</span><span class="p">;</span>
-<span class="n">a</span> <span class="p">=</span> <span class="n">b</span><span class="p">;</span>
-<span class="n">b</span> <span class="p">=</span> <span class="n">t</span><span class="p">;</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span><span class="p">;</span>
+<span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>After this code does its job, the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> would be 35
@@ -171,7 +549,7 @@ have been reordered so we’ll get closer to having a sorted array.</p>
 <p>Let’s now take a look at the various sorting algorithms.</p>
 </section>
 <section id="bubble-sort">
-<span id="index-2"></span><h2>Bubble Sort<a class="headerlink" href="#bubble-sort" title="Permalink to this headline"></a></h2>
+<span id="index-2"></span><h2>Bubble Sort<a class="headerlink" href="#bubble-sort" title="Link to this heading">#</a></h2>
 <p>The Bubble Sort algorithm works by repeatedly scanning
 through the array exchanging adjacent elements that are out of order.  Watching
 this work with a strategically-placed <code class="docutils literal notranslate"><span class="pre">Console.WriteLine()</span></code> in the outer
@@ -194,45 +572,45 @@ and has no equal elements.</p>
 <p>Bubble Sort exchanges only adjacent elements.
 Each such exchange removes precisely one inversion; therefore,
 Bubble Sort requires <span class="math notranslate nohighlight">\(O(N^2)\)</span> exchanges.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArrayBubbleSort</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArrayBubbleSort</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 <span class="linenos"> 2</span><span class="p">{</span>
-<span class="linenos"> 3</span>   <span class="kt">int</span> <span class="n">N</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
-<span class="linenos"> 4</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="p">=</span><span class="n">N</span><span class="p">-</span><span class="m">1</span><span class="p">;</span> <span class="n">j</span><span class="p">&gt;</span><span class="m">0</span><span class="p">;</span> <span class="n">j</span><span class="p">--)</span> <span class="p">{</span>
-<span class="linenos"> 5</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">&lt;</span><span class="n">j</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
-<span class="linenos"> 6</span>         <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">])</span> <span class="p">{</span>
-<span class="linenos"> 7</span>            <span class="n">Exchange</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">);</span>
-<span class="linenos"> 8</span>         <span class="p">}</span>
-<span class="linenos"> 9</span>      <span class="p">}</span>
-<span class="linenos">10</span>   <span class="p">}</span>
+<span class="linenos"> 3</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+<span class="linenos"> 4</span><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 7</span><span class="w">            </span><span class="n">Exchange</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="p">}</span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w">   </span><span class="p">}</span>
 <span class="linenos">11</span><span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="selection-sort">
-<span id="index-3"></span><h2>Selection Sort<a class="headerlink" href="#selection-sort" title="Permalink to this headline"></a></h2>
+<span id="index-3"></span><h2>Selection Sort<a class="headerlink" href="#selection-sort" title="Link to this heading">#</a></h2>
 <p>The Selection Sort algorithm works to minimize the amount of data movement,
 hence the number of <code class="docutils literal notranslate"><span class="pre">Exchange()</span></code> calls.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">/// Among the indices &gt;= start for data,</span>
 <span class="linenos"> 2</span><span class="c1">/// return the index of the minimal element.</span>
-<span class="linenos"> 3</span><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">IntArrayMin</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">start</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">IntArrayMin</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">)</span>
 <span class="linenos"> 4</span><span class="p">{</span>
-<span class="linenos"> 5</span>   <span class="kt">int</span> <span class="n">N</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">,</span> <span class="n">minPos</span> <span class="p">=</span> <span class="n">start</span><span class="p">;</span>
-<span class="linenos"> 6</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">=</span><span class="n">start</span><span class="p">+</span><span class="m">1</span><span class="p">;</span> <span class="n">pos</span> <span class="p">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">pos</span><span class="p">++)</span>
-<span class="linenos"> 7</span>      <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="p">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">minPos</span><span class="p">])</span> <span class="p">{</span>
-<span class="linenos"> 8</span>         <span class="n">minPos</span> <span class="p">=</span> <span class="n">pos</span><span class="p">;</span>
-<span class="linenos"> 9</span>      <span class="p">}</span>
-<span class="linenos">10</span>   <span class="k">return</span> <span class="n">minPos</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">,</span><span class="w"> </span><span class="n">minPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">start</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="o">=</span><span class="n">start</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="o">++</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">minPos</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">minPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">minPos</span><span class="p">;</span>
 <span class="linenos">11</span><span class="p">}</span>
 <span class="linenos">12</span>
-<span class="linenos">13</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArraySelectionSort</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
+<span class="linenos">13</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArraySelectionSort</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 <span class="linenos">14</span><span class="p">{</span>
-<span class="linenos">15</span>   <span class="kt">int</span> <span class="n">N</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
-<span class="linenos">16</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">N</span><span class="p">-</span><span class="m">1</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
-<span class="linenos">17</span>      <span class="kt">int</span> <span class="n">k</span> <span class="p">=</span> <span class="n">IntArrayMin</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-<span class="linenos">18</span>      <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">!=</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">19</span>         <span class="n">Exchange</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">);</span>
-<span class="linenos">20</span>      <span class="p">}</span>
-<span class="linenos">21</span>   <span class="p">}</span>
+<span class="linenos">15</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+<span class="linenos">16</span><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">17</span><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IntArrayMin</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="linenos">18</span><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">19</span><span class="w">         </span><span class="n">Exchange</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">);</span>
+<span class="linenos">20</span><span class="w">      </span><span class="p">}</span>
+<span class="linenos">21</span><span class="w">   </span><span class="p">}</span>
 <span class="linenos">22</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -317,13 +695,13 @@ number of <em>exchanges</em> is O(N). The comparisons are a non-trivial cost,
 however, and do show
 in our own performance experiments with randomly-generated data.</p>
 <section id="shuffle-exercise">
-<span id="index-4"></span><h3>Shuffle Exercise<a class="headerlink" href="#shuffle-exercise" title="Permalink to this headline"></a></h3>
+<span id="index-4"></span><h3>Shuffle Exercise<a class="headerlink" href="#shuffle-exercise" title="Link to this heading">#</a></h3>
 <p>Complete the <code class="docutils literal notranslate"><span class="pre">Shuffle</span></code> function and add a <code class="docutils literal notranslate"><span class="pre">Main</span></code> method to test it:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Shuffle the elements of an array into random positions,</span>
 <span class="c1">/// changing the array.  An array containing</span>
 <span class="c1">/// 2, 5, 7, 7, 7, 9 *might* end up in the order</span>
 <span class="c1">/// 7, 7, 2, 9, 7, 5.</span>
-<span class="k">static</span> <span class="k">void</span> <span class="nf">Shuffle</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">a</span><span class="p">)</span>
+<span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Shuffle</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Use a Random and do something close to a reverse of selection sort, using
@@ -331,19 +709,19 @@ in our own performance experiments with randomly-generated data.</p>
 </section>
 </section>
 <section id="insertion-sort">
-<span id="index-5"></span><h2>Insertion Sort<a class="headerlink" href="#insertion-sort" title="Permalink to this headline"></a></h2>
+<span id="index-5"></span><h2>Insertion Sort<a class="headerlink" href="#insertion-sort" title="Link to this heading">#</a></h2>
 <p>In the Insertion Sort algorithm, we build up a longer and longer sorted
 list from the bottom of the array. We repeatedly insert the next element
 into the sorted part of the array by sliding it down (using our familiar
 <code class="docutils literal notranslate"><span class="pre">Exchange()</span></code> method) to its proper position.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArrayInsertionSort</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArrayInsertionSort</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 <span class="linenos">2</span><span class="p">{</span>
-<span class="linenos">3</span>   <span class="kt">int</span> <span class="n">N</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
-<span class="linenos">4</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="p">=</span><span class="m">1</span><span class="p">;</span> <span class="n">j</span><span class="p">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span> <span class="p">{</span>
-<span class="linenos">5</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="n">j</span><span class="p">;</span> <span class="n">i</span><span class="p">&gt;</span><span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">-</span><span class="m">1</span><span class="p">];</span> <span class="n">i</span><span class="p">--)</span> <span class="p">{</span>
-<span class="linenos">6</span>         <span class="n">Exchange</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="p">-</span> <span class="m">1</span><span class="p">);</span>
-<span class="linenos">7</span>      <span class="p">}</span>
-<span class="linenos">8</span>   <span class="p">}</span>
+<span class="linenos">3</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+<span class="linenos">4</span><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">5</span><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">6</span><span class="w">         </span><span class="n">Exchange</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">7</span><span class="w">      </span><span class="p">}</span>
+<span class="linenos">8</span><span class="w">   </span><span class="p">}</span>
 <span class="linenos">9</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -417,7 +795,7 @@ element must move for random input is one-half the length of the sorted
 portion.</p>
 </section>
 <section id="shell-sort">
-<span id="index-6"></span><h2>Shell Sort<a class="headerlink" href="#shell-sort" title="Permalink to this headline"></a></h2>
+<span id="index-6"></span><h2>Shell Sort<a class="headerlink" href="#shell-sort" title="Link to this heading">#</a></h2>
 <p>Shell Sort is basically a trick to make Insertion Sort run faster. If
 you take a quick glance at the code and look beyond the presence of
 two additional <em>outer loops</em>, you’ll notice that the code looks very similar.</p>
@@ -443,28 +821,28 @@ with different series of values of k.</p>
 then 4, 2, and 1. Please note that these intervals are to show how the
 method works–not how the method works <em>best</em>.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">/// Shell sort of data using specified swapping intervals.</span>
-<span class="linenos"> 2</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArrayShellSort</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">intervals</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArrayShellSort</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">intervals</span><span class="p">)</span>
 <span class="linenos"> 3</span><span class="p">{</span>
-<span class="linenos"> 4</span>   <span class="kt">int</span> <span class="n">N</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
-<span class="linenos"> 5</span>   <span class="c1">// The intervals for the shell sort must be sorted, ascending</span>
-<span class="linenos"> 6</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">=</span><span class="n">intervals</span><span class="p">.</span><span class="n">Length</span><span class="p">-</span><span class="m">1</span><span class="p">;</span> <span class="n">k</span><span class="p">&gt;=</span><span class="m">0</span><span class="p">;</span> <span class="n">k</span><span class="p">--)</span> <span class="p">{</span>
-<span class="linenos"> 7</span>      <span class="kt">int</span> <span class="n">interval</span> <span class="p">=</span> <span class="n">intervals</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
-<span class="linenos"> 8</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">m</span><span class="p">&lt;</span><span class="n">interval</span><span class="p">;</span> <span class="n">m</span><span class="p">++)</span> <span class="p">{</span>
-<span class="linenos"> 9</span>         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="p">=</span><span class="n">m</span><span class="p">+</span><span class="n">interval</span><span class="p">;</span> <span class="n">j</span><span class="p">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">j</span><span class="p">+=</span><span class="n">interval</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">10</span>            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="n">j</span><span class="p">;</span> <span class="n">i</span><span class="p">&gt;=</span><span class="n">interval</span> <span class="p">&amp;&amp;</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]&lt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">-</span><span class="n">interval</span><span class="p">];</span>
-<span class="linenos">11</span>                  <span class="n">i</span><span class="p">-=</span><span class="n">interval</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">12</span>               <span class="n">Exchange</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="p">-</span> <span class="n">interval</span><span class="p">);</span>
-<span class="linenos">13</span>            <span class="p">}</span>
-<span class="linenos">14</span>         <span class="p">}</span>
-<span class="linenos">15</span>      <span class="p">}</span>
-<span class="linenos">16</span>   <span class="p">}</span>
+<span class="linenos"> 4</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="w">   </span><span class="c1">// The intervals for the shell sort must be sorted, ascending</span>
+<span class="linenos"> 6</span><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="n">intervals</span><span class="p">.</span><span class="n">Length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intervals</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+<span class="linenos"> 8</span><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">m</span><span class="o">&lt;</span><span class="n">interval</span><span class="p">;</span><span class="w"> </span><span class="n">m</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">         </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="n">m</span><span class="o">+</span><span class="n">interval</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">+=</span><span class="n">interval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">10</span><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;=</span><span class="n">interval</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">interval</span><span class="p">];</span>
+<span class="linenos">11</span><span class="w">                  </span><span class="n">i</span><span class="o">-=</span><span class="n">interval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">12</span><span class="w">               </span><span class="n">Exchange</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">interval</span><span class="p">);</span>
+<span class="linenos">13</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">14</span><span class="w">         </span><span class="p">}</span>
+<span class="linenos">15</span><span class="w">      </span><span class="p">}</span>
+<span class="linenos">16</span><span class="w">   </span><span class="p">}</span>
 <span class="linenos">17</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArrayShellSortNaive</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArrayShellSortNaive</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 <span class="linenos">2</span><span class="p">{</span>
-<span class="linenos">3</span>   <span class="kt">int</span><span class="p">[]</span> <span class="n">intervals</span> <span class="p">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">8</span> <span class="p">};</span>
-<span class="linenos">4</span>   <span class="n">IntArrayShellSort</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">intervals</span><span class="p">);</span>
+<span class="linenos">3</span><span class="w">   </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">intervals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">};</span>
+<span class="linenos">4</span><span class="w">   </span><span class="n">IntArrayShellSort</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">intervals</span><span class="p">);</span>
 <span class="linenos">5</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -497,23 +875,23 @@ for this method to work. Our code ensures this by taking the <em>maximum</em> of
 the intervals based on the first suggestion of Knuth:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">/// Generates the intervals for Shell sort on a</span>
 <span class="linenos"> 2</span><span class="c1">/// list of length n via an algorithm from Knuth.</span>
-<span class="linenos"> 3</span><span class="k">static</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">GenerateIntervals</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="nf">GenerateIntervals</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
 <span class="linenos"> 4</span><span class="p">{</span>
-<span class="linenos"> 5</span>   <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">&lt;</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// no sorting will be needed</span>
-<span class="linenos"> 6</span>      <span class="k">return</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
-<span class="linenos"> 7</span>   <span class="p">}</span>
-<span class="linenos"> 8</span>   <span class="kt">int</span> <span class="n">t</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="n">Max</span> <span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span> <span class="p">-</span> <span class="m">1</span><span class="p">);</span>
-<span class="linenos"> 9</span>   <span class="kt">int</span><span class="p">[]</span> <span class="n">intervals</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">t</span><span class="p">];</span>
-<span class="linenos">10</span>   <span class="n">intervals</span> <span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
-<span class="linenos">11</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">t</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
-<span class="linenos">12</span>      <span class="n">intervals</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="m">3</span> <span class="p">*</span> <span class="n">intervals</span> <span class="p">[</span><span class="n">i</span> <span class="p">-</span> <span class="m">1</span><span class="p">]</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
-<span class="linenos">13</span>   <span class="k">return</span> <span class="n">intervals</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// no sorting will be needed</span>
+<span class="linenos"> 6</span><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="linenos"> 7</span><span class="w">   </span><span class="p">}</span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Max</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Log</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">   </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">intervals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="n">t</span><span class="p">];</span>
+<span class="linenos">10</span><span class="w">   </span><span class="n">intervals</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="linenos">11</span><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="linenos">12</span><span class="w">      </span><span class="n">intervals</span><span class="w"> </span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">intervals</span><span class="w"> </span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="linenos">13</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">intervals</span><span class="p">;</span>
 <span class="linenos">14</span><span class="p">}</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArrayShellSortBetter</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
+<span class="linenos">16</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArrayShellSortBetter</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 <span class="linenos">17</span><span class="p">{</span>
-<span class="linenos">18</span>   <span class="kt">int</span><span class="p">[]</span> <span class="n">intervals</span> <span class="p">=</span> <span class="n">GenerateIntervals</span> <span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
-<span class="linenos">19</span>   <span class="n">IntArrayShellSort</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">intervals</span><span class="p">);</span>
+<span class="linenos">18</span><span class="w">   </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">intervals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerateIntervals</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+<span class="linenos">19</span><span class="w">   </span><span class="n">IntArrayShellSort</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">intervals</span><span class="p">);</span>
 <span class="linenos">20</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -524,46 +902,46 @@ student and think it has promise in a number of situations, especially in system
 there are limits on available memory (e.g. embedded systems).</p>
 </section>
 <section id="quicksort-a-k-a-partition-sort">
-<span id="index-7"></span><h2>Quicksort a.k.a. Partition Sort<a class="headerlink" href="#quicksort-a-k-a-partition-sort" title="Permalink to this headline"></a></h2>
+<span id="index-7"></span><h2>Quicksort a.k.a. Partition Sort<a class="headerlink" href="#quicksort-a-k-a-partition-sort" title="Link to this heading">#</a></h2>
 <p>This sort is a more advanced example that uses <em>recursion</em>. We list it because it
 is one of the best sorts for <em>random</em> data, having an <em>average</em> time behavior of
 <span class="math notranslate nohighlight">\(O(N  \log N)\)</span>.
 Quicksort is a rather interesting case. While it has an excellent average
 behavior, it has a worst case performance of <span class="math notranslate nohighlight">\(O(N ^2)\)</span>.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">/// Sort elements of data in index range [lowI, highI].</span>
-<span class="linenos"> 2</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArrayQuickSort</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span>
-<span class="linenos"> 3</span>                                      <span class="kt">int</span> <span class="n">lowI</span><span class="p">,</span> <span class="kt">int</span> <span class="n">highI</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArrayQuickSort</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">                                      </span><span class="kt">int</span><span class="w"> </span><span class="n">lowI</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">highI</span><span class="p">)</span>
 <span class="linenos"> 4</span><span class="p">{</span>
-<span class="linenos"> 5</span>   <span class="kt">int</span> <span class="n">afterSmall</span> <span class="p">=</span> <span class="n">lowI</span><span class="p">,</span> <span class="n">beforeBig</span> <span class="p">=</span> <span class="n">highI</span><span class="p">;</span>
-<span class="linenos"> 6</span>   <span class="kt">int</span> <span class="n">pivot</span> <span class="p">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">lowI</span> <span class="p">+</span> <span class="n">highI</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span><span class="p">];</span>
-<span class="linenos"> 7</span>   <span class="c1">// in loop data[i] &lt;= pivot if i &lt; afterSmall</span>
-<span class="linenos"> 8</span>   <span class="c1">//         data[i] &gt;= pivot if i &gt; beforeBig</span>
-<span class="linenos"> 9</span>   <span class="c1">//         region with aftersmall &lt;= i &lt;= beforeBig</span>
-<span class="linenos">10</span>   <span class="c1">//             shrinks to nothing.</span>
-<span class="linenos">11</span>   <span class="k">while</span> <span class="p">(</span><span class="n">afterSmall</span> <span class="p">&lt;=</span> <span class="n">beforeBig</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">12</span>      <span class="k">while</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">afterSmall</span><span class="p">]</span> <span class="p">&lt;</span> <span class="n">pivot</span><span class="p">)</span>
-<span class="linenos">13</span>         <span class="n">afterSmall</span><span class="p">++;</span>
-<span class="linenos">14</span>      <span class="k">while</span> <span class="p">(</span><span class="n">pivot</span> <span class="p">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">beforeBig</span><span class="p">])</span>
-<span class="linenos">15</span>         <span class="n">beforeBig</span><span class="p">--;</span>
-<span class="linenos">16</span>      <span class="k">if</span> <span class="p">(</span><span class="n">afterSmall</span> <span class="p">&lt;=</span> <span class="n">beforeBig</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">17</span>         <span class="n">Exchange</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">afterSmall</span><span class="p">,</span> <span class="n">beforeBig</span><span class="p">);</span>
-<span class="linenos">18</span>         <span class="n">afterSmall</span><span class="p">++;</span>
-<span class="linenos">19</span>         <span class="n">beforeBig</span><span class="p">--;</span>
-<span class="linenos">20</span>      <span class="p">}</span>
-<span class="linenos">21</span>   <span class="p">}</span>  <span class="c1">// after loop: beforeBig &lt; afterSmall, and</span>
-<span class="linenos">22</span>   <span class="c1">//      data[i] &lt;= pivot for i &lt;= beforeBig,</span>
-<span class="linenos">23</span>   <span class="c1">//      data[i] == pivot for i if beforeBig &lt; i &lt; afterSmall,</span>
-<span class="linenos">24</span>   <span class="c1">//      data[i] &gt;= pivot for i &gt;= afterSmall.</span>
-<span class="linenos">25</span>   <span class="k">if</span> <span class="p">(</span><span class="n">lowI</span> <span class="p">&lt;</span> <span class="n">beforeBig</span><span class="p">)</span> <span class="c1">// at least two elements</span>
-<span class="linenos">26</span>      <span class="n">IntArrayQuickSort</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">lowI</span><span class="p">,</span> <span class="n">beforeBig</span><span class="p">);</span>
-<span class="linenos">27</span>   <span class="k">if</span> <span class="p">(</span><span class="n">afterSmall</span> <span class="p">&lt;</span> <span class="n">highI</span><span class="p">)</span> <span class="c1">// at least two elements</span>
-<span class="linenos">28</span>      <span class="n">IntArrayQuickSort</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">afterSmall</span><span class="p">,</span> <span class="n">highI</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">afterSmall</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lowI</span><span class="p">,</span><span class="w"> </span><span class="n">beforeBig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">highI</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">pivot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">[(</span><span class="n">lowI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">highI</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+<span class="linenos"> 7</span><span class="w">   </span><span class="c1">// in loop data[i] &lt;= pivot if i &lt; afterSmall</span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="c1">//         data[i] &gt;= pivot if i &gt; beforeBig</span>
+<span class="linenos"> 9</span><span class="w">   </span><span class="c1">//         region with aftersmall &lt;= i &lt;= beforeBig</span>
+<span class="linenos">10</span><span class="w">   </span><span class="c1">//             shrinks to nothing.</span>
+<span class="linenos">11</span><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">afterSmall</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">beforeBig</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">12</span><span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">afterSmall</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pivot</span><span class="p">)</span>
+<span class="linenos">13</span><span class="w">         </span><span class="n">afterSmall</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos">14</span><span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">pivot</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">beforeBig</span><span class="p">])</span>
+<span class="linenos">15</span><span class="w">         </span><span class="n">beforeBig</span><span class="o">--</span><span class="p">;</span>
+<span class="linenos">16</span><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">afterSmall</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">beforeBig</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">17</span><span class="w">         </span><span class="n">Exchange</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">afterSmall</span><span class="p">,</span><span class="w"> </span><span class="n">beforeBig</span><span class="p">);</span>
+<span class="linenos">18</span><span class="w">         </span><span class="n">afterSmall</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos">19</span><span class="w">         </span><span class="n">beforeBig</span><span class="o">--</span><span class="p">;</span>
+<span class="linenos">20</span><span class="w">      </span><span class="p">}</span>
+<span class="linenos">21</span><span class="w">   </span><span class="p">}</span><span class="w">  </span><span class="c1">// after loop: beforeBig &lt; afterSmall, and</span>
+<span class="linenos">22</span><span class="w">   </span><span class="c1">//      data[i] &lt;= pivot for i &lt;= beforeBig,</span>
+<span class="linenos">23</span><span class="w">   </span><span class="c1">//      data[i] == pivot for i if beforeBig &lt; i &lt; afterSmall,</span>
+<span class="linenos">24</span><span class="w">   </span><span class="c1">//      data[i] &gt;= pivot for i &gt;= afterSmall.</span>
+<span class="linenos">25</span><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lowI</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">beforeBig</span><span class="p">)</span><span class="w"> </span><span class="c1">// at least two elements</span>
+<span class="linenos">26</span><span class="w">      </span><span class="n">IntArrayQuickSort</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">lowI</span><span class="p">,</span><span class="w"> </span><span class="n">beforeBig</span><span class="p">);</span>
+<span class="linenos">27</span><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">afterSmall</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">highI</span><span class="p">)</span><span class="w"> </span><span class="c1">// at least two elements</span>
+<span class="linenos">28</span><span class="w">      </span><span class="n">IntArrayQuickSort</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">afterSmall</span><span class="p">,</span><span class="w"> </span><span class="n">highI</span><span class="p">);</span>
 <span class="linenos">29</span><span class="p">}</span>
 <span class="linenos">30</span>
-<span class="linenos">31</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArrayQuickSort</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
+<span class="linenos">31</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArrayQuickSort</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 <span class="linenos">32</span><span class="p">{</span>
-<span class="linenos">33</span>   <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
-<span class="linenos">34</span>      <span class="n">IntArrayQuickSort</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span> <span class="m">1</span><span class="p">);</span>
+<span class="linenos">33</span><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">34</span><span class="w">      </span><span class="n">IntArrayQuickSort</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="linenos">35</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -591,17 +969,17 @@ in the comments above the loop, lines 7-10.  This allows the conclusion
 after the loop in comment lines 21-24.</p>
 </section>
 <section id="random-data-generation">
-<span id="index-9"></span><h2>Random Data Generation<a class="headerlink" href="#random-data-generation" title="Permalink to this headline"></a></h2>
+<span id="index-9"></span><h2>Random Data Generation<a class="headerlink" href="#random-data-generation" title="Link to this heading">#</a></h2>
 <p>Now it is time to talk about how we are going to check the performance in
 a real-world situation. We’re going to start by modeling the situation when
 the data are in random order.</p>
 <p>The following code generates a random array:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">/// Fill data with pseudo-random data seeded by randomSeed.</span>
-<span class="linenos">2</span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">IntArrayGenerate</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">randomSeed</span><span class="p">)</span>
+<span class="linenos">2</span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">IntArrayGenerate</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">randomSeed</span><span class="p">)</span>
 <span class="linenos">3</span><span class="p">{</span>
-<span class="linenos">4</span>   <span class="n">Random</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span> <span class="p">(</span><span class="n">randomSeed</span><span class="p">);</span>
-<span class="linenos">5</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
-<span class="linenos">6</span>      <span class="n">data</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="n">Next</span> <span class="p">();</span>
+<span class="linenos">4</span><span class="w">   </span><span class="n">Random</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="w"> </span><span class="p">(</span><span class="n">randomSeed</span><span class="p">);</span>
+<span class="linenos">5</span><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="linenos">6</span><span class="w">      </span><span class="n">data</span><span class="w"> </span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="w"> </span><span class="p">();</span>
 <span class="linenos">7</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -619,13 +997,13 @@ Hence we specify the same seed each time.
 (We could also copy the data, but it is kind of a waste of memory.)</p></li>
 </ol>
 <p>This completes the discussion of the <code class="docutils literal notranslate"><span class="pre">Sorting</span></code> class in
-<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sorting/sorting.cs">sorting/sorting.cs</a>.</p>
+<a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sorting/sorting.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>.</p>
 </section>
 <section id="timing">
-<span id="index-10"></span><h2>Timing<a class="headerlink" href="#timing" title="Permalink to this headline"></a></h2>
+<span id="index-10"></span><h2>Timing<a class="headerlink" href="#timing" title="Link to this heading">#</a></h2>
 <p>Separate from the basic sorts is the idea of checking their performance.
 The rest of the code is in the driver class in
-<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sorting/sorting_demo.cs">sorting/sorting_demo.cs</a>.</p>
+<a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sorting/sorting_demo.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>.</p>
 <p>We need the ability to time the various sorting algorithms. Luckily, the
 .Net framework/library gives us a
 way of doing so through its <code class="docutils literal notranslate"><span class="pre">Stopwatch</span></code> class. This class supports methods that you
@@ -644,10 +1022,10 @@ The <code class="docutils literal notranslate"><span class="pre">Main()</span></
 of each of the sorting algorithms.
 As all of the tests follow the same pattern,
 we’re going to look at the basic variable setup first, and then one test.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>   <span class="kt">int</span> <span class="n">arraySize</span><span class="p">;</span>
-   <span class="kt">int</span> <span class="n">randomSeed</span><span class="p">;</span>
-   <span class="n">Stopwatch</span> <span class="n">watch</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Stopwatch</span> <span class="p">();</span>
-   <span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">arraySize</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">randomSeed</span><span class="p">;</span>
+<span class="w">   </span><span class="n">Stopwatch</span><span class="w"> </span><span class="n">watch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Stopwatch</span><span class="w"> </span><span class="p">();</span>
+<span class="w">   </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The variables declared here are to set up the apparatus:</p>
@@ -662,24 +1040,24 @@ good performance benchmarks.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">watch</span></code>: The stopwatch object we’re using to do the timings of all experiments.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>:  The array to be sorted.</p></li>
 </ul>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>         <span class="k">if</span> <span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">Length</span> <span class="p">&lt;</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">arraySize</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Please enter desired array size: &quot;</span><span class="p">);</span>
-            <span class="n">randomSeed</span> <span class="p">=</span> <span class="n">UI</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span>
-                            <span class="s">&quot;Please enter an initial random seed value: &quot;</span><span class="p">);</span>
-         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">arraySize</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span> <span class="p">(</span><span class="n">args</span> <span class="p">[</span><span class="m">0</span><span class="p">]);</span>
-            <span class="n">randomSeed</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span> <span class="p">(</span><span class="n">args</span> <span class="p">[</span><span class="m">1</span><span class="p">]);</span>
-         <span class="p">}</span>
-         <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">arraySize</span><span class="p">];</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">arraySize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UI</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span><span class="s">&quot;Please enter desired array size: &quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">randomSeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UI</span><span class="p">.</span><span class="n">PromptInt</span><span class="p">(</span>
+<span class="w">                            </span><span class="s">&quot;Please enter an initial random seed value: &quot;</span><span class="p">);</span>
+<span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">arraySize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">randomSeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">         </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="n">arraySize</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>This code is designed so we can accept the parameters <code class="docutils literal notranslate"><span class="pre">arraySize</span></code> and <code class="docutils literal notranslate"><span class="pre">randomSeed</span></code>
 from the command line or by prompting the user. When programmers design benchmarks, they
 often try to make it possible to run them with minimal user interaction. For the purposes
 of teaching, we wanted to make it possible to run it with or without command-line parameters.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>   <span class="n">TimeSetup</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">randomSeed</span><span class="p">,</span> <span class="n">watch</span><span class="p">);</span>
-   <span class="n">Sorting</span><span class="p">.</span><span class="n">IntArrayQuickSort</span><span class="p">(</span><span class="n">data</span><span class="p">);</span> <span class="c1">//this line varies by experiment</span>
-   <span class="n">TimeResult</span><span class="p">(</span><span class="s">&quot;Quick Sort&quot;</span><span class="p">,</span> <span class="n">watch</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="n">TimeSetup</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">randomSeed</span><span class="p">,</span><span class="w"> </span><span class="n">watch</span><span class="p">);</span>
+<span class="w">   </span><span class="n">Sorting</span><span class="p">.</span><span class="n">IntArrayQuickSort</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"> </span><span class="c1">//this line varies by experiment</span>
+<span class="w">   </span><span class="n">TimeResult</span><span class="p">(</span><span class="s">&quot;Quick Sort&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">watch</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This code fragment is one of the tests in <code class="docutils literal notranslate"><span class="pre">Main</span></code>.  All of the tests set up
@@ -687,20 +1065,20 @@ for timing first, run the desired sorting algorithm (bubble sort in this case),
 and report the timing results.  Since the timing setup and reporting is
 always done the same way, they actions are placed in helping methods:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Set up data and watch for sort timing</span>
-<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeSetup</span> <span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">randomSeed</span><span class="p">,</span>
-                              <span class="n">Stopwatch</span> <span class="n">watch</span><span class="p">)</span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TimeSetup</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">randomSeed</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">Stopwatch</span><span class="w"> </span><span class="n">watch</span><span class="p">)</span>
 <span class="p">{</span>
-   <span class="n">Sorting</span><span class="p">.</span><span class="n">IntArrayGenerate</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">randomSeed</span><span class="p">);</span>
-   <span class="n">watch</span><span class="p">.</span><span class="n">Reset</span><span class="p">();</span>
-   <span class="n">watch</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
+<span class="w">   </span><span class="n">Sorting</span><span class="p">.</span><span class="n">IntArrayGenerate</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">randomSeed</span><span class="p">);</span>
+<span class="w">   </span><span class="n">watch</span><span class="p">.</span><span class="n">Reset</span><span class="p">();</span>
+<span class="w">   </span><span class="n">watch</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
 <span class="p">}</span>
 
 <span class="c1">/// Report sort timing results from watch</span>
-<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeResult</span> <span class="p">(</span><span class="kt">string</span> <span class="n">sortType</span><span class="p">,</span> <span class="n">Stopwatch</span> <span class="n">watch</span><span class="p">)</span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TimeResult</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sortType</span><span class="p">,</span><span class="w"> </span><span class="n">Stopwatch</span><span class="w"> </span><span class="n">watch</span><span class="p">)</span>
 <span class="p">{</span>
-   <span class="n">watch</span><span class="p">.</span><span class="n">Stop</span> <span class="p">();</span>
-   <span class="kt">double</span> <span class="n">elapsedTime</span> <span class="p">=</span> <span class="n">watch</span><span class="p">.</span><span class="n">ElapsedMilliseconds</span><span class="p">/</span><span class="m">1000.0</span><span class="p">;</span>
-   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="n">sortType</span> <span class="p">+</span> <span class="s">&quot;: {0:F3}&quot;</span><span class="p">,</span> <span class="n">elapsedTime</span><span class="p">);</span>
+<span class="w">   </span><span class="n">watch</span><span class="p">.</span><span class="n">Stop</span><span class="w"> </span><span class="p">();</span>
+<span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">elapsedTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">watch</span><span class="p">.</span><span class="n">ElapsedMilliseconds</span><span class="o">/</span><span class="mf">1000.0</span><span class="p">;</span>
+<span class="w">   </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="w"> </span><span class="p">(</span><span class="n">sortType</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: {0:F3}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">elapsedTime</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -718,10 +1096,10 @@ is an integer (long) number of
 milliseconds (thousandths of a second).</p></li>
 <li><p>Prints the performance results in seconds.</p></li>
 </ol>
-<p>You can see all of the tests in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sorting/sorting_demo.cs">sorting/sorting_demo.cs</a>.</p>
+<p>You can see all of the tests in <a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/sorting/sorting_demo.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>.</p>
 </section>
 <section id="running-the-code">
-<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Permalink to this headline"></a></h2>
+<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Link to this heading">#</a></h2>
 <p>Here’s the output of a trial run on one of our computers. The results will vary
 depending on your computer’s CPU, among other factors.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>bin/Debug$ mono Sorting.exe 1000 12
@@ -786,54 +1164,141 @@ and is still quite fast.  See
 the <a class="reference internal" href="#uclibc" id="id4"><span>[uClibc]</span></a> library makes use of Shell sort in its <code class="docutils literal notranslate"><span class="pre">qsort()</span></code> implementation,
 rather than implementing the library sort with the more common quicksort.</p></li>
 </ul>
-<dl class="citation">
-<dt class="label" id="wirthadp"><span class="brackets"><a class="fn-backref" href="#id1">WirthADP</a></span></dt>
-<dd><p>Niklaus Wirth, Algorithms + Data Structures = Programs, Prentice Hall, 1976.</p>
-</dd>
-<dt class="label" id="wikipediashellsort"><span class="brackets"><a class="fn-backref" href="#id3">WikipediaShellSort</a></span></dt>
-<dd><p><a class="reference external" href="http://en.wikipedia.org/wiki/Shellsort">http://en.wikipedia.org/wiki/Shellsort</a></p>
-</dd>
-<dt class="label" id="uclibc"><span class="brackets"><a class="fn-backref" href="#id4">uClibc</a></span></dt>
-<dd><p><a class="reference external" href="http://en.wikipedia.org/wiki/UClibc">http://en.wikipedia.org/wiki/UClibc</a></p>
-</dd>
-<dt class="label" id="tcsortingjava"><span class="brackets"><a class="fn-backref" href="#id2">TCSortingJava</a></span></dt>
-<dd><p><a class="reference external" href="http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm">http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm</a></p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="wirthadp" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">WirthADP</a><span class="fn-bracket">]</span></span>
+<p>Niklaus Wirth, Algorithms + Data Structures = Programs, Prentice Hall, 1976.</p>
+</div>
+<div class="citation" id="wikipediashellsort" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">WikipediaShellSort</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Shellsort">http://en.wikipedia.org/wiki/Shellsort</a></p>
+</div>
+<div class="citation" id="uclibc" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">uClibc</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/UClibc">http://en.wikipedia.org/wiki/UClibc</a></p>
+</div>
+<div class="citation" id="tcsortingjava" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">TCSortingJava</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm">http://tools-of-computing.com/tc/CS/Sorts/SortAlgorithms.htm</a></p>
+</div>
+</div>
 </section>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="searching.html" class="btn btn-neutral float-left" title="Linear Searching" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="binarysearching.html" class="btn btn-neutral float-right" title="Binary Searching" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
-      <span class="lastupdated">Last updated on 30-November-2021 00:26:56.
-      </span></p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="searching.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Linear Searching</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="binarysearching.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Binary Searching</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchanging-array-elements">Exchanging Array Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bubble-sort">Bubble Sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-sort">Selection Sort</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shuffle-exercise">Shuffle Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-sort">Insertion Sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-sort">Shell Sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quicksort-a-k-a-partition-sort">Quicksort a.k.a. Partition Sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-data-generation">Random Data Generation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timing">Timing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code">Running the Code</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Author name not set
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 02-May-2026 16:33:37.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

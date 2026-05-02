@@ -1,105 +1,474 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>More Conditional Expressions &mdash; Introduction to Computer Science in C# 30 Nov 2021 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>More Conditional Expressions &#8212; Introduction to Computer Science in C# 02 May 2026 documentation</title>
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=72beec40"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'decisions/comparisonops';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Multiple Tests and if-else Statements" href="ifelsechained.html" />
-    <link rel="prev" title="if-else Statements" href="ifelse.html" /> 
-</head>
+    <link rel="prev" title="if-else Statements" href="ifelse.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="02 May 2026" />
+    <meta name="docbuild:last-update" content="02-May-2026 16:33:37"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #922247" >
-            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
-          </a>
-              <div class="version">
-                30 Nov 2021
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="decisions.html">Decisions</a><ul class="current">
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Introduction to Computer Science in C# 02 May 2026 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction to Computer Science in C#
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../context/context.html">Context</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/data.html">C# Data and Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="decisions.html">Decisions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="conditions.html">Conditions I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifstatements.html">Simple <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelse.html"><code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">More Conditional Expressions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">More Conditional Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifelsechained.html">Multiple Tests and <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifpitfalls.html">If-statement Pitfalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compoundconditions.html">Compound Boolean Expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifnested.html">Nested <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewdecisions.html">Chapter Review Questions</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../while/while.html">While Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">Interactive <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../for/for.html">For Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">Examples With <code class="docutils literal notranslate"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">Directory Class</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../arrays/arrays.html">Arrays</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lists/lists.html">Lists</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">.Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">Appendix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">Acknowledgments</a></li>
+</ul>
+</details></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Introduction to Computer Science in C#</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content style-external-links">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="decisions.html">Decisions</a> &raquo;</li>
-      <li>More Conditional Expressions</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/decisions/comparisonops.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp/issues/new?title=Issue%20on%20page%20%2Fdecisions/comparisonops.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>More Conditional Expressions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wages-play-computer-exercise">Wages Play Computer Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graduate-exercise">Graduate Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roundoff-exercise">Roundoff Exercise</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="more-conditional-expressions">
-<span id="index-0"></span><span id="id1"></span><h1>More Conditional Expressions<a class="headerlink" href="#more-conditional-expressions" title="Permalink to this headline"></a></h1>
+<span id="index-0"></span><span id="id1"></span><h1>More Conditional Expressions<a class="headerlink" href="#more-conditional-expressions" title="Link to this heading">#</a></h1>
 <p>All the usual arithmetic comparisons may be made in C#, but many do not
 use standard mathematical symbolism, mostly for lack of proper keys
 on a standard keyboard.
@@ -108,12 +477,7 @@ you need to be online and may need an up-to-date browser
 to see these mathematical symbols be displayed correctly,
 as well as the mathematical expressions later in the text.  The pdf version
 of the book automatically shows all the right math symbolism online or offline.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 43%" />
-<col style="width: 29%" />
-<col style="width: 29%" />
-</colgroup>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Meaning</p></th>
 <th class="head"><p>Math Symbol</p></th>
@@ -147,6 +511,7 @@ of the book automatically shows all the right math symbolism online or offline.<
 </tr>
 </tbody>
 </table>
+</div>
 <p>There should not be space between the two-symbol C#
 substitutes.</p>
 <p>Notice that the obvious choice for <em>equals</em>, a single equal sign,
@@ -165,21 +530,21 @@ and characters.  Strings can also be compared, most often for
 equality (==) or inequality (!=), though they also have a defined order,
 so you can use <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, for instance.</p>
 <p>Predict the results and try each line in csharp:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="n">x</span><span class="p">;</span>
-<span class="n">x</span> <span class="p">==</span> <span class="m">5</span><span class="p">;</span>
-<span class="n">x</span> <span class="p">==</span> <span class="m">6</span><span class="p">;</span>
+<span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
 <span class="n">x</span><span class="p">;</span>
-<span class="n">x</span> <span class="p">!=</span> <span class="m">6</span><span class="p">;</span>
-<span class="n">x</span> <span class="p">=</span> <span class="m">6</span><span class="p">;</span>
-<span class="m">6</span> <span class="p">==</span> <span class="n">x</span><span class="p">;</span>
-<span class="m">6</span> <span class="p">!=</span> <span class="n">x</span><span class="p">;</span>
-<span class="s">&quot;hi&quot;</span> <span class="p">==</span> <span class="s">&quot;h&quot;</span> <span class="p">+</span> <span class="s">&quot;i&quot;</span><span class="p">;</span>
-<span class="s">&quot;HI&quot;</span> <span class="p">!=</span> <span class="s">&quot;hi&quot;</span><span class="p">;</span>
-<span class="kt">string</span> <span class="n">s</span> <span class="p">=</span> <span class="s">&quot;Hello&quot;</span><span class="p">;</span>
-<span class="kt">string</span> <span class="n">t</span> <span class="p">=</span> <span class="s">&quot;HELLO&quot;</span><span class="p">;</span>
-<span class="n">s</span> <span class="p">==</span> <span class="n">t</span><span class="p">;</span>
-<span class="n">s</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">()</span> <span class="p">==</span> <span class="n">t</span><span class="p">;</span>
+<span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="mi">6</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="mi">6</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="s">&quot;hi&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;h&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;i&quot;</span><span class="p">;</span>
+<span class="s">&quot;HI&quot;</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;hi&quot;</span><span class="p">;</span>
+<span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<span class="kt">string</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HELLO&quot;</span><span class="p">;</span>
+<span class="n">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="n">s</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>An equality check does not make an assignment. Strings equality tests are case
@@ -198,7 +563,7 @@ place for a function enclosing the calculation.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Return the total weekly wages for a worker working</span>
 <span class="c1">/// totalHours with a given regular hourlyWage.</span>
 <span class="c1">/// Include overtime for hours over 40.</span>
-<span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
+<span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalHours</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">hourlyWage</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The problem clearly indicates two cases: when no more than 40
@@ -206,47 +571,47 @@ hours are worked or when more than 40 hours are worked. In case
 more than 40 hours are worked, it is convenient to introduce a
 variable overtimeHours. You are encouraged to think about a
 solution before going on and examining mine.</p>
-<p>You can try running the complete example program, <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/wages1/wages1.cs">wages1/wages1.cs</a>,
+<p>You can try running the complete example program, <a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/wages1/wages1.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>,
 also shown below.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-<span class="linenos"> 2</span><span class="k">namespace</span> <span class="nn">IntroCS</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="k">namespace</span><span class="w"> </span><span class="nn">IntroCS</span>
 <span class="linenos"> 3</span><span class="p">{</span>
-<span class="linenos"> 4</span>   <span class="k">class</span> <span class="nc">Wages</span>
-<span class="linenos"> 5</span>   <span class="p">{</span>  <span class="c1">//heading chunk</span>
-<span class="linenos"> 6</span>      <span class="c1">/// Return the total weekly wages for a worker working</span>
-<span class="linenos"> 7</span>      <span class="c1">/// totalHours with a given regular hourlyWage.</span>
-<span class="linenos"> 8</span>      <span class="c1">/// Include overtime for hours over 40.</span>
-<span class="linenos"> 9</span>      <span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
-<span class="linenos">10</span>      <span class="p">{</span>
-<span class="linenos">11</span>         <span class="kt">double</span> <span class="n">totalWages</span><span class="p">;</span>
-<span class="linenos">12</span>         <span class="k">if</span> <span class="p">(</span><span class="n">totalHours</span> <span class="p">&lt;=</span> <span class="m">40</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">13</span>            <span class="n">totalWages</span> <span class="p">=</span> <span class="n">hourlyWage</span><span class="p">*</span><span class="n">totalHours</span><span class="p">;</span>
-<span class="linenos">14</span>         <span class="p">}</span>
-<span class="linenos">15</span>         <span class="k">else</span> <span class="p">{</span>
-<span class="linenos">16</span>            <span class="kt">double</span> <span class="n">overtime</span> <span class="p">=</span> <span class="n">totalHours</span> <span class="p">-</span> <span class="m">40</span><span class="p">;</span>
-<span class="linenos">17</span>            <span class="n">totalWages</span> <span class="p">=</span> <span class="n">hourlyWage</span><span class="p">*</span><span class="m">40</span> <span class="p">+</span> <span class="p">(</span><span class="m">1.5</span><span class="p">*</span><span class="n">hourlyWage</span><span class="p">)*</span><span class="n">overtime</span><span class="p">;</span>
-<span class="linenos">18</span>         <span class="p">}</span>
-<span class="linenos">19</span>         <span class="k">return</span> <span class="n">totalWages</span><span class="p">;</span>
-<span class="linenos">20</span>      <span class="p">}</span>
+<span class="linenos"> 4</span><span class="w">   </span><span class="k">class</span><span class="w"> </span><span class="nc">Wages</span>
+<span class="linenos"> 5</span><span class="w">   </span><span class="p">{</span><span class="w">  </span><span class="c1">//heading chunk</span>
+<span class="linenos"> 6</span><span class="w">      </span><span class="c1">/// Return the total weekly wages for a worker working</span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="c1">/// totalHours with a given regular hourlyWage.</span>
+<span class="linenos"> 8</span><span class="w">      </span><span class="c1">/// Include overtime for hours over 40.</span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalHours</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">hourlyWage</span><span class="p">)</span>
+<span class="linenos">10</span><span class="w">      </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w">         </span><span class="kt">double</span><span class="w"> </span><span class="n">totalWages</span><span class="p">;</span>
+<span class="linenos">12</span><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">totalHours</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">13</span><span class="w">            </span><span class="n">totalWages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hourlyWage</span><span class="o">*</span><span class="n">totalHours</span><span class="p">;</span>
+<span class="linenos">14</span><span class="w">         </span><span class="p">}</span>
+<span class="linenos">15</span><span class="w">         </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">16</span><span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">overtime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalHours</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
+<span class="linenos">17</span><span class="w">            </span><span class="n">totalWages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hourlyWage</span><span class="o">*</span><span class="mi">40</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mf">1.5</span><span class="o">*</span><span class="n">hourlyWage</span><span class="p">)</span><span class="o">*</span><span class="n">overtime</span><span class="p">;</span>
+<span class="linenos">18</span><span class="w">         </span><span class="p">}</span>
+<span class="linenos">19</span><span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="n">totalWages</span><span class="p">;</span>
+<span class="linenos">20</span><span class="w">      </span><span class="p">}</span>
 <span class="linenos">21</span>
-<span class="linenos">22</span>      <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-<span class="linenos">23</span>      <span class="p">{</span>
-<span class="linenos">24</span>         <span class="kt">double</span> <span class="n">hours</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;Enter hours worked: &quot;</span><span class="p">);</span>
-<span class="linenos">25</span>         <span class="kt">double</span> <span class="n">wage</span> <span class="p">=</span> <span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;Enter dollars paid per hour: &quot;</span><span class="p">);</span>
-<span class="linenos">26</span>         <span class="kt">double</span> <span class="n">total</span> <span class="p">=</span> <span class="n">CalcWeeklyWages</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">wage</span><span class="p">);</span>  <span class="c1">//before chunk2</span>
-<span class="linenos">27</span>         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span>
-<span class="linenos">28</span>            <span class="s">&quot;Wages for {0} hours at ${1:F2} per hour are ${2:F2}.&quot;</span><span class="p">,</span>
-<span class="linenos">29</span>            <span class="n">hours</span><span class="p">,</span> <span class="n">wage</span><span class="p">,</span> <span class="n">total</span><span class="p">);</span>
-<span class="linenos">30</span>      <span class="p">}</span>                                                <span class="c1">//after chunk2</span>
-<span class="linenos">31</span>   <span class="p">}</span>
+<span class="linenos">22</span><span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="linenos">23</span><span class="w">      </span><span class="p">{</span>
+<span class="linenos">24</span><span class="w">         </span><span class="kt">double</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;Enter hours worked: &quot;</span><span class="p">);</span>
+<span class="linenos">25</span><span class="w">         </span><span class="kt">double</span><span class="w"> </span><span class="n">wage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UIF</span><span class="p">.</span><span class="n">PromptDouble</span><span class="p">(</span><span class="s">&quot;Enter dollars paid per hour: &quot;</span><span class="p">);</span>
+<span class="linenos">26</span><span class="w">         </span><span class="kt">double</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CalcWeeklyWages</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span><span class="w"> </span><span class="n">wage</span><span class="p">);</span><span class="w">  </span><span class="c1">//before chunk2</span>
+<span class="linenos">27</span><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span>
+<span class="linenos">28</span><span class="w">            </span><span class="s">&quot;Wages for {0} hours at ${1:F2} per hour are ${2:F2}.&quot;</span><span class="p">,</span>
+<span class="linenos">29</span><span class="w">            </span><span class="n">hours</span><span class="p">,</span><span class="w"> </span><span class="n">wage</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+<span class="linenos">30</span><span class="w">      </span><span class="p">}</span><span class="w">                                                </span><span class="c1">//after chunk2</span>
+<span class="linenos">31</span><span class="w">   </span><span class="p">}</span>
 <span class="linenos">32</span><span class="p">}</span>
 </pre></div>
 </div>
 <p id="index-1">This program also introduces new notation for
 displaying decimal numbers:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span>
-   <span class="s">&quot;Wages for {0} hours at ${1:F2} per hour are ${2:F2}.&quot;</span><span class="p">,</span>
-   <span class="n">hours</span><span class="p">,</span> <span class="n">wage</span><span class="p">,</span> <span class="n">total</span><span class="p">);</span>
+<span class="w">   </span><span class="s">&quot;Wages for {0} hours at ${1:F2} per hour are ${2:F2}.&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="n">hours</span><span class="p">,</span><span class="w"> </span><span class="n">wage</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In the format string are <code class="docutils literal notranslate"><span class="pre">{1:F2}</span></code> and <code class="docutils literal notranslate"><span class="pre">{2:F2}</span></code>:  Inside
@@ -272,13 +637,7 @@ The big point here is that this order of execution is <em>not</em> textual order
 If we are just following a call to <code class="docutils literal notranslate"><span class="pre">CalcWeeklyWages</span></code>, we start at
 line 9, and we will assume for example that it is called with
 <code class="docutils literal notranslate"><span class="pre">totalHour</span></code> as 50 and <code class="docutils literal notranslate"><span class="pre">hourlyWage</span></code> as 14.00:</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 16%" />
-<col style="width: 13%" />
-<col style="width: 66%" />
-</colgroup>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Line</p></th>
 <th class="head"><p>totalWages</p></th>
@@ -314,16 +673,11 @@ line 9, and we will assume for example that it is called with
 </tr>
 </tbody>
 </table>
+</div>
 <p>We <em>skipped</em> the executable line 13 in the if-true clause.</p>
 <p>Instead suppose the function is called with
 <code class="docutils literal notranslate"><span class="pre">totalHour</span></code> as 30 and <code class="docutils literal notranslate"><span class="pre">hourlyWage</span></code> as 14.00:</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 16%" />
-<col style="width: 13%" />
-<col style="width: 66%" />
-</colgroup>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Line</p></th>
 <th class="head"><p>totalWages</p></th>
@@ -354,40 +708,35 @@ line 9, and we will assume for example that it is called with
 </tr>
 </tbody>
 </table>
+</div>
 <p>We skipped the executable lines 16-17
 in the if-false clause after <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
 <p>Below is an equivalent alternative version of
-<code class="docutils literal notranslate"><span class="pre">CalcWeeklyWages</span></code>, used in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/wages2/wages2.cs">wages2/wages2.cs</a>. It uses just one
+<code class="docutils literal notranslate"><span class="pre">CalcWeeklyWages</span></code>, used in <a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/wages2/wages2.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>. It uses just one
 general calculation formula and sets the parameters for the formula
 in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. There are generally a number of ways you might
 solve the same problem!</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">static</span> <span class="kt">double</span> <span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span> <span class="n">totalHours</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hourlyWage</span><span class="p">)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalcWeeklyWages</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalHours</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">hourlyWage</span><span class="p">)</span>
 <span class="linenos"> 2</span><span class="p">{</span>
-<span class="linenos"> 3</span>   <span class="kt">double</span> <span class="n">regularHours</span><span class="p">,</span> <span class="n">overtime</span><span class="p">;</span>
-<span class="linenos"> 4</span>   <span class="k">if</span> <span class="p">(</span><span class="n">totalHours</span> <span class="p">&lt;=</span> <span class="m">40</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos"> 5</span>      <span class="n">regularHours</span> <span class="p">=</span> <span class="n">totalHours</span><span class="p">;</span>
-<span class="linenos"> 6</span>      <span class="n">overtime</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-<span class="linenos"> 7</span>   <span class="p">}</span>
-<span class="linenos"> 8</span>   <span class="k">else</span> <span class="p">{</span>
-<span class="linenos"> 9</span>      <span class="n">regularHours</span> <span class="p">=</span> <span class="m">40</span><span class="p">;</span>
-<span class="linenos">10</span>      <span class="n">overtime</span> <span class="p">=</span> <span class="n">totalHours</span> <span class="p">-</span> <span class="m">40</span><span class="p">;</span>
-<span class="linenos">11</span>   <span class="p">}</span>
-<span class="linenos">12</span>   <span class="k">return</span> <span class="n">hourlyWage</span><span class="p">*</span><span class="n">regularHours</span> <span class="p">+</span> <span class="p">(</span><span class="m">1.5</span><span class="p">*</span><span class="n">hourlyWage</span><span class="p">)*</span><span class="n">overtime</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">regularHours</span><span class="p">,</span><span class="w"> </span><span class="n">overtime</span><span class="p">;</span>
+<span class="linenos"> 4</span><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">totalHours</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">      </span><span class="n">regularHours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalHours</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="w">      </span><span class="n">overtime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos"> 7</span><span class="w">   </span><span class="p">}</span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="n">regularHours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
+<span class="linenos">10</span><span class="w">      </span><span class="n">overtime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalHours</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
+<span class="linenos">11</span><span class="w">   </span><span class="p">}</span>
+<span class="linenos">12</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">hourlyWage</span><span class="o">*</span><span class="n">regularHours</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mf">1.5</span><span class="o">*</span><span class="n">hourlyWage</span><span class="p">)</span><span class="o">*</span><span class="n">overtime</span><span class="p">;</span>
 <span class="linenos">13</span><span class="p">}</span>
 </pre></div>
 </div>
 <section id="wages-play-computer-exercise">
-<h2>Wages Play Computer Exercise<a class="headerlink" href="#wages-play-computer-exercise" title="Permalink to this headline"></a></h2>
+<h2>Wages Play Computer Exercise<a class="headerlink" href="#wages-play-computer-exercise" title="Link to this heading">#</a></h2>
 <p>We played computer on the original version of <code class="docutils literal notranslate"><span class="pre">CalcWeeklyWages</span></code>.  Now
-follow the second version above, from <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/wages2/wages2.cs">wages2/wages2.cs</a>.  Try it
+follow the second version above, from <a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/wages2/wages2.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>.  Try it
 with the same two sets of formal parameter values.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 17%" />
-<col style="width: 11%" />
-<col style="width: 66%" />
-</colgroup>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Line</p></th>
 <th class="head"><p>regularHours</p></th>
@@ -423,13 +772,8 @@ with the same two sets of formal parameter values.</p>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 17%" />
-<col style="width: 11%" />
-<col style="width: 66%" />
-</colgroup>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Line</p></th>
 <th class="head"><p>regularHours</p></th>
@@ -465,16 +809,17 @@ with the same two sets of formal parameter values.</p>
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="graduate-exercise">
-<span id="graduateex"></span><h2>Graduate Exercise<a class="headerlink" href="#graduate-exercise" title="Permalink to this headline"></a></h2>
+<span id="graduateex"></span><h2>Graduate Exercise<a class="headerlink" href="#graduate-exercise" title="Link to this heading">#</a></h2>
 <p>Write a program, <code class="docutils literal notranslate"><span class="pre">graduate.cs</span></code>, that prompts students for how
 many credits they have. Print whether of not they have enough
 credits for graduation. (At Loyola University Chicago 120 credits
 are needed for graduation.)</p>
 </section>
 <section id="roundoff-exercise">
-<h2>Roundoff Exercise<a class="headerlink" href="#roundoff-exercise" title="Permalink to this headline"></a></h2>
+<h2>Roundoff Exercise<a class="headerlink" href="#roundoff-exercise" title="Link to this heading">#</a></h2>
 <p>In csharp declare and initialize  non-zero <code class="docutils literal notranslate"><span class="pre">double</span></code> variables
 <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.  Experiment so, according to C# (and csharp):  <code class="docutils literal notranslate"><span class="pre">x+y</span> <span class="pre">==</span> <span class="pre">x</span></code>.
 In other words, while <code class="docutils literal notranslate"><span class="pre">y</span></code> is not 0, adding it to  <code class="docutils literal notranslate"><span class="pre">x</span></code> does not
@@ -486,36 +831,110 @@ after it.)</p>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ifelse.html" class="btn btn-neutral float-left" title="if-else Statements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ifelsechained.html" class="btn btn-neutral float-right" title="Multiple Tests and if-else Statements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
-      <span class="lastupdated">Last updated on 30-November-2021 00:26:56.
-      </span></p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ifelse.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="ifelsechained.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Multiple Tests and <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wages-play-computer-exercise">Wages Play Computer Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graduate-exercise">Graduate Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roundoff-exercise">Roundoff Exercise</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Author name not set
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 02-May-2026 16:33:37.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

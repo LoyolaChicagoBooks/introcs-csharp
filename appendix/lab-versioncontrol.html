@@ -1,64 +1,299 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lab: Version Control &mdash; Introduction to Computer Science in C# 30 Nov 2021 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lab: Version Control &#8212; Introduction to Computer Science in C# 02 May 2026 documentation</title>
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=72beec40"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/lab-versioncontrol';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Mercurial and Teamwork" href="hgteamwork.html" />
-    <link rel="prev" title="Group Project" href="project.html" /> 
-</head>
+    <link rel="prev" title="Group Project" href="project.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="02 May 2026" />
+    <meta name="docbuild:last-update" content="02-May-2026 16:33:37"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #922247" >
-            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
-          </a>
-              <div class="version">
-                30 Nov 2021
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a></li>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Introduction to Computer Science in C# 02 May 2026 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction to Computer Science in C#
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../context/context.html">Context</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/data.html">C# Data and Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../decisions/decisions.html">Decisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">Simple <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html"><code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">Multiple Tests and <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">Nested <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../while/while.html">While Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">Interactive <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../for/for.html">For Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">Examples With <code class="docutils literal notranslate"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">Directory Class</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../arrays/arrays.html">Arrays</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lists/lists.html">Lists</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">.Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../classes/classes.html">Classes and Object-Oriented Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/a-first-class.html">A First Example of Class Instances: Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classexamples.html">Class Instance Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/rational.html">The Rational Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/planning_classes.html">Planning A Class Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/classes-and-structs.html">Classes And Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/overload-op.html">Defining Operators (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/reviewclasses.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="appendix.html">Appendix</a><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="appendix.html">Appendix</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="monotools.html">Development Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xamarinstudio.html">Xamarin Studio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cmdline.html">Command Line Introduction</a></li>
@@ -68,40 +303,185 @@
 <li class="toctree-l2"><a class="reference internal" href="hw-gradefiles.html">Homework: Grade File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hw-booklist.html">Homework: Book List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="project.html">Group Project</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Lab: Version Control</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lab: Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hgteamwork.html">Mercurial and Teamwork</a></li>
 <li class="toctree-l2"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Introduction to Computer Science in C#</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content style-external-links">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="appendix.html">Appendix</a> &raquo;</li>
-      <li>Lab: Version Control</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/appendix/lab-versioncontrol.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp/issues/new?title=Issue%20on%20page%20%2Fappendix/lab-versioncontrol.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lab: Version Control</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-we-proceed">Before We Proceed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-bitbucket-org-account">Create Bitbucket.org account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-repository-at-bitbucket">Create repository at Bitbucket</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-your-mercurial-commit-username">Set up your Mercurial commit username</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-a-repository-from-bitbucket">Clone a repository from Bitbucket</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-an-hgignore-and-hello-world-file-to-your-project">Add an .hgignore and Hello World file to your project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-initial-structure-for-your-project">Create an initial structure for your project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-test-content">Create and Test Content</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-that-your-stuff-really-made-it-to-bitbucket-org">Verify that your stuff really made it to bitbucket.org</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-between-lab-and-home-or-home-and-lab">Working between lab and home (or home and lab)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-our-examples">Getting our examples</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="lab-version-control">
-<span id="lab-versioncontrol"></span><span id="index-0"></span><h1>Lab: Version Control<a class="headerlink" href="#lab-version-control" title="Permalink to this headline"></a></h1>
+<span id="lab-versioncontrol"></span><span id="index-0"></span><h1>Lab: Version Control<a class="headerlink" href="#lab-version-control" title="Link to this heading">#</a></h1>
 <p>Modern software development requires an early introduction source code
 management, also known as version control. While source code
 management is frequently touted as being beneficial to a <em>project
@@ -138,7 +518,7 @@ site, you need to <em>pull</em> data from the central repository, and then expli
 <em>update</em> your local repository, to incorporate the new data from the central
 repository.</p>
 <section id="goals">
-<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline"></a></h2>
+<h2>Goals<a class="headerlink" href="#goals" title="Link to this heading">#</a></h2>
 <p>In this lab, we’re going to learn:</p>
 <ol class="arabic simple">
 <li><p>How to create a source code repository.</p></li>
@@ -150,7 +530,7 @@ repository.</p>
 to use Mercurial).</p></li>
 </ol>
 <section id="before-we-proceed">
-<h3>Before We Proceed<a class="headerlink" href="#before-we-proceed" title="Permalink to this headline"></a></h3>
+<h3>Before We Proceed<a class="headerlink" href="#before-we-proceed" title="Link to this heading">#</a></h3>
 <p>You should know that this lab is designed to be repeated as many times
 as needed. You can create as many repositories as you wish, subject to
 the limitations at Bitbucket.org, and may want to create different
@@ -164,9 +544,9 @@ you to start using version control right away for your own projects.</p>
 </section>
 </section>
 <section id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline"></a></h2>
+<h2>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h2>
 <section id="create-bitbucket-org-account">
-<span id="index-1"></span><h3>Create Bitbucket.org account<a class="headerlink" href="#create-bitbucket-org-account" title="Permalink to this headline"></a></h3>
+<span id="index-1"></span><h3>Create Bitbucket.org account<a class="headerlink" href="#create-bitbucket-org-account" title="Link to this heading">#</a></h3>
 <p>We’re going to begin by creating a remote repository for our work. The
 advantage of doing so is that we get a <em>hosted</em> repository that we can
 use to push/pull our work. (Unlike a dangerous stunt, you <em>want</em> to be able
@@ -179,11 +559,12 @@ for up to 5 users. This is all you’ll need for your work in this course.</p>
 are good to go for the rest of this lab!</p>
 </section>
 <section id="create-repository-at-bitbucket">
-<h3>Create repository at Bitbucket<a class="headerlink" href="#create-repository-at-bitbucket" title="Permalink to this headline"></a></h3>
+<h3>Create repository at Bitbucket<a class="headerlink" href="#create-repository-at-bitbucket" title="Link to this heading">#</a></h3>
 <p>Now we’ll create a first repository at Bitbucket.org.</p>
 <p>Go to <code class="docutils literal notranslate"><span class="pre">Repositories</span> <span class="pre">-&gt;</span> <span class="pre">Create</span> <span class="pre">Repository</span></code> (the option is at the bottom
 of the list of menu options). You’ll see this screen:</p>
-<a class="reference internal image-reference" href="../_images/hgcreaterepository.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgcreaterepository.png" style="width: 350pt;" /></a>
+<a class="reference internal image-reference" href="../_images/hgcreaterepository.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgcreaterepository.png" style="width: 350pt;" />
+</a>
 <p>You’ll need to fill in or select the following options:</p>
 <ul class="simple">
 <li><p>Name: A short name for your project. You are encouraged to keep this
@@ -207,10 +588,11 @@ in the description.</p></li>
 <p>So just go ahead and create your first repository. You can always
 create more of them later.</p>
 <p>Here is an example of a filled out form:</p>
-<a class="reference internal image-reference" href="../_images/hgcreaterepository2.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgcreaterepository2.png" style="width: 350pt;" /></a>
+<a class="reference internal image-reference" href="../_images/hgcreaterepository2.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgcreaterepository2.png" style="width: 350pt;" />
+</a>
 </section>
 <section id="set-up-your-mercurial-commit-username">
-<h3>Set up your Mercurial commit username<a class="headerlink" href="#set-up-your-mercurial-commit-username" title="Permalink to this headline"></a></h3>
+<h3>Set up your Mercurial commit username<a class="headerlink" href="#set-up-your-mercurial-commit-username" title="Link to this heading">#</a></h3>
 <p>If you in a place where you have a permanent home directory,
 like on your machine or in the Linux Lab,
 create a file named <code class="docutils literal notranslate"><span class="pre">.hgrc</span></code> in <em>your home directory</em>. Your home directory is
@@ -219,7 +601,7 @@ inside your repository.
 This file must contain the following lines, with the part after the equal sign
 personalized for you:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[ui]</span>
-<span class="n">username</span> <span class="p">=</span> <span class="n">John</span> <span class="n">Doe</span> <span class="p">&lt;</span><span class="n">johndoe@johndoe</span><span class="p">.</span><span class="n">com</span><span class="p">&gt;</span>
+<span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">John</span><span class="w"> </span><span class="n">Doe</span><span class="w"> </span><span class="o">&lt;</span><span class="n">johndoe@johndoe</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>It is a convention to give a name and email address, though
@@ -243,7 +625,7 @@ file is indeed present in your home directory. If it is in any other folder, Mer
 </div>
 </section>
 <section id="clone-a-repository-from-bitbucket">
-<h3>Clone a repository from Bitbucket<a class="headerlink" href="#clone-a-repository-from-bitbucket" title="Permalink to this headline"></a></h3>
+<h3>Clone a repository from Bitbucket<a class="headerlink" href="#clone-a-repository-from-bitbucket" title="Link to this heading">#</a></h3>
 <p>Open a terminal or DOS command shell.</p>
 <p>On Windows, the Mono shell is not appropriate. You can get a regular DOS
 command shell by clicking the start menu and typing <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and into the text box
@@ -269,26 +651,27 @@ the list of repositories (the dropdown) as <code class="docutils literal notrans
 <p>So you can now go ahead by selecting this newly created repository
 from the list of repositories.  If all goes well, you should see the
 following screen:</p>
-<a class="reference internal image-reference" href="../_images/hgrepositorysummary.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgrepositorysummary.png" style="height: 300pt;" /></a>
+<a class="reference internal image-reference" href="../_images/hgrepositorysummary.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/hgrepositorysummary.png" style="height: 300pt;" />
+</a>
 <p>Somewhere on this screen, you should see this text:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Clone</span> <span class="k">this</span> <span class="nf">repository</span> <span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="m">546</span> <span class="n">bytes</span><span class="p">):</span> <span class="n">HTTPS</span> <span class="p">/</span> <span class="n">SSH</span>
-<span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//yourusername@bitbucket.org/yourusername/yourrepository</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Clone</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nf">repository</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="p">:</span><span class="w"> </span><span class="mi">546</span><span class="w"> </span><span class="n">bytes</span><span class="p">):</span><span class="w"> </span><span class="n">HTTPS</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">SSH</span>
+<span class="n">hg</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//yourusername@bitbucket.org/yourusername/yourrepository</span>
 </pre></div>
 </div>
 <p>Copy the command you see in the browser starting <code class="docutils literal notranslate"><span class="pre">hg</span> <span class="pre">clone</span></code>, and paste it in
 as a command in your terminal/DOS-shell window.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="c1">//gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">hg</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//gkthiruvathukal@bitbucket.org/gkthiruvathukal/gkt170</span>
 </pre></div>
 </div>
 <p>You will see some output:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">http</span> <span class="n">authorization</span> <span class="n">required</span>
-<span class="n">realm</span><span class="p">:</span> <span class="n">Bitbucket</span><span class="p">.</span><span class="n">org</span> <span class="n">HTTP</span>
-<span class="n">user</span><span class="p">:</span> <span class="n">gkthiruvathukal</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="w"> </span><span class="n">authorization</span><span class="w"> </span><span class="n">required</span>
+<span class="n">realm</span><span class="p">:</span><span class="w"> </span><span class="n">Bitbucket</span><span class="p">.</span><span class="n">org</span><span class="w"> </span><span class="n">HTTP</span>
+<span class="n">user</span><span class="p">:</span><span class="w"> </span><span class="n">gkthiruvathukal</span>
 <span class="n">password</span><span class="p">:</span>
-<span class="n">destination</span> <span class="n">directory</span><span class="p">:</span> <span class="n">gkt170</span>
-<span class="n">no</span> <span class="n">changes</span> <span class="n">found</span>
-<span class="n">updating</span> <span class="n">to</span> <span class="n">branch</span> <span class="k">default</span>
-<span class="m">0</span> <span class="n">files</span> <span class="n">updated</span><span class="p">,</span> <span class="m">0</span> <span class="n">files</span> <span class="n">merged</span><span class="p">,</span> <span class="m">0</span> <span class="n">files</span> <span class="n">removed</span><span class="p">,</span> <span class="m">0</span> <span class="n">files</span> <span class="n">unresolved</span>
+<span class="n">destination</span><span class="w"> </span><span class="n">directory</span><span class="p">:</span><span class="w"> </span><span class="n">gkt170</span>
+<span class="n">no</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">found</span>
+<span class="n">updating</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="k">default</span>
+<span class="mi">0</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">updated</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">merged</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">removed</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">unresolved</span>
 </pre></div>
 </div>
 <p>You have created a copy of the (empty) bitbucket repository in a
@@ -310,7 +693,7 @@ organized.</p>
 </div>
 </section>
 <section id="add-an-hgignore-and-hello-world-file-to-your-project">
-<h3>Add an .hgignore and Hello World file to your project<a class="headerlink" href="#add-an-hgignore-and-hello-world-file-to-your-project" title="Permalink to this headline"></a></h3>
+<h3>Add an .hgignore and Hello World file to your project<a class="headerlink" href="#add-an-hgignore-and-hello-world-file-to-your-project" title="Link to this heading">#</a></h3>
 <p>Change directory into the top-level directory of your local repository.
 That should mean <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the directory whose name matches the
 bitbucket repository name.</p>
@@ -407,7 +790,7 @@ gkt@gkt-mini:~/gkt170$ hg add labs/hello.cs
 <li><p>Commit the changes, and then see the log entry
 with the commands below.  If you set the .hgrc file,
 the command somewhere inside your local repository could be:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">hg</span> <span class="n">commit</span> <span class="p">-</span><span class="n">m</span> <span class="s">&quot;adding an .hgignore file and Hello, World to the project&quot;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">hg</span><span class="w"> </span><span class="n">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="s">&quot;adding an .hgignore file and Hello, World to the project&quot;</span>
 </pre></div>
 </div>
 <p>If you did not create .hgrc, you need also include identification
@@ -445,7 +828,7 @@ remote: bb/acl: gkthiruvathukal is allowed. accepted payload.
 </ol>
 </section>
 <section id="create-an-initial-structure-for-your-project">
-<h3>Create an initial structure for your project<a class="headerlink" href="#create-an-initial-structure-for-your-project" title="Permalink to this headline"></a></h3>
+<h3>Create an initial structure for your project<a class="headerlink" href="#create-an-initial-structure-for-your-project" title="Link to this heading">#</a></h3>
 <p>We suggest that you follow a scheme similar to what we use when working
 with version control. We suggest that your source code goes in
 one or more folders, like work, or homework and labs.</p>
@@ -471,7 +854,7 @@ to find your homework assignments.</p>
 </ol>
 </section>
 <section id="create-and-test-content">
-<h3>Create and Test Content<a class="headerlink" href="#create-and-test-content" title="Permalink to this headline"></a></h3>
+<h3>Create and Test Content<a class="headerlink" href="#create-and-test-content" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>copy in or create a simple program in a directory you created,
 like labs/hello.cs</p></li>
@@ -481,7 +864,7 @@ like labs/hello.cs</p></li>
 <div><p>hg status</p>
 </div></blockquote>
 <p>and produce a response like:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="p">?</span> <span class="n">labs</span><span class="p">/</span><span class="n">hello</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="w"> </span><span class="n">labs</span><span class="o">/</span><span class="n">hello</span><span class="p">.</span><span class="n">cs</span>
 </pre></div>
 </div>
 <p>Mercurial shows you the tracked files that are modified (none here)
@@ -499,7 +882,7 @@ you can just type the following (nothing after the add):</p>
 <div><p>hg add</p>
 </div></blockquote>
 <p>and produce a response like:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">adding</span> <span class="n">do_the_math</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">adding</span><span class="w"> </span><span class="n">do_the_math</span><span class="p">.</span><span class="n">cs</span>
 </pre></div>
 </div>
 <p>If you inadvertently added something that you truly don’t want in the repository, you
@@ -522,7 +905,7 @@ remote: bb/acl: gkthiruvathukal is allowed. accepted payload.
 </ol>
 </section>
 <section id="verify-that-your-stuff-really-made-it-to-bitbucket-org">
-<h3>Verify that your stuff really made it to bitbucket.org<a class="headerlink" href="#verify-that-your-stuff-really-made-it-to-bitbucket-org" title="Permalink to this headline"></a></h3>
+<h3>Verify that your stuff really made it to bitbucket.org<a class="headerlink" href="#verify-that-your-stuff-really-made-it-to-bitbucket-org" title="Link to this heading">#</a></h3>
 <p>At this point, it is entirely possible that you need some convincing to believe that
 everything we’ve been doing thus far is really making it to your repository at Bitbucket.
 Luckily, this is where having a web interface really can help us.</p>
@@ -537,7 +920,8 @@ of which likely happened just “minutes ago”.</p></li>
 <li><p>You can click on any revision to see what changes were made. It is ok to do so at this
 time, but we’re going to take a look at the powerful capability of “looking at the
 source”. So go to the <em>Source</em> tab.</p>
-<a class="reference internal image-reference" href="../_images/bitbucket-source.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/bitbucket-source.png" style="width: 350pt;" /></a>
+<a class="reference internal image-reference" href="../_images/bitbucket-source.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/bitbucket-source.png" style="width: 350pt;" />
+</a>
 </li>
 <li><p>If all was done properly, you will see .hgignore and labs. These
 were all the result of our earlier sequence of commit+push operations. You can click on
@@ -545,12 +929,13 @@ any folder to drill into the hierarchy of folders/files that have been pushed
 to Bitbucket (from your local repository). In labs you find
 your source code (for hello.cs). Then you
 can look at it–through the web! When you do so, you’ll see something like this.</p>
-<a class="reference internal image-reference" href="../_images/HelloWorld.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/HelloWorld.png" style="height: 290pt;" /></a>
+<a class="reference internal image-reference" href="../_images/HelloWorld.png"><img alt="Xamarin Studio Image" class="align-center" src="../_images/HelloWorld.png" style="height: 290pt;" />
+</a>
 </li>
 </ol>
 </section>
 <section id="working-between-lab-and-home-or-home-and-lab">
-<h3>Working between lab and home (or home and lab)<a class="headerlink" href="#working-between-lab-and-home-or-home-and-lab" title="Permalink to this headline"></a></h3>
+<h3>Working between lab and home (or home and lab)<a class="headerlink" href="#working-between-lab-and-home-or-home-and-lab" title="Link to this heading">#</a></h3>
 <p>It may not be immediately obvious, but what we have just shown you is how to work between
 the classroom/lab environment and home. In the typical scenario, when you go to your
 desk (or laptop), you will go through the following lifecycle:</p>
@@ -576,7 +961,7 @@ likely revisit this topic as we get closer to the team project, which we think w
 you thankful for having a version control system.</p>
 </section>
 <section id="getting-our-examples">
-<h3>Getting our examples<a class="headerlink" href="#getting-our-examples" title="Permalink to this headline"></a></h3>
+<h3>Getting our examples<a class="headerlink" href="#getting-our-examples" title="Link to this heading">#</a></h3>
 <p>We’re going to conclude by taking this opportunity to introduce you to how <em>we</em> (Drs.
 Harrington and Thiruvathukal) are actually using the stuff we are teaching to work as
 a team on developing the book and examples.</p>
@@ -608,36 +993,124 @@ write_test
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="project.html" class="btn btn-neutral float-left" title="Group Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="hgteamwork.html" class="btn btn-neutral float-right" title="Mercurial and Teamwork" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
-      <span class="lastupdated">Last updated on 30-November-2021 00:26:56.
-      </span></p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="project.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Group Project</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="hgteamwork.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mercurial and Teamwork</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-we-proceed">Before We Proceed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-bitbucket-org-account">Create Bitbucket.org account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-repository-at-bitbucket">Create repository at Bitbucket</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-your-mercurial-commit-username">Set up your Mercurial commit username</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-a-repository-from-bitbucket">Clone a repository from Bitbucket</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-an-hgignore-and-hello-world-file-to-your-project">Add an .hgignore and Hello World file to your project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-initial-structure-for-your-project">Create an initial structure for your project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-test-content">Create and Test Content</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-that-your-stuff-really-made-it-to-bitbucket-org">Verify that your stuff really made it to bitbucket.org</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-between-lab-and-home-or-home-and-lab">Working between lab and home (or home and lab)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-our-examples">Getting our examples</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Author name not set
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 02-May-2026 16:33:37.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

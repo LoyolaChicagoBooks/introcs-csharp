@@ -1,104 +1,477 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Defining Operators (Optional) &mdash; Introduction to Computer Science in C# 30 Nov 2021 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Defining Operators (Optional) &#8212; Introduction to Computer Science in C# 02 May 2026 documentation</title>
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=72beec40"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'classes/overload-op';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Chapter Review Questions" href="reviewclasses.html" />
-    <link rel="prev" title="Classes And Structs" href="classes-and-structs.html" /> 
-</head>
+    <link rel="prev" title="Classes And Structs" href="classes-and-structs.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="02 May 2026" />
+    <meta name="docbuild:last-update" content="02-May-2026 16:33:37"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #922247" >
-            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
-          </a>
-              <div class="version">
-                30 Nov 2021
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="classes.html">Classes and Object-Oriented Programming</a><ul class="current">
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Introduction to Computer Science in C# 02 May 2026 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction to Computer Science in C#
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../context/context.html">Context</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/data.html">C# Data and Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../decisions/decisions.html">Decisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">Simple <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html"><code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">Multiple Tests and <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">Nested <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../while/while.html">While Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">Interactive <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../for/for.html">For Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">Examples With <code class="docutils literal notranslate"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">Directory Class</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../arrays/arrays.html">Arrays</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lists/lists.html">Lists</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">.Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="classes.html">Classes and Object-Oriented Programming</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="a-first-class.html">A First Example of Class Instances: Contact</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classexamples.html">Class Instance Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rational.html">The Rational Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="planning_classes.html">Planning A Class Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">Classes And Structs</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Defining Operators (Optional)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Defining Operators (Optional)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">Chapter Review Questions</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">Appendix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">Acknowledgments</a></li>
+</ul>
+</details></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Introduction to Computer Science in C#</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content style-external-links">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="classes.html">Classes and Object-Oriented Programming</a> &raquo;</li>
-      <li>Defining Operators (Optional)</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/classes/overload-op.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp/issues/new?title=Issue%20on%20page%20%2Fclasses/overload-op.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Defining Operators (Optional)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-overloading">Operator Overloading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casts-in-user-defined-classes">Casts in User-Defined Classes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-overloading-exercise">Operator Overloading Exercise</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="defining-operators-optional">
-<span id="defining-operators"></span><h1>Defining Operators (Optional)<a class="headerlink" href="#defining-operators-optional" title="Permalink to this headline"></a></h1>
+<span id="defining-operators"></span><h1>Defining Operators (Optional)<a class="headerlink" href="#defining-operators-optional" title="Link to this heading">#</a></h1>
 <section id="operator-overloading">
-<span id="overloading-operators"></span><span id="index-0"></span><h2>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline"></a></h2>
+<span id="overloading-operators"></span><span id="index-0"></span><h2>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Link to this heading">#</a></h2>
 <p>The Rational class is a fine example of a useful utility class.
 Still, to an experienced user, it has a striking deficiency:
 A Rational is a <em>number</em> and we are used to doing arithmetic with
@@ -107,33 +480,33 @@ standard operators.  We would like to replace the mouthful
 <code class="docutils literal notranslate"><span class="pre">frac1*frac2</span></code>.  This can be coded in C#, using <em>operator overloading</em> to
 give new meanings to the operator <code class="docutils literal notranslate"><span class="pre">*</span></code>.  The C# syntax is illustrated in the
 variant of the Rational class in
-<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_ops_stub/rational.cs">rational_ops_stub/rational.cs</a>.  This class also contains code
+<a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_ops_stub/rational.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>.  This class also contains code
 discussed in the
 next section, <a class="reference internal" href="#casts-in-user-classes"><span class="std std-ref">Casts in User-Defined Classes</span></a>.
 Here are operator overload declarations for <code class="docutils literal notranslate"><span class="pre">*</span></code> and others:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// * binary multiplication operator</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="n">Rational</span> <span class="k">operator</span> <span class="p">*(</span><span class="n">Rational</span> <span class="n">f1</span><span class="p">,</span> <span class="n">Rational</span> <span class="n">f2</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">f1</span><span class="p">.</span><span class="n">num</span><span class="p">*</span><span class="n">f2</span><span class="p">.</span><span class="n">num</span><span class="p">,</span> <span class="n">f1</span><span class="p">.</span><span class="n">denom</span><span class="p">*</span><span class="n">f2</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// * binary multiplication operator</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">Rational</span><span class="w"> </span><span class="n">f1</span><span class="p">,</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="n">f2</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="n">f1</span><span class="p">.</span><span class="n">num</span><span class="o">*</span><span class="n">f2</span><span class="p">.</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">f1</span><span class="p">.</span><span class="n">denom</span><span class="o">*</span><span class="n">f2</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 
-      <span class="c1">/// - unary negation operator</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="n">Rational</span> <span class="k">operator</span> <span class="p">-</span> <span class="p">(</span><span class="n">Rational</span> <span class="n">r</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(-</span><span class="n">r</span><span class="p">.</span><span class="n">num</span><span class="p">,</span> <span class="n">r</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="c1">/// - unary negation operator</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">Rational</span><span class="w"> </span><span class="n">r</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="p">.</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 
-      <span class="c1">/// binary == operator</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="n">Boolean</span> <span class="k">operator</span> <span class="p">==(</span><span class="n">Rational</span> <span class="n">f1</span><span class="p">,</span> <span class="n">Rational</span> <span class="n">f2</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="n">f1</span><span class="p">.</span><span class="n">num</span> <span class="p">==</span> <span class="n">f2</span><span class="p">.</span><span class="n">num</span> <span class="p">&amp;&amp;</span> <span class="n">f1</span><span class="p">.</span><span class="n">denom</span> <span class="p">==</span> <span class="n">f2</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="c1">/// binary == operator</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Boolean</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">==</span><span class="p">(</span><span class="n">Rational</span><span class="w"> </span><span class="n">f1</span><span class="p">,</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="n">f2</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="n">f1</span><span class="p">.</span><span class="n">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f2</span><span class="p">.</span><span class="n">num</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">f1</span><span class="p">.</span><span class="n">denom</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f2</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-      <span class="c1">/// binary != operator</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="n">Boolean</span> <span class="k">operator</span> <span class="p">!=(</span><span class="n">Rational</span> <span class="n">f1</span><span class="p">,</span> <span class="n">Rational</span> <span class="n">f2</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="n">f1</span><span class="p">.</span><span class="n">num</span> <span class="p">!=</span> <span class="n">f2</span><span class="p">.</span><span class="n">num</span> <span class="p">||</span> <span class="n">f1</span><span class="p">.</span><span class="n">denom</span> <span class="p">!=</span> <span class="n">f2</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
-      <span class="p">}</span> <span class="c1">// or extra call, but clearly consistent: return !(f1 == f2)</span>
+<span class="w">      </span><span class="c1">/// binary != operator</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Boolean</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">!=</span><span class="p">(</span><span class="n">Rational</span><span class="w"> </span><span class="n">f1</span><span class="p">,</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="n">f2</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="n">f1</span><span class="p">.</span><span class="n">num</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">f2</span><span class="p">.</span><span class="n">num</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">f1</span><span class="p">.</span><span class="n">denom</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">f2</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="c1">// or extra call, but clearly consistent: return !(f1 == f2)</span>
 </pre></div>
 </div>
 <p>All operator overload headings have the special form</p>
@@ -174,7 +547,7 @@ precedence than <code class="docutils literal notranslate"><span class="pre">*</
 <p>An example testing class also uses the new casting syntax of next section:</p>
 </section>
 <section id="casts-in-user-defined-classes">
-<span id="casts-in-user-classes"></span><span id="index-2"></span><h2>Casts in User-Defined Classes<a class="headerlink" href="#casts-in-user-defined-classes" title="Permalink to this headline"></a></h2>
+<span id="casts-in-user-classes"></span><span id="index-2"></span><h2>Casts in User-Defined Classes<a class="headerlink" href="#casts-in-user-defined-classes" title="Link to this heading">#</a></h2>
 <p>We have discussed casts before.  We know that an <code class="docutils literal notranslate"><span class="pre">int</span></code> can also be represented
 as a <code class="docutils literal notranslate"><span class="pre">double</span></code> with an integer value, and the cast from <code class="docutils literal notranslate"><span class="pre">int</span></code> to <code class="docutils literal notranslate"><span class="pre">double</span></code>
 is done implicitly
@@ -189,11 +562,11 @@ We bridge this difference by defining an implicit cast of an <code class="docuti
 so  the compiler will take <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">*</span> <span class="pre">n</span></code> and see the need to implicitly cast
 <code class="docutils literal notranslate"><span class="pre">n</span></code> to a Rational.  The definition below will also allow explicit casts
 if you choose, like <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">*</span> <span class="pre">(Rational)</span> <span class="pre">n</span></code>:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Code to cast an int to a Rational implicitly when needed.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="k">implicit</span> <span class="k">operator</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Code to cast an int to a Rational implicitly when needed.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">implicit</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Again it is
@@ -212,11 +585,11 @@ a <code class="docutils literal notranslate"><span class="pre">double</span></co
 it would not be wise to implicitly convert
 a <code class="docutils literal notranslate"><span class="pre">double</span></code> to a Rational, but it does make sense to approximate a Rational
 by a <code class="docutils literal notranslate"><span class="pre">double</span></code> before use with a <code class="docutils literal notranslate"><span class="pre">double</span></code>:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Code to cast to a double implicitly when needed.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="k">implicit</span> <span class="k">operator</span> <span class="nf">double</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">/</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Code to cast to a double implicitly when needed.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">implicit</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="nf">double</span><span class="p">(</span><span class="n">Rational</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="o">/</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>The general format of such an implicit cast in a user-defined class is:</p>
@@ -234,11 +607,11 @@ You are
 we have already seen these required for a cast from <code class="docutils literal notranslate"><span class="pre">double</span></code> to <code class="docutils literal notranslate"><span class="pre">int</span></code>.
 To only allow an explicit cast with your type,
 replace <code class="docutils literal notranslate"><span class="pre">implicit</span></code> by <code class="docutils literal notranslate"><span class="pre">explicit</span></code> in the cast method heading.</p>
-<div class="highlight-csharp notranslate" id="decimal-type"><span id="index-3"></span><div class="highlight"><pre><span></span>      <span class="c1">/// Code to cast to a decimal with an explicit cast.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="k">explicit</span> <span class="k">operator</span> <span class="nf">decimal</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">/</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate" id="decimal-type"><span id="index-3"></span><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Code to cast to a decimal with an explicit cast.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="nf">decimal</span><span class="p">(</span><span class="n">Rational</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="o">/</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>The decimal type</strong>:  Though we have not used the
@@ -246,7 +619,7 @@ replace <code class="docutils literal notranslate"><span class="pre">implicit</s
 from Rational to <code class="docutils literal notranslate"><span class="pre">decimal</span></code> that can only be used explicitly, as in
 <code class="docutils literal notranslate"><span class="pre">(decimal)</span> <span class="pre">f</span></code>:</p>
 <p>Example
-<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_ops_stub/test_ops.cs">rational_ops_stub/test_ops.cs</a> tests all of the operator overloads
+<a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_ops_stub/test_ops.cs">LoyolaChicagoBooks/introcs-csharp-examples</a> tests all of the operator overloads
 and casts shown for a Rational.  Look at the source code and run it.
 Note where overloaded operators are used and where implicit and explicit casts
 to or from a Rational are used.</p>
@@ -258,9 +631,9 @@ exact decimal values with up to 28 digits can be stored and manipulated.
 has <strong>m</strong> for money appended, like  <code class="docutils literal notranslate"><span class="pre">5.99m</span></code>, representing the mathematical
 quantity 5.99 <em>exactly</em>.)</p>
 <section id="operator-overloading-exercise">
-<span id="overloading-operator-exercise"></span><span id="index-4"></span><h3>Operator Overloading Exercise<a class="headerlink" href="#operator-overloading-exercise" title="Permalink to this headline"></a></h3>
+<span id="overloading-operator-exercise"></span><span id="index-4"></span><h3>Operator Overloading Exercise<a class="headerlink" href="#operator-overloading-exercise" title="Link to this heading">#</a></h3>
 <p>The classes discussed above from example project
-<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_ops_stub">rational_ops_stub</a>
+<a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_ops_stub">LoyolaChicagoBooks/introcs-csharp-examples</a>
 are incomplete.  Add the
 overloaded binary operators  /, +, -, &lt;, &gt;, &lt;= and &gt;= to the Rational class,
 and extend the TestOps class to test them.</p>
@@ -269,36 +642,112 @@ and extend the TestOps class to test them.</p>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classes-and-structs.html" class="btn btn-neutral float-left" title="Classes And Structs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="reviewclasses.html" class="btn btn-neutral float-right" title="Chapter Review Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
-      <span class="lastupdated">Last updated on 30-November-2021 00:26:56.
-      </span></p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="classes-and-structs.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Classes And Structs</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="reviewclasses.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter Review Questions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-overloading">Operator Overloading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casts-in-user-defined-classes">Casts in User-Defined Classes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-overloading-exercise">Operator Overloading Exercise</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Author name not set
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 02-May-2026 16:33:37.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

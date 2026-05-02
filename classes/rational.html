@@ -1,106 +1,477 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Rational Class &mdash; Introduction to Computer Science in C# 30 Nov 2021 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The Rational Class &#8212; Introduction to Computer Science in C# 02 May 2026 documentation</title>
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=72beec40"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'classes/rational';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Planning A Class Structure" href="planning_classes.html" />
-    <link rel="prev" title="Class Instance Examples" href="classexamples.html" /> 
-</head>
+    <link rel="prev" title="Class Instance Examples" href="classexamples.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="02 May 2026" />
+    <meta name="docbuild:last-update" content="02-May-2026 16:33:37"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #922247" >
-            <a href="../index.html" class="icon icon-home"> Introduction to Computer Science in C#
-          </a>
-              <div class="version">
-                30 Nov 2021
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../context/context.html">Context</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/data.html">C# Data and Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../decisions/decisions.html">Decisions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../while/while.html">While Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../for/for.html">For Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../arrays/arrays.html">Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lists/lists.html">Lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="classes.html">Classes and Object-Oriented Programming</a><ul class="current">
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Introduction to Computer Science in C# 02 May 2026 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction to Computer Science in C#
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../context/context.html">Context</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../context/motivation.html">Motivation for This Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/intro.html">Resources Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/download.html">Downloading and Reading Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/computerscience.html">Computer Science, Broadly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../context/reviewcontext.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/data.html">C# Data and Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/sampleprogram.html">A Sample C# Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-edit-compile-run.html">Lab: Editing, Compiling, and Running with Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/arithmetic.html">Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/variables.html">Variables and Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/typography.html">Syntax Template Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings1.html">Strings, Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/print1.html">Writing to the Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/programstructure.html">C# Program Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/io.html">Combining Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/strings2.html">String Special Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/writeline-substitution.html">Substitutions in Console.WriteLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/types-and-conversions.html">Value Types and Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/learning-to-problem-solve.html">Learning to Solve Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/lab-division-sentences.html">Lab: Division Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/reviewdataop.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../functions/functions.html">Defining Functions of your Own</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functions/firstfunc.html">A First Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/multfunc.html">Multiple Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam.html">Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcparam2.html">Multiple Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcreturn.html">Returned Function Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/writerconsumer.html">Two Roles: Writer and Consumer of Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/localscope.html">Local Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/staticvariables.html">Static Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/notusereturn.html">Not using Return Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/libraryclass.html">Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/traceback.html">Tracebacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/funcsummary.html">Static Function Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/reviewfunc.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basicstringops/basicstringops.html">Basic String Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringindexing.html">String Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/stringmethods.html">Some Instance Methods and the Length Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/problem-solving-replace.html">A Creative Problem Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/lab-string-ops.html">Lab: String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basicstringops/reviewstring.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../decisions/decisions.html">Decisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/conditions.html">Conditions I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifstatements.html">Simple <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelse.html"><code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/comparisonops.html">More Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifelsechained.html">Multiple Tests and <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifpitfalls.html">If-statement Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/compoundconditions.html">Compound Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/ifnested.html">Nested <code class="docutils literal notranslate"><span class="pre">if</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decisions/reviewdecisions.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../while/while.html">While Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while/whilestatements.html">While-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/while-with-sequence.html">While-Statements with Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileinteractive.html">Interactive <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/condition-short-circuit.html">Short-Circuiting &amp;&amp; and ||</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/whileexamples.html">While Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/stringmethods2.html">More String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/userinput.html">User Input: UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/gcdexamples.html">Greatest Common Divisor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/do-while.html">Do-While Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/lab-number-game.html">Number Guessing Game Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../while/reviewwhile.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../foreach/foreach.html">Foreach Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachintro.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/foreachexamples.html"><code class="docutils literal notranslate"><span class="pre">foreach</span></code> Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foreach/reviewforeach.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../for/for.html">For Loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for/forstatements.html">For-Statement Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/forexamples.html">Examples With <code class="docutils literal notranslate"><span class="pre">for</span></code> Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/lab-nested-loops.html">Lab: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../for/reviewfor.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../files/files.html">Files, Paths, and Directories</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileabstraction.html">Files As Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/filewrite.html">Writing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fileread.html">Reading Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/paths.html">Path Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/dir-file.html">Directory Class</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../files/cmdline-execution.html">Command Line Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/fio.html">FIO Helper Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/reviewfiles.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../arrays/arrays.html">Arrays</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/onedim.html">One Dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/music.html">Musical Scales and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/searching.html">Linear Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/sorting.html">Sorting Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/binarysearching.html">Binary Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-array1d.html">Lab: Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/lab-searching-arrays-lists-maps.html">Lab: Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/twodim.html">Multi-dimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arrays/reviewarrays.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lists/lists.html">Lists</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lists/listsyntax.html">List Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/dotnetapi.html">.Net Library (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/reviewlists.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dictionaries/dictionaries.html">Dictionaries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionarysyntax.html">Dictionary Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryefficiency.html">Dictionary Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaryexamples.html">Dictionary Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/lab-filedata.html">Lab: File Data and Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/reviewdictionaries.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="classes.html">Classes and Object-Oriented Programming</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="a-first-class.html">A First Example of Class Instances: Contact</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classexamples.html">Class Instance Examples</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">The Rational Class</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">The Rational Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="planning_classes.html">Planning A Class Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classes-and-structs.html">Classes And Structs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overload-op.html">Defining Operators (Optional)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reviewclasses.html">Chapter Review Questions</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/testing.html">Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interfaces/interfaces.html">Interfaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/fractions-revisited.html">Rationals Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/csproj-revisited.html">Csproject Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces/reviewinterfaces.html">Chapter Review Questions</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../recursion/recursion.html">Recursion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datastructures/datastructures.html">Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/appendix.html">Appendix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/monotools.html">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/xamarinstudio.html">Xamarin Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cmdline.html">Command Line Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/precedence.html">Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation.html">Homework: Grade Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/homework-gradecalculation2.html">Homework: Grade Calculation from Individual Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-gradefiles.html">Homework: Grade File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hw-booklist.html">Homework: Book List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/project.html">Group Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/lab-versioncontrol.html">Lab: Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/hgteamwork.html">Mercurial and Teamwork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/acknowledgments.html">Acknowledgments</a></li>
+</ul>
+</details></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #922247" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Introduction to Computer Science in C#</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content style-external-links">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="classes.html">Classes and Object-Oriented Programming</a> &raquo;</li>
-      <li>The Rational Class</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/classes/rational.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/LoyolaChicagoBooks/introcs-csharp/issues/new?title=Issue%20on%20page%20%2Fclasses/rational.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Rational Class</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-parameters-of-the-same-type">Method Parameters of the Same Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pictorial-playing-computer">Pictorial Playing Computer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forcematch-exercise">ForceMatch Exercise</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="the-rational-class">
-<span id="rational"></span><span id="index-0"></span><h1>The Rational Class<a class="headerlink" href="#the-rational-class" title="Permalink to this headline"></a></h1>
+<span id="rational"></span><span id="index-0"></span><h1>The Rational Class<a class="headerlink" href="#the-rational-class" title="Link to this heading">#</a></h1>
 <p>Like other numbers, we think of a rational number as a unit,
 but all rational numbers can be most easily represented as a fraction,
 a ratio of two integers. We can create a class Rational, so</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">r</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rational</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>would create a new Rational number for the mathematical expression, 2/3.</p>
@@ -115,33 +486,33 @@ some testing code.  Hopefully the method names are clear and reasonable.
 in the illustration
 we operate on a single rational number, and do calculation with a pair,
 and parse string literals.  The code is from
-<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_rational/test_rational.cs">test_rational/test_rational.cs</a>:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_rational/test_rational.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 
-<span class="k">namespace</span> <span class="nn">IntroCS</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">IntroCS</span>
 <span class="p">{</span>
-   <span class="k">public</span> <span class="k">class</span> <span class="nc">TestRational</span>
-   <span class="p">{</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="n">Rational</span> <span class="n">f</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="p">-</span><span class="m">10</span><span class="p">);</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;reciprocal of {0} is {1}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">f</span><span class="p">.</span><span class="n">Reciprocal</span><span class="p">());</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} negated is {1}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">f</span><span class="p">.</span><span class="n">Negate</span><span class="p">());</span>
-         <span class="n">Rational</span> <span class="n">h</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} + {1} is {2}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} - {1} is {2}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">.</span><span class="n">Subtract</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} * {1} is {2}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">.</span><span class="n">Multiply</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;({0}) / ({1}) is {2}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">.</span><span class="n">Divide</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} &gt; {1} ? {2}&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">));</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} as a double is {1}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">f</span><span class="p">.</span><span class="n">ToDouble</span><span class="p">());</span>
-         <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} as a decimal is {1}&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">.</span><span class="n">ToDecimal</span><span class="p">());</span>
-         <span class="k">foreach</span> <span class="p">(</span><span class="kt">string</span> <span class="n">s</span> <span class="k">in</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span><span class="s">&quot;-12/30&quot;</span><span class="p">,</span> <span class="s">&quot;123&quot;</span><span class="p">,</span> <span class="s">&quot;1.125&quot;</span><span class="p">})</span> <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Parse \&quot;{0}\&quot; to Rational: {1}&quot;</span><span class="p">,</span>
-                              <span class="n">s</span><span class="p">,</span> <span class="n">Rational</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
-         <span class="p">}</span>
-      <span class="p">}</span>
-   <span class="p">}</span>
+<span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TestRational</span>
+<span class="w">   </span><span class="p">{</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="n">Rational</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rational</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;reciprocal of {0} is {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Reciprocal</span><span class="p">());</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} negated is {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Negate</span><span class="p">());</span>
+<span class="w">         </span><span class="n">Rational</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} + {1} is {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} - {1} is {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Subtract</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} * {1} is {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Multiply</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;({0}) / ({1}) is {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Divide</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} &gt; {1} ? {2}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">h</span><span class="p">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} as a double is {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">ToDouble</span><span class="p">());</span>
+<span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;{0} as a decimal is {1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">ToDecimal</span><span class="p">());</span>
+<span class="w">         </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">new</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;-12/30&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1.125&quot;</span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Parse \&quot;{0}\&quot; to Rational: {1}&quot;</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">Rational</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -168,11 +539,11 @@ Parse &quot;1.125&quot; to Rational: 9/8
 Each individual Rational that we use will have its own numerator and
 denominator, which we store as the instance variables
 (and which we abbreviate since we are lazy):</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Rational</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Rational</span>
 <span class="p">{</span>
-   <span class="k">private</span> <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
-   <span class="k">private</span> <span class="kt">int</span> <span class="n">denom</span><span class="p">;</span>
-   <span class="c1">// ...</span>
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">denom</span><span class="p">;</span>
+<span class="w">   </span><span class="c1">// ...</span>
 </pre></div>
 </div>
 <p>We could have a very simple constructor that just copies in values for
@@ -186,21 +557,21 @@ we need to divide the original numerator and denominator by their
 <a class="reference internal" href="../while/gcdexamples.html#gcd"><span class="std std-ref">Greatest Common Divisor</span></a>.    We include a <em>static</em> GCD method taken from that section,
 and make the adjustment to lowest terms in a helping method, <code class="docutils literal notranslate"><span class="pre">Normalize</span></code>,
 that is called by the constructor:</p>
-<div class="highlight-csharp notranslate" id="index-1"><div class="highlight"><pre><span></span>      <span class="c1">/// Force the invarient: in lowest terms with a positive denominator.</span>
-      <span class="k">private</span> <span class="k">void</span> <span class="nf">Normalize</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">denom</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// We *should* force an Exception, but we won&#39;t.</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Zero denominator changed to 1!&quot;</span><span class="p">);</span>
-            <span class="n">denom</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
-         <span class="p">}</span>
-         <span class="kt">int</span> <span class="n">n</span> <span class="p">=</span> <span class="n">GCD</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="p">);</span>
-         <span class="n">num</span> <span class="p">/=</span> <span class="n">n</span><span class="p">;</span>         <span class="c1">// lowest</span>
-         <span class="n">denom</span> <span class="p">/=</span> <span class="n">n</span><span class="p">;</span>       <span class="c1">//    terms</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">denom</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// make denom positive</span>
-            <span class="n">denom</span> <span class="p">=</span> <span class="p">-</span><span class="n">denom</span><span class="p">;</span><span class="c1">//   double negation:</span>
-            <span class="n">num</span> <span class="p">=</span> <span class="p">-</span><span class="n">num</span><span class="p">;</span>    <span class="c1">//   same mathematical value</span>
-         <span class="p">}</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate" id="index-1"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Force the invarient: in lowest terms with a positive denominator.</span>
+<span class="w">      </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Normalize</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">denom</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// We *should* force an Exception, but we won&#39;t.</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Zero denominator changed to 1!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">denom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GCD</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">denom</span><span class="p">);</span>
+<span class="w">         </span><span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">         </span><span class="c1">// lowest</span>
+<span class="w">         </span><span class="n">denom</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">       </span><span class="c1">//    terms</span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">denom</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// make denom positive</span>
+<span class="w">            </span><span class="n">denom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">denom</span><span class="p">;</span><span class="c1">//   double negation:</span>
+<span class="w">            </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">num</span><span class="p">;</span><span class="w">    </span><span class="c1">//   same mathematical value</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>There are several things to note about this method:</p>
@@ -226,13 +597,13 @@ its parameters.</p></li>
 Note that by the time we
 are done constructing a new Rational, it is in this normalized form:  lowest
 terms and positive denominator:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Create a fraction given numerator and denominator.</span>
-      <span class="k">public</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span> <span class="n">numerator</span><span class="p">,</span> <span class="kt">int</span> <span class="n">denominator</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="n">num</span> <span class="p">=</span> <span class="n">numerator</span><span class="p">;</span>
-         <span class="n">denom</span> <span class="p">=</span> <span class="n">denominator</span><span class="p">;</span>
-         <span class="n">Normalize</span><span class="p">();</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Create a fraction given numerator and denominator.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numerator</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">denominator</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numerator</span><span class="p">;</span>
+<span class="w">         </span><span class="n">denom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">denominator</span><span class="p">;</span>
+<span class="w">         </span><span class="n">Normalize</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>The call to the <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> method is another place where we have a
@@ -250,14 +621,14 @@ The shorthand notation
 without an explicit object reference and dot cannot be used, because
 there is no
 current object to reference implicitly:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">AnInstanceMethod</span><span class="p">()</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AnInstanceMethod</span><span class="p">()</span>
 <span class="p">{</span>
-      <span class="p">...</span>
+<span class="w">      </span><span class="p">...</span>
 <span class="p">}</span>
 
-<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AStaticMethod</span><span class="p">()</span>  <span class="c1">// no current object</span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AStaticMethod</span><span class="p">()</span><span class="w">  </span><span class="c1">// no current object</span>
 <span class="p">{</span>
-       <span class="n">AnInstanceMethod</span><span class="p">();</span>  <span class="c1">// COMPILER ERROR CAUSED</span>
+<span class="w">       </span><span class="n">AnInstanceMethod</span><span class="p">();</span><span class="w">  </span><span class="c1">// COMPILER ERROR CAUSED</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -267,26 +638,26 @@ inaccessible inside the static method.)</p>
 </div>
 <p>The Rational class has the usual getter methods, to access the
 obvious parts of its state:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetNumerator</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">GetNumerator</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-      <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetDenominator</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="n">denom</span><span class="p">;</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">GetDenominator</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="n">denom</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>We certainly want to be able to display a Rational as a string version:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a string of the fraction in lowest terms,</span>
-      <span class="c1">/// omitting the denominator if it is 1.</span>
-      <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">denom</span> <span class="p">!=</span> <span class="m">1</span><span class="p">)</span>
-            <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0}/{1}&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="p">);</span>
-         <span class="k">return</span> <span class="s">&quot;&quot;</span><span class="p">+</span><span class="n">num</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Return a string of the fraction in lowest terms,</span>
+<span class="w">      </span><span class="c1">/// omitting the denominator if it is 1.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">denom</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0}/{1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">denom</span><span class="p">);</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="o">+</span><span class="n">num</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Note that we simplify so you would see “3” rather than “3/1”.  This is also
@@ -295,17 +666,17 @@ a negative Rational will always have a leading “-” as in “-5/9” rather t
 “5/-9”</p>
 <p>With a Rational, several other conversions make sense:  to <code class="docutils literal notranslate"><span class="pre">double</span></code>
 and <code class="docutils literal notranslate"><span class="pre">decimal</span></code> approximations.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a double approximation to the fraction.</span>
-      <span class="k">public</span> <span class="kt">double</span> <span class="nf">ToDouble</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">num</span><span class="p">)/</span><span class="n">denom</span><span class="p">;</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Return a double approximation to the fraction.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">ToDouble</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">num</span><span class="p">)</span><span class="o">/</span><span class="n">denom</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-      <span class="c1">/// Return a decimal approximation to the fraction.</span>
-      <span class="k">public</span> <span class="kt">decimal</span> <span class="nf">ToDecimal</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="p">((</span><span class="kt">decimal</span><span class="p">)</span><span class="n">num</span><span class="p">)/</span><span class="n">denom</span><span class="p">;</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="c1">/// Return a decimal approximation to the fraction.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">ToDecimal</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="p">((</span><span class="kt">decimal</span><span class="p">)</span><span class="n">num</span><span class="p">)</span><span class="o">/</span><span class="n">denom</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>So far we have returned built-in types.  What if we wanted to generate
@@ -315,17 +686,17 @@ How do we make a new Rational?
 We have a constructor!  We can easily use it.  The reciprocal
 swaps the numerator and denominator.  It is also easy to negate
 a Rational:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the reciprocal of this Rational.</span>
-      <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Reciprocal</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">denom</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Return a new Rational which is the reciprocal of this Rational.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="nf">Reciprocal</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="n">denom</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 
-      <span class="c1">/// Return a new Rational which is this Rational negated.</span>
-      <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Negate</span><span class="p">()</span>
-      <span class="p">{</span>
-         <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(-</span><span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="p">);</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="c1">/// Return a new Rational which is this Rational negated.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="nf">Negate</span><span class="p">()</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="o">-</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">denom</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Static methods are still useful.
@@ -347,34 +718,34 @@ being referred to when it starts, but in this case the method <em>returns</em> o
 (before being reduced to lowest terms).
 Note that there were originally <em>two</em> digits after the decimal point
 and then the denominator gets <em>two</em> zeroes to have the right power of 10:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Parse a string of an integer, fraction (with /) or decimal (with .)</span>
-      <span class="c1">///  and return the corresponding Rational.</span>
-      <span class="k">public</span> <span class="k">static</span> <span class="n">Rational</span> <span class="nf">Parse</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
-      <span class="p">{</span>
-         <span class="n">s</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Trim</span><span class="p">();</span>      <span class="c1">// will adjust numerator and denominator parts</span>
-         <span class="kt">string</span><span class="p">[]</span> <span class="n">parts</span> <span class="p">=</span> <span class="p">{</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;1&quot;</span><span class="p">};</span> <span class="c1">// for an int string, this is correct</span>
-         <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">))</span> <span class="p">{</span>     <span class="c1">// otherwise correct num, denom parts</span>
-            <span class="n">parts</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39;/&#39;</span><span class="p">);</span>
-         <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">))</span> <span class="p">{</span>
-            <span class="kt">string</span><span class="p">[]</span> <span class="n">intFrac</span> <span class="p">=</span> <span class="n">s</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39;.&#39;</span><span class="p">);</span> <span class="c1">// integer, fractional digits</span>
-            <span class="n">parts</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="n">intFrac</span><span class="p">[</span><span class="m">0</span><span class="p">]+</span><span class="n">intFrac</span><span class="p">[</span><span class="m">1</span><span class="p">];</span>  <span class="c1">// &quot;shift&quot; decimal point</span>
-            <span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;1&quot;</span><span class="p">;</span>                 <span class="c1">// denom will have as many 0&#39;s</span>
-            <span class="k">foreach</span><span class="p">(</span> <span class="kt">char</span> <span class="n">dig</span> <span class="k">in</span> <span class="n">intFrac</span><span class="p">[</span><span class="m">1</span><span class="p">])</span> <span class="p">{</span>  <span class="c1">//    as digits after &#39;.&#39;</span>
-               <span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">+=</span> <span class="s">&quot;0&quot;</span><span class="p">;</span>                 <span class="c1">//    to compensate</span>
-            <span class="p">}</span>
-         <span class="p">}</span>
-         <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Trim</span><span class="p">()),</span>
-                             <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">].</span><span class="n">Trim</span><span class="p">()));</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Parse a string of an integer, fraction (with /) or decimal (with .)</span>
+<span class="w">      </span><span class="c1">///  and return the corresponding Rational.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="nf">Parse</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">Trim</span><span class="p">();</span><span class="w">      </span><span class="c1">// will adjust numerator and denominator parts</span>
+<span class="w">         </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">};</span><span class="w"> </span><span class="c1">// for an int string, this is correct</span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// otherwise correct num, denom parts</span>
+<span class="w">            </span><span class="n">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39;/&#39;</span><span class="p">);</span>
+<span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">intFrac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39;.&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// integer, fractional digits</span>
+<span class="w">            </span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intFrac</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">intFrac</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// &quot;shift&quot; decimal point</span>
+<span class="w">            </span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span><span class="w">                 </span><span class="c1">// denom will have as many 0&#39;s</span>
+<span class="w">            </span><span class="k">foreach</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">dig</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">intFrac</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//    as digits after &#39;.&#39;</span>
+<span class="w">               </span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="p">;</span><span class="w">                 </span><span class="c1">//    to compensate</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Trim</span><span class="p">()),</span>
+<span class="w">                             </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">Trim</span><span class="p">()));</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <section id="method-parameters-of-the-same-type">
-<h2>Method Parameters of the Same Type<a class="headerlink" href="#method-parameters-of-the-same-type" title="Permalink to this headline"></a></h2>
+<h2>Method Parameters of the Same Type<a class="headerlink" href="#method-parameters-of-the-same-type" title="Link to this heading">#</a></h2>
 <p>We can deal with the current object without using dot notation.  What if we are
 dealing with <em>more than one</em> Rational, the current one <em>and</em> another one,
 like the parameter in Multiply:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
-      <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>We can mix the shorthand notation for the current object’s fields
@@ -382,11 +753,11 @@ and dot notation for another
 <em>named</em> object:  <code class="docutils literal notranslate"><span class="pre">num</span></code> and <code class="docutils literal notranslate"><span class="pre">denom</span></code> refer to the fields in the <em>current</em> object, and
 <code class="docutils literal notranslate"><span class="pre">f.num</span></code> and <code class="docutils literal notranslate"><span class="pre">f.denom</span></code> refer to fields for the other
 <code class="docutils literal notranslate"><span class="pre">Rational</span></code>, the parameter <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>      <span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
-      <span class="k">public</span> <span class="n">Rational</span> <span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span> <span class="n">f</span><span class="p">)</span>
-      <span class="p">{</span>  <span class="c1">// end Multiply heading chunk</span>
-         <span class="k">return</span> <span class="k">new</span> <span class="nf">Rational</span><span class="p">(</span><span class="n">num</span><span class="p">*</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="p">*</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
-      <span class="p">}</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">/// Return a new Rational which is the product of this Rational and f.</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="n">Rational</span><span class="w"> </span><span class="nf">Multiply</span><span class="p">(</span><span class="n">Rational</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span><span class="w">  </span><span class="c1">// end Multiply heading chunk</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Rational</span><span class="p">(</span><span class="n">num</span><span class="o">*</span><span class="n">f</span><span class="p">.</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">denom</span><span class="o">*</span><span class="n">f</span><span class="p">.</span><span class="n">denom</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>We do not refer to the fields of <code class="docutils literal notranslate"><span class="pre">f</span></code> through the public methods
@@ -400,21 +771,21 @@ accessible from method definitions in the class.</p>
 <p>There are a number of other arithmetic methods in the source code for Rational
 that return a new Rational result of the arithmetic operation.  They <em>do</em> review
 your knowledge of arithmetic! They do <em>not</em> add further C# syntax.</p>
-<p>The whole code for Rational is in <a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_nunit/rational.cs">rational_nunit/rational.cs</a>.
+<p>The whole code for Rational is in <a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/rational_nunit/rational.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>.
 The testing code we started with, in
-<a class="reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_rational/test_rational.cs">test_rational/test_rational.cs</a>
+<a class="extlink-repsrc github reference external" href="https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/test_rational/test_rational.cs">LoyolaChicagoBooks/introcs-csharp-examples</a>
 uses all the methods.  We will see more advance ways to test Rational
 in <a class="reference internal" href="../testing/testing.html#testing"><span class="std std-ref">Testing</span></a>.</p>
 <p>There is also a more convenient version of Rational,
 using advanced concepts, in <a class="reference internal" href="overload-op.html#defining-operators"><span class="std std-ref">Defining Operators (Optional)</span></a>.</p>
 </section>
 <section id="pictorial-playing-computer">
-<h2>Pictorial Playing Computer<a class="headerlink" href="#pictorial-playing-computer" title="Permalink to this headline"></a></h2>
+<h2>Pictorial Playing Computer<a class="headerlink" href="#pictorial-playing-computer" title="Link to this heading">#</a></h2>
 <p>Let us start pictorially playing computer on <code class="file docutils literal notranslate"><span class="pre">test_rational.cs</span></code>,
 as a review of much of the previous sections.  We explicitly show a local variable
 <code class="docutils literal notranslate"><span class="pre">this</span></code> to identify the current object in an instance method or constructor.</p>
 <p>The first line of <code class="docutils literal notranslate"><span class="pre">Main</span></code>,</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">f</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="p">-</span><span class="m">10</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rational</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>creates a new Rational, so it calls the constructor.  At the very beginning of the
@@ -423,7 +794,8 @@ so immediately, there is a <code class="docutils literal notranslate"><span clas
 The parameters 6, and -10 are passed, initializing the explicit local
 variables <code class="docutils literal notranslate"><span class="pre">numerator</span></code> and <code class="docutils literal notranslate"><span class="pre">denominator</span></code>.
 The figure illustrates the memory state at the beginning of the constructor call:</p>
-<a class="reference internal image-reference" href="../_images/callConstructor.png"><img alt="../_images/callConstructor.png" src="../_images/callConstructor.png" style="width: 124pt;" /></a>
+<a class="reference internal image-reference" href="../_images/callConstructor.png"><img alt="../_images/callConstructor.png" src="../_images/callConstructor.png" style="width: 124pt;" />
+</a>
 <p>Note the immediate value assigned to the numeric instance variables is zero:  This is
 as discussed in <a class="reference internal" href="../arrays/onedim.html#default-fields"><span class="std std-ref">Default Initializations</span></a>.
 Of course we do not want to keep those default values:
@@ -433,41 +805,48 @@ first for a local variable <code class="docutils literal notranslate"><span clas
 Then it looked <em>second</em> for an instance variable in the object pointed to
 by <code class="docutils literal notranslate"><span class="pre">this</span></code>.  It found <code class="docutils literal notranslate"><span class="pre">num</span></code> there.  Now it copies the 6 into that location.
 Similarly for <code class="docutils literal notranslate"><span class="pre">denominator</span></code> and <code class="docutils literal notranslate"><span class="pre">denom</span></code>:</p>
-<a class="reference internal image-reference" href="../_images/callConstructorCopied.png"><img alt="../_images/callConstructorCopied.png" src="../_images/callConstructorCopied.png" style="width: 124pt;" /></a>
+<a class="reference internal image-reference" href="../_images/callConstructorCopied.png"><img alt="../_images/callConstructorCopied.png" src="../_images/callConstructorCopied.png" style="width: 124pt;" />
+</a>
 <p>Then the constructor calls <code class="docutils literal notranslate"><span class="pre">Normalize</span></code>.
 Since <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> is also an instance method,
 a reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> is passed implicitly.
 While illustrating the memory state for more than one active method,
 we separate each one with a horizontal segment.</p>
-<a class="reference internal image-reference" href="../_images/callNormalize.png"><img alt="../_images/callNormalize.png" src="../_images/callNormalize.png" style="width: 124pt;" /></a>
+<a class="reference internal image-reference" href="../_images/callNormalize.png"><img alt="../_images/callNormalize.png" src="../_images/callNormalize.png" style="width: 124pt;" />
+</a>
 <p>Later <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> calls <code class="docutils literal notranslate"><span class="pre">GCD</span></code>.  Since <code class="docutils literal notranslate"><span class="pre">GCD</span></code> is static, note that the local
 variables for <code class="docutils literal notranslate"><span class="pre">GCD</span></code> do <em>not</em> contain a reference to <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
-<a class="reference internal image-reference" href="../_images/callGCD.png"><img alt="../_images/callGCD.png" src="../_images/callGCD.png" style="width: 124pt;" /></a>
+<a class="reference internal image-reference" href="../_images/callGCD.png"><img alt="../_images/callGCD.png" src="../_images/callGCD.png" style="width: 124pt;" />
+</a>
 <p>At the end of <code class="docutils literal notranslate"><span class="pre">GCD</span></code> the <code class="docutils literal notranslate"><span class="pre">int</span></code> 2 is returned and initializes
 <code class="docutils literal notranslate"><span class="pre">n</span></code> in the calling method <code class="docutils literal notranslate"><span class="pre">Normalize</span></code>.
 Then <code class="docutils literal notranslate"><span class="pre">Normalize</span></code> modifies the instance variable pointed to by <code class="docutils literal notranslate"><span class="pre">this</span></code>,
 and finishes.</p>
-<a class="reference internal image-reference" href="../_images/finishNormalize.png"><img alt="../_images/finishNormalize.png" src="../_images/finishNormalize.png" style="width: 124pt;" /></a>
+<a class="reference internal image-reference" href="../_images/finishNormalize.png"><img alt="../_images/finishNormalize.png" src="../_images/finishNormalize.png" style="width: 124pt;" />
+</a>
 <p>That is the same object <code class="docutils literal notranslate"><span class="pre">this</span></code> in the constructor.
 Just before the constructor completes we have:</p>
-<a class="reference internal image-reference" href="../_images/finishConstructor.png"><img alt="../_images/finishConstructor.png" src="../_images/finishConstructor.png" style="width: 124pt;" /></a>
+<a class="reference internal image-reference" href="../_images/finishConstructor.png"><img alt="../_images/finishConstructor.png" src="../_images/finishConstructor.png" style="width: 124pt;" />
+</a>
 <p>Then in <code class="docutils literal notranslate"><span class="pre">Main</span></code> the constructor’s <code class="docutils literal notranslate"><span class="pre">this</span></code> is the reference to the new object
 initializing <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
-<a class="reference internal image-reference" href="../_images/setF.png"><img alt="../_images/setF.png" src="../_images/setF.png" style="width: 120pt;" /></a>
+<a class="reference internal image-reference" href="../_images/setF.png"><img alt="../_images/setF.png" src="../_images/setF.png" style="width: 120pt;" />
+</a>
 <p>Consider the next line of <code class="docutils literal notranslate"><span class="pre">Main</span></code>:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;6/(-10) simplifies to {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>We omit the internals of the WriteLine call, except to note that it must convert
 the reference <code class="docutils literal notranslate"><span class="pre">f</span></code> to a string.  As with any object,
 it does this by calling the <code class="docutils literal notranslate"><span class="pre">ToString</span></code> method for <code class="docutils literal notranslate"><span class="pre">f</span></code>,
 so the implicit <code class="docutils literal notranslate"><span class="pre">this</span></code> in the call to <code class="docutils literal notranslate"><span class="pre">ToString</span></code> refers to the same object as <code class="docutils literal notranslate"><span class="pre">f</span></code>:</p>
-<a class="reference internal image-reference" href="../_images/callToString.png"><img alt="../_images/callToString.png" src="../_images/callToString.png" style="width: 196.5pt;" /></a>
+<a class="reference internal image-reference" href="../_images/callToString.png"><img alt="../_images/callToString.png" src="../_images/callToString.png" style="width: 196.5pt;" />
+</a>
 <p><code class="docutils literal notranslate"><span class="pre">ToString</span></code> returns “-3/5”, and it gets printed as part of the line generated
 by <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code>….</p>
 <p>We skip the similar details through two more <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code> statements and the
 initialization of <code class="docutils literal notranslate"><span class="pre">h</span></code>:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span> <span class="n">h</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Rational</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">);</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Rational</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code>
@@ -481,14 +860,16 @@ see what the implicit <code class="docutils literal notranslate"><span class="pr
 (local to <code class="docutils literal notranslate"><span class="pre">Add</span></code>) variable <code class="docutils literal notranslate"><span class="pre">f</span></code> refer to.  As the figure shows,
 this use of a local variable
 <code class="docutils literal notranslate"><span class="pre">f</span></code> is independent of the <code class="docutils literal notranslate"><span class="pre">f</span></code> in <code class="docutils literal notranslate"><span class="pre">Main</span></code>:</p>
-<a class="reference internal image-reference" href="../_images/callAdd.png"><img alt="../_images/callAdd.png" src="../_images/callAdd.png" style="width: 132pt;" /></a>
+<a class="reference internal image-reference" href="../_images/callAdd.png"><img alt="../_images/callAdd.png" src="../_images/callAdd.png" style="width: 132pt;" />
+</a>
 <p>Since the return statement in <code class="docutils literal notranslate"><span class="pre">Add</span></code> creates a new object,
 the figure shows  a call to the
 constructor from inside <code class="docutils literal notranslate"><span class="pre">Add</span></code>.  We do not go through the details of another
 constructor call, but
 <code class="docutils literal notranslate"><span class="pre">this</span></code> in the constructor points to the Rational shown and returned by
 <code class="docutils literal notranslate"><span class="pre">Add</span></code>:</p>
-<a class="reference internal image-reference" href="../_images/endAdd.png"><img alt="../_images/endAdd.png" src="../_images/endAdd.png" style="width: 132pt;" /></a>
+<a class="reference internal image-reference" href="../_images/endAdd.png"><img alt="../_images/endAdd.png" src="../_images/endAdd.png" style="width: 132pt;" />
+</a>
 <p>which gets sent to the <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code> statement
 and gets printed in <code class="docutils literal notranslate"><span class="pre">Main</span></code> as in the earlier code.</p>
 <p>Make sure you see how the pictures reinforce these important ideas:</p>
@@ -518,7 +899,8 @@ that <em>only local variables can be referenced directly</em>
 (including the implicit <code class="docutils literal notranslate"><span class="pre">this</span></code>).   If you want to refer to data that is not a local
 variable, you must follow the reference path arrow that leads <em>from a local variable</em> to
 an instance field that you want to reference.</p>
-<a class="reference internal image-reference" href="../_images/pathToNum.png"><img alt="../_images/pathToNum.png" src="../_images/pathToNum.png" style="width: 132pt;" /></a>
+<a class="reference internal image-reference" href="../_images/pathToNum.png"><img alt="../_images/pathToNum.png" src="../_images/pathToNum.png" style="width: 132pt;" />
+</a>
 <p>Then use the proper object-oriented notation to refer to the path.
 In the example, it takes one step,
 from local variable <code class="docutils literal notranslate"><span class="pre">f</span></code> to its field <code class="docutils literal notranslate"><span class="pre">num</span></code>, referred to as <code class="docutils literal notranslate"><span class="pre">f.num</span></code>.
@@ -529,43 +911,43 @@ more complex types of objects, and you need to follow
 a path through <em>several</em> references in sequence.</p>
 </section>
 <section id="forcematch-exercise">
-<span id="index-2"></span><h2>ForceMatch Exercise<a class="headerlink" href="#forcematch-exercise" title="Permalink to this headline"></a></h2>
+<span id="index-2"></span><h2>ForceMatch Exercise<a class="headerlink" href="#forcematch-exercise" title="Link to this heading">#</a></h2>
 <p>Suppose we have a class:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pair</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Pair</span>
 <span class="p">{</span>
-   <span class="k">private</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
 
-   <span class="k">public</span> <span class="nf">Pair</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-   <span class="p">{</span>
-       <span class="k">this</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span><span class="p">;</span>
-   <span class="p">}</span>
+<span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="nf">Pair</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<span class="w">   </span><span class="p">{</span>
+<span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
 
-   <span class="c1">///Mutate the parameter so its instance variables match this object</span>
-   <span class="k">public</span> <span class="k">void</span> <span class="nf">ForceMatch</span><span class="p">(</span><span class="n">Pair</span> <span class="n">p</span><span class="p">)</span>
-   <span class="p">{</span>
-      <span class="c1">// need code ...</span>
-   <span class="p">}</span>
+<span class="w">   </span><span class="c1">///Mutate the parameter so its instance variables match this object</span>
+<span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ForceMatch</span><span class="p">(</span><span class="n">Pair</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
+<span class="w">   </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// need code ...</span>
+<span class="w">   </span><span class="p">}</span>
 
-   <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">ToString</span><span class="p">()</span>
-   <span class="p">{</span>
-      <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;({0}, {1})&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
-   <span class="p">}</span>
+<span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span>
+<span class="w">   </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;({0}, {1})&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>A test would be code in another class:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Pair</span> <span class="n">first</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">7</span><span class="p">);</span>
-<span class="n">Pair</span> <span class="n">second</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">9</span><span class="p">)</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>  <span class="c1">// prints (1, 9)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Pair</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pair</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<span class="n">Pair</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">second</span><span class="p">);</span><span class="w">  </span><span class="c1">// prints (1, 9)</span>
 <span class="n">first</span><span class="p">.</span><span class="n">ForceMatch</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>  <span class="c1">// prints (3, 7)</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">second</span><span class="p">);</span><span class="w">  </span><span class="c1">// prints (3, 7)</span>
 </pre></div>
 </div>
 <ol class="loweralpha">
 <li><p>Would this code work?  If not, explain why not:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">ForceMatch</span><span class="p">(</span><span class="n">Pair</span> <span class="n">p</span><span class="p">)</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ForceMatch</span><span class="p">(</span><span class="n">Pair</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
 <span class="p">{</span>
-   <span class="n">p</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<span class="w">   </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pair</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -578,36 +960,110 @@ do a graphical play-computer like in the last section.</p>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classexamples.html" class="btn btn-neutral float-left" title="Class Instance Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="planning_classes.html" class="btn btn-neutral float-right" title="Planning A Class Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
-      <span class="lastupdated">Last updated on 30-November-2021 00:26:56.
-      </span></p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="classexamples.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Class Instance Examples</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="planning_classes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Planning A Class Structure</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-parameters-of-the-same-type">Method Parameters of the Same Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pictorial-playing-computer">Pictorial Playing Computer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forcematch-exercise">ForceMatch Exercise</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Author name not set
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2012-2021, Andrew N. Harrington and George Thiruvathukal.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 02-May-2026 16:33:37.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
