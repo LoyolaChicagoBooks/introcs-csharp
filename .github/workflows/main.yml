@@ -41,6 +41,10 @@ jobs:
         run: |
           make latex
 
+      - name: Generate EPUB using Sphinx
+        run: |
+          make epub
+
       - name: make latexpdf via TeXLive
         uses: xu-cheng/texlive-action/full@v1
         with:
@@ -58,7 +62,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            build/latex/comp170.pdf
+            build/latex/introcs-csharp.pdf
+            build/epub/introcs-csharp.epub
 
   deploy:
     if: github.ref == 'refs/heads/master'

@@ -23,7 +23,8 @@ to MOBI format. (We plan to offer it soon through our main site.)
     :widths: 15, 30
 
     "Web Site", "http://introcs.cs.luc.edu"
-    "PDF", "https://github.com/LoyolaChicagoBooks/introcs-csharp/releases/latest/download/comp170.pdf"
+    "PDF", "https://github.com/LoyolaChicagoBooks/introcs-csharp/releases/latest/download/introcs-csharp.pdf"
+    "EPUB", "https://github.com/LoyolaChicagoBooks/introcs-csharp/releases/latest/download/introcs-csharp.epub"
 
 .. warning:: 
 
@@ -38,4 +39,3 @@ will acknowledge any helpful and constructive contributions.
 
     "C# Examples", "https://github.com/LoyolaChicagoBooks/introcs-csharp-examples"
     "Book Source", "https://github.com/LoyolaChicagoBooks/introcs-csharp"
-
