@@ -1,0 +1,6 @@
+[submodule "examples/introcs"]
+	path = examples/introcs
+	url = https://github.com/LoyolaChicagoBooks/introcs-csharp-examples
+[submodule "examples/ios"]
+	path = examples/ios
+	url = https://bitbucket.org/josullivan1/comp170-xcode-xamarin-ios.git

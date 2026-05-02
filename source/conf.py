@@ -28,9 +28,12 @@ from datetime import date
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax', 'sphinx.ext.extlinks']
 
-extlinks = {'repsrc': 
-              ('https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/%s','')
-           }
+extlinks = {
+    'repsrc': (
+        'https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/%s',
+        None,
+    )
+}
 
 todo_include_todos = True
 
@@ -115,23 +118,15 @@ rst_epilog = """
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_book_theme'
 
 html_theme_options = {
-    #'canonical_url': '',
-    #"analytics_id": "UA-5482792-28",
-    #'logo_only': False,
-    #'display_version': True,
-    #'prev_next_buttons_location': 'bottom',
-    "style_external_links": True,
-    "vcs_pageview_mode": "edit",
-    'style_nav_header_background': '#922247',
-    # Toc options
-    #'collapse_navigation': True,
-    #'sticky_navigation': True,
-    #'navigation_depth': 4,
-    #'includehidden': True,
-    "titles_only": True,
+    "home_page_in_toc": True,
+    "show_toc_level": 2,
+    "repository_url": "https://github.com/LoyolaChicagoBooks/introcs-csharp",
+    "use_repository_button": True,
+    "use_issues_button": True,
+    "use_download_button": False,
 }
 
 
@@ -292,5 +287,3 @@ texinfo_documents = [
 # -- Options for epub output"
 
 epub_basename = 'comp170'
-
-
