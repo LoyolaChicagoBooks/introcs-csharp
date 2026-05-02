@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Introduction to Computer Science in C#'
-authors= u'Andrew N. Harrington and George Thiruvathukal'
+author = u'Andrew N. Harrington and George K. Thiruvathukal'
 copyright = u'2012-2021, Andrew N. Harrington and George Thiruvathukal'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -140,7 +140,7 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = f'{project} ({release})'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = 'C# Intro'
