@@ -6,6 +6,8 @@ C# Data and Operations
 
    sampleprogram
    lab-edit-compile-run
+   lab-edit-compile-run-code
+   lab-edit-compile-run-vim
    arithmetic
    variables
    typography
@@ -21,4 +23,3 @@ C# Data and Operations
    reviewdataop
    
  
-

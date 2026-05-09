@@ -69,7 +69,7 @@ something is
 |    statements in the function body...
 | ``}``
        
-Recall the conventions in :ref:`Syntax-Template-Typography`.
+Recall the conventions in :ref:`Reading-CSharp-Syntax`.
 
 Lines 6-11: The remaining lines form the function *body*.  They are enclosed
 in braces.  By convention the lines inside the braces are indented by a

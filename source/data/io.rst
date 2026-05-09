@@ -11,8 +11,8 @@ Combining Input and Output
 Reading from the Keyboard
 --------------------------
 
-If you want users to type something at the keyboard, you should let them know first!
-The jargon for this is to give them a *prompt*:  Instructions written to the screen,
+If you want users to type something at the keyboard, you should let them know first.
+The jargon for this is to give them a *prompt*: instructions written to the screen,
 something like ::
 
     Console.Write("Enter your name: ");
@@ -49,12 +49,12 @@ or in the shorter ::
 .. index:: Console; ReadKey
    ReadKey
    
-Fine point:  Notice that in most operating systems you can edit and correct your line
+Fine point: in most operating systems you can edit and correct your line
 before pressing the Return key.  This is handy, 
 but it means that the Return key *must* always be pressed to signal the end
 of the response.  
 Hence a whole line must be read, and there is *no* function ``Console.Read()``.  
-Just for completeness we mention that you can read a raw single keystroke immediately
+For completeness, you can read a raw single keystroke immediately
 (no editing beforehand).  If you want to explore that later, see  
 :repsrc:`test_readkey/test_readkey.cs`. 
      
@@ -84,7 +84,7 @@ Here is a sample run:
     Enter another integer: 9
     They add up to 239
 
-C# has a type for everything and 
+C# has a type for everything, and 
 ``Console.ReadLine()`` gives you a string.  
 Adding strings with ``+`` is not the same as adding numbers!
 
@@ -106,16 +106,14 @@ but the corresponding ``int`` value is calculated,
 and gets assigned to an ``int`` variable, ``x``.  
 
 
-Note that this would not work if the string represents the wrong kind of number,
+This would not work if the string represents the wrong kind of number,
 but there is an alternative:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> string s = "34.5";
-    csharp> int.Parse(s);
-    System.FormatException: Input string was not in the correct format ....
-    csharp> double.Parse(s);
-    34.5
+    string s = "34.5";
+    int.Parse(s);       // FormatException: not an int
+    double.Parse(s);    // 34.5
 
 We omitted the long tail of the error message.  
 There is no decimal point in an ``int``.
@@ -134,7 +132,7 @@ The zip file and the folder it unzips to have the long name
 introcs-csharp-examples-master.  We suggest you *rename the folder* simply
 ``examples`` to match the name of the Xamarin Studio solution it contains.  
 
-There are various way to access our files.  
+There are various ways to access our files.  
 
 #. One way is to look at individual files from your download
    under our examples directory.  
@@ -143,7 +141,7 @@ There are various way to access our files.
    (Instructions are in the next section.)
 #. In the notes we refer to individual code file names that are hyperlinked.
    They link to the *latest version* in our online source repository.
-   You get a display of color-coded web page with numbered lines.  If you
+   You get a color-coded web page with numbered lines.  If you
    want to adapt a chunk, you can select it, and copy.
    If you want to copy all of a large file, your editing shortcuts
    for Select All do *not* work:  You get a bunch of extra html.
@@ -162,7 +160,7 @@ immediately, though they may not accomplish anything.
 
 .. index:: chunk in source comments
 
-A further convention is using "chunk" comments inside example source files:  
+A further convention is using "chunk" comments inside example source files.  
 To keep the book and the source code in sync, our 
 `Sphinx <http://sphinx-doc.org/>`_
 building routine directly uses excerpts from 
@@ -180,18 +178,18 @@ automatically regenerating a revision of the book.
 Running our Xamarin Studio Examples Solution
 -----------------------------------------------
 
-If you are just starting Xamarin Studio, and you have *not* run our solution before:
+If you are starting Xamarin Studio and have *not* run our solution before:
 
 #.  Make sure you have downloaded and unzipped our  
     `examples <https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/archive/master.zip>`_.
-    You get a folder with a mouythfull of a name :file:`introcs-csharp-examples-master`.  We will
+    You get a folder with the long name :file:`introcs-csharp-examples-master`.  We will
     assume you reduce the name of the folder to the much shorter :file:`examples`.
 #.  On the Xamarin Studio Welcome screen select the button Open....
 #.  You get an open-file dialog.  Navigate to our :file:`examples` solution.
 #.  Select :file:`examples/examples.sln`.  The sln is short for solution.
 
 The next time you come to the Welcome screen, our examples should be listed in the
-Recent Projects, and you can click to open it directly.
+Recent Projects list, and you can click to open it directly.
 
 Copying and Modifying Our Example Xamarin Studio Projects
 ----------------------------------------------------------------
@@ -227,12 +225,12 @@ solution ("work", discussed in the first lab in the :ref:`steps`).
 
 When creating modifications of previous examples, like the exercise below,
 you can often save time by copying in the related example, particularly avoiding
-retyping the standard boiler plate code at the top.  However, when you are first
+retyping the standard boilerplate code at the top.  However, when you are first
 learning and getting used to new syntax, typing reinforces learning.
 Perhaps after looking over the related example, you are encouraged to write your 
 version *from scratch*, to get used to all the parts of the code.  Later, when 
-you can produce such text automatically, feel free to switch to just
-copying from a place that you had it before.
+you can produce such text automatically, feel free to switch to
+copying from a place where you already have it.
 
 
 .. _InterviewProblem:

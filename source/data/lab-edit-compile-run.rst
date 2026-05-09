@@ -7,13 +7,20 @@
 Lab: Editing, Compiling, and Running with Xamarin Studio
 ===========================================================================
 
-This first lab is aimed at taking you through the end-to-end process of
+This first lab takes you through the end-to-end process of
 writing and running a basic computer program with the Xamarin Studio
-environment. As with all things in
-life, we will learn in this lab that becoming a programmer requires you
-to learn a number of other things along the way.
+environment. Becoming a programmer also means learning several supporting
+tools and habits along the way.
 
-In software development/engineering parlance, we typically describe a
+.. warning::
+
+   Xamarin Studio is no longer recommended for new work.  The Xamarin
+   Studio instructions in this lab are retained for students using an
+   older course setup or maintaining existing projects.  For current work,
+   use a basic command-line text editor such as ``vim`` or ``emacs``, or
+   use Visual Studio Code.
+
+In software development, we typically describe a
 scenario as a *workflow*, which can be thought of as a series of steps
 that are possibly repeated. The workflow of programming can loosely be
 defined as follows:
@@ -32,28 +39,22 @@ defined as follows:
    program may not work entirely right the first time, so you may end
    up repeating these steps (debugging).
 
-These steps can all be done with different tools.  Many find it simpler to have
-an integrated tool, like Xamarin Studio, that does them all in the same place,
-and automates the steps that do not need human interaction!  
+These steps can all be done with different tools.  A text editor plus command-line
+tools is enough.  Visual Studio Code is also a good current option because it
+combines editing support with access to a terminal.
 
 If you are doing this on your own
 machine, make sure you have Mono and Xamarin Studio installed as in
 :ref:`development-tools`.
 
-Other tools are available, like
-the development environment 
-Visual Studio (from Microsoft, focused on Windows).
-
 Understanding the lower level tools that accomplish each step is important, 
-but we defer
-a discussion to get you going with Xamarin Studio.
+but we defer that discussion until later.
 
 Goals
 -----
 
-Our primary goal to create and understand an Xamarin Studio setup
-that you can use to do all of
-the remaining homework assignments and labs for this course. 
+Our primary goal is to create and understand a working setup
+that you can use for the remaining homework assignments and labs for this course. 
 
 
 .. index: Xamarin Studio; solution and project
@@ -82,7 +83,7 @@ a Mac.  Windows versions should be similar.
     Using Spotlight is quick on a Mac.
 
 #.  You get a Welcome screen.  Toward the upper left corner is a link for 
-    New Solution.  Click on it.  Alternately you can follow the path through the menus:
+    New Solution.  Click on it.  Alternatively, you can follow the path through the menus:
     File -> New -> Solution... 
   
     ..  image:: ../images/lab-edit/newSolution.png
@@ -143,7 +144,7 @@ a Mac.  Windows versions should be similar.
      in the box under the Location.
    - You may skip version control for now, though it is very handy.
    - After the three fields are filled in, the Create button in the lower right
-     should become active.  After checking your entires, click on Create.
+     should become active.  After checking your entries, click on Create.
    
    You now have created a solution in Xamarin Studio, with one project
    inside it. Later we can add further *projects* to *this solution*. 
@@ -151,7 +152,7 @@ a Mac.  Windows versions should be similar.
 #. Look at the Xamarin Studio window that appears.  It should have two main sub-windows or 
    "Pads" as Xamarin Studio calls them.  A narrow one on the left is the Solution Pad,
    containing a hierarchical view of the solution.  If you somehow close a pad,
-   you can recover it going to the main Xamarin menu: View => Pads => Solution.  
+   you can recover it by going to the main Xamarin menu: View => Pads => Solution.  
 
    In the Solution Pad you should see your solution name
    at the top and the hello project under that.  
@@ -182,7 +183,7 @@ a Mac.  Windows versions should be similar.
    Windows or control-click on a Mac. Ignore later references to this now missing icon
    and remember the new approach.   
    Other items in the Solution Pad will also have a context sensitive menu accessed by
-   right-clicjk or control-click. 
+   right-click or control-click. 
    
 #. Bring up the context menu on the hello project in the Solution Pad.
    Select Run Item.  
@@ -213,7 +214,7 @@ a Mac.  Windows versions should be similar.
        look for the unclosed terminal window you still have!
     
 #.  On Microsoft Windows, pressing spacebar or Enter kills the window.  
-    **On a Mac only, this makes the window gets two more lines, but still be visible:**
+    **On a Mac only, this makes the window get two more lines, but still remain visible:**
 
     ..  image:: ../images/lab-edit/processComplete.png
         :alt: Xamarin Studio Process Complete Image
@@ -251,7 +252,7 @@ a Mac.  Windows versions should be similar.
         Instead select the *left* button, **Delete**, as in 
         the image below.  
         Otherwise the file is left in the hello
-        folder, but it is just not listed as being in the project.
+        folder, but it is no longer listed as being in the project.
         Each project is associated with a folder, but not everything
         in the folder may be cataloged by Xamarin as part of the project.
       
@@ -266,7 +267,7 @@ a Mac.  Windows versions should be similar.
 #. To get in code that you want, there are several approaches.  The one we take
    now is to start from a completely
    new empty file:  Pop up the context sensitive menu for the hello project.
-   Select the submenu Add...  and  then New File....  
+   Select the submenu Add... and then New File....  
 
    ..   image:: ../images/lab-edit/addNewFileMenu.png
         :alt: Xamarin Studio Add new file Image
@@ -297,12 +298,12 @@ a Mac.  Windows versions should be similar.
    If it does have text, delete this file, too, and
    go back to the previous step and be sure to select **Empty File**, not Empty Class.
 
-   Much like in most word processors type in (or paste) 
+   Much like in most word processors, type in (or paste) 
    the following code.  This is actually an equivalent
    *Hello, World!* program to the automatically generated one,
    but it is a bit shorter.  
    It only introduces the syntax we actually *need* at the beginning,
-   and will be discussing more shortly.  The automatically generate line numbers
+   and will be discussing more shortly.  The automatically generated line numbers
    are not a part of the text:
     
    ..  literalinclude:: ../../examples/introcs/hello/hello.cs
@@ -319,13 +320,13 @@ a Mac.  Windows versions should be similar.
         :align: center
         :width: 230 pt
    
-#.  You can run the project just as before.  You should ge the same result, unless
+#.  You can run the project just as before.  You should get the same result, unless
     you made a typing error.  In that case look for what does not match, 
     fix it, and try again.  Remember to close the
     execution Console Window.
     
 #.  Now try a bit of editing:  Look at the program to see where output came
-    from.  Change what is printed and run it, but don't eliminate the 
+    from.  Change what is printed and run it, but do not close the 
     output console
     window for now (so you can show it off).  
 

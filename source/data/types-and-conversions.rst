@@ -20,10 +20,10 @@ Type int
 --------
 
 A variable is
-associated with a space in memory.  This space has a fixed size associated with the type 
+associated with a space in memory.  This space has a fixed size determined by the type 
 of data.
 The ``int`` and ``double`` types are examples of *value types*, 
-which means that this memory space holds an encoding of the complete data for the
+which means that this memory space holds an encoding of the complete
 value of the variable.  The fixed space means that an ``int`` cannot be a totally 
 arbitrary integer of an enormous size.  In fact an ``int`` variable can only hold
 an integer in a specific range.  See :ref:`data-representation` for the 
@@ -38,12 +38,17 @@ named constants in C#, ``int.MaxValue`` and ``int.MinValue``.
 In particular this means ``int`` arithmetic does not always work.  What is worse,
 it fails *silently*:
 
+.. code-block:: csharp
+
+    int i = int.MaxValue;
+    Console.WriteLine(i);
+    Console.WriteLine(i + 5);
+
+Output:
+
 .. code-block:: none
 
-    csharp> int i = int.MaxValue;
-    csharp> i;
     2147483647
-    csharp> i + 5;
     -2147483644
 
 Add two positive numbers and get a negative number!  Getting such a wrong
@@ -75,7 +80,7 @@ with much larger numbers.
 When we get to :ref:`array`, you will see that a program may store
 an enormous number of integers, and then the total space may be an 
 issue.  If some numbers fit in a ``long``, but not an ``int``, 
-``long`` must be used, taking us twice the space of an array of ``int``
+``long`` must be used, taking twice the space of an array of ``int``
 elements.  If all the integers have even more limited ranges, 
 they might be stored in the smaller space of a ``short``  
 or a ``byte``.  
@@ -93,10 +98,10 @@ Here we will only use the integral types ``int`` and ``long``.
 Type double
 ------------
 
-A ``double`` is also a value type, stored in a fixed sized space.  There are
+A ``double`` is also a value type, stored in a fixed-size space.  There are
 even more issues with ``double`` storage than with an ``int``:  Not only do you need
 to worry about the total magnitude of the number, you also need to choose
-a *precision*:  There are an infinite number of real values, just between 0 and 1.
+a *precision*:  there are an infinite number of real values just between 0 and 1.
 Clearly we cannot encode for all of them!  As a result a ``double`` has a limited
 number of digits of accuracy.  There is also an older type ``float`` that takes up
 half of the space of a ``double``, and has a smaller range and less accuracy.  This at
@@ -110,7 +115,7 @@ expressed using a variant of scientific notation:
 
 C# does not have the typography for raised exponents.  Instead 
 literal values can use the E to mean
-"times 10 to the power", and the E is followed by and exponent integer
+"times 10 to the power", and the E is followed by an exponent integer
 that can be positive or negative.  
 The whole double literal may not contain any embedded blanks.  Internally
 these numbers are stored with powers of 2, not 10:  See 
@@ -120,40 +125,45 @@ Arithmetic with the ``double`` type does not overflow silently as with
 the integral types.  
 We show behavior that could be important if you do scientific computing
 with enormous numbers:  There are values for Infinity and Not a Number,
-abbreviated NaN.  See them used in csharp: 
+abbreviated NaN.  See them used in a scratch program: 
+
+.. code-block:: csharp
+
+    double x = double.MaxValue;
+    Console.WriteLine(x);
+    double y = 10 * x;
+    Console.WriteLine(y);
+    Console.WriteLine(y + 1000);
+    Console.WriteLine(y - 1000);
+    Console.WriteLine(1000/y);
+    double z = 10 - y;
+    Console.WriteLine(z);
+    double sum = y + z;
+    Console.WriteLine(sum);
+    Console.WriteLine(sum/1000);
+
+Output:
 
 .. code-block:: none
 
-    csharp> double x = double.MaxValue;
-    csharp> x;
     1.79769313486232E+308
-    csharp> double y = 10 * x;
-    csharp> y;
     Infinity
-    csharp> y  + 1000;
     Infinity
-    csharp> y  - 1000;
     Infinity
-    csharp> 1000/y;
     0
-    csharp> double z = 10 - y;
-    csharp> z;
     -Infinity
-    csharp> double sum = y + z;
-    csharp> sum;
     NaN
-    csharp> sum/1000;
     NaN
 
 Once a result gets too big, it gets listed as infinity.
 As you can see,
-there is some arithmetic allowed with a finite number and infinity! 
-Still some operations are not legal.
+some arithmetic is allowed with a finite number and infinity. 
+Still, some operations are not legal.
 Once a result turns into ``NaN``, no arithmetic operations change
 further results away from ``NaN``, 
 so there is a lasting record of a big error!
 
-Note that Infinity, -Infinity and NaN are just representations when displayed
+Note that Infinity, -Infinity and NaN are representations when displayed
 as strings.  The numerical constants are 
 ``Double.PositiveInfinity``, ``Double.NegativeInfinity``, and ``Double.NaN``.
 
@@ -199,7 +209,7 @@ float
 
 decimal     
    128 bits; maximum value: 79228162514264337593543950335; 
-   28 digits of accuracy;  can exactly represents decimal values
+   28 digits of accuracy;  can exactly represent decimal values
    for financial operations; briefly discussed in *optional*
    :ref:`Decimal Type <decimal-type>`.
 
@@ -221,18 +231,16 @@ A major issue is whether the new type can accurately represent the original valu
 Going from ``int`` to ``double`` has no issue:  Any ``int`` can be exactly
 represented as a ``double``.  Code like the following is fine:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> int i = 33;
-    csharp> double d = i;
-    csharp> double x;
-    csharp> x = 11;
-    csharp> double z = i + 2.5;
-    csharp> ShowVars(); 
-    int i = 33
-    double d = 33
-    double x = 11
-    double z = 35.5
+    int i = 33;
+    double d = i;
+    double x;
+    x = 11;
+    double z = i + 2.5;
+    Console.WriteLine(d);
+    Console.WriteLine(x);
+    Console.WriteLine(z);
 
 The ``double`` variable ``d`` is initialized with the value of an ``int`` variable.
 The ``double`` variable ``x`` is assigned a value using an ``int`` literal.
@@ -243,40 +251,33 @@ operation is done.
 
 The other direction for conversion is more problematic:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> double d= 2.7;
-    csharp> int i;
-    csharp> i = d;
-    {interactive}(1,4): error CS0266: Cannot implicitly convert type
-       'double' to 'int'. 
-    An explicit conversion exists (are you missing a cast?)
+    double d= 2.7;
+    int i;
+    i = d;  // error: Cannot implicitly convert type 'double' to 'int'.
 
 The ``int`` ``i`` cannot accurately hold the value 2.7.  
-Since the compiler does this checking, looking only at types, not values, this even
-fails if the the ``double`` happens to have an integer value:
+Since the compiler does this checking by looking only at types, not values, this even
+fails if the ``double`` happens to have an integer value:
     
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> double d = 2.0;
-    csharp> int i = d;
-    {interactive}(1,4): error CS0266: Cannot implicitly convert type
-       'double' to 'int'. 
-    An explicit conversion exists (are you missing a cast?)
+    double d = 2.0;
+    int i = d;  // error: Cannot implicitly convert type 'double' to 'int'.
 
 .. index:: truncate in cast
     
 If you really want to possibly lose precision and convert a ``double`` to 
 an ``int`` result, you *can* do it, but you must be explicit, using a *cast*
-as the csharp error messages suggest. 
+as the compiler error message suggests. 
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> double d= 2.7;
-    csharp> int i;
-    csharp> i = (int)d;
-    csharp> i;
-    2
+    double d= 2.7;
+    int i;
+    i = (int)d;
+    Console.WriteLine(i);
     
 The desired result type name in parentheses ``(int)`` is a *cast*, telling the compiler
 you really intend the conversion.  Look what is lost!  The cast does not
@@ -289,32 +290,29 @@ Rounding is possible, but if you really want the ``int`` type, it takes two step
 because the function ``Math.Round`` does round to a mathematical integer, but leaves
 the type as ``double``!  To round ``d`` to an ``int`` result we could use:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> i = (int)Math.Round(d); 
-    csharp> i;
-    3
+    i = (int)Math.Round(d); 
+    Console.WriteLine(i);
 
-You can also use an explicit cast from int to double.  This is generally not needed,
+You can also use an explicit cast from ``int`` to ``double``.  This is generally not needed,
 because of the automatic conversions, but there is one place where it is 
 important:  if you want ``double`` division but have ``int`` parts.  Here is a 
 quick artificial test:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> int sum = 14;
-    csharp> int n = 4;
-    csharp> double avg = sum/n;
-    csharp> avg;  
-    3
+    int sum = 14;
+    int n = 4;
+    double avg = sum/n;
+    Console.WriteLine(avg);
     
 Oops, integer division.  Instead, continue with:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> avg = (double)sum/n;
-    csharp> avg;
-    3.5
+    avg = (double)sum/n;
+    Console.WriteLine(avg);
 
 We get the right decimal answer.  
 
@@ -329,11 +327,10 @@ equivalent to::
 On the other hand, if we switch the order the other way with parentheses around the
 division:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> avg = (double)(sum/n);
-    csharp> avg;
-    3
+    avg = (double)(sum/n);
+    Console.WriteLine(avg);
 
 then working *one* step at a time, ``(sum/n)`` is *integer* division, 
 with result 3.  It is the 3 that is then cast to a double (too late)!
@@ -372,7 +369,7 @@ Unicode allows special symbol characters and alphabets of many languages.
 We will stick to the standard American keyboard for these characters.
 
 Besides different alphabets, Unicode also has characters for all sorts of 
-symbols: emoticons, chess pieces, advanced math....  See 
+symbols: emoticons, chess pieces, advanced math, and more.  See 
 http://www.unicode.org/charts.  All the symbols can be represented as escape 
 codes in C#, starting with ``\u`` followed by 4 hexadecimal digits.  For example
 ``\u262F`` produces a yin-yang symbol.
@@ -381,12 +378,11 @@ We mention the ``char`` type being numeric mostly because of errors
 that you can make that would otherwise be hard to figure out.  This code does
 not concatenate the ``char`` symbols:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> Console.WriteLine('A' + '-');
-    110
+    Console.WriteLine('A' + '-');
 
-What?  
+What happened?  
 We mentioned that modern computers are set up to easily work with the ``int``
 type.  In arithmetic with *smaller* integral types the operands are first
 automatically converted to type ``int``.  
@@ -395,12 +391,10 @@ what is printed.
 
 You can look at the numeric values inside a ``char`` with a cast!
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> (int)'A';
-    65
-    csharp> (int)'-';
-    45
+    Console.WriteLine((int)'A');
+    Console.WriteLine((int)'-');
  
 So the earlier 110 is correct:  65 + 45 = 110.
 
@@ -409,12 +403,10 @@ It is also possible to cast from small ``int`` back to ``char``.
 This may be useful for dealing with the alphabet
 in sequence (or simple classical cryptographic codes):
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> 'A' + 1;       
-    66
-    csharp> (char)('A' + 1);
-    'B'
+    Console.WriteLine('A' + 1);
+    Console.WriteLine((char)('A' + 1));
 
 The capital letter one place after A is B.
 
@@ -453,5 +445,3 @@ with the initializations so
 
 i.  Their product is too big to fit in an ``int`` AND
 ii. The wrong overflow result for ``x*y`` is *positive*, not negative.
-
-

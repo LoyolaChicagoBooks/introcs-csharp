@@ -6,15 +6,15 @@ Substitutions in Console.WriteLine
 Output With ``+``
 -----------------
 
-An elaboration of a "Hello, World" program, could greet the user,
+An elaboration of a "Hello, World" program could greet the user,
 after obtaining the user's name.  If the user enters the name
 Elliot, the program could print 
 
     Hello, Elliot!
 
-This is a very simple
+This is a small
 input-process-output program (in fact with almost no "process").
-Think how would you code it. 
+Think about how you would code it. 
 
 You need to obtain a name, remember it and use it in your output.
 A solution is in the next section.
@@ -29,11 +29,11 @@ A solution is in the next section.
 String Format Operation
 -----------------------
 
-A common convention is fill-in-the blanks. For instance,
+A common convention is fill-in-the-blanks. For instance,
 
     Hello, _____!
 
-and you can fill in the name of the person greeted, and combine
+You can fill in the name of the person greeted and combine
 given text with a chosen insertion. C# has a similar
 construction, better called fill-in-the-braces,
 that can be used with ``Console.WriteLine``.
@@ -53,8 +53,8 @@ All the new syntax is in the line::
 
    Console.WriteLine ("Hello, {0}!", name);
 
-``Console.WriteLine`` actually can take parameters *after* an initial string,
-but only when  the string is in the form of a *format string*,
+``Console.WriteLine`` can take parameters *after* an initial string,
+but only when the string is in the form of a *format string*,
 with expression(s) in braces where substitutions are to be made,
 (like in fill-in-the-blanks). Here the format string is ``"Hello, {0}!"``. 
 
@@ -73,7 +73,7 @@ Everything in the initial string that is *outside* the braces is just
 with no braces, it is printed completely
 verbatim (reducing to the situations where we have used ``Console.WriteLine`` before).
 
-A more elaborate silly examples that you could test in csharp would be::
+A more elaborate silly example that you could test in a scratch program would be::
 
     string first = "Peter";
     string last = "Piper";
@@ -85,12 +85,12 @@ It would print::
     Peter Piper, Peter Piper, pick.
     
 where parameter 0 is ``first`` (value ``"Peter"``), 
-parameter 1 is ``last`` ( value ``"Piper"``), and
+parameter 1 is ``last`` (value ``"Piper"``), and
 parameter 2 is ``what`` (value ``"pick"``).  
 
 Make sure you see why the given output is exactly what is printed.
 
-Or try in csharp::
+Or try in a scratch program::
 
     int x = 7;
     int y = 5;
@@ -110,11 +110,11 @@ Note the following features of the parameters after the first string:
 - These parameters are automatically converted to a string form, just as in the
   use of the string ``+`` operation.  
   
-In fact the simple use of format strings
-shown so far can be completed replaced by long expressions with ``+``,
-if that is your taste.  We later discusses fancier formatting in :ref:`tables`,
+In fact, the simple use of format strings
+shown so far can be completely replaced by long expressions with ``+``,
+if that is your preference.  We later discuss fancier formatting in :ref:`tables`,
 that *cannot* be duplicated with a simple string ``+`` operation.
-We will use the simple numbered substitutions for now just  
+We will use the simple numbered substitutions for now
 to get used to the idea of substitution.
 
 .. index:: format; literal {}
@@ -153,7 +153,7 @@ Exercise for Format
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program, ``quotient_format.cs``, that behaves like
-:ref:`QuotientProblem`, but generate the sentence using 
+:ref:`QuotientProblem`, but generates the sentence using 
 ``Console.WriteLine`` with a format string and no ``+`` operator.
 
 
@@ -161,8 +161,8 @@ Madlib Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Write a program, ``my_mad_lib.cs``, that prompts the user for
-words that fit specified gramatical patterns ( a noun, a verb, a color,
-a city....) and plug them into a multiline format string so they fit
+words that fit specified grammatical patterns (a noun, a verb, a color,
+a city, and so on) and plug them into a multiline format string so they fit
 grammatically, and
 print the usually silly result.  
 If you are not used to mad libs, try running (not 
@@ -183,14 +183,14 @@ Overloading
 
 The ``WriteLine`` function can take parameters in different ways:
 
-- It can take a single parameter of an type (and print its string representation).
+- It can take a single parameter of any type (and print its string representation).
 - It can take a string parameter followed by any number of parameters used to 
   substitute into the initial format string.
 - It can take no parameters, and just advance to the next line (not used yet in
   this book).
   
 Though each of these uses has the same name, ``Console.WriteLine``, 
-they are technically all different functions:  A function is not just recognized
+they are technically different functions:  A function is not recognized only
 by its name, but by its *signature*, 
 which includes the name **and** the number and types of parameters.
 The technical term for using the same name with different signatures for different

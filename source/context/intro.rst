@@ -5,6 +5,22 @@ This book is designed for Comp 170 at Loyola University, Chicago.
 The materials are available to all on the web.
 Here are some important web links:
 
+.. note::
+
+   For current work on Windows, macOS, or Linux, install the .NET SDK and use
+   the ``dotnet`` command-line tools.  The basic workflow is:
+
+   .. code-block:: none
+
+      dotnet new console --use-program-main
+      dotnet build
+      dotnet run
+
+   You can edit C# files with Visual Studio Code, or with a command-line text
+   editor such as ``vim`` or ``emacs``.  Older sections of this book may refer
+   to Mono's ``csharp`` interactive shell; that tool is not part of the modern
+   .NET SDK and is no longer assumed.
+
 .. index:: book examples download
    examples download
    source download

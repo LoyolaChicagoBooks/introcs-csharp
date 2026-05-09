@@ -13,7 +13,7 @@ Variables and Assignment
 Each piece of data in a C# program has a *type*.  Several types have been introduced:
 ``int`` for integers, ``double`` for numbers allowing a fractional part,
 approximating more general real numbers.  
-There are many other numeric types and also non-numeric types, but we can use ``int`` 
+There are many other numeric and non-numeric types, but we can use ``int`` 
 and ``double`` for examples now.  Data gets stored in computer memory.  Specific 
 locations in memory are associated with the type of data stored there 
 and with a name to refer to it.
@@ -69,7 +69,7 @@ or initializations and plain declarations can be mixed::
    int width = 5, height, area;
    height = 7;
 
-Stylistically the example above is inconsistent, but it illustrates what is 
+Stylistically, the example above is inconsistent, but it illustrates what is 
 possible.  Technically an initialization is not an assignment.  We will see
 some syntax that is legal in initializers, but not in assignment statements.
 
@@ -95,113 +95,61 @@ the value 35 is then assigned to the variable on the left, ``area``.
    at the current location.  Do not *declare* the same variable more than once.
    You will get an error.  More on the fine points around that in :ref:`Local-Scope`.
 
-.. index:: csharp
+.. index:: dotnet command
 
 .. _more-csharp:
    
-We continue introducing :ref:`csharp`:
-Remember that in csharp you can just give an expression,
-and csharp responds with a value.  That syntax and reaction is special to 
-csharp.   In csharp you can also test regular C# statements, 
-like declarations and assignments.  The most recent versions of csharp 
-do not require you to end a statement with a semicolon, though we tend to 
-put semicolons after statements in our illustrations (and no semicolon for just
-an expression).
-As in a regular program, statements
-do not give an immediate visible response in csharp.  Still in   
-csharp you can display a variable value easily:
+We continue using the scratch-project approach from :ref:`csharp`.  Put test
+statements inside ``Main`` and print values with ``Console.WriteLine``:
+
+.. code-block:: csharp
+
+    int width = 5, height, area;
+    height = 7;
+    area = width * height;
+    Console.WriteLine(area);
+
+The output is:
 
 .. code-block:: none
 
-    csharp> int width = 5, height, area;
-    csharp> height = 7;
-    csharp> area = width * height;
-    csharp> area
     35
-    
-In the last line, ``area`` is an expression, and csharp will give back its value,
-which is just the current value of the variable.
 
-.. index:: 
-   csharp; help
-   csharp; quit;
-   csharp; ShowVars
-
-At this point you should be able to make sense of some more features of csharp.
-You can start with the csharp special help command:
-
-.. code-block:: none
-
-    csharp> help     
-    "Static methods:
-      Describe (object)       - Describes the object's type
-      LoadPackage (package);  - Loads the given Package (like -pkg:FILE)
-      LoadAssembly (assembly) - Loads the given assembly (like -r:ASSEMBLY)
-      ShowVars ();            - Shows defined local variables.
-      ShowUsing ();           - Show active using declarations.
-      Prompt                  - The prompt used by the C# shell
-      ContinuationPrompt      - The prompt for partial input
-      Time(() -> { })         - Times the specified code
-      print (obj)             - Shorthand for Console.WriteLine
-      quit;                   - You'll never believe it - this quits the repl!
-      help;                   - This help text
-      TabAtStartCompletes - Whether tab will complete even on empty lines
-    
-A lot of this is still beyond us but these parts are useful:
-
-.. code-block:: none
-
-      ShowVars ();            - Shows defined local variables.
-      quit;                   - You'll never believe it - this quits the repl!
-      help;                   - This help text
-    
-We can continue the csharp session above and illustrate ShowVars():
-    
-.. code-block:: none
-
-    csharp> ShowVars();
-    int width = 5
-    int height = 7
-    int area = 35
-     
-displaying all the variables currently known to csharp, plus their current values.
+The printed value is the current value of the variable ``area``.
 
 We refer to "current values".  An important distinction between variables in math
-and variables in C# is that C# values can *change*.  Follow this csharp sequence:
+and variables in C# is that C# values can *change*.  Follow this sequence:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> int n = 3;
-    csharp> n
-    3
-    csharp> n = 7;
-    csharp> n
-    7
+    int n = 3;
+    Console.WriteLine(n);
+    n = 7;
+    Console.WriteLine(n);
     
-showing we can change the value of a variable.  The most *recent* assignment is remembered
-(until the next assignment....)  We can imagine a schematic diagram:
+showing that we can change the value of a variable.  The most *recent* assignment is remembered
+(until the next assignment).  We can imagine a schematic diagram:
 
 .. image:: ../images/variableChange.png
    :width: 43.5 pt
 
-We can carry this csharp session one step further,
+We can carry this example one step further,
 illustrating a difference between C# and math:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> n = n + 1;
-    csharp> n
-    8
+    n = n + 1;
+    Console.WriteLine(n);
 
 Clearly ``n = n + 1`` is not a true mathematical equation:  It *is* a C# assignment, 
 executing with a 
 specific sequence of steps.  
 
-#.  First the right hand side expression
+#.  First the right-hand side expression
     is evaluated, ``n + 1``.  
 #.  This involves looking up the current value of ``n``, 
     which we set to 7, so the expression is the same as ``7 + 1`` which is 8.  
-#.  *After* this evaluation, an assignment is made to the left hand variable, 
+#.  *After* this evaluation, an assignment is made to the left-hand variable, 
     which happens to be ``n`` again.
 #.  Then the *new* value of ``n`` is 8, replacing the old 7.
 
@@ -219,13 +167,11 @@ Still this usage is common to many programming languages.
     different meanings.  You assign to a variable on the left side *after*
     evaluating the expression on the right.
     
-We can illustrate a likely mistake in csharp:
+We can illustrate a likely mistake:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> 3 = n;
-    {interactive}(1,2): error CS0131: The left-hand side of an assignment 
-    must be a variable, a property or an indexer
+    3 = n;
 
 Students commonly try to assign left to right.  At least in this case you get
 an error message so you see a mistake.  If you mean to assign the value of 
@@ -236,23 +182,8 @@ x to y, and write::
 you get the opposite effect, changing x rather than y, with *no* error statement.  
 Be careful!
 
-There is some weirdness in csharp because it adds special syntax for expressions
-which does not appear in regular programs, but it also wants to allow syntax
-of regular programs.  Some conflict can occur when trying to display 
-an expression, sometimes leading to csharp giving 
-a strange error for apparently no reason.  In that case, 
-try putting *parentheses* around the expression, which is always legal for an
-expression, but would never start a regular statement:
-
-.. code-block:: none
-
-    csharp> int width = 3;
-    csharp> int height = 5;
-    csharp> width * height
-    {interactive}(1,2): error CS0246: The type or namespace name 'width' could 
-    not be found. Are you missing a using directive or an assembly reference?
-    csharp> (width * height)
-    15
+The compiler reports that the left-hand side of an assignment must be
+something that can store a value, such as a variable.
 
 .. index:: literal, identifier
 
@@ -272,7 +203,7 @@ identifies a C# variable or other entity.
 
 .. index:: keyword
 
-There are some restrictions on the character sequence that make up
+There are some restrictions on the character sequences that make up
 an identifier:
 
 
@@ -317,16 +248,16 @@ where words split. Two practical options are
    ``priceAtOpening``
 
 
-Use the choice that fits your taste (or the taste or convention of
+Use the choice that fits your taste (or the convention of
 the people you are working with).  We will tend to use
-camel-case for variable inside programs, while we use underscores in
+camel-case for variables inside programs, while we use underscores in
 program file names (since different operating systems deal with case
 differently).
 
 Assignment Exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
-*Think* what the result would be in csharp::
+*Think* what the printed result would be in a scratch program::
 
    int x = 1;
    x = x + 1;
@@ -339,7 +270,7 @@ Write your prediction.  Then test.  Can you explain it if you got it wrong?
 Another Assignment Exercise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you had trouble with the last, one try this one, too::
+If you had trouble with the last one, try this one, too::
 
    int a = 5;
    a = a/2;

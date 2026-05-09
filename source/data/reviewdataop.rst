@@ -31,7 +31,7 @@ Chapter Review Questions
        q + 1 = q;
        
 #.  For the legal pairs above, what could the type of the variable have been
-    declared?  You can check them in csharp, giving the declaration first.
+    declared?  You can check them in a scratch program, giving the declaration first.
 
 #.  What are the final values of ``x`` and ``y``  after this fragment? ::
 
@@ -40,7 +40,7 @@ Chapter Review Questions
         x = x + y;
         y = x + y;
         
-    Test in csharp after you have decided.
+    Test in a scratch program after you have decided.
     
 #.  Which of these expressions are legal in C#?  
     Think of the results.
@@ -55,7 +55,7 @@ Chapter Review Questions
         2 + 3 + "a"
         2 + 3 * "a"
         
-    Think first; try in csharp; reconsider if necessary.
+    Think first; try in a scratch program; reconsider if necessary.
 
 #.  Write a single ``WriteLine`` statement that would produce output
     on two separate lines, not one.  Accomplish the same thing a second time 

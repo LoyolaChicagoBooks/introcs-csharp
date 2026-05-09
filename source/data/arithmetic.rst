@@ -12,49 +12,69 @@ C# is often used to manipulate text and other
 sorts of data.
 
 
-.. index:: csharp
+.. index:: dotnet command
+   csharp; legacy Mono shell
 
 .. _csharp:
 
-Csharp
----------
+Testing Small Expressions with dotnet
+-------------------------------------
 
-Of course we could write programs to demonstrate arithmetic,
-but there is a fair amount of overhead with a full program.
-For just testing little bits, there is another alternative:
-The Mono system comes with a program *csharp*.  Let us
-try it out.
+Older versions of these notes used Mono's ``csharp`` interactive shell for
+quick experiments.  Modern .NET installations do not include that shell.
+For current work, use a small console project as a scratch program and run it
+with ``dotnet``.
 
-Open a terminal (Linux or OS X) or :ref:`mono-command-prompt`
-window in Windows, and enter the command ``csharp``.  You should see  :
+Create a scratch project once:
 
 .. code-block:: none
 
-    Mono C# Shell, type "help;" for help
+    mkdir csharp-scratch
+    cd csharp-scratch
+    dotnet new console --use-program-main
 
-    Enter statements below.
-    csharp>  
+Open ``Program.cs`` in Visual Studio Code, ``vim``, ``emacs``, or another text
+editor.  Put test statements inside ``Main``:
 
-The ``csharp>`` prompt tells you that the C# interpreter has started
-and is awaiting input. This allows you to create small bits of C# 
-and test them, interactively, without having to write a full program! 
+.. code-block:: csharp
+
+    using System;
+
+    class Program
+    {
+       static void Main()
+       {
+          Console.WriteLine(2 + 3);
+       }
+    }
+
+Run the program:
+
+.. code-block:: none
+
+    dotnet run
+
+The output is:
+
+.. code-block:: none
+
+    5
+
+For later quick tests, replace or add statements inside ``Main`` and run
+``dotnet run`` again.
 
 .. index::
    single: operator; + with numbers
    single: +; with numbers
 
-Play along with the examples here, entering what comes after the prompt:
+Play along with the examples here by putting each expression inside
+``Console.WriteLine``:
 
-.. code-block:: none
- 
-    csharp> 2 + 3
-    5
+.. code-block:: csharp
 
-The csharp program just has a *read, evaluate, and print loop*: the acronym is 
-*repl*.  It evaluated the expression ``2 + 3`` and printed the result, 
-on a line without a prompt.  
-Csharp can evaluate arbitrary C# expressions.  It is very handy for
-testing as you get used to new syntax.
+    Console.WriteLine(2 + 3);
+
+This evaluates the expression ``2 + 3`` and prints the result.
 
 .. index::
    operator; -
@@ -65,24 +85,18 @@ Blanks are optional around symbols:
 
 .. code-block:: none
  
-    csharp> 10 - 3
     7
 
-For the binary arithmetic operators, 
-you are encouraged to add blanks to make the expression
-more easily readable by humans.
+For the binary arithmetic operators, add spaces to make the expression
+easier for humans to read.
 
-The csharp program is more line-oriented than the C# language.  
-If you press the return key when what you have entered is a complete expression
-you see the value as a response.
-If your expression is clearly incomplete you get another ``>`` prompt (with no
-"csharp"), until you have entered enough for a full expression.
+C# itself is not line-oriented.  A long expression can be split across lines
+when the syntax is incomplete:
 
-.. code-block:: none
+.. code-block:: csharp
  
-    csharp> 10-
-          > 3
-    7
+    Console.WriteLine(10
+       - 3);
 
 .. index::
    operator; *
@@ -90,31 +104,27 @@ If your expression is clearly incomplete you get another ``>`` prompt (with no
 
 In math class you could enter something like 4(10) for multiplication:
 
-.. code-block:: none
+.. code-block:: csharp
  
-    csharp> 4(10)
-    {interactive}(1,2): error CS0119: Expression denotes a 'value', 
-    where a 'method group' was expected
+    Console.WriteLine(4(10));
 
-Unfortunately the error messages are not always easy to follow:  
-it is hard to guess the
-intention of the user making a mistake.
+Unfortunately, error messages are not always easy to follow.  
+The compiler cannot reliably guess what a programmer intended.
 
 The issue here is that the multiplication operator must be *explicit* in
 C#.  Recall that an asterisk is used as a multiplication operator:
 
-.. code-block:: none
+.. code-block:: csharp
  
-    csharp> 4 * 10
-    40
+    Console.WriteLine(4 * 10);
 
 .. index::
    single:  ( ); grouping
    grouping ( )
    single: -; negation
      
-Enter each of the following expressions into csharp, and think what they
-will produce (and then check):    
+Put each of the following expressions inside ``Console.WriteLine``, and think
+what they will produce before you run the program:
 
 .. code-block:: none
  
@@ -126,18 +136,16 @@ the normal *precedence* of arithmetic operations: Multiplications
 divisions, and negations are done before addition and subtraction, unless
 there are parentheses forcing the order: 
 
-.. code-block:: none
+.. code-block:: csharp
  
-    csharp> -(2+3)*4 
-    -20 
+    Console.WriteLine(-(2+3)*4);
 
-A sequence of operations with equal precedence also work like in math: 
+A sequence of operations with equal precedence also works like in math: 
 left to right in most cases, like for combinations of addition and subtraction:
 
-.. code-block:: none
+.. code-block:: csharp
  
-    csharp> 10 - 3 + 2 
-    9 
+    Console.WriteLine(10 - 3 + 2);
 
 .. index:: 
    single: remainder %
@@ -158,21 +166,18 @@ Division and Remainders
 
    
 We started with the almost direct translations from math.  Division is
-more complicated.  We continue in the csharp program:
+more complicated.  Try these statements in your scratch program:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> 5.0/2.0;
-    2.5
-    csharp> 14.0/4.0;
-    3.5
+    Console.WriteLine(5.0/2.0);
+    Console.WriteLine(14.0/4.0);
 
 So far so good.  Now consider:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> 14/4
-    3
+    Console.WriteLine(14/4);
 
 What?  Some explanation is in order.  All data has a *type* in C#.
 When you write an explicit number
@@ -186,10 +191,9 @@ integer like 5.0: the type is still ``double``.
 Addition, subtraction, and multiplication work as you would expect for
 ``double`` values, too:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> 0.5 * (2.0 + 4.5)
-    3.25
+    Console.WriteLine(0.5 * (2.0 + 4.5));
 
 If one or both
 of the operands to ``/`` is a ``double``, the result is a ``double``, 
@@ -199,10 +203,9 @@ because C# stores
 values with only a limited precision, so in fact results are
 only approximate in general.  For example:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> 1.0/3
-    0.333333333333333
+    Console.WriteLine(1.0/3);
 
 Small errors are also possible with the ``double`` type 
 and the other arithmetic operations.  See :ref:`type-double`.
@@ -227,24 +230,22 @@ the integer quotient 3 and the remainder 2.
 
 C# has a *separate* operation symbol to generate the remainder part.  
 There is no standard
-single operator character operator for this in regular math, 
+single-character operator for this in regular math, 
 so C# grabs an unused symbol: 
 ``%`` is the remainder operator.  
 (This is the same as in many other computer languages.)
 
-Try in the csharp shell:
+Try in your scratch program:
 
-.. code-block:: none
+.. code-block:: csharp
 
-    csharp> 14 / 4
-    3
-    csharp> 14 % 4
-    2
+    Console.WriteLine(14 / 4);
+    Console.WriteLine(14 % 4);
     
 You see that with the combination of the ``/`` operator and the ``%`` operator,
 you get both the quotient and the remainder from our grade school division.
 
-Now predict and then try each of these expression in csharp:
+Now predict and then try each of these expressions:
 
 .. code-block:: none
 
@@ -261,12 +262,6 @@ the future!  Remember the strange ``%`` operator.
 .. note::
    The precedence of ``%`` is the same as ``/`` and ``*``, and hence
    higher than addition and subtraction, ``+`` and ``-``. 
-
-When you are *done with csharp*, you can enter the special expression
-
-.. code-block:: none
-
-    quit
 
 There are some more details about numeric types in :ref:`value-types`.
 

@@ -6,7 +6,7 @@
 C# Program Structure
 =====================
 
-We discuss the most basic syntax satisfied by all C# programs, which are plain text files,
+We discuss the most basic syntax required by all C# programs, which are plain text files
 with names ending in ``.cs``.  There will be additions
 later, but any program you can run will include:
 
@@ -26,7 +26,7 @@ By convention class names are capitalized.
 You can see that both the example program :repsrc:`painting/painting.cs` and the lab program
 :repsrc:`hello/hello.cs` follow this pattern.  The discussion of these parts through 
 line 6 in
-:ref:`sample-program` are about all we have to say at this point.  For now this
+:ref:`sample-program` is about all we have to say at this point.  For now this
 is the boilerplate code.  We will make additions as necessary.  We choose not to
 clutter up the basic setup with features that we are not about to use and discuss. 
 
@@ -57,7 +57,7 @@ after the final ``e`` or under the ``S`` of Starting?
 Indentation Help
 -----------------------
 
-Using conventional indentation helps understand a program and find errors, 
+Using conventional indentation helps you understand a program and find errors, 
 like unmatched braces. When you press return in a C# source file 
 (i.e. a file with name ending in ``.cs``), Xamarin Studio makes a guess at the proper
 indentation of the next line.  The exact reaction can be set in the *options*.
@@ -85,14 +85,14 @@ in a solution, like your work solution:
    and have the middle check box (Allow tabs after non-tabs) *unchecked*.
 #. Click OK in the bottom right corner.
  
-.. note:
+.. note::
    If you keep all your projects in one solution (like *work*), then you only need to make 
    this setting once.  Otherwise you need to repeat it for each other solution.
 
 Tabs vs. spaces is not a significant issue inside a consistent environment,
 like Xamarin Studio, but if there are tab characters in a file, 
 they can be expanded different amounts by different display programs.  
-Then particularly if you mix tab characters and spaces you can get 
+Then, particularly if you mix tab characters and spaces, you can get 
 something very strange.
 If only spaces are used, there is no ambiguity in different displays.
 
@@ -104,7 +104,7 @@ easily, and makes lines with nested indentation have more room.
 Compiler Error Help
 -----------------------
 
-There are an enormous number of possible *syntactic* errors in your source code
+There are many possible *syntactic* errors in your source code
 that the compiler
 can detect.  
 
@@ -128,9 +128,9 @@ This annoying ambiguity leads some people to turn off error annotations,
 and just let
 the system note errors after a complete compile cycle.
 
-After compiling and getting an error, sometimes reading the error description 
-carefully  will help you 
-understand the problem.  Sometimes the error is very cryptic.   In those cases
+After compiling and getting an error, reading the error description 
+carefully will sometimes help you 
+understand the problem.  Sometimes the error is very cryptic.  In those cases
 it might help to look at the C# .NET error documentation,
 
    http://msdn.microsoft.com/en-us/library/ms228296.aspx.
@@ -150,9 +150,9 @@ That should help next time,
 (and there usually is a next time). Even when the error description still 
 makes no particular sense, you may well get into the same situation again,
 with the same error number.  Then 
-remembering the issue you found in a previous time could help.
+remembering the issue you found previously could help.
 
-Debugging can eat up an enormous amount of time, 
+Debugging can take an enormous amount of time, 
 so it is really worth your effort to understand the errors that you tend to make
 and the errors' relation to the error messages that you get.
 
@@ -174,7 +174,7 @@ Sequential Execution
 
 A function like ``Main`` involves a sequence of statements to execute.
 The basic order of execution is *sequential*: 
-first statement, then second, ....
+first statement, then second, and so on.
 This is the same as the *textual order*, so it is easy to follow.  Later in
 :ref:`Defining-Own-Functions`, :ref:`If-Statements`, and :ref:`While-Loops`,
 we will see more complicated 
@@ -205,7 +205,7 @@ variable is not yet defined. For instance after line 7 is executed, a
 value is given to x, but y is still undefined. Then y gets a value
 in line 8. 
 The comment space can be used any time
-it is helpful.  In particular it should be used  when something
+it is helpful.  In particular it should be used when something
 is printed, since this
 important action does *not* affect the variable list.
 
@@ -222,17 +222,16 @@ Line  x   y   Comment
 11    7   10  print: 7 10
 ====  ==  ==  =======================================
 
-The critical point here is to always use the most recently assigned value
+The critical point is to always use the most recently assigned value
 of each variable.  Unlike in math, symbol values change!
 
 The order of execution will always be the order of the lines in our
-table. In this simple *sequential* code, that *also* follows the
+table. In this *sequential* code, that *also* follows the
 textual order of the program. 
 
-Following each line of execution of a
-program in the proper order of execution, carefully, 
-keeping track of the current values of
-variables, will be called *playing computer*. A table like the one
+Following each line of execution in the proper order, while carefully 
+tracking the current values of
+variables, is called *playing computer*. A table like the one
 above is an organized way to keep track.
 
 The line numbering is not very exciting in a simple sequential program,
@@ -290,4 +289,3 @@ Line  s         t       Comment
 11    
 12  
 ====  ========  ======  =============================
-

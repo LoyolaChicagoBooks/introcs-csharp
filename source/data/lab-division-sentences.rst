@@ -9,10 +9,10 @@ Lab: Division Sentences
 Overview
 --------
 
-In this lab, we're going to begin to look at what makes computers *do
-their thing* so to speak. 
+In this lab, we begin to look at what makes computers execute useful
+instructions. 
 
-It is rather insightful to look at how Wikipedia summarizes the
+It is useful to look at how Wikipedia summarizes the
 computer:
 
     A computer is a programmable machine designed to sequentially and
@@ -21,7 +21,7 @@ computer:
     readily, allowing the computer to solve more than one kind of
     problem.
 
-In other words, a computer is a calculator--and much
+In other words, a computer is a calculator, and much
 more. Furthermore, the definition of a computer goes on to include
 access to storage and peripherals, such as consoles (graphical displays),
 printers, and the network. We already got a glimpse of this access
@@ -33,7 +33,7 @@ on :ref:`arithmetic`, :ref:`Variables-and-Assignment`,
 :ref:`substitution-in-writeline` to format output.
 
 Before writing your final program, you might like to review some of 
-the parts, testing in the :ref:`csharp` program, so you get immediate feedback
+the parts, testing in a scratch program as in :ref:`csharp`, so you get feedback
 for the calculations.
 
 Requirements
@@ -151,13 +151,13 @@ mess up here.  We emphasize them and mention fixes if you make the easy mistakes
       necessary.
       
 #.  Another common error is to proceed like with most text processors, 
-    and go to the the top Xamarin Studio menu (not in the the Solution pad) 
+    and go to the top Xamarin Studio menu (not in the Solution pad) 
     and open a file using the application's File menu item,  
     and choose to open and edit a new file for your program. 
-    This *does not put the file in your Xamarin project.* Hence 
+    This *does not put the file in your Xamarin project.* Therefore 
     **you cannot** *run* **this program from Xamarin Studio.**  
     
-    The file you edit must show in the *solution pad* in Xamarain Studio, as
+    The file you edit must show in the *solution pad* in Xamarin Studio, as
     a source file in your project.  If you have a separate project set up, 
     but without this file or any other showing in the Solutions pad, an attempt to
     run the project will say no ``Main`` method (in fact no program at all). 
@@ -168,7 +168,7 @@ mess up here.  We emphasize them and mention fixes if you make the easy mistakes
       remember where that was, a good trick is to click in the edit window of the file
       and then go to the File menu and select Save As (not Save).  The dialog should
       show where the file currently is.  Cancel the dialog.      
-    - Right click on the project in the Solution pad where you *do* wnat the program. 
+    - Right click on the project in the Solution pad where you *do* want the program. 
       Choose Add and then 
       Add Files....  Browse to where the file is, and select it; click Open.
       Unless you have some

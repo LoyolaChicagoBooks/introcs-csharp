@@ -1,21 +1,20 @@
-.. index:: syntax template typography
-   typography of syntax templates
+.. index:: syntax templates
+   reading syntax templates
 
-.. _Syntax-Template-Typography:
+.. _Reading-CSharp-Syntax:
 
-Syntax Template Typography
-==============================
+Reading C# Syntax Templates
+===========================
 
 
-When new C# syntax is introduced, the usual approach will be to
-give both specific examples and general templates. In general
-templates for C# syntax the typeface indicates the the category
-of each part:
+When new C# syntax is introduced, this book usually gives both
+specific examples and general syntax templates. In these templates,
+the typeface shows the role of each part:
 
 ===================  ===================================================
 Typeface             Meaning
 ===================  ===================================================
-``Typewriter font``  Text to be written *verbatim*
+``Typewriter font``  Text to be written exactly as shown
 **Bold**             A place where you can use an arbitrary
                      identifier. 
 *Emphasized*         A place where you can use an arbitrary
@@ -24,10 +23,11 @@ Normal text          A description of what goes in that position,
                      without giving explicit syntax
 ===================  ===================================================
 
-An attempt is made with the parts that are not verbatim to be
-descriptive of the use expected.
+Parts that are not written exactly as shown are named descriptively,
+based on how they are used in the syntax.
 
-As a start we can give some general syntax for declarations and assignment statements:
+As a start, here is the general syntax for declarations and assignment
+statements:
 
 
 .. index:: statement; declaration

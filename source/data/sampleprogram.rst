@@ -6,7 +6,7 @@
 A Sample C# Program
 ======================================
 
-As a start let us consider a ridiculously simple problem and a program to solve it.
+As a start, consider a small problem and a program to solve it.
 Suppose you paint the walls of rooms in one color and the ceiling in another, and
 you want to calculate the size of the areas to cover with paint.  
 For simplicity ignore doors.
@@ -20,10 +20,10 @@ You need to
 #. Calculate the wall area and ceiling area.
 #. Let the user know the results.
 
-This is a very simple programming pattern:  data in, calculate results, 
-output results.  In this case the calculations in the middle are very easy.
+This is a common programming pattern:  data in, calculate results, 
+output results.  In this case the calculations in the middle are straightforward.
 
-In the examples that you should have downloaded is a first simple program,
+The downloaded examples include a first program,
 :repsrc:`painting/painting.cs`.
 
 Here is what it looks like when it runs, with the user typing the 20.5 and the 10:
@@ -36,7 +36,7 @@ Here is what it looks like when it runs, with the user typing the 20.5 and the 1
     The wall area is 488 square feet.
     The ceiling area is 205 square feet.
     
-This is not very exciting, but it is a simple place to start seeing
+This is not very exciting, but it is a useful place to start seeing
 basic program features.  We will refer back to this sample run while
 discussing the program.
 Here is the text of the program:
@@ -45,17 +45,17 @@ Here is the text of the program:
    :linenos:
 
 This section gives an overview of a working
-program, even if all the explanations do not make total sense yet.  
-This is a first introduction of concepts and syntax that gets fully explained
+program, even if some explanations do not make total sense yet.  
+This is a first introduction to concepts and syntax that get fully explained
 in further sections.
 
-Do not worry if you not totally understand the
-explanations! Try to get the gist now and the details later. 
+Do not worry if you do not understand all the
+explanations yet. Try to get the gist now and the details later. 
 
 The different colors are used in modern program editors to
 emphasize the different uses of the parts of the program.
     
-We give a line by line explanation: 
+We give a line-by-line explanation: 
 
 .. literalinclude:: ../../examples/introcs/painting/painting.cs
    :lines: 1
@@ -87,7 +87,7 @@ by the closing brace ``}`` on the last line of the program.
    :dedent: 3
 
 
-A class is broken up with chunks called *functions* or *methods*.  Each has
+A class is broken into chunks called *functions* or *methods*.  Each has
 a *heading*.  C# allows the currently popular programming paradigm called 
 *object-oriented programming*, where classes generally 
 describe new kinds of objects.  
@@ -97,7 +97,7 @@ Unfortunately for now,
 the more common situation is with objects, so a function that does *not*
 involve such new objects must be marked specially as ``static``.
 
-Functions can be like in math, where they produce a function value
+Functions can be like functions in math, where they produce a function value
 for later use.  In C# they can
 also just *do* something (like write to the screen), and not produce a value
 for later use in the program.  
@@ -106,7 +106,7 @@ no function value is produced, the word ``void`` is used.
 
 Every program must start running somewhere.  In C# that is at a function with
 name ``Main``.  So our program starts running here.  
-This syntax for this function needs to start just like here, with 
+The syntax for this function needs to start just like here, with 
 ``static void Main``.
 
 Even though this is not a mathematical function producing a value, a function in
@@ -194,7 +194,7 @@ requested (a room length).
 
 Here is where the program takes in the information requested from the user.
 Its action is actually right to left:  ``Console.ReadLine`` is another
-function available with the ``Console``, that reads a line typed in by the
+function available through ``Console`` that reads a line typed in by the
 user on the keyboard.  Here in the sample run, 
 on the same line as the prompt string 
 (because of the previous ``Write``, not ``WriteLine``),
@@ -211,7 +211,7 @@ It is an *assignment* of the value on the right of the equal sign
 to be the current value of the variable on the left
 of the equal sign.  In the sample run, this would mean that the variable
 ``lengthString`` would end up holding the value ``"20.5"``.  Though these
-characters happen  to look like a number, 
+characters happen to look like a number, 
 any sequence of characters can be typed.
 The ``Console.ReadLine()`` function produces this sequence of characters
 as a *string* type.
@@ -228,7 +228,7 @@ It is another assignment statement (with the ``=``).  We are assigning to
 the variable ``length``, which we declared as a ``double``.  
 The value assigned comes from the 
 expression on the right of the ``=``, ``double.Parse(lengthString)``.
-The function ``double.Parse``, is just the one we want, it takes a string parameter
+The function ``double.Parse`` is the one we want. It takes a string parameter
 ``lengthString`` containing the string from the user input, 
 and the value produced is the corresponding ``double`` number.  In
 the sample run that assigns to ``length`` the value 20.5.
@@ -256,17 +256,17 @@ the brief calculations of results:
 
 
 At the end of the first line is a *comment*.  It starts with ``//`` and ends
-at the end of the same line.  It is ignored by the compiler.  It is there for humans,
-hopefully to add something that helps understanding of the program.
+at the end of the same line.  The compiler ignores it.  It is there for humans,
+ideally to add something that helps explain the program.
   
 We have two assignment statements.  The values to assign are given by arithmetic
 expressions on the right side of the equal signs.  It looks pretty much like
-regular math, except in math class you may be used to only having one letter names
+regular math, except in math class you may be used to only having one-letter names
 for variables, unlike ``length``, ``width``, and ``HEIGHT``.
 
 The tradeoff for allowing multiple character names is that multiplication must 
 have an explicit operation symbol.  
-The symbol used for multiplication in C# is ``*`` an asterisk.  The ``+``
+The symbol used for multiplication in C# is ``*``, an asterisk.  The ``+``
 and parentheses serve their normal mathematical purpose.  In the sample run,
 the value of ``2 * (length + width) * HEIGHT`` is 
 
@@ -305,14 +305,14 @@ In the sample output you see what is printed:
      The wall area is 488 square feet.
 
 sandwiching the value taken from the variable ``wallArea`` between
-two literal string, given in quotes.
+two literal strings, given in quotes.
 
 .. literalinclude:: ../../examples/introcs/painting/painting.cs
    :lines: 24-25
    :dedent: 6
 
  
-This statement behave like the previous one, except with different
+This statement behaves like the previous one, except with different
 quoted strings and the value of a different variable.  See the sample output.
 
 .. literalinclude:: ../../examples/introcs/painting/painting.cs
@@ -342,7 +342,7 @@ where every character is important.
 
 Also the compiler does not require whitespace around special symbols
 like ``{};().=*+,``.  Hence  
-the :repsrc:`painting/painting.cs` program above would be just as well translated 
+the :repsrc:`painting/painting.cs` program above would be translated just as well
 by the compiler if it were written as:
 
 .. code-block:: none
